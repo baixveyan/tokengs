@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Training / logging / benchmarks
+wandb/
+outputs/
+workspace*/
+experiments/
+results/
+bench/
+
+# Model checkpoints & large archives
+checkpoints/
+checkpoints_hf/
+*.safetensors
+EXP_TokenGS.zip
+EXP_FFRGS.zip
+EXP_FFRGS/
+
+# Large per-scene 262k-Gaussian binary dumps in demo/ (regenerable via: bash EXP_TokenGS/run_demo.sh)
+# Keep lightweight PLYs (cameras.ply, colmap_*.ply, *_only10tokens*.ply, *_only20tokens*.ply) and all .md/.json/.jsonl/.png
+EXP_TokenGS/demo/**/gaussians.pt
+EXP_TokenGS/demo/**/decoder_inputs.pt
+EXP_TokenGS/demo/**/*.ply
+!EXP_TokenGS/demo/**/cameras.ply
+!EXP_TokenGS/demo/**/colmap_*.ply
+!EXP_TokenGS/demo/**/*_only10tokens*.ply
+!EXP_TokenGS/demo/**/*_only20tokens*.ply
+
+# Local dataset roots (tracked: data/DATA.md)
+data/dl3dv
+data/dl3dv_eval
+
+# Tooling
+.vscode/
+.mypy_cache/
+.pytest_cache/
+
+# OS / core dumps
+.DS_Store
+core.*

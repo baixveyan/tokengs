@@ -1,0 +1,59 @@
+=== run_all_groups started 2026-10-20 09:47:42 on iZwz9foxpfyzf7f1y60xxwZ
+repo: /home/jms/xveyan/4DGS/TokenGS   git HEAD: b16269c   python: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python
+master log: EXP_TokenGS/token_tuning_fp32_140scenes/run_all_groups.20261020_094742.log
+--- GPU status
+0, 7215 MiB, 0 %
+1, 4 MiB, 0 %
+2, 3 MiB, 0 %
+3, 3 MiB, 0 %
+4, 3 MiB, 0 %
+5, 4 MiB, 0 %
+6, 3 MiB, 0 %
+7, 3 MiB, 0 %
+idle GPUs picked: 1
+[09:47:43] start token_tuning_lr1e-4_steps50 on GPU 1 -> EXP_TokenGS/token_tuning_fp32_140scenes/lr1e-4_steps50.log
+[09:48:13] progress
+  token_tuning_lr1e-4_steps50: running 5/140
+[09:48:43] progress
+  token_tuning_lr1e-4_steps50: running 11/140
+[09:49:13] progress
+  token_tuning_lr1e-4_steps50: running 17/140
+[09:49:43] progress
+  token_tuning_lr1e-4_steps50: running 24/140
+[09:50:13] progress
+  token_tuning_lr1e-4_steps50: running 30/140
+[09:50:43] progress
+  token_tuning_lr1e-4_steps50: running 37/140
+[09:51:13] progress
+  token_tuning_lr1e-4_steps50: running 43/140
+[09:51:43] progress
+  token_tuning_lr1e-4_steps50: running 50/140
+[09:52:13] progress
+  token_tuning_lr1e-4_steps50: running 56/140
+[09:52:43] progress
+  token_tuning_lr1e-4_steps50: running 63/140
+[09:53:13] progress
+  token_tuning_lr1e-4_steps50: running 69/140
+[09:53:43] progress
+  token_tuning_lr1e-4_steps50: running 76/140
+[09:54:13] progress
+  token_tuning_lr1e-4_steps50: running 82/140
+[09:54:43] progress
+  token_tuning_lr1e-4_steps50: running 89/140
+[09:55:13] progress
+  token_tuning_lr1e-4_steps50: running 95/140
+[09:55:43] progress
+  token_tuning_lr1e-4_steps50: running 101/140
+[09:56:13] progress
+  token_tuning_lr1e-4_steps50: running 108/140
+[09:56:43] progress
+  token_tuning_lr1e-4_steps50: running 114/140
+[09:57:13] progress
+  token_tuning_lr1e-4_steps50: running 121/140
+[09:57:43] progress
+  token_tuning_lr1e-4_steps50: running 127/140
+[09:58:13] progress
+  token_tuning_lr1e-4_steps50: running 134/140
+[09:58:41] end token_tuning_lr1e-4_steps50 (exit 0)
+[09:58:43] progress
+  token_tuning_lr1e-4_steps50: complete 140/140

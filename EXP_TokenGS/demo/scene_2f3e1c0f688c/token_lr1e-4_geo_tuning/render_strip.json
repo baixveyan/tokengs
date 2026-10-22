@@ -1,0 +1,33 @@
+{
+  "layout": "top row GT, bottom row render",
+  "frames": [
+    {
+      "target_position": 8,
+      "frame_id": 8,
+      "nearest_context_distance": 5,
+      "psnr": 25.170804977416992,
+      "hf_ratio": 0.6853846311569214
+    },
+    {
+      "target_position": 9,
+      "frame_id": 9,
+      "nearest_context_distance": 6,
+      "psnr": 24.769451141357422,
+      "hf_ratio": 0.6835626363754272
+    },
+    {
+      "target_position": 10,
+      "frame_id": 10,
+      "nearest_context_distance": 7,
+      "psnr": 24.461442947387695,
+      "hf_ratio": 0.6797802448272705
+    },
+    {
+      "target_position": 11,
+      "frame_id": 11,
+      "nearest_context_distance": 6,
+      "psnr": 24.204235076904297,
+      "hf_ratio": 0.6796197295188904
+    }
+  ]
+}

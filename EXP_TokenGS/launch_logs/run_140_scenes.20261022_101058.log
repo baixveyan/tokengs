@@ -1,0 +1,139 @@
+=== run_140_scenes started 2026-10-22 10:10:58 on iZwz9foxpfyzf7f1y60xxwZ
+repo: /home/jms/xveyan/4DGS/TokenGS   git HEAD: b16269c   python: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python
+master log: EXP_TokenGS/launch_logs/run_140_scenes.20261022_101058.log
+experiments: no_tuning scene_lr1e-2_tuning scene_lr1e-2_geo_tuning token_lr1e-4_tuning token_lr1e-4_geo_tuning scene_lr1e-2_token_lr1e-4_tuning scene_lr1e-2_token_lr1e-4_geo_tuning scene_lr1e-2_token_lr1e-4_vis_xyz_tuning scene_lr1e-2_token_lr1e-4_vis_opac_tuning scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning
+--- GPU status
+0, 7215 MiB, 0 %
+1, 4 MiB, 0 %
+2, 3 MiB, 0 %
+3, 3 MiB, 0 %
+4, 3 MiB, 0 %
+5, 4 MiB, 0 %
+6, 3 MiB, 0 %
+7, 3 MiB, 0 %
+idle GPUs picked: 1 2
+skip no_tuning: already complete (EXP_TokenGS/no_tuning)
+skip scene_lr1e-2_tuning: already complete (EXP_TokenGS/scene_lr1e-2_tuning)
+skip scene_lr1e-2_geo_tuning: already complete (EXP_TokenGS/scene_lr1e-2_geo_tuning)
+skip token_lr1e-4_tuning: already complete (EXP_TokenGS/token_lr1e-4_tuning)
+skip token_lr1e-4_geo_tuning: already complete (EXP_TokenGS/token_lr1e-4_geo_tuning)
+skip scene_lr1e-2_token_lr1e-4_tuning: already complete (EXP_TokenGS/scene_lr1e-2_token_lr1e-4_tuning)
+skip scene_lr1e-2_token_lr1e-4_geo_tuning: already complete (EXP_TokenGS/scene_lr1e-2_token_lr1e-4_geo_tuning)
+skip scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: already complete (EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning)
+skip scene_lr1e-2_token_lr1e-4_vis_opac_tuning: already complete (EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_opac_tuning)
+skip scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: already complete (EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning)
+[10:10:59] start scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning on GPU 1 -> EXP_TokenGS/scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning/console.log
+[10:10:59] start scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning on GPU 2 -> EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning/console.log
+[10:11:09] end scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning (exit 0)
+[10:11:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 2/140
+[10:11:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 9/140
+[10:12:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 15/140
+[10:12:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 22/140
+[10:13:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 28/140
+[10:13:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 34/140
+[10:14:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 41/140
+[10:14:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 47/140
+[10:15:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 54/140
+[10:15:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 60/140
+[10:16:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 67/140
+[10:16:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 73/140
+[10:17:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 80/140
+[10:17:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 86/140
+[10:18:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 92/140
+[10:18:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 99/140
+[10:19:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 105/140
+[10:19:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 112/140
+[10:20:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 118/140
+[10:20:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 125/140
+[10:21:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 131/140
+[10:21:59] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: running 138/140
+[10:22:09] end scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning (exit 0)
+[10:22:29] progress
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: failed /
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: complete 140/140
+--- exit codes
+  scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning: 1   log: EXP_TokenGS/scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning/console.log
+  scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning: 0   log: EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning/console.log
+--- last lines of each group log
+## scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning
+[10:11:07] [FATAL] AttributeError("'RNGConcatDataset' object has no attribute 'dataset'")
+Traceback (most recent call last):
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/evaluate_with_scene_latent_tuning.py", line 446, in main
+    return _run(args, out_dir, log, set_status, started_at, gpu_index, gpu_before, monitor, script_t0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/evaluate_with_scene_latent_tuning.py", line 859, in _run
+    test_dataset.dataset, scene_id, context_ids, data["intrinsics_input"], img_size,
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RNGConcatDataset' object has no attribute 'dataset'
+
+=== exit code: 1
+finished: 2026-10-22 10:11:09   duration: 10 s
+## scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning
+[10:22:07] all_frames: PSNR 27.453434 SSIM 0.870517 LPIPS 0.180387 edge 0.018090 HF 0.851576
+[10:22:07] novel_only: PSNR 26.876825 SSIM 0.861588 LPIPS 0.185821 edge 0.018547 HF 0.850189
+[10:22:07] bucket d0: 840 frames PSNR 31.6819 HF 0.8617
+[10:22:07] bucket d1: 1434 frames PSNR 28.8319 HF 0.8618
+[10:22:07] bucket d2-3: 2578 frames PSNR 27.0752 HF 0.8538
+[10:22:07] bucket d4+: 2148 frames PSNR 25.3377 HF 0.8383
+[10:22:07] geometry (mean over scenes): SW 0.7123 packing 707.55/5.89 inter d 0.558 close 0.902 far 0.040 | aniso p50 29.23 needle>0.9 0.269
+[10:22:07] torch peak memory: allocated 18467 MiB, reserved 20984 MiB
+[10:22:07] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning
+[10:22:07] done in 665.4s
+=== exit code: 0
+finished: 2026-10-22 10:22:09   duration: 670 s
+--- reports
+14 rows x 62 columns -> EXP_TokenGS/all_experiments_table.{md,csv}
+EXP_TokenGS/all_experiments_table.md
+
+EXP_TokenGS/reports:
+scene_geo_tuning.json
+scene_geo_tuning.md
+scene_token_x_geo.json
+scene_token_x_geo.md
+scene_tuning_noise_floor.json
+vis_and_core_opacity_cleaning.md
+=== run_140_scenes finished 2026-10-22 10:22:31, failed: 1

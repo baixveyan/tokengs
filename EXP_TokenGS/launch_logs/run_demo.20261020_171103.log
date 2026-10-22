@@ -1,0 +1,156 @@
+=== run_demo started 2026-10-20 17:11:03 on iZwz9foxpfyzf7f1y60xxwZ
+repo: /home/jms/xveyan/4DGS/TokenGS   git HEAD: b16269c   python: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python
+master log: EXP_TokenGS/launch_logs/run_demo.20261020_171103.log
+scenes: 2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd
+experiments with a demo: no_tuning scene_tuning_lr1e-2 scene_geo_tuning_lr1e-2 token_tuning_lr1e-4 token_geo_tuning_lr1e-4 scene_token_tuning_lr1e-2_1e-4 scene_token_geo_tuning_lr1e-2_1e-4
+--- GPU status
+0, 7215 MiB, 0 %
+1, 4 MiB, 0 %
+2, 3 MiB, 0 %
+3, 3 MiB, 0 %
+4, 3 MiB, 0 %
+5, 4 MiB, 0 %
+6, 3 MiB, 0 %
+7, 3 MiB, 0 %
+idle GPUs picked: 1 2 3
+skip no_tuning__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning)
+skip scene_tuning_lr1e-2__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2)
+skip scene_geo_tuning_lr1e-2__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2)
+skip token_tuning_lr1e-4__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4)
+[17:11:04] start scene_token_tuning_lr1e-2_1e-4__2f3e1c0f688c on GPU 2 -> EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/console.log
+[17:11:04] start scene_token_geo_tuning_lr1e-2_1e-4__2f3e1c0f688c on GPU 3 -> EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/console.log
+[17:11:04] start token_geo_tuning_lr1e-4__2f3e1c0f688c on GPU 1 -> EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/console.log
+[17:11:14] progress
+  token_geo_tuning_lr1e-4__2f3e1c0f688c: running 0/1
+  scene_token_tuning_lr1e-2_1e-4__2f3e1c0f688c: running 0/1
+  scene_token_geo_tuning_lr1e-2_1e-4__2f3e1c0f688c: running 0/1
+[17:11:24] end scene_token_tuning_lr1e-2_1e-4__2f3e1c0f688c (exit 0)
+[17:11:24] progress
+  token_geo_tuning_lr1e-4__2f3e1c0f688c: complete 1/1
+  scene_token_tuning_lr1e-2_1e-4__2f3e1c0f688c: complete 1/1
+  scene_token_geo_tuning_lr1e-2_1e-4__2f3e1c0f688c: complete 1/1
+[17:11:25] end scene_token_geo_tuning_lr1e-2_1e-4__2f3e1c0f688c (exit 0)
+[17:11:25] end token_geo_tuning_lr1e-4__2f3e1c0f688c (exit 0)
+[17:11:34] progress
+  token_geo_tuning_lr1e-4__2f3e1c0f688c: complete 1/1
+  scene_token_tuning_lr1e-2_1e-4__2f3e1c0f688c: complete 1/1
+  scene_token_geo_tuning_lr1e-2_1e-4__2f3e1c0f688c: complete 1/1
+--- exit codes
+  token_geo_tuning_lr1e-4__2f3e1c0f688c: 0   log: EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/console.log
+  scene_token_tuning_lr1e-2_1e-4__2f3e1c0f688c: 0   log: EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/console.log
+  scene_token_geo_tuning_lr1e-2_1e-4__2f3e1c0f688c: 0   log: EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/console.log
+--- last lines of each group log
+## token_geo_tuning_lr1e-4__2f3e1c0f688c
+[17:11:23] all_frames: PSNR 25.048568 SSIM 0.831228 LPIPS 0.288163 edge 0.019506 HF 0.711335
+[17:11:23] novel_only: PSNR 24.786489 SSIM 0.823973 LPIPS 0.293206 edge 0.019797 HF 0.709064
+[17:11:23] bucket d0: 6 frames PSNR 26.9705 HF 0.7280
+[17:11:23] bucket d1: 11 frames PSNR 26.0661 HF 0.7245
+[17:11:23] bucket d2-3: 19 frames PSNR 24.8665 HF 0.7133
+[17:11:23] bucket d4+: 14 frames PSNR 23.6725 HF 0.6911
+[17:11:23] geometry (mean over scenes): SW 0.4514 packing 301.25/6.08 inter d 1.509 close 0.603 far 0.204 | aniso p50 23.52 needle>0.9 0.161
+[17:11:23] torch peak memory: allocated 15812 MiB, reserved 17560 MiB
+[17:11:23] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4
+[17:11:23] done in 15.2s
+=== exit code: 0
+finished: 2026-10-20 17:11:25   duration: 21 s
+## scene_token_tuning_lr1e-2_1e-4__2f3e1c0f688c
+[17:11:22] all_frames: PSNR 25.957449 SSIM 0.851002 LPIPS 0.232041 edge 0.018409 HF 0.841801
+[17:11:22] novel_only: PSNR 25.448645 SSIM 0.839812 LPIPS 0.239650 edge 0.018951 HF 0.840729
+[17:11:22] bucket d0: 6 frames PSNR 29.6887 HF 0.8497
+[17:11:22] bucket d1: 11 frames PSNR 27.3557 HF 0.8493
+[17:11:22] bucket d2-3: 19 frames PSNR 25.6365 HF 0.8416
+[17:11:22] bucket d4+: 14 frames PSNR 23.6954 HF 0.8329
+[17:11:22] geometry (mean over scenes): SW 0.5320 packing 402.42/5.78 inter d 0.957 close 0.791 far 0.123 | aniso p50 24.99 needle>0.9 0.168
+[17:11:22] torch peak memory: allocated 15827 MiB, reserved 17272 MiB
+[17:11:22] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4
+[17:11:22] done in 14.6s
+=== exit code: 0
+finished: 2026-10-20 17:11:24   duration: 20 s
+## scene_token_geo_tuning_lr1e-2_1e-4__2f3e1c0f688c
+[17:11:23] all_frames: PSNR 25.734699 SSIM 0.842438 LPIPS 0.253489 edge 0.019119 HF 0.827523
+[17:11:23] novel_only: PSNR 25.271028 SSIM 0.831682 LPIPS 0.260742 edge 0.019618 HF 0.826453
+[17:11:23] bucket d0: 6 frames PSNR 29.1350 HF 0.8354
+[17:11:23] bucket d1: 11 frames PSNR 27.0868 HF 0.8352
+[17:11:23] bucket d2-3: 19 frames PSNR 25.3929 HF 0.8283
+[17:11:23] bucket d4+: 14 frames PSNR 23.6790 HF 0.8172
+[17:11:23] geometry (mean over scenes): SW 0.2591 packing 119.58/5.31 inter d 1.585 close 0.563 far 0.188 | aniso p50 25.37 needle>0.9 0.176
+[17:11:23] torch peak memory: allocated 15828 MiB, reserved 19622 MiB
+[17:11:23] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4
+[17:11:23] done in 15.5s
+=== exit code: 0
+finished: 2026-10-20 17:11:25   duration: 21 s
+--- comparing experiments per scene
+scene_2f3e1c0f688c: no_tuning, scene_tuning_lr1e-2, scene_geo_tuning_lr1e-2, token_tuning_lr1e-4, token_geo_tuning_lr1e-4, scene_token_tuning_lr1e-2_1e-4, scene_token_geo_tuning_lr1e-2_1e-4 -> EXP_TokenGS/demo/scene_2f3e1c0f688c/comparison.md
+--- highlighting the same 10 / 20 tokens (with context and selected-only) in every experiment
+--- files per scene (open the .ply files in the PLY viewer)
+EXP_TokenGS/demo/scene_2f3e1c0f688c/comparison.md
+EXP_TokenGS/demo/scene_2f3e1c0f688c/highlighted_tokens.md
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2/scene_geo_tuning_lr1e-2_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2/scene_geo_tuning_lr1e-2_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2/scene_geo_tuning_lr1e-2_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2/scene_geo_tuning_lr1e-2_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2/scene_geo_tuning_lr1e-2_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2/scene_geo_tuning_lr1e-2.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2/scene_geo_tuning_lr1e-2_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_geo_tuning_lr1e-2/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/scene_token_geo_tuning_lr1e-2_1e-4_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/scene_token_geo_tuning_lr1e-2_1e-4_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/scene_token_geo_tuning_lr1e-2_1e-4_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/scene_token_geo_tuning_lr1e-2_1e-4_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/scene_token_geo_tuning_lr1e-2_1e-4_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/scene_token_geo_tuning_lr1e-2_1e-4.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/scene_token_geo_tuning_lr1e-2_1e-4_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/scene_token_tuning_lr1e-2_1e-4_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/scene_token_tuning_lr1e-2_1e-4_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/scene_token_tuning_lr1e-2_1e-4_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/scene_token_tuning_lr1e-2_1e-4_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/scene_token_tuning_lr1e-2_1e-4_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/scene_token_tuning_lr1e-2_1e-4.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/scene_token_tuning_lr1e-2_1e-4_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_tuning_lr1e-2_1e-4/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2/scene_tuning_lr1e-2_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2/scene_tuning_lr1e-2_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2/scene_tuning_lr1e-2_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2/scene_tuning_lr1e-2_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2/scene_tuning_lr1e-2_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2/scene_tuning_lr1e-2.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2/scene_tuning_lr1e-2_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_tuning_lr1e-2/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/token_geo_tuning_lr1e-4_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/token_geo_tuning_lr1e-4_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/token_geo_tuning_lr1e-4_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/token_geo_tuning_lr1e-4_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/token_geo_tuning_lr1e-4_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/token_geo_tuning_lr1e-4.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/token_geo_tuning_lr1e-4_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_geo_tuning_lr1e-4/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4/token_tuning_lr1e-4_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4/token_tuning_lr1e-4_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4/token_tuning_lr1e-4_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4/token_tuning_lr1e-4_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4/token_tuning_lr1e-4_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4/token_tuning_lr1e-4.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4/token_tuning_lr1e-4_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_tuning_lr1e-4/tuning_curve.png
+=== run_demo finished 2026-10-20 17:11:37, failed: 0

@@ -1,0 +1,419 @@
+=== run_all_groups started 2026-10-20 12:53:02 on iZwz9foxpfyzf7f1y60xxwZ
+repo: /home/jms/xveyan/4DGS/TokenGS   git HEAD: b16269c   python: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python
+master log: EXP_TokenGS/tuned_parameters_x_geo_loss/run_all_groups.20261020_125302.log
+--- GPU status
+0, 7215 MiB, 0 %
+1, 4 MiB, 0 %
+2, 3 MiB, 0 %
+3, 3 MiB, 0 %
+4, 3 MiB, 0 %
+5, 4 MiB, 0 %
+6, 3 MiB, 0 %
+7, 3 MiB, 0 %
+idle GPUs picked: 1 2 3 4 5 6 7
+[12:53:02] start token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01 on GPU 2 -> EXP_TokenGS/tuned_parameters_x_geo_loss/token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01.log
+[12:53:02] start token_tuning_lr1e-2_steps50 on GPU 1 -> EXP_TokenGS/token_tuning/lr1e-2_steps50.log
+[12:53:02] start token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01 on GPU 3 -> EXP_TokenGS/tuned_parameters_x_geo_loss/token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01.log
+[12:53:02] start scene_latent_and_token_tuning_token_lr1e-4 on GPU 4 -> EXP_TokenGS/tuned_parameters_x_geo_loss/scene_latent_and_token_tuning_token_lr1e-4.log
+[12:53:02] start scene_latent_and_token_tuning_token_lr1e-2 on GPU 5 -> EXP_TokenGS/tuned_parameters_x_geo_loss/scene_latent_and_token_tuning_token_lr1e-2.log
+[12:53:02] start scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01 on GPU 7 -> EXP_TokenGS/tuned_parameters_x_geo_loss/scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01.log
+[12:53:02] start scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01 on GPU 6 -> EXP_TokenGS/tuned_parameters_x_geo_loss/scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01.log
+[12:53:26] end scene_latent_and_token_tuning_token_lr1e-2 (exit 0)
+[12:53:27] end scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01 (exit 0)
+[12:53:30] end token_tuning_lr1e-2_steps50 (exit 0)
+[12:53:32] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 1/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: running 1/140
+  scene_latent_and_token_tuning_token_lr1e-4: running 2/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 1/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:54:02] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 7/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 9/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 7/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:54:03] end token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01 (exit 0)
+[12:54:33] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 13/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 15/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 12/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:55:03] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 18/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 21/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 18/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:55:33] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 24/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 27/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 23/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:56:03] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 30/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 34/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 29/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:56:33] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 36/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 40/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 34/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:57:03] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 41/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 47/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 40/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:57:33] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 47/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 53/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 45/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:58:03] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 53/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 59/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 51/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:58:33] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 59/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 66/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 57/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:59:03] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 64/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 72/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 62/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[12:59:34] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 70/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 79/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 68/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:00:04] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 76/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 85/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 73/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:00:34] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 82/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 91/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 79/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:01:04] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 87/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 97/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 84/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:01:34] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 93/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 104/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 90/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:02:04] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 99/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 110/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 95/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:02:34] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 104/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 117/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 101/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:03:04] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 110/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 123/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 107/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:03:34] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 116/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 129/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 112/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:04:04] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 122/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: running 136/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 118/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:04:23] end scene_latent_and_token_tuning_token_lr1e-4 (exit 0)
+[13:04:34] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 128/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: complete 140/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 124/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:05:05] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 133/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: complete 140/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 129/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:05:35] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 139/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: complete 140/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: running 135/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+[13:05:38] end token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01 (exit 0)
+[13:06:01] end scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01 (exit 0)
+[13:06:05] progress
+  token_tuning_lr1e-2_steps50: failed /
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: complete 140/140
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+  scene_latent_and_token_tuning_token_lr1e-4: complete 140/140
+  scene_latent_and_token_tuning_token_lr1e-2: failed /
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: complete 140/140
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: failed /
+--- exit codes
+  token_tuning_lr1e-2_steps50: 1   log: EXP_TokenGS/token_tuning/lr1e-2_steps50.log
+  token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: 0   log: EXP_TokenGS/tuned_parameters_x_geo_loss/token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01.log
+  token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: 1   log: EXP_TokenGS/tuned_parameters_x_geo_loss/token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01.log
+  scene_latent_and_token_tuning_token_lr1e-4: 0   log: EXP_TokenGS/tuned_parameters_x_geo_loss/scene_latent_and_token_tuning_token_lr1e-4.log
+  scene_latent_and_token_tuning_token_lr1e-2: 1   log: EXP_TokenGS/tuned_parameters_x_geo_loss/scene_latent_and_token_tuning_token_lr1e-2.log
+  scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01: 0   log: EXP_TokenGS/tuned_parameters_x_geo_loss/scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01.log
+  scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01: 1   log: EXP_TokenGS/tuned_parameters_x_geo_loss/scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01.log
+--- last lines of each group log
+## token_tuning_lr1e-2_steps50
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/evaluation_statistics.py", line 49, in geo_losses_for
+    return compute_geo_losses(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/losses/geo_losses.py", line 426, in compute_geo_losses
+    _validate_inputs(gs_centers, gs_scales, gs_opacities, gs_rotations)
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/losses/geo_losses.py", line 48, in _validate_inputs
+    raise ValueError("geometry inputs must be finite (no NaN/Inf)")
+ValueError: geometry inputs must be finite (no NaN/Inf)
+
+=== exit code: 1
+finished: 2026-10-20 12:53:30   duration: 28 s
+## token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01
+[13:05:37] all_frames: PSNR 26.606412 SSIM 0.847365 LPIPS 0.229624 edge 0.019575 HF 0.744287
+[13:05:37] novel_only: PSNR 26.263815 SSIM 0.841061 LPIPS 0.233282 edge 0.019837 HF 0.742683
+[13:05:37] bucket d0: 840 frames PSNR 29.1188 HF 0.7560
+[13:05:37] bucket d1: 1434 frames PSNR 27.7202 HF 0.7574
+[13:05:37] bucket d2-3: 2578 frames PSNR 26.4784 HF 0.7475
+[13:05:37] bucket d4+: 2148 frames PSNR 25.0392 HF 0.7273
+[13:05:37] geometry (mean over scenes): SW 0.6112 packing 558.99/6.17 inter d 1.009 close 0.796 far 0.070 | aniso p50 27.58 needle>0.9 0.273
+[13:05:37] torch peak memory: allocated 15812 MiB, reserved 16824 MiB
+[13:05:37] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/tuned_parameters_x_geo_loss/token_tuning_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01
+[13:05:37] done in 747.9s
+=== exit code: 0
+finished: 2026-10-20 13:05:38   duration: 756 s
+## token_tuning_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/evaluation_statistics.py", line 49, in geo_losses_for
+    return compute_geo_losses(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/losses/geo_losses.py", line 426, in compute_geo_losses
+    _validate_inputs(gs_centers, gs_scales, gs_opacities, gs_rotations)
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/losses/geo_losses.py", line 48, in _validate_inputs
+    raise ValueError("geometry inputs must be finite (no NaN/Inf)")
+ValueError: geometry inputs must be finite (no NaN/Inf)
+
+=== exit code: 1
+finished: 2026-10-20 12:54:03   duration: 61 s
+## scene_latent_and_token_tuning_token_lr1e-4
+[13:04:22] all_frames: PSNR 27.480678 SSIM 0.870676 LPIPS 0.179475 edge 0.018085 HF 0.852355
+[13:04:22] novel_only: PSNR 26.901195 SSIM 0.861700 LPIPS 0.184951 edge 0.018545 HF 0.850980
+[13:04:22] bucket d0: 840 frames PSNR 31.7302 HF 0.8624
+[13:04:22] bucket d1: 1434 frames PSNR 28.8602 HF 0.8625
+[13:04:22] bucket d2-3: 2578 frames PSNR 27.1010 HF 0.8546
+[13:04:22] bucket d4+: 2148 frames PSNR 25.3573 HF 0.8392
+[13:04:22] geometry (mean over scenes): SW 0.7102 packing 717.26/5.90 inter d 0.556 close 0.902 far 0.040 | aniso p50 28.76 needle>0.9 0.268
+[13:04:22] torch peak memory: allocated 15829 MiB, reserved 17058 MiB
+[13:04:22] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/tuned_parameters_x_geo_loss/scene_latent_and_token_tuning_token_lr1e-4
+[13:04:22] done in 674.4s
+=== exit code: 0
+finished: 2026-10-20 13:04:23   duration: 681 s
+## scene_latent_and_token_tuning_token_lr1e-2
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/evaluation_statistics.py", line 49, in geo_losses_for
+    return compute_geo_losses(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/losses/geo_losses.py", line 426, in compute_geo_losses
+    _validate_inputs(gs_centers, gs_scales, gs_opacities, gs_rotations)
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/losses/geo_losses.py", line 48, in _validate_inputs
+    raise ValueError("geometry inputs must be finite (no NaN/Inf)")
+ValueError: geometry inputs must be finite (no NaN/Inf)
+
+=== exit code: 1
+finished: 2026-10-20 12:53:26   duration: 24 s
+## scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01
+[13:06:00] all_frames: PSNR 26.939615 SSIM 0.857775 LPIPS 0.202968 edge 0.019257 HF 0.837778
+[13:06:00] novel_only: PSNR 26.409356 SSIM 0.848665 LPIPS 0.208494 edge 0.019699 HF 0.836280
+[13:06:00] bucket d0: 840 frames PSNR 30.8282 HF 0.8488
+[13:06:00] bucket d1: 1434 frames PSNR 28.3056 HF 0.8491
+[13:06:00] bucket d2-3: 2578 frames PSNR 26.6051 HF 0.8403
+[13:06:00] bucket d4+: 2148 frames PSNR 24.9157 HF 0.8233
+[13:06:00] geometry (mean over scenes): SW 0.3558 packing 278.97/5.73 inter d 1.133 close 0.751 far 0.072 | aniso p50 25.36 needle>0.9 0.248
+[13:06:00] torch peak memory: allocated 15829 MiB, reserved 17030 MiB
+[13:06:00] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/tuned_parameters_x_geo_loss/scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_sw0.1_packing0.001_inter0.01
+[13:06:00] done in 770.2s
+=== exit code: 0
+finished: 2026-10-20 13:06:01   duration: 779 s
+## scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_sw0.1_packing0.001_inter0.01
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/evaluation_statistics.py", line 49, in geo_losses_for
+    return compute_geo_losses(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/losses/geo_losses.py", line 426, in compute_geo_losses
+    _validate_inputs(gs_centers, gs_scales, gs_opacities, gs_rotations)
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/losses/geo_losses.py", line 48, in _validate_inputs
+    raise ValueError("geometry inputs must be finite (no NaN/Inf)")
+ValueError: geometry inputs must be finite (no NaN/Inf)
+
+=== exit code: 1
+finished: 2026-10-20 12:53:27   duration: 25 s
+--- report
+finished groups: ['no_tuning', 'scene_latent_and_token_tuning_token_lr1e-4', 'scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss', 'scene_latent_tuning', 'scene_latent_tuning_repeat_run', 'scene_latent_tuning_with_geo_loss', 'token_tuning_lr1e-4', 'token_tuning_lr1e-4_with_geo_loss']
+# Tuned parameters x geometry loss (140 scenes): report
+
+Scene latents lr 1e-2, Gaussian tokens lr 1e-4 or 1e-2, 50 steps; geometry loss sw0.1_packing0.001_inter0.01. Token tuning lr 1e-4 without geometry loss = the earlier official-loop run.
+
+## all PSNR grid (140-scene mean; no tuning 25.194)
+
+| tuned | render loss only | render + geometry loss | geometry loss Δ (paired, 95% CI) |
+|---|---|---|---|
+| scene latents (lr 1e-2) | 27.400 | 26.734 | -0.665 [-0.741, -0.590] |
+| Gaussian tokens (lr 1e-4) | 26.810 | 26.606 | -0.204 [-0.229, -0.178] |
+| Gaussian tokens (lr 1e-2) | not finished | not finished | — |
+| scene latents (lr 1e-2) + Gaussian tokens (lr 1e-4) | 27.481 | 26.940 | -0.541 [-0.603, -0.479] |
+| scene latents (lr 1e-2) + Gaussian tokens (lr 1e-2) | not finished | not finished | — |
+
+## Per group (140-scene mean)
+
+| group | all PSNR | all SSIM | all LPIPS | novel PSNR | HF ratio | d4+ PSNR |
+|---|---|---|---|---|---|---|
+| no_tuning | 25.194 | 0.8081 | 0.2549 | 25.007 | 0.759 | 24.108 |
+| scene_latent_tuning | 27.400 | 0.8683 | 0.1831 | 26.845 | 0.852 | 25.325 |
+| scene_latent_tuning_with_geo_loss | 26.734 | 0.8525 | 0.2122 | 26.251 | 0.829 | 24.816 |
+| token_tuning_lr1e-4 | 26.810 | 0.8539 | 0.2153 | 26.439 | 0.767 | 25.167 |
+| token_tuning_lr1e-2 | not finished | | | | | |
+| token_tuning_lr1e-4_with_geo_loss | 26.606 | 0.8474 | 0.2296 | 26.264 | 0.744 | 25.039 |
+| token_tuning_lr1e-2_with_geo_loss | not finished | | | | | |
+| scene_latent_and_token_tuning_token_lr1e-4 | 27.481 | 0.8707 | 0.1795 | 26.901 | 0.852 | 25.357 |
+| scene_latent_and_token_tuning_token_lr1e-2 | not finished | | | | | |
+| scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss | 26.940 | 0.8578 | 0.2030 | 26.409 | 0.838 | 24.916 |
+| scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss | not finished | | | | | |
+| scene_latent_tuning_repeat_run | 27.400 | 0.8683 | 0.1831 | 26.844 | 0.853 | 25.324 |
+
+## Geometry / needles (scene median)
+
+| group | SW | packing ratio / target | inter d | too close | too far | aniso p50 | long axis ∥ ray >0.9 |
+|---|---|---|---|---|---|---|---|
+| no_tuning | 0.7132 | 470.4 / 6.08 | 0.472 | 0.919 | 0.026 | 27.2 | 0.274 |
+| scene_latent_tuning | 0.7123 | 517.9 / 5.83 | 0.482 | 0.917 | 0.028 | 28.1 | 0.264 |
+| scene_latent_tuning_with_geo_loss | 0.3699 | 180.6 / 5.67 | 1.031 | 0.788 | 0.050 | 26.1 | 0.243 |
+| token_tuning_lr1e-4 | 0.7122 | 475.1 / 6.08 | 0.538 | 0.910 | 0.030 | 27.3 | 0.275 |
+| token_tuning_lr1e-4_with_geo_loss | 0.6103 | 413.2 / 6.16 | 0.973 | 0.819 | 0.052 | 27.0 | 0.270 |
+| scene_latent_and_token_tuning_token_lr1e-4 | 0.7107 | 522.0 / 5.89 | 0.508 | 0.914 | 0.030 | 28.0 | 0.266 |
+| scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss | 0.3493 | 188.8 / 5.73 | 1.110 | 0.763 | 0.056 | 25.1 | 0.243 |
+| scene_latent_tuning_repeat_run | 0.7123 | 518.2 / 5.83 | 0.483 | 0.917 | 0.028 | 28.1 | 0.264 |
+
+## Paired comparisons (Δ = this - reference, mean over scenes; PSNR with 95% CI and scene wins this/ref)
+
+| comparison | all PSNR | novel PSNR | d4+ PSNR | LPIPS | HF ratio | SW | packing ratio | inter d | aniso p50 | ∥ ray >0.9 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| geo_loss_effect_in_scene_latent_tuning | -0.665 [-0.741, -0.590] 1/139 | -0.594 [-0.671, -0.518] 4/136 | -0.509 [-0.588, -0.430] 8/132 | +0.02905 | -0.02328 | -0.3358 | -427.9 | +0.5246 | -2.386 | -0.01811 |
+| geo_loss_effect_in_token_tuning_lr1e-4 | -0.204 [-0.229, -0.178] 2/138 | -0.175 [-0.201, -0.150] 11/129 | -0.127 [-0.153, -0.102] 24/116 | +0.01432 | -0.02295 | -0.1007 | -90.52 | +0.4197 | -0.1893 | -0.003403 |
+| geo_loss_effect_in_token_tuning_lr1e-2 | not available | | | | | | | | | |
+| geo_loss_effect_in_scene_latent_and_token_tuning_token_lr1e-4 | -0.541 [-0.603, -0.479] 0/140 | -0.492 [-0.555, -0.428] 3/137 | -0.442 [-0.511, -0.372] 7/133 | +0.02349 | -0.01458 | -0.3544 | -438.3 | +0.5778 | -3.407 | -0.02011 |
+| geo_loss_effect_in_scene_latent_and_token_tuning_token_lr1e-2 | not available | | | | | | | | | |
+| token_lr_1e-2_vs_1e-4_in_token_tuning | not available | | | | | | | | | |
+| token_lr_1e-2_vs_1e-4_in_token_tuning_with_geo_loss | not available | | | | | | | | | |
+| token_lr_1e-2_vs_1e-4_in_scene_latent_and_token_tuning | not available | | | | | | | | | |
+| token_lr_1e-2_vs_1e-4_in_scene_latent_and_token_tuning_with_geo_loss | not available | | | | | | | | | |
+| token_tuning_lr1e-4_vs_scene_latent_tuning | -0.590 [-0.648, -0.531] 5/135 | -0.406 [-0.473, -0.339] 24/116 | -0.159 [-0.224, -0.094] 52/88 | +0.03218 | -0.08517 | +2.976e-06 | -54.4 | +0.06665 | -1.049 | +0.01111 |
+| token_tuning_lr1e-2_vs_scene_latent_tuning | not available | | | | | | | | | |
+| adding_tokens_lr1e-4_to_scene_latent_tuning | +0.081 [+0.068, +0.094] 127/13 | +0.056 [+0.043, +0.069] 123/17 | +0.032 [+0.018, +0.046] 109/31 | -0.003649 | -5.065e-05 | -0.001751 | +13.36 | +0.03292 | -0.05635 | +0.002422 |
+| adding_tokens_lr1e-2_to_scene_latent_tuning | not available | | | | | | | | | |
+| adding_tokens_lr1e-4_to_scene_latent_tuning_with_geo_loss | +0.205 [+0.186, +0.224] 139/1 | +0.158 [+0.139, +0.178] 134/6 | +0.099 [+0.079, +0.119] 116/24 | -0.009201 | +0.008648 | -0.02038 | +2.936 | +0.08609 | -1.078 | +0.0004204 |
+| adding_tokens_lr1e-2_to_scene_latent_tuning_with_geo_loss | not available | | | | | | | | | |
+| adding_scene_latents_to_token_tuning_lr1e-4 | +0.671 [+0.608, +0.733] 136/4 | +0.462 [+0.390, +0.534] 119/21 | +0.191 [+0.120, +0.261] 88/52 | -0.03583 | +0.08512 | -0.001754 | +67.76 | -0.03372 | +0.9931 | -0.008685 |
+| adding_scene_latents_to_token_tuning_lr1e-2 | not available | | | | | | | | | |
+| adding_scene_latents_to_token_tuning_lr1e-4_with_geo_loss | +0.333 [+0.274, +0.393] 122/18 | +0.146 [+0.081, +0.210] 84/56 | -0.124 [-0.193, -0.054] 47/93 | -0.02666 | +0.09349 | -0.2555 | -280 | +0.1243 | -2.224 | -0.02539 |
+| adding_scene_latents_to_token_tuning_lr1e-2_with_geo_loss | not available | | | | | | | | | |
+| scene_latent_tuning_vs_no_tuning | +2.206 [+2.059, +2.353] 140/0 | +1.838 [+1.673, +2.003] 138/2 | +1.217 [+1.058, +1.377] 129/11 | -0.0718 | +0.0937 | -0.0009355 | +61.5 | +0.0178 | +1.092 | -0.01178 |
+| scene_latent_tuning_with_geo_loss_vs_no_tuning | +1.541 [+1.441, +1.640] 140/0 | +1.244 [+1.130, +1.358] 137/3 | +0.708 [+0.592, +0.825] 121/19 | -0.04276 | +0.07042 | -0.3367 | -366.4 | +0.5424 | -1.294 | -0.02989 |
+| token_tuning_lr1e-4_vs_no_tuning | +1.617 [+1.522, +1.711] 140/0 | +1.432 [+1.329, +1.536] 140/0 | +1.059 [+0.959, +1.159] 140/0 | -0.03962 | +0.008526 | -0.0009325 | +7.097 | +0.08445 | +0.04246 | -0.0006722 |
+| token_tuning_lr1e-2_vs_no_tuning | not available | | | | | | | | | |
+| token_tuning_lr1e-4_with_geo_loss_vs_no_tuning | +1.413 [+1.338, +1.488] 140/0 | +1.257 [+1.175, +1.339] 140/0 | +0.931 [+0.851, +1.012] 140/0 | -0.0253 | -0.01442 | -0.1016 | -83.42 | +0.5042 | -0.1468 | -0.004075 |
+| token_tuning_lr1e-2_with_geo_loss_vs_no_tuning | not available | | | | | | | | | |
+| scene_latent_and_token_tuning_token_lr1e-4_vs_no_tuning | +2.287 [+2.138, +2.436] 140/0 | +1.894 [+1.725, +2.063] 138/2 | +1.249 [+1.085, +1.414] 129/11 | -0.07545 | +0.09365 | -0.002687 | +74.86 | +0.05072 | +1.036 | -0.009357 |
+| scene_latent_and_token_tuning_token_lr1e-2_vs_no_tuning | not available | | | | | | | | | |
+| scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_vs_no_tuning | +1.746 [+1.633, +1.860] 140/0 | +1.402 [+1.273, +1.532] 136/4 | +0.808 [+0.677, +0.938] 122/18 | -0.05196 | +0.07907 | -0.3571 | -363.4 | +0.6285 | -2.371 | -0.02947 |
+| scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_vs_no_tuning | not available | | | | | | | | | |
+| repeat_run_noise_floor | +0.000 [-0.003, +0.004] 66/74 | -0.001 [-0.003, +0.001] 67/73 | -0.001 [-0.003, +0.000] 70/70 | +2.279e-06 | +0.0001424 | +8.46e-06 | -0.1597 | +5.008e-05 | -0.002238 | -7.221e-06 |
+
+Comparison definitions (this - reference): geo_loss_effect_in_scene_latent_tuning = scene_latent_tuning_with_geo_loss - scene_latent_tuning; geo_loss_effect_in_token_tuning_lr1e-4 = token_tuning_lr1e-4_with_geo_loss - token_tuning_lr1e-4; geo_loss_effect_in_token_tuning_lr1e-2 = token_tuning_lr1e-2_with_geo_loss - token_tuning_lr1e-2; geo_loss_effect_in_scene_latent_and_token_tuning_token_lr1e-4 = scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss - scene_latent_and_token_tuning_token_lr1e-4; geo_loss_effect_in_scene_latent_and_token_tuning_token_lr1e-2 = scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss - scene_latent_and_token_tuning_token_lr1e-2; token_lr_1e-2_vs_1e-4_in_token_tuning = token_tuning_lr1e-2 - token_tuning_lr1e-4; token_lr_1e-2_vs_1e-4_in_token_tuning_with_geo_loss = token_tuning_lr1e-2_with_geo_loss - token_tuning_lr1e-4_with_geo_loss; token_lr_1e-2_vs_1e-4_in_scene_latent_and_token_tuning = scene_latent_and_token_tuning_token_lr1e-2 - scene_latent_and_token_tuning_token_lr1e-4; token_lr_1e-2_vs_1e-4_in_scene_latent_and_token_tuning_with_geo_loss = scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss - scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss; token_tuning_lr1e-4_vs_scene_latent_tuning = token_tuning_lr1e-4 - scene_latent_tuning; token_tuning_lr1e-2_vs_scene_latent_tuning = token_tuning_lr1e-2 - scene_latent_tuning; adding_tokens_lr1e-4_to_scene_latent_tuning = scene_latent_and_token_tuning_token_lr1e-4 - scene_latent_tuning; adding_tokens_lr1e-2_to_scene_latent_tuning = scene_latent_and_token_tuning_token_lr1e-2 - scene_latent_tuning; adding_tokens_lr1e-4_to_scene_latent_tuning_with_geo_loss = scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss - scene_latent_tuning_with_geo_loss; adding_tokens_lr1e-2_to_scene_latent_tuning_with_geo_loss = scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss - scene_latent_tuning_with_geo_loss; adding_scene_latents_to_token_tuning_lr1e-4 = scene_latent_and_token_tuning_token_lr1e-4 - token_tuning_lr1e-4; adding_scene_latents_to_token_tuning_lr1e-2 = scene_latent_and_token_tuning_token_lr1e-2 - token_tuning_lr1e-2; adding_scene_latents_to_token_tuning_lr1e-4_with_geo_loss = scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss - token_tuning_lr1e-4_with_geo_loss; adding_scene_latents_to_token_tuning_lr1e-2_with_geo_loss = scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss - token_tuning_lr1e-2_with_geo_loss; scene_latent_tuning_vs_no_tuning = scene_latent_tuning - no_tuning; scene_latent_tuning_with_geo_loss_vs_no_tuning = scene_latent_tuning_with_geo_loss - no_tuning; token_tuning_lr1e-4_vs_no_tuning = token_tuning_lr1e-4 - no_tuning; token_tuning_lr1e-2_vs_no_tuning = token_tuning_lr1e-2 - no_tuning; token_tuning_lr1e-4_with_geo_loss_vs_no_tuning = token_tuning_lr1e-4_with_geo_loss - no_tuning; token_tuning_lr1e-2_with_geo_loss_vs_no_tuning = token_tuning_lr1e-2_with_geo_loss - no_tuning; scene_latent_and_token_tuning_token_lr1e-4_vs_no_tuning = scene_latent_and_token_tuning_token_lr1e-4 - no_tuning; scene_latent_and_token_tuning_token_lr1e-2_vs_no_tuning = scene_latent_and_token_tuning_token_lr1e-2 - no_tuning; scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss_vs_no_tuning = scene_latent_and_token_tuning_token_lr1e-4_with_geo_loss - no_tuning; scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss_vs_no_tuning = scene_latent_and_token_tuning_token_lr1e-2_with_geo_loss - no_tuning; repeat_run_noise_floor = scene_latent_tuning_repeat_run - scene_latent_tuning
+
+=== run_all_groups finished 2026-10-20 13:06:05, failed groups: 1
