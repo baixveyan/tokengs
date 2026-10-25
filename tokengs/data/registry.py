@@ -17,11 +17,13 @@ from pathlib import Path
 
 from tokengs.data.dynamic.kubric import Kubric
 from tokengs.data.static.dl3dv import DL3DV10K, DL3DVEval
+from tokengs.data.static.scannetpp import ScanNetPP, ScanNetPPVal
 
 # Repository root (parent of the `tokengs` package)
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 _DEFAULT_DL3DV_ROOT = _REPO_ROOT / "data" / "dl3dv"
 _DEFAULT_DL3DV_EVAL_ROOT = _REPO_ROOT / "data" / "dl3dv_eval"
+_DEFAULT_SCANNETPP_ROOT = Path("/home/jms/xveyan/data/4dgs/scannetpp")
 _DEFAULT_KUBRIC_ROOT = _REPO_ROOT / "data" / "kubric"
 
 dataset_registry = {}
@@ -77,4 +79,27 @@ dataset_registry["kubric"] = {
     "scene_scale": 1.0,
     "max_gap": 23,
     "min_gap": 3,
+}
+
+# ScanNet++ v2 DSLR training & validation splits
+dataset_registry["scannetpp"] = {
+    "cls": ScanNetPP,
+    "kwargs": {
+        "root_path": str(_DEFAULT_SCANNETPP_ROOT),
+        "split": "nvs_sem_train.txt",
+    },
+    "scene_scale": 0.3,
+    "max_gap": 20,
+    "min_gap": 8,
+}
+
+dataset_registry["scannetpp_val"] = {
+    "cls": ScanNetPPVal,
+    "kwargs": {
+        "root_path": str(_DEFAULT_SCANNETPP_ROOT),
+        "split": "nvs_sem_val.txt",
+    },
+    "scene_scale": 0.3,
+    "max_gap": 20,
+    "min_gap": 8,
 }

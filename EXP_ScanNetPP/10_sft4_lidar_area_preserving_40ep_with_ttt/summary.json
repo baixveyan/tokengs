@@ -1,0 +1,21 @@
+{
+  "psnr": 33.07207386016846,
+  "ssim": 0.946942367553711,
+  "lpips": 0.1438191355764866,
+  "warp_psnr": 22.517192163467406,
+  "mv_cycle_err_pct": 3.640801290050149,
+  "ray_thick_m": 0.3389154064655304,
+  "alive_op05_count": 59766.68,
+  "needles_gt3_pct": 3.652859229594469,
+  "needles_gt2_pct": 14.364453434944153,
+  "blade_cos_ray_p50": 0.3398433792591095,
+  "blade_along_ray_gt09_pct": 4.276303957480181,
+  "lidar_dist_p50_m": 0.015784569261595608,
+  "lidar_dist_p75_m": 0.05008883053436875,
+  "lidar_within_3cm_pct": 70.86902678012848,
+  "lidar_within_5cm_pct": 82.04732120037079,
+  "num_scenes": 50,
+  "window_size": 18,
+  "checkpoint": "workspace_scannetpp/sft4_lidar_area_preserving_40ep/checkpoints/best/model.safetensors",
+  "elapsed_sec": 181.6583709716797
+}

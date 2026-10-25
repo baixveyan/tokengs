@@ -591,7 +591,8 @@ def require_checkpoint_disk_space(path, **estimate_kwargs):
 def checkpoint_disk_preflight(opt, accelerator, model, optimizer, scheduler):
     def check():
         components = checkpoint_component_bytes(accelerator.unwrap_model(model), optimizer, scheduler)
-        estimate = require_checkpoint_disk_space(opt.workspace, **components)
+        conc = int(os.environ.get("TOKENGS_CONCURRENT_RUNS", FORMAL_CONCURRENT_RUNS))
+        estimate = require_checkpoint_disk_space(opt.workspace, concurrent_runs=conc, **components)
         root = Path(opt.workspace) / 'checkpoints'
         with checkpoint_lock(root, exclusive=True):
             _gc_locked(root, disk_estimate=estimate)

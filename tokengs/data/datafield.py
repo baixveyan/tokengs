@@ -23,3 +23,5 @@ DF_CAMERA_INTRINSICS = "camera_intrinsics"
 DF_FOREGROUND_MASK = "foreground_mask"
 # [B, H, W, 1], float32, depth map.
 DF_DEPTH = "depth"
+# [N_pts, 3], float32, raw world-space LiDAR surface points.
+DF_LIDAR_POINTS = "lidar_points"

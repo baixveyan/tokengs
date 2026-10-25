@@ -31,6 +31,7 @@ from tokengs.data.datafield import (
     DF_IMAGE_RGB,
     DF_FOREGROUND_MASK,
     DF_DEPTH,
+    DF_LIDAR_POINTS,
 )
 
 
@@ -89,6 +90,8 @@ class Provider(Dataset):
         self.data_fields = [DF_IMAGE_RGB, DF_CAMERA_C2W_TRANSFORM, DF_CAMERA_INTRINSICS, DF_FOREGROUND_MASK]
         if opt.camera_scale_method == 'pointmap':
             self.data_fields.append(DF_DEPTH)
+        if getattr(opt, "load_lidar_pc", False):
+            self.data_fields.append(DF_LIDAR_POINTS)
 
     def set_rng_epoch(self, epoch: int) -> None:
         self.rng = np.random.default_rng(epoch + self.opt.seed)
@@ -159,7 +162,7 @@ class Provider(Dataset):
 
         return all_dists.mean().clamp(min=1e-6).item()
 
-    def _preprocess(self, rgbs, masks, depths, c2ws, intrinsics, timesteps, has_mask):
+    def _preprocess(self, rgbs, masks, depths, c2ws, intrinsics, timesteps, has_mask, raw_lidar_points=None):
         if self.opt.camera_scale_method == 'pointmap':
             raw_depths = depths.clone()
             raw_intrinsics = intrinsics.clone()
@@ -179,9 +182,19 @@ class Provider(Dataset):
 
         # relative pose
         if self.opt.camera_normalization_method == 'mean_cam':
-            c2ws = self._normalize_camera_mean_cam(c2ws)
+            input_c2ws = c2ws[:self.opt.num_input_views]
+            position_avg = input_c2ws[:, :3, 3].mean(0)
+            forward_avg = F.normalize(input_c2ws[:, :3, 2].mean(0), dim=0)
+            down_avg = input_c2ws[:, :3, 1].mean(0)
+            down_avg = F.normalize(down_avg - down_avg.dot(forward_avg) * forward_avg, dim=0)
+            right_avg = torch.linalg.cross(down_avg, forward_avg)
+            pos_avg = torch.stack([right_avg, down_avg, forward_avg, position_avg], dim=1)
+            pos_avg = torch.cat([pos_avg, torch.tensor([[0, 0, 0, 1]], device=pos_avg.device).float()], dim=0)
+            world_to_norm = torch.inverse(pos_avg)
+            c2ws = torch.matmul(world_to_norm.unsqueeze(0), c2ws)
         elif self.opt.camera_normalization_method == 'first_cam':
-            c2ws = torch.inverse(c2ws[0]).unsqueeze(0) @ c2ws
+            world_to_norm = torch.inverse(c2ws[0])
+            c2ws = world_to_norm.unsqueeze(0) @ c2ws
         else:
             raise ValueError(f"Invalid camera normalization method: {self.opt.camera_normalization_method}")
 
@@ -203,10 +216,42 @@ class Provider(Dataset):
         else:
             raise ValueError(f"Invalid camera scale method: {self.opt.camera_scale_method}")
 
+        reflected = False
         if self.training and self.opt.random_reflect:
-            rgbs, c2ws = random_reflect(rgbs, c2ws, generator=self.generator)
+            c2w_x_before = float(c2ws[0, 0, 3])
+            rgbs_new, c2ws_new = random_reflect(rgbs, c2ws, generator=self.generator)
+            reflected = (not torch.equal(rgbs_new, rgbs)) or (float(c2ws_new[0, 0, 3]) != c2w_x_before)
+            rgbs, c2ws = rgbs_new, c2ws_new
 
         c2ws[:, :3, 3] = c2ws[:, :3, 3] * final_scene_scale
+
+        # Transform and frustum-crop LiDAR surface points if present
+        lidar_pts_out = None
+        if raw_lidar_points is not None and raw_lidar_points.numel() > 0:
+            pts_n = raw_lidar_points @ world_to_norm[:3, :3].T + world_to_norm[:3, 3].unsqueeze(0)
+            if reflected:
+                pts_n[:, 0] = -pts_n[:, 0]
+            pts_n = pts_n * float(final_scene_scale)
+
+            w2c_in = torch.inverse(c2ws[:self.opt.num_input_views])
+            intr_in = intrinsics[:self.opt.num_input_views]
+            H_i, W_i = self.opt.img_size
+            vis = torch.zeros(pts_n.shape[0], dtype=torch.bool)
+            for v_i in range(w2c_in.shape[0]):
+                xc = pts_n @ w2c_in[v_i, :3, :3].T + w2c_in[v_i, :3, 3]
+                z = xc[:, 2]
+                fx, fy, cx, cy = intr_in[v_i]
+                u = fx * xc[:, 0] / z.clamp_min(1e-4) + cx
+                v = fy * xc[:, 1] / z.clamp_min(1e-4) + cy
+                vis |= (z > 0.05) & (z < 3.5) & (u >= 0) & (u < W_i) & (v >= 0) & (v < H_i)
+            pts_vis = pts_n[vis] if int(vis.sum()) >= 256 else pts_n
+            n_target = 8192
+            if pts_vis.shape[0] >= n_target:
+                pick = torch.linspace(0, pts_vis.shape[0] - 1, n_target).long()
+                lidar_pts_out = pts_vis[pick].contiguous()
+            else:
+                rep = (n_target + pts_vis.shape[0] - 1) // max(1, pts_vis.shape[0])
+                lidar_pts_out = pts_vis.repeat(rep, 1)[:n_target].contiguous()
 
         images_input = self.input_normalizer(rgbs.clone())
         if self.opt.time_embedding:
@@ -225,7 +270,7 @@ class Provider(Dataset):
         )
         final_input = torch.cat([images_input, plucker_embedding], dim=1)
 
-        return {
+        out_dict = {
             'input': final_input,
             'rays_os': rays_os,
             'rays_ds': rays_ds,
@@ -243,6 +288,9 @@ class Provider(Dataset):
             'cam_to_world_input': c2ws[:self.opt.num_input_views], # [V, 4, 4]
             'cam_view_input': torch.inverse(c2ws[:self.opt.num_input_views]).transpose(1, 2), # [V, 4, 4]
         }
+        if lidar_pts_out is not None:
+            out_dict['lidar_points'] = lidar_pts_out
+        return out_dict
     
     def get_rng(self, idx: int) -> np.random.Generator:
         """
@@ -424,7 +472,10 @@ class Provider(Dataset):
 
         rgbs, masks, depths, c2ws, intrinsics, timesteps = _curate_batch_fn(all_rgbs, all_masks, all_depths, all_c2ws, all_intrinsics, torch.from_numpy(frame_indices).float())
 
-        result = self._preprocess(rgbs, masks, depths, c2ws, intrinsics, timesteps, has_mask)
+        result = self._preprocess(
+            rgbs, masks, depths, c2ws, intrinsics, timesteps, has_mask,
+            raw_lidar_points=original_output_dict.get(DF_LIDAR_POINTS),
+        )
         actual_scene_id = self._scene_id(idx)
         actual_frame_ids = timesteps.to(dtype=torch.int64)
         result.update({

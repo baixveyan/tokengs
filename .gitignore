@@ -34,6 +34,14 @@ EXP_TokenGS/demo/**/*.ply
 !EXP_TokenGS/demo/**/*_only10tokens*.ply
 !EXP_TokenGS/demo/**/*_only20tokens*.ply
 
+EXP_ScanNetPP/demo/**/gaussians.pt
+EXP_ScanNetPP/demo/**/decoder_inputs.pt
+EXP_ScanNetPP/demo/**/*.ply
+!EXP_ScanNetPP/demo/**/gt_lidar_mesh_frustum.ply
+!EXP_ScanNetPP/demo/**/cameras.ply
+!EXP_ScanNetPP/demo/**/*_only10tokens*.ply
+!EXP_ScanNetPP/demo/**/*_only20tokens*.ply
+
 # Local dataset roots (tracked: data/DATA.md)
 data/dl3dv
 data/dl3dv_eval

@@ -22,16 +22,19 @@ from .input_types import (
     Reconstruction,
     split_data,
 )
+from .lidar_sft_tokengs import LiDARSFTTokenGS
 from .tokengs import TokenGS
 
 # Model registry
 model_registry = {
     'tokengs': TokenGS,
+    'tokengs_lidar_sft': LiDARSFTTokenGS,
 }
 
 # Export for convenience
 __all__ = [
     'TokenGS',
+    'LiDARSFTTokenGS',
     'split_data',
     'ModelInput',
     'ModelInputEncoder',

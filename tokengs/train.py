@@ -209,21 +209,20 @@ def _initialize_dynamic_tokens_from_static(ckpt, state_dict, accelerator):
 
 
 def setup_optimizer(opt, model, accelerator, epoch_start):
-    """Setup optimizer. Call before accelerator.prepare()."""
-    decay_params, nodecay_params = [], []
+    """Setup optimizer with optional per-parameter `_lr_scale` support. Call before accelerator.prepare()."""
+    groups_map = {}
     for name, param in model.named_parameters():
         if not param.requires_grad:
             continue
-        if param.dim() == 1 or getattr(param, '_no_weight_decay', False):
-            nodecay_params.append(param)
-        else:
-            decay_params.append(param)
+        wd = 0.0 if (param.dim() == 1 or getattr(param, '_no_weight_decay', False)) else 0.05
+        lr_scale = float(getattr(param, '_lr_scale', 1.0))
+        key = (wd, lr_scale)
+        groups_map.setdefault(key, []).append(param)
 
-    optim_groups = []
-    if len(decay_params) > 0:
-        optim_groups.append({'params': decay_params, 'weight_decay': 0.05})
-    if len(nodecay_params) > 0:
-        optim_groups.append({'params': nodecay_params, 'weight_decay': 0.0})
+    optim_groups = [
+        {'params': params, 'weight_decay': wd, 'lr': opt.lr * lr_scale, '_lr_scale': lr_scale}
+        for (wd, lr_scale), params in groups_map.items()
+    ]
 
     optimizer = torch.optim.AdamW(optim_groups, lr=opt.lr, betas=(0.9, 0.95), fused=True)
 
@@ -241,8 +240,9 @@ def setup_scheduler(opt, optimizer, iters_per_epoch, accelerator, epoch_start):
     steps_per_epoch = iters_per_epoch // opt.gradient_accumulation_steps
     total_steps = opt.num_epochs * steps_per_epoch
     pct_start = min(opt.pct_start_steps / total_steps, 0.99)
+    max_lrs = [opt.lr * float(g.get('_lr_scale', 1.0)) for g in optimizer.param_groups]
     scheduler = torch.optim.lr_scheduler.OneCycleLR(
-        optimizer, max_lr=opt.lr, total_steps=total_steps,
+        optimizer, max_lr=max_lrs, total_steps=total_steps,
         pct_start=pct_start, final_div_factor=opt.final_div_factor,
     )
 
@@ -708,6 +708,8 @@ def main():
 
     # Load model checkpoint
     load_model_checkpoint(opt, model, accelerator, epoch_start)
+    if hasattr(model, "configure_sft_trainable_parameters"):
+        model.configure_sft_trainable_parameters(accelerator)
     
     # Data
     train_dataloader, test_dataloader, train_dataset, test_dataset = get_multi_dataloader(opt, accelerator)

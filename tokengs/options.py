@@ -18,6 +18,7 @@
 from __future__ import annotations
 
 import copy
+import dataclasses
 from dataclasses import dataclass
 from typing import Any, Literal
 
@@ -64,6 +65,8 @@ class Options:
     init_dynamic_tokens_from_static: bool = False
     init_tokens_from_existing: bool = False
     init_latents_from_existing: bool = False
+    load_lidar_pc: bool = False
+    lidar_sft_mode: Literal["scene_latent_probe", "surface_self_attn", "fused_full_decoder"] = "scene_latent_probe"
 
     # --- dataset
     data_mode: tuple[tuple[str, int], ...] = (("dl3dv_scaled_0.15", 6),)
@@ -190,14 +193,16 @@ class Options:
             raise ValueError("geo_num_sw_directions must be positive")
 
     def evolve(self, **changes: Any) -> Options:
-        """Return a deep copy with the given fields replaced."""
-        new_instance = copy.deepcopy(self)
+        """Return a deep copy of dataclass fields with the given fields replaced."""
+        field_values = {
+            f.name: copy.deepcopy(getattr(self, f.name))
+            for f in dataclasses.fields(self)
+        }
         for key, value in changes.items():
-            if not hasattr(new_instance, key):
+            if key not in field_values:
                 raise AttributeError(f"Options has no attribute '{key}'")
-            setattr(new_instance, key, value)
-        new_instance.validate()
-        return new_instance
+            field_values[key] = value
+        return Options(**field_values)
 
 
 config_defaults: dict[str, Options] = {}
@@ -374,6 +379,121 @@ for _num_input_views in (2, 4, 6):
     config_defaults[_name] = _latent_dl3dv_eval_preset(
         _num_input_views, _eval_json
     ).evolve(**_LPIPS_LOSS)
+
+# ----- ScanNet++ v2 latent-bottleneck training & evaluation presets -----
+config_doc["finetune_scannetpp_latent_6view_ssim"] = (
+    "Train/finetune the SA d12 latent-bottleneck 6-view SSIM TokenGS baseline on ScanNet++ v2 DSLR "
+    "(853 train scenes from nvs_sem_train.txt, validated on 50 scenes from nvs_sem_val.txt)."
+)
+config_defaults["finetune_scannetpp_latent_6view_ssim"] = _latent_dl3dv_train_preset(6, 10).evolve(
+    data_mode=(("scannetpp_scaled_0.3", 4),),
+    validation_data_mode="scannetpp_val_scaled_0.3",
+    validation_batch_size=1,
+    num_epochs=30,
+    pct_start_steps=400,
+    lr=4e-5,
+    batch_size=2,
+    gradient_accumulation_steps=1,
+    num_workers=4,
+    print_freq=10,
+    use_wandb=False,
+    **_SSIM_LOSS,
+)
+
+config_doc["train_scannetpp_latent_6view_ssim_scratch"] = (
+    "Full from-scratch training of the SA d12 latent-bottleneck 6-view SSIM TokenGS baseline on ScanNet++ v2 DSLR "
+    "(matches official train_dl3dv_latent_base scratch recipe: 180 epochs, repeat=6, lr=4e-4, warmup=2000, use_input_supervision=True)."
+)
+config_defaults["train_scannetpp_latent_6view_ssim_scratch"] = config_defaults["train_dl3dv_latent_base"].evolve(
+    data_mode=(("scannetpp_scaled_0.3", 6),),
+    validation_data_mode="scannetpp_val_scaled_0.3",
+    validation_batch_size=1,
+    num_epochs=180,
+    max_iters_per_epoch=1_000_000,
+    pct_start_steps=2000,
+    lr=4e-4,
+    num_gs_tokens=4096,
+    num_input_views=6,
+    num_views=10,
+    img_size=(256, 448),
+    batch_size=2,
+    gradient_accumulation_steps=1,
+    num_workers=4,
+    print_freq=10,
+    use_wandb=False,
+    use_input_supervision=True,
+    init_tokens_from_existing=False,
+    init_latents_from_existing=False,
+    **_LATENT_D12_ARCH,
+    **_SSIM_LOSS,
+)
+
+config_doc["eval_scannetpp_latent_6view_ssim"] = (
+    "Evaluate a 6-view latent-bottleneck TokenGS checkpoint on the 50 ScanNet++ v2 validation scenes (nvs_sem_val.txt)."
+)
+config_defaults["eval_scannetpp_latent_6view_ssim"] = Options(
+    data_mode=(("scannetpp_val_scaled_0.3", 1),),
+    num_input_views=6,
+    num_views=14,
+    img_size=(256, 448),
+    evaluating=True,
+    num_gs_tokens=4096,
+    use_input_supervision=False,
+    ttt_mode="scene-latent-tuning",
+    ttt_lr=1e-2,
+    batch_size=1,
+    **_LATENT_D12_ARCH,
+    **_SSIM_LOSS,
+)
+
+config_doc["sft1_scannetpp_lidar_scene_latent"] = (
+    "[Exp-SFT-1 / 方式一] Post-training SFT on ScanNet++ with LiDAR 3D Surface Introspection & Zero-Init Residual "
+    "Injection at `scene_latents` (freezes ViT encoder + gs_tokens + decoder + deconv)."
+)
+config_defaults["sft1_scannetpp_lidar_scene_latent"] = config_defaults["finetune_scannetpp_latent_6view_ssim"].evolve(
+    model_type="tokengs_lidar_sft",
+    experiment_name="sft1_lidar_scene_latent",
+    load_lidar_pc=True,
+    lidar_sft_mode="scene_latent_probe",
+    num_epochs=15,
+    pct_start_steps=200,
+    lr=4e-5,
+    strict_checkpoint_loading=False,
+    mean_of_grads="per-scene",
+    mean_of_grads_scene_chunk_size=1,
+)
+
+config_doc["sft2_scannetpp_lidar_surface_sa"] = (
+    "[Exp-SFT-2 / 方式二] Post-training SFT on ScanNet++ with LiDAR 3D Surface Introspection + Waking up "
+    "`gs_self_attn` (0.00036) Token 3D Surface Self-Attention (freezes ViT encoder + deconv)."
+)
+config_defaults["sft2_scannetpp_lidar_surface_sa"] = config_defaults["sft1_scannetpp_lidar_scene_latent"].evolve(
+    experiment_name="sft2_lidar_surface_sa",
+    lidar_sft_mode="surface_self_attn",
+)
+
+config_doc["sft3_scannetpp_lidar_fused_100ep"] = (
+    "[Exp-SFT-3 / 融合方案 + 解冻 deconv, 100 Epochs] Fuses Mode 1 + Mode 2 + unfrozen `activation_head.deconv` "
+    "with differential learning rates and individual child LiDAR surface + needle + blade-orientation supervision."
+)
+config_defaults["sft3_scannetpp_lidar_fused_100ep"] = config_defaults["sft1_scannetpp_lidar_scene_latent"].evolve(
+    experiment_name="sft3_lidar_fused_100ep",
+    lidar_sft_mode="fused_full_decoder",
+    num_epochs=100,
+    pct_start_steps=600,
+    lr=4e-5,
+)
+
+config_doc["sft4_scannetpp_lidar_area_preserving_40ep"] = (
+    "[Exp-SFT-4 / 面积守恒 + 纯旋转刀片修正 + 探针梯度隔离, 40 Epochs] Fixes all 3 PSNR-drop root causes "
+    "(detached probe input, area-preserving s1*s2=const needle loss, pure-rotation blade hinge cos>0.35) for 40 epochs."
+)
+config_defaults["sft4_scannetpp_lidar_area_preserving_40ep"] = config_defaults["sft3_scannetpp_lidar_fused_100ep"].evolve(
+    experiment_name="sft4_lidar_area_preserving_40ep",
+    num_epochs=40,
+    pct_start_steps=300,
+    lr=4e-5,
+)
 
 
 # ----- Kubric 4D dynamic finetune -----

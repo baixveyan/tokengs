@@ -1,0 +1,70 @@
+{
+  "alive_ratio": 0.7170028686523438,
+  "opacity_mean": 0.05955464392900467,
+  "children": 187958,
+  "opacity_mass_fraction": 0.9938893914222717,
+  "aniso_p50_weighted": 24.063278198242188,
+  "aniso_p50_unweighted": 69.01634216308594,
+  "cos_long_axis_ray_p50_weighted": 0.7815084457397461,
+  "long_axis_along_ray_gt0.9_weighted": 0.3075547270563929,
+  "outside_all_input_frustums_weighted": 0.05252075811312706,
+  "outside_all_input_frustums_count_opacity_gt0.1": 2644,
+  "parallax_buckets": [
+    {
+      "parallax_deg": [
+        0.0,
+        4.0
+      ],
+      "children": 101,
+      "opacity_mass_fraction": 0.0003102041664533317,
+      "aniso_p50_weighted": 43.726131439208984,
+      "aniso_p50_unweighted": 56.6310920715332,
+      "cos_long_axis_ray_p50_weighted": 0.07577306032180786,
+      "long_axis_along_ray_gt0.9_weighted": 0.08466350854500282
+    },
+    {
+      "parallax_deg": [
+        4.0,
+        9.0
+      ],
+      "children": 5114,
+      "opacity_mass_fraction": 0.024600017815828323,
+      "aniso_p50_weighted": 22.042537689208984,
+      "aniso_p50_unweighted": 65.68012237548828,
+      "cos_long_axis_ray_p50_weighted": 0.8039366602897644,
+      "long_axis_along_ray_gt0.9_weighted": 0.3299575441657961
+    },
+    {
+      "parallax_deg": [
+        9.0,
+        20.0
+      ],
+      "children": 25185,
+      "opacity_mass_fraction": 0.09971649199724197,
+      "aniso_p50_weighted": 28.600379943847656,
+      "aniso_p50_unweighted": 78.20391845703125,
+      "cos_long_axis_ray_p50_weighted": 0.8333662748336792,
+      "long_axis_along_ray_gt0.9_weighted": 0.39100802673067264
+    },
+    {
+      "parallax_deg": [
+        20.0,
+        180.0
+      ],
+      "children": 157558,
+      "opacity_mass_fraction": 0.8692626357078552,
+      "aniso_p50_weighted": 23.64130210876465,
+      "aniso_p50_unweighted": 67.9607162475586,
+      "cos_long_axis_ray_p50_weighted": 0.7754907011985779,
+      "long_axis_along_ray_gt0.9_weighted": 0.2974270256343664
+    }
+  ],
+  "opacity_quantiles": {
+    "0.1": 0.0009005278698168695,
+    "0.5": 0.02886170707643032,
+    "0.9": 0.15375882387161255,
+    "0.99": 0.4380788803100586
+  },
+  "opacity_low_ratio_lt0.1": 0.8136482238769531,
+  "opacity_high_ratio_gt0.9": 0.00012969970703125
+}
