@@ -61,6 +61,108 @@ def export_camera_ply(path, context_c2w: torch.Tensor, target_c2w: torch.Tensor 
     PlyData([PlyElement.describe(arr, "vertex")]).write(str(path))
 
 
+def export_pruned_ply(src_path, dst_path, min_opacity: float) -> int:
+    """Filter an exported Gaussian PLY by opacity_activated >= min_opacity while preserving all vertex fields."""
+    from plyfile import PlyData, PlyElement
+
+    verts = PlyData.read(str(src_path))["vertex"].data
+    kept = verts[verts["opacity_activated"] >= float(min_opacity)]
+    PlyData([PlyElement.describe(kept, "vertex")]).write(str(dst_path))
+    return int(kept.shape[0])
+
+
+def export_scannetpp_lidar_ply(
+    path,
+    mesh_ply,
+    raw_context_c2w: torch.Tensor,
+    cam_view_input: torch.Tensor,
+    intrinsics_input: torch.Tensor,
+    img_size: tuple[int, int] | list[int],
+    scene_scale: float = 0.3,
+    max_points: int = 80000,
+) -> int:
+    """Export ScanNet++ GT LiDAR mesh vertices visible in the 6 input frustums in TokenGS normalized coordinates."""
+    from pathlib import Path
+    from plyfile import PlyData, PlyElement
+
+    mesh_ply = Path(mesh_ply)
+    with open(mesh_ply, "rb") as f:
+        n_verts = 0
+        fmt_ok = False
+        in_vertex = False
+        vertex_props: list[tuple[str, str]] = []
+        while True:
+            line = f.readline()
+            if not line:
+                raise ValueError(f"Unexpected EOF in PLY header: {mesh_ply}")
+            s = line.decode("ascii", errors="replace").strip()
+            if s.startswith("format "):
+                fmt_ok = s == "format binary_little_endian 1.0"
+            elif s.startswith("element "):
+                parts = s.split()
+                in_vertex = len(parts) >= 3 and parts[1] == "vertex"
+                if in_vertex:
+                    n_verts = int(parts[2])
+            elif s.startswith("property ") and in_vertex:
+                parts = s.split()
+                vertex_props.append((parts[1], parts[-1]))
+            elif s == "end_header":
+                break
+        expected_props = [
+            ("float", "x"), ("float", "y"), ("float", "z"),
+            ("uchar", "red"), ("uchar", "green"), ("uchar", "blue"),
+        ]
+        if not fmt_ok or n_verts <= 0 or vertex_props != expected_props:
+            raise ValueError(
+                f"Unsupported PLY header in {mesh_ply}: format_ok={fmt_ok}, n_verts={n_verts}, props={vertex_props}"
+            )
+        v_dtype = np.dtype([("x", "<f4"), ("y", "<f4"), ("z", "<f4"), ("r", "u1"), ("g", "u1"), ("b", "u1")])
+        verts = np.fromfile(f, dtype=v_dtype, count=n_verts)
+
+    pts_w = torch.from_numpy(np.stack([verts["x"], verts["y"], verts["z"]], axis=1)).float()
+    rgb_w = np.stack([verts["r"], verts["g"], verts["b"]], axis=1)
+
+    in_c2ws = raw_context_c2w.detach().cpu().float()
+    pos_avg = in_c2ws[:, :3, 3].mean(0)
+    fwd_avg = torch.nn.functional.normalize(in_c2ws[:, :3, 2].mean(0), dim=0)
+    down_avg = in_c2ws[:, :3, 1].mean(0)
+    down_avg = torch.nn.functional.normalize(down_avg - down_avg.dot(fwd_avg) * fwd_avg, dim=0)
+    right_avg = torch.linalg.cross(down_avg, fwd_avg)
+    mat = torch.eye(4)
+    mat[:3, 0], mat[:3, 1], mat[:3, 2], mat[:3, 3] = right_avg, down_avg, fwd_avg, pos_avg
+    mat_inv = torch.linalg.inv(mat)
+
+    pts_n = (pts_w @ mat_inv[:3, :3].T + mat_inv[:3, 3].unsqueeze(0)) * float(scene_scale)
+    w2c_in = cam_view_input.detach().cpu().float().transpose(-1, -2)
+    intr_in = intrinsics_input.detach().cpu().float()
+    H, W = int(img_size[0]), int(img_size[1])
+    vis = torch.zeros(pts_n.shape[0], dtype=torch.bool)
+    for v_i in range(w2c_in.shape[0]):
+        xc = pts_n @ w2c_in[v_i, :3, :3].T + w2c_in[v_i, :3, 3]
+        z = xc[:, 2]
+        fx, fy, cx, cy = intr_in[v_i]
+        u = fx * xc[:, 0] / z.clamp_min(1e-4) + cx
+        v = fy * xc[:, 1] / z.clamp_min(1e-4) + cy
+        vis |= (z > 0.05) & (z < 3.5) & (u >= 0) & (u < W) & (v >= 0) & (v < H)
+
+    vis_np = vis.numpy()
+    pts_f = pts_n.numpy()[vis_np]
+    rgb_f = rgb_w[vis_np]
+    if pts_f.shape[0] > max_points:
+        idx = np.linspace(0, pts_f.shape[0] - 1, max_points, dtype=int)
+        pts_f = pts_f[idx]
+        rgb_f = rgb_f[idx]
+
+    arr = np.empty(pts_f.shape[0], dtype=[
+        ("x", "f4"), ("y", "f4"), ("z", "f4"),
+        ("red", "u1"), ("green", "u1"), ("blue", "u1"),
+    ])
+    arr["x"], arr["y"], arr["z"] = pts_f[:, 0], pts_f[:, 1], pts_f[:, 2]
+    arr["red"], arr["green"], arr["blue"] = rgb_f[:, 0], rgb_f[:, 1], rgb_f[:, 2]
+    PlyData([PlyElement.describe(arr, "vertex")]).write(str(path))
+    return int(pts_f.shape[0])
+
+
 def export_colmap_points_ply(demo_dir, zip_path, scene_id: str, context_ids: list[int],
                              intrinsics_input: torch.Tensor, img_size: tuple[int, int] | list[int],
                              scene_scale: float, znear: float) -> dict[str, str]:

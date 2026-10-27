@@ -17,6 +17,7 @@ import tyro
 import time
 import os
 import datetime
+import subprocess
 import sys
 from dataclasses import asdict
 
@@ -235,9 +236,16 @@ def setup_optimizer(opt, model, accelerator, epoch_start):
     return optimizer
 
 
-def setup_scheduler(opt, optimizer, iters_per_epoch, accelerator, epoch_start):
+def setup_scheduler(opt, optimizer, iters_per_epoch, accelerator, epoch_start, dataloader_len=None):
     """Setup scheduler. Call after accelerator.prepare() with per-GPU iters_per_epoch."""
-    steps_per_epoch = iters_per_epoch // opt.gradient_accumulation_steps
+    # Accelerate syncs gradients on the last dataloader batch even when the accumulation window is
+    # incomplete, so a full epoch performs ceil(iters / accum) optimizer steps. When
+    # max_iters_per_epoch truncates the epoch early (no end-of-dataloader sync), it is floor(...).
+    full_epoch = dataloader_len is None or iters_per_epoch >= dataloader_len
+    if full_epoch:
+        steps_per_epoch = -(-iters_per_epoch // opt.gradient_accumulation_steps)
+    else:
+        steps_per_epoch = iters_per_epoch // opt.gradient_accumulation_steps
     total_steps = opt.num_epochs * steps_per_epoch
     pct_start = min(opt.pct_start_steps / total_steps, 0.99)
     max_lrs = [opt.lr * float(g.get('_lr_scale', 1.0)) for g in optimizer.param_groups]
@@ -251,6 +259,9 @@ def setup_scheduler(opt, optimizer, iters_per_epoch, accelerator, epoch_start):
         state = torch.load(os.path.join(state_dir, 'scheduler.pth'), map_location='cpu')
         require_finite(state, 'restored scheduler')
         scheduler.load_state_dict(state)
+        # 恢复的 state_dict 会覆盖 total_steps；按当前 GPU 数重新计算的总步数必须优先，
+        # 否则在不同卡数下续训会在最后一步触发 OneCycleLR 的步数越界。
+        scheduler.total_steps = total_steps
         # OneCycleLR 构造会重置 lr/betas；重新加载保证 optimizer 与 scheduler 同步恢复。
         optimizer.load_state_dict(torch.load(os.path.join(state_dir, 'optimizer.pth'), map_location='cpu'))
         release_checkpoint_read_lock(opt)
@@ -371,6 +382,10 @@ def train_epoch(opt, accelerator, model, optimizer, scheduler, train_dataloader,
             'geo_center_variance',
             'geo_local_scale_variance',
             'geo_inter_distance',
+            'loss_render_depth',
+            'loss_render_alpha',
+            'loss_render_thickness',
+            'loss_render_normal',
         ):
             if key in out:
                 loss_value_detailed[key] = out[key].detach()
@@ -431,6 +446,10 @@ def train_epoch(opt, accelerator, model, optimizer, scheduler, train_dataloader,
                         'geo_center_variance',
                         'geo_local_scale_variance',
                         'geo_inter_distance',
+                        'loss_render_depth',
+                        'loss_render_alpha',
+                        'loss_render_thickness',
+                        'loss_render_normal',
                     }
                 )
                 print(f"[INFO] {i}/{iters_per_epoch} mem: {(mem_total-mem_free)/1024**3:.2f}/{mem_total/1024**3:.2f}G lr: {scheduler.get_last_lr()[0]:.10f} loss: {loss_value.item():.6f} speed: {speed:.2f} it/s{geometry_log}")
@@ -659,9 +678,39 @@ def load_training_options(args=None):
     return tyro.cli(Options, default=default_opt, args=args)
 
 
+def verify_idle_gpus(max_memory_mib: float = 100.0) -> None:
+    """Verify via nvidia-smi that every GPU in CUDA_VISIBLE_DEVICES is idle before initializing CUDA."""
+    visible = os.environ.get("CUDA_VISIBLE_DEVICES", "").strip()
+    if not visible:
+        raise RuntimeError("CUDA_VISIBLE_DEVICES must be explicitly set to idle GPU index(es)")
+    indices = [x.strip() for x in visible.split(",") if x.strip()]
+    apps_out = subprocess.check_output(
+        ["nvidia-smi", "--query-compute-apps=gpu_uuid,pid", "--format=csv,noheader,nounits"],
+        text=True,
+    ).strip()
+    my_pid = os.getpid()
+    for idx in indices:
+        fields = subprocess.check_output(
+            ["nvidia-smi", "-i", idx, "--query-gpu=index,uuid,memory.used", "--format=csv,noheader,nounits"],
+            text=True,
+        ).strip().split(",")
+        gpu_idx, uuid, mem_used = [f.strip() for f in fields]
+        busy_pids = [
+            int(line.split(",")[1])
+            for line in apps_out.splitlines()
+            if line.strip() and line.split(",")[0].strip() == uuid and int(line.split(",")[1]) != my_pid
+        ]
+        if float(mem_used) > max_memory_mib or busy_pids:
+            raise RuntimeError(
+                f"GPU {gpu_idx} ({uuid}) is not idle: memory_used={mem_used} MiB (limit {max_memory_mib} MiB), "
+                f"other_pids={busy_pids}"
+            )
+
+
 def main():    
     start_time = time.time()
     opt = load_training_options()
+    verify_idle_gpus()
 
     torch.manual_seed(opt.seed)
 
@@ -741,7 +790,8 @@ def main():
     # NOTE: do NOT call accelerator.prepare(scheduler) here -- total_steps is already
     # computed from the per-GPU iters_per_epoch, and prepare() would divide it again
     # by num_processes, causing the LR to decay to zero far too early.
-    scheduler = setup_scheduler(opt, optimizer, iters_per_epoch, accelerator, epoch_start)
+    scheduler = setup_scheduler(opt, optimizer, iters_per_epoch, accelerator, epoch_start,
+                                dataloader_len=len(train_dataloader))
     # 在首次 validation/训练前按正式双并发策略核查 checkpoint 峰值，所有 rank 同步拒绝。
     checkpoint_disk_preflight(opt, accelerator, model, optimizer, scheduler)
 

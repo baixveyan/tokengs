@@ -1,0 +1,5 @@
+{
+  "rule": "first scene of the official ScanNet++ v2 validation split (nvs_sem_val.txt)",
+  "scene_id": "7b6477cb95",
+  "n_scenes": 50
+}

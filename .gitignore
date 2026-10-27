@@ -34,10 +34,10 @@ EXP_TokenGS/demo/**/*.ply
 !EXP_TokenGS/demo/**/*_only10tokens*.ply
 !EXP_TokenGS/demo/**/*_only20tokens*.ply
 
-EXP_ScanNetPP/demo/**/gaussians.pt
-EXP_ScanNetPP/demo/**/decoder_inputs.pt
-EXP_ScanNetPP/demo/**/*.ply
-!EXP_ScanNetPP/demo/**/gt_lidar_mesh_frustum.ply
+# ScanNet++ demo: keep every result artifact (PLY / .pt dumps are <25 MB each); only model weights are excluded
+EXP_ScanNetPP/**/*.safetensors
+EXP_ScanNetPP/**/.task.lock/
+EXP_ScanNetPP/**/.backfill.lock/
 !EXP_ScanNetPP/demo/**/cameras.ply
 !EXP_ScanNetPP/demo/**/*_only10tokens*.ply
 !EXP_ScanNetPP/demo/**/*_only20tokens*.ply

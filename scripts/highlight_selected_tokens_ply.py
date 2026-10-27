@@ -29,6 +29,7 @@ from pathlib import Path
 import numpy as np
 
 from compare_same_scene_ply import find_sidecars
+from demo_ply_export import export_pruned_ply
 from experiment_registry import method_sort_key
 
 SH_C0 = 0.28209479177387814
@@ -152,6 +153,8 @@ def main() -> int:
     p.add_argument("--counts", type=int, nargs="+", default=[10, 20])
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--grey-opacity-scale", type=float, default=0.1)
+    p.add_argument("--prune-thresholds", type=float, nargs="*", default=(),
+                   help="optional opacity_activated thresholds to write _only<k>tokens_prune<thr>.ply")
     args = p.parse_args()
     counts = sorted(set(args.counts))
     if max(counts) > len(PALETTE):
@@ -187,6 +190,10 @@ def main() -> int:
                 files[m].extend((str(out.relative_to(scene_dir)), str(only.relative_to(scene_dir))))
                 print("wrote", out)
                 print("wrote", only)
+                for thr in args.prune_thresholds:
+                    pruned = sidecars[m].parent / f"{m}_only{k}tokens_prune{thr:g}.ply"
+                    export_pruned_ply(only, pruned, thr)
+                    print("wrote", pruned)
             stats[m] = {int(t): token_stats(verts[m], children, int(t)) for t in tokens}
         for m in methods:
             for t, s in stats[m].items():

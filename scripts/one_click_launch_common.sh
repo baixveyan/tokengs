@@ -51,6 +51,105 @@ for line in q("--query-gpu=index,uuid,memory.used"):
 EOF
 }
 
+# Clean up any stale GPU reservation locks whose owner PID is no longer running.
+_one_click_clean_stale_gpu_locks() {
+  local lock pid
+  for lock in /tmp/tokengs_gpu_active_*.lock; do
+    [ -d "$lock" ] || continue
+    if [ -f "$lock/pid" ]; then
+      pid=$(cat "$lock/pid" 2>/dev/null || true)
+      if [ -n "$pid" ] && ! kill -0 "$pid" 2>/dev/null; then
+        rm -rf "$lock" 2>/dev/null || true
+      fi
+    else
+      rm -rf "$lock" 2>/dev/null || true
+    fi
+  done
+}
+
+# Dynamically checks nvidia-smi right before a run and atomically reserves one idle GPU.
+# Respects optional allowed list in $ALLOWED_GPUS (space- or comma-separated).
+# If WAIT_FOR_IDLE_GPU=1 (default), waits until an idle GPU is available; if 0, exits 3 immediately.
+one_click_acquire_idle_gpu() {
+  local owner_pid="${1:-$$}"
+  local wait_mode="${WAIT_FOR_IDLE_GPU:-1}"
+  local allowed_raw="${ALLOWED_GPUS:-${GPUS:-${GPU:-}}}"
+  allowed_raw="${allowed_raw//,/ }"
+  while true; do
+    _one_click_clean_stale_gpu_locks
+    local -a live_idle=()
+    mapfile -t live_idle < <(one_click_idle_gpus)
+    local cand
+    for cand in "${live_idle[@]}"; do
+      [ -n "$cand" ] || continue
+      if [ -n "$allowed_raw" ] && [[ " $allowed_raw " != *" $cand "* ]]; then
+        continue
+      fi
+      local lock="/tmp/tokengs_gpu_active_${cand}.lock"
+      if mkdir "$lock" 2>/dev/null; then
+        echo "$owner_pid" > "$lock/pid"
+        # Re-verify via nvidia-smi after acquiring lock to close any race window
+        if one_click_idle_gpus | grep -qx -- "$cand"; then
+          echo "$cand"
+          return 0
+        fi
+        rm -rf "$lock" 2>/dev/null || true
+      fi
+    done
+    if [ "$wait_mode" != "1" ]; then
+      return 3
+    fi
+    sleep "${GPU_POLL_SECONDS:-10}"
+  done
+}
+
+one_click_release_gpu() {
+  local gpu
+  for gpu in ${1//,/ }; do
+    [ -n "$gpu" ] && rm -rf "/tmp/tokengs_gpu_active_${gpu}.lock" 2>/dev/null || true
+  done
+}
+
+# Dynamically checks nvidia-smi right before a run and atomically reserves ALL currently idle GPUs.
+# Prints comma-separated GPU indices (e.g. "2,3,4,5,6,7").
+one_click_acquire_all_idle_gpus() {
+  local owner_pid="${1:-$$}"
+  local wait_mode="${WAIT_FOR_IDLE_GPU:-1}"
+  local allowed_raw="${ALLOWED_GPUS:-${GPUS:-${GPU:-}}}"
+  allowed_raw="${allowed_raw//,/ }"
+  while true; do
+    _one_click_clean_stale_gpu_locks
+    local -a live_idle=()
+    mapfile -t live_idle < <(one_click_idle_gpus)
+    local -a acquired=()
+    local cand
+    for cand in "${live_idle[@]}"; do
+      [ -n "$cand" ] || continue
+      if [ -n "$allowed_raw" ] && [[ " $allowed_raw " != *" $cand "* ]]; then
+        continue
+      fi
+      local lock="/tmp/tokengs_gpu_active_${cand}.lock"
+      if mkdir "$lock" 2>/dev/null; then
+        echo "$owner_pid" > "$lock/pid"
+        if one_click_idle_gpus | grep -qx -- "$cand"; then
+          acquired+=("$cand")
+        else
+          rm -rf "$lock" 2>/dev/null || true
+        fi
+      fi
+    done
+    if [ "${#acquired[@]}" -gt 0 ]; then
+      local IFS=','
+      echo "${acquired[*]}"
+      return 0
+    fi
+    if [ "$wait_mode" != "1" ]; then
+      return 3
+    fi
+    sleep "${GPU_POLL_SECONDS:-10}"
+  done
+}
+
 one_click_pick_gpus() {
   local wanted=$1
   if [ "${DRY_RUN:-0}" = 1 ]; then

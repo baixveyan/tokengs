@@ -606,6 +606,174 @@ class TokenGS(nn.Module):
         results["backward_loss"] = (gaussians * grad_accum.detach()).sum()
         return results
 
+    def configure_sft_trainable_parameters(self, accelerator=None) -> None:
+        """Freeze backbone except Stage-4 latent tail (`latents`, `latent_blocks[-4:]`, `latent_kv_proj`, `k_proj_norm`) when `sft_unfreeze_latent_tail=True`."""
+        if not getattr(self.opt, "sft_unfreeze_latent_tail", False):
+            return
+        for p in self.parameters():
+            p.requires_grad_(False)
+        if getattr(self.enc_dec_backbone, "latents", None) is not None:
+            self.enc_dec_backbone.latents.requires_grad_(True)
+        num_lat_blocks = len(self.enc_dec_backbone.latent_blocks)
+        for blk in self.enc_dec_backbone.latent_blocks[max(0, num_lat_blocks - 4):]:
+            for p in blk.parameters():
+                p.requires_grad_(True)
+        for attr in ("latent_kv_proj", "k_proj_norm"):
+            mod = getattr(self.enc_dec_backbone, attr, None)
+            if mod is not None:
+                for p in mod.parameters():
+                    p.requires_grad_(True)
+        if accelerator is None or accelerator.is_main_process:
+            tr_m = sum(p.numel() for p in self.parameters() if p.requires_grad) / 1e6
+            fr_m = sum(p.numel() for p in self.parameters() if not p.requires_grad) / 1e6
+            print(f"[TokenGS-SFT] sft_unfreeze_latent_tail=True: trainable={tr_m:.2f}M params, frozen={fr_m:.2f}M params")
+
+    def compute_render_geo_supervision_loss(
+        self,
+        data: dict,
+        decoder_input: ModelInputDecoder,
+        results: dict,
+    ) -> dict[str, torch.Tensor]:
+        """Compute S1 rendered geometry supervision losses (L_d, L_alpha, L_sigma, L_n) against GT mesh maps."""
+        from gsplat.rendering import rasterization
+
+        gaussians = results["gaussians"]
+        depths_pred = results["depths_pred"].squeeze(2).float()  # [B, V, H, W]
+        alphas_pred = results["alphas_pred"].squeeze(2).float()  # [B, V, H, W]
+        zero = gaussians.new_tensor(0.0, dtype=torch.float32)
+        if "depths_gt_sup" not in data or "normals_gt_sup" not in data or "valid_gt_sup" not in data:
+            raise RuntimeError("use_render_geo_supervision=True requires depths_gt_sup, normals_gt_sup, valid_gt_sup in batch")
+
+        depths_gt = data["depths_gt_sup"].to(depths_pred.device, dtype=torch.float32)
+        normals_gt = data["normals_gt_sup"].to(depths_pred.device, dtype=torch.float32)
+        gt_ok = data["valid_gt_sup"].to(depths_pred.device).bool() & (depths_gt > 1e-4)
+        valid_m = gt_ok & (alphas_pred.detach() > 0.5) & (depths_pred.detach() > 1e-4)
+
+        out: dict[str, torch.Tensor] = {}
+        total = zero
+
+        # 1. L_d: log-depth L1 on valid surface pixels
+        if self.opt.lambda_render_depth > 0:
+            d_mask = gt_ok & (depths_pred.detach() > 1e-4)
+            if bool(d_mask.any()):
+                log_diff = (depths_pred[d_mask].clamp_min(1e-4).log() - depths_gt[d_mask].clamp_min(1e-4).log()).abs()
+                loss_d = log_diff.mean()
+            else:
+                loss_d = zero
+            out["loss_render_depth"] = loss_d.detach()
+            total = total + float(self.opt.lambda_render_depth) * loss_d
+
+        # 2. L_alpha: encourage solid opacity on pixels with real mesh surface
+        if self.opt.lambda_render_alpha > 0:
+            if bool(gt_ok.any()):
+                loss_alpha = (1.0 - alphas_pred[gt_ok].clamp(0.0, 1.0)).mean()
+            else:
+                loss_alpha = zero
+            out["loss_render_alpha"] = loss_alpha.detach()
+            total = total + float(self.opt.lambda_render_alpha) * loss_alpha
+
+        # 3. L_sigma: ray depth variance sigma_z^2 via background-free [z_cam, z_cam^2] pass
+        if self.opt.lambda_render_thickness > 0:
+            cam_view = decoder_input.cam_view.float()
+            intrinsics = decoder_input.intrinsics.float()
+            B, V = cam_view.shape[:2]
+            H, W = self.img_size
+            means3d = gaussians[..., 0:3].contiguous().float()
+            opacity = gaussians[..., 3].contiguous().float()
+            scales = gaussians[..., 4:7].contiguous().float()
+            rotations = gaussians[..., 7:11].contiguous().float()
+            viewmat = cam_view.transpose(3, 2).contiguous()
+            Ks = torch.zeros((B, V, 3, 3), dtype=torch.float32, device=means3d.device)
+            Ks[:, :, 0, 0] = intrinsics[:, :, 0]
+            Ks[:, :, 1, 1] = intrinsics[:, :, 1]
+            Ks[:, :, 0, 2] = intrinsics[:, :, 2]
+            Ks[:, :, 1, 2] = intrinsics[:, :, 3]
+            Ks[:, :, 2, 2] = 1.0
+            var_list = []
+            for b in range(B):
+                r_w2c = viewmat[b, :, :3, :3]
+                t_w2c = viewmat[b, :, :3, 3]
+                pts_cam = means3d[b].unsqueeze(0) @ r_w2c.transpose(-1, -2) + t_w2c.unsqueeze(1)
+                z_cam = pts_cam[..., 2].clamp_min(0.0)
+                z_colors = torch.stack([z_cam, z_cam.square()], dim=-1).contiguous()
+                bg_zero = torch.zeros((V, 2), dtype=torch.float32, device=means3d.device)
+                z12_r, a_r, _ = rasterization(
+                    means=means3d[b],
+                    quats=rotations[b],
+                    scales=scales[b],
+                    opacities=opacity[b],
+                    colors=z_colors,
+                    viewmats=viewmat[b],
+                    Ks=Ks[b],
+                    width=W,
+                    height=H,
+                    near_plane=float(self.opt.znear),
+                    far_plane=float(self.opt.zfar),
+                    packed=False,
+                    backgrounds=bg_zero,
+                    render_mode="RGB",
+                )
+                a_safe = a_r[..., 0].clamp_min(1e-6)
+                ez = z12_r[..., 0] / a_safe
+                ez2 = z12_r[..., 1] / a_safe
+                var_z = (ez2 - ez.square()).clamp_min(0.0) / (0.3 ** 2)
+                var_list.append(var_z)
+            var_m2 = torch.stack(var_list, dim=0)  # [B, V, H, W]
+            if bool(valid_m.any()):
+                loss_sigma = var_m2[valid_m].mean()
+            else:
+                loss_sigma = zero
+            out["loss_render_thickness"] = loss_sigma.detach()
+            total = total + float(self.opt.lambda_render_thickness) * loss_sigma
+
+        # 4. L_n: depth-gradient normal cosine error on smooth valid surface pixels
+        if self.opt.lambda_render_normal > 0:
+            intrinsics = decoder_input.intrinsics.float()
+            B, V, H, W = depths_pred.shape
+            u, v = torch.meshgrid(
+                torch.arange(W, device=depths_pred.device, dtype=torch.float32) + 0.5,
+                torch.arange(H, device=depths_pred.device, dtype=torch.float32) + 0.5,
+                indexing="xy",
+            )
+            fx = intrinsics[..., 0].view(B, V, 1, 1)
+            fy = intrinsics[..., 1].view(B, V, 1, 1)
+            cx = intrinsics[..., 2].view(B, V, 1, 1)
+            cy = intrinsics[..., 3].view(B, V, 1, 1)
+            x = (u.view(1, 1, H, W) - cx) / fx * depths_pred
+            y = (v.view(1, 1, H, W) - cy) / fy * depths_pred
+            pts_cam = torch.stack([x, y, depths_pred], dim=-1)  # [B, V, H, W, 3]
+            dx_du = 0.5 * (pts_cam[:, :, 1:-1, 2:, :] - pts_cam[:, :, 1:-1, :-2, :])
+            dx_dv = 0.5 * (pts_cam[:, :, 2:, 1:-1, :] - pts_cam[:, :, :-2, 1:-1, :])
+            tu = torch.nn.functional.normalize(dx_du, dim=-1, eps=1e-12)
+            tv = torch.nn.functional.normalize(dx_dv, dim=-1, eps=1e-12)
+            cross_uv = torch.linalg.cross(tu, tv, dim=-1)
+            cross_norm = cross_uv.detach().norm(dim=-1)
+            n_in = torch.nn.functional.normalize(cross_uv, dim=-1, eps=1e-12)
+            n_in = torch.where(n_in[..., 2:3] > 0, -n_in, n_in)
+
+            d_c = depths_pred.detach()[:, :, 1:-1, 1:-1]
+            d_r = depths_pred.detach()[:, :, 1:-1, 2:]
+            d_l = depths_pred.detach()[:, :, 1:-1, :-2]
+            d_d = depths_pred.detach()[:, :, 2:, 1:-1]
+            d_u = depths_pred.detach()[:, :, :-2, 1:-1]
+            pos_ok = (d_c > 1e-4) & (d_r > 1e-4) & (d_l > 1e-4) & (d_d > 1e-4) & (d_u > 1e-4) & (cross_norm > 1e-6)
+            denom = d_c.clamp_min(1e-6)
+            jump_u = torch.maximum((d_r - d_c).abs(), (d_l - d_c).abs()) / denom
+            jump_v = torch.maximum((d_d - d_c).abs(), (d_u - d_c).abs()) / denom
+            smooth_in = pos_ok & (jump_u <= 0.05) & (jump_v <= 0.05)
+            n_gt_in = normals_gt[:, :, 1:-1, 1:-1, :]
+            n_mask = valid_m[:, :, 1:-1, 1:-1] & smooth_in & (n_gt_in.norm(dim=-1) > 0.5)
+            if bool(n_mask.any()):
+                cos_n = (n_in[n_mask] * n_gt_in[n_mask]).sum(dim=-1).abs().clamp(0.0, 1.0)
+                loss_n = (1.0 - cos_n).mean()
+            else:
+                loss_n = zero
+            out["loss_render_normal"] = loss_n.detach()
+            total = total + float(self.opt.lambda_render_normal) * loss_n
+
+        out["loss_render_geo_total"] = total
+        return out
+
     def forward(self, data, skip_loss=False):
         """
         Forward pass of the TokenGS model.
@@ -684,6 +852,14 @@ class TokenGS(nn.Module):
                 results["loss"] = results["loss"] + total_geo_loss.detach()
             else:
                 results["loss"] = results["loss"] + total_geo_loss
+
+        if self.training and getattr(self.opt, "use_render_geo_supervision", False):
+            s1_out = self.compute_render_geo_supervision_loss(data, model_input.decoder, results)
+            l_s1 = s1_out.pop("loss_render_geo_total")
+            results["loss"] = results["loss"] + l_s1
+            if "backward_loss" in results:
+                results["backward_loss"] = results["backward_loss"] + l_s1
+            results.update(s1_out)
 
         results['images_output'] = supervision.images_output
         return results

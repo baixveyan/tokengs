@@ -1,0 +1,19 @@
+{
+  "name": "sft_rgb_only",
+  "scene_id": "7b6477cb95",
+  "psnr": 29.785883903503418,
+  "ssim": 0.9451732188463211,
+  "lpips": 0.14598020911216736,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "checkpoint_sha256": "2ce172afb2e9e58dd107a366d115a279d513bc4f9d446ca012fbe7077876f045",
+  "completed_at": "2026-10-27T01:52:02.389110+00:00"
+}

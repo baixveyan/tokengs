@@ -67,6 +67,12 @@ class Options:
     init_latents_from_existing: bool = False
     load_lidar_pc: bool = False
     lidar_sft_mode: Literal["scene_latent_probe", "surface_self_attn", "fused_full_decoder"] = "scene_latent_probe"
+    sft_unfreeze_latent_tail: bool = False
+    use_render_geo_supervision: bool = False
+    lambda_render_depth: float = 0.0
+    lambda_render_alpha: float = 0.0
+    lambda_render_thickness: float = 0.0
+    lambda_render_normal: float = 0.0
 
     # --- dataset
     data_mode: tuple[tuple[str, int], ...] = (("dl3dv_scaled_0.15", 6),)
@@ -191,6 +197,15 @@ class Options:
             raise ValueError("geo_target_distance must be positive")
         if self.geo_num_sw_directions <= 0:
             raise ValueError("geo_num_sw_directions must be positive")
+        if self.use_render_geo_supervision and self.mean_of_grads != "none":
+            raise ValueError("use_render_geo_supervision requires mean_of_grads='none' so rendered depth/alpha retain gradients")
+        if min(
+            self.lambda_render_depth,
+            self.lambda_render_alpha,
+            self.lambda_render_thickness,
+            self.lambda_render_normal,
+        ) < 0:
+            raise ValueError("render geometry supervision weights must be non-negative")
 
     def evolve(self, **changes: Any) -> Options:
         """Return a deep copy of dataclass fields with the given fields replaced."""
@@ -444,6 +459,44 @@ config_defaults["eval_scannetpp_latent_6view_ssim"] = Options(
     batch_size=1,
     **_LATENT_D12_ARCH,
     **_SSIM_LOSS,
+)
+
+config_doc["sft_scannetpp_rgb_only"] = (
+    "[Control C0: sft_rgb_only] Matched RGB-only post-training on ScanNet++ (unfreezes latent_blocks.8..11 + "
+    "latents + latent_kv_proj + k_proj_norm, FP32, 0 point cloud supervision)."
+)
+config_defaults["sft_scannetpp_rgb_only"] = config_defaults["finetune_scannetpp_latent_6view_ssim"].evolve(
+    model_type="tokengs",
+    experiment_name="sft_rgb_only",
+    sft_unfreeze_latent_tail=True,
+    use_render_geo_supervision=False,
+    load_lidar_pc=False,
+    use_input_supervision=True,
+    init_tokens_from_existing=False,
+    init_latents_from_existing=False,
+    max_iters_per_epoch=1_000_000,
+    num_epochs=30,
+    pct_start_steps=400,
+    lr=4e-5,
+    batch_size=1,
+    gradient_accumulation_steps=2,
+    mixed_precision="no",
+    mean_of_grads="none",
+    deferred_bp=False,
+    strict_checkpoint_loading=True,
+)
+
+config_doc["sft_scannetpp_render_geo"] = (
+    "[Method S1: sft_render_geo] Matched post-training on ScanNet++ with rendered depth, alpha opacity, "
+    "ray thickness, and normal supervision against ground-truth ScanNet++ mesh."
+)
+config_defaults["sft_scannetpp_render_geo"] = config_defaults["sft_scannetpp_rgb_only"].evolve(
+    experiment_name="sft_render_geo",
+    use_render_geo_supervision=True,
+    lambda_render_depth=0.05,
+    lambda_render_alpha=0.01,
+    lambda_render_thickness=0.05,
+    lambda_render_normal=0.02,
 )
 
 config_doc["sft1_scannetpp_lidar_scene_latent"] = (

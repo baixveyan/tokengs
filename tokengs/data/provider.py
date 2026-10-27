@@ -92,6 +92,7 @@ class Provider(Dataset):
             self.data_fields.append(DF_DEPTH)
         if getattr(opt, "load_lidar_pc", False):
             self.data_fields.append(DF_LIDAR_POINTS)
+        self._raw_mesh_cache: dict[str, tuple[np.ndarray, np.ndarray]] = {}
 
     def set_rng_epoch(self, epoch: int) -> None:
         self.rng = np.random.default_rng(epoch + self.opt.seed)
@@ -162,7 +163,78 @@ class Provider(Dataset):
 
         return all_dists.mean().clamp(min=1e-6).item()
 
-    def _preprocess(self, rgbs, masks, depths, c2ws, intrinsics, timesteps, has_mask, raw_lidar_points=None):
+    def _raycast_supervision_maps(
+        self,
+        scene_id: str,
+        world_to_norm: torch.Tensor,
+        reflected: bool,
+        final_scene_scale: float,
+        sup_cam_view: torch.Tensor,
+        sup_intrinsics: torch.Tensor,
+    ) -> dict[str, torch.Tensor]:
+        import open3d as o3d
+
+        root_path = getattr(self.dataset, "root_path", None)
+        if root_path is None:
+            raise RuntimeError("Dataset does not expose root_path for use_render_geo_supervision")
+        mesh_ply = Path(root_path) / "data" / scene_id / "scans" / "mesh_aligned_0.05.ply"
+        if scene_id not in self._raw_mesh_cache:
+            if len(self._raw_mesh_cache) >= 2:
+                self._raw_mesh_cache.pop(next(iter(self._raw_mesh_cache)))
+            raw_mesh = o3d.t.io.read_triangle_mesh(str(mesh_ply))
+            self._raw_mesh_cache[scene_id] = (
+                np.ascontiguousarray(raw_mesh.vertex.positions.numpy(), dtype=np.float32),
+                np.ascontiguousarray(raw_mesh.triangle.indices.numpy(), dtype=np.uint32),
+            )
+        verts_raw, tris_raw = self._raw_mesh_cache[scene_id]
+        v_w = torch.from_numpy(verts_raw)
+        v_n = v_w @ world_to_norm[:3, :3].T + world_to_norm[:3, 3].unsqueeze(0)
+        tris = tris_raw
+        if reflected:
+            v_n[:, 0] = -v_n[:, 0]
+            tris = np.ascontiguousarray(tris[:, [0, 2, 1]], dtype=np.uint32)
+        v_n = v_n * float(final_scene_scale)
+
+        rc_scene = o3d.t.geometry.RaycastingScene()
+        rc_scene.add_triangles(
+            o3d.core.Tensor.from_numpy(np.ascontiguousarray(v_n.numpy(), dtype=np.float32)),
+            o3d.core.Tensor.from_numpy(tris),
+        )
+
+        H, W = int(self.opt.img_size[0]), int(self.opt.img_size[1])
+        u, v = torch.meshgrid(
+            torch.arange(W, dtype=torch.float32) + 0.5,
+            torch.arange(H, dtype=torch.float32) + 0.5,
+            indexing="xy",
+        )
+        V_sup = sup_cam_view.shape[0]
+        depths_gt = torch.zeros((V_sup, H, W), dtype=torch.float32)
+        normals_gt = torch.zeros((V_sup, H, W, 3), dtype=torch.float32)
+        valid_gt = torch.zeros((V_sup, H, W), dtype=torch.bool)
+        for i in range(V_sup):
+            w2c = sup_cam_view[i].float().T
+            c2w = torch.linalg.inv(w2c)
+            fx, fy, cx, cy = sup_intrinsics[i].float().tolist()
+            dirs_cam = torch.stack([(u - cx) / fx, (v - cy) / fy, torch.ones_like(u)], dim=-1)
+            dirs_world = dirs_cam @ c2w[:3, :3].T
+            orig_world = c2w[:3, 3].expand_as(dirs_world)
+            rays = o3d.core.Tensor.from_numpy(torch.cat([orig_world, dirs_world], dim=-1).numpy())
+            ans = rc_scene.cast_rays(rays)
+            t_hit = torch.from_numpy(ans["t_hit"].numpy()).float()
+            ok = torch.isfinite(t_hit) & (t_hit > 0)
+            depths_gt[i] = torch.where(ok, t_hit, torch.zeros_like(t_hit))
+            valid_gt[i] = ok
+            n_world = torch.from_numpy(ans["primitive_normals"].numpy()).float()
+            n_cam = F.normalize(n_world @ w2c[:3, :3].T, dim=-1, eps=1e-6)
+            n_cam = torch.where(n_cam[..., 2:3] > 0, -n_cam, n_cam)
+            normals_gt[i] = torch.where(ok.unsqueeze(-1), n_cam, torch.zeros_like(n_cam))
+        return {
+            "depths_gt_sup": depths_gt,
+            "normals_gt_sup": normals_gt,
+            "valid_gt_sup": valid_gt,
+        }
+
+    def _preprocess(self, rgbs, masks, depths, c2ws, intrinsics, timesteps, has_mask, raw_lidar_points=None, scene_id=None):
         if self.opt.camera_scale_method == 'pointmap':
             raw_depths = depths.clone()
             raw_intrinsics = intrinsics.clone()
@@ -290,6 +362,14 @@ class Provider(Dataset):
         }
         if lidar_pts_out is not None:
             out_dict['lidar_points'] = lidar_pts_out
+        if self.training and getattr(self.opt, "use_render_geo_supervision", False) and scene_id is not None:
+            sup_cam_view = out_dict["cam_view_all"] if self.opt.use_input_supervision else out_dict["cam_view"]
+            sup_intrinsics = out_dict["intrinsics_all"] if self.opt.use_input_supervision else out_dict["intrinsics"]
+            out_dict.update(
+                self._raycast_supervision_maps(
+                    scene_id, world_to_norm, reflected, float(final_scene_scale), sup_cam_view, sup_intrinsics
+                )
+            )
         return out_dict
     
     def get_rng(self, idx: int) -> np.random.Generator:
@@ -472,11 +552,12 @@ class Provider(Dataset):
 
         rgbs, masks, depths, c2ws, intrinsics, timesteps = _curate_batch_fn(all_rgbs, all_masks, all_depths, all_c2ws, all_intrinsics, torch.from_numpy(frame_indices).float())
 
+        actual_scene_id = self._scene_id(idx)
         result = self._preprocess(
             rgbs, masks, depths, c2ws, intrinsics, timesteps, has_mask,
             raw_lidar_points=original_output_dict.get(DF_LIDAR_POINTS),
+            scene_id=actual_scene_id,
         )
-        actual_scene_id = self._scene_id(idx)
         actual_frame_ids = timesteps.to(dtype=torch.int64)
         result.update({
             'scene_id': actual_scene_id,

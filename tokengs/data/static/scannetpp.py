@@ -18,14 +18,34 @@ def fast_read_ply_vertices(ply_path: Path, stride: int = 4) -> np.ndarray:
     """Fast (~6ms) binary PLY vertex reader that skips parsing the 2.7M triangle face list."""
     with open(ply_path, "rb") as f:
         n_verts = 0
+        fmt_ok = False
+        in_vertex = False
+        vertex_props: List[Tuple[str, str]] = []
         while True:
             line = f.readline()
             if not line:
+                raise ValueError(f"Unexpected EOF in PLY header: {ply_path}")
+            s = line.decode("ascii", errors="replace").strip()
+            if s.startswith("format "):
+                fmt_ok = s == "format binary_little_endian 1.0"
+            elif s.startswith("element "):
+                parts = s.split()
+                in_vertex = len(parts) >= 3 and parts[1] == "vertex"
+                if in_vertex:
+                    n_verts = int(parts[2])
+            elif s.startswith("property ") and in_vertex:
+                parts = s.split()
+                vertex_props.append((parts[1], parts[-1]))
+            elif s == "end_header":
                 break
-            if line.startswith(b"element vertex"):
-                n_verts = int(line.split()[-1])
-            elif line.strip() == b"end_header":
-                break
+        expected_props = [
+            ("float", "x"), ("float", "y"), ("float", "z"),
+            ("uchar", "red"), ("uchar", "green"), ("uchar", "blue"),
+        ]
+        if not fmt_ok or n_verts <= 0 or vertex_props != expected_props:
+            raise ValueError(
+                f"Unsupported PLY header in {ply_path}: format_ok={fmt_ok}, n_verts={n_verts}, props={vertex_props}"
+            )
         v_dtype = np.dtype([("x", "<f4"), ("y", "<f4"), ("z", "<f4"), ("r", "u1"), ("g", "u1"), ("b", "u1")])
         verts = np.fromfile(f, dtype=v_dtype, count=n_verts)
     return np.stack([verts["x"][::stride], verts["y"][::stride], verts["z"][::stride]], axis=1)

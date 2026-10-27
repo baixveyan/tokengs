@@ -103,7 +103,9 @@ def export_difference_ply(path: Path, other: torch.Tensor, ref: torch.Tensor, di
     PlyData([PlyElement.describe(arr, "vertex")]).write(str(path))
 
 
-def compare_scene(sidecar_paths: list[Path], scene_dir: Path, reference: str) -> dict:
+def compare_scene(
+    sidecar_paths: list[Path], scene_dir: Path, reference: str, allow_different_checkpoints: bool = False
+) -> dict:
     """sidecar_paths: <scene_dir>/<method>/<method>.json, one per method of the same scene."""
     sidecars, folders = {}, {}
     for path in sorted(sidecar_paths, key=lambda p: method_sort_key(p.parent.name)):
@@ -120,17 +122,23 @@ def compare_scene(sidecar_paths: list[Path], scene_dir: Path, reference: str) ->
     scene_ids = {m["scene_id"] for m in sidecars.values()}
     shas = {m["checkpoint_sha256"] for m in sidecars.values()}
     children = {m["children_per_slot"] for m in sidecars.values()}
-    if len(scene_ids) != 1 or len(shas) != 1 or len(children) != 1:
+    if len(scene_ids) != 1 or (not allow_different_checkpoints and len(shas) != 1) or len(children) != 1:
         raise ValueError(f"{scene_dir}: sidecars disagree on scene {scene_ids} / checkpoint {shas} / "
                          f"children per token {children}")
     children = children.pop()
     gaussians = {name: torch.load(folders[name] / m["files"]["gaussians_pt"], map_location="cpu")[0].float()
                  for name, m in sidecars.items()}
-    result = {"scene_id": scene_ids.pop(), "reference": reference, "methods": {}}
+    result = {
+        "scene_id": scene_ids.pop(),
+        "reference": reference,
+        "multiple_checkpoints": len(shas) > 1,
+        "methods": {},
+    }
     for name, meta in sidecars.items():
         entry = {k: meta[k] for k in ("tuning_target", "tuning_loop", "tuning_steps", "tuning_lr", "token_lr",
                                       "tuning_loop_geo_weights", "ply_folder", "files", "decoder_inputs",
                                       "redecode_check")}
+        entry["checkpoint_sha256"] = meta["checkpoint_sha256"]
         entry["metrics"] = meta["metrics"]
         if reference in gaussians and name != reference:
             stats, disp = gaussian_difference(gaussians[reference], gaussians[name], children)
@@ -157,8 +165,14 @@ def _markdown(result: dict) -> str:
                      + " |")
     diffs = [n for n in names if "difference_to_reference" in result["methods"][n]]
     if diffs:
-        lines += ["", f"## Gaussian-level difference to {result['reference']} (same token, same child)", "",
-                  "| | " + " | ".join(diffs) + " |", "|---" * (len(diffs) + 1) + "|"]
+        lines += ["", f"## Gaussian-level difference to {result['reference']} (same token, same child)", ""]
+        if result.get("multiple_checkpoints"):
+            lines += [
+                "> Note: methods in this comparison use different checkpoints; index-by-index displacement "
+                "is only meaningful when fine-tuned from shared initialization without token reordering.",
+                "",
+            ]
+        lines += ["| | " + " | ".join(diffs) + " |", "|---" * (len(diffs) + 1) + "|"]
         rows = (("centre displacement median", "centre_displacement_median", "{:.4f}"),
                 ("centre displacement p90", "centre_displacement_p90", "{:.4f}"),
                 ("median displacement / scene extent", "centre_displacement_median_over_extent", "{:.4f}"),
@@ -181,13 +195,15 @@ def main() -> int:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--demo-dir", default="EXP_TokenGS/demo", help="folder with scene_<id[:12]>/<method>/")
     p.add_argument("--reference", default="no_tuning", help="method the others are compared to Gaussian by Gaussian")
+    p.add_argument("--allow-different-checkpoints", action="store_true",
+                   help="allow comparing methods evaluated from different model checkpoints on the same scene")
     args = p.parse_args()
     by_scene = find_sidecars(Path(args.demo_dir))
     if not by_scene:
         print(f"[FATAL] no scene_*/<method>/<method>.json sidecars in {args.demo_dir}", file=sys.stderr)
         return 2
     for scene_dir, paths in by_scene.items():
-        result = compare_scene(paths, scene_dir, args.reference)
+        result = compare_scene(paths, scene_dir, args.reference, args.allow_different_checkpoints)
         print(f"{scene_dir.name}: {', '.join(result['methods'])} -> {scene_dir / 'comparison.md'}")
     return 0
 

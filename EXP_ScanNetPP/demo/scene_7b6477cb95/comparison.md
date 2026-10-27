@@ -1,38 +1,28 @@
-# `EXP_ScanNetPP` Demo 场景（`scene_7b6477cb95`）全套对比报告与三维点云导览
+# Same-scene comparison 7b6477cb95
 
-本目录在 `ScanNet++ v2` 官方验证集首场景 `scene_7b6477cb95` 上，导出了全部 **8 组实验配置** 的三维高斯点云（`.ply`）、相机位姿（`cameras.ply`）、渲染对比图（`render_strip.png`）以及对齐到同一归一化坐标系的 **真值激光雷达扫描网格（`gt_lidar_mesh_frustum.ply`）**。
+One folder per method next to this file, named after the method: `<method>.ply` (true colour), `<method>_slotcolor.ply` (one colour per token), `cameras.ply` (input red, evaluation green), `<method>_minus_baseline_pretrained_6view.ply` (blue = Gaussian did not move, red = moved most).
 
----
+- baseline_pretrained_6view: `baseline_pretrained_6view/`
 
-## 一、`scene_7b6477cb95` 全部 8 组配置实测对比表（FP32）
+## Metrics (this scene)
 
-| 目录编号与名称 | **PSNR ↑** | **SSIM ↑** | **LPIPS ↓** | **视线厚度 `RayThick` ↓** | **细针占比 (`s1/s2>3`) ↓** | **刀片顺视线 (`Blade cos_ray`) ↓** | **顺视线 `>0.9` 占比 ↓** | **到真值激光雷达距离 (`p50 / p75`) ↓** | **真值表面 `3cm / 5cm` 内占比 ↑** | **主力高斯数 (`op>=0.05`)** |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| **`01_baseline_no_tuning`** *(官方前馈)* | `29.479` | `0.943` | `0.168` | `0.451 m` | `36.33%` | `0.804` | `27.6%` | `1.31 cm / 3.07 cm` | `74.4% / 86.2%` | `84,026` |
-| **`03_sft1_lidar_scene_latent_probe_no_ttt`** *(方式一前馈)* | `29.622` | `0.942` | `0.172` | `0.436 m` | `35.17%` | `0.785` | `25.8%` | `1.24 cm / 2.81 cm` | `76.7% / 88.0%` | `89,614` |
-| **`04_sft2_lidar_surface_self_attn_no_ttt`** *(方式二前馈)* | **`29.829`** | `0.943` | `0.172` | `0.472 m` | `34.56%` | `0.782` | `26.5%` | `1.16 cm / 2.29 cm` | `80.5% / 91.1%` | `94,768` |
-| **★ `07_sft3_lidar_fused_100ep_no_ttt`** *(解冻 `deconv` 100Ep 前馈)* | `29.278` | `0.936` | `0.200` | **`0.351 m`**<br>*(薄 10cm!)* | **`0.00%`!!**<br>*(100% 清零!)* | **`0.220`!!**<br>*(转平 77°!)* | **`0.2%`!!** | **`1.07 cm / 2.02 cm`** | **`82.9% / 92.8%`** | **`115,341`** |
-| **★ `09_sft4_lidar_area_preserving_40ep_no_ttt`** *(面积守恒 40Ep 前馈)* | **`29.398`**<br>*(+0.12 vs SFT3)* | **`0.938`** | **`0.194`** | `0.498 m` | **`0.00%`!!** | **`0.326`!!** | **`2.4%`** | `1.25 cm / 2.97 cm` | `78.1% / 89.0%` | `59,610` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| **`02_baseline_scene_lr1e-2_token_lr1e-4_tuning`** *(官方 + TTT)* | `30.718` | `0.960` | `0.123` | `0.431 m` | `41.17%` | `0.779` | `24.9%` | `1.28 cm / 3.00 cm` | `75.2% / 86.6%` | `87,722` |
-| **`05_sft1_lidar_scene_latent_probe_with_ttt`** *(方式一 + TTT)* | `30.747` | `0.962` | `0.122` | `0.389 m` | `40.17%` | `0.763` | `23.6%` | `1.24 cm / 2.84 cm` | `76.3% / 87.7%` | `92,501` |
-| **`06_sft2_lidar_surface_self_attn_with_ttt`** *(方式二 + TTT)* | **`31.219`** | **`0.963`** | **`0.121`** | `0.409 m` | `39.50%` | `0.761` | `24.1%` | `1.19 cm / 2.40 cm` | `79.4% / 90.2%` | `97,594` |
-| **★ `08_sft3_lidar_fused_100ep_with_ttt`** *(解冻 `deconv` 100Ep + TTT)* | **`31.070`**<br>*(超官方 +0.35dB!)* | **`0.962`** | `0.136` | **`0.263 m`!!**<br>*(暴降 16.8cm!)* | **`8.33%`!!**<br>*(从 41.2% 骤降!)* | **`0.226`!!** | **`0.2%`!!** | **`1.18 cm / 2.38 cm`** | **`78.9% / 89.8%`** | **`116,580`** |
-| **★ `10_sft4_lidar_area_preserving_40ep_with_ttt`** *(面积守恒 40Ep + TTT)* | **`31.038`**<br>*(超官方 +0.32dB!)* | **`0.962`** | **`0.133`** | `0.445 m` | **`3.20%`!!**<br>*(从 41.2% 暴降 92%!!)* | **`0.347`!!** | **`2.9%`** | `1.34 cm / 3.16 cm` | `76.1% / 87.6%` | `66,574` |
+| | baseline_pretrained_6view |
+|---|---|
+| all PSNR | 29.477 |
+| novel PSNR | 29.477 |
+| d0 PSNR | - |
+| d4+ PSNR | - |
+| all SSIM | 0.9426 |
+| all LPIPS | 0.1489 |
+| HF ratio | - |
+| edge L1 | - |
+| SW | 0.789 |
+| packing ratio | 392.1 |
+| inter d | 0.408 |
+| too close | 0.936 |
+| aniso p50 | 26.72 |
+| needle>0.9 | 0.335 |
 
----
+## Re-decoding check (decoder_inputs.pt -> Gaussians, max abs diff)
 
-## 二、最推荐在查看器中点开对比的 4 个核心 `.ply` 文件
-
-1. **查看 0% 细针、完全转平贴合墙面的前馈圆盘（`07_sft3` vs `01_baseline`）**：
-   - 官方前馈（`36.33%` 细针，`BladeCos=0.804` 顺视线刀片）：
-     `EXP_ScanNetPP/demo/scene_7b6477cb95/01_baseline_no_tuning/01_baseline_no_tuning_prune0.05.ply`（及 `_only20tokens_prune0.05.ply`）
-   - **我们的 `07_sft3` 前馈（`0.00%` 细针，`BladeCos=0.220` 贴面圆盘，`82.9%` 贴合激光雷达 `<3cm`）**：
-     `EXP_ScanNetPP/demo/scene_7b6477cb95/07_sft3_lidar_fused_100ep_no_ttt/07_sft3_lidar_fused_100ep_no_ttt_prune0.05.ply`（及 `_only20tokens_prune0.05.ply`）
-2. **查看叠加 TTT 后的高画质 + 薄壳圆盘（`08_sft3` `31.07 dB` vs `02_baseline` `30.72 dB`）**：
-   - 官方 TTT（`41.17%` 细针，`RayThick=0.431m`）：
-     `EXP_ScanNetPP/demo/scene_7b6477cb95/02_baseline_scene_lr1e-2_token_lr1e-4_tuning/02_baseline_scene_lr1e-2_token_lr1e-4_tuning_prune0.05.ply`
-   - **我们的 `08_sft3` TTT（`31.07 dB` 超越官方，`RayThick` 压薄至 `0.263m`，`BladeCos=0.226`）**：
-     `EXP_ScanNetPP/demo/scene_7b6477cb95/08_sft3_lidar_fused_100ep_with_ttt/08_sft3_lidar_fused_100ep_with_ttt_prune0.05.ply`
-3. **真值激光雷达扫描网格基准**：
-   - `EXP_ScanNetPP/demo/scene_7b6477cb95/gt_lidar_mesh_frustum.ply`
+- baseline_pretrained_6view: not saved

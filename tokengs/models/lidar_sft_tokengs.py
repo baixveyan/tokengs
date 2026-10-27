@@ -124,7 +124,7 @@ class LiDARSFTTokenGS(TokenGS):
         num_lat_blocks = len(self.enc_dec_backbone.latent_blocks)
         for blk in self.enc_dec_backbone.latent_blocks[max(0, num_lat_blocks - 4):]:
             _unfreeze(blk.parameters(), lr_scale=pre_lr_scale)
-        for attr in ("latent_proj_k", "latent_proj_v", "latent_norm_k", "latent_norm_v", "k_proj_norm", "v_proj_norm"):
+        for attr in ("latent_kv_proj", "k_proj_norm"):
             mod = getattr(self.enc_dec_backbone, attr, None)
             if mod is not None:
                 _unfreeze(mod.parameters(), lr_scale=pre_lr_scale)
