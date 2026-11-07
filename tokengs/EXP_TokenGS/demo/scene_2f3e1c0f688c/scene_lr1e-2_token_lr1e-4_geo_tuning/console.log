@@ -1,0 +1,28 @@
+=== group: scene_token_geo_tuning_lr1e-2_1e-4__2f3e1c0f688c
+started: 2026-10-20 17:11:04   host: iZwz9foxpfyzf7f1y60xxwZ   GPU: 3
+git HEAD: b16269c500a8894cda342bc9cf406e31169541e3
+CUDA_HOME=/usr/local/cuda-12.8
+command: CUDA_VISIBLE_DEVICES=3 /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python -u scripts/evaluate_with_scene_latent_tuning.py --preset eval_dl3dv_latent_6view_ssim --resume checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors --mixed-precision no --scene-latent-and-token-tuning --tuning-lr 1e-2 --token-lr 1e-4 --tuning-steps 50 --geo-sw 0.1 --geo-packing 0.001 --geo-inter 0.01 --tuning-loop reimplemented --demo --scene-ids 2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd --ply-name scene_token_geo_tuning_lr1e-2_1e-4 --output EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4
+=== output (stdout + stderr, unfiltered)
+[17:11:11] GPU 3 idle check passed: 3.0 MiB used, no compute apps
+[17:11:11] hashing checkpoint /home/jms/xveyan/4DGS/TokenGS/checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors
+[17:11:11] contract written: preset=eval_dl3dv_latent_6view_ssim tuning_target=scene_latents_and_gs_tokens ttt_mode=scene-latent-and-token-tuning tuning_loop=reimplemented steps=50 lr=0.01 token_lr=0.0001 geo={'lambda_sw': 0.1, 'lambda_packing': 0.001, 'lambda_inter': 0.01} demo=True precision=no scenes=1 gpu=3 output=/home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4
+[17:11:12] model loaded (strict)
+Loaded dl3dv_eval_scaled_0.15, train size: 1, loading took 0.0014224052429199219 seconds
+[17:11:13] reimplemented scene_latents_and_gs_tokens tuning loop installed (geo weights {'lambda_sw': 0.1, 'lambda_packing': 0.001, 'lambda_inter': 0.01}, children/slot 64)
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/lpips/weights/v0.1/vgg.pth
+[17:11:23] 2f3e1c0f688c: decoder_inputs.pt written; re-decoding it reproduces the evaluated Gaussians up to max |diff| 0.000e+00
+[17:11:23] [1/1] 2f3e1c0f688c all PSNR 25.735 SSIM 0.8424 LPIPS 0.2535 | novel PSNR 25.271 (44f) | edge 0.0191 HF 0.828 | inter d 1.585 aniso 25.4 | infer 5.39s
+[17:11:23] all_frames: PSNR 25.734699 SSIM 0.842438 LPIPS 0.253489 edge 0.019119 HF 0.827523
+[17:11:23] novel_only: PSNR 25.271028 SSIM 0.831682 LPIPS 0.260742 edge 0.019618 HF 0.826453
+[17:11:23] bucket d0: 6 frames PSNR 29.1350 HF 0.8354
+[17:11:23] bucket d1: 11 frames PSNR 27.0868 HF 0.8352
+[17:11:23] bucket d2-3: 19 frames PSNR 25.3929 HF 0.8283
+[17:11:23] bucket d4+: 14 frames PSNR 23.6790 HF 0.8172
+[17:11:23] geometry (mean over scenes): SW 0.2591 packing 119.58/5.31 inter d 1.585 close 0.563 far 0.188 | aniso p50 25.37 needle>0.9 0.176
+[17:11:23] torch peak memory: allocated 15828 MiB, reserved 19622 MiB
+[17:11:23] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_token_geo_tuning_lr1e-2_1e-4
+[17:11:23] done in 15.5s
+=== exit code: 0
+finished: 2026-10-20 17:11:25   duration: 21 s

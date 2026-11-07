@@ -1,0 +1,1027 @@
+[13:19:53] stats: 7 shards
+GPU 2: shard 1/7: 7 scenes
+GPU 6: shard 5/7: 7 scenes
+GPU 1: shard 0/7: 8 scenes
+GPU 3: shard 2/7: 7 scenes
+GPU 7: shard 6/7: 7 scenes
+GPU 4: shard 3/7: 7 scenes
+GPU 5: shard 4/7: 7 scenes
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[shard 2] 1/7 cc5237fd77 124s psnr 33.04 (paper 31.54) no_geo 12.57 ext_far 15.57
+[shard 5] 1/7 a24f64f7fb 126s psnr 33.02 (paper 32.16) no_geo 11.42 ext_far 13.47
+[shard 3] 1/7 acd95847c5 153s psnr 31.17 (paper 30.08) no_geo 11.82 ext_far 15.34
+[shard 1] 1/7 c50d2d1d42 156s psnr 22.35 (paper 19.02) no_geo 10.86 ext_far 17.95
+[shard 0] 1/8 7b6477cb95 177s psnr 29.70 (paper 28.72) no_geo 13.74 ext_far 15.85
+[shard 6] 1/7 1ada7a0617 213s psnr 28.37 (paper 26.76) no_geo 12.28 ext_far 16.71
+[shard 2] 2/7 3f15a9266d 291s psnr 32.22 (paper 30.27) no_geo 13.58 ext_far 17.40
+[shard 5] 2/7 c4c04e6d6c 309s psnr 27.89 (paper 25.52) no_geo 14.78 ext_far 17.59
+[shard 4] 1/7 fb5a96b1a2 332s psnr 33.85 (paper 32.53) no_geo 12.37 ext_far 17.34
+[shard 0] 2/8 5eb31827b7 388s psnr 29.08 (paper 27.82) no_geo 14.32 ext_far 13.80
+[shard 1] 2/7 3e8bba0176 397s psnr 29.76 (paper 27.44) no_geo 13.97 ext_far 12.59
+[shard 6] 2/7 7831862f02 407s psnr 32.13 (paper 31.37) no_geo 13.85 ext_far 19.24
+[shard 2] 3/7 5ee7c22ba0 446s psnr 34.21 (paper 33.08) no_geo 17.31 ext_far 17.23
+[shard 4] 2/7 5748ce6f01 498s psnr 33.67 (paper 32.29) no_geo 13.68 ext_far 17.30
+[shard 3] 2/7 21d970d8de 554s psnr 21.51 (paper 19.30) no_geo 13.57 ext_far 15.52
+[shard 6] 3/7 13c3e046d7 566s psnr 29.83 (paper 28.22) no_geo 14.24 ext_far 14.08
+[shard 5] 3/7 40aec5fffa 569s psnr 26.88 (paper 26.26) no_geo 14.29 ext_far 20.02
+[shard 1] 3/7 38d58a7a31 582s psnr 27.19 (paper 25.40) no_geo 12.40 ext_far 17.14
+[shard 2] 4/7 45b0dac5e3 603s psnr 34.78 (paper 33.41) no_geo 18.16 ext_far 17.00
+[shard 4] 3/7 3864514494 622s psnr 26.56 (paper 23.90) no_geo 12.92 ext_far 17.18
+[shard 6] 4/7 7bc286c1b6 645s psnr 30.10 (paper 28.35) no_geo 14.62 ext_far 22.13
+[shard 0] 3/8 bde1e479ad 646s psnr 26.05 (paper 23.95) no_geo 12.81 ext_far 17.88
+[shard 3] 3/7 f9f95681fd 694s psnr 34.33 (paper 31.88) no_geo 15.81 ext_far 17.32
+[shard 5] 4/7 286b55a2bf 718s psnr 30.01 (paper 29.34) no_geo 12.11 ext_far 15.39
+[shard 4] 4/7 e7af285f7d 721s psnr 33.21 (paper 33.30) no_geo 15.52 ext_far 18.67
+[shard 2] 5/7 825d228aec 730s psnr 34.62 (paper 34.06) no_geo 14.75 ext_far 19.74
+[shard 1] 4/7 a8bf42d646 794s psnr 26.63 (paper 25.38) no_geo 13.93 ext_far 14.90
+[shard 0] 4/8 e398684d27 803s psnr 24.72 (paper 23.47) no_geo 15.00 ext_far 16.48
+[shard 3] 4/7 31a2c91c43 820s psnr 34.34 (paper 32.89) no_geo 15.66 ext_far 15.80
+[shard 6] 5/7 25f3b7a318 857s psnr 29.59 (paper 28.09) no_geo 13.51 ext_far 15.12
+[shard 5] 5/7 5942004064 864s psnr 25.10 (paper 23.19) no_geo 14.26 ext_far 14.31
+[shard 4] 5/7 f2dc06b1d2 904s psnr 35.73 (paper 34.43) no_geo 15.02 ext_far 14.78
+[shard 2] 6/7 0d2ee665be 906s psnr 21.83 (paper 21.26) no_geo 13.09 ext_far 12.20
+[shard 3] 5/7 a980334473 935s psnr 37.17 (paper 35.68) no_geo 15.44 ext_far 19.42
+[shard 0] 5/8 f3685d06a9 944s psnr 24.20 (paper 22.61) no_geo 14.92 ext_far 18.02
+[shard 1] 5/7 b0a08200c9 972s psnr 23.16 (paper 20.42) no_geo 11.45 ext_far 18.12
+[shard 5] 6/7 c5439f4607 1028s psnr 28.30 (paper 26.67) no_geo 15.29 ext_far 19.50
+[shard 6] 6/7 578511c8a9 1059s psnr 28.06 (paper 26.67) no_geo 14.41 ext_far 13.36
+[shard 0] 6/8 bcd2436daf 1097s psnr 30.12 (paper 28.36) no_geo 13.28 ext_far 15.37
+[shard 3] 6/7 3db0a1c8f3 1104s psnr 32.95 (paper 32.49) no_geo 16.58 ext_far 15.53
+[shard 2] 7/7 09c1414f1b 1105s psnr 33.71 (paper 32.75) no_geo 13.75 ext_far 23.38
+wrote /mnt/disk/xveyan/workspace_scannetpp/diag_locusgs_deep/shard_2.pt
+[shard 1] 6/7 f3d64c30f8 1116s psnr 25.89 (paper 24.74) no_geo 11.09 ext_far 13.76
+[shard 4] 6/7 ac48a9b736 1127s psnr 30.16 (paper 29.09) no_geo 14.27 ext_far 16.58
+[shard 5] 7/7 6115eddb86 1178s psnr 32.80 (paper 31.65) no_geo 15.14 ext_far 14.41
+wrote /mnt/disk/xveyan/workspace_scannetpp/diag_locusgs_deep/shard_5.pt
+[shard 6] 7/7 27dd4da69e 1196s psnr 21.64 (paper 21.11) no_geo 12.31 ext_far 13.30
+wrote /mnt/disk/xveyan/workspace_scannetpp/diag_locusgs_deep/shard_6.pt
+[shard 1] 7/7 99fa5c25e1 1203s psnr 23.70 (paper 21.89) no_geo 12.32 ext_far 14.55
+wrote /mnt/disk/xveyan/workspace_scannetpp/diag_locusgs_deep/shard_1.pt
+[shard 0] 7/8 d755b3d9d8 1220s psnr 25.14 (paper 25.11) no_geo 11.69 ext_far 17.23
+[shard 3] 7/7 5f99900f09 1252s psnr 31.54 (paper 30.24) no_geo 13.09 ext_far 14.89
+wrote /mnt/disk/xveyan/workspace_scannetpp/diag_locusgs_deep/shard_3.pt
+[shard 4] 7/7 9071e139d9 1313s psnr 31.98 (paper 31.28) no_geo 14.17 ext_far 19.29
+wrote /mnt/disk/xveyan/workspace_scannetpp/diag_locusgs_deep/shard_4.pt
+[shard 0] 8/8 c49a8c6cff 1349s psnr 32.10 (paper 31.01) no_geo 13.68 ext_far 18.46
+wrote /mnt/disk/xveyan/workspace_scannetpp/diag_locusgs_deep/shard_0.pt
+Traceback (most recent call last):
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/diag_locusgs_deep.py", line 797, in <module>
+    main()
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/diag_locusgs_deep.py", line 793, in main
+    {"stats": cmd_stats, "summarize": cmd_summarize, "demo": cmd_demo}[a.cmd](a)
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/diag_locusgs_deep.py", line 456, in cmd_summarize
+    ((ini[:, 2] > 0) & (recs[0]["allocation"]["uv_init"].float()[:, 0].between(0, 448)) & (recs[0]["allocation"]["uv_init"].float()[:, 1].between(0, 256))).float().mean())}
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Tensor' object has no attribute 'between'
+{
+ "scenes": 50,
+ "frame": "first_cam, scale 0.3; metres",
+ "layers": {
+  "anchor_surface_dist_m_median_by_state(0=init..12)": [
+   0.2725,
+   0.2421,
+   0.1909,
+   0.1483,
+   0.1311,
+   0.0814,
+   0.0906,
+   0.0743,
+   0.0988,
+   0.1058,
+   0.0823,
+   0.0343,
+   0.0714
+  ],
+  "anchor_surface_dist_m_p90_by_state": [
+   0.6948,
+   0.6338,
+   0.5083,
+   0.4419,
+   0.4385,
+   0.3564,
+   0.3811,
+   0.272,
+   0.3213,
+   0.3374,
+   0.2537,
+   0.1779,
+   0.3857
+  ],
+  "anchor_step_m_median_by_layer(1..12)": [
+   0.3279,
+   0.4111,
+   0.3616,
+   0.3245,
+   0.1707,
+   0.3477,
+   0.2507,
+   0.1002,
+   0.0804,
+   0.1091,
+   0.1187,
+   0.2695
+  ],
+  "radius_m_median_by_state": [
+   2.5078,
+   2.2012,
+   1.8525,
+   1.5059,
+   1.1865,
+   1.0859,
+   0.5088,
+   0.4907,
+   0.4678,
+   0.4429,
+   0.4104,
+   0.3779,
+   0.3306
+  ],
+  "sigma_floor_active_frac_by_state": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.2227,
+   0.4603,
+   0.9529,
+   0.9554,
+   0.9536,
+   0.9402,
+   0.9366,
+   0.931,
+   0.9889
+  ],
+  "per_layer_decode_mean": {
+   "1": {
+    "psnr": 11.4433,
+    "depth_absrel": 0.793,
+    "depth_delta_105": 0.0037,
+    "ray_thick_med_m": 0.1068,
+    "ray_thick_p90_m": 0.1705,
+    "normal_med_deg": 59.8566,
+    "surf_acc_cm": 54.8384,
+    "surf_comp_cm": 176.7243,
+    "surf_fscore_5cm": 0.0061
+   },
+   "2": {
+    "psnr": 11.5465,
+    "depth_absrel": 0.7208,
+    "depth_delta_105": 0.0054,
+    "ray_thick_med_m": 0.1282,
+    "ray_thick_p90_m": 0.2003,
+    "normal_med_deg": 56.9253,
+    "surf_acc_cm": 50.6411,
+    "surf_comp_cm": 167.0034,
+    "surf_fscore_5cm": 0.0095
+   },
+   "3": {
+    "psnr": 11.613,
+    "depth_absrel": 0.5304,
+    "depth_delta_105": 0.03,
+    "ray_thick_med_m": 0.1416,
+    "ray_thick_p90_m": 0.2367,
+    "normal_med_deg": 51.1448,
+    "surf_acc_cm": 39.7574,
+    "surf_comp_cm": 128.387,
+    "surf_fscore_5cm": 0.0393
+   },
+   "4": {
+    "psnr": 11.7217,
+    "depth_absrel": 0.3607,
+    "depth_delta_105": 0.0874,
+    "ray_thick_med_m": 0.1501,
+    "ray_thick_p90_m": 0.2396,
+    "normal_med_deg": 47.3391,
+    "surf_acc_cm": 29.4851,
+    "surf_comp_cm": 81.4678,
+    "surf_fscore_5cm": 0.1028
+   },
+   "5": {
+    "psnr": 12.1144,
+    "depth_absrel": 0.2484,
+    "depth_delta_105": 0.1733,
+    "ray_thick_med_m": 0.2232,
+    "ray_thick_p90_m": 0.401,
+    "normal_med_deg": 49.8045,
+    "surf_acc_cm": 21.3957,
+    "surf_comp_cm": 37.3576,
+    "surf_fscore_5cm": 0.1914
+   },
+   "6": {
+    "psnr": 27.9332,
+    "depth_absrel": 0.1461,
+    "depth_delta_105": 0.4428,
+    "ray_thick_med_m": 0.1264,
+    "ray_thick_p90_m": 0.2619,
+    "normal_med_deg": 34.8171,
+    "surf_acc_cm": 14.28,
+    "surf_comp_cm": 12.1802,
+    "surf_fscore_5cm": 0.4263
+   },
+   "7": {
+    "psnr": 13.9375,
+    "depth_absrel": 0.3118,
+    "depth_delta_105": 0.1415,
+    "ray_thick_med_m": 0.197,
+    "ray_thick_p90_m": 0.4271,
+    "normal_med_deg": 51.2824,
+    "surf_acc_cm": 26.3267,
+    "surf_comp_cm": 47.6336,
+    "surf_fscore_5cm": 0.1525
+   },
+   "8": {
+    "psnr": 16.4687,
+    "depth_absrel": 0.1952,
+    "depth_delta_105": 0.2222,
+    "ray_thick_med_m": 0.1657,
+    "ray_thick_p90_m": 0.3529,
+    "normal_med_deg": 39.8727,
+    "surf_acc_cm": 18.0716,
+    "surf_comp_cm": 28.1218,
+    "surf_fscore_5cm": 0.2458
+   },
+   "9": {
+    "psnr": 16.4008,
+    "depth_absrel": 0.1879,
+    "depth_delta_105": 0.2037,
+    "ray_thick_med_m": 0.1443,
+    "ray_thick_p90_m": 0.3063,
+    "normal_med_deg": 36.9471,
+    "surf_acc_cm": 18.06,
+    "surf_comp_cm": 20.8321,
+    "surf_fscore_5cm": 0.2359
+   },
+   "10": {
+    "psnr": 14.379,
+    "depth_absrel": 0.1725,
+    "depth_delta_105": 0.2577,
+    "ray_thick_med_m": 0.1508,
+    "ray_thick_p90_m": 0.342,
+    "normal_med_deg": 38.0091,
+    "surf_acc_cm": 16.6629,
+    "surf_comp_cm": 14.4001,
+    "surf_fscore_5cm": 0.2864
+   },
+   "11": {
+    "psnr": 16.4983,
+    "depth_absrel": 0.1737,
+    "depth_delta_105": 0.2602,
+    "ray_thick_med_m": 0.1826,
+    "ray_thick_p90_m": 0.4646,
+    "normal_med_deg": 38.2826,
+    "surf_acc_cm": 19.5269,
+    "surf_comp_cm": 13.8087,
+    "surf_fscore_5cm": 0.2919
+   },
+   "12": {
+    "psnr": 29.5217,
+    "depth_absrel": 0.1313,
+    "depth_delta_105": 0.5096,
+    "ray_thick_med_m": 0.129,
+    "ray_thick_p90_m": 0.3495,
+    "normal_med_deg": 30.3921,
+    "surf_acc_cm": 16.264,
+    "surf_comp_cm": 8.6892,
+    "surf_fscore_5cm": 0.4926
+   }
+  },
+  "error_locking": {
+   "spearman_dist_layer6_vs_12": 0.6524620935124612,
+   "frac_tokens_dist_gt_10cm_at_6": 0.4657388925552368,
+   "of_those_still_gt_10cm_at_12": 0.6814085245132446,
+   "of_those_improved_by_half": 0.29719921946525574,
+   "frac_good_at_6_becoming_gt_10cm_at_12": 0.16020876169204712
+  }
+ },
+ "attention": {
+  "2": {
+   "gamma_g": 0.071,
+   "argmax_combined_eq_prior": 0.0012,
+   "argmax_combined_eq_content": 0.7107,
+   "prior_saturated_frac": 1.0,
+   "combined_mass_in_prior90": {
+    "p10": 0.8691,
+    "p50": 0.9287,
+    "p90": 0.9678
+   },
+   "eff_patches_combined": {
+    "p10": 4136.0,
+    "p50": 5276.0,
+    "p90": 6312.0
+   },
+   "eff_patches_prior": {
+    "p10": 9448.0,
+    "p50": 9896.0,
+    "p90": 10408.0
+   },
+   "eff_patches_content": {
+    "p10": 4588.0,
+    "p50": 5728.0,
+    "p90": 6720.0
+   },
+   "prior_views_gt_0.1": {
+    "p10": 6.0,
+    "p50": 6.0,
+    "p90": 6.0
+   }
+  },
+  "6": {
+   "gamma_g": 13.074,
+   "argmax_combined_eq_prior": 0.4484,
+   "argmax_combined_eq_content": 0.1636,
+   "prior_saturated_frac": 0.0,
+   "combined_mass_in_prior90": {
+    "p10": 0.8517,
+    "p50": 0.8999,
+    "p90": 0.9336
+   },
+   "eff_patches_combined": {
+    "p10": 6.8359,
+    "p50": 15.3125,
+    "p90": 36.4062
+   },
+   "eff_patches_prior": {
+    "p10": 7.4531,
+    "p50": 17.2344,
+    "p90": 45.0312
+   },
+   "eff_patches_content": {
+    "p10": 1781.0,
+    "p50": 3130.0,
+    "p90": 4564.0
+   },
+   "prior_views_gt_0.1": {
+    "p10": 2.0,
+    "p50": 3.0,
+    "p90": 6.0
+   }
+  },
+  "12": {
+   "gamma_g": 10.603,
+   "argmax_combined_eq_prior": 0.5347,
+   "argmax_combined_eq_content": 0.577,
+   "prior_saturated_frac": 0.0,
+   "combined_mass_in_prior90": {
+    "p10": 0.8818,
+    "p50": 0.9292,
+    "p90": 0.9546
+   },
+   "eff_patches_combined": {
+    "p10": 3.7227,
+    "p50": 10.9453,
+    "p90": 31.2969
+   },
+   "eff_patches_prior": {
+    "p10": 5.3008,
+    "p50": 18.0,
+    "p90": 57.8125
+   },
+   "eff_patches_content": {
+    "p10": 1384.0,
+    "p50": 2624.0,
+    "p90": 4100.0
+   },
+   "prior_views_gt_0.1": {
+    "p10": 2.0,
+    "p50": 3.0,
+    "p90": 6.0
+   }
+  }
+ },
+ "ambiguity": {
+  "by_attended_views": {
+   "1 views": {
+    "token_share": 0.21092353761196136,
+    "anchor_dist_m": {
+     "p50": 0.1355,
+     "p90": 0.541
+    },
+    "gauss_centre_dist_m": {
+     "p50": 0.0493,
+     "p90": 0.3281
+    }
+   },
+   "2 views": {
+    "token_share": 0.3063885271549225,
+    "anchor_dist_m": {
+     "p50": 0.0807,
+     "p90": 0.3831
+    },
+    "gauss_centre_dist_m": {
+     "p50": 0.0255,
+     "p90": 0.1686
+    }
+   },
+   "3 views": {
+    "token_share": 0.2538391649723053,
+    "anchor_dist_m": {
+     "p50": 0.0537,
+     "p90": 0.2892
+    },
+    "gauss_centre_dist_m": {
+     "p50": 0.0215,
+     "p90": 0.1486
+    }
+   },
+   "4+ views": {
+    "token_share": 0.22884877026081085,
+    "anchor_dist_m": {
+     "p50": 0.0495,
+     "p90": 0.2654
+    },
+    "gauss_centre_dist_m": {
+     "p50": 0.0235,
+     "p90": 0.1759
+    }
+   }
+  },
+  "spearman_anchor_dist_vs_-parallax": 0.22874843755680016,
+  "spearman_anchor_dist_vs_-views": 0.22766578378854785
+ },
+ "allocation": {
+  "per_token_median_angle_to_its_mean_direction_deg_across_scenes": {
+   "p10": 18.8773,
+   "p50": 24.1631,
+   "p90": 30.3775
+  },
+  "per_token_depth_cv_across_scenes": {
+   "p10": 0.5312,
+   "p50": 0.7706,
+   "p90": 1.1764
+  },
+  "per_token_uv_std_px_across_scenes": {
+   "p10": 114.7481,
+   "p50": 336.3726,
+   "p90": 1605.0253
+  },
+  "init_vs_final_direction_deg": {
+   "p10": 24.7029,
+   "p50": 35.6424,
+   "p90": 66.1611
+  },
+  "tokens_alive_in_all_50_scenes": 0.0087890625,
+  "tokens_dead_in_all_50_scenes": 0.0,
+  "final_anchor_in_view0_frustum_frac": 0.8220654129981995,
+  "init_anchor_in_view0_frustum_frac": 0.475830078125
+ },
+ "coverage": {
+  "surface_points": 2000284,
+  "uncovered_frac_(no_anchor_support)": 0.18843324482440948,
+  "anchors_supporting_each_point": {
+   "p10": 0.0,
+   "p50": 28.0,
+   "p90": 167.0
+  },
+  "nearest_anchor_over_r": {
+   "p50": 0.3804,
+   "p90": 1.3564
+  },
+  "by_texture_quartile_(low->high)": [
+   {
+    "uncovered": 0.2500704526901245,
+    "support_median": 18.0
+   },
+   {
+    "uncovered": 0.199539914727211,
+    "support_median": 26.0
+   },
+   {
+    "uncovered": 0.1933065950870514,
+    "support_median": 31.0
+   },
+   {
+    "uncovered": 0.11075346171855927,
+    "support_median": 41.0
+   }
+  ],
+  "by_depth_quartile_(near->far)": [
+   {
+    "uncovered": 0.22852347791194916,
+    "support_median": 38.0
+   },
+   {
+    "uncovered": 0.18876683712005615,
+    "support_median": 39.0
+   },
+   {
+    "uncovered": 0.18883882462978363,
+    "support_median": 34.0
+   },
+   {
+    "uncovered": 0.14755652844905853,
+    "support_median": 19.0
+   }
+  ],
+  "spearman_support_vs_texture": 0.15776622739679824,
+  "spearman_support_vs_depth": -0.12176751424526784
+ },
+ "selfattn_layer12": {
+  "mass_on_16_nearest_anchors": {
+   "p10": 0.033,
+   "p50": 0.1339,
+   "p90": 0.2532
+  },
+  "uniform_baseline": 0.00390625,
+  "crowded_neighbour_weight_relative_to_uniform": {
+   "p10": 4.2109,
+   "p50": 13.125,
+   "p90": 42.4062
+  },
+  "self_weight": {
+   "p10": 0.0298,
+   "p50": 0.0712,
+   "p90": 0.137
+  },
+  "top8_partner_mean_dist_over_r": {
+   "p10": 0.2812,
+   "p50": 0.541,
+   "p90": 1.1973
+  }
+ },
+ "interventions_mean_50_scenes": {
+  "baseline": {
+   "psnr": 29.5217,
+   "depth_absrel": 0.1313,
+   "depth_delta_105": 0.5096,
+   "ray_thick_med_m": 0.129,
+   "ray_thick_p90_m": 0.3495,
+   "normal_med_deg": 30.3921,
+   "surf_acc_cm": 16.264,
+   "surf_comp_cm": 8.6892,
+   "surf_fscore_5cm": 0.4926
+  },
+  "no_geo_bias_all": {
+   "psnr": 13.8219,
+   "depth_absrel": 2.0244,
+   "depth_delta_105": 0.004,
+   "ray_thick_med_m": 0.3665,
+   "ray_thick_p90_m": 0.6748,
+   "normal_med_deg": 49.7331,
+   "surf_acc_cm": 217.0221,
+   "surf_comp_cm": 185.6058,
+   "surf_fscore_5cm": 0.0015
+  },
+  "no_geo_bias_last6": {
+   "psnr": 15.4872,
+   "depth_absrel": 0.6491,
+   "depth_delta_105": 0.0222,
+   "ray_thick_med_m": 0.2779,
+   "ray_thick_p90_m": 0.7415,
+   "normal_med_deg": 45.6928,
+   "surf_acc_cm": 62.7647,
+   "surf_comp_cm": 37.8477,
+   "surf_fscore_5cm": 0.0325
+  },
+  "no_selfattn_anchor_pe": {
+   "psnr": 17.2196,
+   "depth_absrel": 0.9163,
+   "depth_delta_105": 0.0604,
+   "ray_thick_med_m": 0.6748,
+   "ray_thick_p90_m": 1.3989,
+   "normal_med_deg": 59.8171,
+   "surf_acc_cm": 92.0214,
+   "surf_comp_cm": 31.986,
+   "surf_fscore_5cm": 0.0744
+  },
+  "frozen_anchors": {
+   "psnr": 14.1186,
+   "depth_absrel": 0.5946,
+   "depth_delta_105": 0.0319,
+   "ray_thick_med_m": 0.2086,
+   "ray_thick_p90_m": 0.329,
+   "normal_med_deg": 58.1584,
+   "surf_acc_cm": 41.3848,
+   "surf_comp_cm": 135.6487,
+   "surf_fscore_5cm": 0.0563
+  },
+  "fixed_radius": {
+   "psnr": 13.4987,
+   "depth_absrel": 0.5871,
+   "depth_delta_105": 0.0975,
+   "ray_thick_med_m": 0.5448,
+   "ray_thick_p90_m": 0.9964,
+   "normal_med_deg": 61.919,
+   "surf_acc_cm": 50.9585,
+   "surf_comp_cm": 27.0434,
+   "surf_fscore_5cm": 0.1343
+  },
+  "sigma_floor_removed": {
+   "psnr": 24.5573,
+   "depth_absrel": 0.137,
+   "depth_delta_105": 0.351,
+   "ray_thick_med_m": 0.1235,
+   "ray_thick_p90_m": 0.3374,
+   "normal_med_deg": 30.2359,
+   "surf_acc_cm": 15.6966,
+   "surf_comp_cm": 10.1832,
+   "surf_fscore_5cm": 0.3898
+  },
+  "init_anchor_jitter_0.05": {
+   "psnr": 29.1578,
+   "depth_absrel": 0.1332,
+   "depth_delta_105": 0.5033,
+   "ray_thick_med_m": 0.1287,
+   "ray_thick_p90_m": 0.3454,
+   "normal_med_deg": 32.3185,
+   "surf_acc_cm": 16.3374,
+   "surf_comp_cm": 8.7969,
+   "surf_fscore_5cm": 0.4872
+  },
+  "init_anchor_permuted": {
+   "psnr": 26.2344,
+   "depth_absrel": 0.1295,
+   "depth_delta_105": 0.393,
+   "ray_thick_med_m": 0.1903,
+   "ray_thick_p90_m": 0.4056,
+   "normal_med_deg": 32.3295,
+   "surf_acc_cm": 13.757,
+   "surf_comp_cm": 13.9409,
+   "surf_fscore_5cm": 0.3925
+  }
+ },
+ "paper_tokengs_4v_baseline": {
+  "psnr": 28.1282,
+  "depth_absrel": 0.1879,
+  "depth_delta_105": 0.4012,
+  "ray_thick_med_m": 0.2052,
+  "ray_thick_p90_m": 0.4819,
+  "normal_med_deg": 39.3721,
+  "surf_acc_cm": 19.9104,
+  "surf_comp_cm": 10.9724,
+  "surf_fscore_5cm": 0.3965
+ },
+ "views_mean_50_scenes": {
+  "2": {
+   "locus": {
+    "psnr": 23.7653,
+    "depth_absrel": 0.2841,
+    "depth_delta_105": 0.3331,
+    "ray_thick_med_m": 0.2411,
+    "ray_thick_p90_m": 0.5069,
+    "normal_med_deg": 39.0267,
+    "surf_acc_cm": 24.0268,
+    "surf_comp_cm": 19.9428,
+    "surf_fscore_5cm": 0.33
+   },
+   "paper": {
+    "psnr": 22.8423,
+    "depth_absrel": 0.3963,
+    "depth_delta_105": 0.2619,
+    "ray_thick_med_m": 0.2826,
+    "ray_thick_p90_m": 0.6138,
+    "normal_med_deg": 45.7078,
+    "surf_acc_cm": 33.4244,
+    "surf_comp_cm": 23.0147,
+    "surf_fscore_5cm": 0.2682
+   }
+  },
+  "4": {
+   "locus": {
+    "psnr": 28.4045,
+    "depth_absrel": 0.1482,
+    "depth_delta_105": 0.4813,
+    "ray_thick_med_m": 0.1401,
+    "ray_thick_p90_m": 0.3651,
+    "normal_med_deg": 31.5623,
+    "surf_acc_cm": 17.2074,
+    "surf_comp_cm": 10.8662,
+    "surf_fscore_5cm": 0.4663
+   },
+   "paper": {
+    "psnr": 27.2085,
+    "depth_absrel": 0.2172,
+    "depth_delta_105": 0.3772,
+    "ray_thick_med_m": 0.2226,
+    "ray_thick_p90_m": 0.5148,
+    "normal_med_deg": 40.9837,
+    "surf_acc_cm": 21.5707,
+    "surf_comp_cm": 12.6178,
+    "surf_fscore_5cm": 0.3764
+   }
+  },
+  "6": {
+   "locus": {
+    "psnr": 29.5217,
+    "depth_absrel": 0.1313,
+    "depth_delta_105": 0.5096,
+    "ray_thick_med_m": 0.129,
+    "ray_thick_p90_m": 0.3495,
+    "normal_med_deg": 30.3921,
+    "surf_acc_cm": 16.264,
+    "surf_comp_cm": 8.6892,
+    "surf_fscore_5cm": 0.4926
+   },
+   "paper": {
+    "psnr": 28.1282,
+    "depth_absrel": 0.1879,
+    "depth_delta_105": 0.4012,
+    "ray_thick_med_m": 0.2052,
+    "ray_thick_p90_m": 0.4819,
+    "normal_med_deg": 39.3721,
+    "surf_acc_cm": 19.9104,
+    "surf_comp_cm": 10.9724,
+    "surf_fscore_5cm": 0.3965
+   }
+  }
+ },
+ "ext_far_mean_50_scenes": {
+  "locus": {
+   "psnr": 16.5643,
+   "depth_absrel": 0.2388,
+   "depth_delta_105": 0.2963,
+   "ray_thick_med_m": 0.2502,
+   "ray_thick_p90_m": 0.5292,
+   "normal_med_deg": 39.8988,
+   "surf_acc_cm": 19.3158,
+   "surf_comp_cm": 29.5269,
+   "surf_fscore_5cm": 0.3177
+  },
+  "paper": {
+   "psnr": 15.9864,
+   "depth_absrel": 0.3197,
+   "depth_delta_105": 0.2256,
+   "ray_thick_med_m": 0.3107,
+   "ray_thick_p90_m": 0.6707,
+   "normal_med_deg": 45.5478,
+   "surf_acc_cm": 23.6839,
+   "surf_comp_cm": 33.1075,
+   "surf_fscore_5cm": 0.2561
+  }
+ },
+ "ext_far_reference_release_models": {
+  "baseline_pretrained_6view": {
+   "psnr": 15.835693559646607,
+   "depth_absrel": 0.3819120141472667,
+   "depth_delta_105": 0.22896150922443212,
+   "ray_thick_med_m": 0.18342333723977208,
+   "ray_thick_p90_m": 0.471915043996647,
+   "normal_med_deg": 46.160044711112974,
+   "surf_acc_cm": 30.512381464242935,
+   "surf_comp_cm": 36.484241887927055,
+   "surf_fscore_5cm": 0.25009085636509776
+  },
+  "sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20": {
+   "psnr": 15.9064107131958,
+   "depth_absrel": 0.20527188931259194,
+   "depth_delta_105": 0.35854026932971467,
+   "ray_thick_med_m": 0.1412417922248798,
+   "ray_thick_p90_m": 0.329678243920207,
+   "normal_med_deg": 34.000734991686684,
+   "surf_acc_cm": 13.172978702932596,
+   "surf_comp_cm": 37.53435945510864,
+   "surf_fscore_5cm": 0.3478883191588673
+  }
+ }
+}
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+{
+ "scene": "7b6477cb95",
+ "gpu": "1",
+ "frame": "all PLYs in the release mean_cam normalized frame (scale 0.3), overlay with gt_lidar_mesh_frustum.ply / cameras.ply; token_slots_* are in each scene's first-camera frame",
+ "gamma_g": {
+  "2": 0.07122839242219925,
+  "6": 13.074158668518066,
+  "12": 10.60251235961914
+ },
+ "sigma_floor_active_frac_layer12_input": 0.9690568447113037,
+ "coverage_uncovered_frac": 0.19651402533054352,
+ "interventions": {
+  "baseline": {
+   "psnr": 29.698406219482422,
+   "depth_absrel": 0.04464928200468421,
+   "depth_delta_105": 0.7202508971095085,
+   "ray_thick_med_m": 0.08902738243341446,
+   "ray_thick_p90_m": 0.19048837944865227,
+   "normal_med_deg": 21.168092250823975,
+   "surf_acc_cm": 5.9428870677948,
+   "surf_comp_cm": 5.46037033200264,
+   "surf_fscore_5cm": 0.6508901257531111
+  },
+  "no_geo_bias_all": {
+   "psnr": 13.741442680358887,
+   "depth_absrel": 1.0658017545938492,
+   "depth_delta_105": 0.003199486483936198,
+   "ray_thick_med_m": 0.3252423368394375,
+   "ray_thick_p90_m": 0.5044700279831886,
+   "normal_med_deg": 48.515902042388916,
+   "surf_acc_cm": 166.20497703552246,
+   "surf_comp_cm": 153.32521200180054,
+   "surf_fscore_5cm": 0.0008833149977411554
+  },
+  "no_geo_bias_last6": {
+   "psnr": 15.363866806030273,
+   "depth_absrel": 0.27623734064400196,
+   "depth_delta_105": 0.026384108932688832,
+   "ray_thick_med_m": 0.1608210038393736,
+   "ray_thick_p90_m": 0.43745976872742176,
+   "normal_med_deg": 32.447325229644775,
+   "surf_acc_cm": 29.330334067344666,
+   "surf_comp_cm": 31.99254870414734,
+   "surf_fscore_5cm": 0.0455412848242612
+  },
+  "no_selfattn_anchor_pe": {
+   "psnr": 17.189632415771484,
+   "depth_absrel": 0.3433501869440079,
+   "depth_delta_105": 0.10137188341468573,
+   "ray_thick_med_m": 0.44881442934274673,
+   "ray_thick_p90_m": 1.1128847151994705,
+   "normal_med_deg": 62.72202014923096,
+   "surf_acc_cm": 61.35074496269226,
+   "surf_comp_cm": 29.10747528076172,
+   "surf_fscore_5cm": 0.10445668541211055
+  },
+  "frozen_anchors": {
+   "psnr": 13.700108528137207,
+   "depth_absrel": 0.7911672741174698,
+   "depth_delta_105": 0.007945857993036043,
+   "ray_thick_med_m": 0.14706090884283185,
+   "ray_thick_p90_m": 0.24618647526949644,
+   "normal_med_deg": 45.010506987571716,
+   "surf_acc_cm": 42.64591038227081,
+   "surf_comp_cm": 178.8278579711914,
+   "surf_fscore_5cm": 0.014986118199764862
+  },
+  "fixed_radius": {
+   "psnr": 13.504558563232422,
+   "depth_absrel": 0.24602372758090496,
+   "depth_delta_105": 0.20410181768238544,
+   "ray_thick_med_m": 0.3117728754878044,
+   "ray_thick_p90_m": 0.4738081805408001,
+   "normal_med_deg": 58.31895351409912,
+   "surf_acc_cm": 24.882401525974274,
+   "surf_comp_cm": 21.542710065841675,
+   "surf_fscore_5cm": 0.12758619346667374
+  },
+  "sigma_floor_removed": {
+   "psnr": 25.886821746826172,
+   "depth_absrel": 0.05069702444598079,
+   "depth_delta_105": 0.6673678457736969,
+   "ray_thick_med_m": 0.09778002183884382,
+   "ray_thick_p90_m": 0.18954931944608688,
+   "normal_med_deg": 22.286701679229736,
+   "surf_acc_cm": 6.310148537158966,
+   "surf_comp_cm": 6.218432262539864,
+   "surf_fscore_5cm": 0.6305061543024187
+  },
+  "init_anchor_jitter_0.05": {
+   "psnr": 29.356060028076172,
+   "depth_absrel": 0.047388214617967606,
+   "depth_delta_105": 0.7011637985706329,
+   "ray_thick_med_m": 0.08835936337709427,
+   "ray_thick_p90_m": 0.1914306189864874,
+   "normal_med_deg": 23.069866180419922,
+   "surf_acc_cm": 6.39367550611496,
+   "surf_comp_cm": 5.819352343678474,
+   "surf_fscore_5cm": 0.627676868651277
+  },
+  "init_anchor_permuted": {
+   "psnr": 28.070995330810547,
+   "depth_absrel": 0.058159231673926115,
+   "depth_delta_105": 0.6289132758975029,
+   "ray_thick_med_m": 0.11201741266995668,
+   "ray_thick_p90_m": 0.22425669617950916,
+   "normal_med_deg": 25.518303632736206,
+   "surf_acc_cm": 8.219479769468307,
+   "surf_comp_cm": 8.680690824985504,
+   "surf_fscore_5cm": 0.5200220224502006
+  }
+ }
+}
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+{
+ "scene": "7b6477cb95",
+ "gpu": "1",
+ "frame": "all PLYs in the release mean_cam normalized frame (scale 0.3), overlay with gt_lidar_mesh_frustum.ply / cameras.ply; token_slots_* are in each scene's first-camera frame",
+ "gamma_g": {
+  "2": 0.07122839242219925,
+  "6": 13.074158668518066,
+  "12": 10.60251235961914
+ },
+ "sigma_floor_active_frac_layer12_input": 0.9690568447113037,
+ "coverage_uncovered_frac": 0.19651402533054352,
+ "interventions": {
+  "baseline": {
+   "psnr": 29.698406219482422,
+   "depth_absrel": 0.04464928200468421,
+   "depth_delta_105": 0.7202508971095085,
+   "ray_thick_med_m": 0.08902738243341446,
+   "ray_thick_p90_m": 0.19048837944865227,
+   "normal_med_deg": 21.168092250823975,
+   "surf_acc_cm": 5.9428870677948,
+   "surf_comp_cm": 5.46037033200264,
+   "surf_fscore_5cm": 0.6508901257531111
+  },
+  "no_geo_bias_all": {
+   "psnr": 13.741442680358887,
+   "depth_absrel": 1.0658017545938492,
+   "depth_delta_105": 0.003199486483936198,
+   "ray_thick_med_m": 0.3252423368394375,
+   "ray_thick_p90_m": 0.5044700279831886,
+   "normal_med_deg": 48.515902042388916,
+   "surf_acc_cm": 166.20497703552246,
+   "surf_comp_cm": 153.32521200180054,
+   "surf_fscore_5cm": 0.0008833149977411554
+  },
+  "no_geo_bias_last6": {
+   "psnr": 15.363866806030273,
+   "depth_absrel": 0.27623734064400196,
+   "depth_delta_105": 0.026384108932688832,
+   "ray_thick_med_m": 0.1608210038393736,
+   "ray_thick_p90_m": 0.43745976872742176,
+   "normal_med_deg": 32.447325229644775,
+   "surf_acc_cm": 29.330334067344666,
+   "surf_comp_cm": 31.99254870414734,
+   "surf_fscore_5cm": 0.0455412848242612
+  },
+  "no_selfattn_anchor_pe": {
+   "psnr": 17.189632415771484,
+   "depth_absrel": 0.3433501869440079,
+   "depth_delta_105": 0.10137188341468573,
+   "ray_thick_med_m": 0.44881442934274673,
+   "ray_thick_p90_m": 1.1128847151994705,
+   "normal_med_deg": 62.72202014923096,
+   "surf_acc_cm": 61.35074496269226,
+   "surf_comp_cm": 29.10747528076172,
+   "surf_fscore_5cm": 0.10445668541211055
+  },
+  "frozen_anchors": {
+   "psnr": 13.700108528137207,
+   "depth_absrel": 0.7911672741174698,
+   "depth_delta_105": 0.007945857993036043,
+   "ray_thick_med_m": 0.14706090884283185,
+   "ray_thick_p90_m": 0.24618647526949644,
+   "normal_med_deg": 45.010506987571716,
+   "surf_acc_cm": 42.64591038227081,
+   "surf_comp_cm": 178.8278579711914,
+   "surf_fscore_5cm": 0.014986118199764862
+  },
+  "fixed_radius": {
+   "psnr": 13.504558563232422,
+   "depth_absrel": 0.24602372758090496,
+   "depth_delta_105": 0.20410181768238544,
+   "ray_thick_med_m": 0.3117728754878044,
+   "ray_thick_p90_m": 0.4738081805408001,
+   "normal_med_deg": 58.31895351409912,
+   "surf_acc_cm": 24.882401525974274,
+   "surf_comp_cm": 21.542710065841675,
+   "surf_fscore_5cm": 0.12758619346667374
+  },
+  "sigma_floor_removed": {
+   "psnr": 25.886821746826172,
+   "depth_absrel": 0.05069702444598079,
+   "depth_delta_105": 0.6673678457736969,
+   "ray_thick_med_m": 0.09778002183884382,
+   "ray_thick_p90_m": 0.18954931944608688,
+   "normal_med_deg": 22.286701679229736,
+   "surf_acc_cm": 6.310148537158966,
+   "surf_comp_cm": 6.218432262539864,
+   "surf_fscore_5cm": 0.6305061543024187
+  },
+  "init_anchor_jitter_0.05": {
+   "psnr": 29.356060028076172,
+   "depth_absrel": 0.047388214617967606,
+   "depth_delta_105": 0.7011637985706329,
+   "ray_thick_med_m": 0.08835936337709427,
+   "ray_thick_p90_m": 0.1914306189864874,
+   "normal_med_deg": 23.069866180419922,
+   "surf_acc_cm": 6.39367550611496,
+   "surf_comp_cm": 5.819352343678474,
+   "surf_fscore_5cm": 0.627676868651277
+  },
+  "init_anchor_permuted": {
+   "psnr": 28.070995330810547,
+   "depth_absrel": 0.058159231673926115,
+   "depth_delta_105": 0.6289132758975029,
+   "ray_thick_med_m": 0.11201741266995668,
+   "ray_thick_p90_m": 0.22425669617950916,
+   "normal_med_deg": 25.518303632736206,
+   "surf_acc_cm": 8.219479769468307,
+   "surf_comp_cm": 8.680690824985504,
+   "surf_fscore_5cm": 0.5200220224502006
+  }
+ }
+}

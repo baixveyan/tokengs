@@ -1,0 +1,65 @@
+=== started 2026-11-06T11:38:52+08:00 GPU 0 (user-authorized)
+Command: CUDA_VISIBLE_DEVICES=0 python -u scripts/check_anchor_propagation.py --output EXP/anchor_propagation_val6v
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[01/50] 7b6477cb95: points=1944 anchors=1024 (6s)
+[02/50] c50d2d1d42: points=809 anchors=584 (10s)
+[03/50] cc5237fd77: points=2841 anchors=1024 (14s)
+[04/50] acd95847c5: points=2503 anchors=1024 (18s)
+[05/50] fb5a96b1a2: points=1052 anchors=371 (23s)
+[06/50] a24f64f7fb: points=3248 anchors=1024 (27s)
+[07/50] 1ada7a0617: points=1395 anchors=976 (31s)
+[08/50] 5eb31827b7: points=3660 anchors=1024 (35s)
+[09/50] 3e8bba0176: points=1402 anchors=1024 (40s)
+[10/50] 3f15a9266d: points=2691 anchors=1024 (44s)
+[11/50] 21d970d8de: points=451 anchors=76 (49s)
+[12/50] 5748ce6f01: points=2902 anchors=1024 (53s)
+[13/50] c4c04e6d6c: points=2157 anchors=964 (61s)
+[14/50] 7831862f02: points=2229 anchors=1024 (66s)
+[15/50] bde1e479ad: points=1279 anchors=311 (71s)
+[16/50] 38d58a7a31: points=1649 anchors=291 (76s)
+[17/50] 5ee7c22ba0: points=1604 anchors=961 (80s)
+[18/50] f9f95681fd: points=2667 anchors=1024 (84s)
+[19/50] 3864514494: points=1998 anchors=1024 (88s)
+[20/50] 40aec5fffa: points=1010 anchors=567 (91s)
+[21/50] 13c3e046d7: points=3060 anchors=1024 (96s)
+[22/50] e398684d27: points=428 anchors=303 (100s)
+[23/50] a8bf42d646: points=3438 anchors=1024 (105s)
+[24/50] 45b0dac5e3: points=3624 anchors=1024 (109s)
+[25/50] 31a2c91c43: points=2091 anchors=1024 (113s)
+[26/50] e7af285f7d: points=2303 anchors=1024 (117s)
+[27/50] 286b55a2bf: points=1090 anchors=937 (121s)
+[28/50] 7bc286c1b6: points=2505 anchors=1024 (124s)
+[29/50] f3685d06a9: points=215 anchors=106 (127s)
+[30/50] b0a08200c9: points=482 anchors=344 (131s)
+[31/50] 825d228aec: points=1944 anchors=1024 (135s)
+[32/50] a980334473: points=2310 anchors=1024 (139s)
+[33/50] f2dc06b1d2: points=2679 anchors=1024 (143s)
+[34/50] 5942004064: points=2728 anchors=1024 (148s)
+[35/50] 25f3b7a318: points=3466 anchors=1024 (153s)
+[36/50] bcd2436daf: points=1844 anchors=1024 (157s)
+[37/50] f3d64c30f8: points=2153 anchors=1024 (162s)
+[38/50] 0d2ee665be: points=1414 anchors=1024 (166s)
+[39/50] 3db0a1c8f3: points=5061 anchors=1024 (173s)
+[40/50] ac48a9b736: points=2639 anchors=1024 (182s)
+[41/50] c5439f4607: points=3169 anchors=1024 (187s)
+[42/50] 578511c8a9: points=2951 anchors=1024 (198s)
+[43/50] d755b3d9d8: points=2203 anchors=1024 (202s)
+[44/50] 99fa5c25e1: points=2752 anchors=1024 (206s)
+[45/50] 09c1414f1b: points=4527 anchors=1024 (213s)
+[46/50] 5f99900f09: points=5307 anchors=1024 (219s)
+[47/50] 9071e139d9: points=2619 anchors=1024 (224s)
+[48/50] 6115eddb86: points=827 anchors=438 (229s)
+[49/50] 27dd4da69e: points=26 anchors=13 (234s)
+[50/50] c49a8c6cff: points=4649 anchors=1024 (238s)
+official {"n_observations": 109076, "anchor_relerr_median": 0.016459714621305466, "model_relerr_median_at_anchor": 0.019631119444966316, "model_relerr_mean_at_anchor": 0.04674467071890831, "anchor_better_fraction": 0.5238640904426575, "model_bad5_fraction_at_anchor": 0.2085610032081604, "anchor_bad5_fraction": 0.18152481317520142}
+  input: all: model=0.1922 global_scale=0.1893 local_10cm=0.1918 local_20cm=0.1911 | 0-5: model=0.0530 global_scale=0.0503 local_10cm=0.0489 local_20cm=0.0486 | 5-10: model=0.0861 global_scale=0.0833 local_10cm=0.0848 local_20cm=0.0821 | 10-20: model=0.1382 global_scale=0.1346 local_10cm=0.1398 local_20cm=0.1356 | 20-50: model=0.1990 global_scale=0.1979 local_10cm=0.1999 local_20cm=0.2010 | >50: model=0.3305 global_scale=0.3264 local_10cm=0.3306 local_20cm=0.3305
+  target: all: model=0.1761 global_scale=0.1731 local_10cm=0.1749 local_20cm=0.1742 | 0-5: model=0.0512 global_scale=0.0496 local_10cm=0.0447 local_20cm=0.0452 | 5-10: model=0.0843 global_scale=0.0827 local_10cm=0.0807 local_20cm=0.0789 | 10-20: model=0.1377 global_scale=0.1351 local_10cm=0.1382 local_20cm=0.1345 | 20-50: model=0.1908 global_scale=0.1866 local_10cm=0.1916 local_20cm=0.1916 | >50: model=0.2919 global_scale=0.2883 local_10cm=0.2920 local_20cm=0.2920
+sft_latenttail_rgb {"n_observations": 109076, "anchor_relerr_median": 0.016459714621305466, "model_relerr_median_at_anchor": 0.01891157031059265, "model_relerr_mean_at_anchor": 0.045721981674432755, "anchor_better_fraction": 0.5165480971336365, "model_bad5_fraction_at_anchor": 0.20208844542503357, "anchor_bad5_fraction": 0.18152481317520142}
+  input: all: model=0.1802 global_scale=0.1791 local_10cm=0.1802 local_20cm=0.1797 | 0-5: model=0.0507 global_scale=0.0486 local_10cm=0.0474 local_20cm=0.0469 | 5-10: model=0.0825 global_scale=0.0802 local_10cm=0.0818 local_20cm=0.0792 | 10-20: model=0.1323 global_scale=0.1295 local_10cm=0.1344 local_20cm=0.1309 | 20-50: model=0.1898 global_scale=0.1901 local_10cm=0.1910 local_20cm=0.1927 | >50: model=0.3046 global_scale=0.3041 local_10cm=0.3047 local_20cm=0.3048
+  target: all: model=0.1660 global_scale=0.1641 local_10cm=0.1652 local_20cm=0.1647 | 0-5: model=0.0488 global_scale=0.0480 local_10cm=0.0433 local_20cm=0.0436 | 5-10: model=0.0807 global_scale=0.0796 local_10cm=0.0780 local_20cm=0.0759 | 10-20: model=0.1316 global_scale=0.1298 local_10cm=0.1326 local_20cm=0.1292 | 20-50: model=0.1820 global_scale=0.1791 local_10cm=0.1830 local_20cm=0.1834 | >50: model=0.2716 global_scale=0.2696 local_10cm=0.2718 local_20cm=0.2720
+sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20 {"n_observations": 109076, "anchor_relerr_median": 0.016459714621305466, "model_relerr_median_at_anchor": 0.015199312940239906, "model_relerr_mean_at_anchor": 0.03573062643408775, "anchor_better_fraction": 0.4619898200035095, "model_bad5_fraction_at_anchor": 0.15306758880615234, "anchor_bad5_fraction": 0.18152481317520142}
+  input: all: model=0.0695 global_scale=0.0706 local_10cm=0.0710 local_20cm=0.0723 | 0-5: model=0.0274 global_scale=0.0277 local_10cm=0.0288 local_20cm=0.0301 | 5-10: model=0.0342 global_scale=0.0352 local_10cm=0.0382 local_20cm=0.0384 | 10-20: model=0.0422 global_scale=0.0434 local_10cm=0.0457 local_20cm=0.0461 | 20-50: model=0.0626 global_scale=0.0634 local_10cm=0.0635 local_20cm=0.0668 | >50: model=0.1257 global_scale=0.1274 local_10cm=0.1258 local_20cm=0.1263
+  target: all: model=0.0664 global_scale=0.0669 local_10cm=0.0667 local_20cm=0.0671 | 0-5: model=0.0270 global_scale=0.0270 local_10cm=0.0251 local_20cm=0.0257 | 5-10: model=0.0336 global_scale=0.0341 local_10cm=0.0344 local_20cm=0.0338 | 10-20: model=0.0418 global_scale=0.0423 local_10cm=0.0440 local_20cm=0.0430 | 20-50: model=0.0626 global_scale=0.0625 local_10cm=0.0633 local_20cm=0.0650 | >50: model=0.1187 global_scale=0.1201 local_10cm=0.1187 local_20cm=0.1191
+exit 0

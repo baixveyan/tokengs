@@ -1,0 +1,17 @@
+{
+  "full": true,
+  "views": 8,
+  "gaussians": [
+    1,
+    262144,
+    14
+  ],
+  "parameters": 74903489,
+  "loss": 0.3751389682292938,
+  "gradient_norm": 40.55875015258789,
+  "soft_chain_edges": 9904.0,
+  "anchors": 1024,
+  "step_seconds": 3.7979561826214194,
+  "peak_memory_gib": 3.796844482421875,
+  "checkpoint_reload_exact": true
+}

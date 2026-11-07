@@ -1,0 +1,19 @@
+{
+  "name": "sft_readout_rgb_depth_thick_posmlp",
+  "scene_id": "7b6477cb95",
+  "psnr": 29.18769335746765,
+  "ssim": 0.93507369607687,
+  "lpips": 0.16894418187439442,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "checkpoint_sha256": "9e8db54fbd749c06ed6b1acb908b36eea88da126f07cd6b83440c1c7344d7c64",
+  "completed_at": "2026-11-02T14:29:02.367354+00:00"
+}

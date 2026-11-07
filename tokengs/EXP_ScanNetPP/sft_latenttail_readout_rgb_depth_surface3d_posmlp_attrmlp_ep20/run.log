@@ -1,0 +1,97 @@
+=== Started: 2026-11-04T16:36:06+08:00; git=4bb14d0db31a0a6848ca5d99580f9ccfbba58df1
+Train GPUs=0,1,2,3,4,5,6,7 (8 GPUs); Command: CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch --multi_gpu --num_processes 8 --num_machines 1 --mixed_precision no --dynamo_backend no --main_process_port 29885 -m tokengs.train sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp_attrmlp_ep20 --workspace workspace_scannetpp/sft_latenttail_readout_rgb_depth_surface3d_posmlp_attrmlp_ep20 --resume checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors
+Options(evaluating=False, workspace='workspace_scannetpp/sft_latenttail_readout_rgb_depth_surface3d_posmlp_attrmlp_ep20', resume='checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors', model_type='tokengs', seed=42, use_wandb=False, experiment_name='sft_latenttail_readout_rgb_depth_surface3d_posmlp_attrmlp_ep20', out_dir='outputs', project_name='TokenGS', img_size=(256, 448), patch_size=8, dec_patch_size=8, enc_depth=12, dec_depth=1, enc_embed_dim=1024, enc_num_heads=16, mlp_ratio=4, clip_head_readout_std=0.002, clip_head_z_init=0.1, dec_init_values=0.01, bg_color='grey', gaussian_scale_cap=0.075, opacity_bias=2.0, gaussian_z_offset=0.0, num_gs_tokens=4096, token_dim=1024, gs_token_std=0.02, num_dynamic_gs_tokens=0, init_dynamic_tokens_from_static=False, init_tokens_from_existing=False, init_latents_from_existing=False, load_lidar_pc=False, lidar_sft_mode='scene_latent_probe', sft_unfreeze_latent_tail=True, sft_unfreeze_readout=True, sft_readout_head_lr_scale=0.1, readout_pos_mlp=True, readout_pos_mlp_hidden=1024, readout_attr_mlp=True, readout_surfel=False, surfel_rn_start=0.3, surfel_rn_end=0.009, surfel_anneal_epochs=5.0, lambda_opacity_binarize=0.0, readout_sh_degree=0, lambda_sh_l2=0.0, lambda_surface3d=0.05, surface3d_beta_m=0.02, render_geo_warmup_epochs=1.0, val_depth_metric=True, val_depth_cache_path='/home/jms/xveyan/4DGS/TokenGS/workspace_scannetpp/val_depth_cache/scannetpp_val_scaled_0.3_wdefault.pt', val_depth_cache_build=False, use_render_geo_supervision=True, lambda_render_depth=0.1, lambda_render_alpha=0.0, lambda_render_thickness=0.0, lambda_render_normal=0.0, data_mode=(('scannetpp_scaled_0.3', 4),), num_views=10, num_input_views=6, znear=0.025, zfar=125.0, camera_normalization_method='mean_cam', camera_scale_method='constant', pointmap_trim_lo=0.0, pointmap_trim_hi=1.0, num_workers=4, dataset_kwargs=None, validation_data_mode='scannetpp_val_scaled_0.3', validation_dataset_kwargs=None, validation_batch_size=1, train_read_error_policy='retry', eval_read_error_policy='fail_fast', train_read_max_retries=8, batch_size=1, gradient_accumulation_steps=2, num_epochs=20, max_iters_per_epoch=1000000, lr=4e-05, pct_start_steps=200, final_div_factor=1000.0, gradient_clip=1.0, mixed_precision='no', deferred_bp=False, use_input_supervision=True, mean_of_grads='none', mean_of_grads_scene_chunk_size=1, mean_of_grads_view_chunk_size=None, rgb_loss_type='l1', lambda_rgb=0.8, lambda_lpips=0.0, lambda_mask=0.0, lambda_ssim=0.2, lambda_visibility=1.0, visibility_distance_threshold=1.0, lambda_opacity=0.0, lambda_dyn_aux=0.0, lambda_dyn_aux_warmup_steps=0, lambda_dyn_aux_decay_steps=0, lambda_dyn_aux_min=0.0, use_geo_losses=False, lambda_geo_sw=0.01, lambda_geo_packing=0.01, lambda_geo_inter=0.01, geo_k_neighbors=4, geo_target_distance=2.0, geo_num_sw_directions=8, geo_mass_weighting='opacity_area', geo_inter_form='log_smooth_l1', print_freq=10, log_image_freq=100, eval_n_media_dumps=0, strict_checkpoint_loading=True, use_ttt_for_eval=False, ttt_mode='token-tuning', ttt_n_steps=50, ttt_lr=0.0001, time_embedding=False, time_embedding_dim=2, use_interp_target=False, use_multiscale_encoder=True, multiscale_encoder_layers=(5, 7, 9, 11), use_latent_bottleneck=True, num_latents=4096, latent_cross_attn_depth=12, random_reflect=True)
+[INFO] Config saved to config_save_path='workspace_scannetpp/sft_latenttail_readout_rgb_depth_surface3d_posmlp_attrmlp_ep20/config.yaml'
+[TokenGS-SFT] group=latent_tail+readout: trainable=90.03M params, frozen=277.78M params
+Loaded scannetpp_scaled_0.3, train size: 3412, loading took 11.18691372871399 seconds
+Loaded explicit validation scannetpp_val_scaled_0.3, size: 50
+[eval] epoch: -1 psnr: 30.5052 depth_absrel: 0.1748 unique_scenes: 50
+[INFO] Setting RNG epoch to 0
+[INFO] 0/426 mem: 24.39/71.12G lr: 0.0000016000 loss: 0.009172 speed: 2.53 it/s loss_render_depth: 0.160455
+[INFO] 10/426 mem: 27.03/71.12G lr: 0.0000016598 loss: 0.020453 speed: 0.71 it/s loss_render_depth: 0.141583
+[INFO] 20/426 mem: 27.03/71.12G lr: 0.0000018388 loss: 0.018665 speed: 0.82 it/s loss_render_depth: 0.108766
+[INFO] 30/426 mem: 27.03/71.12G lr: 0.0000021358 loss: 0.020042 speed: 0.82 it/s loss_render_depth: 0.216917
+[INFO] 40/426 mem: 27.03/71.12G lr: 0.0000025491 loss: 0.017530 speed: 0.82 it/s loss_render_depth: 0.083469
+[INFO] 50/426 mem: 27.03/71.12G lr: 0.0000030760 loss: 0.026149 speed: 0.81 it/s loss_render_depth: 0.317865
+[INFO] 60/426 mem: 27.03/71.12G lr: 0.0000037134 loss: 0.024688 speed: 0.81 it/s loss_render_depth: 0.148391
+[INFO] 70/426 mem: 27.03/71.12G lr: 0.0000044571 loss: 0.018619 speed: 0.81 it/s loss_render_depth: 0.086211
+[INFO] 80/426 mem: 27.03/71.12G lr: 0.0000053026 loss: 0.071824 speed: 0.81 it/s loss_render_depth: 0.251147
+[INFO] 90/426 mem: 27.03/71.12G lr: 0.0000062446 loss: 0.035768 speed: 0.81 it/s loss_render_depth: 0.202323
+[INFO] 100/426 mem: 27.03/71.12G lr: 0.0000072772 loss: 0.027462 speed: 0.81 it/s loss_render_depth: 0.151276
+[INFO] 110/426 mem: 27.03/71.12G lr: 0.0000083941 loss: 0.030229 speed: 0.81 it/s loss_render_depth: 0.121736
+[INFO] 120/426 mem: 27.03/71.12G lr: 0.0000095882 loss: 0.029185 speed: 0.81 it/s loss_render_depth: 0.138695
+[INFO] 130/426 mem: 27.03/71.12G lr: 0.0000108522 loss: 0.046111 speed: 0.81 it/s loss_render_depth: 0.246934
+[INFO] 140/426 mem: 27.03/71.12G lr: 0.0000121780 loss: 0.026479 speed: 0.81 it/s loss_render_depth: 0.054725
+[INFO] 150/426 mem: 27.03/71.12G lr: 0.0000135576 loss: 0.050409 speed: 0.81 it/s loss_render_depth: 0.152983
+[INFO] 160/426 mem: 27.03/71.12G lr: 0.0000149823 loss: 0.041944 speed: 0.81 it/s loss_render_depth: 0.318639
+[INFO] 170/426 mem: 27.03/71.12G lr: 0.0000164432 loss: 0.043344 speed: 0.81 it/s loss_render_depth: 0.088274
+[INFO] 180/426 mem: 27.03/71.12G lr: 0.0000179313 loss: 0.036765 speed: 0.81 it/s loss_render_depth: 0.118855
+[INFO] 190/426 mem: 27.03/71.12G lr: 0.0000194372 loss: 0.034667 speed: 0.81 it/s loss_render_depth: 0.078702
+[INFO] 200/426 mem: 27.03/71.12G lr: 0.0000209516 loss: 0.031522 speed: 0.81 it/s loss_render_depth: 0.058351
+[INFO] 210/426 mem: 27.03/71.12G lr: 0.0000224650 loss: 0.035512 speed: 0.81 it/s loss_render_depth: 0.073001
+[INFO] 220/426 mem: 27.03/71.12G lr: 0.0000239681 loss: 0.031635 speed: 0.81 it/s loss_render_depth: 0.092921
+[INFO] 230/426 mem: 27.03/71.12G lr: 0.0000254514 loss: 0.033273 speed: 0.81 it/s loss_render_depth: 0.074371
+[INFO] 240/426 mem: 27.03/71.12G lr: 0.0000269058 loss: 0.037969 speed: 0.65 it/s loss_render_depth: 0.099335
+[INFO] 250/426 mem: 27.03/71.12G lr: 0.0000283222 loss: 0.040223 speed: 0.69 it/s loss_render_depth: 0.088443
+[INFO] 260/426 mem: 27.03/71.12G lr: 0.0000296917 loss: 0.101001 speed: 0.69 it/s loss_render_depth: 0.126394
+[INFO] 270/426 mem: 27.03/71.12G lr: 0.0000310058 loss: 0.032507 speed: 0.81 it/s loss_render_depth: 0.054161
+[INFO] 280/426 mem: 27.03/71.12G lr: 0.0000322564 loss: 0.049882 speed: 0.81 it/s loss_render_depth: 0.128530
+[INFO] 290/426 mem: 27.03/71.12G lr: 0.0000334357 loss: 0.062330 speed: 0.69 it/s loss_render_depth: 0.240296
+[INFO] 300/426 mem: 27.03/71.12G lr: 0.0000345362 loss: 0.038419 speed: 0.81 it/s loss_render_depth: 0.122725
+[INFO] 310/426 mem: 27.03/71.12G lr: 0.0000355513 loss: 0.032987 speed: 0.81 it/s loss_render_depth: 0.105243
+[INFO] 320/426 mem: 27.03/71.12G lr: 0.0000364744 loss: 0.048063 speed: 0.81 it/s loss_render_depth: 0.061704
+[INFO] 330/426 mem: 27.03/71.12G lr: 0.0000373000 loss: 0.030831 speed: 0.81 it/s loss_render_depth: 0.048071
+[INFO] 340/426 mem: 27.03/71.12G lr: 0.0000380227 loss: 0.062669 speed: 0.81 it/s loss_render_depth: 0.242451
+[INFO] 350/426 mem: 27.03/71.12G lr: 0.0000386383 loss: 0.050504 speed: 0.81 it/s loss_render_depth: 0.089746
+[INFO] 360/426 mem: 27.03/71.12G lr: 0.0000391427 loss: 0.033163 speed: 0.81 it/s loss_render_depth: 0.084544
+[INFO] 370/426 mem: 27.03/71.12G lr: 0.0000395330 loss: 0.065218 speed: 0.81 it/s loss_render_depth: 0.115602
+[INFO] 380/426 mem: 27.03/71.12G lr: 0.0000398065 loss: 0.279258 speed: 0.81 it/s loss_render_depth: 0.456864
+[INFO] 390/426 mem: 27.03/71.12G lr: 0.0000399617 loss: 0.036197 speed: 0.81 it/s loss_render_depth: 0.083522
+[INFO] 400/426 mem: 27.03/71.12G lr: 0.0000400000 loss: 0.043861 speed: 0.81 it/s loss_render_depth: 0.051969
+[INFO] 410/426 mem: 27.03/71.12G lr: 0.0000399998 loss: 0.032847 speed: 0.81 it/s loss_render_depth: 0.050811
+[INFO] 420/426 mem: 27.03/71.12G lr: 0.0000399993 loss: 0.032240 speed: 0.81 it/s loss_render_depth: 0.074757
+[train] epoch: 0 loss: 0.037312 psnr: 32.0945
+[eval] epoch: 0 psnr: 29.3519 depth_absrel: 0.0974 unique_scenes: 50
+[INFO] Setting RNG epoch to 1
+[INFO] 0/426 mem: 26.39/71.12G lr: 0.0000399988 loss: 0.031228 speed: 2.79 it/s loss_render_depth: 0.053397
+[INFO] 10/426 mem: 26.39/71.12G lr: 0.0000399978 loss: 0.036276 speed: 0.59 it/s loss_render_depth: 0.049667
+[INFO] 20/426 mem: 26.39/71.12G lr: 0.0000399966 loss: 0.027513 speed: 0.81 it/s loss_render_depth: 0.074221
+[INFO] 30/426 mem: 26.39/71.12G lr: 0.0000399950 loss: 0.045202 speed: 0.81 it/s loss_render_depth: 0.085911
+W1104 16:47:23.979000 665249 site-packages/torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W1104 16:47:23.991000 665249 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 665266 closing signal SIGTERM
+W1104 16:47:24.005000 665249 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 665267 closing signal SIGTERM
+W1104 16:47:24.009000 665249 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 665268 closing signal SIGTERM
+W1104 16:47:24.012000 665249 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 665269 closing signal SIGTERM
+W1104 16:47:24.014000 665249 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 665270 closing signal SIGTERM
+W1104 16:47:24.046000 665249 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 665271 closing signal SIGTERM
+W1104 16:47:24.047000 665249 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 665272 closing signal SIGTERM
+W1104 16:47:24.048000 665249 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 665273 closing signal SIGTERM
+Traceback (most recent call last):
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/accelerate", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/accelerate/commands/launch.py", line 1048, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/accelerate/commands/launch.py", line 702, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 261, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/elastic/metrics/api.py", line 138, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 665249 got signal: 15

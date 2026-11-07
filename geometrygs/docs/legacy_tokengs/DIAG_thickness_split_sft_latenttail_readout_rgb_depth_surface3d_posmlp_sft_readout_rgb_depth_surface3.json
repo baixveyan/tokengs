@@ -1,0 +1,94 @@
+{
+  "definitions": "Where does the ray thickness come from?  (no training; official interpolation targets of the 50 validation scenes)",
+  "gpu": "1",
+  "models": {
+    "sft_readout_rgb_depth_surface3d": {
+      "ray_thickness_total": {
+        "p50_cm": 9.49,
+        "p90_cm": 25.03
+      },
+      "within_token": {
+        "p50_cm": 6.02,
+        "p90_cm": 15.92
+      },
+      "between_token": {
+        "p50_cm": 6.22,
+        "p90_cm": 18.79
+      },
+      "variance_share_within_token": 0.3438846977997946,
+      "variance_share_between_token": 0.6561153078259264,
+      "intrinsic_gaussian_extent_along_ray": {
+        "p50_cm": 1.74,
+        "p90_cm": 4.0
+      },
+      "psnr_target_views": 30.013,
+      "psnr_input_views": 31.415
+    },
+    "sft_readout_rgb_depth_surface3d_posmlp": {
+      "ray_thickness_total": {
+        "p50_cm": 8.83,
+        "p90_cm": 24.18
+      },
+      "within_token": {
+        "p50_cm": 5.7,
+        "p90_cm": 15.74
+      },
+      "between_token": {
+        "p50_cm": 5.68,
+        "p90_cm": 17.86
+      },
+      "variance_share_within_token": 0.3540184812067666,
+      "variance_share_between_token": 0.6459815157085964,
+      "intrinsic_gaussian_extent_along_ray": {
+        "p50_cm": 2.15,
+        "p90_cm": 4.89
+      },
+      "psnr_target_views": 30.211,
+      "psnr_input_views": 31.691
+    },
+    "sft_latenttail_readout_rgb_depth_surface3d_posmlp": {
+      "ray_thickness_total": {
+        "p50_cm": 4.93,
+        "p90_cm": 15.01
+      },
+      "within_token": {
+        "p50_cm": 3.26,
+        "p90_cm": 9.24
+      },
+      "between_token": {
+        "p50_cm": 3.06,
+        "p90_cm": 11.18
+      },
+      "variance_share_within_token": 0.2883122387250849,
+      "variance_share_between_token": 0.7116877603670343,
+      "intrinsic_gaussian_extent_along_ray": {
+        "p50_cm": 1.96,
+        "p90_cm": 4.55
+      },
+      "psnr_target_views": 30.631,
+      "psnr_input_views": 32.23
+    },
+    "sft_readout_rgb_depth_surface3d_posmlp_ep20": {
+      "ray_thickness_total": {
+        "p50_cm": 7.74,
+        "p90_cm": 21.48
+      },
+      "within_token": {
+        "p50_cm": 4.86,
+        "p90_cm": 13.99
+      },
+      "between_token": {
+        "p50_cm": 5.04,
+        "p90_cm": 16.0
+      },
+      "variance_share_within_token": 0.3448222892664435,
+      "variance_share_between_token": 0.6551777126747897,
+      "intrinsic_gaussian_extent_along_ray": {
+        "p50_cm": 2.08,
+        "p90_cm": 5.07
+      },
+      "psnr_target_views": 30.295,
+      "psnr_input_views": 31.762
+    }
+  }
+}

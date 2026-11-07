@@ -1,0 +1,1730 @@
+{
+  "source_root": "/home/jms/xveyan/4DGS/TokenGS",
+  "destination_root": "/home/jms/xveyan/4DGS/GeometryGS",
+  "verified_at": "2026-11-05T17:57:27.366249+08:00",
+  "selection": "selected by roadmap relevance, see docs/RESULTS_INDEX.md",
+  "file_count": 344,
+  "total_bytes": 2268227861,
+  "files": [
+    {
+      "path": "EXP_ScanNetPP/all_experiments_table.csv",
+      "bytes": 8429,
+      "sha256": "d994a49b0b1e03c8250ddfc7472cb0de7bfc2ecb94ef3dcaa4c7eab46964e8c8"
+    },
+    {
+      "path": "EXP_ScanNetPP/all_experiments_table.md",
+      "bytes": 10489,
+      "sha256": "7e047e77dbe0be78d958db09abb503fa9bc6d9f6f04050a24a324c57db072e9c"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_locusgs_dl3dv_4v/frame_metrics.csv",
+      "bytes": 118838,
+      "sha256": "f3752ea26740869eec081267fb8a0d51a86e7e39d29dbcc9e680c8a1bf9c876c"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_locusgs_dl3dv_4v/run.log",
+      "bytes": 7555,
+      "sha256": "1b4a651b5e2ec7ccb3b56fe3f47770f4e9e45d781dac395a5087f867667e8c61"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_locusgs_dl3dv_4v/scene_metrics.csv",
+      "bytes": 32792,
+      "sha256": "1ad71f791d6f277c2d20b3da9ba728761f61913771a113bedb82171946d2ba1a"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_locusgs_dl3dv_4v/summary.json",
+      "bytes": 2096,
+      "sha256": "8ea746b483e1c258fac5d226c1a938f257e61c0dde5fc7139aa398a8f93f872f"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_pretrained_6view/frame_metrics.csv",
+      "bytes": 120123,
+      "sha256": "6cb86d456d74d9df2ea334bf8a96d4b691c2c938850c66eb7ca4753e756d7023"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_pretrained_6view/run.log",
+      "bytes": 15286,
+      "sha256": "02e2b297f385350fd6388743bac254f5d2071315a5c82c81993fd55994789f22"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_pretrained_6view/scene_metrics.csv",
+      "bytes": 26164,
+      "sha256": "15f6fcd4c04555d72593eff5542619c8cf07e942f34ec7f24532101634468745"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_pretrained_6view/summary.json",
+      "bytes": 1785,
+      "sha256": "3181b90da616ad998cf73eabfec71582486e0a03403894e20d58b59a06d1293d"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_tokengs_paper_dl3dv_4v/frame_metrics.csv",
+      "bytes": 119752,
+      "sha256": "cf5493c4fd8398a34b9e46148705b182ddb7944ad3e615589ebe965b94aa15e8"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_tokengs_paper_dl3dv_4v/run.log",
+      "bytes": 7562,
+      "sha256": "8043d2dd252b6a6737cc950026c24aa1ec2d09df213e8a3a8f2bf54456b63b91"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_tokengs_paper_dl3dv_4v/scene_metrics.csv",
+      "bytes": 33074,
+      "sha256": "0ee73808a4d9d9cfc130161eda15b78703de329a7d5ea786393d51551e1a33e8"
+    },
+    {
+      "path": "EXP_ScanNetPP/baseline_tokengs_paper_dl3dv_4v/summary.json",
+      "bytes": 2100,
+      "sha256": "b8353429ab8c268147936745e568e15a1d73d6fd2d01b7127a20999cbeeb6bc2"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/demo_scene.json",
+      "bytes": 138,
+      "sha256": "530f784c6df52b1ec8276b51b994937cd8ad782f48db5fe87ffe40956b307d06"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view.json",
+      "bytes": 2168,
+      "sha256": "fec30eed23b868e0fa8515aad738a92625da4f24066b811407753287e2732e50"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view.ply",
+      "bytes": 22020653,
+      "sha256": "6f319379c043f8fcd28130548a233f6d1fde7e317b327e0ac147c2020611dbb6"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_all4096_region_type_gt.ply",
+      "bytes": 246147,
+      "sha256": "4de29a33c4ed4478ec98b5848399381ea7ea3a04fa3effd3cc8310b7c4c4a845"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_all4096_region_type_mismatch.ply",
+      "bytes": 246147,
+      "sha256": "81bae46a34729a607c8f91dc7ebff3a5b43cf1d947d65294de1f414b80e366a1"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_all4096_region_type_pred.ply",
+      "bytes": 246147,
+      "sha256": "f25d3eaa8f3878a47517fafb5f639bef3210f456e2d0275afa5f83f506635e71"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_all4096_triangulated_anchors.ply",
+      "bytes": 377448,
+      "sha256": "2bab26047526fe16bdc8881296ae85097e98974b6f9096c4e92ed988a66c21a3"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_gs_token_laser_target.ply",
+      "bytes": 243564,
+      "sha256": "984e31df9663a5b0bba1b50dd6a51e7b124dc6cee0a9fcc7399228dc64f63826"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_gs_token_ownership_laser.ply",
+      "bytes": 10201166,
+      "sha256": "986d4132afe0ec41c727bad50793ff2566fed677d0c493034ef956d89e792388"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_gs_token_probe_links.ply",
+      "bytes": 1702645,
+      "sha256": "b8e8d873c092963a5d8c5cc72f0fd9a619ac95262be1b4221fd7bf6fe15f0a6c"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_gs_token_probe_pred.ply",
+      "bytes": 243564,
+      "sha256": "d2588715543e7f79fb696df699dbdecca002200a5a796b86a9ff4d9382fce9ed"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_gs_token_region20_laser.ply",
+      "bytes": 929185,
+      "sha256": "67874d4e64d7c5202eb2cbe882e72160c180895c670f6a77a39179eea4d7a582"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_gs_token_region20_pred.ply",
+      "bytes": 1582,
+      "sha256": "2428034af14fd87fb5e3c74f6ed663f5963a5dbf36e8433824310e97dd880446"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_gs_token_region20_target.ply",
+      "bytes": 1582,
+      "sha256": "b5d32e95b33744a84211f629f06e709d4f7441fe3e87263c8f01a93f7f82569a"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_highlight10tokens.ply",
+      "bytes": 23069264,
+      "sha256": "7208a4f0bc63bd6f6ad9540b2b232565661a411e4a57b34a1d7d683acc59f41d"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_highlight20tokens.ply",
+      "bytes": 23069264,
+      "sha256": "e0eae6facc01afb706a82743f8f3664b3b82e8af1215b933e32ce9995c925d7e"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_only10tokens.ply",
+      "bytes": 56909,
+      "sha256": "3986a37b05e19bc2af1720f444c8e41c0c67b419a7e6e712e89d7dc82fb59737"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_only10tokens_prune0.01.ply",
+      "bytes": 42125,
+      "sha256": "36adf87131ad613eb124314ee6ab8be98ab02b27594c67e4b33a9af527d120b8"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_only10tokens_prune0.05.ply",
+      "bytes": 26109,
+      "sha256": "0e425383dd35248b4e3a74173c6fe6e7cd23c8e322bf9996e7a52e7f51d79f71"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_only20tokens.ply",
+      "bytes": 113230,
+      "sha256": "324cca160389912647622ab96ea1868abe3ef8185984ab32833b1d38d0addfc9"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_only20tokens_gt_surface_anchors.ply",
+      "bytes": 2454,
+      "sha256": "59979bf0e391a16b77e057a402906381e99c0510fee1621a93c6e03d46a21991"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_only20tokens_prune0.01.ply",
+      "bytes": 83133,
+      "sha256": "0032f66e8bd1938de474daf355cbf1bbdd76540bcf84e057802fe845b57bb2b3"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_only20tokens_prune0.05.ply",
+      "bytes": 52861,
+      "sha256": "e57508d18e14373ff949a36bde690a28971eceff8cf51508a5cef2a818bcf66e"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_only20tokens_triangulated_anchors.ply",
+      "bytes": 2454,
+      "sha256": "dab39486878ab2e41ee4df88901f43744c71185389449689c36b8e1ae45c6d47"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_only20tokens_with_triangulated_and_gt.ply",
+      "bytes": 133096,
+      "sha256": "6ce65e2642eba71d16af84e5e6171d96ba0e74124e2b960c8ab7802e817ebc90"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_pixel10_contributing.ply",
+      "bytes": 21920,
+      "sha256": "fe4241a31ccfc1d37433d43da8c64b1e1ae40311c7a04e61a8f84faaacd8c19f"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_pixel10_rays.ply",
+      "bytes": 51178,
+      "sha256": "99b159e34a9ffb6a8c44af1b89b707aac6168a29f9c9954e46869f9710d3905c"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_pixel10_tokens.ply",
+      "bytes": 444345,
+      "sha256": "ea0fbac9da14e1051d554d91c08e01e8891525ea05c8b1acad995e097178d883"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_pixel10_tokens_visible.ply",
+      "bytes": 201288,
+      "sha256": "77ff669557c9e468bc7d88b4f98240ce80acf4853b930c315b56b9ae45651dc6"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_prune0.01.ply",
+      "bytes": 14279633,
+      "sha256": "bb8267ec0f34b3c63850437fd74d4ff0a000576239a1a4e431d5ba48a7384ee6"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_prune0.01_slotcolor.ply",
+      "bytes": 14279633,
+      "sha256": "6b6102b8d9866d7fa1772523d48540c01fd3c5365df4f4cc6fa7b30acddef879"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_prune0.05.ply",
+      "bytes": 7059412,
+      "sha256": "3dc7769176ad574c4f21ec1f0f57970ef70c9bb3d1ca9c7a40a8870040a0d66c"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_prune0.05_slotcolor.ply",
+      "bytes": 7059412,
+      "sha256": "cfc8e0810f153a6ae9584091e5f12eab1453b7053077e8f28adbb3d3f510f292"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_gt_attention.ply",
+      "bytes": 231564,
+      "sha256": "8a725eccb53656fa971ca5dde0ad8a2f08c2da24c32d692956bbad7a3f7a852e"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_ownership_laser.ply",
+      "bytes": 10270106,
+      "sha256": "624810db03fab197700bc5f11f718b155ef4cc00cf9d9c5274eb3eb895007f47"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_probe_best_links.ply",
+      "bytes": 1618645,
+      "sha256": "459e2dfa52b2801af7dffd00f197c676c4fc36a2d14cacc68831e1132f9a09b7"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_probe_best_pred.ply",
+      "bytes": 231564,
+      "sha256": "db607675199961cb29e27b2a4f786cd83de236622dfff0e28097e67040275714"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_probe_full_links.ply",
+      "bytes": 1618645,
+      "sha256": "27b3762c93e1e47e3619f514bbd2685a6520e459731ded095b0cf11ef97042eb"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_probe_full_pred.ply",
+      "bytes": 231564,
+      "sha256": "dc0b8da5fa72ed45fc3113092b31c699c0d9b97acd8b0705b902018858763d47"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_probe_links.ply",
+      "bytes": 1618645,
+      "sha256": "f90c002ae20dd399bf19ec2879d5d381954c5352b2309d536ed65aa1aac6b309"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_probe_pred.ply",
+      "bytes": 231564,
+      "sha256": "48ec5fa7a4f3bbf099cdc592010e20d5f16f3907f433d0cfd2733bd320209e44"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_region20_centroid.ply",
+      "bytes": 1582,
+      "sha256": "34fe2cbc56994ccb47b52f47f74d02e0468e23911849fe3fae5bb59c02ea7f9e"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_region20_laser.ply",
+      "bytes": 590484,
+      "sha256": "c73d33691ca53faa525a887ef0a12001ad24527c8e808d9cfe0469322ccd1994"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_scene_latent_region20_pred.ply",
+      "bytes": 1582,
+      "sha256": "3ed556af9d6955c180bfe637743107a34d521b7b98f07b6e818fd5dd235eab50"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_slotcolor.ply",
+      "bytes": 22020653,
+      "sha256": "4a0b38ae4b20d46cebada80eef26a106ca950524488a29e6092e0306392968ff"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/baseline_pretrained_6view_tsdf_mesh.ply",
+      "bytes": 29422351,
+      "sha256": "70efbffe23ca65fc871ad0f9394eef784fe92c29477ee3fa9ccbeee5f1d443e5"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/cameras.ply",
+      "bytes": 386,
+      "sha256": "1a0f0039deeed03fb2868400d0fbc3a7ef667b7c70f53b7720582ba559adda0e"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/frame_metrics.csv",
+      "bytes": 718,
+      "sha256": "6eb139fb0e54e90d589c30a56255af1b2a7c35539f4f802689289897c1a3e66b"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/gaussians.pt",
+      "bytes": 14681655,
+      "sha256": "1537670f47730c9d6c31eb383f827dce16c1223d6011b662f3557b11c8cdb5e7"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/needle_stats.json",
+      "bytes": 2971,
+      "sha256": "6b9cec1c182b7aac3249381320bd41691c1dff89a43bcad0995e5a9a283d4152"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/pixel10_tokens.json",
+      "bytes": 3199,
+      "sha256": "f974396744846e4297d66443329fc9010fdcbbdcd5ccfd374ccb161229393544"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/render_strip.json",
+      "bytes": 1720,
+      "sha256": "09128b2797bc3ac24b59f09ce51bb4c44edfef383e6bde31a0e0d55225319a89"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/render_strip.png",
+      "bytes": 1631038,
+      "sha256": "1b8af4abd8234d95b39cba1dd84a0e7e8c893aaec3962e030e2fa910f953b551"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/scene_metrics.csv",
+      "bytes": 236,
+      "sha256": "64e4563c39ca2191295d3a87371761d4559fabfede05ce002afec586348465d6"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/status.json",
+      "bytes": 109,
+      "sha256": "a9992ca11318cc498d00fac42fea82465a5066d4661ef96173d997482de72e43"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/baseline_pretrained_6view/summary.json",
+      "bytes": 496,
+      "sha256": "652b45cd1adaeb70e8d71fecc3f58faa46e07132e899a7bb5e9d731517f52a03"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/comparison.json",
+      "bytes": 2365,
+      "sha256": "819404b95f419c978ca06db7c31259c5eda8c90faae948d48d6d10e6eed665ea"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/comparison.md",
+      "bytes": 843,
+      "sha256": "ee5cd99a7c8eccf240613f93be371cd7ad5773ed9f8d003be39ea70f6a9dbe3f"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/gt_lidar_mesh_frustum.ply",
+      "bytes": 1200179,
+      "sha256": "58775c368f582d3ae8e2d5562cffd5ac02f56310f0e9bb46b147217f67f95309"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/highlighted_tokens.json",
+      "bytes": 8296,
+      "sha256": "2ca8d10949d2d6aaed9e1c77d519ea5675547918653aedae21461b9b82b92321"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/highlighted_tokens.md",
+      "bytes": 2855,
+      "sha256": "c09a414e162002f027fb851877aee548388389b23405633597e480875fa3081c"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/cameras.ply",
+      "bytes": 386,
+      "sha256": "1a0f0039deeed03fb2868400d0fbc3a7ef667b7c70f53b7720582ba559adda0e"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/frame_metrics.csv",
+      "bytes": 2670,
+      "sha256": "22ee8009262f04508cf9440393b2d3dbcd5aadf59b91f835d249bafd9ad526c5"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/gaussians.pt",
+      "bytes": 14681655,
+      "sha256": "39d7210caae1220af3eb9e05419cfb5d7682449c38c29db0f47606ff6018dd1c"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/needle_stats.json",
+      "bytes": 2976,
+      "sha256": "54d6cfd8d4143acc0585fb9083c9c249d8050dbfe223f5a594e2b3d2df0aeb5d"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/render_strip.json",
+      "bytes": 1715,
+      "sha256": "53898637e902ea0267a2d62c9ba07d1457e985a405a38acd3d3183b0f2186b6c"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/render_strip.png",
+      "bytes": 1630995,
+      "sha256": "c62856aa467744a867f91498b5f244ca357d62fef6823a6c84e8d00ecf2d835e"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/scene_metrics.csv",
+      "bytes": 1187,
+      "sha256": "bfa90237cb6d3ebb4815a99e6ce7d18514cc018ed1f3a251575040e0bc1ced7e"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20.json",
+      "bytes": 2254,
+      "sha256": "9ebb79c8ed306805414b173a8f169f6e339f2e5b4d70e6e94af9c9edadcd606b"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20.ply",
+      "bytes": 22020653,
+      "sha256": "dff43b23e9d8e26ead79ff3c45033eb123475bc85ee63d67fe911eb4049353dc"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20_prune0.01.ply",
+      "bytes": 13429805,
+      "sha256": "b81253e0e07d2764ccc5f750cbcfe0ae04524c2ea6d3a101863a7933abb11177"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20_prune0.01_slotcolor.ply",
+      "bytes": 13429805,
+      "sha256": "9e01f0753e554d98cbced3da956768717d6e9d1df982c9380ed6a65f5dde8a95"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20_prune0.05.ply",
+      "bytes": 7438756,
+      "sha256": "71e192d67a23e7430a70b76c32dbefe0b4606a7b051c4ebacce7273b2ad9c2c4"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20_prune0.05_slotcolor.ply",
+      "bytes": 7438756,
+      "sha256": "23c802407b23ec6e0f5cc2585c754d16340c3cfa469dfa7c7a1d1c19625f025c"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20_slotcolor.ply",
+      "bytes": 22020653,
+      "sha256": "fd357f65863ed14e6419c0439b320a7f8e6e91c929a59e8e8a0fa51fb69422b9"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20_tsdf_mesh.ply",
+      "bytes": 23969007,
+      "sha256": "86c7a84bcafff2c84d37cb86ae8912da42e26d074eb9a027bf1f01524c15fede"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/status.json",
+      "bytes": 109,
+      "sha256": "549ff17e04a132fb5b76af23f0fa8e929b1b48d02e88688aee71dbf3fa7e9955"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/summary.json",
+      "bytes": 524,
+      "sha256": "b8684ba8be1ff9bffa07b42cdb570121383a4dcde8130754e1be21b3226adb43"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/cameras.ply",
+      "bytes": 386,
+      "sha256": "1a0f0039deeed03fb2868400d0fbc3a7ef667b7c70f53b7720582ba559adda0e"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/frame_metrics.csv",
+      "bytes": 2634,
+      "sha256": "069ed142e327d98a0621c4152191ebc002e7c34584efd163d070d566e1e25fd2"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/gaussians.pt",
+      "bytes": 14681655,
+      "sha256": "dae6003084c40c94920ca37a263c10bb7484d238d0aa3bcf1783d7cd75bbd405"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/needle_stats.json",
+      "bytes": 2966,
+      "sha256": "3b5e364d23cece31706f250293d3fcf0c7d87a8e500ea6bcc27e3288deaf96e1"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/render_strip.json",
+      "bytes": 1717,
+      "sha256": "d179937c724b5fcab5dbeb2f0b3cc2adaee73ff4440d8d720632e36e1c5edc13"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/render_strip.png",
+      "bytes": 1630205,
+      "sha256": "f0824d5a87efe2f0f68a8fa5e0cccc09f19748f3e569df9bc1fdf26b5c140ce6"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/scene_metrics.csv",
+      "bytes": 1059,
+      "sha256": "d0cfe2911e8defedb278553ecf35db1fa6053070b20978d348b020ab5a6c10cf"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/sft_readout_rgb_depth.json",
+      "bytes": 2152,
+      "sha256": "2aec85bef355f76f33e5cd1603296cfb2a59f0ee52eb3be28c7bbfea5f54882c"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/sft_readout_rgb_depth.ply",
+      "bytes": 22020653,
+      "sha256": "9e546e5f7f369ddf2819fbc348944ef38679228d8b9506045a478909b5907914"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/sft_readout_rgb_depth_prune0.01.ply",
+      "bytes": 14304161,
+      "sha256": "7ba4790f30e3bba132cb2593833485dd6d9b925a39af889b5ae35296566b6f5f"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/sft_readout_rgb_depth_prune0.01_slotcolor.ply",
+      "bytes": 14304161,
+      "sha256": "87fbac8365319eb5862af4694409956fb9e4aa5b0d3b8dfc7833a55697c04367"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/sft_readout_rgb_depth_prune0.05.ply",
+      "bytes": 7329724,
+      "sha256": "aa6da8c235466241400e90f03dfa4bb8226669b43e5103cc66f808100ebcb217"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/sft_readout_rgb_depth_prune0.05_slotcolor.ply",
+      "bytes": 7329724,
+      "sha256": "69537e2cd51fa87ea53a46afd3a342ff019a604e1b143fd3a6c3a1cb7471bc47"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/sft_readout_rgb_depth_slotcolor.ply",
+      "bytes": 22020653,
+      "sha256": "1f24f9f1cab760ada215ebea723b78a9e7d0eb78debe1701955c621c2c00be14"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/status.json",
+      "bytes": 109,
+      "sha256": "a8e26d87a951c16041f25b4153f7812a1c65f69f5e58421021f8dd046ec64e55"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth/summary.json",
+      "bytes": 490,
+      "sha256": "aaefcd82a0e83707d1951a0b2c6497a57e3c0d0ab07a0978b5ddb730a82c43fd"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/cameras.ply",
+      "bytes": 386,
+      "sha256": "1a0f0039deeed03fb2868400d0fbc3a7ef667b7c70f53b7720582ba559adda0e"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/frame_metrics.csv",
+      "bytes": 2672,
+      "sha256": "3fb442b669f358eab73b2a4ef93734d0f48da4ee490190fca8a263d56604f163"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/gaussians.pt",
+      "bytes": 14681655,
+      "sha256": "01edfc71ea92bbd1bee6641c41dfb17d245dcbe436d1c43e36f9077f75256405"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/needle_stats.json",
+      "bytes": 2978,
+      "sha256": "826b6b75fb9306c0095383aaacf770a3a4f8db6676726038423098bc6acd7c70"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/render_strip.json",
+      "bytes": 1717,
+      "sha256": "f637084fcac0b04248eea619411d0642bcbeba5184c384416d51fe0ef06e8fb6"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/render_strip.png",
+      "bytes": 1640803,
+      "sha256": "ada1fb1fd74b1ea055e05962a61b47c9f125a46a79998dff6aa1487909c38091"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/scene_metrics.csv",
+      "bytes": 1189,
+      "sha256": "c71171ce0afa07d1b55da95fbfd9681d71b5011ddd072be4688cd97f38bc445b"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/sft_readout_rgb_depth_thick.json",
+      "bytes": 2177,
+      "sha256": "c33829fa31e2fb5264779d17d2b2606a59d1c63940f0de7ec9f7e532c8d037fe"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/sft_readout_rgb_depth_thick.ply",
+      "bytes": 22020653,
+      "sha256": "35b5ae1bc1a733a05863ce6be745505834d7bc05a484c5b661c240325a0801b2"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/sft_readout_rgb_depth_thick_prune0.01.ply",
+      "bytes": 15224213,
+      "sha256": "42bbad48032c70c0327780d016744fd63f92d4a1c1412af769dfabe22f4ddd70"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/sft_readout_rgb_depth_thick_prune0.01_slotcolor.ply",
+      "bytes": 15224213,
+      "sha256": "0cf0494e04692cfaa8d1f2bc13da3663b891355746606aead5b7f7dd66245783"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/sft_readout_rgb_depth_thick_prune0.05.ply",
+      "bytes": 11383145,
+      "sha256": "d1a4444c788498714cdda474cfcaf40c6c889965ee075187118fc9de3581b042"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/sft_readout_rgb_depth_thick_prune0.05_slotcolor.ply",
+      "bytes": 11383145,
+      "sha256": "cacb5604a05ad36886e927b458e2224591bf878630bbb5d57aafcbfd6aff4532"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/sft_readout_rgb_depth_thick_slotcolor.ply",
+      "bytes": 22020653,
+      "sha256": "3224927cefde633e26afa2f720b20eba9c9426b8ff254af89d539d6fdb795df8"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/status.json",
+      "bytes": 109,
+      "sha256": "2704413789aad761b9040057dd56c823730324a658d01760e75ad08564197438"
+    },
+    {
+      "path": "EXP_ScanNetPP/demo/scene_7b6477cb95/sft_readout_rgb_depth_thick/summary.json",
+      "bytes": 498,
+      "sha256": "f7639548b4e4bb6de228aecebbe1699a88476f953f367b6597f7da11187b5e15"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/baseline_pretrained_6view/frame_metrics.csv",
+      "bytes": 123130,
+      "sha256": "3e1deaaf7a6ea25b4a698486cf7992f53b7bd6c7ea6bc57ab91ca3ea066ce1eb"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/baseline_pretrained_6view/run.log",
+      "bytes": 7315,
+      "sha256": "64ddfca89df36afeee4b3ae5817d18125c229631217cb6a8cdb98e6e01960b38"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/baseline_pretrained_6view/scene_metrics.csv",
+      "bytes": 33614,
+      "sha256": "c8412c0778ed62a84e928c08470bf9624e4fc553de4d8b301e4a58c040ae15e6"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/baseline_pretrained_6view/summary.json",
+      "bytes": 1900,
+      "sha256": "0134edf5b7cc5726bfbdfa8d1221252b603e622ef7e0e331c69cb885906f7a77"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/frame_metrics.csv",
+      "bytes": 123380,
+      "sha256": "95e8917bf56784e0ca96ea4264e5fb87fd4f692983a6ebf9fe28e96b8bd8928d"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/run.log",
+      "bytes": 7372,
+      "sha256": "32da869cdbf0d329bb7e1daf417a12a9e17f2283044e0da12cd5c6e6184f7abb"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/scene_metrics.csv",
+      "bytes": 33595,
+      "sha256": "e23fd4a24ad7014454c598509ad7296ba228e9d7fe5f64d426829230b50b45b1"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/summary.json",
+      "bytes": 1957,
+      "sha256": "15e8a17d2bee6777b781e615a2c94de9e8614854b246a3c59e26cea0129d6951"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_latenttail_rgb/frame_metrics.csv",
+      "bytes": 122799,
+      "sha256": "5581123ef7531fa5afcb2cb8c575f913272f2fdc986e85b194aa2a249a5c53f0"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_latenttail_rgb/run.log",
+      "bytes": 7328,
+      "sha256": "a13af19be27a408f1d29a3f132a3109c50858a0b96a01016666dbe6769d65d82"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_latenttail_rgb/scene_metrics.csv",
+      "bytes": 33577,
+      "sha256": "0fbf3e3c47bf55711afc3fb96702b732ea3101ed6bd75324f874cce9652b88c3"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_latenttail_rgb/summary.json",
+      "bytes": 1919,
+      "sha256": "b4d9e421b76f482e496cecd623a2d360f013facd7e180d36942e90f018e0f255"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb/frame_metrics.csv",
+      "bytes": 123001,
+      "sha256": "a082f1869ca9c7484c5b343b4e7decea29c07ff03ea2d708816bcc676fd952b1"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb/run.log",
+      "bytes": 7309,
+      "sha256": "91e40a5cb2cf79e5b57b748f0a3a557ee789681aa3dfbd23987b391c3df61562"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb/scene_metrics.csv",
+      "bytes": 33606,
+      "sha256": "a3722377c389a2ab9e3a1006ca0956c153f14609628d92f6b4e3912c299d4813"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb/summary.json",
+      "bytes": 1889,
+      "sha256": "2789830754cdcdf44246a4406b892fd2bcca9852682e5da8a6b91baa26623a68"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth/frame_metrics.csv",
+      "bytes": 122931,
+      "sha256": "20fd41e128e9b22634de0c90c352873afe24b98eb9bcfa26b6641faf83fa9f2c"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth/run.log",
+      "bytes": 7304,
+      "sha256": "cc29ecb205169f3925ddd8f7e82e7fdcc6847be57e61e8d91fd06e8348fa0a34"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth/scene_metrics.csv",
+      "bytes": 33578,
+      "sha256": "f7fe1356d797ba99a9b16b55ee2c66ef4f66a60ff5070b60ba587259a7e5e16d"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth/summary.json",
+      "bytes": 1893,
+      "sha256": "1261a861401f4d77d24f88c8f292be6fda555348985da9df645b4462f99d8a36"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_surface3d/frame_metrics.csv",
+      "bytes": 122788,
+      "sha256": "434ba151ba2b9c53bbc02560b23d235044dcb1df72a9804cbc3fb7ce6f6e9ce5"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_surface3d/run.log",
+      "bytes": 7350,
+      "sha256": "2b437d9ab256592ed05c4365409bee15dbec1773a34de5172a302df61dfac4d9"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_surface3d/scene_metrics.csv",
+      "bytes": 33648,
+      "sha256": "55bf84b184631d98eb418c75678cc6862df799726f2d94539772dbdf46f52250"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_surface3d/summary.json",
+      "bytes": 1935,
+      "sha256": "5ce4d6a129648bd008c98f972c61b1d2831fe69b204b6943c8a49f05adb49bcc"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_surface3d_posmlp/frame_metrics.csv",
+      "bytes": 122971,
+      "sha256": "6691ba2488fd202fa395f14dc48bc7c39fb94c6755b272a48e4f30b700a204e1"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_surface3d_posmlp/run.log",
+      "bytes": 7355,
+      "sha256": "d4c75a6eed0ba2d4e9a8261632c74afec7fe6e8c865533f880ff5ad80a7b52f8"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_surface3d_posmlp/scene_metrics.csv",
+      "bytes": 33646,
+      "sha256": "23573c626b0c56040c0a6e0e4b1e236d9d5caf33013971fe379312453f17d0d0"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_surface3d_posmlp/summary.json",
+      "bytes": 1940,
+      "sha256": "038eb5dbd26703d90c4f65eb2aba6ec5cd2a33b04cd49f17ae64cd0b9bc79541"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_thick/frame_metrics.csv",
+      "bytes": 123421,
+      "sha256": "f8863946e4923babc066af5a6ce0ae3dee4cb41b5f884d51c1ed84734fe51385"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_thick/run.log",
+      "bytes": 7314,
+      "sha256": "243031776869caa3c191ba51a78460efc26f6b591210c12d691bb2bf970d7dcc"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_thick/scene_metrics.csv",
+      "bytes": 33630,
+      "sha256": "4c241603153121fe307b1ef76852a20a15b8fb44b33b6a82c52aea03586d453c"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_thick/summary.json",
+      "bytes": 1903,
+      "sha256": "ad8d16729669f8c208b88065eca11131c5b5fcc4ceeb40c1934fd25071507109"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_thick_posmlp_surfel_binar/frame_metrics.csv",
+      "bytes": 123235,
+      "sha256": "81b7b1606ff3e75d3099eb530be6cfa02abce84077d4ef5c1886fd5b539c1c2a"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_thick_posmlp_surfel_binar/run.log",
+      "bytes": 7306,
+      "sha256": "fc88db17d6f5bcc8d54846c0256bb233f0880573f4cd59bb7752825d4853ea4b"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_thick_posmlp_surfel_binar/scene_metrics.csv",
+      "bytes": 33618,
+      "sha256": "ab9bec07d3014f0f51adc439b3d8d2562c88663acd0a79aafd4473c85a9ca3ab"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_far/sft_readout_rgb_depth_thick_posmlp_surfel_binar/summary.json",
+      "bytes": 1920,
+      "sha256": "b3ef1f13192807b814848bd33d9675a4ca2d9975cb4b082cd492da5ef1392605"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/baseline_pretrained_6view/frame_metrics.csv",
+      "bytes": 123389,
+      "sha256": "b5a1a6c0d93e7e338ad7af9e1d3748034a22ca80d4f17161ea23b3e831eb6965"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/baseline_pretrained_6view/run.log",
+      "bytes": 7308,
+      "sha256": "bc70c8297ae5313fd8d1d2cdcd2977524cb5a4cd37a27b8c4ae2e64555b50193"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/baseline_pretrained_6view/scene_metrics.csv",
+      "bytes": 33540,
+      "sha256": "d584875f1f926b433af9f61fcdbb5e8de762754660ca16d25b5949615f79c95b"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/baseline_pretrained_6view/summary.json",
+      "bytes": 1893,
+      "sha256": "364ac434cf6b6c0fedf04dd6a0daedd344eb15d05279f2ba316b2a9944c26185"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/frame_metrics.csv",
+      "bytes": 123952,
+      "sha256": "2f3665346e91bbaf07943a2b03e9313f74706da282127bbe9dae050ba7e64f79"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/run.log",
+      "bytes": 7373,
+      "sha256": "fe4a003c43780b2d8560058abe1d1da730f8c9b476a3bbfceca0513cc86cae2b"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/scene_metrics.csv",
+      "bytes": 33575,
+      "sha256": "af079a0204ae8fd563b0542b55cc51b0ce515caa09fa5ad1c2b1123e53a67fd0"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/summary.json",
+      "bytes": 1958,
+      "sha256": "25c98e6aececbe3b8a5895115902f681a43ab424337da9f7e31e8f82c3a0ab6a"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_latenttail_rgb/frame_metrics.csv",
+      "bytes": 123359,
+      "sha256": "60c50a2556f848de16981d7154af27f8a1001536059a8493560f6262add3d3b8"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_latenttail_rgb/run.log",
+      "bytes": 7300,
+      "sha256": "df19610c4d664af56bbbc16d937cc472fb702b0eddd166a14795801091135218"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_latenttail_rgb/scene_metrics.csv",
+      "bytes": 33517,
+      "sha256": "6d2963ad69d458c58f4016b5970f1968c87e3f6e60034a101c34225c143637af"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_latenttail_rgb/summary.json",
+      "bytes": 1891,
+      "sha256": "6f4da3a0154dac70d7a45366aee0ed766a774cc8721bc73240020f5a07eb2812"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb/frame_metrics.csv",
+      "bytes": 123295,
+      "sha256": "22cf77ad229420e2c8b723cb93977bad78db2e2428e95484248471a81c8cf40a"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb/run.log",
+      "bytes": 7313,
+      "sha256": "5ee31a4cf140ec546d16308ed96106670e4aae858935e1ed1a6d30449d9741e0"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb/scene_metrics.csv",
+      "bytes": 33493,
+      "sha256": "84b735581ad89b1b4bf2641b22a693389e13b36d35a8e1983d1512fc2237049e"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb/summary.json",
+      "bytes": 1893,
+      "sha256": "7d2daa287135f93861258f39ef65345f48e381bf7c84c01994a01469e469f9f8"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth/frame_metrics.csv",
+      "bytes": 122868,
+      "sha256": "c9e96bd2b727bf0eb57e6003837fe48fa505788ebecf93384bdfa2d148a79a0b"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth/run.log",
+      "bytes": 7303,
+      "sha256": "a962a948787097c39636fb1725f39d8190377d1fb2e69b72f252bd67e378a29a"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth/scene_metrics.csv",
+      "bytes": 33503,
+      "sha256": "17f123993c3ec336aae37b0e61b2c9bfb37dba3b552cd2dcb31d6d641855f552"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth/summary.json",
+      "bytes": 1892,
+      "sha256": "93a098ce71aa5cee1418a85371f1f924dbeda837e71a95cb38419c2cc6620191"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_surface3d/frame_metrics.csv",
+      "bytes": 123806,
+      "sha256": "d51c96b768934d357e896eccf7a418f0d475611410dffdb129e5dbe1fbacd3be"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_surface3d/run.log",
+      "bytes": 7347,
+      "sha256": "c4aaa82b21d6c444012c4364b57d0f2a13f7cfd2e2ad7a1b7b91e7c616197f21"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_surface3d/scene_metrics.csv",
+      "bytes": 33588,
+      "sha256": "0579e256d5bd8e87ffbe6599b288f1b0b74ff9f5f626618f3a17c12511991f49"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_surface3d/summary.json",
+      "bytes": 1932,
+      "sha256": "ae68ad1ef3b334b67e2b9d3399c3fc8fc30633c646810a04540ec2708e644ed1"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_surface3d_posmlp/frame_metrics.csv",
+      "bytes": 123705,
+      "sha256": "1346153641049b99cde8074af4fe824f73874e2d7ad205c806268c9724f9f1bd"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_surface3d_posmlp/run.log",
+      "bytes": 7352,
+      "sha256": "1eab076dce02080da66ab8a1383676bbd7d588207b70076c4a55269593737df2"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_surface3d_posmlp/scene_metrics.csv",
+      "bytes": 33575,
+      "sha256": "752310a871d887dd50935cba33be717f6bb6d57e9e2f8327bcab8977ab28aaa5"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_surface3d_posmlp/summary.json",
+      "bytes": 1937,
+      "sha256": "69f415e12604b0ed790a91dc1b25f57d10dbe2bd8c66fafb1f05a4182ff08872"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_thick/frame_metrics.csv",
+      "bytes": 124124,
+      "sha256": "17f645650b27aba487f803206954ec7ed713340d2d3a94d050c5f90ccbf9b61f"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_thick/run.log",
+      "bytes": 7310,
+      "sha256": "9e601f781fdd802914cdfc3459b1fde0b1c7bf06f33619d28e738d76a8f6ae35"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_thick/scene_metrics.csv",
+      "bytes": 33550,
+      "sha256": "32df3707fcf75128fe4aadec1164ee25c5fa46511362c5486a0bbbfcbc0bce92"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_thick/summary.json",
+      "bytes": 1899,
+      "sha256": "42eb7190a5040a2b71d0757f7f75e24904b0b12632d78eeaf07352d82a9aa8eb"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_thick_posmlp_surfel_binar/frame_metrics.csv",
+      "bytes": 124374,
+      "sha256": "f397a0f5e27eb81a6eb5c117c7c10c5c79183e4eb497012351d809d5310b30a9"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_thick_posmlp_surfel_binar/run.log",
+      "bytes": 7307,
+      "sha256": "185b7aedfbce188dfac961fa2e932f160faaf5f697f3ad61b728556bb35a77fa"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_thick_posmlp_surfel_binar/scene_metrics.csv",
+      "bytes": 33570,
+      "sha256": "78ef9a76cf57117a2f075fe957e89181c9aacb2aa09e1ad5dacb8d4c44ecad0e"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/ext_near/sft_readout_rgb_depth_thick_posmlp_surfel_binar/summary.json",
+      "bytes": 1921,
+      "sha256": "e1a33272675955ff61562204f303e7d0e1629bf76f151c7511ff90f32b8a3fa1"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/extrapolation_table.csv",
+      "bytes": 6268,
+      "sha256": "9b95ea1df54530a7d886391d2708137656fe6a15b6e9435187e50f3bb62ae9c6"
+    },
+    {
+      "path": "EXP_ScanNetPP/eval_extrapolation/extrapolation_table.md",
+      "bytes": 4192,
+      "sha256": "1952735d8acaa97d0c54c764b54370fd5e8678a9988916bfa60051c0be031cca"
+    },
+    {
+      "path": "EXP_ScanNetPP/report/baseline_locusgs_dl3dv_4v.md",
+      "bytes": 1273,
+      "sha256": "466f5191f36824fe87631883ee0d4a22b1c8d43359a2f125ff45c0510c7a3625"
+    },
+    {
+      "path": "EXP_ScanNetPP/report/baseline_pretrained_6view.md",
+      "bytes": 15944,
+      "sha256": "ab9575fee1de6d02cbb942bd9824cd5a325f1f9d40a4a138a9588155fc329d6e"
+    },
+    {
+      "path": "EXP_ScanNetPP/report/baseline_tokengs_paper_dl3dv_4v.md",
+      "bytes": 1002,
+      "sha256": "329b995bd0e1cfd4af0c63aaba6daa7a1765c04bbaf3cee72956a2affbc92467"
+    },
+    {
+      "path": "EXP_ScanNetPP/report/sft_latenttail_rgb.md",
+      "bytes": 3584,
+      "sha256": "c7e8f9478f48f5a074f2d89a404f5620366f05398f64062d7e39d72c6286357c"
+    },
+    {
+      "path": "EXP_ScanNetPP/report/sft_readout_rgb.md",
+      "bytes": 2802,
+      "sha256": "8a3e4c434b2fc71c8c1c353a8e1ec22bb9b9ec73ca4e9965f32d5e0f205e817b"
+    },
+    {
+      "path": "EXP_ScanNetPP/report/sft_readout_rgb_depth.md",
+      "bytes": 2288,
+      "sha256": "c8f8560ad40eec005b2a77386bb995338998812a7135ff14b8130c55d62e2069"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/frame_metrics.csv",
+      "bytes": 121073,
+      "sha256": "48f56e6bda39ab52dc217cfe258116c3060fa5957d27377360e6e8792113811a"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/model.safetensors",
+      "bytes": 1460049488,
+      "sha256": "aa91ae4789246184e16544289b0c851278dca58e4c7be44d80853bdbe3e2bfe1"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/run.log",
+      "bytes": 111849,
+      "sha256": "632693b586d890e51ef961d569eea620eeee2b989dbd8bb594cbed47c2dc03f5"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/scene_metrics.csv",
+      "bytes": 33276,
+      "sha256": "b3aa0115febbc1c3202ddd281f363d458687af5f9d81a40fad7f91d8b07aa695"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/summary.json",
+      "bytes": 1923,
+      "sha256": "bdfc1febfaa8b7517c7fd6baa54168fa122c8116940a7637f1cc97fd7f08d965"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_latenttail_rgb/frame_metrics.csv",
+      "bytes": 120167,
+      "sha256": "086b14b1187f1d783a5f7bf8b35841ea9dbb1d5736e055f36ac74c08b24f8a73"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_latenttail_rgb/run.log",
+      "bytes": 153972,
+      "sha256": "627c8e732e199f9e0d8df265c5209c65444b6320a76be669a5da96840835ef43"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_latenttail_rgb/scene_metrics.csv",
+      "bytes": 26187,
+      "sha256": "f150171c086be06a1710e433fa6ea579fc12ba0e9ee54bbad3005072311ee090"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_latenttail_rgb/summary.json",
+      "bytes": 1743,
+      "sha256": "ca1782c223300741929f66da6a2d8c7b399cfecd52741b53d161d50d48fc6be4"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb/frame_metrics.csv",
+      "bytes": 120139,
+      "sha256": "0da000c5ae9d023ef6ac6998d2555cc04e5541ea62887f532b4a3886d92dfde7"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb/run.log",
+      "bytes": 55381,
+      "sha256": "ce80042d2faa5c533606328a97b9213c9b8d8f340d03d78646f7eb12128aacf5"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb/scene_metrics.csv",
+      "bytes": 30272,
+      "sha256": "4585d8fd60e679a57fa428a39a23c939004d77cdb0b35e0aa961d62606197299"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb/summary.json",
+      "bytes": 1798,
+      "sha256": "6a1f3f650328e926b8b0a84c409196e1b5faf18f05cc2ab098eaf1af07e47b2c"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth/frame_metrics.csv",
+      "bytes": 119736,
+      "sha256": "65c100ba17b65f844c3870ebb96d0f70c2011a4541ed5c24a59d5b31a5b2f34a"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth/run.log",
+      "bytes": 60265,
+      "sha256": "ebd85b66ff682bded23aeb561171140364a4fd4a70bb511ca539d2f76e18c638"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth/scene_metrics.csv",
+      "bytes": 30091,
+      "sha256": "f9ac749a50155f463dd7976d9d936c4c80bfb7923520d77fb565efa8c01e94b0"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth/summary.json",
+      "bytes": 1800,
+      "sha256": "5c5ac1d82c3924b6748a64714f8a8d12e42259b2e779336a38787d1e9b1f5949"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_surface3d/frame_metrics.csv",
+      "bytes": 120236,
+      "sha256": "7d51a7e3e6d0f87c7f2e9931326f5eb45d439e499c1f3e8b92ac0d40df6b0da7"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_surface3d/run.log",
+      "bytes": 60725,
+      "sha256": "12421d4aed46a2f75409924b3674e4b1baa8398e9de446cf3e93ba1d3b230412"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_surface3d/scene_metrics.csv",
+      "bytes": 33237,
+      "sha256": "4a03097492a795a6e95c9743bc72333e603fbec87a52bb25248076737f68720c"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_surface3d/summary.json",
+      "bytes": 1902,
+      "sha256": "86d5317bcc3ea6e1d3f0c919eb637a0e24762b8f571de5e5433ae815e24750ee"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_surface3d_posmlp/frame_metrics.csv",
+      "bytes": 120447,
+      "sha256": "136a11b6cb21d82447bd9a2f68aa901c042971daee591f390471f96e098d80db"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_surface3d_posmlp/run.log",
+      "bytes": 60777,
+      "sha256": "7fe8327c89094d17656eb417712eaf571f9ed9be79b05fd7ac84f5344b766190"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_surface3d_posmlp/scene_metrics.csv",
+      "bytes": 33227,
+      "sha256": "86f465732ae63abac0ef937f7b20fe0f48644b5f28e08a767c369c1405194fdd"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_surface3d_posmlp/summary.json",
+      "bytes": 1906,
+      "sha256": "6a1a305d5017c23b159710d0ebd62e65e4f78b06985afdba47c496caf2d9ae42"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_thick/frame_metrics.csv",
+      "bytes": 121625,
+      "sha256": "5eba83436a4bb144fac0abfe0ca608c83e4b9cb0b89298ef7e18cd49634333ca"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_thick/run.log",
+      "bytes": 82597,
+      "sha256": "89294b275fbe593a68d50b7752179c8164590a53fa53f410bf0fcc6099064525"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_thick/scene_metrics.csv",
+      "bytes": 33264,
+      "sha256": "6b7219743197d0b6019b1e04c3e9b23f986dca9c23138f21767d0562d8c42725"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_thick/summary.json",
+      "bytes": 1814,
+      "sha256": "95e5088fcd77c94ac89bc44ebf3b16e7122eaa36819b9cd2a19b006bba597841"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_thick_posmlp_surfel_binar/frame_metrics.csv",
+      "bytes": 122534,
+      "sha256": "55cd73bd6bf0c5a9c487226e1d684311694f392b43996582723306b28b6ac851"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_thick_posmlp_surfel_binar/run.log",
+      "bytes": 82725,
+      "sha256": "a4cef0dab9691941ded390665d44eb921f2942167b4d21905ffa75dddeb4588c"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_thick_posmlp_surfel_binar/scene_metrics.csv",
+      "bytes": 33325,
+      "sha256": "93dd6388c9cc515e81a2bebebff35e328c4e50b3ffdab7a29c681010993b3bc5"
+    },
+    {
+      "path": "EXP_ScanNetPP/sft_readout_rgb_depth_thick_posmlp_surfel_binar/summary.json",
+      "bytes": 1832,
+      "sha256": "a185acea2b9173b5689d0c4f0e5afc0e70b7d61bfcb02c37466206d9ddc944f2"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/README.md",
+      "bytes": 7593,
+      "sha256": "5b6801276b1a9918d1f474065552b1617106bdef60b6d2c51dd71fb6ea724bcc"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/cameras.ply",
+      "bytes": 386,
+      "sha256": "0653f93eb3065abeefa8d9874e4da42e56ce2c6b4111e1c06ac7000a8189b5c7"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/gt_lidar_mesh_frustum.ply",
+      "bytes": 1200179,
+      "sha256": "58775c368f582d3ae8e2d5562cffd5ac02f56310f0e9bb46b147217f67f95309"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/anchor_to_gaussian_centre_offsets.ply",
+      "bytes": 1415579,
+      "sha256": "14d422287880034c172d189e8c6703773582d4c8c6b03bcf8d6ee422079d9856"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/anchors_crowding.ply",
+      "bytes": 94457,
+      "sha256": "f53207af2a8b57d05ccf84acc9b04a8af6480e79d7155ecef162ab40ae0c025f"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/anchors_radius.ply",
+      "bytes": 110846,
+      "sha256": "cd5b6a3a198c7b68fc04b238ebb4ba1904a1bd3d849054b1fd1da009090b20db"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/gaussians.ply",
+      "bytes": 25166487,
+      "sha256": "87ab4bf80b5eddc81a0f989c4b72d7d860043ad32ad380fe97e6c11c333eec63"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/gaussians_prune0.05.ply",
+      "bytes": 7378454,
+      "sha256": "e0c7cb2e81ce534b2939738d18e94d4d9ef37db2b87c26cb6db97507faf495cf"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/junk_slots_points.ply",
+      "bytes": 1993468,
+      "sha256": "0da6dd9a06ebe4588774d8aac383c46796e606f2d09b679aaa68889117260293"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/ray_probes.json",
+      "bytes": 15984,
+      "sha256": "da863f7497d2a4eac854b4ee9268041a0eb15ce270f4541dec8963464949604f"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/ray_probes_pixels.png",
+      "bytes": 124116,
+      "sha256": "671b7577cd02b15ac36d82f6193500b9c01cb53e41dd34e20f109529f1649e73"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/ray_probes_rays.ply",
+      "bytes": 75778,
+      "sha256": "e7f6dd095a0dcda80cd282c9e7aa7313afe0389fa44f35e631da04fc41cacfeb"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/ray_probes_tokens.ply",
+      "bytes": 999082,
+      "sha256": "98cea614ce28219db10d7b24372d6647e8930676dbeccb729e7d0bd35092235b"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/ray_probes_tokens_points.ply",
+      "bytes": 229854,
+      "sha256": "4eedb2950a26e6d862bee0e2d25cea6aea08dc146ff27790fd419b73b7d875f4"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/render_strip.png",
+      "bytes": 3294271,
+      "sha256": "78b7378ec6b3b542f40a70fa15e3253f9ed55978d53936ee8805bc7315b66873"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/summary.json",
+      "bytes": 1326,
+      "sha256": "fa39d8bde29b44050c2acbd76d05090e68bb83088cbfab0adef7f28d7fe5bd08"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/surface_distance_heat_points.ply",
+      "bytes": 1767820,
+      "sha256": "69789529fd984b2847f5db89d8b85f927339e32f152bc4dbd162eb225bef3534"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/token_centres_parallax.ply",
+      "bytes": 77532,
+      "sha256": "d3352ff3d41ea16535a3145ba5d715c2134da208e58a52deb325d6dffaf13906"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/token_centres_surface_distance.ply",
+      "bytes": 77531,
+      "sha256": "1c7a638df413f09131142326ad2037a3b11caf124977282904b789910f4a603a"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/tokencolor_alive.ply",
+      "bytes": 18957591,
+      "sha256": "979ac7d43d1088591268d93bc729e1d5a3dfcac02608a2ccbbed2743a1fb9c0a"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/tokens20_anchor_spheres.ply",
+      "bytes": 61004,
+      "sha256": "67e07d4602363c9b3560bfac3d6cacd5b7f1107f4e094387acf3efcc552b77f3"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/tokens20_attention_vs_render.png",
+      "bytes": 541009,
+      "sha256": "44a7ee77ac0737128836694acf943332fded06b494ba1cd7a89d7731ffc03c67"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/tokens20_centres.ply",
+      "bytes": 18178,
+      "sha256": "9ba7d4da707c7d09f0e1447627b9941567cc7a351efd13fb3080963fa7794bcf"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/tokens20_gaussians.ply",
+      "bytes": 123541,
+      "sha256": "4f3c16399f443cefb2822c72d427121f07b660b08fe931b9ef1660379755b176"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/locusgs_finetune_4v/tokens20_points.ply",
+      "bytes": 34810,
+      "sha256": "ccf458b6012cf9a383c18ee44f8e831ac24bbe5bcfdb4baa94a02bbdf24075b6"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/gaussians.ply",
+      "bytes": 23069272,
+      "sha256": "1c7018fc01a25981191ff802fdb3fe1eaa45c4262917a7e50433475ed8ad925d"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/gaussians_prune0.05.ply",
+      "bytes": 7792999,
+      "sha256": "8211cfd9530b0075c18f901ec094dde27fd64afbc20dcc7ef54093d4754be637"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/junk_slots_points.ply",
+      "bytes": 1706242,
+      "sha256": "29b7ad82ca1c67f987d9a229396940a65e4906aa6a2349d13b13c3e90bd69675"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/ray_probes.json",
+      "bytes": 17818,
+      "sha256": "3be685e41627f00c11dd5fbf4c1c8916528bbc1ef91d2a3498316090d3531cec"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/ray_probes_pixels.png",
+      "bytes": 124201,
+      "sha256": "f654c2d0ebd47cc1328d31a2dae70696defb11266d1052029379d3e139f0120c"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/ray_probes_rays.ply",
+      "bytes": 75778,
+      "sha256": "65d66be17d65368a14596b0589f5684ea8afd972cc22a7b17040b91835b30ec7"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/ray_probes_tokens.ply",
+      "bytes": 1048684,
+      "sha256": "4c72bcb9bb3c3c11e379feb409b403921f8145209d7caee8f870a4deec506a2c"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/ray_probes_tokens_points.ply",
+      "bytes": 262239,
+      "sha256": "75a2d16c918e9fcc84a1611edc28d47c27d669d086874c63ce8c771c28e7936c"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/render_strip.png",
+      "bytes": 3486207,
+      "sha256": "554189e7fd250618f7d68457165bc3b3317d4045baf8e82daa9acab6542a421c"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/summary.json",
+      "bytes": 1068,
+      "sha256": "219f7c87b686a74e376ccd8cd2de2f8b9ea4837f12951a4de4bd96ffcddfb872"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/surface_distance_heat_points.ply",
+      "bytes": 2036874,
+      "sha256": "02d8aba2f4c1998a0c7eace70e51bb46f9c5bea664a7fb3826d4307895f7e847"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/token_centres_parallax.ply",
+      "bytes": 94253,
+      "sha256": "7000f2a1814eea4765659d03fb873842b1d3b5978704bf9e7e430dc29b2929de"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/token_centres_surface_distance.ply",
+      "bytes": 94252,
+      "sha256": "8ee302c5100c91e11b519e14c70fb2b9220582ccce25412c93231c8cc257f954"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/tokencolor_alive.ply",
+      "bytes": 16100112,
+      "sha256": "e92b0866b9d6efe0144200f0ddac41a4c9c604d4fae5b17e8dbea3941e77c27b"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/tokens20_attention_vs_render.png",
+      "bytes": 603041,
+      "sha256": "6302e4f99f1b2869c38124acd0edeb419335d3cde454197c76a717eadcfea82b"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/tokens20_centres.ply",
+      "bytes": 18178,
+      "sha256": "caa84ef729ef01c95c85ec134847d9366dc488453e525e3457d1e962b458f86e"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/tokens20_gaussians.ply",
+      "bytes": 113238,
+      "sha256": "2107b698d108f32f7024c23c1904dae6f844631d4dc6aa478d8d17755e580a1f"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/tokens20_points.ply",
+      "bytes": 34810,
+      "sha256": "556e34260dd81078f8ccedeebfdf484f305bca1df7a9d8d752a1edea3bc446ee"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/summary.json",
+      "bytes": 5492,
+      "sha256": "0a76b37f9a09df06271e8f50a883243b8293fed312282e0e2a6f8556cbf9ff2e"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/gaussians.ply",
+      "bytes": 23069272,
+      "sha256": "d3a19e965d19ab2aa1ac2e297e11ec05328effb593a462d24b8975b9d2653cd9"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/gaussians_prune0.05.ply",
+      "bytes": 3918535,
+      "sha256": "8c5c0b2aa852316e8d87030d2a8c38db5e5ea472c6d05dd5def8ca7cecfb1b34"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/junk_slots_points.ply",
+      "bytes": 6331748,
+      "sha256": "8e92a55060e7c192a72667e7e731954397248f6419441f77d77eeda40227f030"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/ray_probes.json",
+      "bytes": 14363,
+      "sha256": "4791cdc7ba481f3812d7d02c6935b67bc235fed8eebddf8f151937a388b399f8"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/ray_probes_pixels.png",
+      "bytes": 124043,
+      "sha256": "6f7285dfab7cde961c6c4fd6bc0a8ffe944045ef20c63e66f86f560c3baf3792"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/ray_probes_rays.ply",
+      "bytes": 75778,
+      "sha256": "17fcfc2c0616e6336a06bd4e2d78ea8531d4b5bff9ca6587c579a92eeb9bcaa2"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/ray_probes_tokens.ply",
+      "bytes": 807275,
+      "sha256": "9257d89a4a6c535d5bd2b0fbb74a7c0b791e2a6bab45d2ad48e5b5af9e23c578"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/ray_probes_tokens_points.ply",
+      "bytes": 201886,
+      "sha256": "ae34229f878711dbe3134888378c5294653e4284ad58bd0ae4ab5df684085d87"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/render_strip.png",
+      "bytes": 3396254,
+      "sha256": "2e2e855128c7a9a32487336adb1650de49027f9edd028c95a124ffa6184a4dec"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/summary.json",
+      "bytes": 1063,
+      "sha256": "f368a71056a15f979027be9608d192a2cee616db524a846a178bbf9414a8009d"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/surface_distance_heat_points.ply",
+      "bytes": 1024230,
+      "sha256": "cbcf4cbe7f6d5c75471414ea272387574411747181ce58a641c8aa3ca0508964"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/token_centres_parallax.ply",
+      "bytes": 92183,
+      "sha256": "c35f1555a345bc2f4a636b51f952584f96926e8f4b9bbddb6622cc9f6630fada"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/token_centres_surface_distance.ply",
+      "bytes": 92182,
+      "sha256": "1827ebfd9beda5b357bcb6dfa61d9d52f510400b2355479382f38a5923798f9c"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/tokencolor_alive.ply",
+      "bytes": 5383559,
+      "sha256": "d640626888fa5fcd4805f97068a2db0e1271379fe25c0180240404ccfd829293"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/tokens20_attention_vs_render.png",
+      "bytes": 761354,
+      "sha256": "79e5e00bae57bdbac359a6f7c6d6f3d5b24d3d4f72fdd2765ca447ff0c54d739"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/tokens20_centres.ply",
+      "bytes": 18178,
+      "sha256": "29e819ac3b92c1be89a7cb7161b01c5e1c08f519cb8bf8d4ad9f86d93dc3c2eb"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/tokens20_gaussians.ply",
+      "bytes": 113238,
+      "sha256": "65cd9080a657824bb0d62db0a25e9e734139e72d752d64cd543ed58569cd35d3"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_paper_4v/tokens20_points.ply",
+      "bytes": 34810,
+      "sha256": "f9bbc830ef5228429415b42a657e1a83649fa5a3fcac5cd326d1329a022e5755"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/gaussians.ply",
+      "bytes": 23069272,
+      "sha256": "2031063e5273c966500bf41b06b80a3b798122daaf078e8749b8f865460f42a3"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/gaussians_prune0.05.ply",
+      "bytes": 7395591,
+      "sha256": "7ad1fea576fa37232f44747bd6df390c50402f6c51751c8527fab1a191505e61"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/junk_slots_points.ply",
+      "bytes": 3117290,
+      "sha256": "b4e724bb8dde1ad9c73c065af2c7425bbd35b2c12d9a69f6b2f0350f2242e619"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/ray_probes.json",
+      "bytes": 18420,
+      "sha256": "1b907c551a1f4ff35d234b8049a38309386f6276a5307b84f45ab3196848cadb"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/ray_probes_pixels.png",
+      "bytes": 124087,
+      "sha256": "608a1fcfdf508155cc891889d7fdf9093f8111eb8df11db46c067f3c3dbdbee6"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/ray_probes_rays.ply",
+      "bytes": 75778,
+      "sha256": "e00893a89bc4b15b2b4f54be3b696111fb0bf148f82b77128c0e1ca8625da48b"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/ray_probes_tokens.ply",
+      "bytes": 1089900,
+      "sha256": "24ede0fc6c8264f4e9fbef15b3dfc06570608100cadad82170129e01736e091f"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/ray_probes_tokens_points.ply",
+      "bytes": 272543,
+      "sha256": "0a6fc5abbb6c94bf44c6417a25b218bcfb8c30e09b2793bd0f7a5e857c3f4d77"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/render_strip.png",
+      "bytes": 3597773,
+      "sha256": "ae70bfb6521424e16702462004bdf043042ef596a21db4fae508580d1aedac08"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/summary.json",
+      "bytes": 1051,
+      "sha256": "69221ee74401a9d52342a531f60eb5dd29daa26ed971cbb87a6b4cb4db8c8937"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/surface_distance_heat_points.ply",
+      "bytes": 1933006,
+      "sha256": "6b84f23e70eca65b1f0ee259f370887d480267f0916af9f052b1d87971262bc2"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/token_centres_parallax.ply",
+      "bytes": 94138,
+      "sha256": "67569a13c14006d342b40aa6a370cca365f115f2cd555871b6d892ada1987280"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/token_centres_surface_distance.ply",
+      "bytes": 94137,
+      "sha256": "8f9d8d3a6665899d4d35bebadc1c7c6138b37594f88fce31257c56136e58963e"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/tokencolor_alive.ply",
+      "bytes": 16535448,
+      "sha256": "7ea4b4c0d5adc716473f36992ffe85f62c930535d7f74fb98b8eb44a20f97c19"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/tokens20_attention_vs_render.png",
+      "bytes": 637281,
+      "sha256": "ad616d3e9da2d61b48268084887730813606b3d2f2f953b714406b978088789a"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/tokens20_centres.ply",
+      "bytes": 18178,
+      "sha256": "84b940e162aeec6f680f77b3412f98c91101753bc2f1367dee7cde7ffaf45f96"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/tokens20_gaussians.ply",
+      "bytes": 113238,
+      "sha256": "d3f1ec9361a5c49b92ea639f33fab31aafeb39b582b619f57cd462648c6fdbeb"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokengs_release_latent_6v/tokens20_points.ply",
+      "bytes": 34810,
+      "sha256": "a185dd0d573bc0121a66e61be0448f2d88c27c194d88be7878bc13533161ec31"
+    },
+    {
+      "path": "EXP_QueryGS_Diagnosis/scene_7b6477cb95/tokens20_pixels_input_view0.png",
+      "bytes": 124669,
+      "sha256": "f55529958859b8040830d749dfb9a8466ac2815b25ad433bc8b548947e36d709"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/README.md",
+      "bytes": 11832,
+      "sha256": "84c74cd724b28705caf618979afac4f132d62aac581786a4b2950acdb0b65c97"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/scene_7b6477cb95/D3_attention_decomposition/attention_content_prior_combined_8tokens.png",
+      "bytes": 1257328,
+      "sha256": "a0936ead41d5e5970fe4dd95f84206676785e3e08d32ce8cfedc37ad50de67f4"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/scene_7b6477cb95/D5_sigma_floor/anchors_radius_ineffective.ply",
+      "bytes": 77533,
+      "sha256": "c6b0a990a9c1cfbddbe20415216b1f847a68684ddab382b5e9b19d964457bae9"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/scene_7b6477cb95/D5_sigma_floor/prior_with_radius_x0.25_x1_x4.png",
+      "bytes": 146151,
+      "sha256": "1d60a17ca87510124b075b1446342366a363dda3cbbf35aea16d208fe6f4bb78"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/scene_7b6477cb95/D7_surface_coverage/coverage_vs_texture_view0.png",
+      "bytes": 313918,
+      "sha256": "b6f60a6e44e81fa558328c500e6516ebeaacc788fed5298a996cb8940974c0b0"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/scene_7b6477cb95/D7_surface_coverage/laser_surface_anchor_support.ply",
+      "bytes": 3251931,
+      "sha256": "e7c2566e4a2c2ae45798e9741ce0d155ee82d0a35d217efb27900c22f9696608"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/scene_7b6477cb95/D7_surface_coverage/laser_surface_uncovered.ply",
+      "bytes": 504659,
+      "sha256": "d8b909a09fc8793d671a9909706dde55db5bb116e73fac234304ab5cd52c7f47"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/scene_7b6477cb95/D8_self_attention/self_attention_top8_links_12tokens.ply",
+      "bytes": 54178,
+      "sha256": "a768d69bcc60f0587702ed84eac0d1bed3a8cc4c79ee5f863bed6d23da4e4de2"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/scene_7b6477cb95/cameras.ply",
+      "bytes": 386,
+      "sha256": "0653f93eb3065abeefa8d9874e4da42e56ce2c6b4111e1c06ac7000a8189b5c7"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/scene_7b6477cb95/demo_summary.json",
+      "bytes": 6146,
+      "sha256": "067a39b7cf55962e8af1bbc41e7b3f11b21442926bb79d9b91789fe5de7a3b4b"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/scene_7b6477cb95/gt_lidar_mesh_frustum.ply",
+      "bytes": 1200179,
+      "sha256": "58775c368f582d3ae8e2d5562cffd5ac02f56310f0e9bb46b147217f67f95309"
+    },
+    {
+      "path": "EXP_LocusGS_Diagnosis/stats_50_scenes.json",
+      "bytes": 24267,
+      "sha256": "0284235ce813d912b683d7f68e689a0c857eef80cfaac6016253a046c6c6b701"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/README.md",
+      "bytes": 14041,
+      "sha256": "e095a06373fe74d0d48200aec501540df8972de48e846b13ebd558e7f949ed10"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/E1_conflict_maps_locus.png",
+      "bytes": 678637,
+      "sha256": "9989928422f1c39bd7baae24994fe8317ece6f99f27cc36db49e5c2781c8e77a"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/E1_conflict_maps_paper.png",
+      "bytes": 549354,
+      "sha256": "5ba67f62114e6bbfd777fc51f036979dd040a986346c15c27e166411dea6896d"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/E1_conflict_maps_release.png",
+      "bytes": 733334,
+      "sha256": "a18074a314fac23363071c26412c1800ed1c6eb457528662c3e30ceecf22a3ec"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/E1_conflict_maps_sft12.png",
+      "bytes": 841031,
+      "sha256": "26c2deb370cb9fe348bbe3f57ed2479e5819c3e551f209f709f071220c9e1740"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/E1_planar_points_between_spread_locus.ply",
+      "bytes": 3040205,
+      "sha256": "7441bccf8558024b754c8414e433c0d82b978bbd0f9f9847167030d9d8c208ea"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/E1_planar_points_between_spread_paper.ply",
+      "bytes": 3040205,
+      "sha256": "2ffc5c796bfe7be1c70d25363087b262d1f4c70677ce4c92caed19c2483bb27d"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/E1_planar_points_between_spread_release.ply",
+      "bytes": 3040205,
+      "sha256": "342bd30d29fbde6233e1fdd529efec5eb5dfe7774600f59fa9ebef28248a95eb"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/E1_planar_points_between_spread_sft12.ply",
+      "bytes": 3040205,
+      "sha256": "f6c4d9ed0c322d6f727bfe55653360e304a4f9dc4992482ebcc40fa589fe4b6a"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/cameras.ply",
+      "bytes": 386,
+      "sha256": "0653f93eb3065abeefa8d9874e4da42e56ce2c6b4111e1c06ac7000a8189b5c7"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/demo_info.json",
+      "bytes": 73,
+      "sha256": "ddaa281a0cf91640ac0b9a06160f7629c5a2006538cd38739f3f5f12fc48f93d"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/demo_scene_7b6477cb95/gt_lidar_mesh_frustum.ply",
+      "bytes": 1200179,
+      "sha256": "58775c368f582d3ae8e2d5562cffd5ac02f56310f0e9bb46b147217f67f95309"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/results.json",
+      "bytes": 23357,
+      "sha256": "86df6038c60f080014f1821430b9a21d4f4c854b286f724ce93ca830c9cd8bae"
+    },
+    {
+      "path": "EXP_GeometryCorrectability/results_posthoc_spread_vs_error.json",
+      "bytes": 3494,
+      "sha256": "ece5297603124a9f6649b234410540302be813bc739cd48bbb3b660550f19064"
+    }
+  ]
+}

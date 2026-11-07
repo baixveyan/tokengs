@@ -1,0 +1,22 @@
+{
+  "model": "official TokenGS, not a trained grid generator",
+  "layout": "GT above official render; eight novel views",
+  "input_frames": [
+    101,
+    104,
+    107,
+    111,
+    114,
+    118
+  ],
+  "target_frames": [
+    102,
+    103,
+    106,
+    108,
+    110,
+    112,
+    115,
+    117
+  ]
+}

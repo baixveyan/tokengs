@@ -1,0 +1,111 @@
+{
+  "definitions": "Shared-surface layer, step 1: can a dedicated surface head predict better input-view depth than the Gaussians do?",
+  "gpu": "1",
+  "backbone": "EXP_ScanNetPP/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/model.safetensors",
+  "absrel_head": 0.5252485871315002,
+  "absrel_gaussians_rendered": 0.09402359277009964,
+  "all": {
+    "pixel_share": 1.0,
+    "head_cm_p50_p90": [
+      64.89,
+      133.55
+    ],
+    "gaussians_cm_p50_p90": [
+      3.12,
+      21.82
+    ]
+  },
+  "by_views_seeing": {
+    "1 (only this view)": {
+      "pixel_share": 0.2112804502248764,
+      "head_cm_p50_p90": [
+        60.69,
+        108.91
+      ],
+      "gaussians_cm_p50_p90": [
+        12.57,
+        92.61
+      ]
+    },
+    "2": {
+      "pixel_share": 0.17069809138774872,
+      "head_cm_p50_p90": [
+        68.22,
+        135.53
+      ],
+      "gaussians_cm_p50_p90": [
+        3.87,
+        19.18
+      ]
+    },
+    "3": {
+      "pixel_share": 0.22993169724941254,
+      "head_cm_p50_p90": [
+        67.82,
+        134.18
+      ],
+      "gaussians_cm_p50_p90": [
+        2.22,
+        9.23
+      ]
+    },
+    "4+": {
+      "pixel_share": 0.38808977603912354,
+      "head_cm_p50_p90": [
+        63.35,
+        143.12
+      ],
+      "gaussians_cm_p50_p90": [
+        2.12,
+        8.89
+      ]
+    }
+  },
+  "by_distance_m": {
+    "<1.5": {
+      "pixel_share": 0.4733317792415619,
+      "head_cm_p50_p90": [
+        57.98,
+        91.06
+      ],
+      "gaussians_cm_p50_p90": [
+        2.05,
+        27.58
+      ]
+    },
+    "1.5-2.5": {
+      "pixel_share": 0.3330988883972168,
+      "head_cm_p50_p90": [
+        50.11,
+        88.71
+      ],
+      "gaussians_cm_p50_p90": [
+        3.62,
+        19.62
+      ]
+    },
+    "2.5-3.5": {
+      "pixel_share": 0.17832419276237488,
+      "head_cm_p50_p90": [
+        131.92,
+        169.82
+      ],
+      "gaussians_cm_p50_p90": [
+        5.13,
+        16.76
+      ]
+    },
+    ">3.5": {
+      "pixel_share": 0.015245143324136734,
+      "head_cm_p50_p90": [
+        214.1,
+        238.6
+      ],
+      "gaussians_cm_p50_p90": [
+        4.65,
+        18.6
+      ]
+    }
+  },
+  "confidence_vs_error_spearman_proxy": -0.06570099294185638
+}

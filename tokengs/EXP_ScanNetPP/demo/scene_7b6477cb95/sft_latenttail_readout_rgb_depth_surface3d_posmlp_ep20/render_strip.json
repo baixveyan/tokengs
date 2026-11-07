@@ -1,0 +1,69 @@
+{
+  "layout": "top row GT, bottom row render (all 8 novel target views)",
+  "frames": [
+    {
+      "target_position": 0,
+      "frame_id": 102,
+      "nearest_context_distance": 1,
+      "psnr": 29.067230224609375,
+      "ssim": 0.9403632283210754,
+      "lpips": 0.1453082263469696
+    },
+    {
+      "target_position": 1,
+      "frame_id": 103,
+      "nearest_context_distance": 1,
+      "psnr": 30.96160125732422,
+      "ssim": 0.950367271900177,
+      "lpips": 0.13332773745059967
+    },
+    {
+      "target_position": 2,
+      "frame_id": 106,
+      "nearest_context_distance": 1,
+      "psnr": 23.67605209350586,
+      "ssim": 0.918126106262207,
+      "lpips": 0.16605015099048615
+    },
+    {
+      "target_position": 3,
+      "frame_id": 108,
+      "nearest_context_distance": 1,
+      "psnr": 32.17622375488281,
+      "ssim": 0.9542772173881531,
+      "lpips": 0.15127453207969666
+    },
+    {
+      "target_position": 4,
+      "frame_id": 110,
+      "nearest_context_distance": 1,
+      "psnr": 32.31621551513672,
+      "ssim": 0.9573538899421692,
+      "lpips": 0.1604132056236267
+    },
+    {
+      "target_position": 5,
+      "frame_id": 112,
+      "nearest_context_distance": 1,
+      "psnr": 31.073410034179688,
+      "ssim": 0.9550512433052063,
+      "lpips": 0.13554216921329498
+    },
+    {
+      "target_position": 6,
+      "frame_id": 115,
+      "nearest_context_distance": 1,
+      "psnr": 32.32994842529297,
+      "ssim": 0.9603390693664551,
+      "lpips": 0.13810688257217407
+    },
+    {
+      "target_position": 7,
+      "frame_id": 117,
+      "nearest_context_distance": 1,
+      "psnr": 28.390804290771484,
+      "ssim": 0.9303136467933655,
+      "lpips": 0.1762138307094574
+    }
+  ]
+}

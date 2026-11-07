@@ -1,0 +1,86 @@
+{
+ "checkpoint": "/mnt/disk/xveyan/checkpoints/locusgs/checkpoints/dl3dv/finetune/model.safetensors",
+ "frame_transform_max_abs_image_diff": 0.0020366907119750977,
+ "anchor": {
+  "radius_over_depth_median": 0.110545814037323,
+  "anchors_within_own_radius_median": 23.0,
+  "tokens_with_anchor_to_centre_gt_0.1_depth": 563,
+  "alive_children_beyond_1r_frac": 0.17608584463596344
+ },
+ "psnr_all_targets": 24.49425506591797,
+ "psnr_shown_views": [
+  23.887,
+  25.056,
+  22.53
+ ],
+ "depth_absrel_shown_views": 0.29683685302734375,
+ "thickness_shown_views_p50_p90": [
+  0.19634602963924408,
+  0.5548674464225769
+ ],
+ "junk_share": 0.14600753784179688,
+ "visible_gaussians_dist_p50_p90": [
+  0.0867048129439354,
+  0.31742140650749207
+ ],
+ "c_centroid_mean": 0.0797041654586792,
+ "token_parallax_lt2deg_alive": 0.2312019020318985,
+ "tokens20": [
+  831,
+  675,
+  2249,
+  2735,
+  1336,
+  1087,
+  1693,
+  4044,
+  409,
+  2355,
+  743,
+  1084,
+  3973,
+  1257,
+  3448,
+  511,
+  3172,
+  1727,
+  1299,
+  3194
+ ],
+ "tokens20_render_in_attention90": [
+  0.222,
+  0.162,
+  0.225,
+  0.134,
+  0.261,
+  0.385,
+  0.236,
+  0.102,
+  0.476,
+  0.325,
+  0.267,
+  0.52,
+  0.442,
+  0.292,
+  0.498,
+  0.142,
+  0.086,
+  0.056,
+  0.436,
+  0.041
+ ],
+ "ray_probe_tokens_per_pixel": [
+  9,
+  12,
+  15,
+  9,
+  6,
+  17,
+  15,
+  10,
+  18,
+  22,
+  17,
+  13
+ ]
+}

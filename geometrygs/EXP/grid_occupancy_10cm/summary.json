@@ -1,0 +1,3457 @@
+{
+  "protocol": {
+    "output": "EXP/grid_occupancy_10cm",
+    "demo": "EXP/demo/scene_7b6477cb95/grid_occupancy_10cm",
+    "workspace": "/mnt/disk/xveyan/workspace_scannetpp/geometrygs_grid_occupancy_10cm",
+    "train_scenes": 128,
+    "calibration_scenes": 32,
+    "test_scenes": 50,
+    "cell_m": 0.1,
+    "ray_factor": 2,
+    "near_radius": 2,
+    "pca_dim": 128,
+    "pca_scenes": 16,
+    "steps": 3000,
+    "batch_per_rank": 1024,
+    "lr": 0.001,
+    "seed": 42
+  },
+  "feature_cache": "/mnt/disk/xveyan/workspace_scannetpp/geometrygs_grid_occupancy_10cm",
+  "meta": {
+    "version": 1,
+    "cell_m": 0.1,
+    "ray_factor": 2,
+    "near_radius": 2,
+    "pca_dim": 128,
+    "pca_scenes": 16,
+    "pca_hash": "d44ea303a4b6f0c0",
+    "checkpoint": "/home/jms/xveyan/4DGS/TokenGS/checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors",
+    "checkpoint_bytes": 1450856472,
+    "seed": 42
+  },
+  "world_size": 7,
+  "pca_explained_variance": 0.9709496614822073,
+  "feature_dim": 284,
+  "geometry_dim": 28,
+  "label": "1 iff an input-view first laser hit (2x ray density) lies in the cell; all other cells 0",
+  "grid": "input-visible laser hit bounding box + 1 cell margin; fixed metric cell",
+  "probe_inputs": "frozen TokenGS image features (PCA) at 9 points/cell + camera/cell geometry; no laser, SfM, Gaussians or box-relative coordinates",
+  "scopes": {
+    "all": "all grid cells",
+    "in_frustum": "cell centre inside >=1 input view",
+    "near_surface": "within 2 cells (Chebyshev) of a positive cell"
+  },
+  "training": "1/2 positives, 1/4 uniform negatives, 1/4 near-surface negatives per batch",
+  "test_label_statistics_mean": {
+    "grid_x": 56.34,
+    "grid_y": 39.44,
+    "grid_z": 43.3,
+    "bbox_x_m": 5.634000091552735,
+    "bbox_y_m": 3.9440000247955322,
+    "bbox_z_m": 4.330000095367431,
+    "cells": 131036.18,
+    "positive_cells": 6721.84,
+    "positive_fraction": 0.06940725442022085,
+    "in_frustum_fraction": 0.7585278558731079,
+    "near_surface_cells": 39823.3,
+    "hole_crossed_negative_fraction": 0.15753576152026652,
+    "input_rays_without_laser": 0.06982549905776977,
+    "target_laser_hits": 853615.84,
+    "target_hits_outside_grid": 0.0010904598236083985,
+    "target_hits_not_in_positive_cells": 0.021223616600036622
+  },
+  "models": {
+    "camera_geometry": {
+      "thresholds_logit": {
+        "recall_0.95": -1.6722230911254883,
+        "recall_0.99": -3.5043625831604004
+      },
+      "test_scenes": {
+        "7b6477cb95": {
+          "all": {
+            "cells": 111766,
+            "positive_cells": 6138,
+            "negative_cells": 105628,
+            "surface_recall": 0.9952753339850114,
+            "negative_closure": 0.20824970651721134,
+            "precision": 0.06807443726320482,
+            "kept_fraction": 0.8029275450494784
+          },
+          "in_frustum": {
+            "cells": 74975,
+            "positive_cells": 6012,
+            "negative_cells": 68963,
+            "surface_recall": 0.9951763140385895,
+            "negative_closure": 0.07344518074909734,
+            "precision": 0.08561697743306478,
+            "kept_fraction": 0.9320573524508169
+          },
+          "near_surface": {
+            "cells": 36314,
+            "positive_cells": 6138,
+            "negative_cells": 30176,
+            "surface_recall": 0.9952753339850114,
+            "negative_closure": 0.035326086956521736,
+            "precision": 0.17345750873108265,
+            "kept_fraction": 0.9698463402544473
+          }
+        },
+        "c50d2d1d42": {
+          "all": {
+            "cells": 133632,
+            "positive_cells": 7465,
+            "negative_cells": 126167,
+            "surface_recall": 0.9884795713328868,
+            "negative_closure": 0.12628500321003114,
+            "precision": 0.06273966313247685,
+            "kept_fraction": 0.8801260177203065
+          },
+          "in_frustum": {
+            "cells": 100606,
+            "positive_cells": 7321,
+            "negative_cells": 93285,
+            "surface_recall": 0.9897554978828029,
+            "negative_closure": 0.033027817977166744,
+            "precision": 0.07435608004104668,
+            "kept_fraction": 0.9686301015843986
+          },
+          "near_surface": {
+            "cells": 48299,
+            "positive_cells": 7465,
+            "negative_cells": 40834,
+            "surface_recall": 0.9884795713328868,
+            "negative_closure": 0.032497428613410394,
+            "precision": 0.1573817344196562,
+            "kept_fraction": 0.9707447359158575
+          }
+        },
+        "cc5237fd77": {
+          "all": {
+            "cells": 17136,
+            "positive_cells": 2061,
+            "negative_cells": 15075,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0239469320066335,
+            "precision": 0.12286140089418777,
+            "kept_fraction": 0.9789332399626517
+          },
+          "in_frustum": {
+            "cells": 13693,
+            "positive_cells": 1983,
+            "negative_cells": 11710,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.14481852041188928,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 11145,
+            "positive_cells": 2061,
+            "negative_cells": 9084,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0007705856450902686,
+            "precision": 0.18504219788112766,
+            "kept_fraction": 0.9993719156572454
+          }
+        },
+        "acd95847c5": {
+          "all": {
+            "cells": 57970,
+            "positive_cells": 3492,
+            "negative_cells": 54478,
+            "surface_recall": 1.0,
+            "negative_closure": 0.04880869341752634,
+            "precision": 0.06313391549601345,
+            "kept_fraction": 0.9541314473003277
+          },
+          "in_frustum": {
+            "cells": 46032,
+            "positive_cells": 3424,
+            "negative_cells": 42608,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.07438303788668753,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 22010,
+            "positive_cells": 3492,
+            "negative_cells": 18518,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1586551567469332,
+            "kept_fraction": 1.0
+          }
+        },
+        "fb5a96b1a2": {
+          "all": {
+            "cells": 124754,
+            "positive_cells": 6795,
+            "negative_cells": 117959,
+            "surface_recall": 1.0,
+            "negative_closure": 0.07979891318169872,
+            "precision": 0.05891226883762062,
+            "kept_fraction": 0.9245475094986935
+          },
+          "in_frustum": {
+            "cells": 93296,
+            "positive_cells": 6705,
+            "negative_cells": 86591,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.0718680329274567,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 45942,
+            "positive_cells": 6795,
+            "negative_cells": 39147,
+            "surface_recall": 1.0,
+            "negative_closure": 5.108948322987713e-05,
+            "precision": 0.1479103178058337,
+            "kept_fraction": 0.9999564668495059
+          }
+        },
+        "a24f64f7fb": {
+          "all": {
+            "cells": 38745,
+            "positive_cells": 2780,
+            "negative_cells": 35965,
+            "surface_recall": 1.0,
+            "negative_closure": 0.05402474628110663,
+            "precision": 0.07553937286017064,
+            "kept_fraction": 0.9498515937540328
+          },
+          "in_frustum": {
+            "cells": 30347,
+            "positive_cells": 2684,
+            "negative_cells": 27663,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.08844366823738756,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 15081,
+            "positive_cells": 2780,
+            "negative_cells": 12301,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1843379086267489,
+            "kept_fraction": 1.0
+          }
+        },
+        "1ada7a0617": {
+          "all": {
+            "cells": 116932,
+            "positive_cells": 8869,
+            "negative_cells": 108063,
+            "surface_recall": 1.0,
+            "negative_closure": 0.03639543599566919,
+            "precision": 0.07848742024265701,
+            "kept_fraction": 0.9663650668764752
+          },
+          "in_frustum": {
+            "cells": 104595,
+            "positive_cells": 8743,
+            "negative_cells": 95852,
+            "surface_recall": 1.0,
+            "negative_closure": 0.000688561532362392,
+            "precision": 0.08364186015364157,
+            "kept_fraction": 0.999368994693819
+          },
+          "near_surface": {
+            "cells": 51238,
+            "positive_cells": 8869,
+            "negative_cells": 42369,
+            "surface_recall": 1.0,
+            "negative_closure": 0.008685595600557011,
+            "precision": 0.17434637310792214,
+            "kept_fraction": 0.9928178305164136
+          }
+        },
+        "5eb31827b7": {
+          "all": {
+            "cells": 154570,
+            "positive_cells": 6511,
+            "negative_cells": 148059,
+            "surface_recall": 0.999846413761327,
+            "negative_closure": 0.20071052755995922,
+            "precision": 0.052141735815205204,
+            "kept_fraction": 0.8077375946173255
+          },
+          "in_frustum": {
+            "cells": 101354,
+            "positive_cells": 6315,
+            "negative_cells": 95039,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0002630499058281337,
+            "precision": 0.06232174402194831,
+            "kept_fraction": 0.9997533397793871
+          },
+          "near_surface": {
+            "cells": 38708,
+            "positive_cells": 6511,
+            "negative_cells": 32197,
+            "surface_recall": 0.999846413761327,
+            "negative_closure": 0.03310867472124732,
+            "precision": 0.17294970909380727,
+            "kept_fraction": 0.9724346388343494
+          }
+        },
+        "3e8bba0176": {
+          "all": {
+            "cells": 71280,
+            "positive_cells": 4575,
+            "negative_cells": 66705,
+            "surface_recall": 1.0,
+            "negative_closure": 0.11495390150663369,
+            "precision": 0.07192039237879645,
+            "kept_fraction": 0.8924242424242425
+          },
+          "in_frustum": {
+            "cells": 47502,
+            "positive_cells": 4450,
+            "negative_cells": 43052,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.0936802660940592,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 26830,
+            "positive_cells": 4575,
+            "negative_cells": 22255,
+            "surface_recall": 1.0,
+            "negative_closure": 0.015412266906313189,
+            "precision": 0.1727262430626345,
+            "kept_fraction": 0.9872158032053672
+          }
+        },
+        "3f15a9266d": {
+          "all": {
+            "cells": 24360,
+            "positive_cells": 2456,
+            "negative_cells": 21904,
+            "surface_recall": 1.0,
+            "negative_closure": 0.01383308984660336,
+            "precision": 0.10209086752296628,
+            "kept_fraction": 0.9875615763546798
+          },
+          "in_frustum": {
+            "cells": 20358,
+            "positive_cells": 2375,
+            "negative_cells": 17983,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.11666175459278907,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 12329,
+            "positive_cells": 2456,
+            "negative_cells": 9873,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00010128633647320976,
+            "precision": 0.19922128487994809,
+            "kept_fraction": 0.9999188904209587
+          }
+        },
+        "21d970d8de": {
+          "all": {
+            "cells": 519354,
+            "positive_cells": 21908,
+            "negative_cells": 497446,
+            "surface_recall": 0.7352108818696367,
+            "negative_closure": 0.5432147408964993,
+            "precision": 0.0661932413606046,
+            "kept_fraction": 0.46853013551450456
+          },
+          "in_frustum": {
+            "cells": 416640,
+            "positive_cells": 21722,
+            "negative_cells": 394918,
+            "surface_recall": 0.7348310468649296,
+            "negative_closure": 0.4884507669946673,
+            "precision": 0.07322622968868989,
+            "kept_fraction": 0.5231902841781874
+          },
+          "near_surface": {
+            "cells": 133130,
+            "positive_cells": 21908,
+            "negative_cells": 111222,
+            "surface_recall": 0.7352108818696367,
+            "negative_closure": 0.2799715883548219,
+            "precision": 0.16744983886058842,
+            "kept_fraction": 0.7225268534515136
+          }
+        },
+        "5748ce6f01": {
+          "all": {
+            "cells": 40950,
+            "positive_cells": 2676,
+            "negative_cells": 38274,
+            "surface_recall": 0.999626307922272,
+            "negative_closure": 0.07166745048858232,
+            "precision": 0.07001518086164477,
+            "kept_fraction": 0.932991452991453
+          },
+          "in_frustum": {
+            "cells": 30829,
+            "positive_cells": 2586,
+            "negative_cells": 28243,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.08388205910019786,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 17096,
+            "positive_cells": 2676,
+            "negative_cells": 14420,
+            "surface_recall": 0.999626307922272,
+            "negative_closure": 0.002011095700416089,
+            "precision": 0.1567444040782843,
+            "kept_fraction": 0.9982452035563875
+          }
+        },
+        "c4c04e6d6c": {
+          "all": {
+            "cells": 332928,
+            "positive_cells": 18974,
+            "negative_cells": 313954,
+            "surface_recall": 0.9987878149046063,
+            "negative_closure": 0.1595520362855705,
+            "precision": 0.06700894230463239,
+            "kept_fraction": 0.8494719579008074
+          },
+          "in_frustum": {
+            "cells": 268314,
+            "positive_cells": 18794,
+            "negative_cells": 249520,
+            "surface_recall": 0.9996807491752687,
+            "negative_closure": 0.00221224751522924,
+            "precision": 0.07016836224024858,
+            "kept_fraction": 0.9979203470560611
+          },
+          "near_surface": {
+            "cells": 111020,
+            "positive_cells": 18974,
+            "negative_cells": 92046,
+            "surface_recall": 0.9987878149046063,
+            "negative_closure": 0.024161832127414552,
+            "precision": 0.1742252213324998,
+            "kept_fraction": 0.9797604035308953
+          }
+        },
+        "7831862f02": {
+          "all": {
+            "cells": 145755,
+            "positive_cells": 7668,
+            "negative_cells": 138087,
+            "surface_recall": 0.9996087636932708,
+            "negative_closure": 0.06965898310485419,
+            "precision": 0.05630523091388569,
+            "kept_fraction": 0.9339851120030188
+          },
+          "in_frustum": {
+            "cells": 125028,
+            "positive_cells": 7552,
+            "negative_cells": 117476,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0021536313800265584,
+            "precision": 0.06052494490082148,
+            "kept_fraction": 0.9979764532744665
+          },
+          "near_surface": {
+            "cells": 44371,
+            "positive_cells": 7668,
+            "negative_cells": 36703,
+            "surface_recall": 0.9996087636932708,
+            "negative_closure": 0.025638231207258264,
+            "precision": 0.17650309715154167,
+            "kept_fraction": 0.9787248428027315
+          }
+        },
+        "bde1e479ad": {
+          "all": {
+            "cells": 547785,
+            "positive_cells": 23976,
+            "negative_cells": 523809,
+            "surface_recall": 0.9058641975308642,
+            "negative_closure": 0.32556523465614373,
+            "precision": 0.05791826002549374,
+            "kept_fraction": 0.6845641994578164
+          },
+          "in_frustum": {
+            "cells": 474806,
+            "positive_cells": 23783,
+            "negative_cells": 451023,
+            "surface_recall": 0.9060673590379683,
+            "negative_closure": 0.30559638865423716,
+            "precision": 0.06437514376786829,
+            "kept_fraction": 0.7050058339616602
+          },
+          "near_surface": {
+            "cells": 146051,
+            "positive_cells": 23976,
+            "negative_cells": 122075,
+            "surface_recall": 0.9058641975308642,
+            "negative_closure": 0.13993037067376612,
+            "precision": 0.17140444472504576,
+            "kept_fraction": 0.8675873496244463
+          }
+        },
+        "38d58a7a31": {
+          "all": {
+            "cells": 429525,
+            "positive_cells": 16835,
+            "negative_cells": 412690,
+            "surface_recall": 0.8820314820314821,
+            "negative_closure": 0.40126002568513897,
+            "precision": 0.056687905383995756,
+            "kept_fraction": 0.6098434316978057
+          },
+          "in_frustum": {
+            "cells": 301218,
+            "positive_cells": 16629,
+            "negative_cells": 284589,
+            "surface_recall": 0.8846593300859944,
+            "negative_closure": 0.22786896190646863,
+            "precision": 0.06274658670681721,
+            "kept_fraction": 0.7783432596989556
+          },
+          "near_surface": {
+            "cells": 102829,
+            "positive_cells": 16835,
+            "negative_cells": 85994,
+            "surface_recall": 0.8820314820314821,
+            "negative_closure": 0.15062678791543596,
+            "precision": 0.16894982364319036,
+            "kept_fraction": 0.8547199719923368
+          }
+        },
+        "5ee7c22ba0": {
+          "all": {
+            "cells": 17052,
+            "positive_cells": 2044,
+            "negative_cells": 15008,
+            "surface_recall": 1.0,
+            "negative_closure": 0.026252665245202558,
+            "precision": 0.12270380597910914,
+            "kept_fraction": 0.9768942059582454
+          },
+          "in_frustum": {
+            "cells": 14312,
+            "positive_cells": 1975,
+            "negative_cells": 12337,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.13799608719955284,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 10239,
+            "positive_cells": 2044,
+            "negative_cells": 8195,
+            "surface_recall": 1.0,
+            "negative_closure": 0.008297742525930445,
+            "precision": 0.20096352374397797,
+            "kept_fraction": 0.9933587264381287
+          }
+        },
+        "f9f95681fd": {
+          "all": {
+            "cells": 8424,
+            "positive_cells": 999,
+            "negative_cells": 7425,
+            "surface_recall": 1.0,
+            "negative_closure": 0.017643097643097645,
+            "precision": 0.12046304111901604,
+            "kept_fraction": 0.9844491927825261
+          },
+          "in_frustum": {
+            "cells": 6119,
+            "positive_cells": 938,
+            "negative_cells": 5181,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1532930217355777,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 5331,
+            "positive_cells": 999,
+            "negative_cells": 4332,
+            "surface_recall": 1.0,
+            "negative_closure": 0.004847645429362881,
+            "precision": 0.188135593220339,
+            "kept_fraction": 0.996060776589758
+          }
+        },
+        "3864514494": {
+          "all": {
+            "cells": 106260,
+            "positive_cells": 5398,
+            "negative_cells": 100862,
+            "surface_recall": 0.9994442386068915,
+            "negative_closure": 0.16464079633558723,
+            "precision": 0.060177800582257863,
+            "kept_fraction": 0.8436947110860155
+          },
+          "in_frustum": {
+            "cells": 71875,
+            "positive_cells": 5262,
+            "negative_cells": 66613,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0108837614279495,
+            "precision": 0.07395643007730147,
+            "kept_fraction": 0.9899130434782609
+          },
+          "near_surface": {
+            "cells": 30279,
+            "positive_cells": 5398,
+            "negative_cells": 24881,
+            "surface_recall": 0.9994442386068915,
+            "negative_closure": 0.02737028254491379,
+            "precision": 0.18229430647068762,
+            "kept_fraction": 0.9774100861983553
+          }
+        },
+        "40aec5fffa": {
+          "all": {
+            "cells": 68250,
+            "positive_cells": 4551,
+            "negative_cells": 63699,
+            "surface_recall": 1.0,
+            "negative_closure": 0.11469567811111635,
+            "precision": 0.07467511157784196,
+            "kept_fraction": 0.8929523809523809
+          },
+          "in_frustum": {
+            "cells": 51216,
+            "positive_cells": 4444,
+            "negative_cells": 46772,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.08676975945017182,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 25137,
+            "positive_cells": 4551,
+            "negative_cells": 20586,
+            "surface_recall": 1.0,
+            "negative_closure": 0.027640143787039734,
+            "precision": 0.1852409638554217,
+            "kept_fraction": 0.9773640450332179
+          }
+        },
+        "13c3e046d7": {
+          "all": {
+            "cells": 171000,
+            "positive_cells": 7641,
+            "negative_cells": 163359,
+            "surface_recall": 0.9998691270776077,
+            "negative_closure": 0.14927246126629082,
+            "precision": 0.052109621182151775,
+            "kept_fraction": 0.857391812865497
+          },
+          "in_frustum": {
+            "cells": 129695,
+            "positive_cells": 7464,
+            "negative_cells": 122231,
+            "surface_recall": 1.0,
+            "negative_closure": 0.010259263198370299,
+            "precision": 0.05811228501802384,
+            "kept_fraction": 0.990331161571379
+          },
+          "near_surface": {
+            "cells": 45045,
+            "positive_cells": 7641,
+            "negative_cells": 37404,
+            "surface_recall": 0.9998691270776077,
+            "negative_closure": 0.029916586461341033,
+            "precision": 0.17393284006829823,
+            "kept_fraction": 0.9751359751359752
+          }
+        },
+        "e398684d27": {
+          "all": {
+            "cells": 68040,
+            "positive_cells": 4209,
+            "negative_cells": 63831,
+            "surface_recall": 0.9983368971252079,
+            "negative_closure": 0.1222916764581473,
+            "precision": 0.0697693725405549,
+            "kept_fraction": 0.8851704879482657
+          },
+          "in_frustum": {
+            "cells": 44794,
+            "positive_cells": 4075,
+            "negative_cells": 40719,
+            "surface_recall": 0.9995092024539878,
+            "negative_closure": 0.0009086667157837864,
+            "precision": 0.09100659144229695,
+            "kept_fraction": 0.9991293476804929
+          },
+          "near_surface": {
+            "cells": 26701,
+            "positive_cells": 4209,
+            "negative_cells": 22492,
+            "surface_recall": 0.9983368971252079,
+            "negative_closure": 0.04308198470567313,
+            "precision": 0.1633430515063168,
+            "kept_fraction": 0.9634470619077937
+          }
+        },
+        "a8bf42d646": {
+          "all": {
+            "cells": 160356,
+            "positive_cells": 9577,
+            "negative_cells": 150779,
+            "surface_recall": 0.9994779158400334,
+            "negative_closure": 0.16914822355898368,
+            "precision": 0.0709841524097681,
+            "kept_fraction": 0.8409226969991769
+          },
+          "in_frustum": {
+            "cells": 125042,
+            "positive_cells": 9431,
+            "negative_cells": 115611,
+            "surface_recall": 1.0,
+            "negative_closure": 0.058653588326370326,
+            "precision": 0.07974733851396487,
+            "kept_fraction": 0.9457702212056749
+          },
+          "near_surface": {
+            "cells": 54243,
+            "positive_cells": 9577,
+            "negative_cells": 44666,
+            "surface_recall": 0.9994779158400334,
+            "negative_closure": 0.030112389737160256,
+            "precision": 0.18096912634942242,
+            "kept_fraction": 0.9751119960179193
+          }
+        },
+        "45b0dac5e3": {
+          "all": {
+            "cells": 14812,
+            "positive_cells": 2027,
+            "negative_cells": 12785,
+            "surface_recall": 1.0,
+            "negative_closure": 0.03441533046538913,
+            "precision": 0.14103812969663235,
+            "kept_fraction": 0.9702943559276263
+          },
+          "in_frustum": {
+            "cells": 11659,
+            "positive_cells": 1966,
+            "negative_cells": 9693,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.16862509649198043,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 10077,
+            "positive_cells": 2027,
+            "negative_cells": 8050,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0038509316770186336,
+            "precision": 0.20177184949233526,
+            "kept_fraction": 0.9969236876054381
+          }
+        },
+        "31a2c91c43": {
+          "all": {
+            "cells": 15750,
+            "positive_cells": 1667,
+            "negative_cells": 14083,
+            "surface_recall": 1.0,
+            "negative_closure": 0.031527373428956895,
+            "precision": 0.10891153795897034,
+            "kept_fraction": 0.9718095238095238
+          },
+          "in_frustum": {
+            "cells": 11319,
+            "positive_cells": 1601,
+            "negative_cells": 9718,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.14144359042318225,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 8679,
+            "positive_cells": 1667,
+            "negative_cells": 7012,
+            "surface_recall": 1.0,
+            "negative_closure": 0.002567027952082145,
+            "precision": 0.19247200092368086,
+            "kept_fraction": 0.9979260283442793
+          }
+        },
+        "e7af285f7d": {
+          "all": {
+            "cells": 35280,
+            "positive_cells": 931,
+            "negative_cells": 34349,
+            "surface_recall": 1.0,
+            "negative_closure": 0.02270808466039768,
+            "precision": 0.02698550724637681,
+            "kept_fraction": 0.9778911564625851
+          },
+          "in_frustum": {
+            "cells": 28793,
+            "positive_cells": 869,
+            "negative_cells": 27924,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.030180946757892544,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 7243,
+            "positive_cells": 931,
+            "negative_cells": 6312,
+            "surface_recall": 1.0,
+            "negative_closure": 0.013624841571609633,
+            "precision": 0.13008243677518513,
+            "kept_fraction": 0.9881264669335911
+          }
+        },
+        "286b55a2bf": {
+          "all": {
+            "cells": 16704,
+            "positive_cells": 1868,
+            "negative_cells": 14836,
+            "surface_recall": 0.9989293361884368,
+            "negative_closure": 0.04664330008088433,
+            "precision": 0.1165521549031855,
+            "kept_fraction": 0.9584530651340997
+          },
+          "in_frustum": {
+            "cells": 13448,
+            "positive_cells": 1818,
+            "negative_cells": 11630,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.13518738845925043,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 9994,
+            "positive_cells": 1868,
+            "negative_cells": 8126,
+            "surface_recall": 0.9989293361884368,
+            "negative_closure": 0.034826482894412994,
+            "precision": 0.19219281079410855,
+            "kept_fraction": 0.9714828897338403
+          }
+        },
+        "7bc286c1b6": {
+          "all": {
+            "cells": 21000,
+            "positive_cells": 1439,
+            "negative_cells": 19561,
+            "surface_recall": 0.9993050729673384,
+            "negative_closure": 0.07975052400184039,
+            "precision": 0.07397499871392561,
+            "kept_fraction": 0.9256666666666666
+          },
+          "in_frustum": {
+            "cells": 13541,
+            "positive_cells": 1353,
+            "negative_cells": 12188,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.09991876523151909,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 9677,
+            "positive_cells": 1439,
+            "negative_cells": 8238,
+            "surface_recall": 0.9993050729673384,
+            "negative_closure": 0.022456907016266084,
+            "precision": 0.1515119586977136,
+            "kept_fraction": 0.9807791670972409
+          }
+        },
+        "f3685d06a9": {
+          "all": {
+            "cells": 27869,
+            "positive_cells": 2855,
+            "negative_cells": 25014,
+            "surface_recall": 1.0,
+            "negative_closure": 0.004437514991604701,
+            "precision": 0.10285323150082859,
+            "kept_fraction": 0.996017079909577
+          },
+          "in_frustum": {
+            "cells": 24811,
+            "positive_cells": 2812,
+            "negative_cells": 21999,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.11333682640764177,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 17111,
+            "positive_cells": 2855,
+            "negative_cells": 14256,
+            "surface_recall": 1.0,
+            "negative_closure": 7.014590347923682e-05,
+            "precision": 0.1668614845119813,
+            "kept_fraction": 0.9999415580620653
+          }
+        },
+        "b0a08200c9": {
+          "all": {
+            "cells": 103635,
+            "positive_cells": 5887,
+            "negative_cells": 97748,
+            "surface_recall": 0.9984712077458807,
+            "negative_closure": 0.19115480623644474,
+            "precision": 0.06920097479426897,
+            "kept_fraction": 0.8196169247840981
+          },
+          "in_frustum": {
+            "cells": 69006,
+            "positive_cells": 5720,
+            "negative_cells": 63286,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00031602566128369626,
+            "precision": 0.08291537413388224,
+            "kept_fraction": 0.9997101701301336
+          },
+          "near_surface": {
+            "cells": 31986,
+            "positive_cells": 5887,
+            "negative_cells": 26099,
+            "surface_recall": 0.9984712077458807,
+            "negative_closure": 0.04038468906854669,
+            "precision": 0.19008504996281086,
+            "kept_fraction": 0.9667667104358156
+          }
+        },
+        "825d228aec": {
+          "all": {
+            "cells": 18538,
+            "positive_cells": 2147,
+            "negative_cells": 16391,
+            "surface_recall": 1.0,
+            "negative_closure": 0.09822463547068513,
+            "precision": 0.12683128544423442,
+            "kept_fraction": 0.913151364764268
+          },
+          "in_frustum": {
+            "cells": 12560,
+            "positive_cells": 2076,
+            "negative_cells": 10484,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.16528662420382165,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 10989,
+            "positive_cells": 2147,
+            "negative_cells": 8842,
+            "surface_recall": 1.0,
+            "negative_closure": 0.006785795068988917,
+            "precision": 0.1964498124256565,
+            "kept_fraction": 0.9945399945399945
+          }
+        },
+        "a980334473": {
+          "all": {
+            "cells": 15180,
+            "positive_cells": 2038,
+            "negative_cells": 13142,
+            "surface_recall": 1.0,
+            "negative_closure": 0.025642976715872776,
+            "precision": 0.13730377955938827,
+            "kept_fraction": 0.9777997364953886
+          },
+          "in_frustum": {
+            "cells": 11686,
+            "positive_cells": 1975,
+            "negative_cells": 9711,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.16900564778367277,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 10930,
+            "positive_cells": 2038,
+            "negative_cells": 8892,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00033738191632928474,
+            "precision": 0.18651047863091424,
+            "kept_fraction": 0.9997255260750229
+          }
+        },
+        "f2dc06b1d2": {
+          "all": {
+            "cells": 19380,
+            "positive_cells": 2029,
+            "negative_cells": 17351,
+            "surface_recall": 1.0,
+            "negative_closure": 0.028586248631202814,
+            "precision": 0.10744545647108664,
+            "kept_fraction": 0.974406604747162
+          },
+          "in_frustum": {
+            "cells": 14686,
+            "positive_cells": 1952,
+            "negative_cells": 12734,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1329157020291434,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 10784,
+            "positive_cells": 2029,
+            "negative_cells": 8755,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0029697315819531694,
+            "precision": 0.1886038297081242,
+            "kept_fraction": 0.9975890207715133
+          }
+        },
+        "5942004064": {
+          "all": {
+            "cells": 301125,
+            "positive_cells": 10583,
+            "negative_cells": 290542,
+            "surface_recall": 1.0,
+            "negative_closure": 0.20068010821154944,
+            "precision": 0.04358390406022593,
+            "kept_fraction": 0.8063727687837277
+          },
+          "in_frustum": {
+            "cells": 182026,
+            "positive_cells": 10416,
+            "negative_cells": 171610,
+            "surface_recall": 1.0,
+            "negative_closure": 0.09317056115610979,
+            "precision": 0.06273300529400073,
+            "kept_fraction": 0.9121609000911958
+          },
+          "near_surface": {
+            "cells": 55758,
+            "positive_cells": 10583,
+            "negative_cells": 45175,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0036303265080243497,
+            "precision": 0.19036226930963773,
+            "kept_fraction": 0.9970587180314933
+          }
+        },
+        "25f3b7a318": {
+          "all": {
+            "cells": 41250,
+            "positive_cells": 3454,
+            "negative_cells": 37796,
+            "surface_recall": 1.0,
+            "negative_closure": 0.035744523229971424,
+            "precision": 0.08656858567883907,
+            "kept_fraction": 0.9672484848484848
+          },
+          "in_frustum": {
+            "cells": 33751,
+            "positive_cells": 3354,
+            "negative_cells": 30397,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.09937483333827146,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 17646,
+            "positive_cells": 3454,
+            "negative_cells": 14192,
+            "surface_recall": 1.0,
+            "negative_closure": 0.004580045095828635,
+            "precision": 0.19646208975598659,
+            "kept_fraction": 0.9963164456534058
+          }
+        },
+        "bcd2436daf": {
+          "all": {
+            "cells": 71484,
+            "positive_cells": 4860,
+            "negative_cells": 66624,
+            "surface_recall": 1.0,
+            "negative_closure": 0.09964877521613832,
+            "precision": 0.07494795281054822,
+            "kept_fraction": 0.9071260701695484
+          },
+          "in_frustum": {
+            "cells": 55446,
+            "positive_cells": 4771,
+            "negative_cells": 50675,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.0860476860368647,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 26668,
+            "positive_cells": 4860,
+            "negative_cells": 21808,
+            "surface_recall": 1.0,
+            "negative_closure": 0.012655906089508437,
+            "precision": 0.1841467111245832,
+            "kept_fraction": 0.9896505174741262
+          }
+        },
+        "f3d64c30f8": {
+          "all": {
+            "cells": 100418,
+            "positive_cells": 5529,
+            "negative_cells": 94889,
+            "surface_recall": 0.9996382709350696,
+            "negative_closure": 0.15987100717680658,
+            "precision": 0.064835886727823,
+            "kept_fraction": 0.8489115497221613
+          },
+          "in_frustum": {
+            "cells": 70950,
+            "positive_cells": 5393,
+            "negative_cells": 65557,
+            "surface_recall": 1.0,
+            "negative_closure": 3.0507802370456244e-05,
+            "precision": 0.07601341827817557,
+            "kept_fraction": 0.9999718111346019
+          },
+          "near_surface": {
+            "cells": 34958,
+            "positive_cells": 5529,
+            "negative_cells": 29429,
+            "surface_recall": 0.9996382709350696,
+            "negative_closure": 0.02225695742295015,
+            "precision": 0.16113232850354217,
+            "kept_fraction": 0.9812060186509526
+          }
+        },
+        "0d2ee665be": {
+          "all": {
+            "cells": 158769,
+            "positive_cells": 6590,
+            "negative_cells": 152179,
+            "surface_recall": 0.9996965098634294,
+            "negative_closure": 0.3043521116579817,
+            "precision": 0.05858551724751225,
+            "kept_fraction": 0.7082679868236242
+          },
+          "in_frustum": {
+            "cells": 90378,
+            "positive_cells": 6375,
+            "negative_cells": 84003,
+            "surface_recall": 0.9998431372549019,
+            "negative_closure": 0.036117757699129796,
+            "precision": 0.07297665525571596,
+            "kept_fraction": 0.9664188187390736
+          },
+          "near_surface": {
+            "cells": 37036,
+            "positive_cells": 6590,
+            "negative_cells": 30446,
+            "surface_recall": 0.9996965098634294,
+            "negative_closure": 0.027983971621887933,
+            "precision": 0.1820794870377536,
+            "kept_fraction": 0.9769413543579221
+          }
+        },
+        "3db0a1c8f3": {
+          "all": {
+            "cells": 40608,
+            "positive_cells": 4125,
+            "negative_cells": 36483,
+            "surface_recall": 1.0,
+            "negative_closure": 0.03541375435134172,
+            "precision": 0.10491911689897243,
+            "kept_fraction": 0.968183609141056
+          },
+          "in_frustum": {
+            "cells": 32849,
+            "positive_cells": 4050,
+            "negative_cells": 28799,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.12329142439648087,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 21239,
+            "positive_cells": 4125,
+            "negative_cells": 17114,
+            "surface_recall": 1.0,
+            "negative_closure": 0.007362393362159636,
+            "precision": 0.19537725571922512,
+            "kept_fraction": 0.9940675173030745
+          }
+        },
+        "ac48a9b736": {
+          "all": {
+            "cells": 612612,
+            "positive_cells": 32493,
+            "negative_cells": 580119,
+            "surface_recall": 0.759302003508448,
+            "negative_closure": 0.29385350247104475,
+            "precision": 0.05680591083553409,
+            "kept_fraction": 0.7089658707305766
+          },
+          "in_frustum": {
+            "cells": 562808,
+            "positive_cells": 32332,
+            "negative_cells": 530476,
+            "surface_recall": 0.7585673636026228,
+            "negative_closure": 0.25105754077470044,
+            "precision": 0.05814300818828795,
+            "kept_fraction": 0.7494953874145357
+          },
+          "near_surface": {
+            "cells": 202821,
+            "positive_cells": 32493,
+            "negative_cells": 170328,
+            "surface_recall": 0.759302003508448,
+            "negative_closure": 0.27914964069325066,
+            "precision": 0.16732111249008158,
+            "kept_fraction": 0.7270105166624757
+          }
+        },
+        "c5439f4607": {
+          "all": {
+            "cells": 69920,
+            "positive_cells": 6650,
+            "negative_cells": 63270,
+            "surface_recall": 0.9981954887218045,
+            "negative_closure": 0.07614983404457089,
+            "precision": 0.10198187125518512,
+            "kept_fraction": 0.930921052631579
+          },
+          "in_frustum": {
+            "cells": 58837,
+            "positive_cells": 6566,
+            "negative_cells": 52271,
+            "surface_recall": 0.998172403289674,
+            "negative_closure": 0.019188460140422033,
+            "precision": 0.11334786067586732,
+            "kept_fraction": 0.9827489504903377
+          },
+          "near_surface": {
+            "cells": 38019,
+            "positive_cells": 6650,
+            "negative_cells": 31369,
+            "surface_recall": 0.9981954887218045,
+            "negative_closure": 0.015206095189518314,
+            "precision": 0.1768718358646416,
+            "kept_fraction": 0.9871380099423972
+          }
+        },
+        "578511c8a9": {
+          "all": {
+            "cells": 402948,
+            "positive_cells": 22628,
+            "negative_cells": 380320,
+            "surface_recall": 0.6691267456248895,
+            "negative_closure": 0.4910286074884308,
+            "precision": 0.07254459473056302,
+            "kept_fraction": 0.5179650972333899
+          },
+          "in_frustum": {
+            "cells": 358428,
+            "positive_cells": 22481,
+            "negative_cells": 335947,
+            "surface_recall": 0.6672745874293848,
+            "negative_closure": 0.48370129812142987,
+            "precision": 0.07960201644998674,
+            "kept_fraction": 0.5257680761547647
+          },
+          "near_surface": {
+            "cells": 139704,
+            "positive_cells": 22628,
+            "negative_cells": 117076,
+            "surface_recall": 0.6691267456248895,
+            "negative_closure": 0.4204875465509583,
+            "precision": 0.1824480647804502,
+            "kept_fraction": 0.5940273721582775
+          }
+        },
+        "d755b3d9d8": {
+          "all": {
+            "cells": 63455,
+            "positive_cells": 4211,
+            "negative_cells": 59244,
+            "surface_recall": 1.0,
+            "negative_closure": 0.18249949361960704,
+            "precision": 0.07999164181372642,
+            "kept_fraction": 0.8296115357339847
+          },
+          "in_frustum": {
+            "cells": 35778,
+            "positive_cells": 4075,
+            "negative_cells": 31703,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00220799293442261,
+            "precision": 0.11412008513498376,
+            "kept_fraction": 0.998043490413103
+          },
+          "near_surface": {
+            "cells": 22491,
+            "positive_cells": 4211,
+            "negative_cells": 18280,
+            "surface_recall": 1.0,
+            "negative_closure": 0.011323851203501094,
+            "precision": 0.18896966433315382,
+            "kept_fraction": 0.990796318527411
+          }
+        },
+        "99fa5c25e1": {
+          "all": {
+            "cells": 94350,
+            "positive_cells": 3756,
+            "negative_cells": 90594,
+            "surface_recall": 1.0,
+            "negative_closure": 0.08732366381879594,
+            "precision": 0.04345260819768854,
+            "kept_fraction": 0.9161526232114467
+          },
+          "in_frustum": {
+            "cells": 68991,
+            "positive_cells": 3684,
+            "negative_cells": 65307,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00036749506178510727,
+            "precision": 0.05341685153769194,
+            "kept_fraction": 0.999652128538505
+          },
+          "near_surface": {
+            "cells": 25692,
+            "positive_cells": 3756,
+            "negative_cells": 21936,
+            "surface_recall": 1.0,
+            "negative_closure": 0.005607221006564552,
+            "precision": 0.14689663264108882,
+            "kept_fraction": 0.9952125175151798
+          }
+        },
+        "09c1414f1b": {
+          "all": {
+            "cells": 229152,
+            "positive_cells": 9558,
+            "negative_cells": 219594,
+            "surface_recall": 1.0,
+            "negative_closure": 0.09973405466451725,
+            "precision": 0.04611799219304129,
+            "kept_fraction": 0.9044258832565284
+          },
+          "in_frustum": {
+            "cells": 187298,
+            "positive_cells": 9405,
+            "negative_cells": 177893,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.050214097320846994,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 56917,
+            "positive_cells": 9558,
+            "negative_cells": 47359,
+            "surface_recall": 1.0,
+            "negative_closure": 0.004687598978018961,
+            "precision": 0.16858629508775025,
+            "kept_fraction": 0.9960995836041956
+          }
+        },
+        "5f99900f09": {
+          "all": {
+            "cells": 164346,
+            "positive_cells": 6589,
+            "negative_cells": 157757,
+            "surface_recall": 0.9986340871148884,
+            "negative_closure": 0.18108863632041686,
+            "precision": 0.04846467161133985,
+            "kept_fraction": 0.8261168510337945
+          },
+          "in_frustum": {
+            "cells": 118627,
+            "positive_cells": 6429,
+            "negative_cells": 112198,
+            "surface_recall": 1.0,
+            "negative_closure": 0.005873544982976524,
+            "precision": 0.0544978299199783,
+            "kept_fraction": 0.9944447722693822
+          },
+          "near_surface": {
+            "cells": 36470,
+            "positive_cells": 6589,
+            "negative_cells": 29881,
+            "surface_recall": 0.9986340871148884,
+            "negative_closure": 0.030119473913188984,
+            "precision": 0.18503416664323274,
+            "kept_fraction": 0.9750754044420071
+          }
+        },
+        "9071e139d9": {
+          "all": {
+            "cells": 102960,
+            "positive_cells": 5030,
+            "negative_cells": 97930,
+            "surface_recall": 1.0,
+            "negative_closure": 0.07116307566629225,
+            "precision": 0.05240074590326176,
+            "kept_fraction": 0.9323135198135198
+          },
+          "in_frustum": {
+            "cells": 84284,
+            "positive_cells": 4925,
+            "negative_cells": 79359,
+            "surface_recall": 1.0,
+            "negative_closure": 1.260096523393692e-05,
+            "precision": 0.05843408516545448,
+            "kept_fraction": 0.9999881353519054
+          },
+          "near_surface": {
+            "cells": 29487,
+            "positive_cells": 5030,
+            "negative_cells": 24457,
+            "surface_recall": 1.0,
+            "negative_closure": 0.006460318109334751,
+            "precision": 0.17150260833986838,
+            "kept_fraction": 0.9946417065147353
+          }
+        },
+        "6115eddb86": {
+          "all": {
+            "cells": 55440,
+            "positive_cells": 3926,
+            "negative_cells": 51514,
+            "surface_recall": 1.0,
+            "negative_closure": 0.021236945296424274,
+            "precision": 0.07224082729179701,
+            "kept_fraction": 0.9802669552669553
+          },
+          "in_frustum": {
+            "cells": 44830,
+            "positive_cells": 3826,
+            "negative_cells": 41004,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.08534463528886906,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 23584,
+            "positive_cells": 3926,
+            "negative_cells": 19658,
+            "surface_recall": 1.0,
+            "negative_closure": 0.002238274493844745,
+            "precision": 0.1667799490229397,
+            "kept_fraction": 0.9981343283582089
+          }
+        },
+        "27dd4da69e": {
+          "all": {
+            "cells": 248040,
+            "positive_cells": 2552,
+            "negative_cells": 245488,
+            "surface_recall": 0.9992163009404389,
+            "negative_closure": 0.22415352277911751,
+            "precision": 0.013211682235727497,
+            "kept_fraction": 0.7781446540880503
+          },
+          "in_frustum": {
+            "cells": 166292,
+            "positive_cells": 2441,
+            "negative_cells": 163851,
+            "surface_recall": 1.0,
+            "negative_closure": 0.019053896527943072,
+            "precision": 0.014959857817000674,
+            "kept_fraction": 0.9812257955884829
+          },
+          "near_surface": {
+            "cells": 18642,
+            "positive_cells": 2552,
+            "negative_cells": 16090,
+            "surface_recall": 0.9992163009404389,
+            "negative_closure": 0.04052206339341206,
+            "precision": 0.1417611741160774,
+            "kept_fraction": 0.9649179272610235
+          }
+        },
+        "c49a8c6cff": {
+          "all": {
+            "cells": 39960,
+            "positive_cells": 3072,
+            "negative_cells": 36888,
+            "surface_recall": 1.0,
+            "negative_closure": 0.10098134894816743,
+            "precision": 0.0847799089278322,
+            "kept_fraction": 0.9067817817817818
+          },
+          "in_frustum": {
+            "cells": 30069,
+            "positive_cells": 2983,
+            "negative_cells": 27086,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.0992051614619708,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 17195,
+            "positive_cells": 3072,
+            "negative_cells": 14123,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1786565862169235,
+            "kept_fraction": 1.0
+          }
+        }
+      },
+      "calibration": {
+        "recall_0.95": {
+          "all": {
+            "cells": 3827679,
+            "positive_cells": 181746,
+            "negative_cells": 3645933,
+            "surface_recall": 0.9500016506553102,
+            "negative_closure": 0.36642692007779626,
+            "precision": 0.06954697932510118,
+            "kept_fraction": 0.6485977533643756,
+            "auc": 0.734237679733183,
+            "average_precision": 0.09862088910678865
+          },
+          "in_frustum": {
+            "cells": 2892629,
+            "positive_cells": 178245,
+            "negative_cells": 2714384,
+            "surface_recall": 0.9539285814468849,
+            "negative_closure": 0.17733157873020178,
+            "precision": 0.07075654443834577,
+            "kept_fraction": 0.8307567268391487,
+            "auc": 0.6572107971625347,
+            "average_precision": 0.09950323126144002
+          },
+          "near_surface": {
+            "cells": 1057723,
+            "positive_cells": 181746,
+            "negative_cells": 875977,
+            "surface_recall": 0.9500016506553102,
+            "negative_closure": 0.13784950974740204,
+            "precision": 0.1860784172142393,
+            "kept_fraction": 0.8772457439235036,
+            "auc": 0.569035625436701,
+            "average_precision": 0.1993698859066625
+          }
+        },
+        "recall_0.99": {
+          "all": {
+            "cells": 3827679,
+            "positive_cells": 181746,
+            "negative_cells": 3645933,
+            "surface_recall": 0.990002531004809,
+            "negative_closure": 0.1823574377258167,
+            "precision": 0.056921561822702256,
+            "kept_fraction": 0.8258265648712967,
+            "auc": 0.734237679733183,
+            "average_precision": 0.09862088910678865
+          },
+          "in_frustum": {
+            "cells": 2892629,
+            "positive_cells": 178245,
+            "negative_cells": 2714384,
+            "surface_recall": 0.9904401245476732,
+            "negative_closure": 0.07764303061026001,
+            "precision": 0.06586928003128158,
+            "kept_fraction": 0.9265522816787082,
+            "auc": 0.6572107971625347,
+            "average_precision": 0.09950323126144002
+          },
+          "near_surface": {
+            "cells": 1057723,
+            "positive_cells": 181746,
+            "negative_cells": 875977,
+            "surface_recall": 0.990002531004809,
+            "negative_closure": 0.030654914455516526,
+            "precision": 0.17484910884084687,
+            "kept_fraction": 0.9728946047311063,
+            "auc": 0.569035625436701,
+            "average_precision": 0.1993698859066625
+          }
+        }
+      },
+      "test": {
+        "recall_0.95": {
+          "all": {
+            "cells": 6551809,
+            "positive_cells": 336092,
+            "negative_cells": 6215717,
+            "surface_recall": 0.846054056627352,
+            "negative_closure": 0.41411296556776955,
+            "precision": 0.07242680957499376,
+            "kept_fraction": 0.5992329751981476,
+            "auc": 0.6798131769654776,
+            "average_precision": 0.08905523811991983
+          },
+          "in_frustum": {
+            "cells": 5085797,
+            "positive_cells": 330315,
+            "negative_cells": 4755482,
+            "surface_recall": 0.8484325568018407,
+            "negative_closure": 0.25856790121379913,
+            "precision": 0.07363147270564725,
+            "kept_fraction": 0.7483816204225218,
+            "auc": 0.6107179127612491,
+            "average_precision": 0.09057271444880874
+          },
+          "near_surface": {
+            "cells": 1991165,
+            "positive_cells": 336092,
+            "negative_cells": 1655073,
+            "surface_recall": 0.846054056627352,
+            "negative_closure": 0.23796352185069783,
+            "precision": 0.18397777401075843,
+            "kept_fraction": 0.7762179427621518,
+            "auc": 0.5613362054461186,
+            "average_precision": 0.1940488258169545
+          }
+        },
+        "recall_0.99": {
+          "all": {
+            "cells": 6551809,
+            "positive_cells": 336092,
+            "negative_cells": 6215717,
+            "surface_recall": 0.9239791485664639,
+            "negative_closure": 0.24086279989903014,
+            "precision": 0.06174872602067477,
+            "kept_fraction": 0.7675931944902545,
+            "auc": 0.6798131769654776,
+            "average_precision": 0.08905523811991983
+          },
+          "in_frustum": {
+            "cells": 5085797,
+            "positive_cells": 330315,
+            "negative_cells": 4755482,
+            "surface_recall": 0.9233368148585441,
+            "negative_closure": 0.15414189350311913,
+            "precision": 0.07047837585832782,
+            "kept_fraction": 0.850890234116698,
+            "auc": 0.6107179127612491,
+            "average_precision": 0.09057271444880874
+          },
+          "near_surface": {
+            "cells": 1991165,
+            "positive_cells": 336092,
+            "negative_cells": 1655073,
+            "surface_recall": 0.9239791485664639,
+            "negative_closure": 0.10680133142163518,
+            "precision": 0.17359858367186534,
+            "kept_fraction": 0.898394156184947,
+            "auc": 0.5613362054461186,
+            "average_precision": 0.1940488258169545
+          }
+        }
+      },
+      "test_excluding_laser_hole_cells": {
+        "recall_0.95": {
+          "all": {
+            "cells": 5383674,
+            "positive_cells": 336092,
+            "negative_cells": 5047582,
+            "surface_recall": 0.846054056627352,
+            "negative_closure": 0.44198984781227924,
+            "precision": 0.09169823222143896,
+            "kept_fraction": 0.5759921570288246,
+            "auc": 0.6934421186256124,
+            "average_precision": 0.11305108441832884
+          },
+          "in_frustum": {
+            "cells": 3928683,
+            "positive_cells": 330315,
+            "negative_cells": 3598368,
+            "surface_recall": 0.8484325568018407,
+            "negative_closure": 0.24743216925006004,
+            "precision": 0.09378348513820389,
+            "kept_fraction": 0.7606279254396447,
+            "auc": 0.6066544962539511,
+            "average_precision": 0.11547825493238162
+          },
+          "near_surface": {
+            "cells": 1627867,
+            "positive_cells": 336092,
+            "negative_cells": 1291775,
+            "surface_recall": 0.846054056627352,
+            "negative_closure": 0.2564641675214337,
+            "precision": 0.2284258209735764,
+            "kept_fraction": 0.7647019074654133,
+            "auc": 0.5714769614726427,
+            "average_precision": 0.24152473997514887
+          }
+        },
+        "recall_0.99": {
+          "all": {
+            "cells": 5383674,
+            "positive_cells": 336092,
+            "negative_cells": 5047582,
+            "surface_recall": 0.9239791485664639,
+            "negative_closure": 0.2589960896128087,
+            "precision": 0.07666151544625532,
+            "kept_fraction": 0.7524266885402051,
+            "auc": 0.6934421186256124,
+            "average_precision": 0.11305108441832884
+          },
+          "in_frustum": {
+            "cells": 3928683,
+            "positive_cells": 330315,
+            "negative_cells": 3598368,
+            "surface_recall": 0.9233368148585441,
+            "negative_closure": 0.15126412862719987,
+            "precision": 0.09079693818739551,
+            "kept_fraction": 0.855008154132059,
+            "auc": 0.6066544962539511,
+            "average_precision": 0.11547825493238162
+          },
+          "near_surface": {
+            "cells": 1627867,
+            "positive_cells": 336092,
+            "negative_cells": 1291775,
+            "surface_recall": 0.9239791485664639,
+            "negative_closure": 0.11652029184649029,
+            "precision": 0.21390151115960268,
+            "kept_fraction": 0.8918412867881713,
+            "auc": 0.5714769614726427,
+            "average_precision": 0.24152473997514887
+          }
+        }
+      }
+    },
+    "projected_image": {
+      "thresholds_logit": {
+        "recall_0.95": -14.312295913696289,
+        "recall_0.99": -33.24441146850586
+      },
+      "test_scenes": {
+        "7b6477cb95": {
+          "all": {
+            "cells": 111766,
+            "positive_cells": 6138,
+            "negative_cells": 105628,
+            "surface_recall": 1.0,
+            "negative_closure": 0.07496118453440376,
+            "precision": 0.05910561590016177,
+            "kept_fraction": 0.9291555571461804
+          },
+          "in_frustum": {
+            "cells": 74975,
+            "positive_cells": 6012,
+            "negative_cells": 68963,
+            "surface_recall": 1.0,
+            "negative_closure": 0.11468468599103868,
+            "precision": 0.08964303820117496,
+            "kept_fraction": 0.8945115038346115
+          },
+          "near_surface": {
+            "cells": 36314,
+            "positive_cells": 6138,
+            "negative_cells": 30176,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0017895015906680806,
+            "precision": 0.16927744070601214,
+            "kept_fraction": 0.9985129702043289
+          }
+        },
+        "c50d2d1d42": {
+          "all": {
+            "cells": 133632,
+            "positive_cells": 7465,
+            "negative_cells": 126167,
+            "surface_recall": 0.999330207635633,
+            "negative_closure": 0.0852758645287595,
+            "precision": 0.06071556467102907,
+            "kept_fraction": 0.9194504310344828
+          },
+          "in_frustum": {
+            "cells": 100606,
+            "positive_cells": 7321,
+            "negative_cells": 93285,
+            "surface_recall": 0.9993170331921869,
+            "negative_closure": 0.11533472691215094,
+            "precision": 0.08143184702032456,
+            "kept_fraction": 0.8930083692821502
+          },
+          "near_surface": {
+            "cells": 48299,
+            "positive_cells": 7465,
+            "negative_cells": 40834,
+            "surface_recall": 0.999330207635633,
+            "negative_closure": 0.012783464759759024,
+            "precision": 0.15615841915766557,
+            "kept_fraction": 0.9890888010103729
+          }
+        },
+        "cc5237fd77": {
+          "all": {
+            "cells": 17136,
+            "positive_cells": 2061,
+            "negative_cells": 15075,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0001990049751243781,
+            "precision": 0.12029416914725967,
+            "kept_fraction": 0.9998249299719888
+          },
+          "in_frustum": {
+            "cells": 13693,
+            "positive_cells": 1983,
+            "negative_cells": 11710,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00025619128949615715,
+            "precision": 0.14485025566106646,
+            "kept_fraction": 0.999780909953991
+          },
+          "near_surface": {
+            "cells": 11145,
+            "positive_cells": 2061,
+            "negative_cells": 9084,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.18492597577388964,
+            "kept_fraction": 1.0
+          }
+        },
+        "acd95847c5": {
+          "all": {
+            "cells": 57970,
+            "positive_cells": 3492,
+            "negative_cells": 54478,
+            "surface_recall": 1.0,
+            "negative_closure": 0.013436616615881641,
+            "precision": 0.06100842097906985,
+            "kept_fraction": 0.987372779023633
+          },
+          "in_frustum": {
+            "cells": 46032,
+            "positive_cells": 3424,
+            "negative_cells": 42608,
+            "surface_recall": 1.0,
+            "negative_closure": 0.017179872324446115,
+            "precision": 0.07558498896247241,
+            "kept_fraction": 0.9840980187695516
+          },
+          "near_surface": {
+            "cells": 22010,
+            "positive_cells": 3492,
+            "negative_cells": 18518,
+            "surface_recall": 1.0,
+            "negative_closure": 0.003780105842963603,
+            "precision": 0.15916134913400182,
+            "kept_fraction": 0.9968196274420718
+          }
+        },
+        "fb5a96b1a2": {
+          "all": {
+            "cells": 124754,
+            "positive_cells": 6795,
+            "negative_cells": 117959,
+            "surface_recall": 0.9991169977924945,
+            "negative_closure": 0.06606532778338237,
+            "precision": 0.058047967166859046,
+            "kept_fraction": 0.9374849704217901
+          },
+          "in_frustum": {
+            "cells": 93296,
+            "positive_cells": 6705,
+            "negative_cells": 86591,
+            "surface_recall": 0.9991051454138703,
+            "negative_closure": 0.08870436881431096,
+            "precision": 0.07825111845717156,
+            "kept_fraction": 0.917606328245584
+          },
+          "near_surface": {
+            "cells": 45942,
+            "positive_cells": 6795,
+            "negative_cells": 39147,
+            "surface_recall": 0.9991169977924945,
+            "negative_closure": 0.01407515262983115,
+            "precision": 0.14958686790789907,
+            "kept_fraction": 0.9878760175873929
+          }
+        },
+        "a24f64f7fb": {
+          "all": {
+            "cells": 38745,
+            "positive_cells": 2780,
+            "negative_cells": 35965,
+            "surface_recall": 1.0,
+            "negative_closure": 0.11077436396496594,
+            "precision": 0.07997468427260436,
+            "kept_fraction": 0.8971738288811459
+          },
+          "in_frustum": {
+            "cells": 30347,
+            "positive_cells": 2684,
+            "negative_cells": 27663,
+            "surface_recall": 1.0,
+            "negative_closure": 0.14401908686693418,
+            "precision": 0.10180935401889012,
+            "kept_fraction": 0.8687184894717764
+          },
+          "near_surface": {
+            "cells": 15081,
+            "positive_cells": 2780,
+            "negative_cells": 12301,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0033330623526542555,
+            "precision": 0.1848404255319149,
+            "kept_fraction": 0.9972813473907566
+          }
+        },
+        "1ada7a0617": {
+          "all": {
+            "cells": 116932,
+            "positive_cells": 8869,
+            "negative_cells": 108063,
+            "surface_recall": 0.9998872477167663,
+            "negative_closure": 0.09670284926385535,
+            "precision": 0.083282463538096,
+            "kept_fraction": 0.9106232682242671
+          },
+          "in_frustum": {
+            "cells": 104595,
+            "positive_cells": 8743,
+            "negative_cells": 95852,
+            "surface_recall": 0.9998856227839414,
+            "negative_closure": 0.1090222426240454,
+            "precision": 0.09285774983004759,
+            "kept_fraction": 0.9000812658348869
+          },
+          "near_surface": {
+            "cells": 51238,
+            "positive_cells": 8869,
+            "negative_cells": 42369,
+            "surface_recall": 0.9998872477167663,
+            "negative_closure": 0.006726616158040076,
+            "precision": 0.17404616109279322,
+            "kept_fraction": 0.9944182052382997
+          }
+        },
+        "5eb31827b7": {
+          "all": {
+            "cells": 154570,
+            "positive_cells": 6511,
+            "negative_cells": 148059,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0824401083351907,
+            "precision": 0.04573487679469529,
+            "kept_fraction": 0.9210325418904056
+          },
+          "in_frustum": {
+            "cells": 101354,
+            "positive_cells": 6315,
+            "negative_cells": 95039,
+            "surface_recall": 1.0,
+            "negative_closure": 0.127758078262608,
+            "precision": 0.07078644128592566,
+            "kept_fraction": 0.880202064052726
+          },
+          "near_surface": {
+            "cells": 38708,
+            "positive_cells": 6511,
+            "negative_cells": 32197,
+            "surface_recall": 1.0,
+            "negative_closure": 0.003633878932819828,
+            "precision": 0.16871809489259154,
+            "kept_fraction": 0.9969773690193242
+          }
+        },
+        "3e8bba0176": {
+          "all": {
+            "cells": 71280,
+            "positive_cells": 4575,
+            "negative_cells": 66705,
+            "surface_recall": 1.0,
+            "negative_closure": 0.06368338205531819,
+            "precision": 0.06825098460436806,
+            "kept_fraction": 0.9404040404040404
+          },
+          "in_frustum": {
+            "cells": 47502,
+            "positive_cells": 4450,
+            "negative_cells": 43052,
+            "surface_recall": 1.0,
+            "negative_closure": 0.09867137415218805,
+            "precision": 0.102880658436214,
+            "kept_fraction": 0.9105721864342554
+          },
+          "near_surface": {
+            "cells": 26830,
+            "positive_cells": 4575,
+            "negative_cells": 22255,
+            "surface_recall": 1.0,
+            "negative_closure": 0.002022017524151876,
+            "precision": 0.17080455478812767,
+            "kept_fraction": 0.9983227730152814
+          }
+        },
+        "3f15a9266d": {
+          "all": {
+            "cells": 24360,
+            "positive_cells": 2456,
+            "negative_cells": 21904,
+            "surface_recall": 1.0,
+            "negative_closure": 0.006163257852447042,
+            "precision": 0.10138286893704851,
+            "kept_fraction": 0.9944581280788177
+          },
+          "in_frustum": {
+            "cells": 20358,
+            "positive_cells": 2375,
+            "negative_cells": 17983,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00750709002947228,
+            "precision": 0.11744053800128566,
+            "kept_fraction": 0.993368700265252
+          },
+          "near_surface": {
+            "cells": 12329,
+            "positive_cells": 2456,
+            "negative_cells": 9873,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1992051261253954,
+            "kept_fraction": 1.0
+          }
+        },
+        "21d970d8de": {
+          "all": {
+            "cells": 519354,
+            "positive_cells": 21908,
+            "negative_cells": 497446,
+            "surface_recall": 0.9919664049662223,
+            "negative_closure": 0.19600921507058053,
+            "precision": 0.051537443617581356,
+            "kept_fraction": 0.8119201931630449
+          },
+          "in_frustum": {
+            "cells": 416640,
+            "positive_cells": 21722,
+            "negative_cells": 394918,
+            "surface_recall": 0.9918976153208728,
+            "negative_closure": 0.2465094019517976,
+            "precision": 0.06751840257212963,
+            "kept_fraction": 0.7659202188940092
+          },
+          "near_surface": {
+            "cells": 133130,
+            "positive_cells": 21908,
+            "negative_cells": 111222,
+            "surface_recall": 0.9919664049662223,
+            "negative_closure": 0.03736670802539066,
+            "precision": 0.16872932809515676,
+            "kept_fraction": 0.9674603770750394
+          }
+        },
+        "5748ce6f01": {
+          "all": {
+            "cells": 40950,
+            "positive_cells": 2676,
+            "negative_cells": 38274,
+            "surface_recall": 1.0,
+            "negative_closure": 0.023775931441709777,
+            "precision": 0.06683316683316683,
+            "kept_fraction": 0.9777777777777777
+          },
+          "in_frustum": {
+            "cells": 30829,
+            "positive_cells": 2586,
+            "negative_cells": 28243,
+            "surface_recall": 1.0,
+            "negative_closure": 0.032220373189816943,
+            "precision": 0.08643337009926802,
+            "kept_fraction": 0.9704823380583217
+          },
+          "near_surface": {
+            "cells": 17096,
+            "positive_cells": 2676,
+            "negative_cells": 14420,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.15652784277023865,
+            "kept_fraction": 1.0
+          }
+        },
+        "c4c04e6d6c": {
+          "all": {
+            "cells": 332928,
+            "positive_cells": 18974,
+            "negative_cells": 313954,
+            "surface_recall": 0.9397069674291135,
+            "negative_closure": 0.19549679252374552,
+            "precision": 0.06593764214683792,
+            "kept_fraction": 0.8122086457131872
+          },
+          "in_frustum": {
+            "cells": 268314,
+            "positive_cells": 18794,
+            "negative_cells": 249520,
+            "surface_recall": 0.9392359263594764,
+            "negative_closure": 0.2426659185636422,
+            "precision": 0.08543136742457241,
+            "kept_fraction": 0.7700753594668933
+          },
+          "near_surface": {
+            "cells": 111020,
+            "positive_cells": 18974,
+            "negative_cells": 92046,
+            "surface_recall": 0.9397069674291135,
+            "negative_closure": 0.11005366881776503,
+            "precision": 0.17875403524953382,
+            "kept_fraction": 0.8984507295982705
+          }
+        },
+        "7831862f02": {
+          "all": {
+            "cells": 145755,
+            "positive_cells": 7668,
+            "negative_cells": 138087,
+            "surface_recall": 0.9990871152842984,
+            "negative_closure": 0.278244874608037,
+            "precision": 0.07138065333656336,
+            "kept_fraction": 0.7363452368700902
+          },
+          "in_frustum": {
+            "cells": 125028,
+            "positive_cells": 7552,
+            "negative_cells": 117476,
+            "surface_recall": 0.999073093220339,
+            "negative_closure": 0.3270625489461677,
+            "precision": 0.0871257173870368,
+            "kept_fraction": 0.6926368493457465
+          },
+          "near_surface": {
+            "cells": 44371,
+            "positive_cells": 7668,
+            "negative_cells": 36703,
+            "surface_recall": 0.9990871152842984,
+            "negative_closure": 0.007846770018799553,
+            "precision": 0.1738134131953898,
+            "kept_fraction": 0.9933515133758536
+          }
+        },
+        "bde1e479ad": {
+          "all": {
+            "cells": 547785,
+            "positive_cells": 23976,
+            "negative_cells": 523809,
+            "surface_recall": 0.9969135802469136,
+            "negative_closure": 0.11213056667602123,
+            "precision": 0.0488817447073067,
+            "kept_fraction": 0.8926421862592075
+          },
+          "in_frustum": {
+            "cells": 474806,
+            "positive_cells": 23783,
+            "negative_cells": 451023,
+            "surface_recall": 0.996888533826683,
+            "negative_closure": 0.12962753562456902,
+            "precision": 0.05695623241813547,
+            "kept_fraction": 0.8767096456236863
+          },
+          "near_surface": {
+            "cells": 146051,
+            "positive_cells": 23976,
+            "negative_cells": 122075,
+            "surface_recall": 0.9969135802469136,
+            "negative_closure": 0.00557034609870981,
+            "precision": 0.16450442885950844,
+            "kept_fraction": 0.9948374198054104
+          }
+        },
+        "38d58a7a31": {
+          "all": {
+            "cells": 429525,
+            "positive_cells": 16835,
+            "negative_cells": 412690,
+            "surface_recall": 0.9961389961389961,
+            "negative_closure": 0.21945285807749157,
+            "precision": 0.04948449957803915,
+            "kept_fraction": 0.7889971480123392
+          },
+          "in_frustum": {
+            "cells": 301218,
+            "positive_cells": 16629,
+            "negative_cells": 284589,
+            "surface_recall": 0.9961513019423898,
+            "negative_closure": 0.3001837737930841,
+            "precision": 0.07678757677598795,
+            "kept_fraction": 0.7161756601531117
+          },
+          "near_surface": {
+            "cells": 102829,
+            "positive_cells": 16835,
+            "negative_cells": 85994,
+            "surface_recall": 0.9961389961389961,
+            "negative_closure": 0.03711886875828546,
+            "precision": 0.16842084120033746,
+            "kept_fraction": 0.9683260558791781
+          }
+        },
+        "5ee7c22ba0": {
+          "all": {
+            "cells": 17052,
+            "positive_cells": 2044,
+            "negative_cells": 15008,
+            "surface_recall": 1.0,
+            "negative_closure": 0.007062899786780384,
+            "precision": 0.12061843502891538,
+            "kept_fraction": 0.9937837203847056
+          },
+          "in_frustum": {
+            "cells": 14312,
+            "positive_cells": 1975,
+            "negative_cells": 12337,
+            "surface_recall": 1.0,
+            "negative_closure": 0.008592040204263598,
+            "precision": 0.1390257637617908,
+            "kept_fraction": 0.992593627724986
+          },
+          "near_surface": {
+            "cells": 10239,
+            "positive_cells": 2044,
+            "negative_cells": 8195,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1996288700068366,
+            "kept_fraction": 1.0
+          }
+        },
+        "f9f95681fd": {
+          "all": {
+            "cells": 8424,
+            "positive_cells": 999,
+            "negative_cells": 7425,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.11858974358974358,
+            "kept_fraction": 1.0
+          },
+          "in_frustum": {
+            "cells": 6119,
+            "positive_cells": 938,
+            "negative_cells": 5181,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1532930217355777,
+            "kept_fraction": 1.0
+          },
+          "near_surface": {
+            "cells": 5331,
+            "positive_cells": 999,
+            "negative_cells": 4332,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.18739448508722567,
+            "kept_fraction": 1.0
+          }
+        },
+        "3864514494": {
+          "all": {
+            "cells": 106260,
+            "positive_cells": 5398,
+            "negative_cells": 100862,
+            "surface_recall": 1.0,
+            "negative_closure": 0.07235628879062482,
+            "precision": 0.054546189446454195,
+            "kept_fraction": 0.9313194052324487
+          },
+          "in_frustum": {
+            "cells": 71875,
+            "positive_cells": 5262,
+            "negative_cells": 66613,
+            "surface_recall": 1.0,
+            "negative_closure": 0.10922792848242835,
+            "precision": 0.08145636929364232,
+            "kept_fraction": 0.8987686956521739
+          },
+          "near_surface": {
+            "cells": 30279,
+            "positive_cells": 5398,
+            "negative_cells": 24881,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0003215304851091194,
+            "precision": 0.17832248686862012,
+            "kept_fraction": 0.9997357904818521
+          }
+        },
+        "40aec5fffa": {
+          "all": {
+            "cells": 68250,
+            "positive_cells": 4551,
+            "negative_cells": 63699,
+            "surface_recall": 0.998022412656559,
+            "negative_closure": 0.07453806182200662,
+            "precision": 0.07153544485218843,
+            "kept_fraction": 0.9303003663003663
+          },
+          "in_frustum": {
+            "cells": 51216,
+            "positive_cells": 4444,
+            "negative_cells": 46772,
+            "surface_recall": 0.9979747974797479,
+            "negative_closure": 0.101513726160951,
+            "precision": 0.0954605135711057,
+            "kept_fraction": 0.9071188691034052
+          },
+          "near_surface": {
+            "cells": 25137,
+            "positive_cells": 4551,
+            "negative_cells": 20586,
+            "surface_recall": 0.998022412656559,
+            "negative_closure": 0.011755562032449237,
+            "precision": 0.182512255886844,
+            "kept_fraction": 0.9900147193380276
+          }
+        },
+        "13c3e046d7": {
+          "all": {
+            "cells": 171000,
+            "positive_cells": 7641,
+            "negative_cells": 163359,
+            "surface_recall": 0.9973825415521529,
+            "negative_closure": 0.25224199462533436,
+            "precision": 0.0587251683696272,
+            "kept_fraction": 0.7589122807017544
+          },
+          "in_frustum": {
+            "cells": 129695,
+            "positive_cells": 7464,
+            "negative_cells": 122231,
+            "surface_recall": 0.9973204715969989,
+            "negative_closure": 0.3371157889569749,
+            "precision": 0.08414246798313534,
+            "kept_fraction": 0.6821311538609816
+          },
+          "near_surface": {
+            "cells": 45045,
+            "positive_cells": 7641,
+            "negative_cells": 37404,
+            "surface_recall": 0.9973825415521529,
+            "negative_closure": 0.016201475777991657,
+            "precision": 0.1715707242396272,
+            "kept_fraction": 0.9861027861027861
+          }
+        },
+        "e398684d27": {
+          "all": {
+            "cells": 68040,
+            "positive_cells": 4209,
+            "negative_cells": 63831,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0018172988046560449,
+            "precision": 0.0619663152935634,
+            "kept_fraction": 0.9982951205173427
+          },
+          "in_frustum": {
+            "cells": 44794,
+            "positive_cells": 4075,
+            "negative_cells": 40719,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0028487929467816008,
+            "precision": 0.09120820090424818,
+            "kept_fraction": 0.9974103674599276
+          },
+          "near_surface": {
+            "cells": 26701,
+            "positive_cells": 4209,
+            "negative_cells": 22492,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1576345455226396,
+            "kept_fraction": 1.0
+          }
+        },
+        "a8bf42d646": {
+          "all": {
+            "cells": 160356,
+            "positive_cells": 9577,
+            "negative_cells": 150779,
+            "surface_recall": 0.99968674950402,
+            "negative_closure": 0.1011745667500116,
+            "precision": 0.06598299080621373,
+            "kept_fraction": 0.9048492105066228
+          },
+          "in_frustum": {
+            "cells": 125042,
+            "positive_cells": 9431,
+            "negative_cells": 115611,
+            "surface_recall": 0.9996819001166366,
+            "negative_closure": 0.13194246222245287,
+            "precision": 0.08587694129434804,
+            "kept_fraction": 0.8779849970409942
+          },
+          "near_surface": {
+            "cells": 54243,
+            "positive_cells": 9577,
+            "negative_cells": 44666,
+            "surface_recall": 0.99968674950402,
+            "negative_closure": 0.009022522724219764,
+            "precision": 0.1778330887679477,
+            "kept_fraction": 0.9925151632468706
+          }
+        },
+        "45b0dac5e3": {
+          "all": {
+            "cells": 14812,
+            "positive_cells": 2027,
+            "negative_cells": 12785,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00046929996089166995,
+            "precision": 0.13690395785492368,
+            "kept_fraction": 0.9995949230353767
+          },
+          "in_frustum": {
+            "cells": 11659,
+            "positive_cells": 1966,
+            "negative_cells": 9693,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0006190034045187249,
+            "precision": 0.16871191967733631,
+            "kept_fraction": 0.9994853761042971
+          },
+          "near_surface": {
+            "cells": 10077,
+            "positive_cells": 2027,
+            "negative_cells": 8050,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00037267080745341616,
+            "precision": 0.2012110383164582,
+            "kept_fraction": 0.9997022923489134
+          }
+        },
+        "31a2c91c43": {
+          "all": {
+            "cells": 15750,
+            "positive_cells": 1667,
+            "negative_cells": 14083,
+            "surface_recall": 1.0,
+            "negative_closure": 0.019385074202939716,
+            "precision": 0.10770821218582413,
+            "kept_fraction": 0.9826666666666667
+          },
+          "in_frustum": {
+            "cells": 11319,
+            "positive_cells": 1601,
+            "negative_cells": 9718,
+            "surface_recall": 1.0,
+            "negative_closure": 0.028092200041160732,
+            "precision": 0.14493934455911642,
+            "kept_fraction": 0.9758812615955473
+          },
+          "near_surface": {
+            "cells": 8679,
+            "positive_cells": 1667,
+            "negative_cells": 7012,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1920728194492453,
+            "kept_fraction": 1.0
+          }
+        },
+        "e7af285f7d": {
+          "all": {
+            "cells": 35280,
+            "positive_cells": 931,
+            "negative_cells": 34349,
+            "surface_recall": 0.9978517722878625,
+            "negative_closure": 0.13636495967859327,
+            "precision": 0.030365431130286984,
+            "kept_fraction": 0.8671768707482993
+          },
+          "in_frustum": {
+            "cells": 28793,
+            "positive_cells": 869,
+            "negative_cells": 27924,
+            "surface_recall": 0.997698504027618,
+            "negative_closure": 0.16774101131643032,
+            "precision": 0.03596465756834115,
+            "kept_fraction": 0.83725210988782
+          },
+          "near_surface": {
+            "cells": 7243,
+            "positive_cells": 931,
+            "negative_cells": 6312,
+            "surface_recall": 0.9978517722878625,
+            "negative_closure": 0.023922686945500635,
+            "precision": 0.13102961918194642,
+            "kept_fraction": 0.9788761562888306
+          }
+        },
+        "286b55a2bf": {
+          "all": {
+            "cells": 16704,
+            "positive_cells": 1868,
+            "negative_cells": 14836,
+            "surface_recall": 0.9908993576017131,
+            "negative_closure": 0.038487462928012944,
+            "precision": 0.1148548026805659,
+            "kept_fraction": 0.9647988505747126
+          },
+          "in_frustum": {
+            "cells": 13448,
+            "positive_cells": 1818,
+            "negative_cells": 11630,
+            "surface_recall": 0.9906490649064906,
+            "negative_closure": 0.04909716251074807,
+            "precision": 0.1400466562986003,
+            "kept_fraction": 0.9562760261748959
+          },
+          "near_surface": {
+            "cells": 9994,
+            "positive_cells": 1868,
+            "negative_cells": 8126,
+            "surface_recall": 0.9908993576017131,
+            "negative_closure": 0.01993600787595373,
+            "precision": 0.18858889454915945,
+            "kept_fraction": 0.9820892535521313
+          }
+        },
+        "7bc286c1b6": {
+          "all": {
+            "cells": 21000,
+            "positive_cells": 1439,
+            "negative_cells": 19561,
+            "surface_recall": 1.0,
+            "negative_closure": 0.007566075354020756,
+            "precision": 0.06901016689046614,
+            "kept_fraction": 0.9929523809523809
+          },
+          "in_frustum": {
+            "cells": 13541,
+            "positive_cells": 1353,
+            "negative_cells": 12188,
+            "surface_recall": 1.0,
+            "negative_closure": 0.012143091565474237,
+            "precision": 0.10102292242216084,
+            "kept_fraction": 0.9890702311498413
+          },
+          "near_surface": {
+            "cells": 9677,
+            "positive_cells": 1439,
+            "negative_cells": 8238,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.1487031104681203,
+            "kept_fraction": 1.0
+          }
+        },
+        "f3685d06a9": {
+          "all": {
+            "cells": 27869,
+            "positive_cells": 2855,
+            "negative_cells": 25014,
+            "surface_recall": 0.9943957968476357,
+            "negative_closure": 0.04393539617814024,
+            "precision": 0.10611497346191223,
+            "kept_fraction": 0.9599913882808856
+          },
+          "in_frustum": {
+            "cells": 24811,
+            "positive_cells": 2812,
+            "negative_cells": 21999,
+            "surface_recall": 0.9943100995732574,
+            "negative_closure": 0.049956816218919044,
+            "precision": 0.11799459824442944,
+            "kept_fraction": 0.9550602555318206
+          },
+          "near_surface": {
+            "cells": 17111,
+            "positive_cells": 2855,
+            "negative_cells": 14256,
+            "surface_recall": 0.9943957968476357,
+            "negative_closure": 0.013397867564534231,
+            "precision": 0.16794841457643161,
+            "kept_fraction": 0.987902518847525
+          }
+        },
+        "b0a08200c9": {
+          "all": {
+            "cells": 103635,
+            "positive_cells": 5887,
+            "negative_cells": 97748,
+            "surface_recall": 1.0,
+            "negative_closure": 0.06257928550967795,
+            "precision": 0.06036834225476322,
+            "kept_fraction": 0.940975539151831
+          },
+          "in_frustum": {
+            "cells": 69006,
+            "positive_cells": 5720,
+            "negative_cells": 63286,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0960243971810511,
+            "precision": 0.09089608924343308,
+            "kept_fraction": 0.9119351940410979
+          },
+          "near_surface": {
+            "cells": 31986,
+            "positive_cells": 5887,
+            "negative_cells": 26099,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00019157822138779265,
+            "precision": 0.18407804634001437,
+            "kept_fraction": 0.9998436816107047
+          }
+        },
+        "825d228aec": {
+          "all": {
+            "cells": 18538,
+            "positive_cells": 2147,
+            "negative_cells": 16391,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0012811908974437191,
+            "precision": 0.11594750769563104,
+            "kept_fraction": 0.9988671917143166
+          },
+          "in_frustum": {
+            "cells": 12560,
+            "positive_cells": 2076,
+            "negative_cells": 10484,
+            "surface_recall": 1.0,
+            "negative_closure": 0.002003052270125906,
+            "precision": 0.1655634420607704,
+            "kept_fraction": 0.998328025477707
+          },
+          "near_surface": {
+            "cells": 10989,
+            "positive_cells": 2147,
+            "negative_cells": 8842,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00022619316896629722,
+            "precision": 0.19541276053517795,
+            "kept_fraction": 0.9998179998179998
+          }
+        },
+        "a980334473": {
+          "all": {
+            "cells": 15180,
+            "positive_cells": 2038,
+            "negative_cells": 13142,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0007609191903819814,
+            "precision": 0.13434410019775875,
+            "kept_fraction": 0.9993412384716732
+          },
+          "in_frustum": {
+            "cells": 11686,
+            "positive_cells": 1975,
+            "negative_cells": 9711,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0010297600659046442,
+            "precision": 0.16915039397053785,
+            "kept_fraction": 0.9991442752010953
+          },
+          "near_surface": {
+            "cells": 10930,
+            "positive_cells": 2038,
+            "negative_cells": 8892,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.18645928636779505,
+            "kept_fraction": 1.0
+          }
+        },
+        "f2dc06b1d2": {
+          "all": {
+            "cells": 19380,
+            "positive_cells": 2029,
+            "negative_cells": 17351,
+            "surface_recall": 1.0,
+            "negative_closure": 0.015272894934009568,
+            "precision": 0.10614700496991891,
+            "kept_fraction": 0.9863261093911249
+          },
+          "in_frustum": {
+            "cells": 14686,
+            "positive_cells": 1952,
+            "negative_cells": 12734,
+            "surface_recall": 1.0,
+            "negative_closure": 0.02081042877336265,
+            "precision": 0.13535815824145345,
+            "kept_fraction": 0.9819556039765763
+          },
+          "near_surface": {
+            "cells": 10784,
+            "positive_cells": 2029,
+            "negative_cells": 8755,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0002284408909194746,
+            "precision": 0.18818401038768318,
+            "kept_fraction": 0.9998145400593472
+          }
+        },
+        "5942004064": {
+          "all": {
+            "cells": 301125,
+            "positive_cells": 10583,
+            "negative_cells": 290542,
+            "surface_recall": 0.9999055088349239,
+            "negative_closure": 0.04603809432027039,
+            "precision": 0.03677523388520511,
+            "kept_fraction": 0.9555765877957659
+          },
+          "in_frustum": {
+            "cells": 182026,
+            "positive_cells": 10416,
+            "negative_cells": 171610,
+            "surface_recall": 0.9999039938556068,
+            "negative_closure": 0.07619602587261814,
+            "precision": 0.061645822111998295,
+            "kept_fraction": 0.928158614703394
+          },
+          "near_surface": {
+            "cells": 55758,
+            "positive_cells": 10583,
+            "negative_cells": 45175,
+            "surface_recall": 0.9999055088349239,
+            "negative_closure": 0.0021472053126729384,
+            "precision": 0.19011857707509883,
+            "kept_fraction": 0.9982424046773557
+          }
+        },
+        "25f3b7a318": {
+          "all": {
+            "cells": 41250,
+            "positive_cells": 3454,
+            "negative_cells": 37796,
+            "surface_recall": 1.0,
+            "negative_closure": 0.07627791300666738,
+            "precision": 0.09002528214350874,
+            "kept_fraction": 0.9301090909090909
+          },
+          "in_frustum": {
+            "cells": 33751,
+            "positive_cells": 3354,
+            "negative_cells": 30397,
+            "surface_recall": 1.0,
+            "negative_closure": 0.09484488600848769,
+            "precision": 0.10865621355449008,
+            "kept_fraction": 0.9145803087315931
+          },
+          "near_surface": {
+            "cells": 17646,
+            "positive_cells": 3454,
+            "negative_cells": 14192,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.19573841097132494,
+            "kept_fraction": 1.0
+          }
+        },
+        "bcd2436daf": {
+          "all": {
+            "cells": 71484,
+            "positive_cells": 4860,
+            "negative_cells": 66624,
+            "surface_recall": 0.9781893004115226,
+            "negative_closure": 0.16094800672430357,
+            "precision": 0.07837770999917566,
+            "kept_fraction": 0.8485115550332941
+          },
+          "in_frustum": {
+            "cells": 55446,
+            "positive_cells": 4771,
+            "negative_cells": 50675,
+            "surface_recall": 0.9777824355481031,
+            "negative_closure": 0.21160335471139616,
+            "precision": 0.10455655915906494,
+            "kept_fraction": 0.8046928543086967
+          },
+          "near_surface": {
+            "cells": 26668,
+            "positive_cells": 4860,
+            "negative_cells": 21808,
+            "surface_recall": 0.9781893004115226,
+            "negative_closure": 0.03934336023477623,
+            "precision": 0.18495175848117024,
+            "kept_fraction": 0.9638518074096295
+          }
+        },
+        "f3d64c30f8": {
+          "all": {
+            "cells": 100418,
+            "positive_cells": 5529,
+            "negative_cells": 94889,
+            "surface_recall": 1.0,
+            "negative_closure": 0.10245655450052166,
+            "precision": 0.06096189468113258,
+            "kept_fraction": 0.9031846880041426
+          },
+          "in_frustum": {
+            "cells": 70950,
+            "positive_cells": 5393,
+            "negative_cells": 65557,
+            "surface_recall": 1.0,
+            "negative_closure": 0.1482984273227878,
+            "precision": 0.08808061671130855,
+            "kept_fraction": 0.8629739252995067
+          },
+          "near_surface": {
+            "cells": 34958,
+            "positive_cells": 5529,
+            "negative_cells": 29429,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0048251724489449185,
+            "precision": 0.15880629595588236,
+            "kept_fraction": 0.9959379827221236
+          }
+        },
+        "0d2ee665be": {
+          "all": {
+            "cells": 158769,
+            "positive_cells": 6590,
+            "negative_cells": 152179,
+            "surface_recall": 1.0,
+            "negative_closure": 0.05131457034150573,
+            "precision": 0.043653948065712773,
+            "kept_fraction": 0.9508153354874063
+          },
+          "in_frustum": {
+            "cells": 90378,
+            "positive_cells": 6375,
+            "negative_cells": 84003,
+            "surface_recall": 1.0,
+            "negative_closure": 0.04333178576955585,
+            "precision": 0.0734971984597293,
+            "kept_fraction": 0.9597247117661378
+          },
+          "near_surface": {
+            "cells": 37036,
+            "positive_cells": 6590,
+            "negative_cells": 30446,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.17793498217950102,
+            "kept_fraction": 1.0
+          }
+        },
+        "3db0a1c8f3": {
+          "all": {
+            "cells": 40608,
+            "positive_cells": 4125,
+            "negative_cells": 36483,
+            "surface_recall": 1.0,
+            "negative_closure": 0.06679823479428774,
+            "precision": 0.10806633308008698,
+            "kept_fraction": 0.93998719464145
+          },
+          "in_frustum": {
+            "cells": 32849,
+            "positive_cells": 4050,
+            "negative_cells": 28799,
+            "surface_recall": 1.0,
+            "negative_closure": 0.08462099378450641,
+            "precision": 0.13317111666447454,
+            "kept_fraction": 0.9258120490730312
+          },
+          "near_surface": {
+            "cells": 21239,
+            "positive_cells": 4125,
+            "negative_cells": 17114,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0014023606404113592,
+            "precision": 0.19443789771388167,
+            "kept_fraction": 0.9988700032958238
+          }
+        },
+        "ac48a9b736": {
+          "all": {
+            "cells": 612612,
+            "positive_cells": 32493,
+            "negative_cells": 580119,
+            "surface_recall": 0.7223094204905672,
+            "negative_closure": 0.411344913715979,
+            "precision": 0.06430841736080667,
+            "kept_fraction": 0.5957441251558898
+          },
+          "in_frustum": {
+            "cells": 562808,
+            "positive_cells": 32332,
+            "negative_cells": 530476,
+            "surface_recall": 0.7209266361499443,
+            "negative_closure": 0.4498393895294038,
+            "precision": 0.07396019748949727,
+            "kept_fraction": 0.5599707182556041
+          },
+          "near_surface": {
+            "cells": 202821,
+            "positive_cells": 32493,
+            "negative_cells": 170328,
+            "surface_recall": 0.7223094204905672,
+            "negative_closure": 0.2951364426283406,
+            "precision": 0.16352210021737917,
+            "kept_fraction": 0.7076584771793848
+          }
+        },
+        "c5439f4607": {
+          "all": {
+            "cells": 69920,
+            "positive_cells": 6650,
+            "negative_cells": 63270,
+            "surface_recall": 0.9977443609022556,
+            "negative_closure": 0.04150466255729414,
+            "precision": 0.09861918280592756,
+            "kept_fraction": 0.9622282608695653
+          },
+          "in_frustum": {
+            "cells": 58837,
+            "positive_cells": 6566,
+            "negative_cells": 52271,
+            "surface_recall": 0.9977155041120926,
+            "negative_closure": 0.05023818178339806,
+            "precision": 0.11657413339027689,
+            "kept_fraction": 0.9551132790590955
+          },
+          "near_surface": {
+            "cells": 38019,
+            "positive_cells": 6650,
+            "negative_cells": 31369,
+            "surface_recall": 0.9977443609022556,
+            "negative_closure": 0.02244253881220313,
+            "precision": 0.17788203753351206,
+            "kept_fraction": 0.9810884031668377
+          }
+        },
+        "578511c8a9": {
+          "all": {
+            "cells": 402948,
+            "positive_cells": 22628,
+            "negative_cells": 380320,
+            "surface_recall": 0.9030846738554004,
+            "negative_closure": 0.20794068153134201,
+            "precision": 0.06352764159653808,
+            "kept_fraction": 0.7982940726843166
+          },
+          "in_frustum": {
+            "cells": 358428,
+            "positive_cells": 22481,
+            "negative_cells": 335947,
+            "surface_recall": 0.9024509585872514,
+            "negative_closure": 0.2354061801415104,
+            "precision": 0.07320197293172313,
+            "kept_fraction": 0.7732403718459495
+          },
+          "near_surface": {
+            "cells": 139704,
+            "positive_cells": 22628,
+            "negative_cells": 117076,
+            "surface_recall": 0.9030846738554004,
+            "negative_closure": 0.15311421640643685,
+            "precision": 0.17088263578207968,
+            "kept_fraction": 0.8559883754223215
+          }
+        },
+        "d755b3d9d8": {
+          "all": {
+            "cells": 63455,
+            "positive_cells": 4211,
+            "negative_cells": 59244,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0037303355614070623,
+            "precision": 0.06659392099187146,
+            "kept_fraction": 0.9965172169253802
+          },
+          "in_frustum": {
+            "cells": 35778,
+            "positive_cells": 4075,
+            "negative_cells": 31703,
+            "surface_recall": 1.0,
+            "negative_closure": 0.005236097530202189,
+            "precision": 0.11442772099292374,
+            "kept_fraction": 0.9953602772653586
+          },
+          "near_surface": {
+            "cells": 22491,
+            "positive_cells": 4211,
+            "negative_cells": 18280,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0,
+            "precision": 0.18723044773464942,
+            "kept_fraction": 1.0
+          }
+        },
+        "99fa5c25e1": {
+          "all": {
+            "cells": 94350,
+            "positive_cells": 3756,
+            "negative_cells": 90594,
+            "surface_recall": 1.0,
+            "negative_closure": 0.1258692628650904,
+            "precision": 0.04528192701363521,
+            "kept_fraction": 0.8791414944356121
+          },
+          "in_frustum": {
+            "cells": 68991,
+            "positive_cells": 3684,
+            "negative_cells": 65307,
+            "surface_recall": 1.0,
+            "negative_closure": 0.16059534200009187,
+            "precision": 0.06297112968565714,
+            "kept_fraction": 0.8479801713266948
+          },
+          "near_surface": {
+            "cells": 25692,
+            "positive_cells": 3756,
+            "negative_cells": 21936,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0008205689277899343,
+            "precision": 0.1462958635195139,
+            "kept_fraction": 0.9992993928070995
+          }
+        },
+        "09c1414f1b": {
+          "all": {
+            "cells": 229152,
+            "positive_cells": 9558,
+            "negative_cells": 219594,
+            "surface_recall": 0.9641138313454698,
+            "negative_closure": 0.31925735675838135,
+            "precision": 0.058064800695643404,
+            "kept_fraction": 0.6925621421589163
+          },
+          "in_frustum": {
+            "cells": 187298,
+            "positive_cells": 9405,
+            "negative_cells": 177893,
+            "surface_recall": 0.9635300372142478,
+            "negative_closure": 0.393922189181137,
+            "precision": 0.07753317533517569,
+            "kept_fraction": 0.6240269517026343
+          },
+          "near_surface": {
+            "cells": 56917,
+            "positive_cells": 9558,
+            "negative_cells": 47359,
+            "surface_recall": 0.9641138313454698,
+            "negative_closure": 0.07164424924512765,
+            "precision": 0.17327617006073598,
+            "kept_fraction": 0.93436056011385
+          }
+        },
+        "5f99900f09": {
+          "all": {
+            "cells": 164346,
+            "positive_cells": 6589,
+            "negative_cells": 157757,
+            "surface_recall": 1.0,
+            "negative_closure": 0.1784072972990105,
+            "precision": 0.04837703100564607,
+            "kept_fraction": 0.8287454516690397
+          },
+          "in_frustum": {
+            "cells": 118627,
+            "positive_cells": 6429,
+            "negative_cells": 112198,
+            "surface_recall": 1.0,
+            "negative_closure": 0.2508066097434892,
+            "precision": 0.07104887994960601,
+            "kept_fraction": 0.7627858750537398
+          },
+          "near_surface": {
+            "cells": 36470,
+            "positive_cells": 6589,
+            "negative_cells": 29881,
+            "surface_recall": 1.0,
+            "negative_closure": 0.00023426257488035876,
+            "precision": 0.1807037270657927,
+            "kept_fraction": 0.9998080614203455
+          }
+        },
+        "9071e139d9": {
+          "all": {
+            "cells": 102960,
+            "positive_cells": 5030,
+            "negative_cells": 97930,
+            "surface_recall": 1.0,
+            "negative_closure": 0.13218625548861432,
+            "precision": 0.05587957562628451,
+            "kept_fraction": 0.8742715617715617
+          },
+          "in_frustum": {
+            "cells": 84284,
+            "positive_cells": 4925,
+            "negative_cells": 79359,
+            "surface_recall": 1.0,
+            "negative_closure": 0.16311949495331343,
+            "precision": 0.06903657186111384,
+            "kept_fraction": 0.8464121304162119
+          },
+          "near_surface": {
+            "cells": 29487,
+            "positive_cells": 5030,
+            "negative_cells": 24457,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0006950975180929795,
+            "precision": 0.17068204954190702,
+            "kept_fraction": 0.9994234747515854
+          }
+        },
+        "6115eddb86": {
+          "all": {
+            "cells": 55440,
+            "positive_cells": 3926,
+            "negative_cells": 51514,
+            "surface_recall": 0.9949057564951604,
+            "negative_closure": 0.11319253018596886,
+            "precision": 0.0787674685918248,
+            "kept_fraction": 0.894462481962482
+          },
+          "in_frustum": {
+            "cells": 44830,
+            "positive_cells": 3826,
+            "negative_cells": 41004,
+            "surface_recall": 0.9947726084683742,
+            "negative_closure": 0.14220563847429518,
+            "precision": 0.09764232022371021,
+            "kept_fraction": 0.8694847200535356
+          },
+          "near_surface": {
+            "cells": 23584,
+            "positive_cells": 3926,
+            "negative_cells": 19658,
+            "surface_recall": 0.9949057564951604,
+            "negative_closure": 0.027774951673618882,
+            "precision": 0.16969328351724738,
+            "kept_fraction": 0.9760006784260515
+          }
+        },
+        "27dd4da69e": {
+          "all": {
+            "cells": 248040,
+            "positive_cells": 2552,
+            "negative_cells": 245488,
+            "surface_recall": 0.9036050156739812,
+            "negative_closure": 0.36341083881900543,
+            "precision": 0.014541464614298056,
+            "kept_fraction": 0.6393363973552653
+          },
+          "in_frustum": {
+            "cells": 166292,
+            "positive_cells": 2441,
+            "negative_cells": 163851,
+            "surface_recall": 0.8992216304793118,
+            "negative_closure": 0.5437134957980116,
+            "precision": 0.02852205098885106,
+            "kept_fraction": 0.46278834820676884
+          },
+          "near_surface": {
+            "cells": 18642,
+            "positive_cells": 2552,
+            "negative_cells": 16090,
+            "surface_recall": 0.9036050156739812,
+            "negative_closure": 0.1886886264760721,
+            "precision": 0.15013020833333332,
+            "kept_fraction": 0.823945928548439
+          }
+        },
+        "c49a8c6cff": {
+          "all": {
+            "cells": 39960,
+            "positive_cells": 3072,
+            "negative_cells": 36888,
+            "surface_recall": 1.0,
+            "negative_closure": 0.03898286705703752,
+            "precision": 0.07974663828461659,
+            "kept_fraction": 0.964014014014014
+          },
+          "in_frustum": {
+            "cells": 30069,
+            "positive_cells": 2983,
+            "negative_cells": 27086,
+            "surface_recall": 1.0,
+            "negative_closure": 0.053090157276821974,
+            "precision": 0.10418776850267193,
+            "kept_fraction": 0.9521766603478665
+          },
+          "near_surface": {
+            "cells": 17195,
+            "positive_cells": 3072,
+            "negative_cells": 14123,
+            "surface_recall": 1.0,
+            "negative_closure": 0.0012037102598598031,
+            "precision": 0.17883339154732797,
+            "kept_fraction": 0.9990113405059611
+          }
+        }
+      },
+      "calibration": {
+        "recall_0.95": {
+          "all": {
+            "cells": 3827679,
+            "positive_cells": 181746,
+            "negative_cells": 3645933,
+            "surface_recall": 0.9500016506553102,
+            "negative_closure": 0.2896792124265586,
+            "precision": 0.0625023303665128,
+            "kept_fraction": 0.7217013234390867,
+            "auc": 0.8004883291568877,
+            "average_precision": 0.2024866162505421
+          },
+          "in_frustum": {
+            "cells": 2892629,
+            "positive_cells": 178245,
+            "negative_cells": 2714384,
+            "surface_recall": 0.9490420488653258,
+            "negative_closure": 0.34056566793791887,
+            "precision": 0.08634591040875494,
+            "kept_fraction": 0.677280079816665,
+            "auc": 0.7722241207512068,
+            "average_precision": 0.20795415340916695
+          },
+          "near_surface": {
+            "cells": 1057723,
+            "positive_cells": 181746,
+            "negative_cells": 875977,
+            "surface_recall": 0.9500016506553102,
+            "negative_closure": 0.09356410042729432,
+            "precision": 0.17861103410036042,
+            "kept_fraction": 0.9139216978358228,
+            "auc": 0.6368982699304458,
+            "average_precision": 0.285785142343625
+          }
+        },
+        "recall_0.99": {
+          "all": {
+            "cells": 3827679,
+            "positive_cells": 181746,
+            "negative_cells": 3645933,
+            "surface_recall": 0.990002531004809,
+            "negative_closure": 0.1719507736428508,
+            "precision": 0.05624642655178698,
+            "kept_fraction": 0.8357390993340873,
+            "auc": 0.8004883291568877,
+            "average_precision": 0.2024866162505421
+          },
+          "in_frustum": {
+            "cells": 2892629,
+            "positive_cells": 178245,
+            "negative_cells": 2714384,
+            "surface_recall": 0.9898117759263935,
+            "negative_closure": 0.23088111335757946,
+            "precision": 0.07792411421161399,
+            "kept_fraction": 0.78271807411182,
+            "auc": 0.7722241207512068,
+            "average_precision": 0.20795415340916695
+          },
+          "near_surface": {
+            "cells": 1057723,
+            "positive_cells": 181746,
+            "negative_cells": 875977,
+            "surface_recall": 0.990002531004809,
+            "negative_closure": 0.02909665436421276,
+            "precision": 0.1746174853311957,
+            "kept_fraction": 0.9741851127374558,
+            "auc": 0.6368982699304458,
+            "average_precision": 0.285785142343625
+          }
+        }
+      },
+      "test": {
+        "recall_0.95": {
+          "all": {
+            "cells": 6551809,
+            "positive_cells": 336092,
+            "negative_cells": 6215717,
+            "surface_recall": 0.9151720362281757,
+            "negative_closure": 0.27794540838973203,
+            "precision": 0.06413745402362006,
+            "kept_fraction": 0.7319610507571268,
+            "auc": 0.7752920493965861,
+            "average_precision": 0.1978603529169825
+          },
+          "in_frustum": {
+            "cells": 5085797,
+            "positive_cells": 330315,
+            "negative_cells": 4755482,
+            "surface_recall": 0.9137611068222757,
+            "negative_closure": 0.33677238185319597,
+            "precision": 0.08733993557490083,
+            "kept_fraction": 0.6794993980294534,
+            "auc": 0.7499189880589936,
+            "average_precision": 0.20291444175814946
+          },
+          "near_surface": {
+            "cells": 1991165,
+            "positive_cells": 336092,
+            "negative_cells": 1655073,
+            "surface_recall": 0.9151720362281757,
+            "negative_closure": 0.12393350625621952,
+            "precision": 0.1750075105147206,
+            "kept_fraction": 0.8826671822777118,
+            "auc": 0.6321986735183065,
+            "average_precision": 0.27980324218629327
+          }
+        },
+        "recall_0.99": {
+          "all": {
+            "cells": 6551809,
+            "positive_cells": 336092,
+            "negative_cells": 6215717,
+            "surface_recall": 0.9598562298418291,
+            "negative_closure": 0.1728291362042384,
+            "precision": 0.05904034728754809,
+            "kept_fraction": 0.8339773030624061,
+            "auc": 0.7752920493965861,
+            "average_precision": 0.1978603529169825
+          },
+          "in_frustum": {
+            "cells": 5085797,
+            "positive_cells": 330315,
+            "negative_cells": 4755482,
+            "surface_recall": 0.9591632229841213,
+            "negative_closure": 0.22332583742299938,
+            "precision": 0.07900334290372307,
+            "kept_fraction": 0.7885265573911031,
+            "auc": 0.7499189880589936,
+            "average_precision": 0.20291444175814946
+          },
+          "near_surface": {
+            "cells": 1991165,
+            "positive_cells": 336092,
+            "negative_cells": 1655073,
+            "surface_recall": 0.9598562298418291,
+            "negative_closure": 0.059792528788760374,
+            "precision": 0.17171338661806598,
+            "kept_fraction": 0.9435240173466287,
+            "auc": 0.6321986735183065,
+            "average_precision": 0.27980324218629327
+          }
+        }
+      },
+      "test_excluding_laser_hole_cells": {
+        "recall_0.95": {
+          "all": {
+            "cells": 5383674,
+            "positive_cells": 336092,
+            "negative_cells": 5047582,
+            "surface_recall": 0.9151720362281757,
+            "negative_closure": 0.2767338896128879,
+            "precision": 0.07770505064387051,
+            "kept_fraction": 0.7352464135086931,
+            "auc": 0.7831209650238089,
+            "average_precision": 0.24038861442203346
+          },
+          "in_frustum": {
+            "cells": 3928683,
+            "positive_cells": 330315,
+            "negative_cells": 3598368,
+            "surface_recall": 0.9137611068222757,
+            "negative_closure": 0.3532092882106555,
+            "precision": 0.11479792485984436,
+            "kept_fraction": 0.6692369936693798,
+            "auc": 0.752441343632486,
+            "average_precision": 0.2481309428548647
+          },
+          "near_surface": {
+            "cells": 1627867,
+            "positive_cells": 336092,
+            "negative_cells": 1291775,
+            "surface_recall": 0.9151720362281757,
+            "negative_closure": 0.1300512860211724,
+            "precision": 0.21488793874357254,
+            "kept_fraction": 0.8792855927419132,
+            "auc": 0.6394108908865043,
+            "average_precision": 0.33551129465087587
+          }
+        },
+        "recall_0.99": {
+          "all": {
+            "cells": 5383674,
+            "positive_cells": 336092,
+            "negative_cells": 5047582,
+            "surface_recall": 0.9598562298418291,
+            "negative_closure": 0.16881013522910573,
+            "precision": 0.07140171120641668,
+            "kept_fraction": 0.8392222485982621,
+            "auc": 0.7831209650238089,
+            "average_precision": 0.24038861442203346
+          },
+          "in_frustum": {
+            "cells": 3928683,
+            "positive_cells": 330315,
+            "negative_cells": 3598368,
+            "surface_recall": 0.9591632229841213,
+            "negative_closure": 0.23340720015295824,
+            "precision": 0.10302249302427821,
+            "kept_fraction": 0.7827836962157547,
+            "auc": 0.752441343632486,
+            "average_precision": 0.2481309428548647
+          },
+          "near_surface": {
+            "cells": 1627867,
+            "positive_cells": 336092,
+            "negative_cells": 1291775,
+            "surface_recall": 0.9598562298418291,
+            "negative_closure": 0.0640916568287821,
+            "precision": 0.21063174506376736,
+            "kept_fraction": 0.9408526617960804,
+            "auc": 0.6394108908865043,
+            "average_precision": 0.33551129465087587
+          }
+        }
+      }
+    }
+  },
+  "test_label_oracle_in_frustum_diagnostic": {
+    "warning": "thresholds chosen with VALIDATION labels; ranking diagnostic only, not deployable",
+    "camera_geometry": {
+      "recall_0.95": {
+        "cells": 5085797,
+        "positive_cells": 330315,
+        "negative_cells": 4755482,
+        "surface_recall": 0.949324129997124,
+        "negative_closure": 0.12105103120987526,
+        "precision": 0.069785877159444,
+        "kept_fraction": 0.8835197315189733
+      },
+      "recall_0.99": {
+        "cells": 5085797,
+        "positive_cells": 330315,
+        "negative_cells": 4755482,
+        "surface_recall": 0.9898278915580582,
+        "negative_closure": 0.037907198471153924,
+        "precision": 0.0666959734158546,
+        "kept_fraction": 0.9638941546428219
+      }
+    },
+    "projected_image": {
+      "recall_0.95": {
+        "cells": 5085797,
+        "positive_cells": 330315,
+        "negative_cells": 4755482,
+        "surface_recall": 0.9491364303770643,
+        "negative_closure": 0.2503708351750674,
+        "precision": 0.08083670374245622,
+        "kept_fraction": 0.7625868669158442
+      },
+      "recall_0.99": {
+        "cells": 5085797,
+        "positive_cells": 330315,
+        "negative_cells": 4755482,
+        "surface_recall": 0.9898278915580582,
+        "negative_closure": 0.11229440044142738,
+        "precision": 0.07188315598615168,
+        "kept_fraction": 0.8943382915204834
+      }
+    }
+  },
+  "elapsed_seconds": 75.6963115753606
+}

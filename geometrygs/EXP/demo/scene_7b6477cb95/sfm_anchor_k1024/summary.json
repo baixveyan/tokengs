@@ -1,0 +1,19 @@
+{
+  "name": "sfm_anchor_k1024",
+  "scene_id": "7b6477cb95",
+  "psnr": 30.036913633346558,
+  "ssim": 0.9453146755695343,
+  "lpips": 0.15202181786298752,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "checkpoint_sha256": "6d44ca17c89288626662ffabc190771c44bfcb59b003329a7f4d1295527b3ca1",
+  "completed_at": "2026-11-06T04:29:34.440817+00:00"
+}

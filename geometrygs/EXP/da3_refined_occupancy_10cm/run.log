@@ -1,0 +1,796 @@
+=== DA3 refined occupancy started 2026-11-07T16:07:49+08:00; GPU=1
+Command: CUDA_VISIBLE_DEVICES=1 python -u scripts/check_da3_refined_occupancy.py --output EXP/da3_refined_occupancy_10cm --labels /mnt/disk/xveyan/workspace_scannetpp/geometrygs_grid_occupancy_10cm --workspace /mnt/disk/xveyan/workspace_scannetpp/geometrygs_da3_refined_occupancy_10cm --demo-scene fb5a96b1a2
+[97m[INFO ] using SwiGLU layer as FFN[0m
+[93m[WARN ] Dependency 'e3nn' not found. Required for rotating the camera space SH coeff[0m
+Loading weights from local directory
+[97m[INFO ] Processed Images Done taking 0.0324854850769043 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 1.1056337356567383 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.004717350006103516 seconds[0m
+[1/50] 7b6477cb95 (da3_maybe_seen) SfM pts 1944 obs 3055 scale sfm/oracle 1.007 (camera/oracle 1.027) | kept mv1 0.822 mvv 0.957 | IoU camera_all 0.445, camera_edge 0.502, camera_edge_mvv 0.502, sfm_global_edge 0.627, sfm_global_edge_mvv 0.628
+[97m[INFO ] Processed Images Done taking 0.02677178382873535 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8776249885559082 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0008938312530517578 seconds[0m
+[2/50] c50d2d1d42 (da3_maybe_seen) SfM pts 809 obs 1237 scale sfm/oracle 0.990 (camera/oracle 1.069) | kept mv1 0.576 mvv 0.944 | IoU camera_all 0.200, camera_edge 0.193, camera_edge_mvv 0.191, sfm_global_edge 0.430, sfm_global_edge_mvv 0.436
+[97m[INFO ] Processed Images Done taking 0.028842926025390625 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8772616386413574 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007593631744384766 seconds[0m
+[3/50] cc5237fd77 (da3_held_out) SfM pts 2841 obs 5038 scale sfm/oracle 0.997 (camera/oracle 0.961) | kept mv1 0.927 mvv 0.969 | IoU camera_all 0.397, camera_edge 0.428, camera_edge_mvv 0.428, sfm_global_edge 0.654, sfm_global_edge_mvv 0.656
+[97m[INFO ] Processed Images Done taking 0.027881860733032227 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8781440258026123 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007753372192382812 seconds[0m
+[4/50] acd95847c5 (da3_held_out) SfM pts 2503 obs 5653 scale sfm/oracle 1.030 (camera/oracle 1.034) | kept mv1 0.937 mvv 0.975 | IoU camera_all 0.288, camera_edge 0.295, camera_edge_mvv 0.295, sfm_global_edge 0.296, sfm_global_edge_mvv 0.296
+[97m[INFO ] Processed Images Done taking 0.027367353439331055 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.879037618637085 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007669925689697266 seconds[0m
+[5/50] fb5a96b1a2 (da3_held_out) SfM pts 1052 obs 1584 scale sfm/oracle 0.994 (camera/oracle 0.984) | kept mv1 0.925 mvv 0.950 | IoU camera_all 0.332, camera_edge 0.356, camera_edge_mvv 0.356, sfm_global_edge 0.387, sfm_global_edge_mvv 0.387
+[97m[INFO ] Processed Images Done taking 0.02733016014099121 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8791952133178711 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007755756378173828 seconds[0m
+[6/50] a24f64f7fb (da3_maybe_seen) SfM pts 3248 obs 7559 scale sfm/oracle 1.015 (camera/oracle 0.985) | kept mv1 0.938 mvv 0.970 | IoU camera_all 0.347, camera_edge 0.353, camera_edge_mvv 0.353, sfm_global_edge 0.479, sfm_global_edge_mvv 0.481
+[97m[INFO ] Processed Images Done taking 0.02684307098388672 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8794562816619873 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007548332214355469 seconds[0m
+[7/50] 1ada7a0617 (da3_held_out) SfM pts 1395 obs 2129 scale sfm/oracle 1.004 (camera/oracle 1.001) | kept mv1 0.770 mvv 0.937 | IoU camera_all 0.501, camera_edge 0.594, camera_edge_mvv 0.602, sfm_global_edge 0.588, sfm_global_edge_mvv 0.596
+[97m[INFO ] Processed Images Done taking 0.02680516242980957 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8802206516265869 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007855892181396484 seconds[0m
+[8/50] 5eb31827b7 (da3_maybe_seen) SfM pts 3660 obs 7572 scale sfm/oracle 1.011 (camera/oracle 1.098) | kept mv1 0.690 mvv 0.979 | IoU camera_all 0.145, camera_edge 0.130, camera_edge_mvv 0.129, sfm_global_edge 0.432, sfm_global_edge_mvv 0.432
+[97m[INFO ] Processed Images Done taking 0.027499914169311523 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8807415962219238 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0009188652038574219 seconds[0m
+[9/50] 3e8bba0176 (da3_held_out) SfM pts 1402 obs 2831 scale sfm/oracle 0.999 (camera/oracle 0.983) | kept mv1 0.775 mvv 0.979 | IoU camera_all 0.450, camera_edge 0.526, camera_edge_mvv 0.527, sfm_global_edge 0.527, sfm_global_edge_mvv 0.528
+[97m[INFO ] Processed Images Done taking 0.03020310401916504 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8815581798553467 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.003116607666015625 seconds[0m
+[10/50] 3f15a9266d (da3_maybe_seen) SfM pts 2691 obs 7800 scale sfm/oracle 1.004 (camera/oracle 1.456) | kept mv1 0.946 mvv 0.982 | IoU camera_all 0.004, camera_edge 0.003, camera_edge_mvv 0.003, sfm_global_edge 0.674, sfm_global_edge_mvv 0.675
+[97m[INFO ] Processed Images Done taking 0.027627944946289062 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8835656642913818 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.002348661422729492 seconds[0m
+[11/50] 21d970d8de (da3_held_out) SfM pts 451 obs 153 scale sfm/oracle 1.005 (camera/oracle 1.006) | kept mv1 0.714 mvv 0.934 | IoU camera_all 0.450, camera_edge 0.535, camera_edge_mvv 0.538, sfm_global_edge 0.537, sfm_global_edge_mvv 0.541
+[97m[INFO ] Processed Images Done taking 0.03291440010070801 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.881587028503418 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.001687765121459961 seconds[0m
+[12/50] 5748ce6f01 (da3_maybe_seen) SfM pts 2902 obs 5393 scale sfm/oracle 1.012 (camera/oracle 0.958) | kept mv1 0.907 mvv 0.965 | IoU camera_all 0.280, camera_edge 0.295, camera_edge_mvv 0.295, sfm_global_edge 0.438, sfm_global_edge_mvv 0.438
+[97m[INFO ] Processed Images Done taking 0.027822494506835938 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8825488090515137 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0012867450714111328 seconds[0m
+[13/50] c4c04e6d6c (da3_held_out) SfM pts 2157 obs 2240 scale sfm/oracle 0.995 (camera/oracle 1.010) | kept mv1 0.765 mvv 0.900 | IoU camera_all 0.367, camera_edge 0.458, camera_edge_mvv 0.456, sfm_global_edge 0.420, sfm_global_edge_mvv 0.423
+[97m[INFO ] Processed Images Done taking 0.030785322189331055 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8821535110473633 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007474422454833984 seconds[0m
+[14/50] 7831862f02 (da3_held_out) SfM pts 2229 obs 3397 scale sfm/oracle 0.984 (camera/oracle 0.993) | kept mv1 0.879 mvv 0.978 | IoU camera_all 0.495, camera_edge 0.531, camera_edge_mvv 0.531, sfm_global_edge 0.437, sfm_global_edge_mvv 0.437
+[97m[INFO ] Processed Images Done taking 0.027873516082763672 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8820912837982178 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007798671722412109 seconds[0m
+[15/50] bde1e479ad (da3_held_out) SfM pts 1279 obs 745 scale sfm/oracle 1.004 (camera/oracle 1.028) | kept mv1 0.664 mvv 0.940 | IoU camera_all 0.305, camera_edge 0.324, camera_edge_mvv 0.324, sfm_global_edge 0.497, sfm_global_edge_mvv 0.498
+[97m[INFO ] Processed Images Done taking 0.026526451110839844 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8821430206298828 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0014541149139404297 seconds[0m
+[16/50] 38d58a7a31 (da3_held_out) SfM pts 1649 obs 719 scale sfm/oracle 1.007 (camera/oracle 1.004) | kept mv1 0.865 mvv 0.921 | IoU camera_all 0.352, camera_edge 0.407, camera_edge_mvv 0.408, sfm_global_edge 0.409, sfm_global_edge_mvv 0.411
+[97m[INFO ] Processed Images Done taking 0.03497195243835449 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8828680515289307 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0010602474212646484 seconds[0m
+[17/50] 5ee7c22ba0 (da3_maybe_seen) SfM pts 1604 obs 2742 scale sfm/oracle 0.988 (camera/oracle 1.124) | kept mv1 0.858 mvv 0.912 | IoU camera_all 0.125, camera_edge 0.104, camera_edge_mvv 0.087, sfm_global_edge 0.643, sfm_global_edge_mvv 0.662
+[97m[INFO ] Processed Images Done taking 0.03842353820800781 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8830749988555908 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0010356903076171875 seconds[0m
+[18/50] f9f95681fd (da3_maybe_seen) SfM pts 2667 obs 5667 scale sfm/oracle 0.987 (camera/oracle 1.023) | kept mv1 0.943 mvv 0.993 | IoU camera_all 0.501, camera_edge 0.512, camera_edge_mvv 0.512, sfm_global_edge 0.604, sfm_global_edge_mvv 0.604
+[97m[INFO ] Processed Images Done taking 0.031180858612060547 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.883580207824707 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0010318756103515625 seconds[0m
+[19/50] 3864514494 (da3_maybe_seen) SfM pts 1998 obs 3388 scale sfm/oracle 0.988 (camera/oracle 0.981) | kept mv1 0.731 mvv 0.968 | IoU camera_all 0.519, camera_edge 0.541, camera_edge_mvv 0.541, sfm_global_edge 0.576, sfm_global_edge_mvv 0.577
+[97m[INFO ] Processed Images Done taking 0.03148698806762695 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.883469820022583 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0010478496551513672 seconds[0m
+[20/50] 40aec5fffa (da3_held_out) SfM pts 1010 obs 1337 scale sfm/oracle 0.991 (camera/oracle 1.033) | kept mv1 0.716 mvv 0.968 | IoU camera_all 0.439, camera_edge 0.455, camera_edge_mvv 0.450, sfm_global_edge 0.733, sfm_global_edge_mvv 0.741
+[97m[INFO ] Processed Images Done taking 0.02996063232421875 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8848755359649658 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0010533332824707031 seconds[0m
+[21/50] 13c3e046d7 (da3_maybe_seen) SfM pts 3060 obs 4529 scale sfm/oracle 1.017 (camera/oracle 1.882) | kept mv1 0.622 mvv 0.773 | IoU camera_all 0.025, camera_edge 0.012, camera_edge_mvv 0.006, sfm_global_edge 0.228, sfm_global_edge_mvv 0.227
+[97m[INFO ] Processed Images Done taking 0.029878854751586914 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8844053745269775 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0008070468902587891 seconds[0m
+[22/50] e398684d27 (da3_maybe_seen) SfM pts 428 obs 634 scale sfm/oracle 0.977 (camera/oracle 0.996) | kept mv1 0.581 mvv 0.958 | IoU camera_all 0.405, camera_edge 0.448, camera_edge_mvv 0.448, sfm_global_edge 0.351, sfm_global_edge_mvv 0.351
+[97m[INFO ] Processed Images Done taking 0.030142784118652344 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8843162059783936 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007855892181396484 seconds[0m
+[23/50] a8bf42d646 (da3_maybe_seen) SfM pts 3438 obs 6539 scale sfm/oracle 0.996 (camera/oracle 0.938) | kept mv1 0.676 mvv 0.877 | IoU camera_all 0.149, camera_edge 0.164, camera_edge_mvv 0.166, sfm_global_edge 0.284, sfm_global_edge_mvv 0.283
+[97m[INFO ] Processed Images Done taking 0.026441097259521484 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8842422962188721 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007710456848144531 seconds[0m
+[24/50] 45b0dac5e3 (da3_maybe_seen) SfM pts 3624 obs 5843 scale sfm/oracle 1.004 (camera/oracle 1.057) | kept mv1 0.869 mvv 0.981 | IoU camera_all 0.375, camera_edge 0.370, camera_edge_mvv 0.369, sfm_global_edge 0.788, sfm_global_edge_mvv 0.787
+[97m[INFO ] Processed Images Done taking 0.028307437896728516 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8846113681793213 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007731914520263672 seconds[0m
+[25/50] 31a2c91c43 (da3_maybe_seen) SfM pts 2091 obs 4613 scale sfm/oracle 1.027 (camera/oracle 1.265) | kept mv1 0.888 mvv 0.970 | IoU camera_all 0.024, camera_edge 0.018, camera_edge_mvv 0.016, sfm_global_edge 0.590, sfm_global_edge_mvv 0.587
+[97m[INFO ] Processed Images Done taking 0.032698631286621094 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.885195255279541 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007431507110595703 seconds[0m
+[26/50] e7af285f7d (da3_maybe_seen) SfM pts 2303 obs 4271 scale sfm/oracle 0.974 (camera/oracle 1.052) | kept mv1 0.912 mvv 0.971 | IoU camera_all 0.459, camera_edge 0.497, camera_edge_mvv 0.497, sfm_global_edge 0.530, sfm_global_edge_mvv 0.531
+[97m[INFO ] Processed Images Done taking 0.02836132049560547 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8850018978118896 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007486343383789062 seconds[0m
+[27/50] 286b55a2bf (da3_held_out) SfM pts 1090 obs 1957 scale sfm/oracle 0.982 (camera/oracle 0.998) | kept mv1 0.749 mvv 0.971 | IoU camera_all 0.555, camera_edge 0.589, camera_edge_mvv 0.610, sfm_global_edge 0.544, sfm_global_edge_mvv 0.560
+[97m[INFO ] Processed Images Done taking 0.0264432430267334 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8852193355560303 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007681846618652344 seconds[0m
+[28/50] 7bc286c1b6 (da3_held_out) SfM pts 2505 obs 4966 scale sfm/oracle 0.981 (camera/oracle 1.064) | kept mv1 0.780 mvv 0.966 | IoU camera_all 0.396, camera_edge 0.418, camera_edge_mvv 0.417, sfm_global_edge 0.572, sfm_global_edge_mvv 0.572
+[97m[INFO ] Processed Images Done taking 0.026221275329589844 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8855602741241455 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007548332214355469 seconds[0m
+[29/50] f3685d06a9 (da3_maybe_seen) SfM pts 215 obs 219 scale sfm/oracle 1.008 (camera/oracle 1.018) | kept mv1 0.449 mvv 0.875 | IoU camera_all 0.387, camera_edge 0.492, camera_edge_mvv 0.494, sfm_global_edge 0.522, sfm_global_edge_mvv 0.524
+[97m[INFO ] Processed Images Done taking 0.030838489532470703 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8856916427612305 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007312297821044922 seconds[0m
+[30/50] b0a08200c9 (da3_maybe_seen) SfM pts 482 obs 753 scale sfm/oracle 0.999 (camera/oracle 1.022) | kept mv1 0.441 mvv 0.931 | IoU camera_all 0.441, camera_edge 0.488, camera_edge_mvv 0.488, sfm_global_edge 0.433, sfm_global_edge_mvv 0.433
+[97m[INFO ] Processed Images Done taking 0.02593207359313965 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8856756687164307 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007412433624267578 seconds[0m
+[31/50] 825d228aec (da3_maybe_seen) SfM pts 1944 obs 4619 scale sfm/oracle 0.986 (camera/oracle 0.968) | kept mv1 0.871 mvv 0.977 | IoU camera_all 0.449, camera_edge 0.449, camera_edge_mvv 0.453, sfm_global_edge 0.585, sfm_global_edge_mvv 0.587
+[97m[INFO ] Processed Images Done taking 0.028057336807250977 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8856244087219238 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007557868957519531 seconds[0m
+[32/50] a980334473 (da3_maybe_seen) SfM pts 2310 obs 4159 scale sfm/oracle 0.990 (camera/oracle 1.010) | kept mv1 0.954 mvv 0.972 | IoU camera_all 0.576, camera_edge 0.653, camera_edge_mvv 0.653, sfm_global_edge 0.662, sfm_global_edge_mvv 0.664
+[97m[INFO ] Processed Images Done taking 0.03061985969543457 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8858048915863037 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007512569427490234 seconds[0m
+[33/50] f2dc06b1d2 (da3_maybe_seen) SfM pts 2679 obs 5434 scale sfm/oracle 1.001 (camera/oracle 1.390) | kept mv1 0.912 mvv 0.956 | IoU camera_all 0.016, camera_edge 0.010, camera_edge_mvv 0.010, sfm_global_edge 0.648, sfm_global_edge_mvv 0.645
+[97m[INFO ] Processed Images Done taking 0.027655363082885742 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.886075496673584 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007550716400146484 seconds[0m
+[34/50] 5942004064 (da3_maybe_seen) SfM pts 2728 obs 3289 scale sfm/oracle 1.002 (camera/oracle 1.085) | kept mv1 0.684 mvv 0.890 | IoU camera_all 0.264, camera_edge 0.258, camera_edge_mvv 0.255, sfm_global_edge 0.443, sfm_global_edge_mvv 0.442
+[97m[INFO ] Processed Images Done taking 0.028000593185424805 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8864705562591553 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0012464523315429688 seconds[0m
+[35/50] 25f3b7a318 (da3_maybe_seen) SfM pts 3466 obs 6384 scale sfm/oracle 1.014 (camera/oracle 1.460) | kept mv1 0.755 mvv 0.874 | IoU camera_all 0.013, camera_edge 0.009, camera_edge_mvv 0.006, sfm_global_edge 0.513, sfm_global_edge_mvv 0.500
+[97m[INFO ] Processed Images Done taking 0.028848648071289062 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8860743045806885 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0008618831634521484 seconds[0m
+[36/50] bcd2436daf (da3_held_out) SfM pts 1844 obs 3373 scale sfm/oracle 0.983 (camera/oracle 1.040) | kept mv1 0.694 mvv 0.958 | IoU camera_all 0.452, camera_edge 0.467, camera_edge_mvv 0.468, sfm_global_edge 0.616, sfm_global_edge_mvv 0.621
+[97m[INFO ] Processed Images Done taking 0.030374526977539062 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8862144947052002 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007622241973876953 seconds[0m
+[37/50] f3d64c30f8 (da3_held_out) SfM pts 2153 obs 2728 scale sfm/oracle 1.000 (camera/oracle 1.000) | kept mv1 0.680 mvv 0.919 | IoU camera_all 0.388, camera_edge 0.464, camera_edge_mvv 0.465, sfm_global_edge 0.464, sfm_global_edge_mvv 0.465
+[97m[INFO ] Processed Images Done taking 0.0282590389251709 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8860936164855957 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007529258728027344 seconds[0m
+[38/50] 0d2ee665be (da3_maybe_seen) SfM pts 1414 obs 2073 scale sfm/oracle 0.986 (camera/oracle 1.043) | kept mv1 0.648 mvv 0.958 | IoU camera_all 0.379, camera_edge 0.400, camera_edge_mvv 0.401, sfm_global_edge 0.569, sfm_global_edge_mvv 0.568
+[97m[INFO ] Processed Images Done taking 0.032984256744384766 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8858723640441895 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007483959197998047 seconds[0m
+[39/50] 3db0a1c8f3 (da3_maybe_seen) SfM pts 5061 obs 11959 scale sfm/oracle 1.016 (camera/oracle 1.021) | kept mv1 0.799 mvv 0.897 | IoU camera_all 0.497, camera_edge 0.514, camera_edge_mvv 0.505, sfm_global_edge 0.519, sfm_global_edge_mvv 0.516
+[97m[INFO ] Processed Images Done taking 0.026897668838500977 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8860158920288086 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007429122924804688 seconds[0m
+[40/50] ac48a9b736 (da3_maybe_seen) SfM pts 2639 obs 2892 scale sfm/oracle 0.993 (camera/oracle 1.163) | kept mv1 0.661 mvv 0.813 | IoU camera_all 0.057, camera_edge 0.039, camera_edge_mvv 0.018, sfm_global_edge 0.173, sfm_global_edge_mvv 0.193
+[97m[INFO ] Processed Images Done taking 0.02864384651184082 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8855476379394531 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007419586181640625 seconds[0m
+[41/50] c5439f4607 (da3_held_out) SfM pts 3169 obs 4927 scale sfm/oracle 0.998 (camera/oracle 0.982) | kept mv1 0.811 mvv 0.920 | IoU camera_all 0.273, camera_edge 0.356, camera_edge_mvv 0.359, sfm_global_edge 0.420, sfm_global_edge_mvv 0.424
+[97m[INFO ] Processed Images Done taking 0.02803826332092285 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8854146003723145 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.006743669509887695 seconds[0m
+[42/50] 578511c8a9 (da3_held_out) SfM pts 2951 obs 2980 scale sfm/oracle 0.987 (camera/oracle 1.086) | kept mv1 0.752 mvv 0.892 | IoU camera_all 0.139, camera_edge 0.129, camera_edge_mvv 0.113, sfm_global_edge 0.279, sfm_global_edge_mvv 0.289
+[97m[INFO ] Processed Images Done taking 0.025410175323486328 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8854401111602783 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.00078582763671875 seconds[0m
+[43/50] d755b3d9d8 (da3_maybe_seen) SfM pts 2203 obs 6151 scale sfm/oracle 0.980 (camera/oracle 1.033) | kept mv1 0.888 mvv 0.949 | IoU camera_all 0.474, camera_edge 0.486, camera_edge_mvv 0.486, sfm_global_edge 0.413, sfm_global_edge_mvv 0.413
+[97m[INFO ] Processed Images Done taking 0.0330202579498291 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8859858512878418 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007700920104980469 seconds[0m
+[44/50] 99fa5c25e1 (da3_maybe_seen) SfM pts 2752 obs 2657 scale sfm/oracle 0.972 (camera/oracle 0.974) | kept mv1 0.525 mvv 0.840 | IoU camera_all 0.289, camera_edge 0.406, camera_edge_mvv 0.408, sfm_global_edge 0.399, sfm_global_edge_mvv 0.401
+[97m[INFO ] Processed Images Done taking 0.02854776382446289 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8862497806549072 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007884502410888672 seconds[0m
+[45/50] 09c1414f1b (da3_held_out) SfM pts 4527 obs 8425 scale sfm/oracle 0.987 (camera/oracle 1.013) | kept mv1 0.900 mvv 0.946 | IoU camera_all 0.316, camera_edge 0.338, camera_edge_mvv 0.337, sfm_global_edge 0.239, sfm_global_edge_mvv 0.240
+[97m[INFO ] Processed Images Done taking 0.027512073516845703 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8857955932617188 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007762908935546875 seconds[0m
+[46/50] 5f99900f09 (da3_held_out) SfM pts 5307 obs 12499 scale sfm/oracle 0.982 (camera/oracle 0.932) | kept mv1 0.903 mvv 0.951 | IoU camera_all 0.161, camera_edge 0.146, camera_edge_mvv 0.145, sfm_global_edge 0.287, sfm_global_edge_mvv 0.285
+[97m[INFO ] Processed Images Done taking 0.02871990203857422 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8855462074279785 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007798671722412109 seconds[0m
+[47/50] 9071e139d9 (da3_held_out) SfM pts 2619 obs 4548 scale sfm/oracle 1.008 (camera/oracle 0.936) | kept mv1 0.885 mvv 0.925 | IoU camera_all 0.143, camera_edge 0.146, camera_edge_mvv 0.147, sfm_global_edge 0.449, sfm_global_edge_mvv 0.450
+[97m[INFO ] Processed Images Done taking 0.029673337936401367 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8856983184814453 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007786750793457031 seconds[0m
+[48/50] 6115eddb86 (da3_maybe_seen) SfM pts 827 obs 1354 scale sfm/oracle 1.009 (camera/oracle 1.118) | kept mv1 0.819 mvv 0.943 | IoU camera_all 0.214, camera_edge 0.200, camera_edge_mvv 0.195, sfm_global_edge 0.375, sfm_global_edge_mvv 0.391
+[97m[INFO ] Processed Images Done taking 0.029068470001220703 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8867082595825195 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007598400115966797 seconds[0m
+[49/50] 27dd4da69e (da3_maybe_seen) SfM pts 26 obs 26 scale sfm/oracle nan (camera/oracle 1.030) | kept mv1 0.454 mvv 0.972 | IoU camera_all 0.510, camera_edge 0.560, camera_edge_mvv 0.562, sfm_global_edge 0.560, sfm_global_edge_mvv 0.562
+[97m[INFO ] Processed Images Done taking 0.026098012924194336 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.885941743850708 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007610321044921875 seconds[0m
+[50/50] c49a8c6cff (da3_maybe_seen) SfM pts 4649 obs 10918 scale sfm/oracle 0.978 (camera/oracle 0.963) | kept mv1 0.951 mvv 0.969 | IoU camera_all 0.321, camera_edge 0.354, camera_edge_mvv 0.354, sfm_global_edge 0.442, sfm_global_edge_mvv 0.441
+{
+ "pooled": {
+  "da3_maybe_seen/camera_all": {
+   "tp": 64375,
+   "fp": 149392,
+   "fn": 87862,
+   "tn": 2639579,
+   "far_fp": 74301,
+   "fp_within_1": 75091,
+   "fp_within_2": 106784,
+   "kept": 83543040,
+   "total": 83543040,
+   "recall": 0.42286040844210016,
+   "precision": 0.3011456398789336,
+   "iou": 0.21342443863156393,
+   "accuracy": 0.9193345047341093,
+   "fp_within_1_fraction": 0.502644050551569,
+   "fp_within_2_fraction": 0.7147906179715112,
+   "pixels_kept": 1.0
+  },
+  "da3_maybe_seen/camera_edge": {
+   "tp": 57088,
+   "fp": 110533,
+   "fn": 95149,
+   "tn": 2678438,
+   "far_fp": 53611,
+   "fp_within_1": 56922,
+   "fp_within_2": 79273,
+   "kept": 81142439,
+   "total": 83543040,
+   "recall": 0.3749942523827979,
+   "precision": 0.340577851223892,
+   "iou": 0.2172546333295277,
+   "accuracy": 0.9300688696617172,
+   "fp_within_1_fraction": 0.5149774275555716,
+   "fp_within_2_fraction": 0.7171885319316403,
+   "pixels_kept": 0.9712650988041613
+  },
+  "da3_maybe_seen/camera_edge_mv1": {
+   "tp": 38600,
+   "fp": 67976,
+   "fn": 113637,
+   "tn": 2720995,
+   "far_fp": 33068,
+   "fp_within_1": 34908,
+   "fp_within_2": 48924,
+   "kept": 63405125,
+   "total": 83543040,
+   "recall": 0.25355202743091365,
+   "precision": 0.36218285542711304,
+   "iou": 0.175284837861525,
+   "accuracy": 0.9382522419359665,
+   "fp_within_1_fraction": 0.5135341885371307,
+   "fp_within_2_fraction": 0.7197246086854184,
+   "pixels_kept": 0.7589516134438009
+  },
+  "da3_maybe_seen/camera_edge_mv2": {
+   "tp": 26443,
+   "fp": 48067,
+   "fn": 125794,
+   "tn": 2740904,
+   "far_fp": 23604,
+   "fp_within_1": 24463,
+   "fp_within_2": 33622,
+   "kept": 48858725,
+   "total": 83543040,
+   "recall": 0.17369627620092357,
+   "precision": 0.35489196081062946,
+   "iou": 0.13201433820592698,
+   "accuracy": 0.9408878936817797,
+   "fp_within_1_fraction": 0.5089354442756985,
+   "fp_within_2_fraction": 0.6994819730792435,
+   "pixels_kept": 0.5848329795037385
+  },
+  "da3_maybe_seen/camera_edge_mvv": {
+   "tp": 54885,
+   "fp": 98159,
+   "fn": 97352,
+   "tn": 2690812,
+   "far_fp": 46694,
+   "fp_within_1": 51465,
+   "fp_within_2": 71474,
+   "kept": 78011661,
+   "total": 83543040,
+   "recall": 0.360523394444189,
+   "precision": 0.3586223569692376,
+   "iou": 0.2191927986070065,
+   "accuracy": 0.9335269725908538,
+   "fp_within_1_fraction": 0.524302407318738,
+   "fp_within_2_fraction": 0.7281451522529773,
+   "pixels_kept": 0.9337900679697555
+  },
+  "da3_maybe_seen/sfm_global_edge": {
+   "tp": 86475,
+   "fp": 68826,
+   "fn": 65762,
+   "tn": 2720145,
+   "far_fp": 17141,
+   "fp_within_1": 51685,
+   "fp_within_2": 59136,
+   "kept": 81142439,
+   "total": 83543040,
+   "recall": 0.568028797204359,
+   "precision": 0.5568219135742848,
+   "iou": 0.3911780804567024,
+   "accuracy": 0.9542405705410838,
+   "fp_within_1_fraction": 0.7509516752390085,
+   "fp_within_2_fraction": 0.8592101821985877,
+   "pixels_kept": 0.9712650988041613
+  },
+  "da3_maybe_seen/sfm_view_edge": {
+   "tp": 86352,
+   "fp": 67218,
+   "fn": 65885,
+   "tn": 2721753,
+   "far_fp": 16328,
+   "fp_within_1": 50890,
+   "fp_within_2": 58077,
+   "kept": 81142439,
+   "total": 83543040,
+   "recall": 0.5672208464433744,
+   "precision": 0.5622973236960344,
+   "iou": 0.39348385773848854,
+   "accuracy": 0.9547454651286138,
+   "fp_within_1_fraction": 0.7570888750037192,
+   "fp_within_2_fraction": 0.8640096402749263,
+   "pixels_kept": 0.9712650988041613
+  },
+  "da3_maybe_seen/sfm_global_edge_mv1": {
+   "tp": 62312,
+   "fp": 36967,
+   "fn": 89925,
+   "tn": 2752004,
+   "far_fp": 5748,
+   "fp_within_1": 31219,
+   "fp_within_2": 34406,
+   "kept": 63405125,
+   "total": 83543040,
+   "recall": 0.4093091692558314,
+   "precision": 0.6276453227772237,
+   "iou": 0.3293376461385594,
+   "accuracy": 0.9568571824910037,
+   "fp_within_1_fraction": 0.8445099683501501,
+   "fp_within_2_fraction": 0.9307219952930993,
+   "pixels_kept": 0.7589516134438009
+  },
+  "da3_maybe_seen/sfm_global_edge_mv2": {
+   "tp": 45006,
+   "fp": 23887,
+   "fn": 107231,
+   "tn": 2765084,
+   "far_fp": 2518,
+   "fp_within_1": 21369,
+   "fp_within_2": 22908,
+   "kept": 48858725,
+   "total": 83543040,
+   "recall": 0.2956311540558471,
+   "precision": 0.6532739175242768,
+   "iou": 0.2555358724534987,
+   "accuracy": 0.9554203578937633,
+   "fp_within_1_fraction": 0.8945870138569096,
+   "fp_within_2_fraction": 0.959015364005526,
+   "pixels_kept": 0.5848329795037385
+  },
+  "da3_maybe_seen/sfm_global_edge_mvv": {
+   "tp": 85306,
+   "fp": 59365,
+   "fn": 66931,
+   "tn": 2729606,
+   "far_fp": 12174,
+   "fp_within_1": 47191,
+   "fp_within_2": 52798,
+   "kept": 78011661,
+   "total": 83543040,
+   "recall": 0.5603499806223191,
+   "precision": 0.5896551485784988,
+   "iou": 0.40314363758376576,
+   "accuracy": 0.9570598203187262,
+   "fp_within_1_fraction": 0.7949296723658722,
+   "fp_within_2_fraction": 0.8893792638760212,
+   "pixels_kept": 0.9337900679697555
+  },
+  "da3_maybe_seen/oracle_edge": {
+   "tp": 89628,
+   "fp": 66699,
+   "fn": 62609,
+   "tn": 2722272,
+   "far_fp": 16650,
+   "fp_within_1": 50049,
+   "fp_within_2": 57060,
+   "kept": 81142439,
+   "total": 83543040,
+   "recall": 0.5887399252481329,
+   "precision": 0.5733366596941027,
+   "iou": 0.4093799101107173,
+   "accuracy": 0.9560357512967461,
+   "fp_within_1_fraction": 0.750371070031035,
+   "fp_within_2_fraction": 0.8554850897314802,
+   "pixels_kept": 0.9712650988041613
+  },
+  "da3_maybe_seen/oracle_edge_mv1": {
+   "tp": 64345,
+   "fp": 35524,
+   "fn": 87892,
+   "tn": 2753447,
+   "far_fp": 5548,
+   "fp_within_1": 29976,
+   "fp_within_2": 32957,
+   "kept": 63405125,
+   "total": 83543040,
+   "recall": 0.4226633472808844,
+   "precision": 0.6442940251729766,
+   "iou": 0.34269630008361696,
+   "accuracy": 0.9580390098218147,
+   "fp_within_1_fraction": 0.8438238937056638,
+   "fp_within_2_fraction": 0.927738993356604,
+   "pixels_kept": 0.7589516134438009
+  },
+  "da3_held_out/camera_all": {
+   "tp": 116812,
+   "fp": 174500,
+   "fn": 67043,
+   "tn": 3252246,
+   "far_fp": 60127,
+   "fp_within_1": 114373,
+   "fp_within_2": 148355,
+   "kept": 55695360,
+   "total": 55695360,
+   "recall": 0.6353485083353729,
+   "precision": 0.40098588454989836,
+   "iou": 0.32596726709547796,
+   "accuracy": 0.9331017190766856,
+   "fp_within_1_fraction": 0.655432664756447,
+   "fp_within_2_fraction": 0.8501719197707737,
+   "pixels_kept": 1.0
+  },
+  "da3_held_out/camera_edge": {
+   "tp": 106655,
+   "fp": 112024,
+   "fn": 77200,
+   "tn": 3314722,
+   "far_fp": 31917,
+   "fp_within_1": 80107,
+   "fp_within_2": 96659,
+   "kept": 53551863,
+   "total": 55695360,
+   "recall": 0.58010388621468,
+   "precision": 0.4877240155661952,
+   "iou": 0.36046829954136655,
+   "accuracy": 0.947592104472358,
+   "fp_within_1_fraction": 0.7150878383203599,
+   "fp_within_2_fraction": 0.8628418910233522,
+   "pixels_kept": 0.96151390349214
+  },
+  "da3_held_out/camera_edge_mv1": {
+   "tp": 81061,
+   "fp": 87326,
+   "fn": 102794,
+   "tn": 3339420,
+   "far_fp": 25218,
+   "fp_within_1": 62108,
+   "fp_within_2": 74995,
+   "kept": 44811281,
+   "total": 55695360,
+   "recall": 0.44089635854341735,
+   "precision": 0.48139701995997314,
+   "iou": 0.2989184345510932,
+   "accuracy": 0.9473439463402353,
+   "fp_within_1_fraction": 0.7112200261090625,
+   "fp_within_2_fraction": 0.8587934864759637,
+   "pixels_kept": 0.8045783526670803
+  },
+  "da3_held_out/camera_edge_mv2": {
+   "tp": 58888,
+   "fp": 59793,
+   "fn": 124967,
+   "tn": 3366953,
+   "far_fp": 15777,
+   "fp_within_1": 44016,
+   "fp_within_2": 52382,
+   "kept": 34426750,
+   "total": 55695360,
+   "recall": 0.32029588534442904,
+   "precision": 0.49618725828060095,
+   "iou": 0.2416929340688206,
+   "accuracy": 0.9488284637377544,
+   "fp_within_1_fraction": 0.7361396819025638,
+   "fp_within_2_fraction": 0.8760557255866072,
+   "pixels_kept": 0.6181259982878287
+  },
+  "da3_held_out/camera_edge_mvv": {
+   "tp": 105169,
+   "fp": 108160,
+   "fn": 78686,
+   "tn": 3318586,
+   "far_fp": 30236,
+   "fp_within_1": 77924,
+   "fp_within_2": 93861,
+   "kept": 52625473,
+   "total": 55695360,
+   "recall": 0.5720214299311958,
+   "precision": 0.4929897013533087,
+   "iou": 0.3601493073985925,
+   "accuracy": 0.9482507205864066,
+   "fp_within_1_fraction": 0.7204511834319527,
+   "fp_within_2_fraction": 0.8677977071005917,
+   "pixels_kept": 0.9448807405141111
+  },
+  "da3_held_out/sfm_global_edge": {
+   "tp": 119146,
+   "fp": 94055,
+   "fn": 64709,
+   "tn": 3332691,
+   "far_fp": 21462,
+   "fp_within_1": 72593,
+   "fp_within_2": 84510,
+   "kept": 53551863,
+   "total": 55695360,
+   "recall": 0.648043294987898,
+   "precision": 0.5588435326288338,
+   "iou": 0.428721528552409,
+   "accuracy": 0.9560283731157223,
+   "fp_within_1_fraction": 0.7718143639359949,
+   "fp_within_2_fraction": 0.8985168252618149,
+   "pixels_kept": 0.96151390349214
+  },
+  "da3_held_out/sfm_view_edge": {
+   "tp": 121973,
+   "fp": 91786,
+   "fn": 61882,
+   "tn": 3334960,
+   "far_fp": 19940,
+   "fp_within_1": 71846,
+   "fp_within_2": 82943,
+   "kept": 53551863,
+   "total": 55695360,
+   "recall": 0.6634195425743112,
+   "precision": 0.5706098924489729,
+   "iou": 0.44250673883783614,
+   "accuracy": 0.9574397724921696,
+   "fp_within_1_fraction": 0.7827555400605757,
+   "fp_within_2_fraction": 0.9036563310308762,
+   "pixels_kept": 0.96151390349214
+  },
+  "da3_held_out/sfm_global_edge_mv1": {
+   "tp": 93973,
+   "fp": 70877,
+   "fn": 89882,
+   "tn": 3355869,
+   "far_fp": 15580,
+   "fp_within_1": 55297,
+   "fp_within_2": 63516,
+   "kept": 44811281,
+   "total": 55695360,
+   "recall": 0.5111256152946616,
+   "precision": 0.5700515620260843,
+   "iou": 0.3689092850525258,
+   "accuracy": 0.955475833524668,
+   "fp_within_1_fraction": 0.7801825698040267,
+   "fp_within_2_fraction": 0.8961440241545212,
+   "pixels_kept": 0.8045783526670803
+  },
+  "da3_held_out/sfm_global_edge_mv2": {
+   "tp": 69107,
+   "fp": 48790,
+   "fn": 114748,
+   "tn": 3377956,
+   "far_fp": 9714,
+   "fp_within_1": 39076,
+   "fp_within_2": 44135,
+   "kept": 34426750,
+   "total": 55695360,
+   "recall": 0.37587772973266975,
+   "precision": 0.586164194169487,
+   "iou": 0.2970491521416751,
+   "accuracy": 0.9547061555680065,
+   "fp_within_1_fraction": 0.8009018241442919,
+   "fp_within_2_fraction": 0.9045911047345767,
+   "pixels_kept": 0.6181259982878287
+  },
+  "da3_held_out/sfm_global_edge_mvv": {
+   "tp": 118553,
+   "fp": 90044,
+   "fn": 65302,
+   "tn": 3336702,
+   "far_fp": 20197,
+   "fp_within_1": 69847,
+   "fp_within_2": 80942,
+   "kept": 52625473,
+   "total": 55695360,
+   "recall": 0.6448179271708684,
+   "precision": 0.5683351150783569,
+   "iou": 0.4328347310504967,
+   "accuracy": 0.9569750299188418,
+   "fp_within_1_fraction": 0.775698547376838,
+   "fp_within_2_fraction": 0.8989160854693261,
+   "pixels_kept": 0.9448807405141111
+  },
+  "da3_held_out/oracle_edge": {
+   "tp": 123992,
+   "fp": 90583,
+   "fn": 59863,
+   "tn": 3336163,
+   "far_fp": 19660,
+   "fp_within_1": 70923,
+   "fp_within_2": 82144,
+   "kept": 53551863,
+   "total": 55695360,
+   "recall": 0.6744010225449403,
+   "precision": 0.5778492368635675,
+   "iou": 0.4518033216974326,
+   "accuracy": 0.9583321447038873,
+   "fp_within_1_fraction": 0.7829614828389433,
+   "fp_within_2_fraction": 0.9068368236865637,
+   "pixels_kept": 0.96151390349214
+  },
+  "da3_held_out/oracle_edge_mv1": {
+   "tp": 97846,
+   "fp": 68101,
+   "fn": 86009,
+   "tn": 3358645,
+   "far_fp": 14368,
+   "fp_within_1": 53733,
+   "fp_within_2": 61482,
+   "kept": 44811281,
+   "total": 55695360,
+   "recall": 0.532191128878736,
+   "precision": 0.5896219877430746,
+   "iou": 0.3883455841496134,
+   "accuracy": 0.9573173551993145,
+   "fp_within_1_fraction": 0.789019250818637,
+   "fp_within_2_fraction": 0.9028061261949164,
+   "pixels_kept": 0.8045783526670803
+  }
+ },
+ "depth_scene_mean": {
+  "da3_held_out": {
+   "sfm_points": 2206.65,
+   "sfm_observations_used": 3611.45,
+   "sfm_global_scale": 0.9930041417479515,
+   "oracle_scale": 0.9970513880252838,
+   "sfm_over_oracle": 0.9959023426007528,
+   "mv_seconds": 0.006372648337855935,
+   "sfm_seconds": 0.2828617099206895,
+   "pixels_seen_by_no_other_view": 0.11204678425565362,
+   "pixels_with_violation_ge2": 0.02310276839416474,
+   "edge_pixels_failing_mv1": 0.16311418237164615,
+   "camera_abs_median_cm": 4.667164427042008,
+   "camera_within_5cm": 0.5733623939566315,
+   "camera_within_10cm": 0.8083674281835556,
+   "oracle_abs_median_cm": 2.485766875743866,
+   "oracle_within_5cm": 0.7562614664435386,
+   "oracle_within_10cm": 0.9026461780071259,
+   "sfm_global_abs_median_cm": 2.785701835155487,
+   "sfm_global_within_5cm": 0.72134068608284,
+   "sfm_global_within_10cm": 0.8851108253002167,
+   "sfm_view_abs_median_cm": 2.8222648978233336,
+   "sfm_view_within_5cm": 0.7146972686052322,
+   "sfm_view_within_10cm": 0.8837343245744705
+  },
+  "da3_maybe_seen": {
+   "sfm_points": 2328.733333333333,
+   "sfm_observations_used": 4457.633333333333,
+   "sfm_global_scale": 0.9202605557852778,
+   "oracle_scale": 0.924923574924469,
+   "sfm_over_oracle": 0.9975672429482805,
+   "mv_seconds": 0.00740326481560866,
+   "sfm_seconds": 0.2907684865097205,
+   "pixels_seen_by_no_other_view": 0.1231218546628952,
+   "pixels_with_violation_ge2": 0.042981534055434166,
+   "edge_pixels_failing_mv1": 0.219708033464849,
+   "camera_abs_median_cm": 14.09497018257777,
+   "camera_within_5cm": 0.42192483869051406,
+   "camera_within_10cm": 0.6289680512719011,
+   "oracle_abs_median_cm": 2.579659777879715,
+   "oracle_within_5cm": 0.7699718316396077,
+   "oracle_within_10cm": 0.9114277342955271,
+   "sfm_global_abs_median_cm": 2.936875674231299,
+   "sfm_global_within_5cm": 0.7268992652153147,
+   "sfm_global_within_10cm": 0.9053776181977371,
+   "sfm_view_abs_median_cm": 2.8676288292325776,
+   "sfm_view_within_5cm": 0.7235419996853533,
+   "sfm_view_within_10cm": 0.9029328042063219
+  }
+ },
+ "sfm_fallback_scenes": [
+  "27dd4da69e"
+ ]
+}
+Completed: EXP/da3_refined_occupancy_10cm/summary.json
+=== DA3 refined occupancy finished 2026-11-07T16:11:32+08:00; exit=0
+=== demo started 2026-11-07T16:11:32+08:00; GPU=1
+Command: CUDA_VISIBLE_DEVICES=1 python -u scripts/demo_grid_occupancy.py --workspace /mnt/disk/xveyan/workspace_scannetpp/geometrygs_grid_occupancy_10cm --scene fb5a96b1a2 --mask-file /mnt/disk/xveyan/workspace_scannetpp/geometrygs_da3_refined_occupancy_10cm/fb5a96b1a2.npz --mask-key sfm_global_edge --demo-extra /mnt/disk/xveyan/workspace_scannetpp/geometrygs_da3_refined_occupancy_10cm/fb5a96b1a2_demo.npz --output EXP/demo/scene_fb5a96b1a2/da3_refined_occupancy_10cm --title DA3 + edge filter + SfM scale
+{
+  "scene": "fb5a96b1a2",
+  "prediction": "DA3 + edge filter + SfM scale",
+  "mask": "/mnt/disk/xveyan/workspace_scannetpp/geometrygs_da3_refined_occupancy_10cm/fb5a96b1a2.npz",
+  "mask_key": "sfm_global_edge",
+  "probability_threshold": null,
+  "grid_dims": [
+    67,
+    38,
+    49
+  ],
+  "cell_m": 0.1,
+  "cells": 124754,
+  "input_frames": [
+    357,
+    360,
+    363,
+    367,
+    370,
+    374
+  ],
+  "counts": {
+    "prediction": {
+      "tp": 4340,
+      "fp": 4420,
+      "fn": 2455,
+      "tn": 113539,
+      "recall": 0.6387049300956585,
+      "precision": 0.4954337899543379,
+      "iou": 0.38698172090949623,
+      "accuracy": 0.9448915465636373
+    }
+  },
+  "fp_shells": {
+    "fp_within_1_cells": 0.8115384615384615,
+    "fp_within_2_cells": 0.9355203619909502,
+    "fp_within_3_cells": 0.9855203619909503
+  },
+  "colours": {
+    "tp": "green",
+    "fp": "purple",
+    "fn": "red",
+    "label": "gold",
+    "prediction": "blue"
+  },
+  "coordinates": "PLY in normalized mean-camera frame (0.3 units per metre); PNG axes in metres"
+}
+=== demo finished 2026-11-07T16:11:40+08:00; exit=0

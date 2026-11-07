@@ -1,0 +1,7 @@
+{
+  "camera": "first input camera",
+  "camera_y_m": 0.0603434294462204,
+  "slab_width_m": 0.06,
+  "opacity_threshold": 0.05,
+  "note": "Centre plot only, not a compositing thickness metric."
+}

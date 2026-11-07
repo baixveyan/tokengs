@@ -1,0 +1,47 @@
+{
+  "scene": "fb5a96b1a2",
+  "prediction": "DA3-GIANT-1.1 depth (camera scale)",
+  "mask": "/mnt/disk/xveyan/workspace_scannetpp/geometrygs_da3_occupancy_10cm/fb5a96b1a2.npz",
+  "mask_key": "camera_scale__all_pixels",
+  "probability_threshold": null,
+  "grid_dims": [
+    67,
+    38,
+    49
+  ],
+  "cell_m": 0.1,
+  "cells": 124754,
+  "input_frames": [
+    357,
+    360,
+    363,
+    367,
+    370,
+    374
+  ],
+  "counts": {
+    "prediction": {
+      "tp": 4361,
+      "fp": 6350,
+      "fn": 2434,
+      "tn": 111609,
+      "recall": 0.6417954378219279,
+      "precision": 0.40715152646811686,
+      "iou": 0.3317611259033853,
+      "accuracy": 0.9295894320021802
+    }
+  },
+  "fp_shells": {
+    "fp_within_1_cells": 0.7713385826771654,
+    "fp_within_2_cells": 0.9411023622047244,
+    "fp_within_3_cells": 0.992755905511811
+  },
+  "colours": {
+    "tp": "green",
+    "fp": "purple",
+    "fn": "red",
+    "label": "gold",
+    "prediction": "blue"
+  },
+  "coordinates": "PLY in normalized mean-camera frame (0.3 units per metre); PNG axes in metres"
+}

@@ -1,0 +1,661 @@
+{
+  "status": "complete",
+  "started_at": "2026-10-19T16:46:12.233354+08:00",
+  "completed_at": "2026-10-19T16:58:37.662582+08:00",
+  "scene_count": 140,
+  "expected_scene_count": 140,
+  "formal_complete": true,
+  "preset": "eval_dl3dv_latent_6view_ssim",
+  "ttt_enabled": true,
+  "ttt_impl": "script",
+  "ttt_inner_loop_geo_weights": {
+    "lambda_sw": 0.1,
+    "lambda_packing": 0.001,
+    "lambda_inter": 0.01
+  },
+  "mixed_precision": "no",
+  "frame_counts": {
+    "all_frames_per_scene": [
+      50
+    ],
+    "novel_only_per_scene": [
+      44
+    ]
+  },
+  "all_frames": {
+    "metrics": {
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 26.734369421550205,
+        "sample_std": 3.4031638673829545,
+        "confidence_level": 0.95,
+        "ci95_lower": 26.16569387641966,
+        "ci95_upper": 27.30304496668075,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8524987191089562,
+        "sample_std": 0.09310792909191244,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8369401963943164,
+        "ci95_upper": 0.8680572418235961,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.2121690075578434,
+        "sample_std": 0.0778863710732046,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.19915403788423924,
+        "ci95_upper": 0.22518397723144756,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.01970552750730089,
+        "sample_std": 0.008524503185192116,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.018281065834365322,
+        "ci95_upper": 0.021129989180236456,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.8291291825899055,
+        "sample_std": 0.07570623992472257,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8164785172277105,
+        "ci95_upper": 0.8417798479521006,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "rankings": {
+      "psnr": {
+        "top3": [
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 34.55212661743164
+          },
+          {
+            "scene_id": "374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e",
+            "value": 34.12908531188965
+          },
+          {
+            "scene_id": "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e",
+            "value": 33.19209083557129
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 18.321035499572755
+          },
+          {
+            "scene_id": "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a",
+            "value": 19.705338726043703
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 19.928527431488035
+          }
+        ]
+      },
+      "ssim": {
+        "top3": [
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 0.960510323047638
+          },
+          {
+            "scene_id": "d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b",
+            "value": 0.9604102277755737
+          },
+          {
+            "scene_id": "f004c810d94bac93f527606a2ff859d646f99fcac0868c6c6905b29c718fa37b",
+            "value": 0.9578025805950164
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.435060498714447
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.5233527195453643
+          },
+          {
+            "scene_id": "dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751",
+            "value": 0.6061077213287354
+          }
+        ]
+      },
+      "lpips": {
+        "top3": [
+          {
+            "scene_id": "5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00",
+            "value": 0.08064195021986961
+          },
+          {
+            "scene_id": "d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b",
+            "value": 0.08426266849040985
+          },
+          {
+            "scene_id": "1de58be515696102c364b767f296600ffff853d4145a60dd30ece9d935317654",
+            "value": 0.09278809994459153
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.4807310849428177
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.44339094817638397
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 0.41315665274858476
+          }
+        ]
+      }
+    }
+  },
+  "novel_only": {
+    "metrics": {
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 26.25096850209422,
+        "sample_std": 3.567157395514674,
+        "confidence_level": 0.95,
+        "ci95_lower": 25.654889307700113,
+        "ci95_upper": 26.84704769648833,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8440274491857787,
+        "sample_std": 0.10018153956922872,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8272869118955896,
+        "ci95_upper": 0.8607679864759678,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.21706525780526656,
+        "sample_std": 0.0807420459193995,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.2035730991060501,
+        "ci95_upper": 0.23055741650448303,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.02009580813381555,
+        "sample_std": 0.00874716542541364,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.01863413915151367,
+        "ci95_upper": 0.021557477116117427,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.8279359329201571,
+        "sample_std": 0.07695509456574498,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.815076581428981,
+        "ci95_upper": 0.8407952844113332,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "rankings": {
+      "psnr": {
+        "top3": [
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 34.33534795587713
+          },
+          {
+            "scene_id": "374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e",
+            "value": 33.97305740009654
+          },
+          {
+            "scene_id": "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e",
+            "value": 33.00733895735307
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 17.456660400737416
+          },
+          {
+            "scene_id": "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a",
+            "value": 18.6710965199904
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 18.714523337104104
+          }
+        ]
+      },
+      "ssim": {
+        "top3": [
+          {
+            "scene_id": "d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b",
+            "value": 0.9600523073564876
+          },
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 0.9596356708895076
+          },
+          {
+            "scene_id": "f004c810d94bac93f527606a2ff859d646f99fcac0868c6c6905b29c718fa37b",
+            "value": 0.9563753239133141
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.3968611115759069
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.4920879047025334
+          },
+          {
+            "scene_id": "dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751",
+            "value": 0.580206654288552
+          }
+        ]
+      },
+      "lpips": {
+        "top3": [
+          {
+            "scene_id": "5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00",
+            "value": 0.08146411299028179
+          },
+          {
+            "scene_id": "d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b",
+            "value": 0.08462219854647463
+          },
+          {
+            "scene_id": "1de58be515696102c364b767f296600ffff853d4145a60dd30ece9d935317654",
+            "value": 0.09333051402460445
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.4937752959403125
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.45299799062988977
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 0.43299201875925064
+          }
+        ]
+      }
+    }
+  },
+  "distance_buckets": {
+    "definition": "frame-index distance to the nearest context view; per-scene bucket mean, then mean over scenes that have the bucket",
+    "d0": {
+      "n_scenes": 140,
+      "n_frames": 840,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 30.279309497560774,
+        "sample_std": 2.6317423231001995,
+        "confidence_level": 0.95,
+        "ci95_lower": 29.839540048144567,
+        "ci95_upper": 30.719078946976982,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.9146213652122587,
+        "sample_std": 0.04552158289992488,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.9070146169099128,
+        "ci95_upper": 0.9222281135146045,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.17626317241007375,
+        "sample_std": 0.06005523244834184,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.16622782195932823,
+        "ci95_upper": 0.18629852286081927,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.016843469579526708,
+        "sample_std": 0.0070608513180786744,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.015663587085216514,
+        "ci95_upper": 0.0180233520738369,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.8378796801680611,
+        "sample_std": 0.06807934219177514,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8265034847976017,
+        "ci95_upper": 0.8492558755385206,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "d1": {
+      "n_scenes": 140,
+      "n_frames": 1434,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 28.050007195658498,
+        "sample_std": 3.417104150064862,
+        "confidence_level": 0.95,
+        "ci95_lower": 27.479002201179544,
+        "ci95_upper": 28.621012190137453,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8805078710654338,
+        "sample_std": 0.07746254837141676,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8675637230199881,
+        "ci95_upper": 0.8934520191108796,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.19174604007272752,
+        "sample_std": 0.07022552149507684,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.1800112138126567,
+        "ci95_upper": 0.20348086633279835,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.01852878023616292,
+        "sample_std": 0.008116760385995975,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.017172453207235615,
+        "ci95_upper": 0.019885107265090227,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.8400397097174224,
+        "sample_std": 0.07042134501381579,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8282721609524685,
+        "ci95_upper": 0.8518072584823763,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "d2-3": {
+      "n_scenes": 140,
+      "n_frames": 2578,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 26.45191750182245,
+        "sample_std": 3.630628412060109,
+        "confidence_level": 0.95,
+        "ci95_lower": 25.845232172566632,
+        "ci95_upper": 27.058602831078268,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8495232142894162,
+        "sample_std": 0.09827822104462466,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8331007253629601,
+        "ci95_upper": 0.8659457032158724,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.2118833252707179,
+        "sample_std": 0.07968719076974463,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.19856743499425156,
+        "ci95_upper": 0.22519921554718425,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.019849934573452334,
+        "sample_std": 0.00870177027702522,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.01839585121199096,
+        "ci95_upper": 0.021304017934913707,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.8322068899093291,
+        "sample_std": 0.07534813231335573,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8196160650511607,
+        "ci95_upper": 0.8447977147674975,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "d4+": {
+      "n_scenes": 140,
+      "n_frames": 2148,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 24.81642561015064,
+        "sample_std": 3.7010725942419347,
+        "confidence_level": 0.95,
+        "ci95_lower": 24.19796891599304,
+        "ci95_upper": 25.434882304308243,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8133159090702696,
+        "sample_std": 0.1187352844159887,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7934750036003202,
+        "ci95_upper": 0.8331568145402191,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.23995721339058929,
+        "sample_std": 0.09041727092546989,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.224848305081599,
+        "ci95_upper": 0.2550661216995796,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.021443338868836304,
+        "sample_std": 0.009296760757950275,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.019889831398142207,
+        "ci95_upper": 0.0229968463395304,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.8151110439989931,
+        "sample_std": 0.08481343741089323,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8009385475710955,
+        "ci95_upper": 0.8292835404268908,
+        "t_critical": 1.977177724490333
+      }
+    }
+  },
+  "geometry": {
+    "config": {
+      "lambda_sw": 0.0,
+      "lambda_packing": 0.0,
+      "lambda_inter": 0.0,
+      "k_neighbors": 4,
+      "target_distance": 2.0,
+      "num_sw_directions": 8,
+      "mass_weighting": "opacity_area",
+      "inter_form": "log_smooth_l1"
+    },
+    "sw_loss": {
+      "mean": 0.37613013833761216,
+      "median": 0.36991871893405914,
+      "p10": 0.29063754975795747,
+      "p90": 0.47207904756069186
+    },
+    "packing_loss": {
+      "mean": 7.256492915323802,
+      "median": 6.44155478477478,
+      "p10": 3.189015507698059,
+      "p90": 13.078778076171876
+    },
+    "inter_loss": {
+      "mean": 0.6220387334270137,
+      "median": 0.6204161643981934,
+      "p10": 0.4106628119945526,
+      "p90": 0.8547337770462037
+    },
+    "packing_ratio": {
+      "mean": 276.03536758422854,
+      "median": 180.64480590820312,
+      "p10": 62.45915336608887,
+      "p90": 594.4145751953125
+    },
+    "packing_target": {
+      "mean": 5.668273622649057,
+      "median": 5.669538974761963,
+      "p10": 5.369677352905273,
+      "p90": 5.973059844970703
+    },
+    "effective_children": {
+      "mean": 13.907692868368967,
+      "median": 13.871727466583252,
+      "p10": 12.876588821411133,
+      "p90": 15.042113208770752
+    },
+    "inter_distance": {
+      "mean": 1.0471930738006319,
+      "median": 1.0313490629196167,
+      "p10": 0.7921437859535218,
+      "p90": 1.3032605171203613
+    },
+    "inter_distance_median": {
+      "mean": 0.8339671756540026,
+      "median": 0.8215139806270599,
+      "p10": 0.5814366996288299,
+      "p90": 1.1378856301307678
+    },
+    "inter_too_close": {
+      "mean": 0.7758906773158483,
+      "median": 0.78826904296875,
+      "p10": 0.664361572265625,
+      "p90": 0.875457763671875
+    },
+    "inter_too_far": {
+      "mean": 0.06520778111049107,
+      "median": 0.050201416015625,
+      "p10": 0.026263427734375,
+      "p90": 0.12955322265625002
+    },
+    "active_slot_ratio": {
+      "mean": 1.0,
+      "median": 1.0,
+      "p10": 1.0,
+      "p90": 1.0
+    }
+  },
+  "needle": {
+    "alive_ratio": {
+      "mean": 0.7393157414027622,
+      "median": 0.7396812438964844,
+      "p10": 0.7268791198730469,
+      "p90": 0.7508075714111329
+    },
+    "opacity_mean": {
+      "mean": 0.11340467621173178,
+      "median": 0.11258931457996368,
+      "p10": 0.09357174038887024,
+      "p90": 0.13638975322246552
+    },
+    "aniso_p50_weighted": {
+      "mean": 26.43507683617728,
+      "median": 26.126996994018555,
+      "p10": 19.399025917053223,
+      "p90": 33.249922561645505
+    },
+    "aniso_p50_unweighted": {
+      "mean": 54.2828652381897,
+      "median": 53.02097702026367,
+      "p10": 38.80293312072754,
+      "p90": 71.12358322143555
+    },
+    "cos_long_axis_ray_p50_weighted": {
+      "mean": 0.6916006803512573,
+      "median": 0.6953293979167938,
+      "p10": 0.5783743858337402,
+      "p90": 0.78654522895813
+    },
+    "long_axis_along_ray_gt0.9_weighted": {
+      "mean": 0.24713239868983655,
+      "median": 0.2431105076882917,
+      "p10": 0.1657136361161552,
+      "p90": 0.3210471900359476
+    },
+    "outside_all_input_frustums_weighted": {
+      "mean": 0.036129647815717356,
+      "median": 0.0299101240863853,
+      "p10": 0.016327950682040886,
+      "p90": 0.062461512235864936
+    }
+  },
+  "official_release_comparison": {
+    "source": "release_2026.6.md (all target frames, 140 scenes)",
+    "reference_setting": "w_ttt",
+    "reference": {
+      "psnr": 27.304,
+      "ssim": 0.866,
+      "lpips": 0.185
+    },
+    "delta_all_frames": {
+      "psnr": -0.569630578449793,
+      "ssim": -0.013501280891043743,
+      "lpips": 0.027169007557843405
+    },
+    "delta_definition": "local all_frames mean - official",
+    "official_table": {
+      "wo_ttt": {
+        "psnr": 25.12,
+        "ssim": 0.806,
+        "lpips": 0.257
+      },
+      "w_ttt": {
+        "psnr": 27.304,
+        "ssim": 0.866,
+        "lpips": 0.185
+      }
+    }
+  },
+  "timing": {
+    "evaluation_loop_seconds": 742.6767436461523,
+    "scene_total_seconds_sum": 738.2531837057322,
+    "mean_scene_total_seconds": 5.273237026469516,
+    "total_script_seconds": 745.4341131988913
+  }
+}

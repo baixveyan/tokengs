@@ -1,0 +1,135 @@
+{
+  "model": "tokengs_release_latent_6v",
+  "definitions": "frozen model; features of COLMAP-valid alive tokens (<=1024 per scene); target = attention-weighted COLMAP centroid of the token's attention-90% patch set; train on the 70 even scenes, test on the 70 odd scenes; errors relative to target depth from the dominant camera",
+  "gpu": "1",
+  "train_tokens": 71602,
+  "test_tokens": 71582,
+  "official_output_gaussian_centre": {
+    "e_depth_rel": {
+      "p50": 0.0219,
+      "p90": 0.2022
+    },
+    "e_3d_rel": {
+      "p50": 0.0275,
+      "p90": 0.2068
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.0736,
+      "p90": 0.5771
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0153,
+      "p90": 0.1114
+    }
+  },
+  "linear_ridge_h": {
+    "lambda": 1000.0,
+    "e_depth_rel": {
+      "p50": 0.1729,
+      "p90": 0.5546
+    },
+    "e_3d_rel": {
+      "p50": 0.2961,
+      "p90": 0.7889
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.2739,
+      "p90": 0.9767
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1409,
+      "p90": 0.4023
+    }
+  },
+  "mlp_h": {
+    "e_depth_rel": {
+      "p50": 0.0544,
+      "p90": 0.2407
+    },
+    "e_3d_rel": {
+      "p50": 0.0729,
+      "p90": 0.258
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1116,
+      "p90": 0.5306
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0424,
+      "p90": 0.1535
+    },
+    "train_fit": {
+      "e_depth_rel": {
+        "p50": 0.0154,
+        "p90": 0.0766
+      },
+      "e_3d_rel": {
+        "p50": 0.0268,
+        "p90": 0.0935
+      },
+      "e_depth_rel_1view": {
+        "p50": 0.029,
+        "p90": 0.2862
+      },
+      "e_depth_rel_4plus_views": {
+        "p50": 0.0122,
+        "p90": 0.0505
+      }
+    }
+  },
+  "linear_ridge_mix": {
+    "lambda": 1000.0,
+    "e_depth_rel": {
+      "p50": 0.2067,
+      "p90": 0.7074
+    },
+    "e_3d_rel": {
+      "p50": 0.4,
+      "p90": 1.0793
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.3528,
+      "p90": 1.3897
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1632,
+      "p90": 0.4769
+    }
+  },
+  "mlp_mix": {
+    "e_depth_rel": {
+      "p50": 0.0521,
+      "p90": 0.2338
+    },
+    "e_3d_rel": {
+      "p50": 0.0718,
+      "p90": 0.2565
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1168,
+      "p90": 0.5055
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.04,
+      "p90": 0.1412
+    },
+    "train_fit": {
+      "e_depth_rel": {
+        "p50": 0.0093,
+        "p90": 0.0437
+      },
+      "e_3d_rel": {
+        "p50": 0.0171,
+        "p90": 0.0576
+      },
+      "e_depth_rel_1view": {
+        "p50": 0.0138,
+        "p90": 0.0954
+      },
+      "e_depth_rel_4plus_views": {
+        "p50": 0.0076,
+        "p90": 0.0317
+      }
+    }
+  }
+}

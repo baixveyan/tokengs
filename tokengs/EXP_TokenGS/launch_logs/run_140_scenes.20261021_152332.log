@@ -1,0 +1,174 @@
+=== run_140_scenes started 2026-10-21 15:23:32 on iZwz9foxpfyzf7f1y60xxwZ
+repo: /home/jms/xveyan/4DGS/TokenGS   git HEAD: b16269c   python: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python
+master log: EXP_TokenGS/launch_logs/run_140_scenes.20261021_152332.log
+experiments: no_tuning scene_lr1e-2_tuning scene_lr1e-2_geo_tuning token_lr1e-4_tuning token_lr1e-4_geo_tuning scene_lr1e-2_token_lr1e-4_tuning scene_lr1e-2_token_lr1e-4_geo_tuning scene_lr1e-2_token_lr1e-4_vis_xyz_tuning scene_lr1e-2_token_lr1e-4_vis_opac_tuning scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning
+--- GPU status
+0, 7215 MiB, 0 %
+1, 4 MiB, 0 %
+2, 3 MiB, 0 %
+3, 3 MiB, 0 %
+4, 3 MiB, 0 %
+5, 4 MiB, 0 %
+6, 3 MiB, 0 %
+7, 3 MiB, 0 %
+idle GPUs picked: 1 2 3
+skip no_tuning: already complete (EXP_TokenGS/no_tuning)
+skip scene_lr1e-2_tuning: already complete (EXP_TokenGS/scene_lr1e-2_tuning)
+skip scene_lr1e-2_geo_tuning: already complete (EXP_TokenGS/scene_lr1e-2_geo_tuning)
+skip token_lr1e-4_tuning: already complete (EXP_TokenGS/token_lr1e-4_tuning)
+skip token_lr1e-4_geo_tuning: already complete (EXP_TokenGS/token_lr1e-4_geo_tuning)
+skip scene_lr1e-2_token_lr1e-4_tuning: already complete (EXP_TokenGS/scene_lr1e-2_token_lr1e-4_tuning)
+skip scene_lr1e-2_token_lr1e-4_geo_tuning: already complete (EXP_TokenGS/scene_lr1e-2_token_lr1e-4_geo_tuning)
+[15:23:33] start scene_lr1e-2_token_lr1e-4_vis_opac_tuning on GPU 2 -> EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/console.log
+[15:23:33] start scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning on GPU 3 -> EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/console.log
+[15:23:33] start scene_lr1e-2_token_lr1e-4_vis_xyz_tuning on GPU 1 -> EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/console.log
+[15:24:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 3/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 4/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 3/140
+[15:24:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 10/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 10/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 10/140
+[15:25:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 16/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 16/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 16/140
+[15:25:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 22/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 22/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 22/140
+[15:26:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 28/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 28/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 28/140
+[15:26:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 34/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 35/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 35/140
+[15:27:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 41/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 41/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 41/140
+[15:27:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 47/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 47/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 47/140
+[15:28:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 53/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 53/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 54/140
+[15:28:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 59/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 60/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 60/140
+[15:29:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 66/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 66/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 66/140
+[15:29:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 72/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 72/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 73/140
+[15:30:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 78/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 78/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 79/140
+[15:30:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 85/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 85/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 85/140
+[15:31:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 91/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 91/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 92/140
+[15:31:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 97/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 97/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 98/140
+[15:32:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 104/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 104/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 104/140
+[15:32:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 110/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 110/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 111/140
+[15:33:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 116/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 116/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 117/140
+[15:33:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 122/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 123/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 123/140
+[15:34:03] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 129/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 129/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 130/140
+[15:34:33] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: running 135/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: running 135/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: running 136/140
+[15:34:52] end scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning (exit 0)
+[15:34:54] end scene_lr1e-2_token_lr1e-4_vis_opac_tuning (exit 0)
+[15:34:57] end scene_lr1e-2_token_lr1e-4_vis_xyz_tuning (exit 0)
+[15:35:04] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: complete 140/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: complete 140/140
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: complete 140/140
+--- exit codes
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning: 0   log: EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/console.log
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning: 0   log: EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/console.log
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning: 0   log: EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/console.log
+--- last lines of each group log
+## scene_lr1e-2_token_lr1e-4_vis_xyz_tuning
+[15:34:56] all_frames: PSNR 27.439810 SSIM 0.870507 LPIPS 0.180003 edge 0.018092 HF 0.852504
+[15:34:56] novel_only: PSNR 26.855005 SSIM 0.861511 LPIPS 0.185538 edge 0.018552 HF 0.851155
+[15:34:56] bucket d0: 840 frames PSNR 31.7284 HF 0.8624
+[15:34:56] bucket d1: 1434 frames PSNR 28.8454 HF 0.8626
+[15:34:56] bucket d2-3: 2578 frames PSNR 27.0624 HF 0.8548
+[15:34:56] bucket d4+: 2148 frames PSNR 25.2791 HF 0.8395
+[15:34:56] geometry (mean over scenes): SW 0.7130 packing 721.19/5.92 inter d 0.551 close 0.904 far 0.039 | aniso p50 28.81 needle>0.9 0.267
+[15:34:56] torch peak memory: allocated 15829 MiB, reserved 16960 MiB
+[15:34:56] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning
+[15:34:56] done in 679.3s
+=== exit code: 0
+finished: 2026-10-21 15:34:57   duration: 684 s
+## scene_lr1e-2_token_lr1e-4_vis_opac_tuning
+[15:34:53] all_frames: PSNR 27.440958 SSIM 0.870449 LPIPS 0.180543 edge 0.018099 HF 0.852211
+[15:34:53] novel_only: PSNR 26.859204 SSIM 0.861470 LPIPS 0.186020 edge 0.018557 HF 0.850869
+[15:34:53] bucket d0: 840 frames PSNR 31.7072 HF 0.8621
+[15:34:53] bucket d1: 1434 frames PSNR 28.8402 HF 0.8623
+[15:34:53] bucket d2-3: 2578 frames PSNR 27.0662 HF 0.8545
+[15:34:53] bucket d4+: 2148 frames PSNR 25.2886 HF 0.8392
+[15:34:53] geometry (mean over scenes): SW 0.7143 packing 743.77/5.86 inter d 0.547 close 0.905 far 0.038 | aniso p50 29.22 needle>0.9 0.266
+[15:34:53] torch peak memory: allocated 15830 MiB, reserved 17002 MiB
+[15:34:53] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_opac_tuning
+[15:34:53] done in 676.6s
+=== exit code: 0
+finished: 2026-10-21 15:34:54   duration: 681 s
+## scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning
+[15:34:51] all_frames: PSNR 27.421851 SSIM 0.870168 LPIPS 0.181252 edge 0.018121 HF 0.851409
+[15:34:51] novel_only: PSNR 26.846618 SSIM 0.861247 LPIPS 0.186677 edge 0.018575 HF 0.850068
+[15:34:51] bucket d0: 840 frames PSNR 31.6402 HF 0.8612
+[15:34:51] bucket d1: 1434 frames PSNR 28.8169 HF 0.8615
+[15:34:51] bucket d2-3: 2578 frames PSNR 27.0557 HF 0.8537
+[15:34:51] bucket d4+: 2148 frames PSNR 25.2809 HF 0.8384
+[15:34:51] geometry (mean over scenes): SW 0.1013 packing 3.14/5.60 inter d 1.139 close 0.724 far 0.158 | aniso p50 28.72 needle>0.9 0.265
+[15:34:51] torch peak memory: allocated 15830 MiB, reserved 16926 MiB
+[15:34:51] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning
+[15:34:51] done in 674.2s
+=== exit code: 0
+finished: 2026-10-21 15:34:52   duration: 679 s
+--- reports
+12 rows x 62 columns -> EXP_TokenGS/all_experiments_table.{md,csv}
+EXP_TokenGS/all_experiments_table.md
+
+EXP_TokenGS/reports:
+scene_geo_tuning.json
+scene_geo_tuning.md
+scene_token_x_geo.json
+scene_token_x_geo.md
+scene_tuning_noise_floor.json
+=== run_140_scenes finished 2026-10-21 15:35:05, failed: 0

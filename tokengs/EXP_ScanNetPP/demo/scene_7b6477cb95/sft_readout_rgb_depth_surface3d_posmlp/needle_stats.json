@@ -1,0 +1,88 @@
+{
+  "scene_id": "7b6477cb95",
+  "needle": {
+    "alive_ratio": 0.69708251953125,
+    "opacity_mean": 0.053510479629039764,
+    "children": 182736,
+    "opacity_mass_fraction": 0.990837574005127,
+    "aniso_p50_weighted": 21.18687629699707,
+    "aniso_p50_unweighted": 49.91836166381836,
+    "cos_long_axis_ray_p50_weighted": 0.7888808846473694,
+    "long_axis_along_ray_gt0.9_weighted": 0.321432359714833,
+    "outside_all_input_frustums_weighted": 0.03839533068618225,
+    "outside_all_input_frustums_count_opacity_gt0.1": 1616,
+    "parallax_buckets": [
+      {
+        "parallax_deg": [
+          0.0,
+          4.0
+        ],
+        "children": 131,
+        "opacity_mass_fraction": 0.0005409115110523999,
+        "aniso_p50_weighted": 17.235227584838867,
+        "aniso_p50_unweighted": 43.80155563354492,
+        "cos_long_axis_ray_p50_weighted": 0.09140446037054062,
+        "long_axis_along_ray_gt0.9_weighted": 0.1723851385376117
+      },
+      {
+        "parallax_deg": [
+          4.0,
+          9.0
+        ],
+        "children": 5239,
+        "opacity_mass_fraction": 0.025871973484754562,
+        "aniso_p50_weighted": 17.46486473083496,
+        "aniso_p50_unweighted": 52.25142288208008,
+        "cos_long_axis_ray_p50_weighted": 0.7836351990699768,
+        "long_axis_along_ray_gt0.9_weighted": 0.3298184943911529
+      },
+      {
+        "parallax_deg": [
+          9.0,
+          20.0
+        ],
+        "children": 25498,
+        "opacity_mass_fraction": 0.1036117672920227,
+        "aniso_p50_weighted": 25.751131057739258,
+        "aniso_p50_unweighted": 61.51639938354492,
+        "cos_long_axis_ray_p50_weighted": 0.803771436214447,
+        "long_axis_along_ray_gt0.9_weighted": 0.37534678453824855
+      },
+      {
+        "parallax_deg": [
+          20.0,
+          180.0
+        ],
+        "children": 151868,
+        "opacity_mass_fraction": 0.8608129024505615,
+        "aniso_p50_weighted": 20.825477600097656,
+        "aniso_p50_unweighted": 48.31740188598633,
+        "cos_long_axis_ray_p50_weighted": 0.7879284024238586,
+        "long_axis_along_ray_gt0.9_weighted": 0.31478457180601754
+      }
+    ],
+    "opacity_quantiles": {
+      "0.1": 0.0010672587668523192,
+      "0.5": 0.020662542432546616,
+      "0.9": 0.14383581280708313,
+      "0.99": 0.4372350871562958
+    },
+    "opacity_low_ratio_lt0.1": 0.8384246826171875,
+    "opacity_high_ratio_gt0.9": 3.814697265625e-05
+  },
+  "geometry": {
+    "sw_loss": 0.16440865397453308,
+    "packing_loss": 2.5714569091796875,
+    "inter_loss": 0.9437029361724854,
+    "packing_ratio": 4.7225341796875,
+    "packing_target": 5.641364097595215,
+    "effective_children": 13.667062759399414,
+    "center_variance": 0.0006776712252758443,
+    "local_scale_variance": 0.0004605894791893661,
+    "inter_distance": 0.8703689575195312,
+    "inter_distance_median": 0.49089446663856506,
+    "inter_too_close": 0.765869140625,
+    "inter_too_far": 0.0556640625,
+    "active_slot_ratio": 1.0
+  }
+}

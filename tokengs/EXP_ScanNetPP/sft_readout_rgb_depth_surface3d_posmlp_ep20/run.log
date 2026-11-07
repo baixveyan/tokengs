@@ -1,0 +1,1046 @@
+=== Started: 2026-11-03T22:43:09+08:00; git=4bb14d0db31a0a6848ca5d99580f9ccfbba58df1
+Train GPUs=0,1,2,3,4,5,6,7 (8 GPUs); Command: CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch --multi_gpu --num_processes 8 --num_machines 1 --mixed_precision no --dynamo_backend no --main_process_port 29584 -m tokengs.train sft_scannetpp_readout_rgb_depth_surface3d_posmlp_ep20 --workspace workspace_scannetpp/sft_readout_rgb_depth_surface3d_posmlp_ep20 --resume checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors
+Options(evaluating=False, workspace='workspace_scannetpp/sft_readout_rgb_depth_surface3d_posmlp_ep20', resume='checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors', model_type='tokengs', seed=42, use_wandb=False, experiment_name='sft_readout_rgb_depth_surface3d_posmlp_ep20', out_dir='outputs', project_name='TokenGS', img_size=(256, 448), patch_size=8, dec_patch_size=8, enc_depth=12, dec_depth=1, enc_embed_dim=1024, enc_num_heads=16, mlp_ratio=4, clip_head_readout_std=0.002, clip_head_z_init=0.1, dec_init_values=0.01, bg_color='grey', gaussian_scale_cap=0.075, opacity_bias=2.0, gaussian_z_offset=0.0, num_gs_tokens=4096, token_dim=1024, gs_token_std=0.02, num_dynamic_gs_tokens=0, init_dynamic_tokens_from_static=False, init_tokens_from_existing=False, init_latents_from_existing=False, load_lidar_pc=False, lidar_sft_mode='scene_latent_probe', sft_unfreeze_latent_tail=False, sft_unfreeze_readout=True, sft_readout_head_lr_scale=0.1, readout_pos_mlp=True, readout_pos_mlp_hidden=1024, readout_surfel=False, surfel_rn_start=0.3, surfel_rn_end=0.009, surfel_anneal_epochs=5.0, lambda_opacity_binarize=0.0, readout_sh_degree=0, lambda_sh_l2=0.0, lambda_surface3d=0.05, surface3d_beta_m=0.02, render_geo_warmup_epochs=1.0, val_depth_metric=True, val_depth_cache_path='/home/jms/xveyan/4DGS/TokenGS/workspace_scannetpp/val_depth_cache/scannetpp_val_scaled_0.3_wdefault.pt', val_depth_cache_build=False, use_render_geo_supervision=True, lambda_render_depth=0.1, lambda_render_alpha=0.0, lambda_render_thickness=0.0, lambda_render_normal=0.0, data_mode=(('scannetpp_scaled_0.3', 4),), num_views=10, num_input_views=6, znear=0.025, zfar=125.0, camera_normalization_method='mean_cam', camera_scale_method='constant', pointmap_trim_lo=0.0, pointmap_trim_hi=1.0, num_workers=4, dataset_kwargs=None, validation_data_mode='scannetpp_val_scaled_0.3', validation_dataset_kwargs=None, validation_batch_size=1, train_read_error_policy='retry', eval_read_error_policy='fail_fast', train_read_max_retries=8, batch_size=1, gradient_accumulation_steps=2, num_epochs=20, max_iters_per_epoch=1000000, lr=4e-05, pct_start_steps=200, final_div_factor=1000.0, gradient_clip=1.0, mixed_precision='no', deferred_bp=False, use_input_supervision=True, mean_of_grads='none', mean_of_grads_scene_chunk_size=1, mean_of_grads_view_chunk_size=None, rgb_loss_type='l1', lambda_rgb=0.8, lambda_lpips=0.0, lambda_mask=0.0, lambda_ssim=0.2, lambda_visibility=1.0, visibility_distance_threshold=1.0, lambda_opacity=0.0, lambda_dyn_aux=0.0, lambda_dyn_aux_warmup_steps=0, lambda_dyn_aux_decay_steps=0, lambda_dyn_aux_min=0.0, use_geo_losses=False, lambda_geo_sw=0.01, lambda_geo_packing=0.01, lambda_geo_inter=0.01, geo_k_neighbors=4, geo_target_distance=2.0, geo_num_sw_directions=8, geo_mass_weighting='opacity_area', geo_inter_form='log_smooth_l1', print_freq=10, log_image_freq=100, eval_n_media_dumps=0, strict_checkpoint_loading=True, use_ttt_for_eval=False, ttt_mode='token-tuning', ttt_n_steps=50, ttt_lr=0.0001, time_embedding=False, time_embedding_dim=2, use_interp_target=False, use_multiscale_encoder=True, multiscale_encoder_layers=(5, 7, 9, 11), use_latent_bottleneck=True, num_latents=4096, latent_cross_attn_depth=12, random_reflect=True)
+[INFO] Config saved to config_save_path='workspace_scannetpp/sft_readout_rgb_depth_surface3d_posmlp_ep20/config.yaml'
+[TokenGS-SFT] group=readout: trainable=24.21M params, frozen=340.78M params
+Loaded scannetpp_scaled_0.3, train size: 3412, loading took 11.380966663360596 seconds
+Loaded explicit validation scannetpp_val_scaled_0.3, size: 50
+[eval] epoch: -1 psnr: 30.5052 depth_absrel: 0.1748 unique_scenes: 50
+[INFO] Setting RNG epoch to 0
+[INFO] 0/426 mem: 20.59/71.12G lr: 0.0000016000 loss: 0.009172 speed: 2.48 it/s loss_render_depth: 0.160455
+[INFO] 10/426 mem: 20.59/71.12G lr: 0.0000016598 loss: 0.020621 speed: 0.99 it/s loss_render_depth: 0.141713
+[INFO] 20/426 mem: 20.59/71.12G lr: 0.0000018388 loss: 0.018673 speed: 1.22 it/s loss_render_depth: 0.109491
+[INFO] 30/426 mem: 20.59/71.12G lr: 0.0000021358 loss: 0.020076 speed: 1.22 it/s loss_render_depth: 0.217650
+[INFO] 40/426 mem: 20.59/71.12G lr: 0.0000025491 loss: 0.017519 speed: 0.93 it/s loss_render_depth: 0.084288
+[INFO] 50/426 mem: 20.59/71.12G lr: 0.0000030760 loss: 0.026026 speed: 1.00 it/s loss_render_depth: 0.320207
+[INFO] 60/426 mem: 20.59/71.12G lr: 0.0000037134 loss: 0.024873 speed: 1.22 it/s loss_render_depth: 0.151886
+[INFO] 70/426 mem: 20.59/71.12G lr: 0.0000044571 loss: 0.018752 speed: 1.21 it/s loss_render_depth: 0.086986
+[INFO] 80/426 mem: 20.59/71.12G lr: 0.0000053026 loss: 0.071791 speed: 1.16 it/s loss_render_depth: 0.252382
+[INFO] 90/426 mem: 20.59/71.12G lr: 0.0000062446 loss: 0.036945 speed: 1.21 it/s loss_render_depth: 0.216124
+[INFO] 100/426 mem: 20.59/71.12G lr: 0.0000072772 loss: 0.028042 speed: 1.20 it/s loss_render_depth: 0.160942
+[INFO] 110/426 mem: 20.59/71.12G lr: 0.0000083941 loss: 0.030580 speed: 1.07 it/s loss_render_depth: 0.125580
+[INFO] 120/426 mem: 20.59/71.12G lr: 0.0000095882 loss: 0.029904 speed: 1.20 it/s loss_render_depth: 0.161586
+[INFO] 130/426 mem: 20.59/71.12G lr: 0.0000108522 loss: 0.047876 speed: 1.18 it/s loss_render_depth: 0.267881
+[INFO] 140/426 mem: 20.59/71.12G lr: 0.0000121780 loss: 0.027256 speed: 1.08 it/s loss_render_depth: 0.061754
+[INFO] 150/426 mem: 20.59/71.12G lr: 0.0000135576 loss: 0.051092 speed: 1.20 it/s loss_render_depth: 0.159914
+[INFO] 160/426 mem: 20.59/71.12G lr: 0.0000149823 loss: 0.045791 speed: 1.20 it/s loss_render_depth: 0.372437
+[INFO] 170/426 mem: 20.59/71.12G lr: 0.0000164432 loss: 0.043407 speed: 1.16 it/s loss_render_depth: 0.086019
+[INFO] 180/426 mem: 20.59/71.12G lr: 0.0000179313 loss: 0.037245 speed: 0.99 it/s loss_render_depth: 0.118478
+[INFO] 190/426 mem: 20.59/71.12G lr: 0.0000194372 loss: 0.036074 speed: 1.01 it/s loss_render_depth: 0.088179
+[INFO] 200/426 mem: 20.59/71.12G lr: 0.0000209516 loss: 0.030297 speed: 1.20 it/s loss_render_depth: 0.070190
+[INFO] 210/426 mem: 20.59/71.12G lr: 0.0000224650 loss: 0.037647 speed: 1.20 it/s loss_render_depth: 0.092530
+[INFO] 220/426 mem: 20.59/71.12G lr: 0.0000239681 loss: 0.037405 speed: 1.20 it/s loss_render_depth: 0.140741
+[INFO] 230/426 mem: 20.59/71.12G lr: 0.0000254514 loss: 0.035872 speed: 1.20 it/s loss_render_depth: 0.090465
+[INFO] 240/426 mem: 20.59/71.12G lr: 0.0000269058 loss: 0.040757 speed: 0.71 it/s loss_render_depth: 0.115824
+[INFO] 250/426 mem: 20.59/71.12G lr: 0.0000283222 loss: 0.045315 speed: 0.71 it/s loss_render_depth: 0.119379
+[INFO] 260/426 mem: 20.59/71.12G lr: 0.0000296917 loss: 0.101124 speed: 0.71 it/s loss_render_depth: 0.138271
+[INFO] 270/426 mem: 20.59/71.12G lr: 0.0000310058 loss: 0.039657 speed: 1.21 it/s loss_render_depth: 0.086178
+[INFO] 280/426 mem: 20.59/71.12G lr: 0.0000322564 loss: 0.061745 speed: 1.20 it/s loss_render_depth: 0.193639
+[INFO] 290/426 mem: 20.59/71.12G lr: 0.0000334357 loss: 0.085977 speed: 0.72 it/s loss_render_depth: 0.406922
+[INFO] 300/426 mem: 20.59/71.12G lr: 0.0000345362 loss: 0.044748 speed: 1.21 it/s loss_render_depth: 0.167828
+[INFO] 310/426 mem: 20.59/71.12G lr: 0.0000355513 loss: 0.042488 speed: 1.20 it/s loss_render_depth: 0.182179
+[INFO] 320/426 mem: 20.59/71.12G lr: 0.0000364744 loss: 0.052759 speed: 1.18 it/s loss_render_depth: 0.102537
+[INFO] 330/426 mem: 20.59/71.12G lr: 0.0000373000 loss: 0.045328 speed: 1.10 it/s loss_render_depth: 0.162547
+[INFO] 340/426 mem: 20.59/71.12G lr: 0.0000380227 loss: 0.074618 speed: 1.20 it/s loss_render_depth: 0.324468
+[INFO] 350/426 mem: 20.59/71.12G lr: 0.0000386383 loss: 0.058332 speed: 1.14 it/s loss_render_depth: 0.144300
+[INFO] 360/426 mem: 20.59/71.12G lr: 0.0000391427 loss: 0.041575 speed: 1.08 it/s loss_render_depth: 0.134934
+[INFO] 370/426 mem: 20.59/71.12G lr: 0.0000395330 loss: 0.073976 speed: 1.19 it/s loss_render_depth: 0.154983
+[INFO] 380/426 mem: 20.59/71.12G lr: 0.0000398065 loss: 0.289062 speed: 1.01 it/s loss_render_depth: 0.492320
+[INFO] 390/426 mem: 20.59/71.12G lr: 0.0000399617 loss: 0.048303 speed: 1.20 it/s loss_render_depth: 0.172671
+[INFO] 400/426 mem: 20.59/71.12G lr: 0.0000400000 loss: 0.047959 speed: 1.15 it/s loss_render_depth: 0.105647
+[INFO] 410/426 mem: 20.59/71.12G lr: 0.0000399998 loss: 0.036918 speed: 1.10 it/s loss_render_depth: 0.071863
+[INFO] 420/426 mem: 20.59/71.12G lr: 0.0000399993 loss: 0.041230 speed: 1.20 it/s loss_render_depth: 0.140931
+[train] epoch: 0 loss: 0.043456 psnr: 32.2860
+[eval] epoch: 0 psnr: 29.0275 depth_absrel: 0.1457 unique_scenes: 50
+[INFO] Setting RNG epoch to 1
+[INFO] 0/426 mem: 20.43/71.12G lr: 0.0000399988 loss: 0.037631 speed: 3.10 it/s loss_render_depth: 0.072850
+[INFO] 10/426 mem: 20.43/71.12G lr: 0.0000399978 loss: 0.043441 speed: 0.76 it/s loss_render_depth: 0.062351
+[INFO] 20/426 mem: 20.43/71.12G lr: 0.0000399966 loss: 0.042432 speed: 0.82 it/s loss_render_depth: 0.150061
+[INFO] 30/426 mem: 20.43/71.12G lr: 0.0000399950 loss: 0.065756 speed: 1.21 it/s loss_render_depth: 0.157476
+[INFO] 40/426 mem: 20.43/71.12G lr: 0.0000399931 loss: 0.067395 speed: 1.19 it/s loss_render_depth: 0.199711
+[INFO] 50/426 mem: 20.43/71.12G lr: 0.0000399909 loss: 0.091878 speed: 1.20 it/s loss_render_depth: 0.226492
+[INFO] 60/426 mem: 20.43/71.12G lr: 0.0000399884 loss: 0.046623 speed: 1.02 it/s loss_render_depth: 0.051224
+[INFO] 70/426 mem: 20.43/71.12G lr: 0.0000399856 loss: 0.052176 speed: 1.20 it/s loss_render_depth: 0.214217
+[INFO] 80/426 mem: 20.43/71.12G lr: 0.0000399825 loss: 0.057616 speed: 0.67 it/s loss_render_depth: 0.213181
+[INFO] 90/426 mem: 20.43/71.12G lr: 0.0000399792 loss: 0.034291 speed: 1.20 it/s loss_render_depth: 0.050640
+[INFO] 100/426 mem: 20.43/71.12G lr: 0.0000399755 loss: 0.043851 speed: 1.00 it/s loss_render_depth: 0.069191
+[INFO] 110/426 mem: 20.43/71.12G lr: 0.0000399715 loss: 0.029214 speed: 1.00 it/s loss_render_depth: 0.055070
+[INFO] 120/426 mem: 20.43/71.12G lr: 0.0000399672 loss: 0.046711 speed: 1.20 it/s loss_render_depth: 0.093438
+[INFO] 130/426 mem: 20.43/71.12G lr: 0.0000399626 loss: 0.061301 speed: 1.10 it/s loss_render_depth: 0.173845
+[INFO] 140/426 mem: 20.43/71.12G lr: 0.0000399578 loss: 0.047823 speed: 1.20 it/s loss_render_depth: 0.163061
+[INFO] 150/426 mem: 20.43/71.12G lr: 0.0000399526 loss: 0.045243 speed: 1.02 it/s loss_render_depth: 0.140778
+[INFO] 160/426 mem: 20.43/71.12G lr: 0.0000399471 loss: 0.040090 speed: 1.15 it/s loss_render_depth: 0.096212
+[INFO] 170/426 mem: 20.43/71.12G lr: 0.0000399413 loss: 0.062516 speed: 1.20 it/s loss_render_depth: 0.052934
+[INFO] 180/426 mem: 20.43/71.12G lr: 0.0000399353 loss: 0.070638 speed: 0.68 it/s loss_render_depth: 0.250430
+[INFO] 190/426 mem: 20.43/71.12G lr: 0.0000399289 loss: 0.048653 speed: 1.20 it/s loss_render_depth: 0.151513
+[INFO] 200/426 mem: 20.43/71.12G lr: 0.0000399222 loss: 0.032024 speed: 1.20 it/s loss_render_depth: 0.123697
+[INFO] 210/426 mem: 20.43/71.12G lr: 0.0000399153 loss: 0.046828 speed: 1.13 it/s loss_render_depth: 0.094668
+[INFO] 220/426 mem: 20.43/71.12G lr: 0.0000399080 loss: 0.038187 speed: 1.04 it/s loss_render_depth: 0.129807
+[INFO] 230/426 mem: 20.43/71.12G lr: 0.0000399004 loss: 0.037780 speed: 1.17 it/s loss_render_depth: 0.060005
+[INFO] 240/426 mem: 20.43/71.12G lr: 0.0000398926 loss: 0.027535 speed: 1.20 it/s loss_render_depth: 0.074493
+[INFO] 250/426 mem: 20.43/71.12G lr: 0.0000398844 loss: 0.067883 speed: 1.05 it/s loss_render_depth: 0.122527
+[INFO] 260/426 mem: 20.43/71.12G lr: 0.0000398760 loss: 0.037807 speed: 0.78 it/s loss_render_depth: 0.092481
+[INFO] 270/426 mem: 20.43/71.12G lr: 0.0000398672 loss: 0.039665 speed: 1.15 it/s loss_render_depth: 0.098330
+[INFO] 280/426 mem: 20.43/71.12G lr: 0.0000398582 loss: 0.033272 speed: 1.01 it/s loss_render_depth: 0.062198
+[INFO] 290/426 mem: 20.43/71.12G lr: 0.0000398488 loss: 0.042506 speed: 0.97 it/s loss_render_depth: 0.074201
+[INFO] 300/426 mem: 20.43/71.12G lr: 0.0000398392 loss: 0.041707 speed: 1.20 it/s loss_render_depth: 0.170474
+[INFO] 310/426 mem: 20.43/71.12G lr: 0.0000398292 loss: 0.040673 speed: 1.20 it/s loss_render_depth: 0.055148
+[INFO] 320/426 mem: 20.43/71.12G lr: 0.0000398190 loss: 0.043156 speed: 1.20 it/s loss_render_depth: 0.099486
+[INFO] 330/426 mem: 20.43/71.12G lr: 0.0000398085 loss: 0.045067 speed: 1.11 it/s loss_render_depth: 0.099986
+[INFO] 340/426 mem: 20.43/71.12G lr: 0.0000397976 loss: 0.043431 speed: 1.00 it/s loss_render_depth: 0.073848
+[INFO] 350/426 mem: 20.43/71.12G lr: 0.0000397865 loss: 0.024477 speed: 1.20 it/s loss_render_depth: 0.057481
+[INFO] 360/426 mem: 20.43/71.12G lr: 0.0000397751 loss: 0.037717 speed: 1.13 it/s loss_render_depth: 0.056992
+[INFO] 370/426 mem: 20.43/71.12G lr: 0.0000397634 loss: 0.033721 speed: 1.20 it/s loss_render_depth: 0.074553
+[INFO] 380/426 mem: 20.43/71.12G lr: 0.0000397513 loss: 0.075771 speed: 1.09 it/s loss_render_depth: 0.311815
+[INFO] 390/426 mem: 20.43/71.12G lr: 0.0000397390 loss: 0.064258 speed: 0.71 it/s loss_render_depth: 0.198063
+[INFO] 400/426 mem: 20.43/71.12G lr: 0.0000397264 loss: 0.045042 speed: 1.20 it/s loss_render_depth: 0.179589
+[INFO] 410/426 mem: 20.43/71.12G lr: 0.0000397135 loss: 0.040887 speed: 1.09 it/s loss_render_depth: 0.073406
+[INFO] 420/426 mem: 20.43/71.12G lr: 0.0000397003 loss: 0.056604 speed: 0.74 it/s loss_render_depth: 0.207875
+[train] epoch: 1 loss: 0.085836 psnr: 30.7280
+[eval] epoch: 1 psnr: 28.6439 depth_absrel: 0.1198 unique_scenes: 50
+[INFO] Setting RNG epoch to 2
+[INFO] 0/426 mem: 20.43/71.12G lr: 0.0000396923 loss: 0.058675 speed: 1.50 it/s loss_render_depth: 0.101726
+[INFO] 10/426 mem: 20.43/71.12G lr: 0.0000396786 loss: 0.055994 speed: 0.70 it/s loss_render_depth: 0.161351
+[INFO] 20/426 mem: 20.43/71.12G lr: 0.0000396646 loss: 0.058775 speed: 1.18 it/s loss_render_depth: 0.169583
+[INFO] 30/426 mem: 20.43/71.12G lr: 0.0000396504 loss: 0.030850 speed: 1.21 it/s loss_render_depth: 0.054008
+[INFO] 40/426 mem: 20.43/71.12G lr: 0.0000396358 loss: 0.035758 speed: 0.94 it/s loss_render_depth: 0.090378
+[INFO] 50/426 mem: 20.43/71.12G lr: 0.0000396210 loss: 0.080749 speed: 1.08 it/s loss_render_depth: 0.249045
+[INFO] 60/426 mem: 20.43/71.12G lr: 0.0000396058 loss: 0.046938 speed: 1.21 it/s loss_render_depth: 0.089478
+[INFO] 70/426 mem: 20.43/71.12G lr: 0.0000395904 loss: 0.039406 speed: 0.68 it/s loss_render_depth: 0.052459
+[INFO] 80/426 mem: 20.43/71.12G lr: 0.0000395747 loss: 0.034604 speed: 1.21 it/s loss_render_depth: 0.086098
+[INFO] 90/426 mem: 20.43/71.12G lr: 0.0000395587 loss: 0.044715 speed: 1.04 it/s loss_render_depth: 0.117478
+[INFO] 100/426 mem: 20.43/71.12G lr: 0.0000395424 loss: 0.034052 speed: 1.20 it/s loss_render_depth: 0.103267
+[INFO] 110/426 mem: 20.43/71.12G lr: 0.0000395258 loss: 0.125302 speed: 0.85 it/s loss_render_depth: 0.306038
+[INFO] 120/426 mem: 20.43/71.12G lr: 0.0000395089 loss: 0.026602 speed: 1.20 it/s loss_render_depth: 0.080219
+[INFO] 130/426 mem: 20.43/71.12G lr: 0.0000394917 loss: 0.051606 speed: 1.15 it/s loss_render_depth: 0.074092
+[INFO] 140/426 mem: 20.43/71.12G lr: 0.0000394742 loss: 0.024887 speed: 1.20 it/s loss_render_depth: 0.035145
+[INFO] 150/426 mem: 20.43/71.12G lr: 0.0000394564 loss: 0.043057 speed: 1.20 it/s loss_render_depth: 0.083212
+[INFO] 160/426 mem: 20.43/71.12G lr: 0.0000394384 loss: 0.036120 speed: 1.20 it/s loss_render_depth: 0.126980
+[INFO] 170/426 mem: 20.43/71.12G lr: 0.0000394200 loss: 0.062522 speed: 1.10 it/s loss_render_depth: 0.177006
+[INFO] 180/426 mem: 20.43/71.12G lr: 0.0000394014 loss: 0.042573 speed: 0.72 it/s loss_render_depth: 0.058481
+[INFO] 190/426 mem: 20.43/71.12G lr: 0.0000393824 loss: 0.048657 speed: 1.20 it/s loss_render_depth: 0.124830
+[INFO] 200/426 mem: 20.43/71.12G lr: 0.0000393632 loss: 0.028157 speed: 1.16 it/s loss_render_depth: 0.064598
+[INFO] 210/426 mem: 20.43/71.12G lr: 0.0000393437 loss: 0.031139 speed: 1.20 it/s loss_render_depth: 0.077108
+[INFO] 220/426 mem: 20.43/71.12G lr: 0.0000393239 loss: 0.038381 speed: 1.08 it/s loss_render_depth: 0.055506
+[INFO] 230/426 mem: 20.43/71.12G lr: 0.0000393038 loss: 0.066959 speed: 1.20 it/s loss_render_depth: 0.277832
+[INFO] 240/426 mem: 20.43/71.12G lr: 0.0000392834 loss: 0.047500 speed: 1.12 it/s loss_render_depth: 0.168241
+[INFO] 250/426 mem: 20.43/71.12G lr: 0.0000392627 loss: 0.029959 speed: 1.20 it/s loss_render_depth: 0.082227
+[INFO] 260/426 mem: 20.43/71.12G lr: 0.0000392418 loss: 0.024439 speed: 1.20 it/s loss_render_depth: 0.051085
+[INFO] 270/426 mem: 20.43/71.12G lr: 0.0000392205 loss: 0.049171 speed: 0.69 it/s loss_render_depth: 0.148862
+[INFO] 280/426 mem: 20.43/71.12G lr: 0.0000391990 loss: 0.046245 speed: 1.07 it/s loss_render_depth: 0.100935
+[INFO] 290/426 mem: 20.43/71.12G lr: 0.0000391772 loss: 0.028797 speed: 1.08 it/s loss_render_depth: 0.054805
+[INFO] 300/426 mem: 20.43/71.12G lr: 0.0000391551 loss: 0.036170 speed: 1.20 it/s loss_render_depth: 0.086519
+[INFO] 310/426 mem: 20.43/71.12G lr: 0.0000391327 loss: 0.040338 speed: 1.01 it/s loss_render_depth: 0.068758
+[INFO] 320/426 mem: 20.43/71.12G lr: 0.0000391100 loss: 0.036758 speed: 1.20 it/s loss_render_depth: 0.124188
+[INFO] 330/426 mem: 20.43/71.12G lr: 0.0000390870 loss: 0.039961 speed: 0.92 it/s loss_render_depth: 0.141263
+[INFO] 340/426 mem: 20.43/71.12G lr: 0.0000390637 loss: 0.047983 speed: 0.97 it/s loss_render_depth: 0.091028
+[INFO] 350/426 mem: 20.43/71.12G lr: 0.0000390402 loss: 0.037563 speed: 0.98 it/s loss_render_depth: 0.084265
+[INFO] 360/426 mem: 20.43/71.12G lr: 0.0000390164 loss: 0.061543 speed: 1.19 it/s loss_render_depth: 0.282345
+[INFO] 370/426 mem: 20.43/71.12G lr: 0.0000389923 loss: 0.033150 speed: 1.20 it/s loss_render_depth: 0.083985
+[INFO] 380/426 mem: 20.43/71.12G lr: 0.0000389679 loss: 0.025628 speed: 1.20 it/s loss_render_depth: 0.048399
+[INFO] 390/426 mem: 20.43/71.12G lr: 0.0000389432 loss: 0.035873 speed: 1.20 it/s loss_render_depth: 0.125366
+[INFO] 400/426 mem: 20.43/71.12G lr: 0.0000389182 loss: 0.034375 speed: 1.20 it/s loss_render_depth: 0.043830
+[INFO] 410/426 mem: 20.43/71.12G lr: 0.0000388930 loss: 0.036811 speed: 1.06 it/s loss_render_depth: 0.111369
+[INFO] 420/426 mem: 20.43/71.12G lr: 0.0000388675 loss: 0.059841 speed: 1.20 it/s loss_render_depth: 0.265711
+[train] epoch: 2 loss: 0.082281 psnr: 31.2146
+[eval] epoch: 2 psnr: 29.2329 depth_absrel: 0.1110 unique_scenes: 50
+[INFO] Setting RNG epoch to 3
+[INFO] 0/426 mem: 20.43/71.12G lr: 0.0000388520 loss: 0.037161 speed: 1.90 it/s loss_render_depth: 0.059577
+[INFO] 10/426 mem: 20.43/71.12G lr: 0.0000388260 loss: 0.027924 speed: 0.84 it/s loss_render_depth: 0.112731
+[INFO] 20/426 mem: 20.43/71.12G lr: 0.0000387998 loss: 0.036853 speed: 0.64 it/s loss_render_depth: 0.086197
+[INFO] 30/426 mem: 20.43/71.12G lr: 0.0000387732 loss: 0.036132 speed: 1.21 it/s loss_render_depth: 0.068941
+[INFO] 40/426 mem: 20.43/71.12G lr: 0.0000387464 loss: 0.033159 speed: 0.80 it/s loss_render_depth: 0.075692
+[INFO] 50/426 mem: 20.43/71.12G lr: 0.0000387193 loss: 0.030289 speed: 1.21 it/s loss_render_depth: 0.087596
+[INFO] 60/426 mem: 20.43/71.12G lr: 0.0000386919 loss: 0.038427 speed: 1.07 it/s loss_render_depth: 0.080225
+[INFO] 70/426 mem: 20.43/71.12G lr: 0.0000386643 loss: 0.024309 speed: 0.99 it/s loss_render_depth: 0.041304
+[INFO] 80/426 mem: 20.43/71.12G lr: 0.0000386363 loss: 0.042871 speed: 0.71 it/s loss_render_depth: 0.122193
+[INFO] 90/426 mem: 20.43/71.12G lr: 0.0000386081 loss: 0.037175 speed: 1.21 it/s loss_render_depth: 0.080123
+[INFO] 100/426 mem: 20.43/71.12G lr: 0.0000385796 loss: 0.033683 speed: 1.21 it/s loss_render_depth: 0.091772
+[INFO] 110/426 mem: 20.43/71.12G lr: 0.0000385508 loss: 0.029493 speed: 1.20 it/s loss_render_depth: 0.063711
+[INFO] 120/426 mem: 20.43/71.12G lr: 0.0000385218 loss: 0.039909 speed: 0.67 it/s loss_render_depth: 0.125407
+[INFO] 130/426 mem: 20.43/71.12G lr: 0.0000384924 loss: 0.043529 speed: 1.17 it/s loss_render_depth: 0.157545
+[INFO] 140/426 mem: 20.43/71.12G lr: 0.0000384628 loss: 0.039807 speed: 0.69 it/s loss_render_depth: 0.123406
+[INFO] 150/426 mem: 20.43/71.12G lr: 0.0000384329 loss: 0.036570 speed: 1.21 it/s loss_render_depth: 0.079785
+[INFO] 160/426 mem: 20.43/71.12G lr: 0.0000384028 loss: 0.037799 speed: 1.19 it/s loss_render_depth: 0.112528
+[INFO] 170/426 mem: 20.43/71.12G lr: 0.0000383723 loss: 0.018692 speed: 1.20 it/s loss_render_depth: 0.031463
+[INFO] 180/426 mem: 20.43/71.12G lr: 0.0000383416 loss: 0.048103 speed: 0.97 it/s loss_render_depth: 0.151560
+[INFO] 190/426 mem: 20.43/71.12G lr: 0.0000383106 loss: 0.088693 speed: 1.20 it/s loss_render_depth: 0.136469
+[INFO] 200/426 mem: 20.43/71.12G lr: 0.0000382794 loss: 0.055042 speed: 1.20 it/s loss_render_depth: 0.101479
+[INFO] 210/426 mem: 20.43/71.12G lr: 0.0000382478 loss: 0.030485 speed: 1.16 it/s loss_render_depth: 0.078231
+[INFO] 220/426 mem: 20.43/71.12G lr: 0.0000382160 loss: 0.088567 speed: 1.13 it/s loss_render_depth: 0.132821
+[INFO] 230/426 mem: 20.43/71.12G lr: 0.0000381839 loss: 0.119037 speed: 1.07 it/s loss_render_depth: 0.255751
+[INFO] 240/426 mem: 20.43/71.12G lr: 0.0000381516 loss: 0.039648 speed: 1.13 it/s loss_render_depth: 0.142251
+[INFO] 250/426 mem: 20.43/71.12G lr: 0.0000381190 loss: 0.035547 speed: 1.10 it/s loss_render_depth: 0.081827
+[INFO] 260/426 mem: 20.43/71.12G lr: 0.0000380861 loss: 0.022966 speed: 1.20 it/s loss_render_depth: 0.058288
+[INFO] 270/426 mem: 20.43/71.12G lr: 0.0000380529 loss: 0.031500 speed: 1.16 it/s loss_render_depth: 0.061802
+[INFO] 280/426 mem: 20.43/71.12G lr: 0.0000380195 loss: 0.044163 speed: 0.75 it/s loss_render_depth: 0.054228
+[INFO] 290/426 mem: 20.43/71.12G lr: 0.0000379857 loss: 0.059442 speed: 1.07 it/s loss_render_depth: 0.130668
+[INFO] 300/426 mem: 20.43/71.12G lr: 0.0000379518 loss: 0.034606 speed: 1.06 it/s loss_render_depth: 0.116217
+[INFO] 310/426 mem: 20.43/71.12G lr: 0.0000379175 loss: 0.058911 speed: 1.20 it/s loss_render_depth: 0.141415
+[INFO] 320/426 mem: 20.43/71.12G lr: 0.0000378830 loss: 0.045691 speed: 1.20 it/s loss_render_depth: 0.129447
+[INFO] 330/426 mem: 20.43/71.12G lr: 0.0000378482 loss: 0.038775 speed: 1.12 it/s loss_render_depth: 0.140154
+[INFO] 340/426 mem: 20.43/71.12G lr: 0.0000378132 loss: 0.036149 speed: 1.20 it/s loss_render_depth: 0.092563
+[INFO] 350/426 mem: 20.43/71.12G lr: 0.0000377779 loss: 0.038716 speed: 1.15 it/s loss_render_depth: 0.085375
+[INFO] 360/426 mem: 20.43/71.12G lr: 0.0000377423 loss: 0.046448 speed: 0.95 it/s loss_render_depth: 0.086979
+[INFO] 370/426 mem: 20.43/71.12G lr: 0.0000377064 loss: 0.036119 speed: 1.20 it/s loss_render_depth: 0.080551
+[INFO] 380/426 mem: 20.43/71.12G lr: 0.0000376703 loss: 0.041463 speed: 0.99 it/s loss_render_depth: 0.146045
+[INFO] 390/426 mem: 20.43/71.12G lr: 0.0000376340 loss: 0.051033 speed: 1.05 it/s loss_render_depth: 0.190557
+[INFO] 400/426 mem: 20.43/71.12G lr: 0.0000375973 loss: 0.070210 speed: 1.20 it/s loss_render_depth: 0.137036
+[INFO] 410/426 mem: 20.43/71.12G lr: 0.0000375604 loss: 0.020847 speed: 1.08 it/s loss_render_depth: 0.060903
+[INFO] 420/426 mem: 20.43/71.12G lr: 0.0000375232 loss: 0.029758 speed: 1.20 it/s loss_render_depth: 0.077895
+[train] epoch: 3 loss: 0.063885 psnr: 31.2672
+[eval] epoch: 3 psnr: 29.4403 depth_absrel: 0.1072 unique_scenes: 50
+[INFO] Setting RNG epoch to 4
+[INFO] 0/426 mem: 20.43/71.12G lr: 0.0000375008 loss: 0.042245 speed: 2.87 it/s loss_render_depth: 0.116387
+[INFO] 10/426 mem: 20.43/71.12G lr: 0.0000374632 loss: 0.033003 speed: 0.88 it/s loss_render_depth: 0.077263
+[INFO] 20/426 mem: 20.43/71.12G lr: 0.0000374254 loss: 0.058959 speed: 0.72 it/s loss_render_depth: 0.130220
+[INFO] 30/426 mem: 20.43/71.12G lr: 0.0000373873 loss: 0.052704 speed: 1.21 it/s loss_render_depth: 0.088035
+[INFO] 40/426 mem: 20.43/71.12G lr: 0.0000373489 loss: 0.031590 speed: 1.21 it/s loss_render_depth: 0.065296
+[INFO] 50/426 mem: 20.43/71.12G lr: 0.0000373103 loss: 0.038251 speed: 1.11 it/s loss_render_depth: 0.068766
+[INFO] 60/426 mem: 20.43/71.12G lr: 0.0000372714 loss: 0.046897 speed: 1.20 it/s loss_render_depth: 0.079900
+[INFO] 70/426 mem: 20.43/71.12G lr: 0.0000372323 loss: 0.025752 speed: 1.20 it/s loss_render_depth: 0.095727
+[INFO] 80/426 mem: 20.43/71.12G lr: 0.0000371929 loss: 0.040170 speed: 1.20 it/s loss_render_depth: 0.114080
+[INFO] 90/426 mem: 20.43/71.12G lr: 0.0000371532 loss: 0.051992 speed: 1.17 it/s loss_render_depth: 0.115473
+[INFO] 100/426 mem: 20.43/71.12G lr: 0.0000371133 loss: 0.041753 speed: 1.20 it/s loss_render_depth: 0.095234
+[INFO] 110/426 mem: 20.43/71.12G lr: 0.0000370731 loss: 0.040511 speed: 1.20 it/s loss_render_depth: 0.081586
+[INFO] 120/426 mem: 20.43/71.12G lr: 0.0000370327 loss: 0.030921 speed: 1.15 it/s loss_render_depth: 0.059100
+[INFO] 130/426 mem: 20.43/71.12G lr: 0.0000369920 loss: 0.041035 speed: 1.03 it/s loss_render_depth: 0.085081
+[INFO] 140/426 mem: 20.43/71.12G lr: 0.0000369511 loss: 0.036374 speed: 1.20 it/s loss_render_depth: 0.053078
+[INFO] 150/426 mem: 20.43/71.12G lr: 0.0000369099 loss: 0.033308 speed: 1.20 it/s loss_render_depth: 0.094572
+[INFO] 160/426 mem: 20.43/71.12G lr: 0.0000368684 loss: 0.052909 speed: 1.15 it/s loss_render_depth: 0.158029
+[INFO] 170/426 mem: 20.43/71.12G lr: 0.0000368267 loss: 0.036390 speed: 1.20 it/s loss_render_depth: 0.104026
+[INFO] 180/426 mem: 20.43/71.12G lr: 0.0000367848 loss: 0.024817 speed: 1.20 it/s loss_render_depth: 0.083251
+[INFO] 190/426 mem: 20.43/71.12G lr: 0.0000367426 loss: 0.074944 speed: 1.01 it/s loss_render_depth: 0.382191
+[INFO] 200/426 mem: 20.43/71.12G lr: 0.0000367001 loss: 0.027738 speed: 1.20 it/s loss_render_depth: 0.075882
+[INFO] 210/426 mem: 20.43/71.12G lr: 0.0000366574 loss: 0.030977 speed: 1.17 it/s loss_render_depth: 0.075392
+[INFO] 220/426 mem: 20.43/71.12G lr: 0.0000366145 loss: 0.042079 speed: 1.01 it/s loss_render_depth: 0.132616
+[INFO] 230/426 mem: 20.43/71.12G lr: 0.0000365713 loss: 0.046079 speed: 1.20 it/s loss_render_depth: 0.126526
+[INFO] 240/426 mem: 20.43/71.12G lr: 0.0000365278 loss: 0.060344 speed: 1.20 it/s loss_render_depth: 0.132103
+[INFO] 250/426 mem: 20.43/71.12G lr: 0.0000364841 loss: 0.033049 speed: 1.01 it/s loss_render_depth: 0.089655
+[INFO] 260/426 mem: 20.43/71.12G lr: 0.0000364402 loss: 0.020841 speed: 1.20 it/s loss_render_depth: 0.058031
+[INFO] 270/426 mem: 20.43/71.12G lr: 0.0000363960 loss: 0.025735 speed: 1.13 it/s loss_render_depth: 0.050897
+[INFO] 280/426 mem: 20.43/71.12G lr: 0.0000363516 loss: 0.022460 speed: 1.09 it/s loss_render_depth: 0.037043
+[INFO] 290/426 mem: 20.43/71.12G lr: 0.0000363069 loss: 0.027502 speed: 0.96 it/s loss_render_depth: 0.050311
+[INFO] 300/426 mem: 20.43/71.12G lr: 0.0000362620 loss: 0.061688 speed: 1.20 it/s loss_render_depth: 0.207046
+[INFO] 310/426 mem: 20.43/71.12G lr: 0.0000362168 loss: 0.055955 speed: 0.99 it/s loss_render_depth: 0.090131
+[INFO] 320/426 mem: 20.43/71.12G lr: 0.0000361714 loss: 0.079460 speed: 1.18 it/s loss_render_depth: 0.227550
+[INFO] 330/426 mem: 20.43/71.12G lr: 0.0000361257 loss: 0.032184 speed: 1.04 it/s loss_render_depth: 0.073419
+[INFO] 340/426 mem: 20.43/71.12G lr: 0.0000360799 loss: 0.049905 speed: 0.78 it/s loss_render_depth: 0.081208
+[INFO] 350/426 mem: 20.43/71.12G lr: 0.0000360337 loss: 0.103312 speed: 1.20 it/s loss_render_depth: 0.185643
+[INFO] 360/426 mem: 20.43/71.12G lr: 0.0000359873 loss: 0.025253 speed: 0.66 it/s loss_render_depth: 0.048006
+[INFO] 370/426 mem: 20.43/71.12G lr: 0.0000359407 loss: 0.026912 speed: 0.68 it/s loss_render_depth: 0.070037
+[INFO] 380/426 mem: 20.43/71.12G lr: 0.0000358939 loss: 0.041690 speed: 1.21 it/s loss_render_depth: 0.172772
+[INFO] 390/426 mem: 20.43/71.12G lr: 0.0000358468 loss: 0.030955 speed: 1.21 it/s loss_render_depth: 0.046512
+[INFO] 400/426 mem: 20.43/71.12G lr: 0.0000357995 loss: 0.106850 speed: 1.06 it/s loss_render_depth: 0.179753
+[INFO] 410/426 mem: 20.43/71.12G lr: 0.0000357519 loss: 0.065397 speed: 1.09 it/s loss_render_depth: 0.176085
+[INFO] 420/426 mem: 20.43/71.12G lr: 0.0000357041 loss: 0.047960 speed: 0.92 it/s loss_render_depth: 0.087299
+[train] epoch: 4 loss: 0.072480 psnr: 31.5628
+[eval] epoch: 4 psnr: 29.2732 depth_absrel: 0.1043 unique_scenes: 50
+[INFO] Setting RNG epoch to 5
+[INFO] 0/426 mem: 20.43/71.12G lr: 0.0000356753 loss: 0.023780 speed: 3.12 it/s loss_render_depth: 0.059760
+[INFO] 10/426 mem: 20.43/71.12G lr: 0.0000356272 loss: 0.052679 speed: 0.73 it/s loss_render_depth: 0.082901
+[INFO] 20/426 mem: 20.43/71.12G lr: 0.0000355787 loss: 0.036366 speed: 0.69 it/s loss_render_depth: 0.075804
+[INFO] 30/426 mem: 20.43/71.12G lr: 0.0000355301 loss: 0.059896 speed: 1.21 it/s loss_render_depth: 0.126193
+[INFO] 40/426 mem: 20.43/71.12G lr: 0.0000354812 loss: 0.037433 speed: 1.21 it/s loss_render_depth: 0.065857
+[INFO] 50/426 mem: 20.43/71.12G lr: 0.0000354321 loss: 0.036820 speed: 1.04 it/s loss_render_depth: 0.082936
+[INFO] 60/426 mem: 20.43/71.12G lr: 0.0000353828 loss: 0.040155 speed: 1.21 it/s loss_render_depth: 0.071729
+[INFO] 70/426 mem: 20.43/71.12G lr: 0.0000353332 loss: 0.028017 speed: 1.11 it/s loss_render_depth: 0.044660
+[INFO] 80/426 mem: 20.43/71.12G lr: 0.0000352834 loss: 0.042839 speed: 1.20 it/s loss_render_depth: 0.097482
+[INFO] 90/426 mem: 20.43/71.12G lr: 0.0000352334 loss: 0.039513 speed: 1.16 it/s loss_render_depth: 0.148261
+[INFO] 100/426 mem: 20.43/71.12G lr: 0.0000351832 loss: 0.032977 speed: 1.20 it/s loss_render_depth: 0.092462
+[INFO] 110/426 mem: 20.43/71.12G lr: 0.0000351327 loss: 0.041212 speed: 1.20 it/s loss_render_depth: 0.075894
+[INFO] 120/426 mem: 20.43/71.12G lr: 0.0000350820 loss: 0.032572 speed: 1.20 it/s loss_render_depth: 0.063245
+[INFO] 130/426 mem: 20.43/71.12G lr: 0.0000350310 loss: 0.031623 speed: 1.16 it/s loss_render_depth: 0.088574
+[INFO] 140/426 mem: 20.43/71.12G lr: 0.0000349799 loss: 0.033147 speed: 1.12 it/s loss_render_depth: 0.068515
+[INFO] 150/426 mem: 20.43/71.12G lr: 0.0000349285 loss: 0.031496 speed: 1.20 it/s loss_render_depth: 0.047252
+[INFO] 160/426 mem: 20.43/71.12G lr: 0.0000348769 loss: 0.043089 speed: 0.84 it/s loss_render_depth: 0.098859
+[INFO] 170/426 mem: 20.43/71.12G lr: 0.0000348251 loss: 0.031843 speed: 1.20 it/s loss_render_depth: 0.078266
+[INFO] 180/426 mem: 20.43/71.12G lr: 0.0000347730 loss: 0.058082 speed: 1.11 it/s loss_render_depth: 0.089377
+[INFO] 190/426 mem: 20.43/71.12G lr: 0.0000347208 loss: 0.054739 speed: 0.71 it/s loss_render_depth: 0.079352
+[INFO] 200/426 mem: 20.43/71.12G lr: 0.0000346683 loss: 0.030298 speed: 1.19 it/s loss_render_depth: 0.050672
+[INFO] 210/426 mem: 20.43/71.12G lr: 0.0000346156 loss: 0.043719 speed: 1.09 it/s loss_render_depth: 0.063634
+[INFO] 220/426 mem: 20.43/71.12G lr: 0.0000345626 loss: 0.029734 speed: 1.20 it/s loss_render_depth: 0.076813
+[INFO] 230/426 mem: 20.43/71.12G lr: 0.0000345095 loss: 0.035220 speed: 1.20 it/s loss_render_depth: 0.073577
+[INFO] 240/426 mem: 20.43/71.12G lr: 0.0000344561 loss: 0.066884 speed: 1.07 it/s loss_render_depth: 0.267640
+[INFO] 250/426 mem: 20.43/71.12G lr: 0.0000344025 loss: 0.039894 speed: 1.11 it/s loss_render_depth: 0.070315
+[INFO] 260/426 mem: 20.43/71.12G lr: 0.0000343487 loss: 0.047932 speed: 1.20 it/s loss_render_depth: 0.091180
+[INFO] 270/426 mem: 20.43/71.12G lr: 0.0000342947 loss: 0.064589 speed: 1.06 it/s loss_render_depth: 0.168629
+[INFO] 280/426 mem: 20.43/71.12G lr: 0.0000342405 loss: 0.043871 speed: 1.00 it/s loss_render_depth: 0.163749
+[INFO] 290/426 mem: 20.43/71.12G lr: 0.0000341861 loss: 0.082263 speed: 1.20 it/s loss_render_depth: 0.321545
+[INFO] 300/426 mem: 20.43/71.12G lr: 0.0000341314 loss: 0.027856 speed: 1.05 it/s loss_render_depth: 0.062678
+[INFO] 310/426 mem: 20.43/71.12G lr: 0.0000340766 loss: 0.041798 speed: 1.20 it/s loss_render_depth: 0.144746
+[INFO] 320/426 mem: 20.43/71.12G lr: 0.0000340215 loss: 0.026315 speed: 1.17 it/s loss_render_depth: 0.094801
+[INFO] 330/426 mem: 20.43/71.12G lr: 0.0000339662 loss: 0.038711 speed: 1.20 it/s loss_render_depth: 0.124531
+[INFO] 340/426 mem: 20.43/71.12G lr: 0.0000339107 loss: 0.039797 speed: 1.07 it/s loss_render_depth: 0.117001
+[INFO] 350/426 mem: 20.43/71.12G lr: 0.0000338550 loss: 0.042572 speed: 1.08 it/s loss_render_depth: 0.073374
+[INFO] 360/426 mem: 20.43/71.12G lr: 0.0000337991 loss: 0.018759 speed: 0.99 it/s loss_render_depth: 0.034492
+[INFO] 370/426 mem: 20.43/71.12G lr: 0.0000337430 loss: 0.022361 speed: 1.20 it/s loss_render_depth: 0.074737
+[INFO] 380/426 mem: 20.43/71.12G lr: 0.0000336867 loss: 0.023012 speed: 1.20 it/s loss_render_depth: 0.044390
+[INFO] 390/426 mem: 20.43/71.12G lr: 0.0000336302 loss: 0.039358 speed: 0.68 it/s loss_render_depth: 0.045636
+[INFO] 400/426 mem: 20.43/71.12G lr: 0.0000335734 loss: 0.036517 speed: 1.21 it/s loss_render_depth: 0.107098
+[INFO] 410/426 mem: 20.43/71.12G lr: 0.0000335165 loss: 0.027484 speed: 0.73 it/s loss_render_depth: 0.064582
+[INFO] 420/426 mem: 20.43/71.12G lr: 0.0000334594 loss: 0.030268 speed: 1.02 it/s loss_render_depth: 0.071841
+[train] epoch: 5 loss: 0.072054 psnr: 31.6302
+[eval] epoch: 5 psnr: 29.4188 depth_absrel: 0.0986 unique_scenes: 50
+[INFO] Setting RNG epoch to 6
+[INFO] 0/426 mem: 20.43/71.12G lr: 0.0000334250 loss: 0.026072 speed: 1.77 it/s loss_render_depth: 0.068026
+[INFO] 10/426 mem: 20.43/71.12G lr: 0.0000333675 loss: 0.030705 speed: 1.20 it/s loss_render_depth: 0.109978
+[INFO] 20/426 mem: 20.43/71.12G lr: 0.0000333099 loss: 0.026298 speed: 1.11 it/s loss_render_depth: 0.055292
+[INFO] 30/426 mem: 20.43/71.12G lr: 0.0000332520 loss: 0.038195 speed: 1.17 it/s loss_render_depth: 0.090723
+[INFO] 40/426 mem: 20.43/71.12G lr: 0.0000331940 loss: 0.036436 speed: 1.21 it/s loss_render_depth: 0.065640
+[INFO] 50/426 mem: 20.43/71.12G lr: 0.0000331357 loss: 0.038131 speed: 1.21 it/s loss_render_depth: 0.079051
+[INFO] 60/426 mem: 20.43/71.12G lr: 0.0000330773 loss: 0.039896 speed: 1.13 it/s loss_render_depth: 0.083893
+[INFO] 70/426 mem: 20.43/71.12G lr: 0.0000330186 loss: 0.038719 speed: 1.20 it/s loss_render_depth: 0.136107
+[INFO] 80/426 mem: 20.43/71.12G lr: 0.0000329598 loss: 0.026066 speed: 1.20 it/s loss_render_depth: 0.056020
+[INFO] 90/426 mem: 20.43/71.12G lr: 0.0000329008 loss: 0.055512 speed: 0.95 it/s loss_render_depth: 0.093404
+[INFO] 100/426 mem: 20.43/71.12G lr: 0.0000328415 loss: 0.062832 speed: 1.20 it/s loss_render_depth: 0.094111
+[INFO] 110/426 mem: 20.43/71.12G lr: 0.0000327821 loss: 0.038420 speed: 0.92 it/s loss_render_depth: 0.119188
+[INFO] 120/426 mem: 20.43/71.12G lr: 0.0000327225 loss: 0.024617 speed: 1.20 it/s loss_render_depth: 0.041660
+[INFO] 130/426 mem: 20.43/71.12G lr: 0.0000326627 loss: 0.049019 speed: 1.20 it/s loss_render_depth: 0.117883
+[INFO] 140/426 mem: 20.43/71.12G lr: 0.0000326027 loss: 0.022164 speed: 1.20 it/s loss_render_depth: 0.051833
+[INFO] 150/426 mem: 20.43/71.12G lr: 0.0000325426 loss: 0.026328 speed: 0.93 it/s loss_render_depth: 0.064114
+[INFO] 160/426 mem: 20.43/71.12G lr: 0.0000324822 loss: 0.049407 speed: 1.20 it/s loss_render_depth: 0.100886
+[INFO] 170/426 mem: 20.43/71.12G lr: 0.0000324216 loss: 0.034858 speed: 1.08 it/s loss_render_depth: 0.044437
+[INFO] 180/426 mem: 20.43/71.12G lr: 0.0000323609 loss: 0.045652 speed: 1.20 it/s loss_render_depth: 0.108567
+[INFO] 190/426 mem: 20.43/71.12G lr: 0.0000323000 loss: 0.024007 speed: 1.09 it/s loss_render_depth: 0.058062
+[INFO] 200/426 mem: 20.43/71.12G lr: 0.0000322389 loss: 0.032389 speed: 1.01 it/s loss_render_depth: 0.078494
+[INFO] 210/426 mem: 20.43/71.12G lr: 0.0000321776 loss: 0.031120 speed: 1.20 it/s loss_render_depth: 0.098802
+[INFO] 220/426 mem: 20.43/71.12G lr: 0.0000321161 loss: 0.024934 speed: 1.13 it/s loss_render_depth: 0.096546
+[INFO] 230/426 mem: 20.43/71.12G lr: 0.0000320545 loss: 0.018927 speed: 1.06 it/s loss_render_depth: 0.044857
+[INFO] 240/426 mem: 20.43/71.12G lr: 0.0000319926 loss: 0.022375 speed: 1.20 it/s loss_render_depth: 0.060738
+[INFO] 250/426 mem: 20.43/71.12G lr: 0.0000319306 loss: 0.067090 speed: 0.79 it/s loss_render_depth: 0.106478
+[INFO] 260/426 mem: 20.43/71.12G lr: 0.0000318684 loss: 0.035295 speed: 1.20 it/s loss_render_depth: 0.065323
+[INFO] 270/426 mem: 20.43/71.12G lr: 0.0000318061 loss: 0.021766 speed: 1.20 it/s loss_render_depth: 0.050613
+[INFO] 280/426 mem: 20.43/71.12G lr: 0.0000317435 loss: 0.059444 speed: 1.13 it/s loss_render_depth: 0.166770
+[INFO] 290/426 mem: 20.43/71.12G lr: 0.0000316808 loss: 0.032988 speed: 1.13 it/s loss_render_depth: 0.126263
+[INFO] 300/426 mem: 20.43/71.12G lr: 0.0000316179 loss: 0.112095 speed: 0.68 it/s loss_render_depth: 0.264942
+[INFO] 310/426 mem: 20.43/71.12G lr: 0.0000315548 loss: 0.025286 speed: 1.20 it/s loss_render_depth: 0.060685
+[INFO] 320/426 mem: 20.43/71.12G lr: 0.0000314916 loss: 0.034165 speed: 1.20 it/s loss_render_depth: 0.169846
+[INFO] 330/426 mem: 20.43/71.12G lr: 0.0000314282 loss: 0.029465 speed: 0.72 it/s loss_render_depth: 0.116854
+[INFO] 340/426 mem: 20.43/71.12G lr: 0.0000313646 loss: 0.034628 speed: 1.21 it/s loss_render_depth: 0.063940
+[INFO] 350/426 mem: 20.43/71.12G lr: 0.0000313008 loss: 0.036075 speed: 1.20 it/s loss_render_depth: 0.061878
+[INFO] 360/426 mem: 20.43/71.12G lr: 0.0000312369 loss: 0.032006 speed: 1.20 it/s loss_render_depth: 0.067270
+[INFO] 370/426 mem: 20.43/71.12G lr: 0.0000311728 loss: 0.030880 speed: 0.93 it/s loss_render_depth: 0.076043
+[INFO] 380/426 mem: 20.43/71.12G lr: 0.0000311085 loss: 0.020290 speed: 0.90 it/s loss_render_depth: 0.031332
+[INFO] 390/426 mem: 20.43/71.12G lr: 0.0000310441 loss: 0.045272 speed: 1.18 it/s loss_render_depth: 0.078444
+[INFO] 400/426 mem: 20.43/71.12G lr: 0.0000309795 loss: 0.024277 speed: 1.05 it/s loss_render_depth: 0.044776
+[INFO] 410/426 mem: 20.43/71.12G lr: 0.0000309148 loss: 0.035988 speed: 0.91 it/s loss_render_depth: 0.088699
+[INFO] 420/426 mem: 20.43/71.12G lr: 0.0000308498 loss: 0.031933 speed: 1.20 it/s loss_render_depth: 0.071655
+[train] epoch: 6 loss: 0.076208 psnr: 31.9374
+[eval] epoch: 6 psnr: 29.7263 depth_absrel: 0.0990 unique_scenes: 50
+[INFO] Setting RNG epoch to 7
+[INFO] 0/426 mem: 20.37/71.12G lr: 0.0000308108 loss: 0.023980 speed: 2.95 it/s loss_render_depth: 0.077348
+[INFO] 10/426 mem: 20.37/71.12G lr: 0.0000307456 loss: 0.035249 speed: 0.52 it/s loss_render_depth: 0.072462
+[INFO] 20/426 mem: 20.37/71.12G lr: 0.0000306803 loss: 0.032567 speed: 1.21 it/s loss_render_depth: 0.113063
+[INFO] 30/426 mem: 20.37/71.12G lr: 0.0000306148 loss: 0.057122 speed: 0.82 it/s loss_render_depth: 0.140291
+[INFO] 40/426 mem: 20.37/71.12G lr: 0.0000305491 loss: 0.027806 speed: 0.84 it/s loss_render_depth: 0.075208
+[INFO] 50/426 mem: 20.37/71.12G lr: 0.0000304833 loss: 0.055475 speed: 1.21 it/s loss_render_depth: 0.117828
+[INFO] 60/426 mem: 20.37/71.12G lr: 0.0000304173 loss: 0.028028 speed: 1.21 it/s loss_render_depth: 0.061465
+[INFO] 70/426 mem: 20.37/71.12G lr: 0.0000303512 loss: 0.038369 speed: 0.71 it/s loss_render_depth: 0.057272
+[INFO] 80/426 mem: 20.37/71.12G lr: 0.0000302849 loss: 0.036546 speed: 0.88 it/s loss_render_depth: 0.072031
+[INFO] 90/426 mem: 20.37/71.12G lr: 0.0000302185 loss: 0.018481 speed: 1.08 it/s loss_render_depth: 0.045604
+[INFO] 100/426 mem: 20.37/71.12G lr: 0.0000301519 loss: 0.076897 speed: 1.21 it/s loss_render_depth: 0.208731
+[INFO] 110/426 mem: 20.37/71.12G lr: 0.0000300852 loss: 0.029409 speed: 1.09 it/s loss_render_depth: 0.068560
+[INFO] 120/426 mem: 20.37/71.12G lr: 0.0000300183 loss: 0.031620 speed: 1.20 it/s loss_render_depth: 0.051461
+[INFO] 130/426 mem: 20.37/71.12G lr: 0.0000299512 loss: 0.042225 speed: 0.92 it/s loss_render_depth: 0.181892
+[INFO] 140/426 mem: 20.37/71.12G lr: 0.0000298840 loss: 0.038133 speed: 1.01 it/s loss_render_depth: 0.152063
+[INFO] 150/426 mem: 20.37/71.12G lr: 0.0000298167 loss: 0.041079 speed: 1.06 it/s loss_render_depth: 0.132752
+[INFO] 160/426 mem: 20.37/71.12G lr: 0.0000297492 loss: 0.051170 speed: 1.18 it/s loss_render_depth: 0.181038
+[INFO] 170/426 mem: 20.37/71.12G lr: 0.0000296816 loss: 0.062761 speed: 1.20 it/s loss_render_depth: 0.077428
+[INFO] 180/426 mem: 20.37/71.12G lr: 0.0000296138 loss: 0.033104 speed: 1.20 it/s loss_render_depth: 0.055432
+[INFO] 190/426 mem: 20.37/71.12G lr: 0.0000295459 loss: 0.020406 speed: 1.17 it/s loss_render_depth: 0.045267
+[INFO] 200/426 mem: 20.37/71.12G lr: 0.0000294778 loss: 0.045251 speed: 1.20 it/s loss_render_depth: 0.123024
+[INFO] 210/426 mem: 20.37/71.12G lr: 0.0000294096 loss: 0.023809 speed: 1.05 it/s loss_render_depth: 0.064052
+[INFO] 220/426 mem: 20.37/71.12G lr: 0.0000293412 loss: 0.031934 speed: 1.13 it/s loss_render_depth: 0.046309
+[INFO] 230/426 mem: 20.37/71.12G lr: 0.0000292727 loss: 0.022707 speed: 1.13 it/s loss_render_depth: 0.063679
+[INFO] 240/426 mem: 20.37/71.12G lr: 0.0000292041 loss: 0.028912 speed: 1.18 it/s loss_render_depth: 0.045944
+[INFO] 250/426 mem: 20.37/71.12G lr: 0.0000291354 loss: 0.049909 speed: 1.20 it/s loss_render_depth: 0.077108
+[INFO] 260/426 mem: 20.37/71.12G lr: 0.0000290665 loss: 0.019673 speed: 1.20 it/s loss_render_depth: 0.061519
+[INFO] 270/426 mem: 20.37/71.12G lr: 0.0000289974 loss: 0.019565 speed: 1.20 it/s loss_render_depth: 0.061992
+[INFO] 280/426 mem: 20.37/71.12G lr: 0.0000289282 loss: 0.022076 speed: 1.20 it/s loss_render_depth: 0.074268
+[INFO] 290/426 mem: 20.37/71.12G lr: 0.0000288589 loss: 0.020017 speed: 1.12 it/s loss_render_depth: 0.040004
+[INFO] 300/426 mem: 20.37/71.12G lr: 0.0000287895 loss: 0.027037 speed: 1.20 it/s loss_render_depth: 0.060680
+[INFO] 310/426 mem: 20.37/71.12G lr: 0.0000287199 loss: 0.043882 speed: 1.13 it/s loss_render_depth: 0.158841
+[INFO] 320/426 mem: 20.37/71.12G lr: 0.0000286502 loss: 0.021476 speed: 1.19 it/s loss_render_depth: 0.048931
+[INFO] 330/426 mem: 20.37/71.12G lr: 0.0000285804 loss: 0.029652 speed: 1.17 it/s loss_render_depth: 0.079541
+[INFO] 340/426 mem: 20.37/71.12G lr: 0.0000285104 loss: 0.033181 speed: 1.19 it/s loss_render_depth: 0.064768
+[INFO] 350/426 mem: 20.37/71.12G lr: 0.0000284404 loss: 0.024425 speed: 0.67 it/s loss_render_depth: 0.057080
+[INFO] 360/426 mem: 20.37/71.12G lr: 0.0000283701 loss: 0.048819 speed: 1.01 it/s loss_render_depth: 0.149714
+[INFO] 370/426 mem: 20.37/71.12G lr: 0.0000282998 loss: 0.029250 speed: 1.20 it/s loss_render_depth: 0.055746
+[INFO] 380/426 mem: 20.37/71.12G lr: 0.0000282293 loss: 0.023846 speed: 0.97 it/s loss_render_depth: 0.062623
+[INFO] 390/426 mem: 20.37/71.12G lr: 0.0000281588 loss: 0.019873 speed: 1.20 it/s loss_render_depth: 0.035609
+[INFO] 400/426 mem: 20.37/71.12G lr: 0.0000280881 loss: 0.040235 speed: 1.20 it/s loss_render_depth: 0.088628
+[INFO] 410/426 mem: 20.37/71.12G lr: 0.0000280172 loss: 0.031257 speed: 1.20 it/s loss_render_depth: 0.053228
+[INFO] 420/426 mem: 20.37/71.12G lr: 0.0000279463 loss: 0.021067 speed: 0.99 it/s loss_render_depth: 0.050390
+[train] epoch: 7 loss: 0.074470 psnr: 32.0339
+[eval] epoch: 7 psnr: 29.7592 depth_absrel: 0.0960 unique_scenes: 50
+[INFO] Setting RNG epoch to 8
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000279037 loss: 0.032300 speed: 1.50 it/s loss_render_depth: 0.090296
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000278325 loss: 0.034189 speed: 0.93 it/s loss_render_depth: 0.042884
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000277613 loss: 0.021747 speed: 1.18 it/s loss_render_depth: 0.055063
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000276899 loss: 0.025664 speed: 1.17 it/s loss_render_depth: 0.084874
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000276184 loss: 0.023923 speed: 0.91 it/s loss_render_depth: 0.081048
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000275468 loss: 0.040007 speed: 1.21 it/s loss_render_depth: 0.116120
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000274751 loss: 0.027620 speed: 0.67 it/s loss_render_depth: 0.108487
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000274033 loss: 0.019460 speed: 1.21 it/s loss_render_depth: 0.048862
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000273313 loss: 0.024476 speed: 0.72 it/s loss_render_depth: 0.089336
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000272593 loss: 0.038468 speed: 1.19 it/s loss_render_depth: 0.048837
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000271871 loss: 0.025946 speed: 1.20 it/s loss_render_depth: 0.038415
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000271149 loss: 0.034512 speed: 0.71 it/s loss_render_depth: 0.068473
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000270425 loss: 0.029879 speed: 1.19 it/s loss_render_depth: 0.168821
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000269700 loss: 0.027940 speed: 1.14 it/s loss_render_depth: 0.068104
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000268975 loss: 0.047479 speed: 1.08 it/s loss_render_depth: 0.081756
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000268248 loss: 0.045678 speed: 1.21 it/s loss_render_depth: 0.071115
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000267520 loss: 0.022190 speed: 1.01 it/s loss_render_depth: 0.039051
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000266791 loss: 0.034144 speed: 1.13 it/s loss_render_depth: 0.126869
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000266061 loss: 0.025190 speed: 1.13 it/s loss_render_depth: 0.049442
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000265330 loss: 0.041516 speed: 1.15 it/s loss_render_depth: 0.078286
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000264599 loss: 0.053032 speed: 1.20 it/s loss_render_depth: 0.127451
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000263866 loss: 0.048767 speed: 1.20 it/s loss_render_depth: 0.227348
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000263132 loss: 0.028295 speed: 1.20 it/s loss_render_depth: 0.092472
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000262397 loss: 0.024329 speed: 1.20 it/s loss_render_depth: 0.060478
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000261662 loss: 0.035294 speed: 1.20 it/s loss_render_depth: 0.063788
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000260925 loss: 0.036441 speed: 1.00 it/s loss_render_depth: 0.070466
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000260188 loss: 0.029523 speed: 1.20 it/s loss_render_depth: 0.087364
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000259449 loss: 0.020680 speed: 0.71 it/s loss_render_depth: 0.053362
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000258710 loss: 0.030398 speed: 1.20 it/s loss_render_depth: 0.060197
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000257970 loss: 0.049209 speed: 1.20 it/s loss_render_depth: 0.117223
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000257229 loss: 0.022178 speed: 1.20 it/s loss_render_depth: 0.046050
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000256487 loss: 0.032094 speed: 1.05 it/s loss_render_depth: 0.067761
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000255745 loss: 0.044578 speed: 1.13 it/s loss_render_depth: 0.104000
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000255001 loss: 0.021436 speed: 1.20 it/s loss_render_depth: 0.049976
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000254257 loss: 0.037204 speed: 1.20 it/s loss_render_depth: 0.075350
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000253512 loss: 0.024489 speed: 1.20 it/s loss_render_depth: 0.042869
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000252766 loss: 0.038327 speed: 1.20 it/s loss_render_depth: 0.060449
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000252019 loss: 0.025506 speed: 1.14 it/s loss_render_depth: 0.124491
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000251271 loss: 0.027870 speed: 1.20 it/s loss_render_depth: 0.076192
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000250523 loss: 0.029334 speed: 1.19 it/s loss_render_depth: 0.074142
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000249774 loss: 0.024259 speed: 1.14 it/s loss_render_depth: 0.062707
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000249024 loss: 0.035842 speed: 1.04 it/s loss_render_depth: 0.130639
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000248274 loss: 0.039819 speed: 0.81 it/s loss_render_depth: 0.074879
+[train] epoch: 8 loss: 0.071346 psnr: 32.2019
+[eval] epoch: 8 psnr: 29.9446 depth_absrel: 0.0943 unique_scenes: 50
+[INFO] Setting RNG epoch to 9
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000247823 loss: 0.031296 speed: 1.50 it/s loss_render_depth: 0.080443
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000247071 loss: 0.020532 speed: 0.87 it/s loss_render_depth: 0.028574
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000246319 loss: 0.021473 speed: 1.01 it/s loss_render_depth: 0.047299
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000245566 loss: 0.051429 speed: 0.72 it/s loss_render_depth: 0.072213
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000244812 loss: 0.028315 speed: 0.99 it/s loss_render_depth: 0.070509
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000244058 loss: 0.047566 speed: 1.21 it/s loss_render_depth: 0.153998
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000243303 loss: 0.021786 speed: 1.13 it/s loss_render_depth: 0.032833
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000242547 loss: 0.035281 speed: 1.02 it/s loss_render_depth: 0.157464
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000241790 loss: 0.038744 speed: 1.01 it/s loss_render_depth: 0.080842
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000241033 loss: 0.107704 speed: 1.15 it/s loss_render_depth: 0.229288
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000240276 loss: 0.039389 speed: 1.17 it/s loss_render_depth: 0.067222
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000239518 loss: 0.022620 speed: 1.00 it/s loss_render_depth: 0.052425
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000238759 loss: 0.080319 speed: 1.20 it/s loss_render_depth: 0.204281
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000237999 loss: 0.060076 speed: 1.20 it/s loss_render_depth: 0.226590
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000237240 loss: 0.057094 speed: 1.02 it/s loss_render_depth: 0.131471
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000236479 loss: 0.024708 speed: 1.08 it/s loss_render_depth: 0.065480
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000235718 loss: 0.042025 speed: 1.20 it/s loss_render_depth: 0.119059
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000234956 loss: 0.055844 speed: 1.20 it/s loss_render_depth: 0.298108
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000234194 loss: 0.035290 speed: 1.20 it/s loss_render_depth: 0.090364
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000233432 loss: 0.026797 speed: 1.20 it/s loss_render_depth: 0.051821
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000232668 loss: 0.039401 speed: 0.71 it/s loss_render_depth: 0.164725
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000231905 loss: 0.018200 speed: 1.05 it/s loss_render_depth: 0.058842
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000231141 loss: 0.023457 speed: 1.19 it/s loss_render_depth: 0.029069
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000230376 loss: 0.024849 speed: 1.00 it/s loss_render_depth: 0.069056
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000229611 loss: 0.025667 speed: 1.09 it/s loss_render_depth: 0.045622
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000228846 loss: 0.045580 speed: 1.09 it/s loss_render_depth: 0.074740
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000228080 loss: 0.024852 speed: 0.71 it/s loss_render_depth: 0.055862
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000227314 loss: 0.036467 speed: 1.15 it/s loss_render_depth: 0.106159
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000226547 loss: 0.069429 speed: 1.20 it/s loss_render_depth: 0.148350
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000225780 loss: 0.076491 speed: 1.20 it/s loss_render_depth: 0.181000
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000225012 loss: 0.025975 speed: 1.18 it/s loss_render_depth: 0.085299
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000224244 loss: 0.031872 speed: 1.20 it/s loss_render_depth: 0.099533
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000223476 loss: 0.041319 speed: 1.03 it/s loss_render_depth: 0.091100
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000222708 loss: 0.026678 speed: 1.20 it/s loss_render_depth: 0.066342
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000221939 loss: 0.025488 speed: 1.20 it/s loss_render_depth: 0.062383
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000221169 loss: 0.091014 speed: 1.20 it/s loss_render_depth: 0.108321
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000220400 loss: 0.037424 speed: 1.20 it/s loss_render_depth: 0.067485
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000219630 loss: 0.038839 speed: 1.20 it/s loss_render_depth: 0.074815
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000218860 loss: 0.045963 speed: 1.20 it/s loss_render_depth: 0.100221
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000218089 loss: 0.033079 speed: 1.19 it/s loss_render_depth: 0.080779
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000217319 loss: 0.025671 speed: 1.15 it/s loss_render_depth: 0.081698
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000216548 loss: 0.049404 speed: 1.20 it/s loss_render_depth: 0.071185
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000215776 loss: 0.027507 speed: 1.01 it/s loss_render_depth: 0.076464
+[train] epoch: 9 loss: 0.072523 psnr: 32.4080
+[eval] epoch: 9 psnr: 29.8517 depth_absrel: 0.0928 unique_scenes: 50
+[INFO] Setting RNG epoch to 10
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000215313 loss: 0.031112 speed: 2.74 it/s loss_render_depth: 0.107601
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000214542 loss: 0.040067 speed: 0.81 it/s loss_render_depth: 0.100118
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000213770 loss: 0.026408 speed: 1.04 it/s loss_render_depth: 0.073399
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000212998 loss: 0.050990 speed: 1.21 it/s loss_render_depth: 0.148868
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000212226 loss: 0.019272 speed: 1.21 it/s loss_render_depth: 0.062139
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000211453 loss: 0.026832 speed: 1.08 it/s loss_render_depth: 0.060391
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000210681 loss: 0.032269 speed: 1.09 it/s loss_render_depth: 0.075243
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000209908 loss: 0.050124 speed: 0.68 it/s loss_render_depth: 0.111909
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000209135 loss: 0.033581 speed: 1.21 it/s loss_render_depth: 0.063781
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000208362 loss: 0.028214 speed: 1.20 it/s loss_render_depth: 0.046091
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000207589 loss: 0.028084 speed: 0.71 it/s loss_render_depth: 0.045920
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000206816 loss: 0.038831 speed: 1.21 it/s loss_render_depth: 0.147789
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000206042 loss: 0.051556 speed: 1.12 it/s loss_render_depth: 0.139676
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000205269 loss: 0.025288 speed: 1.18 it/s loss_render_depth: 0.088975
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000204495 loss: 0.022432 speed: 0.93 it/s loss_render_depth: 0.078149
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000203722 loss: 0.040343 speed: 1.15 it/s loss_render_depth: 0.054469
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000202948 loss: 0.026961 speed: 1.20 it/s loss_render_depth: 0.078187
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000202174 loss: 0.050944 speed: 1.20 it/s loss_render_depth: 0.093670
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000201401 loss: 0.036173 speed: 1.20 it/s loss_render_depth: 0.141110
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000200627 loss: 0.037288 speed: 0.92 it/s loss_render_depth: 0.075274
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000199853 loss: 0.027314 speed: 1.20 it/s loss_render_depth: 0.080290
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000199079 loss: 0.031837 speed: 0.67 it/s loss_render_depth: 0.069291
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000198306 loss: 0.093965 speed: 1.09 it/s loss_render_depth: 0.224061
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000197532 loss: 0.023148 speed: 1.06 it/s loss_render_depth: 0.058484
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000196758 loss: 0.033088 speed: 1.05 it/s loss_render_depth: 0.118533
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000195985 loss: 0.020915 speed: 0.96 it/s loss_render_depth: 0.060671
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000195211 loss: 0.047112 speed: 0.72 it/s loss_render_depth: 0.193512
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000194438 loss: 0.032113 speed: 1.21 it/s loss_render_depth: 0.059934
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000193664 loss: 0.064518 speed: 1.21 it/s loss_render_depth: 0.126237
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000192891 loss: 0.067084 speed: 1.05 it/s loss_render_depth: 0.194426
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000192118 loss: 0.047192 speed: 1.09 it/s loss_render_depth: 0.254221
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000191345 loss: 0.028829 speed: 0.93 it/s loss_render_depth: 0.082791
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000190572 loss: 0.027546 speed: 1.20 it/s loss_render_depth: 0.044627
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000189799 loss: 0.041926 speed: 1.20 it/s loss_render_depth: 0.089928
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000189026 loss: 0.042100 speed: 1.20 it/s loss_render_depth: 0.115075
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000188254 loss: 0.028243 speed: 1.20 it/s loss_render_depth: 0.046829
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000187481 loss: 0.049850 speed: 1.06 it/s loss_render_depth: 0.121745
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000186709 loss: 0.049944 speed: 1.16 it/s loss_render_depth: 0.128785
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000185937 loss: 0.028708 speed: 1.20 it/s loss_render_depth: 0.084945
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000185165 loss: 0.033906 speed: 1.20 it/s loss_render_depth: 0.079607
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000184394 loss: 0.022530 speed: 1.20 it/s loss_render_depth: 0.044315
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000183623 loss: 0.029389 speed: 1.20 it/s loss_render_depth: 0.069610
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000182852 loss: 0.043525 speed: 1.20 it/s loss_render_depth: 0.110788
+[train] epoch: 10 loss: 0.083128 psnr: 32.4317
+[eval] epoch: 10 psnr: 30.0602 depth_absrel: 0.0922 unique_scenes: 50
+[INFO] Setting RNG epoch to 11
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000182389 loss: 0.024913 speed: 1.92 it/s loss_render_depth: 0.076348
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000181619 loss: 0.035229 speed: 1.17 it/s loss_render_depth: 0.083191
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000180848 loss: 0.055182 speed: 1.01 it/s loss_render_depth: 0.108980
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000180078 loss: 0.028023 speed: 1.03 it/s loss_render_depth: 0.064564
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000179308 loss: 0.026453 speed: 1.21 it/s loss_render_depth: 0.048645
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000178539 loss: 0.018445 speed: 1.21 it/s loss_render_depth: 0.046380
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000177770 loss: 0.032597 speed: 1.00 it/s loss_render_depth: 0.047576
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000177001 loss: 0.038383 speed: 1.20 it/s loss_render_depth: 0.079739
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000176233 loss: 0.020066 speed: 1.17 it/s loss_render_depth: 0.047575
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000175464 loss: 0.022131 speed: 1.16 it/s loss_render_depth: 0.046486
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000174697 loss: 0.018412 speed: 1.05 it/s loss_render_depth: 0.037348
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000173929 loss: 0.029340 speed: 1.20 it/s loss_render_depth: 0.075473
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000173162 loss: 0.029893 speed: 1.20 it/s loss_render_depth: 0.058399
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000172396 loss: 0.022955 speed: 0.71 it/s loss_render_depth: 0.060141
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000171630 loss: 0.039042 speed: 1.14 it/s loss_render_depth: 0.111154
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000170864 loss: 0.024211 speed: 1.10 it/s loss_render_depth: 0.075197
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000170099 loss: 0.026949 speed: 1.08 it/s loss_render_depth: 0.102231
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000169334 loss: 0.023051 speed: 0.63 it/s loss_render_depth: 0.071862
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000168570 loss: 0.014201 speed: 0.72 it/s loss_render_depth: 0.034602
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000167806 loss: 0.023921 speed: 1.21 it/s loss_render_depth: 0.044550
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000167042 loss: 0.014745 speed: 1.21 it/s loss_render_depth: 0.040905
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000166279 loss: 0.048983 speed: 0.95 it/s loss_render_depth: 0.081983
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000165517 loss: 0.033962 speed: 0.71 it/s loss_render_depth: 0.089601
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000164755 loss: 0.062027 speed: 1.15 it/s loss_render_depth: 0.269813
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000163994 loss: 0.024787 speed: 1.21 it/s loss_render_depth: 0.039574
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000163233 loss: 0.046364 speed: 0.80 it/s loss_render_depth: 0.064953
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000162472 loss: 0.021830 speed: 1.08 it/s loss_render_depth: 0.042665
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000161713 loss: 0.030225 speed: 1.20 it/s loss_render_depth: 0.084889
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000160954 loss: 0.026843 speed: 1.14 it/s loss_render_depth: 0.069886
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000160195 loss: 0.066074 speed: 1.06 it/s loss_render_depth: 0.250394
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000159437 loss: 0.028399 speed: 1.20 it/s loss_render_depth: 0.093161
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000158680 loss: 0.047770 speed: 1.17 it/s loss_render_depth: 0.201095
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000157923 loss: 0.024292 speed: 1.02 it/s loss_render_depth: 0.055599
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000157167 loss: 0.019350 speed: 1.17 it/s loss_render_depth: 0.049487
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000156411 loss: 0.023595 speed: 0.65 it/s loss_render_depth: 0.047781
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000155656 loss: 0.030084 speed: 1.20 it/s loss_render_depth: 0.076063
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000154902 loss: 0.025268 speed: 1.20 it/s loss_render_depth: 0.092395
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000154149 loss: 0.022571 speed: 1.20 it/s loss_render_depth: 0.034821
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000153396 loss: 0.026753 speed: 1.20 it/s loss_render_depth: 0.112587
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000152644 loss: 0.044529 speed: 1.20 it/s loss_render_depth: 0.114477
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000151893 loss: 0.029324 speed: 1.13 it/s loss_render_depth: 0.058673
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000151142 loss: 0.014164 speed: 1.20 it/s loss_render_depth: 0.016753
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000150392 loss: 0.027329 speed: 1.20 it/s loss_render_depth: 0.100344
+[train] epoch: 11 loss: 0.088932 psnr: 32.5784
+[eval] epoch: 11 psnr: 30.1116 depth_absrel: 0.0941 unique_scenes: 50
+[INFO] Setting RNG epoch to 12
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000149942 loss: 0.028056 speed: 2.25 it/s loss_render_depth: 0.045057
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000149194 loss: 0.031028 speed: 0.86 it/s loss_render_depth: 0.054204
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000148446 loss: 0.044256 speed: 1.21 it/s loss_render_depth: 0.112761
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000147698 loss: 0.020583 speed: 1.21 it/s loss_render_depth: 0.050214
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000146952 loss: 0.027621 speed: 1.08 it/s loss_render_depth: 0.047137
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000146206 loss: 0.028067 speed: 0.74 it/s loss_render_depth: 0.079475
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000145461 loss: 0.034605 speed: 1.01 it/s loss_render_depth: 0.126522
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000144717 loss: 0.047714 speed: 1.21 it/s loss_render_depth: 0.086638
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000143974 loss: 0.022112 speed: 0.99 it/s loss_render_depth: 0.031019
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000143232 loss: 0.033103 speed: 1.15 it/s loss_render_depth: 0.073231
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000142490 loss: 0.023082 speed: 0.74 it/s loss_render_depth: 0.040748
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000141750 loss: 0.032488 speed: 1.21 it/s loss_render_depth: 0.055088
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000141010 loss: 0.030585 speed: 1.20 it/s loss_render_depth: 0.060302
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000140271 loss: 0.091368 speed: 1.18 it/s loss_render_depth: 0.368618
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000139533 loss: 0.016617 speed: 1.08 it/s loss_render_depth: 0.033887
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000138796 loss: 0.029177 speed: 1.20 it/s loss_render_depth: 0.113582
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000138060 loss: 0.018866 speed: 1.13 it/s loss_render_depth: 0.047656
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000137325 loss: 0.021471 speed: 1.20 it/s loss_render_depth: 0.040385
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000136590 loss: 0.032819 speed: 1.09 it/s loss_render_depth: 0.129500
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000135857 loss: 0.023637 speed: 1.20 it/s loss_render_depth: 0.049558
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000135125 loss: 0.026626 speed: 1.19 it/s loss_render_depth: 0.058521
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000134393 loss: 0.028056 speed: 1.20 it/s loss_render_depth: 0.093152
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000133663 loss: 0.059318 speed: 0.92 it/s loss_render_depth: 0.204335
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000132933 loss: 0.045747 speed: 1.16 it/s loss_render_depth: 0.177364
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000132205 loss: 0.028728 speed: 1.09 it/s loss_render_depth: 0.083649
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000131477 loss: 0.040578 speed: 1.17 it/s loss_render_depth: 0.091982
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000130751 loss: 0.043480 speed: 1.20 it/s loss_render_depth: 0.064057
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000130026 loss: 0.040544 speed: 1.12 it/s loss_render_depth: 0.132758
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000129301 loss: 0.024787 speed: 1.20 it/s loss_render_depth: 0.076609
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000128578 loss: 0.019586 speed: 1.18 it/s loss_render_depth: 0.053442
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000127856 loss: 0.022821 speed: 0.71 it/s loss_render_depth: 0.047626
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000127135 loss: 0.054159 speed: 1.20 it/s loss_render_depth: 0.087328
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000126415 loss: 0.029515 speed: 1.20 it/s loss_render_depth: 0.069424
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000125696 loss: 0.031420 speed: 1.08 it/s loss_render_depth: 0.120647
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000124978 loss: 0.042619 speed: 1.20 it/s loss_render_depth: 0.142982
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000124261 loss: 0.052651 speed: 1.17 it/s loss_render_depth: 0.090065
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000123546 loss: 0.019180 speed: 1.14 it/s loss_render_depth: 0.058110
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000122831 loss: 0.043047 speed: 0.71 it/s loss_render_depth: 0.077185
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000122118 loss: 0.025726 speed: 1.14 it/s loss_render_depth: 0.051364
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000121406 loss: 0.028722 speed: 1.20 it/s loss_render_depth: 0.104140
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000120695 loss: 0.040756 speed: 1.00 it/s loss_render_depth: 0.131373
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000119986 loss: 0.047144 speed: 1.04 it/s loss_render_depth: 0.105420
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000119277 loss: 0.045266 speed: 1.16 it/s loss_render_depth: 0.130262
+[train] epoch: 12 loss: 0.089007 psnr: 32.6424
+[eval] epoch: 12 psnr: 30.0490 depth_absrel: 0.0917 unique_scenes: 50
+[INFO] Setting RNG epoch to 13
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000118852 loss: 0.045219 speed: 2.43 it/s loss_render_depth: 0.143397
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000118146 loss: 0.026667 speed: 0.86 it/s loss_render_depth: 0.081958
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000117441 loss: 0.025592 speed: 1.21 it/s loss_render_depth: 0.061908
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000116736 loss: 0.030746 speed: 1.21 it/s loss_render_depth: 0.072359
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000116034 loss: 0.022966 speed: 0.85 it/s loss_render_depth: 0.053948
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000115332 loss: 0.034583 speed: 0.82 it/s loss_render_depth: 0.078296
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000114632 loss: 0.028115 speed: 1.21 it/s loss_render_depth: 0.072175
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000113933 loss: 0.026727 speed: 0.95 it/s loss_render_depth: 0.062185
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000113235 loss: 0.016990 speed: 0.96 it/s loss_render_depth: 0.052083
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000112538 loss: 0.034416 speed: 0.67 it/s loss_render_depth: 0.077492
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000111843 loss: 0.014747 speed: 1.21 it/s loss_render_depth: 0.037730
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000111149 loss: 0.042629 speed: 1.15 it/s loss_render_depth: 0.081925
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000110457 loss: 0.020057 speed: 1.20 it/s loss_render_depth: 0.043762
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000109766 loss: 0.047657 speed: 1.20 it/s loss_render_depth: 0.065492
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000109076 loss: 0.031611 speed: 0.96 it/s loss_render_depth: 0.083122
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000108387 loss: 0.029598 speed: 1.20 it/s loss_render_depth: 0.068067
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000107700 loss: 0.032730 speed: 1.20 it/s loss_render_depth: 0.083511
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000107014 loss: 0.026473 speed: 1.20 it/s loss_render_depth: 0.046813
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000106330 loss: 0.024341 speed: 1.06 it/s loss_render_depth: 0.039413
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000105647 loss: 0.021314 speed: 1.19 it/s loss_render_depth: 0.110417
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000104966 loss: 0.039995 speed: 0.87 it/s loss_render_depth: 0.098744
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000104286 loss: 0.057752 speed: 1.20 it/s loss_render_depth: 0.076755
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000103607 loss: 0.029060 speed: 1.00 it/s loss_render_depth: 0.078000
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000102930 loss: 0.028203 speed: 1.20 it/s loss_render_depth: 0.080531
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000102254 loss: 0.024697 speed: 0.71 it/s loss_render_depth: 0.067757
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000101580 loss: 0.050230 speed: 1.11 it/s loss_render_depth: 0.074966
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000100907 loss: 0.041787 speed: 1.21 it/s loss_render_depth: 0.097049
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000100235 loss: 0.041737 speed: 1.20 it/s loss_render_depth: 0.135918
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000099566 loss: 0.022389 speed: 1.20 it/s loss_render_depth: 0.043513
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000098897 loss: 0.028249 speed: 0.68 it/s loss_render_depth: 0.052978
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000098230 loss: 0.035538 speed: 1.21 it/s loss_render_depth: 0.101676
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000097565 loss: 0.048953 speed: 1.20 it/s loss_render_depth: 0.089158
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000096901 loss: 0.064446 speed: 1.14 it/s loss_render_depth: 0.180845
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000096239 loss: 0.031051 speed: 1.14 it/s loss_render_depth: 0.093843
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000095578 loss: 0.018675 speed: 1.08 it/s loss_render_depth: 0.046542
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000094919 loss: 0.037587 speed: 1.20 it/s loss_render_depth: 0.079190
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000094262 loss: 0.021164 speed: 1.11 it/s loss_render_depth: 0.044903
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000093606 loss: 0.018926 speed: 1.20 it/s loss_render_depth: 0.028334
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000092951 loss: 0.030662 speed: 1.18 it/s loss_render_depth: 0.113588
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000092299 loss: 0.057675 speed: 1.13 it/s loss_render_depth: 0.119729
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000091648 loss: 0.019296 speed: 1.20 it/s loss_render_depth: 0.032385
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000090998 loss: 0.040204 speed: 1.20 it/s loss_render_depth: 0.065028
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000090350 loss: 0.022499 speed: 1.20 it/s loss_render_depth: 0.064645
+[train] epoch: 13 loss: 0.075275 psnr: 32.9731
+[eval] epoch: 13 psnr: 30.1531 depth_absrel: 0.0901 unique_scenes: 50
+[INFO] Setting RNG epoch to 14
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000089962 loss: 0.021758 speed: 1.92 it/s loss_render_depth: 0.081882
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000089317 loss: 0.027449 speed: 1.01 it/s loss_render_depth: 0.048117
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000088673 loss: 0.041190 speed: 1.21 it/s loss_render_depth: 0.070721
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000088031 loss: 0.021466 speed: 1.05 it/s loss_render_depth: 0.030898
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000087391 loss: 0.024172 speed: 1.17 it/s loss_render_depth: 0.076736
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000086753 loss: 0.059261 speed: 1.03 it/s loss_render_depth: 0.111884
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000086116 loss: 0.032091 speed: 0.89 it/s loss_render_depth: 0.060390
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000085480 loss: 0.027240 speed: 1.21 it/s loss_render_depth: 0.056990
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000084847 loss: 0.043409 speed: 0.72 it/s loss_render_depth: 0.076356
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000084215 loss: 0.026297 speed: 1.19 it/s loss_render_depth: 0.086084
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000083585 loss: 0.038898 speed: 1.20 it/s loss_render_depth: 0.071554
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000082957 loss: 0.069303 speed: 1.20 it/s loss_render_depth: 0.205059
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000082330 loss: 0.032930 speed: 1.20 it/s loss_render_depth: 0.079766
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000081706 loss: 0.016939 speed: 1.20 it/s loss_render_depth: 0.052874
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000081083 loss: 0.064483 speed: 1.13 it/s loss_render_depth: 0.208097
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000080462 loss: 0.086238 speed: 0.90 it/s loss_render_depth: 0.172910
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000079842 loss: 0.060286 speed: 0.84 it/s loss_render_depth: 0.147364
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000079225 loss: 0.042479 speed: 1.20 it/s loss_render_depth: 0.075755
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000078609 loss: 0.029165 speed: 0.71 it/s loss_render_depth: 0.085757
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000077995 loss: 0.026375 speed: 1.21 it/s loss_render_depth: 0.041240
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000077383 loss: 0.021636 speed: 1.20 it/s loss_render_depth: 0.044108
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000076772 loss: 0.033491 speed: 1.20 it/s loss_render_depth: 0.131273
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000076164 loss: 0.036453 speed: 1.06 it/s loss_render_depth: 0.076941
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000075557 loss: 0.017370 speed: 1.11 it/s loss_render_depth: 0.036009
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000074952 loss: 0.013216 speed: 1.20 it/s loss_render_depth: 0.028323
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000074350 loss: 0.023100 speed: 1.00 it/s loss_render_depth: 0.050625
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000073748 loss: 0.029303 speed: 1.20 it/s loss_render_depth: 0.050847
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000073149 loss: 0.037535 speed: 1.20 it/s loss_render_depth: 0.061411
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000072552 loss: 0.027203 speed: 1.06 it/s loss_render_depth: 0.063784
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000071957 loss: 0.025999 speed: 1.20 it/s loss_render_depth: 0.052567
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000071363 loss: 0.026945 speed: 1.20 it/s loss_render_depth: 0.080158
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000070772 loss: 0.023999 speed: 1.20 it/s loss_render_depth: 0.064488
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000070182 loss: 0.042069 speed: 1.10 it/s loss_render_depth: 0.083335
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000069595 loss: 0.032083 speed: 1.20 it/s loss_render_depth: 0.067043
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000069009 loss: 0.039409 speed: 1.16 it/s loss_render_depth: 0.071029
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000068426 loss: 0.039839 speed: 1.19 it/s loss_render_depth: 0.062794
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000067844 loss: 0.030750 speed: 1.20 it/s loss_render_depth: 0.106481
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000067264 loss: 0.031317 speed: 1.20 it/s loss_render_depth: 0.087769
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000066686 loss: 0.029169 speed: 1.19 it/s loss_render_depth: 0.063749
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000066111 loss: 0.023337 speed: 1.00 it/s loss_render_depth: 0.067103
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000065537 loss: 0.044554 speed: 1.20 it/s loss_render_depth: 0.078261
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000064965 loss: 0.068420 speed: 0.99 it/s loss_render_depth: 0.134202
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000064395 loss: 0.046095 speed: 1.00 it/s loss_render_depth: 0.123981
+[train] epoch: 14 loss: 0.092884 psnr: 32.9276
+[eval] epoch: 14 psnr: 30.2285 depth_absrel: 0.0907 unique_scenes: 50
+[INFO] Setting RNG epoch to 15
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000064055 loss: 0.030276 speed: 2.52 it/s loss_render_depth: 0.072756
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000063488 loss: 0.019427 speed: 1.09 it/s loss_render_depth: 0.045800
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000062924 loss: 0.032726 speed: 1.02 it/s loss_render_depth: 0.060090
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000062361 loss: 0.022703 speed: 1.08 it/s loss_render_depth: 0.060049
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000061801 loss: 0.037061 speed: 1.21 it/s loss_render_depth: 0.124733
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000061243 loss: 0.036736 speed: 0.72 it/s loss_render_depth: 0.097580
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000060687 loss: 0.024659 speed: 1.06 it/s loss_render_depth: 0.056739
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000060133 loss: 0.025902 speed: 1.15 it/s loss_render_depth: 0.068502
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000059581 loss: 0.024093 speed: 1.12 it/s loss_render_depth: 0.061653
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000059031 loss: 0.019677 speed: 1.20 it/s loss_render_depth: 0.053803
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000058483 loss: 0.025965 speed: 1.01 it/s loss_render_depth: 0.054624
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000057937 loss: 0.025350 speed: 1.20 it/s loss_render_depth: 0.081301
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000057394 loss: 0.052963 speed: 0.81 it/s loss_render_depth: 0.141811
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000056852 loss: 0.023631 speed: 1.20 it/s loss_render_depth: 0.090734
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000056313 loss: 0.028379 speed: 1.20 it/s loss_render_depth: 0.132724
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000055776 loss: 0.049497 speed: 1.09 it/s loss_render_depth: 0.158953
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000055241 loss: 0.032609 speed: 1.20 it/s loss_render_depth: 0.056162
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000054708 loss: 0.020147 speed: 1.13 it/s loss_render_depth: 0.042946
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000054178 loss: 0.030271 speed: 1.20 it/s loss_render_depth: 0.060562
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000053649 loss: 0.022668 speed: 1.16 it/s loss_render_depth: 0.071238
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000053123 loss: 0.051280 speed: 1.20 it/s loss_render_depth: 0.160071
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000052599 loss: 0.026676 speed: 1.16 it/s loss_render_depth: 0.070262
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000052077 loss: 0.017984 speed: 1.20 it/s loss_render_depth: 0.058687
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000051558 loss: 0.022687 speed: 1.17 it/s loss_render_depth: 0.064637
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000051040 loss: 0.034557 speed: 1.15 it/s loss_render_depth: 0.154422
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000050525 loss: 0.038410 speed: 0.73 it/s loss_render_depth: 0.099086
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000050012 loss: 0.052931 speed: 1.20 it/s loss_render_depth: 0.121418
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000049502 loss: 0.032878 speed: 0.96 it/s loss_render_depth: 0.105621
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000048993 loss: 0.030071 speed: 0.81 it/s loss_render_depth: 0.124344
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000048487 loss: 0.028144 speed: 1.20 it/s loss_render_depth: 0.064139
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000047983 loss: 0.024000 speed: 0.70 it/s loss_render_depth: 0.053551
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000047482 loss: 0.024391 speed: 0.99 it/s loss_render_depth: 0.040889
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000046982 loss: 0.014986 speed: 1.14 it/s loss_render_depth: 0.027556
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000046485 loss: 0.022166 speed: 1.21 it/s loss_render_depth: 0.056581
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000045990 loss: 0.021401 speed: 0.95 it/s loss_render_depth: 0.050144
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000045498 loss: 0.126832 speed: 1.20 it/s loss_render_depth: 0.374477
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000045008 loss: 0.054974 speed: 1.20 it/s loss_render_depth: 0.188094
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000044520 loss: 0.050976 speed: 0.91 it/s loss_render_depth: 0.136036
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000044035 loss: 0.079897 speed: 1.20 it/s loss_render_depth: 0.073464
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000043552 loss: 0.028786 speed: 0.94 it/s loss_render_depth: 0.050104
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000043071 loss: 0.023684 speed: 1.20 it/s loss_render_depth: 0.075959
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000042592 loss: 0.078822 speed: 1.13 it/s loss_render_depth: 0.126313
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000042116 loss: 0.075426 speed: 1.20 it/s loss_render_depth: 0.089862
+[train] epoch: 15 loss: 0.084584 psnr: 32.8735
+[eval] epoch: 15 psnr: 30.2193 depth_absrel: 0.0890 unique_scenes: 50
+[INFO] Setting RNG epoch to 16
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000041832 loss: 0.031909 speed: 1.13 it/s loss_render_depth: 0.112241
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000041359 loss: 0.057189 speed: 1.22 it/s loss_render_depth: 0.178948
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000040889 loss: 0.036320 speed: 1.08 it/s loss_render_depth: 0.126278
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000040422 loss: 0.017639 speed: 1.09 it/s loss_render_depth: 0.042073
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000039957 loss: 0.026946 speed: 1.21 it/s loss_render_depth: 0.047043
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000039494 loss: 0.023337 speed: 1.06 it/s loss_render_depth: 0.047577
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000039034 loss: 0.041483 speed: 1.04 it/s loss_render_depth: 0.091088
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000038576 loss: 0.043583 speed: 1.12 it/s loss_render_depth: 0.078716
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000038120 loss: 0.034698 speed: 1.20 it/s loss_render_depth: 0.133134
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000037667 loss: 0.019170 speed: 1.20 it/s loss_render_depth: 0.054769
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000037216 loss: 0.025463 speed: 1.20 it/s loss_render_depth: 0.041568
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000036768 loss: 0.035768 speed: 1.20 it/s loss_render_depth: 0.087109
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000036322 loss: 0.026640 speed: 1.16 it/s loss_render_depth: 0.070659
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000035879 loss: 0.023508 speed: 1.11 it/s loss_render_depth: 0.083171
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000035438 loss: 0.044793 speed: 1.20 it/s loss_render_depth: 0.191245
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000035000 loss: 0.028359 speed: 0.99 it/s loss_render_depth: 0.121025
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000034564 loss: 0.026823 speed: 1.20 it/s loss_render_depth: 0.080147
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000034130 loss: 0.023036 speed: 0.69 it/s loss_render_depth: 0.028224
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000033699 loss: 0.029262 speed: 0.68 it/s loss_render_depth: 0.092607
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000033271 loss: 0.025191 speed: 0.68 it/s loss_render_depth: 0.079118
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000032845 loss: 0.023641 speed: 1.21 it/s loss_render_depth: 0.054322
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000032421 loss: 0.032992 speed: 1.05 it/s loss_render_depth: 0.061456
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000032000 loss: 0.026908 speed: 1.21 it/s loss_render_depth: 0.064357
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000031582 loss: 0.060822 speed: 1.20 it/s loss_render_depth: 0.220379
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000031166 loss: 0.160572 speed: 1.20 it/s loss_render_depth: 0.044122
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000030752 loss: 0.054221 speed: 0.99 it/s loss_render_depth: 0.087686
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000030341 loss: 0.021963 speed: 1.20 it/s loss_render_depth: 0.050895
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000029933 loss: 0.031307 speed: 1.20 it/s loss_render_depth: 0.126369
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000029527 loss: 0.017970 speed: 1.15 it/s loss_render_depth: 0.021094
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000029124 loss: 0.031446 speed: 1.20 it/s loss_render_depth: 0.053789
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000028723 loss: 0.031530 speed: 1.20 it/s loss_render_depth: 0.087301
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000028325 loss: 0.029033 speed: 1.20 it/s loss_render_depth: 0.055792
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000027930 loss: 0.060057 speed: 1.07 it/s loss_render_depth: 0.196782
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000027537 loss: 0.019691 speed: 1.05 it/s loss_render_depth: 0.062204
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000027146 loss: 0.036446 speed: 1.20 it/s loss_render_depth: 0.114353
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000026758 loss: 0.033481 speed: 1.07 it/s loss_render_depth: 0.089890
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000026373 loss: 0.017712 speed: 1.06 it/s loss_render_depth: 0.053451
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000025990 loss: 0.019711 speed: 1.20 it/s loss_render_depth: 0.059057
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000025610 loss: 0.025658 speed: 1.05 it/s loss_render_depth: 0.061060
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000025233 loss: 0.064907 speed: 0.95 it/s loss_render_depth: 0.228531
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000024858 loss: 0.018263 speed: 1.20 it/s loss_render_depth: 0.041768
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000024486 loss: 0.023841 speed: 1.15 it/s loss_render_depth: 0.059900
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000024116 loss: 0.041876 speed: 1.20 it/s loss_render_depth: 0.118201
+[train] epoch: 16 loss: 0.080702 psnr: 32.9337
+[eval] epoch: 16 psnr: 30.2757 depth_absrel: 0.0899 unique_scenes: 50
+[INFO] Setting RNG epoch to 17
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000023896 loss: 0.054838 speed: 2.67 it/s loss_render_depth: 0.104401
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000023531 loss: 0.045449 speed: 0.55 it/s loss_render_depth: 0.107268
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000023168 loss: 0.028250 speed: 1.16 it/s loss_render_depth: 0.075033
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000022808 loss: 0.017042 speed: 1.21 it/s loss_render_depth: 0.028009
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000022450 loss: 0.068087 speed: 1.08 it/s loss_render_depth: 0.203990
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000022096 loss: 0.035291 speed: 1.21 it/s loss_render_depth: 0.071451
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000021744 loss: 0.031392 speed: 1.21 it/s loss_render_depth: 0.066428
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000021394 loss: 0.020114 speed: 0.95 it/s loss_render_depth: 0.053392
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000021047 loss: 0.047675 speed: 1.21 it/s loss_render_depth: 0.212055
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000020703 loss: 0.019663 speed: 0.73 it/s loss_render_depth: 0.042023
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000020362 loss: 0.019103 speed: 1.21 it/s loss_render_depth: 0.062285
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000020023 loss: 0.021907 speed: 0.86 it/s loss_render_depth: 0.090491
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000019687 loss: 0.030433 speed: 1.00 it/s loss_render_depth: 0.136532
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000019354 loss: 0.095807 speed: 1.17 it/s loss_render_depth: 0.234040
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000019023 loss: 0.019849 speed: 1.20 it/s loss_render_depth: 0.064827
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000018696 loss: 0.058866 speed: 1.03 it/s loss_render_depth: 0.160363
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000018370 loss: 0.027548 speed: 1.03 it/s loss_render_depth: 0.054942
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000018048 loss: 0.031434 speed: 1.20 it/s loss_render_depth: 0.074597
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000017728 loss: 0.043839 speed: 1.06 it/s loss_render_depth: 0.152256
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000017411 loss: 0.013822 speed: 1.20 it/s loss_render_depth: 0.039449
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000017097 loss: 0.036323 speed: 0.99 it/s loss_render_depth: 0.121091
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000016785 loss: 0.018810 speed: 1.13 it/s loss_render_depth: 0.037200
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000016477 loss: 0.072732 speed: 1.15 it/s loss_render_depth: 0.224961
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000016171 loss: 0.027341 speed: 1.19 it/s loss_render_depth: 0.082428
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000015867 loss: 0.024623 speed: 1.02 it/s loss_render_depth: 0.059864
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000015567 loss: 0.054404 speed: 1.20 it/s loss_render_depth: 0.152468
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000015269 loss: 0.040376 speed: 1.20 it/s loss_render_depth: 0.081944
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000014974 loss: 0.027303 speed: 1.16 it/s loss_render_depth: 0.076415
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000014682 loss: 0.026688 speed: 1.18 it/s loss_render_depth: 0.072940
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000014392 loss: 0.025963 speed: 0.80 it/s loss_render_depth: 0.062734
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000014106 loss: 0.019911 speed: 1.20 it/s loss_render_depth: 0.062553
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000013822 loss: 0.016702 speed: 1.05 it/s loss_render_depth: 0.030676
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000013541 loss: 0.065761 speed: 1.20 it/s loss_render_depth: 0.120558
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000013262 loss: 0.043653 speed: 1.20 it/s loss_render_depth: 0.106464
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000012987 loss: 0.033129 speed: 1.16 it/s loss_render_depth: 0.092865
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000012714 loss: 0.025926 speed: 0.94 it/s loss_render_depth: 0.088022
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000012444 loss: 0.020871 speed: 1.20 it/s loss_render_depth: 0.100141
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000012177 loss: 0.025436 speed: 1.20 it/s loss_render_depth: 0.084870
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000011913 loss: 0.021194 speed: 1.12 it/s loss_render_depth: 0.036729
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000011651 loss: 0.033435 speed: 0.71 it/s loss_render_depth: 0.123127
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000011393 loss: 0.052016 speed: 1.21 it/s loss_render_depth: 0.226026
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000011137 loss: 0.041476 speed: 1.20 it/s loss_render_depth: 0.084253
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000010884 loss: 0.031953 speed: 1.12 it/s loss_render_depth: 0.080689
+[train] epoch: 17 loss: 0.088042 psnr: 33.0272
+[eval] epoch: 17 psnr: 30.2741 depth_absrel: 0.0900 unique_scenes: 50
+[INFO] Setting RNG epoch to 18
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000010733 loss: 0.017597 speed: 2.03 it/s loss_render_depth: 0.044116
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000010485 loss: 0.066521 speed: 1.10 it/s loss_render_depth: 0.164453
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000010239 loss: 0.049824 speed: 1.21 it/s loss_render_depth: 0.118338
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000009997 loss: 0.087645 speed: 0.94 it/s loss_render_depth: 0.190031
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000009757 loss: 0.033730 speed: 1.20 it/s loss_render_depth: 0.092599
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000009519 loss: 0.052233 speed: 1.04 it/s loss_render_depth: 0.069002
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000009285 loss: 0.019969 speed: 1.20 it/s loss_render_depth: 0.055087
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000009054 loss: 0.024933 speed: 1.20 it/s loss_render_depth: 0.069786
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000008825 loss: 0.019810 speed: 0.72 it/s loss_render_depth: 0.052802
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000008600 loss: 0.032024 speed: 1.20 it/s loss_render_depth: 0.116167
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000008377 loss: 0.064729 speed: 1.15 it/s loss_render_depth: 0.209239
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000008157 loss: 0.124731 speed: 1.13 it/s loss_render_depth: 0.324918
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000007940 loss: 0.139345 speed: 1.03 it/s loss_render_depth: 0.410142
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000007725 loss: 0.066148 speed: 0.67 it/s loss_render_depth: 0.116319
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000007514 loss: 0.017605 speed: 0.72 it/s loss_render_depth: 0.043285
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000007306 loss: 0.023745 speed: 1.00 it/s loss_render_depth: 0.046430
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000007100 loss: 0.033296 speed: 1.21 it/s loss_render_depth: 0.043291
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000006897 loss: 0.027775 speed: 1.18 it/s loss_render_depth: 0.117044
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000006698 loss: 0.039688 speed: 1.11 it/s loss_render_depth: 0.045145
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000006501 loss: 0.037145 speed: 1.05 it/s loss_render_depth: 0.134545
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000006307 loss: 0.019730 speed: 1.20 it/s loss_render_depth: 0.062327
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000006116 loss: 0.015555 speed: 1.09 it/s loss_render_depth: 0.038082
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000005928 loss: 0.032068 speed: 1.20 it/s loss_render_depth: 0.069191
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000005742 loss: 0.037680 speed: 1.20 it/s loss_render_depth: 0.081916
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000005560 loss: 0.025461 speed: 1.18 it/s loss_render_depth: 0.076139
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000005380 loss: 0.028159 speed: 0.86 it/s loss_render_depth: 0.070329
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000005204 loss: 0.022956 speed: 1.09 it/s loss_render_depth: 0.040700
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000005030 loss: 0.044125 speed: 1.20 it/s loss_render_depth: 0.221438
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000004859 loss: 0.024820 speed: 1.20 it/s loss_render_depth: 0.069524
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000004692 loss: 0.022734 speed: 1.19 it/s loss_render_depth: 0.065515
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000004527 loss: 0.033586 speed: 0.71 it/s loss_render_depth: 0.063703
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000004365 loss: 0.019451 speed: 1.21 it/s loss_render_depth: 0.062169
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000004206 loss: 0.044680 speed: 1.07 it/s loss_render_depth: 0.151401
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000004050 loss: 0.033438 speed: 0.96 it/s loss_render_depth: 0.047167
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000003897 loss: 0.029644 speed: 0.98 it/s loss_render_depth: 0.051043
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000003746 loss: 0.039413 speed: 1.09 it/s loss_render_depth: 0.127890
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000003599 loss: 0.023237 speed: 1.00 it/s loss_render_depth: 0.049551
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000003455 loss: 0.023331 speed: 1.20 it/s loss_render_depth: 0.102799
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000003313 loss: 0.035625 speed: 1.20 it/s loss_render_depth: 0.032105
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000003175 loss: 0.019709 speed: 1.20 it/s loss_render_depth: 0.053968
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000003039 loss: 0.053577 speed: 1.20 it/s loss_render_depth: 0.156193
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000002907 loss: 0.019070 speed: 0.94 it/s loss_render_depth: 0.061492
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000002777 loss: 0.051080 speed: 1.19 it/s loss_render_depth: 0.109693
+[train] epoch: 18 loss: 0.074988 psnr: 33.0142
+[eval] epoch: 18 psnr: 30.2939 depth_absrel: 0.0899 unique_scenes: 50
+[INFO] Setting RNG epoch to 19
+[INFO] 0/426 mem: 20.33/71.12G lr: 0.0000002701 loss: 0.022351 speed: 2.52 it/s loss_render_depth: 0.059112
+[INFO] 10/426 mem: 20.33/71.12G lr: 0.0000002576 loss: 0.042261 speed: 0.83 it/s loss_render_depth: 0.139819
+[INFO] 20/426 mem: 20.33/71.12G lr: 0.0000002454 loss: 0.021888 speed: 1.06 it/s loss_render_depth: 0.056842
+[INFO] 30/426 mem: 20.33/71.12G lr: 0.0000002335 loss: 0.035664 speed: 1.06 it/s loss_render_depth: 0.056842
+[INFO] 40/426 mem: 20.33/71.12G lr: 0.0000002219 loss: 0.031725 speed: 1.21 it/s loss_render_depth: 0.070337
+[INFO] 50/426 mem: 20.33/71.12G lr: 0.0000002106 loss: 0.027747 speed: 1.21 it/s loss_render_depth: 0.039400
+[INFO] 60/426 mem: 20.33/71.12G lr: 0.0000001996 loss: 0.040256 speed: 1.06 it/s loss_render_depth: 0.106319
+[INFO] 70/426 mem: 20.33/71.12G lr: 0.0000001889 loss: 0.035269 speed: 1.18 it/s loss_render_depth: 0.114642
+[INFO] 80/426 mem: 20.33/71.12G lr: 0.0000001785 loss: 0.039618 speed: 1.20 it/s loss_render_depth: 0.062996
+[INFO] 90/426 mem: 20.33/71.12G lr: 0.0000001683 loss: 0.031477 speed: 1.20 it/s loss_render_depth: 0.079886
+[INFO] 100/426 mem: 20.33/71.12G lr: 0.0000001585 loss: 0.028199 speed: 1.20 it/s loss_render_depth: 0.069025
+[INFO] 110/426 mem: 20.33/71.12G lr: 0.0000001490 loss: 0.022650 speed: 1.15 it/s loss_render_depth: 0.038000
+[INFO] 120/426 mem: 20.33/71.12G lr: 0.0000001398 loss: 0.020307 speed: 0.94 it/s loss_render_depth: 0.077083
+[INFO] 130/426 mem: 20.33/71.12G lr: 0.0000001308 loss: 0.030241 speed: 1.20 it/s loss_render_depth: 0.097891
+[INFO] 140/426 mem: 20.33/71.12G lr: 0.0000001222 loss: 0.022509 speed: 0.78 it/s loss_render_depth: 0.045822
+[INFO] 150/426 mem: 20.33/71.12G lr: 0.0000001139 loss: 0.022836 speed: 1.20 it/s loss_render_depth: 0.070547
+[INFO] 160/426 mem: 20.33/71.12G lr: 0.0000001058 loss: 0.024923 speed: 1.20 it/s loss_render_depth: 0.061434
+[INFO] 170/426 mem: 20.33/71.12G lr: 0.0000000981 loss: 0.029690 speed: 1.05 it/s loss_render_depth: 0.060253
+[INFO] 180/426 mem: 20.33/71.12G lr: 0.0000000906 loss: 0.037990 speed: 0.79 it/s loss_render_depth: 0.083689
+[INFO] 190/426 mem: 20.33/71.12G lr: 0.0000000835 loss: 0.022546 speed: 1.20 it/s loss_render_depth: 0.035934
+[INFO] 200/426 mem: 20.33/71.12G lr: 0.0000000767 loss: 0.022071 speed: 1.20 it/s loss_render_depth: 0.039497
+[INFO] 210/426 mem: 20.33/71.12G lr: 0.0000000701 loss: 0.023826 speed: 1.20 it/s loss_render_depth: 0.121646
+[INFO] 220/426 mem: 20.33/71.12G lr: 0.0000000639 loss: 0.025301 speed: 1.06 it/s loss_render_depth: 0.042530
+[INFO] 230/426 mem: 20.33/71.12G lr: 0.0000000579 loss: 0.030650 speed: 1.11 it/s loss_render_depth: 0.107349
+[INFO] 240/426 mem: 20.33/71.12G lr: 0.0000000523 loss: 0.033740 speed: 1.20 it/s loss_render_depth: 0.161120
+[INFO] 250/426 mem: 20.33/71.12G lr: 0.0000000469 loss: 0.020586 speed: 1.06 it/s loss_render_depth: 0.056554
+[INFO] 260/426 mem: 20.33/71.12G lr: 0.0000000418 loss: 0.038461 speed: 1.08 it/s loss_render_depth: 0.085433
+[INFO] 270/426 mem: 20.33/71.12G lr: 0.0000000371 loss: 0.021823 speed: 1.16 it/s loss_render_depth: 0.060602
+[INFO] 280/426 mem: 20.33/71.12G lr: 0.0000000326 loss: 0.028919 speed: 1.18 it/s loss_render_depth: 0.059341
+[INFO] 290/426 mem: 20.33/71.12G lr: 0.0000000285 loss: 0.020305 speed: 1.20 it/s loss_render_depth: 0.067141
+[INFO] 300/426 mem: 20.33/71.12G lr: 0.0000000246 loss: 0.021937 speed: 1.20 it/s loss_render_depth: 0.063032
+[INFO] 310/426 mem: 20.33/71.12G lr: 0.0000000210 loss: 0.025116 speed: 0.65 it/s loss_render_depth: 0.092517
+[INFO] 320/426 mem: 20.33/71.12G lr: 0.0000000178 loss: 0.020840 speed: 1.20 it/s loss_render_depth: 0.042785
+[INFO] 330/426 mem: 20.33/71.12G lr: 0.0000000148 loss: 0.018993 speed: 1.20 it/s loss_render_depth: 0.040042
+[INFO] 340/426 mem: 20.33/71.12G lr: 0.0000000122 loss: 0.047480 speed: 1.20 it/s loss_render_depth: 0.093511
+[INFO] 350/426 mem: 20.33/71.12G lr: 0.0000000098 loss: 0.034522 speed: 0.71 it/s loss_render_depth: 0.194074
+[INFO] 360/426 mem: 20.33/71.12G lr: 0.0000000077 loss: 0.026168 speed: 1.20 it/s loss_render_depth: 0.090882
+[INFO] 370/426 mem: 20.33/71.12G lr: 0.0000000060 loss: 0.040248 speed: 0.67 it/s loss_render_depth: 0.059533
+[INFO] 380/426 mem: 20.33/71.12G lr: 0.0000000045 loss: 0.019103 speed: 1.21 it/s loss_render_depth: 0.030217
+[INFO] 390/426 mem: 20.33/71.12G lr: 0.0000000033 loss: 0.023916 speed: 1.07 it/s loss_render_depth: 0.042296
+[INFO] 400/426 mem: 20.33/71.12G lr: 0.0000000025 loss: 0.061108 speed: 1.21 it/s loss_render_depth: 0.054532
+[INFO] 410/426 mem: 20.33/71.12G lr: 0.0000000019 loss: 0.109248 speed: 0.99 it/s loss_render_depth: 0.351353
+[INFO] 420/426 mem: 20.33/71.12G lr: 0.0000000016 loss: 0.038388 speed: 1.06 it/s loss_render_depth: 0.156674
+[train] epoch: 19 loss: 0.072970 psnr: 33.0320
+[eval] epoch: 19 psnr: 30.2949 depth_absrel: 0.0897 unique_scenes: 50
+[INFO] Training completed successfully after 20 epochs
+[rank0]:[W1104 01:06:54.417005031 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+Eval GPU=0; Command: CUDA_VISIBLE_DEVICES=0 /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python -u scripts/evaluate_scannetpp.py --output EXP_ScanNetPP/sft_readout_rgb_depth_surface3d_posmlp_ep20 --checkpoint EXP_ScanNetPP/sft_readout_rgb_depth_surface3d_posmlp_ep20/model.safetensors --model-type tokengs
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+GPU 0 (GPU-9b68aa16-5309-b90b-1a07-2e2868715a95): 50 scene(s), FP32, no TF32, no point cloud
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[01/50] 7b6477cb95: PSNR=29.3732 SSIM=0.94040 LPIPS=0.16031 AbsRel=0.0426 F@3cm=0.4969
+[02/50] c50d2d1d42: PSNR=24.2771 SSIM=0.86937 LPIPS=0.22648 AbsRel=0.0942 F@3cm=0.3262
+[03/50] cc5237fd77: PSNR=34.3013 SSIM=0.96478 LPIPS=0.10040 AbsRel=0.0523 F@3cm=0.5730
+[04/50] acd95847c5: PSNR=33.2925 SSIM=0.97783 LPIPS=0.08467 AbsRel=0.0598 F@3cm=0.3562
+[05/50] fb5a96b1a2: PSNR=32.8195 SSIM=0.96338 LPIPS=0.11739 AbsRel=0.1489 F@3cm=0.2238
+[06/50] a24f64f7fb: PSNR=34.4228 SSIM=0.96880 LPIPS=0.12579 AbsRel=0.0325 F@3cm=0.5819
+[07/50] 1ada7a0617: PSNR=27.9664 SSIM=0.93031 LPIPS=0.18104 AbsRel=0.1108 F@3cm=0.2976
+[08/50] 5eb31827b7: PSNR=29.8716 SSIM=0.90543 LPIPS=0.26860 AbsRel=0.0300 F@3cm=0.6839
+[09/50] 3e8bba0176: PSNR=29.3068 SSIM=0.93210 LPIPS=0.17456 AbsRel=0.0432 F@3cm=0.5236
+[10/50] 3f15a9266d: PSNR=33.9735 SSIM=0.96852 LPIPS=0.12885 AbsRel=0.0344 F@3cm=0.5013
+[11/50] 21d970d8de: PSNR=22.7870 SSIM=0.84985 LPIPS=0.29879 AbsRel=0.0697 F@3cm=0.3387
+[12/50] 5748ce6f01: PSNR=34.1504 SSIM=0.97250 LPIPS=0.11195 AbsRel=0.1149 F@3cm=0.4232
+[13/50] c4c04e6d6c: PSNR=27.2009 SSIM=0.89447 LPIPS=0.22880 AbsRel=0.0960 F@3cm=0.3997
+[14/50] 7831862f02: PSNR=31.8438 SSIM=0.94794 LPIPS=0.15279 AbsRel=0.0363 F@3cm=0.3736
+[15/50] bde1e479ad: PSNR=26.3639 SSIM=0.89708 LPIPS=0.21770 AbsRel=0.0870 F@3cm=0.2154
+[16/50] 38d58a7a31: PSNR=26.7363 SSIM=0.91234 LPIPS=0.19291 AbsRel=0.1192 F@3cm=0.3960
+[17/50] 5ee7c22ba0: PSNR=35.7506 SSIM=0.98223 LPIPS=0.15848 AbsRel=0.0692 F@3cm=0.3588
+[18/50] f9f95681fd: PSNR=36.9289 SSIM=0.97863 LPIPS=0.10633 AbsRel=0.0429 F@3cm=0.6796
+[19/50] 3864514494: PSNR=27.0128 SSIM=0.89276 LPIPS=0.23740 AbsRel=0.0735 F@3cm=0.4220
+[20/50] 40aec5fffa: PSNR=27.4540 SSIM=0.92579 LPIPS=0.21717 AbsRel=0.1103 F@3cm=0.3866
+[21/50] 13c3e046d7: PSNR=31.9647 SSIM=0.94788 LPIPS=0.19789 AbsRel=0.0751 F@3cm=0.3238
+[22/50] e398684d27: PSNR=24.4514 SSIM=0.88555 LPIPS=0.27074 AbsRel=0.1036 F@3cm=0.3462
+[23/50] a8bf42d646: PSNR=27.0503 SSIM=0.88209 LPIPS=0.24997 AbsRel=0.0608 F@3cm=0.4451
+[24/50] 45b0dac5e3: PSNR=36.4375 SSIM=0.96354 LPIPS=0.12458 AbsRel=0.0261 F@3cm=0.6575
+[25/50] 31a2c91c43: PSNR=34.9228 SSIM=0.97307 LPIPS=0.15534 AbsRel=0.0684 F@3cm=0.4243
+[26/50] e7af285f7d: PSNR=35.5986 SSIM=0.96944 LPIPS=0.14260 AbsRel=0.0577 F@3cm=0.5723
+[27/50] 286b55a2bf: PSNR=31.3374 SSIM=0.94896 LPIPS=0.18640 AbsRel=0.0988 F@3cm=0.4108
+[28/50] 7bc286c1b6: PSNR=31.3407 SSIM=0.93697 LPIPS=0.20336 AbsRel=0.0667 F@3cm=0.5116
+[29/50] f3685d06a9: PSNR=22.5171 SSIM=0.85947 LPIPS=0.40368 AbsRel=0.4386 F@3cm=0.1926
+[30/50] b0a08200c9: PSNR=22.5858 SSIM=0.82956 LPIPS=0.29555 AbsRel=0.3006 F@3cm=0.2629
+[31/50] 825d228aec: PSNR=36.7439 SSIM=0.97726 LPIPS=0.12244 AbsRel=0.0601 F@3cm=0.4917
+[32/50] a980334473: PSNR=38.8104 SSIM=0.98692 LPIPS=0.09172 AbsRel=0.0410 F@3cm=0.5614
+[33/50] f2dc06b1d2: PSNR=37.9225 SSIM=0.98128 LPIPS=0.11733 AbsRel=0.0469 F@3cm=0.5060
+[34/50] 5942004064: PSNR=23.8219 SSIM=0.85256 LPIPS=0.29167 AbsRel=0.1707 F@3cm=0.2754
+[35/50] 25f3b7a318: PSNR=31.1411 SSIM=0.94832 LPIPS=0.14347 AbsRel=0.0747 F@3cm=0.4000
+[36/50] bcd2436daf: PSNR=30.7987 SSIM=0.92164 LPIPS=0.22846 AbsRel=0.0697 F@3cm=0.5488
+[37/50] f3d64c30f8: PSNR=26.3995 SSIM=0.89107 LPIPS=0.23563 AbsRel=0.0985 F@3cm=0.3684
+[38/50] 0d2ee665be: PSNR=21.7699 SSIM=0.81453 LPIPS=0.33113 AbsRel=0.1143 F@3cm=0.2310
+[39/50] 3db0a1c8f3: PSNR=35.8575 SSIM=0.95635 LPIPS=0.16732 AbsRel=0.0778 F@3cm=0.4856
+[40/50] ac48a9b736: PSNR=30.2730 SSIM=0.94394 LPIPS=0.18614 AbsRel=0.0641 F@3cm=0.3416
+[41/50] c5439f4607: PSNR=28.9162 SSIM=0.89990 LPIPS=0.16378 AbsRel=0.0672 F@3cm=0.4675
+[42/50] 578511c8a9: PSNR=27.7320 SSIM=0.91951 LPIPS=0.19724 AbsRel=0.0511 F@3cm=0.4241
+[43/50] d755b3d9d8: PSNR=26.1617 SSIM=0.87193 LPIPS=0.19971 AbsRel=0.1432 F@3cm=0.2787
+[44/50] 99fa5c25e1: PSNR=23.9503 SSIM=0.79702 LPIPS=0.29128 AbsRel=0.0941 F@3cm=0.4839
+[45/50] 09c1414f1b: PSNR=34.4790 SSIM=0.95531 LPIPS=0.14581 AbsRel=0.0535 F@3cm=0.3381
+[46/50] 5f99900f09: PSNR=32.9203 SSIM=0.94011 LPIPS=0.16251 AbsRel=0.0445 F@3cm=0.4537
+[47/50] 9071e139d9: PSNR=34.0355 SSIM=0.96976 LPIPS=0.11810 AbsRel=0.0574 F@3cm=0.4191
+[48/50] 6115eddb86: PSNR=34.2099 SSIM=0.97098 LPIPS=0.15481 AbsRel=0.0514 F@3cm=0.4426
+[49/50] 27dd4da69e: PSNR=21.0966 SSIM=0.77379 LPIPS=0.42714 AbsRel=0.2789 F@3cm=0.2495
+[50/50] c49a8c6cff: PSNR=33.6820 SSIM=0.96545 LPIPS=0.12912 AbsRel=0.0564 F@3cm=0.5434
+{
+  "name": "sft_readout_rgb_depth_surface3d_posmlp_ep20",
+  "psnr": 30.295233466625213,
+  "ssim": 0.9241734664142132,
+  "lpips": 0.19250667264685034,
+  "depth_cov": 0.9973929605491463,
+  "depth_scale_ratio_med": 1.0021188202500344,
+  "depth_absrel": 0.08958738066721708,
+  "depth_rmse_m": 0.194081019773148,
+  "depth_delta_105": 0.6092086684284732,
+  "depth_delta_110": 0.7720095675252377,
+  "ray_thick_med_m": 0.08772521653212607,
+  "ray_thick_p90_m": 0.19966789361089468,
+  "normal_mean_deg": 33.79174548625946,
+  "normal_med_deg": 28.432480828762053,
+  "normal_lt11_25": 0.17322527196258306,
+  "normal_lt30": 0.534132757820189,
+  "surf_acc_cm": 9.505148395895958,
+  "surf_comp_cm": 8.43904997035861,
+  "surf_prec_3cm": 0.3813436022400856,
+  "surf_rec_3cm": 0.4705995273590088,
+  "surf_fscore_3cm": 0.42031435338061784,
+  "surf_prec_5cm": 0.5304766467213631,
+  "surf_rec_5cm": 0.6061315906047821,
+  "surf_fscore_5cm": 0.564754649030708,
+  "num_scenes": 50,
+  "target_mode": "interp",
+  "target_offsets_frames": null,
+  "num_target_frames": 400,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "window_size": 18,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "geometry_metrics_status": "computed (Open3D raycast + gsplat ray thickness, physical scale)",
+  "geometry_alignment_median_ratio": 0.9991879686713219,
+  "scale_gate_enforced": true,
+  "forward_seconds_mean": 0.6887320238910616,
+  "elapsed_seconds": 279.2535399235785,
+  "peak_allocated_mib_including_lpips": 3846.01953125,
+  "checkpoint_sha256": "1096b0fbe34f841052b55a90b6d8d0c06a4c324843bf68b1fb3ea0595564bb6c",
+  "gpu": {
+    "index": "0",
+    "uuid": "GPU-9b68aa16-5309-b90b-1a07-2e2868715a95",
+    "memory_used_mib": "7215",
+    "memory_free_mib": "65617",
+    "utilization_pct": "0"
+  },
+  "completed_at": "2026-11-03T17:11:53.180570+00:00"
+}
+Exit code: 0; Finished: 2026-11-04T01:11:54+08:00

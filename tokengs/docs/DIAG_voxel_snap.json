@@ -1,0 +1,82 @@
+{
+  "definitions": "If Gaussians that share a small voxel shared ONE position, how much thinner and how much worse would it get?\n(no training; 50 validation windows, official interpolation targets + the 6 input views)",
+  "gpu": "1",
+  "models": {
+    "official": {
+      "eps_0cm": {
+        "ray_thickness": {
+          "p50_cm": 7.81,
+          "p90_cm": 25.9
+        },
+        "between_token_share": 0.9053046282216873,
+        "psnr_target": 30.503,
+        "psnr_input": 32.352
+      },
+      "eps_2cm": {
+        "ray_thickness": {
+          "p50_cm": 7.81,
+          "p90_cm": 25.9
+        },
+        "between_token_share": 0.9052948078371068,
+        "psnr_target": 29.939,
+        "psnr_input": 31.614
+      },
+      "eps_4cm": {
+        "ray_thickness": {
+          "p50_cm": 7.82,
+          "p90_cm": 25.98
+        },
+        "between_token_share": 0.9057696509304369,
+        "psnr_target": 27.961,
+        "psnr_input": 29.228
+      },
+      "eps_8cm": {
+        "ray_thickness": {
+          "p50_cm": 7.98,
+          "p90_cm": 26.63
+        },
+        "between_token_share": 0.9088715554480076,
+        "psnr_target": 25.011,
+        "psnr_input": 25.8
+      }
+    },
+    "sft_latenttail_readout_rgb_depth_surface3d_posmlp": {
+      "eps_0cm": {
+        "ray_thickness": {
+          "p50_cm": 4.94,
+          "p90_cm": 15.01
+        },
+        "between_token_share": 0.7196281101834578,
+        "psnr_target": 30.631,
+        "psnr_input": 32.23
+      },
+      "eps_2cm": {
+        "ray_thickness": {
+          "p50_cm": 4.94,
+          "p90_cm": 15.03
+        },
+        "between_token_share": 0.7208134015405205,
+        "psnr_target": 29.932,
+        "psnr_input": 31.365
+      },
+      "eps_4cm": {
+        "ray_thickness": {
+          "p50_cm": 4.94,
+          "p90_cm": 15.22
+        },
+        "between_token_share": 0.7288198034802768,
+        "psnr_target": 27.801,
+        "psnr_input": 28.878
+      },
+      "eps_8cm": {
+        "ray_thickness": {
+          "p50_cm": 5.12,
+          "p90_cm": 16.09
+        },
+        "between_token_share": 0.7621928399987057,
+        "psnr_target": 24.68,
+        "psnr_input": 25.332
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "baseline_pretrained_6view",
+  "scene_id": "7b6477cb95",
+  "psnr": 29.477179527282715,
+  "ssim": 0.9425795897841454,
+  "lpips": 0.14890231378376484,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "checkpoint_sha256": "5913da347475049cb58e552634ee1c527293c2571576806db0d4da702ce978c3",
+  "completed_at": "2026-10-26T05:27:37.417889+00:00"
+}

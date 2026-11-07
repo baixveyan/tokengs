@@ -1,0 +1,409 @@
+{
+  "model": "tokengs_paper_4v",
+  "checkpoint": "/home/jms/xveyan/4DGS/TokenGS/checkpoints_hf/checkpoints/dl3dv_4v.safetensors",
+  "checkpoint_sha256": "0d6012d133e2488be82da4c747aae9e7cf7f2320d4d72f6bc224387f65e11980",
+  "definitions": "Re-check the ScanNet++ diagnoses on DL3DV-10K-Benchmark for frozen query-based models (no training of the models).\n140 scenes, official 6-view evaluation json (6 context frames, 50 targets), FP32, TF32 off.  Models (--model):\n  tokengs_release_latent_6v  official dl3dv_latent_6v_ssim (12-layer encoder, 4096 scene latents, 1-layer decoder; mean_cam)\n  tokengs_paper_4v           official paper TokenGS dl3dv_4v (3-layer encoder, 12-layer decoder; first_cam) = the\n                             TokenGS baseline of the LocusGS paper (loaded with the LocusGS code, model_type tokengs)\n  locusgs_finetune_4v        LocusGS DL3DV finetune (paper architecture + per-token 3D anchor centre/radius; first_cam)\nToken -> input-patch attention T: release = decoder cross-attn (head mean) @ layer-7 local-head latent attention; decoder\nmodels = last decoder layer cross-attn (head mean; for LocusGS including its anchor-to-ray bias).\nDL3DV has no laser mesh: the geometry reference is the COLMAP sparse cloud of each scene (points visible in a frame =\npoints whose track contains that image), transformed into each model's normalized frame (scale 0.15).  COLMAP is not\nmetric, sparse and biased to textured surfaces, so only scale-free / relative quantities are reported; lengths are\ndivided by the depth from the relevant camera.  Definitions follow the ScanNet++ scripts they mirror.",
+  "scenes": 140,
+  "scannetpp_reference_official_model": {
+    "thickness_between_share_pooled": 0.9,
+    "thickness_between_share_per_pixel_median": 0.72,
+    "render_weight_in_attention90_median": 0.87,
+    "render_weight_in_attention90_weighted": 0.83,
+    "patches_per_latent_median": 17,
+    "latents_covering_each_patch_median": 6,
+    "near_duplicate_latent_frac": 0.19,
+    "token_flatness_median": 0.58,
+    "token_ray_over_lateral_median": 1.37,
+    "junk_slot_share": 0.24,
+    "junk_render_weight_share": 0.049,
+    "dead_child_slots_all_tokens": [
+      0,
+      7,
+      16,
+      19,
+      20
+    ],
+    "parallax_lt2deg_token_share": 0.25,
+    "spearman_error_vs_distance_over_parallax": 0.47,
+    "spearman_error_vs_parallax": 0.4,
+    "voxel_snap_between_share": 0.91,
+    "depth_absrel_vs_laser": 0.174
+  },
+  "psnr": {
+    "all_50_targets_scene_mean": 23.7705135345459,
+    "novel_44_targets_scene_mean": 23.638669967651367,
+    "reference": "LocusGS paper Table 1 (6 views) 24.16"
+  },
+  "decode_vs_render_max_abs_diff": 0.0320281982421875,
+  "colmap": {
+    "points_per_scene": {
+      "p10": 48915.4,
+      "p50": 92036.5,
+      "p90": 167771.1
+    },
+    "input_patch_coverage": {
+      "p10": 0.317,
+      "p50": 0.5215,
+      "p90": 0.6991
+    }
+  },
+  "depth_vs_colmap_heavy_targets": {
+    "points": 2089163,
+    "median_ratio_pred_over_colmap": 1.0230913889418134,
+    "absrel_pooled_mean": 0.18477198779179968,
+    "absrel_pooled_median": 0.0597668246861691,
+    "absrel_scene_mean": 0.19824644923210144,
+    "delta_lt_1.05": 0.4483259563758309,
+    "delta_lt_1.10": 0.6245247498639407,
+    "note": "COLMAP points only (textured, sparse); ScanNet++ AbsRel 0.174 is dense laser depth - not directly comparable"
+  },
+  "thickness_split_heavy_targets": {
+    "between_share_pooled": 0.6208346411689597,
+    "within_share_pooled": 0.3791653617237939,
+    "between_share_per_pixel_median": 0.8171849416334616,
+    "thickness_over_depth": {
+      "p50": 0.1347,
+      "p90": 0.3982
+    },
+    "by_thickness_over_depth": {
+      "0-0.015": {
+        "pixel_share": 0.010921875,
+        "pooled_between_share": 0.5457916149301442,
+        "median_pixel_between_share": 0.5833241400877947
+      },
+      "0.015-0.05": {
+        "pixel_share": 0.1546828125,
+        "pooled_between_share": 0.5239610626068272,
+        "median_pixel_between_share": 0.6985702863883237
+      },
+      "0.05-0.15": {
+        "pixel_share": 0.37926138392857145,
+        "pooled_between_share": 0.5124700818829199,
+        "median_pixel_between_share": 0.8150027440757365
+      },
+      "0.15-inf": {
+        "pixel_share": 0.4551339285714286,
+        "pooled_between_share": 0.6255864893095897,
+        "median_pixel_between_share": 0.8749174572046191
+      }
+    }
+  },
+  "render_ownership_input_views": {
+    "live_token_frac": 0.998547375202179,
+    "r_in_a90": {
+      "p10": 0.8524,
+      "p50": 1.0,
+      "p90": 1.0
+    },
+    "r_in_a90_weighted_by_render": 0.9591416120529175,
+    "a_in_r90": {
+      "p10": 0.2104,
+      "p50": 0.3116,
+      "p90": 0.4136
+    },
+    "same_dominant_view_frac": 0.5325379967689514
+  },
+  "pixel_token_counts_input_views": {
+    "tokens_with_ge_1pct_of_pixel_weight": {
+      "p10": 6.0,
+      "p50": 11.0,
+      "p90": 17.0
+    },
+    "tokens_needed_for_90pct_weight_(capped_33)": {
+      "p10": 4.0,
+      "p50": 8.0,
+      "p90": 15.0
+    }
+  },
+  "gs_token_attention_overlap": {
+    "patches_in_90pct_set_(capped_64)": {
+      "p10": 64.0,
+      "p50": 64.0,
+      "p90": 64.0
+    },
+    "rows_covering_each_patch": {
+      "p10": 6.0,
+      "p50": 21.0,
+      "p90": 44.0
+    },
+    "other_rows_with_cosine_gt_0.5": {
+      "p10": 0.0,
+      "p50": 2.0,
+      "p90": 5.0
+    },
+    "frac_rows_with_near_duplicate_cos_gt_0.8": 0.2689557671546936,
+    "attention_mass_in_top64_patches": {
+      "p10": 0.4231,
+      "p50": 0.5205,
+      "p90": 0.5889
+    },
+    "token_attention_rms_dispersion_over_depth": {
+      "p10": 0.0638,
+      "p50": 0.1615,
+      "p90": 0.5552
+    }
+  },
+  "d0_locality": {
+    "decoder_layer_4": {
+      "n_local_heads": 0.45,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 27.789135835608658,
+      "eff_patches_global_median": 113.29455915178572
+    },
+    "decoder_layer_8": {
+      "n_local_heads": 13.57857142857143,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 4.028688590867179,
+      "eff_patches_global_median": 2826.48081741333
+    },
+    "decoder_layer_12": {
+      "n_local_heads": 4.8428571428571425,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 16.783735629490444,
+      "eff_patches_global_median": 344.3252123151507
+    }
+  },
+  "token_shape_alive_tokens": {
+    "flatness": {
+      "p10": 0.2981,
+      "p50": 0.5254,
+      "p90": 0.7734
+    },
+    "thin_rel": {
+      "p10": 0.0039,
+      "p50": 0.0062,
+      "p90": 0.0112
+    },
+    "long_rel": {
+      "p10": 0.0151,
+      "p50": 0.0435,
+      "p90": 0.1898
+    },
+    "ray_over_lateral": {
+      "p10": 1.1875,
+      "p50": 3.3887,
+      "p90": 15.2812
+    },
+    "share_disc_flatness_lt_0.3": 0.10199868679046631,
+    "share_ray_spread_gt_lateral": 0.9363565444946289
+  },
+  "c_centroid": {
+    "locusgs_table3_definition_mean_all_children_normalized": 0.6893588926032992,
+    "median": 0.6223880052566528,
+    "variance": 0.11232890910803243,
+    "alive_weighted_over_depth": {
+      "p10": 0.016,
+      "p50": 0.0374,
+      "p90": 0.1541
+    },
+    "locusgs_paper_dl3dv": {
+      "TokenGS": {
+        "mean": 0.5881,
+        "median": 0.5531
+      },
+      "LocusGS": {
+        "mean": 0.0433,
+        "median": 0.0383
+      }
+    }
+  },
+  "child_slots": {
+    "dead_in_ge99pct_tokens": [
+      3,
+      11,
+      15,
+      18,
+      20,
+      34,
+      36,
+      43,
+      50,
+      52,
+      54,
+      59,
+      60,
+      62
+    ],
+    "dead_in_100pct_tokens": [],
+    "alive_in_ge95pct_tokens": 15,
+    "dead_frac_per_child": [
+      0.0113,
+      0.9621,
+      0.0126,
+      0.9915,
+      0.9858,
+      0.9836,
+      0.9879,
+      0.9786,
+      0.9702,
+      0.9863,
+      0.9678,
+      0.9916,
+      0.9897,
+      0.0349,
+      0.0124,
+      0.9959,
+      0.9743,
+      0.9682,
+      0.9909,
+      0.9866,
+      0.997,
+      0.9862,
+      0.9876,
+      0.0101,
+      0.0106,
+      0.0167,
+      0.9839,
+      0.6945,
+      0.9798,
+      0.015,
+      0.9871,
+      0.9812,
+      0.9891,
+      0.9888,
+      0.997,
+      0.9897,
+      0.9925,
+      0.9836,
+      0.9831,
+      0.012,
+      0.9755,
+      0.9842,
+      0.0094,
+      0.9914,
+      0.9796,
+      0.9801,
+      0.9847,
+      0.9873,
+      0.0159,
+      0.9893,
+      0.9945,
+      0.0101,
+      0.9918,
+      0.9445,
+      0.9909,
+      0.9775,
+      0.0114,
+      0.0162,
+      0.0115,
+      0.9915,
+      0.9903,
+      0.9878,
+      0.9983,
+      0.969
+    ]
+  },
+  "junk_slots": {
+    "junk_share_opacity_lt_0.05_and_far": 0.47469212668282645,
+    "low_opacity_share": 0.8220195770263672,
+    "junk_share_of_heavy_target_render_weight": 0.009124064713735152,
+    "dist_to_nearest_colmap_point_normalized": {
+      "junk": {
+        "p50": 0.1938,
+        "p90": 0.5562
+      },
+      "opacity_ge_0.05": {
+        "p50": 0.0149,
+        "p90": 0.1248
+      }
+    },
+    "junk_opacity": {
+      "p50": 0.0014,
+      "p90": 0.0028
+    },
+    "far_threshold_normalized": 0.09,
+    "note": "nearest COLMAP point overestimates distance to the surface (sparse cloud)"
+  },
+  "parallax": {
+    "alive_tokens": 547409,
+    "colmap_valid_tokens": 388976,
+    "share_parallax_lt_2deg_alive_tokens_inference_time": 0.045181937515735626,
+    "share_parallax_lt_2deg_valid_tokens_colmap_region": 0.023664699867367744,
+    "spearman_e_depth_rel": {
+      "-#views": 0.09764002930149633,
+      "-parallax": 0.11433328366036787,
+      "-parallax_inference_time": 0.09277735644404767,
+      "distance/parallax_(relative)": 0.11433703206469872
+    },
+    "spearman_e_3d_rel": {
+      "-parallax": 0.0721943981300427,
+      "-#views": 0.20248150380265434
+    },
+    "e_depth_rel_all_valid": {
+      "p10": 0.0185,
+      "p50": 0.117,
+      "p90": 0.4547
+    },
+    "binned_by_colmap_region_parallax": {
+      "single view (0 deg)": {
+        "token_share_of_valid": 0.005403932183980942,
+        "e_depth_rel_median": 0.20240257680416107,
+        "e_depth_rel_p90": 1.0675880908966064
+      },
+      "0-2 deg": {
+        "token_share_of_valid": 0.018260765820741653,
+        "e_depth_rel_median": 0.15755712985992432,
+        "e_depth_rel_p90": 0.6270767450332642
+      },
+      "2-5 deg": {
+        "token_share_of_valid": 0.06347692757844925,
+        "e_depth_rel_median": 0.1659345179796219,
+        "e_depth_rel_p90": 0.6001355051994324
+      },
+      "5-10 deg": {
+        "token_share_of_valid": 0.12930874526500702,
+        "e_depth_rel_median": 0.14606916904449463,
+        "e_depth_rel_p90": 0.5450671911239624
+      },
+      "10-20 deg": {
+        "token_share_of_valid": 0.24415388703346252,
+        "e_depth_rel_median": 0.12070616334676743,
+        "e_depth_rel_p90": 0.4503578245639801
+      },
+      ">20 deg": {
+        "token_share_of_valid": 0.5393957495689392,
+        "e_depth_rel_median": 0.10296895354986191,
+        "e_depth_rel_p90": 0.39779093861579895
+      }
+    },
+    "note": "errors are relative to depth (COLMAP region centroid vs the token's opacity-weighted Gaussian centre); on a relative scale distance/parallax reduces to 1/parallax"
+  },
+  "voxel_snap": {
+    "eps_0_normalized": {
+      "between_share_pooled": 0.6152621720713072,
+      "thickness_over_depth": {
+        "p50": 0.1341,
+        "p90": 0.3983
+      },
+      "psnr_heavy_targets": 23.617897033691406,
+      "psnr_input_views": 24.73737335205078
+    },
+    "eps_0.006_normalized": {
+      "between_share_pooled": 0.6152606318496794,
+      "thickness_over_depth": {
+        "p50": 0.1341,
+        "p90": 0.3983
+      },
+      "psnr_heavy_targets": 23.570226669311523,
+      "psnr_input_views": 24.662290573120117
+    },
+    "eps_0.012_normalized": {
+      "between_share_pooled": 0.6151313790362286,
+      "thickness_over_depth": {
+        "p50": 0.1339,
+        "p90": 0.3979
+      },
+      "psnr_heavy_targets": 23.119565963745117,
+      "psnr_input_views": 24.048301696777344
+    },
+    "eps_0.024_normalized": {
+      "between_share_pooled": 0.6158270482214683,
+      "thickness_over_depth": {
+        "p50": 0.1339,
+        "p90": 0.3974
+      },
+      "psnr_heavy_targets": 21.865285873413086,
+      "psnr_input_views": 22.484230041503906
+    }
+  }
+}

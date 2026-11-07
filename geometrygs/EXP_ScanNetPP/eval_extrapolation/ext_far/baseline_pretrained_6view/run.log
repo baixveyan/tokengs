@@ -1,0 +1,118 @@
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+GPU 5 (GPU-57fbaae6-e31f-dc7c-c1e3-4293dac1b556): 50 scene(s), FP32, no TF32, no point cloud
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[01/50] 7b6477cb95: PSNR=14.9916 SSIM=0.64150 LPIPS=0.53426 AbsRel=0.2893 F@3cm=0.2156
+[02/50] c50d2d1d42: PSNR=18.1625 SSIM=0.76353 LPIPS=0.42989 AbsRel=0.1994 F@3cm=0.2279
+[03/50] cc5237fd77: PSNR=13.9860 SSIM=0.70419 LPIPS=0.43722 AbsRel=0.1916 F@3cm=0.3394
+[04/50] acd95847c5: PSNR=14.9264 SSIM=0.73117 LPIPS=0.35486 AbsRel=0.2365 F@3cm=0.2035
+[05/50] fb5a96b1a2: PSNR=16.3878 SSIM=0.74856 LPIPS=0.34762 AbsRel=0.1987 F@3cm=0.1977
+[06/50] a24f64f7fb: PSNR=13.2262 SSIM=0.75481 LPIPS=0.44205 AbsRel=0.1218 F@3cm=0.2913
+[07/50] 1ada7a0617: PSNR=15.2007 SSIM=0.75484 LPIPS=0.51280 AbsRel=0.3602 F@3cm=0.0967
+[08/50] 5eb31827b7: PSNR=12.2872 SSIM=0.57094 LPIPS=0.61325 AbsRel=1.3028 F@3cm=0.0521
+[09/50] 3e8bba0176: PSNR=12.2976 SSIM=0.58905 LPIPS=0.59511 AbsRel=0.2680 F@3cm=0.1183
+[10/50] 3f15a9266d: PSNR=16.1198 SSIM=0.73055 LPIPS=0.38225 AbsRel=0.1992 F@3cm=0.1989
+[11/50] 21d970d8de: PSNR=15.5842 SSIM=0.67022 LPIPS=0.50249 AbsRel=0.2753 F@3cm=0.1628
+[12/50] 5748ce6f01: PSNR=18.1029 SSIM=0.87561 LPIPS=0.29777 AbsRel=0.2320 F@3cm=0.2473
+[13/50] c4c04e6d6c: PSNR=17.3535 SSIM=0.68634 LPIPS=0.54526 AbsRel=0.2288 F@3cm=0.1699
+[14/50] 7831862f02: PSNR=18.4748 SSIM=0.73363 LPIPS=0.46347 AbsRel=0.1411 F@3cm=0.1807
+[15/50] bde1e479ad: PSNR=17.6565 SSIM=0.70578 LPIPS=0.45594 AbsRel=0.2426 F@3cm=0.1624
+[16/50] 38d58a7a31: PSNR=15.9921 SSIM=0.73002 LPIPS=0.47173 AbsRel=0.3274 F@3cm=0.1266
+[17/50] 5ee7c22ba0: PSNR=16.3751 SSIM=0.79911 LPIPS=0.52569 AbsRel=0.5819 F@3cm=0.0704
+[18/50] f9f95681fd: PSNR=15.3363 SSIM=0.82472 LPIPS=0.37483 AbsRel=0.1435 F@3cm=0.3184
+[19/50] 3864514494: PSNR=16.9261 SSIM=0.74443 LPIPS=0.51322 AbsRel=0.3616 F@3cm=0.1411
+[20/50] 40aec5fffa: PSNR=18.7992 SSIM=0.79782 LPIPS=0.43043 AbsRel=0.3874 F@3cm=0.2108
+[21/50] 13c3e046d7: PSNR=13.5901 SSIM=0.55445 LPIPS=0.67156 AbsRel=0.4059 F@3cm=0.0823
+[22/50] e398684d27: PSNR=15.8510 SSIM=0.63272 LPIPS=0.56382 AbsRel=1.4800 F@3cm=0.0644
+[23/50] a8bf42d646: PSNR=14.5348 SSIM=0.57911 LPIPS=0.72217 AbsRel=0.2416 F@3cm=0.1012
+[24/50] 45b0dac5e3: PSNR=16.0634 SSIM=0.73046 LPIPS=0.59695 AbsRel=0.3554 F@3cm=0.2451
+[25/50] 31a2c91c43: PSNR=14.3959 SSIM=0.77501 LPIPS=0.66150 AbsRel=0.2497 F@3cm=0.1652
+[26/50] e7af285f7d: PSNR=18.3697 SSIM=0.75019 LPIPS=0.49116 AbsRel=0.2896 F@3cm=0.1575
+[27/50] 286b55a2bf: PSNR=15.4781 SSIM=0.74800 LPIPS=0.58365 AbsRel=0.4084 F@3cm=0.1828
+[28/50] 7bc286c1b6: PSNR=21.4693 SSIM=0.86661 LPIPS=0.41795 AbsRel=0.7525 F@3cm=0.1461
+[29/50] f3685d06a9: PSNR=16.4402 SSIM=0.76939 LPIPS=0.57492 AbsRel=1.0786 F@3cm=0.1343
+[30/50] b0a08200c9: PSNR=16.4470 SSIM=0.67967 LPIPS=0.46116 AbsRel=0.8413 F@3cm=0.1303
+[31/50] 825d228aec: PSNR=18.1738 SSIM=0.88232 LPIPS=0.35698 AbsRel=0.1824 F@3cm=0.2466
+[32/50] a980334473: PSNR=17.6061 SSIM=0.90375 LPIPS=0.27535 AbsRel=0.1332 F@3cm=0.3853
+[33/50] f2dc06b1d2: PSNR=14.5315 SSIM=0.80404 LPIPS=0.51469 AbsRel=0.2938 F@3cm=0.1491
+[34/50] 5942004064: PSNR=14.4510 SSIM=0.62568 LPIPS=0.61051 AbsRel=0.7957 F@3cm=0.1063
+[35/50] 25f3b7a318: PSNR=14.7710 SSIM=0.66611 LPIPS=0.56078 AbsRel=0.3590 F@3cm=0.0932
+[36/50] bcd2436daf: PSNR=15.2293 SSIM=0.74891 LPIPS=0.47795 AbsRel=0.3644 F@3cm=0.2380
+[37/50] f3d64c30f8: PSNR=12.8183 SSIM=0.60769 LPIPS=0.63390 AbsRel=0.3473 F@3cm=0.1028
+[38/50] 0d2ee665be: PSNR=12.1104 SSIM=0.66488 LPIPS=0.54747 AbsRel=0.6292 F@3cm=0.0519
+[39/50] 3db0a1c8f3: PSNR=14.2866 SSIM=0.70479 LPIPS=0.58154 AbsRel=0.2598 F@3cm=0.1222
+[40/50] ac48a9b736: PSNR=16.0289 SSIM=0.65210 LPIPS=0.58531 AbsRel=0.2301 F@3cm=0.1225
+[41/50] c5439f4607: PSNR=19.0598 SSIM=0.70763 LPIPS=0.45843 AbsRel=0.1438 F@3cm=0.3242
+[42/50] 578511c8a9: PSNR=12.8623 SSIM=0.57919 LPIPS=0.62712 AbsRel=0.4265 F@3cm=0.0896
+[43/50] d755b3d9d8: PSNR=16.6489 SSIM=0.66495 LPIPS=0.45112 AbsRel=0.2217 F@3cm=0.1520
+[44/50] 99fa5c25e1: PSNR=14.3933 SSIM=0.46825 LPIPS=0.66608 AbsRel=0.2979 F@3cm=0.1920
+[45/50] 09c1414f1b: PSNR=21.3817 SSIM=0.80050 LPIPS=0.37289 AbsRel=0.2074 F@3cm=0.2535
+[46/50] 5f99900f09: PSNR=13.1322 SSIM=0.66662 LPIPS=0.54519 AbsRel=0.5531 F@3cm=0.1184
+[47/50] 9071e139d9: PSNR=18.5686 SSIM=0.76328 LPIPS=0.39087 AbsRel=0.1287 F@3cm=0.2411
+[48/50] 6115eddb86: PSNR=13.9523 SSIM=0.58784 LPIPS=0.60149 AbsRel=0.4274 F@3cm=0.0652
+[49/50] 27dd4da69e: PSNR=12.9656 SSIM=0.68285 LPIPS=0.79554 AbsRel=0.5644 F@3cm=0.0610
+[50/50] c49a8c6cff: PSNR=17.9869 SSIM=0.76207 LPIPS=0.39978 AbsRel=0.1377 F@3cm=0.2745
+{
+  "name": "baseline_pretrained_6view",
+  "psnr": 15.835693559646607,
+  "ssim": 0.7117171844094992,
+  "lpips": 0.5085591086372733,
+  "depth_cov": 0.7756055937659005,
+  "depth_scale_ratio_med": 0.9346828237734734,
+  "depth_absrel": 0.3819120141472667,
+  "depth_rmse_m": 0.6040991682341944,
+  "depth_delta_105": 0.22896150922443212,
+  "depth_delta_110": 0.34581725413150705,
+  "ray_thick_med_m": 0.18342333723977208,
+  "ray_thick_p90_m": 0.471915043996647,
+  "normal_mean_deg": 46.84843208789825,
+  "normal_med_deg": 46.160044711112974,
+  "normal_lt11_25": 0.07312823111074977,
+  "normal_lt30": 0.30031245488673447,
+  "surf_acc_cm": 30.512381464242935,
+  "surf_comp_cm": 36.484241887927055,
+  "surf_prec_3cm": 0.15573247633874415,
+  "surf_rec_3cm": 0.198498917222023,
+  "surf_fscore_3cm": 0.1706051237176245,
+  "surf_prec_5cm": 0.2363103226572275,
+  "surf_rec_5cm": 0.27873089626431463,
+  "surf_fscore_5cm": 0.25009085636509776,
+  "num_scenes": 50,
+  "target_mode": "ext_far",
+  "target_offsets_frames": [
+    18,
+    24,
+    30,
+    36
+  ],
+  "num_target_frames": 400,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "window_size": 18,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "geometry_metrics_status": "computed (Open3D raycast + gsplat ray thickness, physical scale)",
+  "geometry_alignment_median_ratio": 0.9190267585217953,
+  "forward_seconds_mean": 0.6880841211788357,
+  "elapsed_seconds": 415.20337279327214,
+  "peak_allocated_mib_including_lpips": 3836.6806640625,
+  "checkpoint_sha256": "5913da347475049cb58e552634ee1c527293c2571576806db0d4da702ce978c3",
+  "gpu": {
+    "index": "5",
+    "uuid": "GPU-57fbaae6-e31f-dc7c-c1e3-4293dac1b556",
+    "memory_used_mib": "4",
+    "memory_free_mib": "72828",
+    "utilization_pct": "0"
+  },
+  "completed_at": "2026-11-03T04:04:45.989341+00:00"
+}

@@ -1,0 +1,57 @@
+{
+  "scene": "fb5a96b1a2",
+  "prediction": "frozen TokenGS feature probe, p=0.5",
+  "mask": "",
+  "mask_key": null,
+  "probability_threshold": 0.5,
+  "grid_dims": [
+    67,
+    38,
+    49
+  ],
+  "cell_m": 0.1,
+  "cells": 124754,
+  "input_frames": [
+    357,
+    360,
+    363,
+    367,
+    370,
+    374
+  ],
+  "counts": {
+    "camera_geometry": {
+      "tp": 3916,
+      "fp": 43204,
+      "fn": 2879,
+      "tn": 74755,
+      "recall": 0.5763061074319352,
+      "precision": 0.083106960950764,
+      "iou": 0.07832156643132862,
+      "accuracy": 0.630609038587941
+    },
+    "projected_image": {
+      "tp": 3883,
+      "fp": 25019,
+      "fn": 2912,
+      "tn": 92940,
+      "recall": 0.5714495952906549,
+      "precision": 0.13435056397481143,
+      "iou": 0.12205318413277173,
+      "accuracy": 0.7761113872100294
+    }
+  },
+  "fp_shells": {
+    "fp_within_1_cells": 0.35660897717734524,
+    "fp_within_2_cells": 0.6100163875454655,
+    "fp_within_3_cells": 0.7657780087133779
+  },
+  "colours": {
+    "tp": "green",
+    "fp": "purple",
+    "fn": "red",
+    "label": "gold",
+    "prediction": "blue"
+  },
+  "coordinates": "PLY in normalized mean-camera frame (0.3 units per metre); PNG axes in metres"
+}

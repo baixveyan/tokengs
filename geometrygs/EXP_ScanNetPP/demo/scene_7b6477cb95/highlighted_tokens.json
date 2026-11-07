@@ -1,0 +1,369 @@
+{
+  "scene": "scene_7b6477cb95",
+  "reference_method": "baseline_pretrained_6view",
+  "selection": {
+    "reference_opacity_mass_median": 2.8723745346069336,
+    "active_tokens": 2048,
+    "total_tokens": 4096,
+    "seed": 0
+  },
+  "counts": [
+    10,
+    20
+  ],
+  "grey_opacity_scale": 0.1,
+  "tokens": [
+    {
+      "rank": 0,
+      "token": 3671,
+      "colour": "red",
+      "hex": "#e6194b"
+    },
+    {
+      "rank": 1,
+      "token": 867,
+      "colour": "green",
+      "hex": "#3cb44b"
+    },
+    {
+      "rank": 2,
+      "token": 755,
+      "colour": "yellow",
+      "hex": "#ffe119"
+    },
+    {
+      "rank": 3,
+      "token": 3786,
+      "colour": "blue",
+      "hex": "#4363d8"
+    },
+    {
+      "rank": 4,
+      "token": 1739,
+      "colour": "orange",
+      "hex": "#f58231"
+    },
+    {
+      "rank": 5,
+      "token": 2205,
+      "colour": "purple",
+      "hex": "#911eb4"
+    },
+    {
+      "rank": 6,
+      "token": 1989,
+      "colour": "cyan",
+      "hex": "#42d4f4"
+    },
+    {
+      "rank": 7,
+      "token": 3938,
+      "colour": "magenta",
+      "hex": "#f032e6"
+    },
+    {
+      "rank": 8,
+      "token": 2325,
+      "colour": "lime",
+      "hex": "#bfef45"
+    },
+    {
+      "rank": 9,
+      "token": 2423,
+      "colour": "pink",
+      "hex": "#fabed4"
+    },
+    {
+      "rank": 10,
+      "token": 491,
+      "colour": "teal",
+      "hex": "#469990"
+    },
+    {
+      "rank": 11,
+      "token": 3196,
+      "colour": "lavender",
+      "hex": "#dcbeff"
+    },
+    {
+      "rank": 12,
+      "token": 2324,
+      "colour": "brown",
+      "hex": "#9a6324"
+    },
+    {
+      "rank": 13,
+      "token": 43,
+      "colour": "beige",
+      "hex": "#fffac8"
+    },
+    {
+      "rank": 14,
+      "token": 1921,
+      "colour": "maroon",
+      "hex": "#800000"
+    },
+    {
+      "rank": 15,
+      "token": 210,
+      "colour": "mint",
+      "hex": "#aaffc3"
+    },
+    {
+      "rank": 16,
+      "token": 3357,
+      "colour": "olive",
+      "hex": "#808000"
+    },
+    {
+      "rank": 17,
+      "token": 1722,
+      "colour": "apricot",
+      "hex": "#ffd8b1"
+    },
+    {
+      "rank": 18,
+      "token": 2797,
+      "colour": "navy",
+      "hex": "#000075"
+    },
+    {
+      "rank": 19,
+      "token": 118,
+      "colour": "black",
+      "hex": "#000000"
+    }
+  ],
+  "files": {
+    "baseline_pretrained_6view": [
+      "baseline_pretrained_6view/baseline_pretrained_6view_highlight10tokens.ply",
+      "baseline_pretrained_6view/baseline_pretrained_6view_only10tokens.ply",
+      "baseline_pretrained_6view/baseline_pretrained_6view_highlight20tokens.ply",
+      "baseline_pretrained_6view/baseline_pretrained_6view_only20tokens.ply"
+    ]
+  },
+  "token_stats": {
+    "baseline_pretrained_6view": {
+      "3671": {
+        "alive": 50,
+        "opacity_mass": 4.041012397326995,
+        "centre": [
+          0.9695378122255875,
+          -0.08114417259795723,
+          0.12162589483285463
+        ],
+        "spread": 0.11950731746554823,
+        "centre_shift": 0.0
+      },
+      "867": {
+        "alive": 51,
+        "opacity_mass": 4.89158160018269,
+        "centre": [
+          0.6955694184884937,
+          0.17829513852365386,
+          0.7899054018290605
+        ],
+        "spread": 0.11442162388685183,
+        "centre_shift": 0.0
+      },
+      "755": {
+        "alive": 51,
+        "opacity_mass": 4.531578039866872,
+        "centre": [
+          0.8975038823488719,
+          -0.039341099498209756,
+          0.21590395568427603
+        ],
+        "spread": 0.10005912969519941,
+        "centre_shift": 0.0
+      },
+      "3786": {
+        "alive": 49,
+        "opacity_mass": 3.5948112463229336,
+        "centre": [
+          -0.2918809435748669,
+          0.4112784603556476,
+          0.5787701267565308
+        ],
+        "spread": 0.11698542398022473,
+        "centre_shift": 0.0
+      },
+      "1739": {
+        "alive": 50,
+        "opacity_mass": 4.186788176797563,
+        "centre": [
+          -0.32969984943374325,
+          0.31336321100152054,
+          0.3713118641875412
+        ],
+        "spread": 0.0991514396421672,
+        "centre_shift": 0.0
+      },
+      "2205": {
+        "alive": 51,
+        "opacity_mass": 6.15910981327761,
+        "centre": [
+          -0.31065627507793686,
+          0.404822203779494,
+          0.21621164065996648
+        ],
+        "spread": 0.12061699054949991,
+        "centre_shift": 0.0
+      },
+      "1989": {
+        "alive": 51,
+        "opacity_mass": 3.430844579299446,
+        "centre": [
+          -0.277986472829429,
+          0.18075414894600286,
+          0.3942272155971891
+        ],
+        "spread": 0.09931380563051967,
+        "centre_shift": 0.0
+      },
+      "3938": {
+        "alive": 50,
+        "opacity_mass": 4.647269214357948,
+        "centre": [
+          0.17029937124042566,
+          0.25146844461029194,
+          0.018674486008539586
+        ],
+        "spread": 0.0852853953819177,
+        "centre_shift": 0.0
+      },
+      "2325": {
+        "alive": 45,
+        "opacity_mass": 4.265020913502667,
+        "centre": [
+          -0.4576517493653274,
+          -0.11389788514920202,
+          0.6203293212789036
+        ],
+        "spread": 0.08481020716011367,
+        "centre_shift": 0.0
+      },
+      "2423": {
+        "alive": 51,
+        "opacity_mass": 5.044628601404838,
+        "centre": [
+          -0.3112545044076039,
+          0.40708922976326045,
+          0.3205152922459051
+        ],
+        "spread": 0.10646893637224018,
+        "centre_shift": 0.0
+      },
+      "491": {
+        "alive": 50,
+        "opacity_mass": 4.216990345157683,
+        "centre": [
+          -0.08135871818760988,
+          0.0626430370891856,
+          0.8428459405943592
+        ],
+        "spread": 0.09059859389548812,
+        "centre_shift": 0.0
+      },
+      "3196": {
+        "alive": 53,
+        "opacity_mass": 8.10168941586744,
+        "centre": [
+          1.1973169720064978,
+          0.22429886419005526,
+          -0.1822825603390256
+        ],
+        "spread": 0.11350679438489397,
+        "centre_shift": 0.0
+      },
+      "2324": {
+        "alive": 50,
+        "opacity_mass": 4.615304145030677,
+        "centre": [
+          0.3734671130173743,
+          0.22268709656838045,
+          0.006203865621638265
+        ],
+        "spread": 0.086623788234816,
+        "centre_shift": 0.0
+      },
+      "43": {
+        "alive": 53,
+        "opacity_mass": 5.833509314572439,
+        "centre": [
+          0.35257858957821075,
+          0.34577307744464003,
+          0.7478270592462789
+        ],
+        "spread": 0.13554806330669777,
+        "centre_shift": 0.0
+      },
+      "1921": {
+        "alive": 52,
+        "opacity_mass": 4.547106452228036,
+        "centre": [
+          0.2978113660901954,
+          0.2306134174789633,
+          -0.01820102970613534
+        ],
+        "spread": 0.09254842266713634,
+        "centre_shift": 0.0
+      },
+      "210": {
+        "alive": 53,
+        "opacity_mass": 8.348262994433753,
+        "centre": [
+          0.1342664997226271,
+          0.4529083862644356,
+          0.1819077208781634
+        ],
+        "spread": 0.08063404503527823,
+        "centre_shift": 0.0
+      },
+      "3357": {
+        "alive": 39,
+        "opacity_mass": 3.250547196890693,
+        "centre": [
+          -0.2521923870107923,
+          -0.19598202064378345,
+          0.7436447567865312
+        ],
+        "spread": 0.10290412272292666,
+        "centre_shift": 0.0
+      },
+      "1722": {
+        "alive": 50,
+        "opacity_mass": 3.155694144224981,
+        "centre": [
+          0.972587022564241,
+          0.060922404216206684,
+          -0.039928664494909324
+        ],
+        "spread": 0.13563238943697606,
+        "centre_shift": 0.0
+      },
+      "2797": {
+        "alive": 46,
+        "opacity_mass": 3.0217129853990627,
+        "centre": [
+          0.1934579001416725,
+          0.2529014867523116,
+          -0.05906354089532396
+        ],
+        "spread": 0.1106996157862463,
+        "centre_shift": 0.0
+      },
+      "118": {
+        "alive": 51,
+        "opacity_mass": 3.2026960665825754,
+        "centre": [
+          0.8210384405404085,
+          -0.015859918388783163,
+          0.3972272934234306
+        ],
+        "spread": 0.11622844799244153,
+        "centre_shift": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,1185 @@
+=== Started 2026-11-07T12:14:33+08:00; host=iZwz9foxpfyzf7f1y60xxwZ; GPUs=1,2,3,4,5,6,7
+Command: CUDA_VISIBLE_DEVICES=1,2,3,4,5,6,7 torchrun --standalone --nproc_per_node=7 scripts/check_grid_occupancy.py --output EXP/grid_occupancy_10cm --demo EXP/demo/scene_7b6477cb95/grid_occupancy_10cm --workspace /mnt/disk/xveyan/workspace_scannetpp/geometrygs_grid_occupancy_10cm
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 474, in <module>
+[rank0]:     main()
+[rank0]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 344, in main
+[rank0]:     dist.broadcast(t, 0)
+[rank0]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py", line 2714, in broadcast
+[rank0]:     work = group.broadcast([tensor], opts)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: ValueError: Tensors must be contiguous
+[rank0]:[W1107 12:15:08.229707596 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W1107 12:15:10.012000 2669829 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2669842 closing signal SIGTERM
+W1107 12:15:10.013000 2669829 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2669843 closing signal SIGTERM
+W1107 12:15:10.016000 2669829 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2669844 closing signal SIGTERM
+W1107 12:15:10.018000 2669829 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2669845 closing signal SIGTERM
+W1107 12:15:10.023000 2669829 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2669846 closing signal SIGTERM
+W1107 12:15:10.023000 2669829 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2669847 closing signal SIGTERM
+E1107 12:15:10.720000 2669829 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 2669841) of binary: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python3.11
+Traceback (most recent call last):
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/check_grid_occupancy.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-07_12:15:10
+  host      : iZwz9foxpfyzf7f1y60xxwZ
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 2669841)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+=== Finished 2026-11-07T12:15:10+08:00; exit=1
+=== Started 2026-11-07T12:17:31+08:00; host=iZwz9foxpfyzf7f1y60xxwZ; GPUs=1,2,3,4,5,6,7
+Command: CUDA_VISIBLE_DEVICES=1,2,3,4,5,6,7 torchrun --standalone --nproc_per_node=7 scripts/check_grid_occupancy.py --output EXP/grid_occupancy_10cm --demo EXP/demo/scene_7b6477cb95/grid_occupancy_10cm --workspace /mnt/disk/xveyan/workspace_scannetpp/geometrygs_grid_occupancy_10cm
+[rank 2] train 7c31a42404: grid (39, 29, 31), positive 3557/35061
+[rank 1] train 934599022f: grid (36, 27, 27), positive 2973/26244
+[rank 6] train 9ef704a38d: grid (44, 36, 32), positive 4164/50688
+[rank 3] train 206bccc898: grid (28, 50, 23), positive 2969/32200
+[rank 5] train 6855e1ac32: grid (44, 35, 32), positive 3690/49280
+[rank 6] train 0e28968c1f: grid (28, 27, 22), positive 1388/16632
+[rank 0] train de83a9c2d7: grid (75, 47, 65), positive 10560/229125
+[rank 3] train f7da3f0714: grid (49, 32, 27), positive 4275/42336
+[rank 1] train c06a983e63: grid (64, 39, 51), positive 7522/127296
+[rank 3] train 7d75c00a32: grid (25, 29, 18), positive 1289/13050
+[rank 0] train ec2cb8dae1: grid (56, 36, 45), positive 6740/90720
+[rank 4] train a892730b61: grid (110, 41, 79), positive 17515/356290
+[rank 1] train ba8e2bce5d: grid (34, 28, 34), positive 3735/32368
+[rank 6] train de7dc9993f: grid (64, 39, 42), positive 6659/104832
+[rank 5] train 1cefb55d50: grid (90, 41, 43), positive 5839/158670
+[rank 3] train 67b177d4f6: grid (29, 31, 18), positive 1728/16182
+[rank 2] train c6e247f6c3: grid (104, 36, 94), positive 22863/351936
+[rank 4] train 6b19334aeb: grid (37, 28, 26), positive 2327/26936
+[rank 0] train d986399f4c: grid (59, 30, 21), positive 2805/37170
+[rank 6] train edced53026: grid (53, 33, 32), positive 4121/55968
+[rank 5] train 9471b8d485: grid (62, 44, 61), positive 6177/166408
+[rank 3] train c413b34238: grid (58, 40, 47), positive 8173/109040
+[rank 4] train da1df716a5: grid (36, 30, 22), positive 1941/23760
+[rank 4] train 8bafc0c9d6: grid (13, 26, 23), positive 962/7774
+[rank 5] train 238b940049: grid (48, 47, 51), positive 6330/115056
+[rank 6] train a05ee63164: grid (57, 50, 44), positive 6651/125400
+[rank 0] train ef9428c5cd: grid (68, 40, 33), positive 5135/89760
+[rank 2] train c842edbdf5: grid (80, 51, 54), positive 10739/220320
+[rank 3] train e7ac609391: grid (77, 29, 41), positive 8589/91553
+[rank 4] train ab61802aec: grid (51, 33, 25), positive 2620/42075
+[rank 5] train 067e2e4e61: grid (50, 28, 14), positive 2327/19600
+[rank 0] train 66ba53719a: grid (50, 35, 35), positive 5716/61250
+[rank 3] train 69e56cf0f8: grid (38, 29, 14), positive 1918/15428
+[rank 0] train d6a77f7c22: grid (41, 29, 39), positive 3974/46371
+[rank 6] train 3134f5f3d6: grid (96, 96, 87), positive 20349/801792
+[rank 5] train d6d9ddb03f: grid (65, 45, 46), positive 7851/134550
+[rank 3] train c07c8a276d: grid (39, 30, 28), positive 3869/32760
+[rank 4] train 41eb967018: grid (57, 41, 56), positive 6739/130872
+[rank 1] train aee88e3a93: grid (120, 65, 128), positive 29469/998400
+[rank 5] train c4aaedcfd1: grid (47, 27, 14), positive 2267/17766
+[rank 3] train bac7ee3b1b: grid (55, 37, 29), positive 3607/59015
+[rank 6] train 2f6f83ea1f: grid (37, 30, 40), positive 4955/44400
+[rank 4] train 07f5b601ee: grid (60, 58, 47), positive 9568/163560
+[rank 2] train 637a27d04b: grid (158, 88, 145), positive 44891/2016080
+[rank 1] train 2634683a9f: grid (62, 33, 34), positive 3210/69564
+[rank 4] train 2267ee32f3: grid (46, 30, 35), positive 4191/48300
+[rank 3] train 9b74afd2d2: grid (43, 28, 18), positive 2063/21672
+[rank 4] train 4ea827f5a1: grid (23, 25, 13), positive 1176/7475
+[rank 6] train 54b6127146: grid (44, 35, 29), positive 3557/44660
+[rank 2] train 6da1d5ab04: grid (54, 41, 41), positive 3929/90774
+[rank 1] train 7cd2ac43b4: grid (70, 43, 56), positive 10299/168560
+[rank 0] train 9460c8889d: grid (68, 36, 35), positive 5395/85680
+[rank 4] train 95748dd597: grid (47, 34, 39), positive 5381/62322
+[rank 3] train 7efa3f6b1b: grid (43, 33, 26), positive 3472/36894
+[rank 6] train 4aef651da7: grid (37, 51, 35), positive 3801/66045
+[rank 2] train 9bfbc75700: grid (48, 28, 22), positive 2563/29568
+[rank 5] train 469f112e38: grid (98, 42, 51), positive 7627/209916
+[rank 1] train f20ccd91de: grid (44, 36, 29), positive 3914/45936
+[rank 4] train c8fc01c453: grid (50, 35, 31), positive 4228/54250
+[rank 3] train 76f0eb2577: grid (43, 35, 21), positive 2692/31605
+[rank 6] train e87f1ebcac: grid (41, 28, 22), positive 2338/25256
+[rank 5] train 696317583f: grid (32, 30, 20), positive 1951/19200
+[rank 0] train f2e6c43543: grid (53, 37, 38), positive 4175/74518
+[rank 2] train e3ecd49e2b: grid (60, 53, 40), positive 4864/127200
+[rank 6] train 96b7c379eb: grid (19, 18, 12), positive 587/4104
+[rank 1] train 7f97f24691: grid (62, 29, 33), positive 4091/59334
+[rank 5] train 8a87c2ed7d: grid (39, 29, 32), positive 2281/36192
+[rank 2] train c856c41c99: grid (43, 43, 47), positive 5801/86903
+[rank 3] train 1d34f56de8: grid (51, 49, 58), positive 9990/144942
+[rank 1] train 52599ae063: grid (61, 48, 52), positive 8024/152256
+[rank 2] train 51dc4178bd: grid (38, 36, 46), positive 5274/62928
+[rank 0] train 1831b3823a: grid (67, 48, 44), positive 8842/141504
+[rank 1] train 29b18b8c4f: grid (42, 27, 25), positive 2642/28350
+[rank 4] train e3e0617f98: grid (90, 46, 57), positive 7243/235980
+[rank 6] train acc5c94ec9: grid (87, 63, 63), positive 12564/345303
+[rank 3] train 419cbe7c11: grid (59, 40, 47), positive 6373/110920
+[rank 0] train 1a22a99186: grid (35, 30, 22), positive 2343/23100
+[rank 2] train 5fd8addedf: grid (42, 30, 29), positive 3014/36540
+[rank 1] train 956e415fb1: grid (42, 37, 43), positive 4050/66822
+[rank 4] train 196876abd7: grid (47, 33, 38), positive 4883/58938
+[rank 6] train 246fe09e98: grid (54, 47, 39), positive 3536/98982
+[rank 0] train ab4f373966: grid (55, 37, 35), positive 4668/71225
+[rank 2] train 3391ff8a71: grid (33, 25, 17), positive 1831/14025
+[rank 3] train d9c781301e: grid (65, 40, 40), positive 7897/104000
+[rank 1] train e1fb8626c8: grid (41, 34, 19), positive 2667/26486
+[rank 4] train 2a496183e1: grid (62, 42, 46), positive 7134/119784
+[rank 5] train e3b3b0d0c7: grid (141, 63, 122), positive 29104/1083726
+[rank 3] train d290096f64: grid (32, 26, 22), positive 1504/18304
+[rank 0] train 589f5c7c58: grid (55, 47, 25), positive 3970/64625
+[rank 1] train 37562e7f48: grid (42, 30, 17), positive 1931/21420
+[rank 5] train 02c2ddee2a: grid (33, 31, 20), positive 1725/20460
+[rank 0] train f19ca0a52e: grid (34, 28, 19), positive 1923/18088
+[rank 3] train f5401524e5: grid (37, 31, 23), positive 3017/26381
+[rank 4] train 8b5caf3398: grid (67, 39, 57), positive 9355/148941
+[rank 2] train cbd4b3055e: grid (86, 44, 85), positive 17424/321640
+[rank 1] train aaa11940d3: grid (64, 41, 53), positive 9057/139072
+[rank 3] train 1b9692f0c7: grid (23, 43, 33), positive 2393/32637
+[rank 2] train 612f70fe00: grid (41, 29, 21), positive 2509/24969
+[rank 4] train d7abfc4b17: grid (77, 38, 42), positive 6567/122892
+[rank 2] train 6c14d5fd01: grid (33, 36, 23), positive 2553/27324
+[rank 1] train cec8312f4e: grid (39, 30, 28), positive 3533/32760
+[rank 6] train e9ac2fc517: grid (136, 39, 29), positive 12197/153816
+[rank 0] train 4517d988d8: grid (45, 31, 23), positive 2678/32085
+[rank 1] train 0c5385e84b: grid (58, 31, 30), positive 3224/53940
+[rank 4] train 364f01bc18: grid (69, 58, 39), positive 5620/156078
+[rank 2] train d7b871aaa8: grid (51, 32, 34), positive 2806/55488
+[rank 3] calibration fb152519ad: grid (56, 42, 70), positive 2578/164640
+[rank 4] train 9084d4cd97: grid (65, 38, 53), positive 6925/130910
+[rank 1] train 8fc40ba77b: grid (50, 75, 66), positive 10883/247500
+[rank 5] train 88627b561e: grid (104, 54, 115), positive 26599/645840
+[rank 3] calibration 7c0ba828a9: grid (46, 36, 44), positive 6526/72864
+[rank 1] train c178491bc5: grid (38, 29, 22), positive 2047/24244
+[rank 4] calibration 67d702f2e8: grid (64, 49, 42), positive 7037/131712
+[rank 0] train 2150596d57: grid (54, 39, 34), positive 4853/71604
+[rank 4] calibration d3b7d054c4: grid (32, 30, 16), positive 1361/15360
+[rank 5] train 33f78338cd: grid (55, 27, 25), positive 3045/37125
+[rank 2] train a23f391ba9: grid (90, 41, 55), positive 5196/202950
+[rank 0] train ad2d07fd11: grid (50, 45, 53), positive 4416/119250
+[rank 3] calibration d61691f945: grid (68, 44, 31), positive 5181/92752
+[rank 5] train c9a8357e8f: grid (40, 44, 32), positive 4007/56320
+[rank 0] train 610eff6509: grid (41, 31, 26), positive 2940/33046
+[rank 2] train eaa6c90310: grid (46, 34, 35), positive 4486/54740
+[rank 4] calibration 836363121f: grid (53, 44, 51), positive 8743/118932
+[rank 3] calibration 17c5e6a336: grid (38, 32, 20), positive 2561/24320
+[rank 1] train 108ec0b806: grid (38, 42, 24), positive 3008/38304
+[rank 6] train c601466b77: grid (112, 45, 104), positive 11265/524160
+[rank 5] train 4291be3b44: grid (34, 31, 18), positive 1599/18972
+[rank 6] train 0c7962bd64: grid (24, 26, 21), positive 1222/13104
+[rank 5] train ff17657f71: grid (21, 29, 20), positive 1661/12180
+[rank 4] calibration 617326da3e: grid (40, 30, 46), positive 4781/55200
+[rank 2] train 7b04052ad0: grid (52, 62, 57), positive 3686/183768
+[rank 1] calibration 54b005d19d: grid (38, 29, 29), positive 2671/31958
+[rank 0] train 712b9ae775: grid (49, 52, 58), positive 11753/147784
+[rank 4] calibration 0affa0f99f: grid (19, 28, 13), positive 846/6916
+[rank 5] train fb05e13ad1: grid (38, 30, 41), positive 4394/46740
+[rank 3] calibration 80ffca8a48: grid (92, 56, 69), positive 18582/355488
+[rank 4] test a24f64f7fb: grid (41, 35, 27), positive 2780/38745
+[rank 1] calibration 75d29d69b8: grid (36, 32, 36), positive 4141/41472
+[rank 6] train d415cc449b: grid (70, 65, 52), positive 12386/236600
+[rank 5] calibration f8eac0ad24: grid (53, 33, 29), positive 4296/50721
+[rank 2] calibration 8d82d0dac0: grid (70, 58, 50), positive 9639/203000
+[rank 1] calibration dd636ce603: grid (39, 31, 23), positive 2510/27807
+[rank 2] calibration 736536044: grid (43, 29, 32), positive 3232/39904
+[rank 0] train 3d838ee1ab: grid (89, 36, 43), positive 8969/137772
+[rank 3] test fb5a96b1a2: grid (67, 38, 49), positive 6795/124754
+[rank 6] train defd3457db: grid (123, 40, 88), positive 17882/432960
+[rank 5] calibration 0b0bb941b7: grid (57, 39, 44), positive 5282/97812
+[rank 1] calibration a30646cae6: grid (65, 41, 33), positive 5167/87945
+[rank 5] calibration 25aa952aa3: grid (24, 37, 24), positive 2417/21312
+[rank 3] test 5748ce6f01: grid (42, 39, 25), positive 2676/40950
+[rank 2] calibration 9f139a318d: grid (43, 48, 43), positive 6028/88752
+[rank 0] calibration ccfd3ed9c7: grid (56, 39, 37), positive 4034/80808
+[rank 4] test c4c04e6d6c: grid (102, 48, 68), positive 18974/332928
+[rank 1] test cc5237fd77: grid (34, 28, 18), positive 2061/17136
+[rank 3] test 3864514494: grid (55, 46, 42), positive 5398/106260
+[rank 0] calibration c026d108e0: grid (43, 37, 26), positive 2622/41366
+[rank 4] test 40aec5fffa: grid (39, 35, 50), positive 4551/68250
+[rank 4] test 286b55a2bf: grid (24, 29, 24), positive 1868/16704
+[rank 1] test 3f15a9266d: grid (40, 29, 21), positive 2456/24360
+[rank 0] calibration 27dc178a3d: grid (48, 33, 26), positive 3678/41184
+[rank 2] calibration d918af9c5f: grid (109, 49, 89), positive 7178/475349
+[rank 3] test e7af285f7d: grid (60, 21, 28), positive 931/35280
+[rank 6] calibration 2970e95b65: grid (103, 65, 86), positive 11381/575770
+[rank 1] test 5ee7c22ba0: grid (29, 28, 21), positive 2044/17052
+[rank 3] test f2dc06b1d2: grid (38, 30, 17), positive 2029/19380
+[rank 0] calibration a8f7f66985: grid (43, 35, 31), positive 3915/46655
+[rank 1] test 45b0dac5e3: grid (23, 28, 23), positive 2027/14812
+[rank 5] calibration 39705fbdf1: grid (72, 38, 72), positive 14002/196992
+[rank 2] calibration 290ef3f2c9: grid (45, 40, 35), positive 3643/63000
+[rank 4] test 5942004064: grid (73, 55, 75), positive 10583/301125
+[rank 1] test 825d228aec: grid (23, 31, 26), positive 2147/18538
+[rank 6] calibration 6ea60e282a: grid (59, 54, 54), positive 7828/172044
+[rank 5] calibration 8737a0d1ad: grid (28, 31, 23), positive 1627/19964
+[rank 0] test c50d2d1d42: grid (58, 48, 48), positive 7465/133632
+[rank 2] test acd95847c5: grid (55, 31, 34), positive 3492/57970
+[rank 4] test c5439f4607: grid (40, 38, 46), positive 6650/69920
+[rank 1] test 0d2ee665be: grid (39, 59, 69), positive 6590/158769
+[rank 0] test 3e8bba0176: grid (54, 40, 33), positive 4575/71280
+[rank 5] test 1ada7a0617: grid (62, 41, 46), positive 8869/116932
+[rank 4] test 6115eddb86: grid (60, 33, 28), positive 3926/55440
+[rank 2] test 21d970d8de: grid (99, 61, 86), positive 21908/519354
+[rank 6] calibration c0da8f4a4d: grid (74, 40, 69), positive 8793/204240
+[rank 2] test f9f95681fd: grid (24, 27, 13), positive 999/8424
+[rank 1] test 09c1414f1b: grid (84, 44, 62), positive 9558/229152
+[rank 3] test ac48a9b736: grid (132, 51, 91), positive 32493/612612
+[rank 2] test 31a2c91c43: grid (30, 25, 21), positive 1667/15750
+[rank 5] test 7831862f02: grid (79, 41, 45), positive 7668/145755
+[rank 0] test 38d58a7a31: grid (83, 69, 75), positive 16835/429525
+[rank 2] test a980334473: grid (22, 30, 23), positive 2038/15180
+[rank 6] calibration 1b75758486: grid (80, 42, 54), positive 9466/181440
+[rank 3] test 9071e139d9: grid (66, 39, 40), positive 5030/102960
+[rank 5] test 13c3e046d7: grid (76, 50, 45), positive 7641/171000
+[rank 0] test a8bf42d646: grid (83, 46, 42), positive 9577/160356
+[rank 6] test 7b6477cb95: grid (58, 41, 47), positive 6138/111766
+[rank 5] test 7bc286c1b6: grid (35, 30, 20), positive 1439/21000
+[rank 2] test 3db0a1c8f3: grid (47, 27, 32), positive 4125/40608
+[rank 0] test b0a08200c9: grid (47, 49, 45), positive 5887/103635
+[rank 6] test 5eb31827b7: grid (58, 41, 65), positive 6511/154570
+[rank 5] test 25f3b7a318: grid (50, 33, 25), positive 3454/41250
+[rank 0] test f3d64c30f8: grid (59, 46, 37), positive 5529/100418
+[rank 2] test 5f99900f09: grid (86, 49, 39), positive 6589/164346
+[rank 6] test bde1e479ad: grid (111, 47, 105), positive 23976/547785
+[rank 0] test 99fa5c25e1: grid (51, 37, 50), positive 3756/94350
+[rank 6] test e398684d27: grid (36, 45, 42), positive 4209/68040
+[rank 6] test f3685d06a9: grid (31, 29, 31), positive 2855/27869
+[rank 5] test 578511c8a9: grid (117, 41, 84), positive 22628/402948
+[rank 6] test bcd2436daf: grid (46, 37, 42), positive 4860/71484
+[rank 6] test d755b3d9d8: grid (49, 37, 35), positive 4211/63455
+[rank 5] test 27dd4da69e: grid (60, 53, 78), positive 2552/248040
+[rank 6] test c49a8c6cff: grid (40, 37, 27), positive 3072/39960
+Extraction done in 104s
+[camera_geometry] step 250/3000 sampled BCE=0.6448
+[camera_geometry] step 500/3000 sampled BCE=0.6462
+[camera_geometry] step 750/3000 sampled BCE=0.6389
+[camera_geometry] step 1000/3000 sampled BCE=0.6422
+[camera_geometry] step 1250/3000 sampled BCE=0.6398
+[camera_geometry] step 1500/3000 sampled BCE=0.6351
+[camera_geometry] step 1750/3000 sampled BCE=0.6341
+[camera_geometry] step 2000/3000 sampled BCE=0.6297
+[camera_geometry] step 2250/3000 sampled BCE=0.6155
+[camera_geometry] step 2500/3000 sampled BCE=0.6236
+[camera_geometry] step 2750/3000 sampled BCE=0.6264
+[camera_geometry] step 3000/3000 sampled BCE=0.6339
+[projected_image] step 250/3000 sampled BCE=0.5612
+[projected_image] step 500/3000 sampled BCE=0.5450
+[projected_image] step 750/3000 sampled BCE=0.5151
+[projected_image] step 1000/3000 sampled BCE=0.4520
+[projected_image] step 1250/3000 sampled BCE=0.4649
+[projected_image] step 1500/3000 sampled BCE=0.4297
+[projected_image] step 1750/3000 sampled BCE=0.4476
+[projected_image] step 2000/3000 sampled BCE=0.4263
+[projected_image] step 2250/3000 sampled BCE=0.3965
+[projected_image] step 2500/3000 sampled BCE=0.4100
+[projected_image] step 2750/3000 sampled BCE=0.4030
+[projected_image] step 3000/3000 sampled BCE=0.4564
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 474, in <module>
+[rank4]:     main()
+[rank4]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 469, in main
+[rank4]:     dist.barrier()
+[rank4]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank4]:     return func(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py", line 4627, in barrier
+[rank4]:     work.wait()
+[rank4]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank4]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank4]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank4]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[rank2]:[E1107 12:19:27.168443552 ProcessGroupNCCL.cpp:1896] [PG ID 0 PG GUID 0(default_pg) Rank 2] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7c37885785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7c378850d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7c3794da5422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7c37244e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7c37244f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7c37244f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7c37244f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7c37146ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7c379989caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7c3799929c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 474, in <module>
+[rank3]:     main()
+[rank3]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 469, in main
+[rank3]:     dist.barrier()
+[rank3]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank3]:     return func(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py", line 4627, in barrier
+[rank3]:     work.wait()
+[rank3]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank3]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank3]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank3]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 474, in <module>
+[rank2]:     main()
+[rank2]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 469, in main
+[rank2]:     dist.barrier()
+[rank2]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank2]:     return func(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py", line 4627, in barrier
+[rank2]:     work.wait()
+[rank2]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank2]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank2]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank2]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 474, in <module>
+[rank1]:     main()
+[rank1]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 469, in main
+[rank1]:     dist.barrier()
+[rank1]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py", line 4627, in barrier
+[rank1]:     work.wait()
+[rank1]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank1]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank1]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank1]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 2] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7c37885785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7c378850d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7c3794da5422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7c37244e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7c37244f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7c37244f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7c37244f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7c37146ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7c379989caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7c3799929c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1902 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7c37885785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xcc7a4e (0x7c37244c7a4e in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x9165ed (0x7c37241165ed in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xdf0e6 (0x7c37146ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #4: <unknown function> + 0x9caa4 (0x7c379989caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #5: <unknown function> + 0x129c6c (0x7c3799929c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[E1107 12:19:27.169151086 ProcessGroupNCCL.cpp:1896] [PG ID 0 PG GUID 0(default_pg) Rank 0] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7e13b71785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7e13b710d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7e13b753d422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7e13468e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7e13468f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7e13468f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7e13468f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7e1336aea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7e13bbc9caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7e13bbd29c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 0] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7e13b71785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7e13b710d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7e13b753d422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7e13468e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7e13468f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7e13468f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7e13468f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7e1336aea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7e13bbc9caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7e13bbd29c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1902 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7e13b71785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xcc7a4e (0x7e13468c7a4e in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x9165ed (0x7e13465165ed in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xdf0e6 (0x7e1336aea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #4: <unknown function> + 0x9caa4 (0x7e13bbc9caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #5: <unknown function> + 0x129c6c (0x7e13bbd29c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank5]:[E1107 12:19:27.169730159 ProcessGroupNCCL.cpp:1896] [PG ID 0 PG GUID 0(default_pg) Rank 5] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7e0b143785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7e0b1430d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7e0b20ba5422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7e0ab02e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7e0ab02f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7e0ab02f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7e0ab02f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7e0aa04ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7e0b2569caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7e0b25729c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 474, in <module>
+[rank6]:     main()
+[rank6]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_occupancy.py", line 469, in main
+[rank6]:     dist.barrier()
+[rank6]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank6]:     return func(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py", line 4627, in barrier
+[rank6]:     work.wait()
+[rank6]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank6]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank6]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank6]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 5] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7e0b143785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7e0b1430d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7e0b20ba5422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7e0ab02e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7e0ab02f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7e0ab02f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7e0ab02f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7e0aa04ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7e0b2569caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7e0b25729c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1902 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7e0b143785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xcc7a4e (0x7e0ab02c7a4e in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x9165ed (0x7e0aaff165ed in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xdf0e6 (0x7e0aa04ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #4: <unknown function> + 0x9caa4 (0x7e0b2569caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #5: <unknown function> + 0x129c6c (0x7e0b25729c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[E1107 12:19:27.179214715 ProcessGroupNCCL.cpp:1896] [PG ID 0 PG GUID 0(default_pg) Rank 3] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7d8aea1785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7d8aea10d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7d8aea511422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7d8a798e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7d8a798f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7d8a798f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7d8a798f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7d8a69aea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7d8aeec9caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7d8aeed29c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 3] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7d8aea1785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7d8aea10d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7d8aea511422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7d8a798e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7d8a798f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7d8a798f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7d8a798f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7d8a69aea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7d8aeec9caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7d8aeed29c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1902 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7d8aea1785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xcc7a4e (0x7d8a798c7a4e in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x9165ed (0x7d8a795165ed in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xdf0e6 (0x7d8a69aea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #4: <unknown function> + 0x9caa4 (0x7d8aeec9caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #5: <unknown function> + 0x129c6c (0x7d8aeed29c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank6]:[E1107 12:19:27.183918688 ProcessGroupNCCL.cpp:1896] [PG ID 0 PG GUID 0(default_pg) Rank 6] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7e361b5785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7e361b50d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7e3627d71422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7e35b74e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7e35b74f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7e35b74f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7e35b74f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7e35a76ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7e362c89caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7e362c929c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 6] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7e361b5785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7e361b50d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7e3627d71422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7e35b74e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7e35b74f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7e35b74f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7e35b74f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7e35a76ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7e362c89caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7e362c929c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1902 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7e361b5785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xcc7a4e (0x7e35b74c7a4e in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x9165ed (0x7e35b71165ed in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xdf0e6 (0x7e35a76ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #4: <unknown function> + 0x9caa4 (0x7e362c89caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #5: <unknown function> + 0x129c6c (0x7e362c929c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank1]:[E1107 12:19:27.186648822 ProcessGroupNCCL.cpp:1896] [PG ID 0 PG GUID 0(default_pg) Rank 1] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7752183785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x77521830d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x775224ba5422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7751b42e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7751b42f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7751b42f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7751b42f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7751a44ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x77522969caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x775229729c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 1] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7752183785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x77521830d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x775224ba5422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7751b42e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7751b42f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7751b42f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7751b42f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7751a44ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x77522969caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x775229729c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1902 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7752183785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xcc7a4e (0x7751b42c7a4e in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x9165ed (0x7751b3f165ed in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xdf0e6 (0x7751a44ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #4: <unknown function> + 0x9caa4 (0x77522969caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #5: <unknown function> + 0x129c6c (0x775229729c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank4]:[E1107 12:19:27.211514605 ProcessGroupNCCL.cpp:1896] [PG ID 0 PG GUID 0(default_pg) Rank 4] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7a17013785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7a170130d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7a170db65422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7a169d2e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7a169d2f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7a169d2f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7a169d2f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7a168d4ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7a171269caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7a1712729c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 4] Process group watchdog thread terminated with exception: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:43 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7a17013785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7a170130d4a2 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x3c2 (0x7a170db65422 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x7a169d2e5456 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0x70 (0x7a169d2f56f0 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x782 (0x7a169d2f7282 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7a169d2f8e8d in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xdf0e6 (0x7a168d4ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #8: <unknown function> + 0x9caa4 (0x7a171269caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #9: <unknown function> + 0x129c6c (0x7a1712729c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1902 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7a17013785e8 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xcc7a4e (0x7a169d2c7a4e in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x9165ed (0x7a169cf165ed in /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xdf0e6 (0x7a168d4ea0e6 in /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/../lib/libstdc++.so.6)
+frame #4: <unknown function> + 0x9caa4 (0x7a171269caa4 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #5: <unknown function> + 0x129c6c (0x7a1712729c6c in /lib/x86_64-linux-gnu/libc.so.6)
+
+W1107 12:19:29.361000 2671498 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2671505 closing signal SIGTERM
+W1107 12:19:29.362000 2671498 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2671506 closing signal SIGTERM
+W1107 12:19:29.362000 2671498 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2671507 closing signal SIGTERM
+W1107 12:19:29.362000 2671498 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2671508 closing signal SIGTERM
+W1107 12:19:29.362000 2671498 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2671509 closing signal SIGTERM
+W1107 12:19:29.362000 2671498 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2671510 closing signal SIGTERM
+E1107 12:19:35.399000 2671498 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: -6) local_rank: 0 (pid: 2671504) of binary: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python3.11
+Traceback (most recent call last):
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+========================================================
+scripts/check_grid_occupancy.py FAILED
+--------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+--------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-07_12:19:29
+  host      : iZwz9foxpfyzf7f1y60xxwZ
+  rank      : 0 (local_rank: 0)
+  exitcode  : -6 (pid: 2671504)
+  error_file: <N/A>
+  traceback : Signal 6 (SIGABRT) received by PID 2671504
+========================================================
+=== Finished 2026-11-07T12:19:35+08:00; exit=1
+=== Started 2026-11-07T12:21:56+08:00; host=iZwz9foxpfyzf7f1y60xxwZ; GPUs=1,2,3,4,5,6,7
+Command: CUDA_VISIBLE_DEVICES=1,2,3,4,5,6,7 torchrun --standalone --nproc_per_node=7 scripts/check_grid_occupancy.py --output EXP/grid_occupancy_10cm --demo EXP/demo/scene_7b6477cb95/grid_occupancy_10cm --workspace /mnt/disk/xveyan/workspace_scannetpp/geometrygs_grid_occupancy_10cm
+Extraction done in 28s
+[camera_geometry] step 250/3000 sampled BCE=0.6448
+[camera_geometry] step 500/3000 sampled BCE=0.6462
+[camera_geometry] step 750/3000 sampled BCE=0.6389
+[camera_geometry] step 1000/3000 sampled BCE=0.6422
+[camera_geometry] step 1250/3000 sampled BCE=0.6398
+[camera_geometry] step 1500/3000 sampled BCE=0.6351
+[camera_geometry] step 1750/3000 sampled BCE=0.6341
+[camera_geometry] step 2000/3000 sampled BCE=0.6297
+[camera_geometry] step 2250/3000 sampled BCE=0.6155
+[camera_geometry] step 2500/3000 sampled BCE=0.6236
+[camera_geometry] step 2750/3000 sampled BCE=0.6264
+[camera_geometry] step 3000/3000 sampled BCE=0.6339
+[projected_image] step 250/3000 sampled BCE=0.5612
+[projected_image] step 500/3000 sampled BCE=0.5450
+[projected_image] step 750/3000 sampled BCE=0.5151
+[projected_image] step 1000/3000 sampled BCE=0.4520
+[projected_image] step 1250/3000 sampled BCE=0.4649
+[projected_image] step 1500/3000 sampled BCE=0.4297
+[projected_image] step 1750/3000 sampled BCE=0.4476
+[projected_image] step 2000/3000 sampled BCE=0.4263
+[projected_image] step 2250/3000 sampled BCE=0.3965
+[projected_image] step 2500/3000 sampled BCE=0.4100
+[projected_image] step 2750/3000 sampled BCE=0.4030
+[projected_image] step 3000/3000 sampled BCE=0.4564
+{
+ "camera_geometry": {
+  "thresholds_logit": {
+   "recall_0.95": -1.6722230911254883,
+   "recall_0.99": -3.5043625831604004
+  },
+  "calibration": {
+   "recall_0.95": {
+    "all": {
+     "cells": 3827679,
+     "positive_cells": 181746,
+     "negative_cells": 3645933,
+     "surface_recall": 0.9500016506553102,
+     "negative_closure": 0.36642692007779626,
+     "precision": 0.06954697932510118,
+     "kept_fraction": 0.6485977533643756,
+     "auc": 0.734237679733183,
+     "average_precision": 0.09862088910678865
+    },
+    "in_frustum": {
+     "cells": 2892629,
+     "positive_cells": 178245,
+     "negative_cells": 2714384,
+     "surface_recall": 0.9539285814468849,
+     "negative_closure": 0.17733157873020178,
+     "precision": 0.07075654443834577,
+     "kept_fraction": 0.8307567268391487,
+     "auc": 0.6572107971625347,
+     "average_precision": 0.09950323126144002
+    },
+    "near_surface": {
+     "cells": 1057723,
+     "positive_cells": 181746,
+     "negative_cells": 875977,
+     "surface_recall": 0.9500016506553102,
+     "negative_closure": 0.13784950974740204,
+     "precision": 0.1860784172142393,
+     "kept_fraction": 0.8772457439235036,
+     "auc": 0.569035625436701,
+     "average_precision": 0.1993698859066625
+    }
+   },
+   "recall_0.99": {
+    "all": {
+     "cells": 3827679,
+     "positive_cells": 181746,
+     "negative_cells": 3645933,
+     "surface_recall": 0.990002531004809,
+     "negative_closure": 0.1823574377258167,
+     "precision": 0.056921561822702256,
+     "kept_fraction": 0.8258265648712967,
+     "auc": 0.734237679733183,
+     "average_precision": 0.09862088910678865
+    },
+    "in_frustum": {
+     "cells": 2892629,
+     "positive_cells": 178245,
+     "negative_cells": 2714384,
+     "surface_recall": 0.9904401245476732,
+     "negative_closure": 0.07764303061026001,
+     "precision": 0.06586928003128158,
+     "kept_fraction": 0.9265522816787082,
+     "auc": 0.6572107971625347,
+     "average_precision": 0.09950323126144002
+    },
+    "near_surface": {
+     "cells": 1057723,
+     "positive_cells": 181746,
+     "negative_cells": 875977,
+     "surface_recall": 0.990002531004809,
+     "negative_closure": 0.030654914455516526,
+     "precision": 0.17484910884084687,
+     "kept_fraction": 0.9728946047311063,
+     "auc": 0.569035625436701,
+     "average_precision": 0.1993698859066625
+    }
+   }
+  },
+  "test": {
+   "recall_0.95": {
+    "all": {
+     "cells": 6551809,
+     "positive_cells": 336092,
+     "negative_cells": 6215717,
+     "surface_recall": 0.846054056627352,
+     "negative_closure": 0.41411296556776955,
+     "precision": 0.07242680957499376,
+     "kept_fraction": 0.5992329751981476,
+     "auc": 0.6798131769654776,
+     "average_precision": 0.08905523811991983
+    },
+    "in_frustum": {
+     "cells": 5085797,
+     "positive_cells": 330315,
+     "negative_cells": 4755482,
+     "surface_recall": 0.8484325568018407,
+     "negative_closure": 0.25856790121379913,
+     "precision": 0.07363147270564725,
+     "kept_fraction": 0.7483816204225218,
+     "auc": 0.6107179127612491,
+     "average_precision": 0.09057271444880874
+    },
+    "near_surface": {
+     "cells": 1991165,
+     "positive_cells": 336092,
+     "negative_cells": 1655073,
+     "surface_recall": 0.846054056627352,
+     "negative_closure": 0.23796352185069783,
+     "precision": 0.18397777401075843,
+     "kept_fraction": 0.7762179427621518,
+     "auc": 0.5613362054461186,
+     "average_precision": 0.1940488258169545
+    }
+   },
+   "recall_0.99": {
+    "all": {
+     "cells": 6551809,
+     "positive_cells": 336092,
+     "negative_cells": 6215717,
+     "surface_recall": 0.9239791485664639,
+     "negative_closure": 0.24086279989903014,
+     "precision": 0.06174872602067477,
+     "kept_fraction": 0.7675931944902545,
+     "auc": 0.6798131769654776,
+     "average_precision": 0.08905523811991983
+    },
+    "in_frustum": {
+     "cells": 5085797,
+     "positive_cells": 330315,
+     "negative_cells": 4755482,
+     "surface_recall": 0.9233368148585441,
+     "negative_closure": 0.15414189350311913,
+     "precision": 0.07047837585832782,
+     "kept_fraction": 0.850890234116698,
+     "auc": 0.6107179127612491,
+     "average_precision": 0.09057271444880874
+    },
+    "near_surface": {
+     "cells": 1991165,
+     "positive_cells": 336092,
+     "negative_cells": 1655073,
+     "surface_recall": 0.9239791485664639,
+     "negative_closure": 0.10680133142163518,
+     "precision": 0.17359858367186534,
+     "kept_fraction": 0.898394156184947,
+     "auc": 0.5613362054461186,
+     "average_precision": 0.1940488258169545
+    }
+   }
+  },
+  "test_excluding_laser_hole_cells": {
+   "recall_0.95": {
+    "all": {
+     "cells": 5383674,
+     "positive_cells": 336092,
+     "negative_cells": 5047582,
+     "surface_recall": 0.846054056627352,
+     "negative_closure": 0.44198984781227924,
+     "precision": 0.09169823222143896,
+     "kept_fraction": 0.5759921570288246,
+     "auc": 0.6934421186256124,
+     "average_precision": 0.11305108441832884
+    },
+    "in_frustum": {
+     "cells": 3928683,
+     "positive_cells": 330315,
+     "negative_cells": 3598368,
+     "surface_recall": 0.8484325568018407,
+     "negative_closure": 0.24743216925006004,
+     "precision": 0.09378348513820389,
+     "kept_fraction": 0.7606279254396447,
+     "auc": 0.6066544962539511,
+     "average_precision": 0.11547825493238162
+    },
+    "near_surface": {
+     "cells": 1627867,
+     "positive_cells": 336092,
+     "negative_cells": 1291775,
+     "surface_recall": 0.846054056627352,
+     "negative_closure": 0.2564641675214337,
+     "precision": 0.2284258209735764,
+     "kept_fraction": 0.7647019074654133,
+     "auc": 0.5714769614726427,
+     "average_precision": 0.24152473997514887
+    }
+   },
+   "recall_0.99": {
+    "all": {
+     "cells": 5383674,
+     "positive_cells": 336092,
+     "negative_cells": 5047582,
+     "surface_recall": 0.9239791485664639,
+     "negative_closure": 0.2589960896128087,
+     "precision": 0.07666151544625532,
+     "kept_fraction": 0.7524266885402051,
+     "auc": 0.6934421186256124,
+     "average_precision": 0.11305108441832884
+    },
+    "in_frustum": {
+     "cells": 3928683,
+     "positive_cells": 330315,
+     "negative_cells": 3598368,
+     "surface_recall": 0.9233368148585441,
+     "negative_closure": 0.15126412862719987,
+     "precision": 0.09079693818739551,
+     "kept_fraction": 0.855008154132059,
+     "auc": 0.6066544962539511,
+     "average_precision": 0.11547825493238162
+    },
+    "near_surface": {
+     "cells": 1627867,
+     "positive_cells": 336092,
+     "negative_cells": 1291775,
+     "surface_recall": 0.9239791485664639,
+     "negative_closure": 0.11652029184649029,
+     "precision": 0.21390151115960268,
+     "kept_fraction": 0.8918412867881713,
+     "auc": 0.5714769614726427,
+     "average_precision": 0.24152473997514887
+    }
+   }
+  }
+ }
+}
+{
+ "projected_image": {
+  "thresholds_logit": {
+   "recall_0.95": -14.312295913696289,
+   "recall_0.99": -33.24441146850586
+  },
+  "calibration": {
+   "recall_0.95": {
+    "all": {
+     "cells": 3827679,
+     "positive_cells": 181746,
+     "negative_cells": 3645933,
+     "surface_recall": 0.9500016506553102,
+     "negative_closure": 0.2896792124265586,
+     "precision": 0.0625023303665128,
+     "kept_fraction": 0.7217013234390867,
+     "auc": 0.8004883291568877,
+     "average_precision": 0.2024866162505421
+    },
+    "in_frustum": {
+     "cells": 2892629,
+     "positive_cells": 178245,
+     "negative_cells": 2714384,
+     "surface_recall": 0.9490420488653258,
+     "negative_closure": 0.34056566793791887,
+     "precision": 0.08634591040875494,
+     "kept_fraction": 0.677280079816665,
+     "auc": 0.7722241207512068,
+     "average_precision": 0.20795415340916695
+    },
+    "near_surface": {
+     "cells": 1057723,
+     "positive_cells": 181746,
+     "negative_cells": 875977,
+     "surface_recall": 0.9500016506553102,
+     "negative_closure": 0.09356410042729432,
+     "precision": 0.17861103410036042,
+     "kept_fraction": 0.9139216978358228,
+     "auc": 0.6368982699304458,
+     "average_precision": 0.285785142343625
+    }
+   },
+   "recall_0.99": {
+    "all": {
+     "cells": 3827679,
+     "positive_cells": 181746,
+     "negative_cells": 3645933,
+     "surface_recall": 0.990002531004809,
+     "negative_closure": 0.1719507736428508,
+     "precision": 0.05624642655178698,
+     "kept_fraction": 0.8357390993340873,
+     "auc": 0.8004883291568877,
+     "average_precision": 0.2024866162505421
+    },
+    "in_frustum": {
+     "cells": 2892629,
+     "positive_cells": 178245,
+     "negative_cells": 2714384,
+     "surface_recall": 0.9898117759263935,
+     "negative_closure": 0.23088111335757946,
+     "precision": 0.07792411421161399,
+     "kept_fraction": 0.78271807411182,
+     "auc": 0.7722241207512068,
+     "average_precision": 0.20795415340916695
+    },
+    "near_surface": {
+     "cells": 1057723,
+     "positive_cells": 181746,
+     "negative_cells": 875977,
+     "surface_recall": 0.990002531004809,
+     "negative_closure": 0.02909665436421276,
+     "precision": 0.1746174853311957,
+     "kept_fraction": 0.9741851127374558,
+     "auc": 0.6368982699304458,
+     "average_precision": 0.285785142343625
+    }
+   }
+  },
+  "test": {
+   "recall_0.95": {
+    "all": {
+     "cells": 6551809,
+     "positive_cells": 336092,
+     "negative_cells": 6215717,
+     "surface_recall": 0.9151720362281757,
+     "negative_closure": 0.27794540838973203,
+     "precision": 0.06413745402362006,
+     "kept_fraction": 0.7319610507571268,
+     "auc": 0.7752920493965861,
+     "average_precision": 0.1978603529169825
+    },
+    "in_frustum": {
+     "cells": 5085797,
+     "positive_cells": 330315,
+     "negative_cells": 4755482,
+     "surface_recall": 0.9137611068222757,
+     "negative_closure": 0.33677238185319597,
+     "precision": 0.08733993557490083,
+     "kept_fraction": 0.6794993980294534,
+     "auc": 0.7499189880589936,
+     "average_precision": 0.20291444175814946
+    },
+    "near_surface": {
+     "cells": 1991165,
+     "positive_cells": 336092,
+     "negative_cells": 1655073,
+     "surface_recall": 0.9151720362281757,
+     "negative_closure": 0.12393350625621952,
+     "precision": 0.1750075105147206,
+     "kept_fraction": 0.8826671822777118,
+     "auc": 0.6321986735183065,
+     "average_precision": 0.27980324218629327
+    }
+   },
+   "recall_0.99": {
+    "all": {
+     "cells": 6551809,
+     "positive_cells": 336092,
+     "negative_cells": 6215717,
+     "surface_recall": 0.9598562298418291,
+     "negative_closure": 0.1728291362042384,
+     "precision": 0.05904034728754809,
+     "kept_fraction": 0.8339773030624061,
+     "auc": 0.7752920493965861,
+     "average_precision": 0.1978603529169825
+    },
+    "in_frustum": {
+     "cells": 5085797,
+     "positive_cells": 330315,
+     "negative_cells": 4755482,
+     "surface_recall": 0.9591632229841213,
+     "negative_closure": 0.22332583742299938,
+     "precision": 0.07900334290372307,
+     "kept_fraction": 0.7885265573911031,
+     "auc": 0.7499189880589936,
+     "average_precision": 0.20291444175814946
+    },
+    "near_surface": {
+     "cells": 1991165,
+     "positive_cells": 336092,
+     "negative_cells": 1655073,
+     "surface_recall": 0.9598562298418291,
+     "negative_closure": 0.059792528788760374,
+     "precision": 0.17171338661806598,
+     "kept_fraction": 0.9435240173466287,
+     "auc": 0.6321986735183065,
+     "average_precision": 0.27980324218629327
+    }
+   }
+  },
+  "test_excluding_laser_hole_cells": {
+   "recall_0.95": {
+    "all": {
+     "cells": 5383674,
+     "positive_cells": 336092,
+     "negative_cells": 5047582,
+     "surface_recall": 0.9151720362281757,
+     "negative_closure": 0.2767338896128879,
+     "precision": 0.07770505064387051,
+     "kept_fraction": 0.7352464135086931,
+     "auc": 0.7831209650238089,
+     "average_precision": 0.24038861442203346
+    },
+    "in_frustum": {
+     "cells": 3928683,
+     "positive_cells": 330315,
+     "negative_cells": 3598368,
+     "surface_recall": 0.9137611068222757,
+     "negative_closure": 0.3532092882106555,
+     "precision": 0.11479792485984436,
+     "kept_fraction": 0.6692369936693798,
+     "auc": 0.752441343632486,
+     "average_precision": 0.2481309428548647
+    },
+    "near_surface": {
+     "cells": 1627867,
+     "positive_cells": 336092,
+     "negative_cells": 1291775,
+     "surface_recall": 0.9151720362281757,
+     "negative_closure": 0.1300512860211724,
+     "precision": 0.21488793874357254,
+     "kept_fraction": 0.8792855927419132,
+     "auc": 0.6394108908865043,
+     "average_precision": 0.33551129465087587
+    }
+   },
+   "recall_0.99": {
+    "all": {
+     "cells": 5383674,
+     "positive_cells": 336092,
+     "negative_cells": 5047582,
+     "surface_recall": 0.9598562298418291,
+     "negative_closure": 0.16881013522910573,
+     "precision": 0.07140171120641668,
+     "kept_fraction": 0.8392222485982621,
+     "auc": 0.7831209650238089,
+     "average_precision": 0.24038861442203346
+    },
+    "in_frustum": {
+     "cells": 3928683,
+     "positive_cells": 330315,
+     "negative_cells": 3598368,
+     "surface_recall": 0.9591632229841213,
+     "negative_closure": 0.23340720015295824,
+     "precision": 0.10302249302427821,
+     "kept_fraction": 0.7827836962157547,
+     "auc": 0.752441343632486,
+     "average_precision": 0.2481309428548647
+    },
+    "near_surface": {
+     "cells": 1627867,
+     "positive_cells": 336092,
+     "negative_cells": 1291775,
+     "surface_recall": 0.9598562298418291,
+     "negative_closure": 0.0640916568287821,
+     "precision": 0.21063174506376736,
+     "kept_fraction": 0.9408526617960804,
+     "auc": 0.6394108908865043,
+     "average_precision": 0.33551129465087587
+    }
+   }
+  }
+ }
+}
+Completed: EXP/grid_occupancy_10cm/summary.json
+=== Finished 2026-11-07T12:23:21+08:00; exit=0

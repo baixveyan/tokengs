@@ -1,0 +1,43 @@
+{
+  "scene_id": "7b6477cb95",
+  "context_frames": [
+    101,
+    104,
+    107,
+    111,
+    114,
+    118
+  ],
+  "num_points": 1942,
+  "num_anchors": 1024,
+  "status_counts": {
+    "anchor (used as token position)": 1024,
+    "reliable, not selected (beyond 1024 or FPS redundant)": 274,
+    "rejected: weak (2 views and angle < 3 deg)": 61,
+    "rejected: isolated (5-NN mean > 10 cm)": 583
+  },
+  "laser_distance_cm_by_status": {
+    "anchor (used as token position)": {
+      "median": 2.0537391304969788,
+      "p90": 6.154412254691124
+    },
+    "reliable, not selected (beyond 1024 or FPS redundant)": {
+      "median": 1.3414258137345314,
+      "p90": 4.137458987534046
+    },
+    "rejected: weak (2 views and angle < 3 deg)": {
+      "median": 4.002143815159798,
+      "p90": 10.411099344491959
+    },
+    "rejected: isolated (5-NN mean > 10 cm)": {
+      "median": 5.0602104514837265,
+      "p90": 22.55331069231036
+    }
+  },
+  "laser_pixels_nearest_anchor": {
+    "< 10 cm": 0.24591722717612777,
+    "10-20 cm": 0.2145286973541032,
+    "> 20 cm": 0.539554075469769
+  },
+  "units": "metres / centimetres in the real scene (normalized / 0.3)"
+}

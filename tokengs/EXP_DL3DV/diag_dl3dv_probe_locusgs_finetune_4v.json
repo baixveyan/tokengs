@@ -1,0 +1,98 @@
+{
+  "model": "locusgs_finetune_4v",
+  "definitions": "frozen model; features of COLMAP-valid alive tokens (<=1024 per scene); target = attention-weighted COLMAP centroid of the token's attention-90% patch set; train on the 70 even scenes, test on the 70 odd scenes; errors relative to target depth from the dominant camera",
+  "gpu": "1",
+  "train_tokens": 71268,
+  "test_tokens": 71410,
+  "official_output_gaussian_centre": {
+    "e_depth_rel": {
+      "p50": 0.0225,
+      "p90": 0.2259
+    },
+    "e_3d_rel": {
+      "p50": 0.0267,
+      "p90": 0.229
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.0389,
+      "p90": 0.4267
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.022,
+      "p90": 0.2422
+    }
+  },
+  "locusgs_anchor": {
+    "e_depth_rel": {
+      "p50": 0.0413,
+      "p90": 0.3613
+    },
+    "e_3d_rel": {
+      "p50": 0.0586,
+      "p90": 0.46
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1374,
+      "p90": 0.908
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0252,
+      "p90": 0.2447
+    }
+  },
+  "linear_ridge_h": {
+    "lambda": 1000.0,
+    "e_depth_rel": {
+      "p50": 0.2207,
+      "p90": 0.7418
+    },
+    "e_3d_rel": {
+      "p50": 0.4118,
+      "p90": 1.157
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.2795,
+      "p90": 1.1366
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1778,
+      "p90": 0.5317
+    }
+  },
+  "mlp_h": {
+    "e_depth_rel": {
+      "p50": 0.0826,
+      "p90": 0.2951
+    },
+    "e_3d_rel": {
+      "p50": 0.1428,
+      "p90": 0.4023
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1175,
+      "p90": 0.4299
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0703,
+      "p90": 0.245
+    },
+    "train_fit": {
+      "e_depth_rel": {
+        "p50": 0.0144,
+        "p90": 0.0683
+      },
+      "e_3d_rel": {
+        "p50": 0.0291,
+        "p90": 0.0932
+      },
+      "e_depth_rel_1view": {
+        "p50": 0.0165,
+        "p90": 0.0816
+      },
+      "e_depth_rel_4plus_views": {
+        "p50": 0.0109,
+        "p90": 0.0554
+      }
+    }
+  }
+}

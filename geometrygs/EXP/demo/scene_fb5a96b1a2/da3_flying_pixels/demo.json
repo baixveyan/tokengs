@@ -1,0 +1,12 @@
+{
+  "scene": "fb5a96b1a2",
+  "profile_view": 357,
+  "profile_row": 125,
+  "layer_index": 34,
+  "colours": {
+    "flying": "red",
+    "other_da3": "grey",
+    "laser": "green",
+    "far_fp_points": "red if flying, blue otherwise"
+  }
+}

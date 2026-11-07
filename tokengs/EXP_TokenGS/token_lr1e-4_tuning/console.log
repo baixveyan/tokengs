@@ -1,0 +1,171 @@
+=== group: token_tuning_lr1e-4_steps50
+started: 2026-10-20 09:47:43   host: iZwz9foxpfyzf7f1y60xxwZ   GPU: 1
+git HEAD: b16269c500a8894cda342bc9cf406e31169541e3
+CUDA_HOME=/usr/local/cuda-12.8
+command: CUDA_VISIBLE_DEVICES=1 /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python -u scripts/evaluate_with_scene_latent_tuning.py --preset eval_dl3dv_latent_6view_ssim --resume checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors --expected-scenes 140 --mixed-precision no --token-tuning --tuning-lr 1e-4 --tuning-steps 50 --compare no_tuning=EXP_TokenGS/no_tuning_fp32_140scenes --compare scene_latent_tuning_official_loop=EXP_TokenGS/scene_latent_tuning_fp32_140scenes/official_loop --compare scene_latent_tuning_reimplemented_loop=EXP_TokenGS/scene_latent_tuning_fp32_140scenes/reimplemented_loop --output EXP_TokenGS/token_tuning_fp32_140scenes/lr1e-4_steps50
+=== output (stdout + stderr, unfiltered)
+[09:47:46] GPU 1 idle check passed: 4.0 MiB used, no compute apps
+[09:47:46] hashing checkpoint /home/jms/xveyan/4DGS/TokenGS/checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors
+[09:47:47] contract written: preset=eval_dl3dv_latent_6view_ssim tuning_target=gs_tokens ttt_mode=token-tuning tuning_loop=official steps=50 lr=0.0001 geo={'lambda_sw': 0.0, 'lambda_packing': 0.0, 'lambda_inter': 0.0} demo=False precision=no scenes=140 gpu=1 output=/home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/token_tuning_fp32_140scenes/lr1e-4_steps50
+[09:47:48] model loaded (strict)
+Loaded dl3dv_eval_scaled_0.15, train size: 140, loading took 0.0028769969940185547 seconds
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/lpips/weights/v0.1/vgg.pth
+[09:47:55] [1/140] 032dee9fb0a8 all PSNR 32.015 SSIM 0.9446 LPIPS 0.1252 | novel PSNR 31.870 (44f) | edge 0.0092 HF 0.899 | inter d 0.810 aniso 35.1 | infer 3.34s
+[09:47:59] [2/140] 0569e83fdc24 all PSNR 25.318 SSIM 0.8161 LPIPS 0.2213 | novel PSNR 25.115 (44f) | edge 0.0289 HF 0.702 | inter d 0.483 aniso 21.5 | infer 3.03s
+[09:48:04] [3/140] 06da79666629 all PSNR 24.633 SSIM 0.8319 LPIPS 0.2417 | novel PSNR 23.979 (44f) | edge 0.0147 HF 0.774 | inter d 0.486 aniso 30.9 | infer 2.96s
+[09:48:08] [4/140] 073f5a9b983c all PSNR 20.587 SSIM 0.5201 LPIPS 0.4562 | novel PSNR 20.073 (44f) | edge 0.0425 HF 0.437 | inter d 0.458 aniso 24.6 | infer 3.08s
+[09:48:13] [5/140] 07d9f9724ca8 all PSNR 34.957 SSIM 0.9702 LPIPS 0.0850 | novel PSNR 34.761 (44f) | edge 0.0064 HF 0.917 | inter d 0.469 aniso 38.7 | infer 3.04s
+[09:48:17] [6/140] 0853979305f7 all PSNR 29.428 SSIM 0.9087 LPIPS 0.1591 | novel PSNR 29.014 (44f) | edge 0.0118 HF 0.812 | inter d 0.546 aniso 31.3 | infer 3.05s
+[09:48:22] [7/140] 093ef327b4e4 all PSNR 25.746 SSIM 0.8736 LPIPS 0.2202 | novel PSNR 25.347 (44f) | edge 0.0190 HF 0.801 | inter d 0.833 aniso 22.0 | infer 3.02s
+[09:48:26] [8/140] 0a1b7c20a92c all PSNR 30.694 SSIM 0.9499 LPIPS 0.0963 | novel PSNR 30.553 (44f) | edge 0.0135 HF 0.878 | inter d 0.661 aniso 23.5 | infer 3.01s
+[09:48:31] [9/140] 0a485338bbda all PSNR 30.724 SSIM 0.9213 LPIPS 0.1526 | novel PSNR 30.482 (44f) | edge 0.0115 HF 0.832 | inter d 0.606 aniso 21.0 | infer 3.02s
+[09:48:36] [10/140] 0bfdd020cf47 all PSNR 25.714 SSIM 0.8174 LPIPS 0.2735 | novel PSNR 25.411 (44f) | edge 0.0226 HF 0.678 | inter d 0.994 aniso 18.9 | infer 2.97s
+[09:48:41] [11/140] 119fd56d3797 all PSNR 23.732 SSIM 0.7831 LPIPS 0.3389 | novel PSNR 23.155 (44f) | edge 0.0178 HF 0.657 | inter d 0.478 aniso 24.5 | infer 3.19s
+[09:48:45] [12/140] 1264931635e1 all PSNR 23.041 SSIM 0.6617 LPIPS 0.4001 | novel PSNR 22.770 (44f) | edge 0.0390 HF 0.537 | inter d 0.850 aniso 22.3 | infer 3.06s
+[09:48:50] [13/140] 14eb48a50e37 all PSNR 26.739 SSIM 0.8871 LPIPS 0.2121 | novel PSNR 26.382 (44f) | edge 0.0159 HF 0.786 | inter d 0.539 aniso 27.3 | infer 3.24s
+[09:48:55] [14/140] 15ff83e25316 all PSNR 22.572 SSIM 0.7365 LPIPS 0.3481 | novel PSNR 22.039 (44f) | edge 0.0270 HF 0.668 | inter d 0.817 aniso 15.9 | infer 3.12s
+[09:48:59] [15/140] 165f5af8bfe3 all PSNR 24.661 SSIM 0.7716 LPIPS 0.2600 | novel PSNR 24.339 (44f) | edge 0.0237 HF 0.637 | inter d 0.624 aniso 41.0 | infer 3.06s
+[09:49:04] [16/140] 183dd248f6a8 all PSNR 28.568 SSIM 0.8775 LPIPS 0.2545 | novel PSNR 28.075 (44f) | edge 0.0120 HF 0.757 | inter d 0.466 aniso 39.3 | infer 3.05s
+[09:49:09] [17/140] 1ba74c22670a all PSNR 28.823 SSIM 0.9028 LPIPS 0.2187 | novel PSNR 28.542 (44f) | edge 0.0100 HF 0.757 | inter d 0.506 aniso 45.1 | infer 3.01s
+[09:49:13] [18/140] 1d6a9ed47cce all PSNR 22.211 SSIM 0.7352 LPIPS 0.3424 | novel PSNR 21.873 (44f) | edge 0.0404 HF 0.650 | inter d 0.774 aniso 18.6 | infer 3.05s
+[09:49:18] [19/140] 1da888bdedfc all PSNR 24.228 SSIM 0.8704 LPIPS 0.2110 | novel PSNR 23.997 (44f) | edge 0.0171 HF 0.765 | inter d 0.437 aniso 36.0 | infer 3.11s
+[09:49:22] [20/140] 1de58be51569 all PSNR 32.450 SSIM 0.9582 LPIPS 0.0962 | novel PSNR 32.315 (44f) | edge 0.0131 HF 0.871 | inter d 0.503 aniso 27.5 | infer 3.02s
+[09:49:27] [21/140] 2385549d398b all PSNR 25.987 SSIM 0.8640 LPIPS 0.1836 | novel PSNR 25.801 (44f) | edge 0.0244 HF 0.754 | inter d 0.922 aniso 23.9 | infer 3.08s
+[09:49:32] [22/140] 26fd23358fa1 all PSNR 29.927 SSIM 0.8958 LPIPS 0.1790 | novel PSNR 29.782 (44f) | edge 0.0167 HF 0.769 | inter d 0.479 aniso 32.7 | infer 3.04s
+[09:49:36] [23/140] 280abf7bd93b all PSNR 27.550 SSIM 0.8854 LPIPS 0.2255 | novel PSNR 27.125 (44f) | edge 0.0144 HF 0.746 | inter d 0.411 aniso 32.3 | infer 3.13s
+[09:49:41] [24/140] 286239bd0d44 all PSNR 19.532 SSIM 0.6568 LPIPS 0.3773 | novel PSNR 18.731 (44f) | edge 0.0309 HF 0.663 | inter d 0.470 aniso 33.9 | infer 3.19s
+[09:49:46] [25/140] 2991a75d1f0f all PSNR 22.187 SSIM 0.7365 LPIPS 0.3305 | novel PSNR 21.847 (44f) | edge 0.0280 HF 0.637 | inter d 0.766 aniso 19.2 | infer 3.09s
+[09:49:51] [26/140] 2b65ba886efa all PSNR 24.267 SSIM 0.8185 LPIPS 0.2499 | novel PSNR 24.011 (44f) | edge 0.0280 HF 0.718 | inter d 0.587 aniso 22.8 | infer 3.07s
+[09:49:55] [27/140] 2beaca318994 all PSNR 25.787 SSIM 0.8746 LPIPS 0.1940 | novel PSNR 25.527 (44f) | edge 0.0249 HF 0.795 | inter d 0.524 aniso 18.5 | infer 3.01s
+[09:50:00] [28/140] 2cbfe28643b6 all PSNR 32.708 SSIM 0.9633 LPIPS 0.0922 | novel PSNR 32.512 (44f) | edge 0.0107 HF 0.883 | inter d 0.416 aniso 25.9 | infer 3.05s
+[09:50:04] [29/140] 2f3e1c0f688c all PSNR 25.149 SSIM 0.8354 LPIPS 0.2762 | novel PSNR 24.869 (44f) | edge 0.0193 HF 0.730 | inter d 1.021 aniso 23.8 | infer 3.09s
+[09:50:09] [30/140] 32c2b92fac40 all PSNR 33.729 SSIM 0.9631 LPIPS 0.1385 | novel PSNR 33.536 (44f) | edge 0.0085 HF 0.854 | inter d 0.512 aniso 32.1 | infer 3.12s
+[09:50:14] [31/140] 341b4ff3dfd3 all PSNR 26.799 SSIM 0.9023 LPIPS 0.1578 | novel PSNR 26.496 (44f) | edge 0.0177 HF 0.828 | inter d 0.872 aniso 26.7 | infer 3.01s
+[09:50:18] [32/140] 35317e621976 all PSNR 24.606 SSIM 0.7994 LPIPS 0.2721 | novel PSNR 24.200 (44f) | edge 0.0234 HF 0.693 | inter d 0.686 aniso 18.8 | infer 3.07s
+[09:50:23] [33/140] 35872363e17a all PSNR 31.200 SSIM 0.9362 LPIPS 0.1503 | novel PSNR 31.018 (44f) | edge 0.0137 HF 0.847 | inter d 0.483 aniso 24.6 | infer 2.97s
+[09:50:28] [34/140] 374ffd0c5ff8 all PSNR 34.562 SSIM 0.9595 LPIPS 0.0910 | novel PSNR 34.428 (44f) | edge 0.0090 HF 0.890 | inter d 0.594 aniso 33.2 | infer 3.12s
+[09:50:32] [35/140] 387eeb925ba4 all PSNR 29.344 SSIM 0.9155 LPIPS 0.1862 | novel PSNR 29.172 (44f) | edge 0.0191 HF 0.813 | inter d 0.468 aniso 20.7 | infer 2.99s
+[09:50:37] [36/140] 389a460ca199 all PSNR 27.568 SSIM 0.9211 LPIPS 0.1725 | novel PSNR 26.947 (44f) | edge 0.0101 HF 0.848 | inter d 0.530 aniso 30.4 | infer 3.01s
+[09:50:42] [37/140] 3b16a10ec9b4 all PSNR 22.054 SSIM 0.6932 LPIPS 0.3622 | novel PSNR 21.434 (44f) | edge 0.0220 HF 0.656 | inter d 0.614 aniso 36.3 | infer 3.13s
+[09:50:46] [38/140] 3b7529dcccf7 all PSNR 25.855 SSIM 0.8606 LPIPS 0.2411 | novel PSNR 25.562 (44f) | edge 0.0226 HF 0.759 | inter d 0.711 aniso 19.4 | infer 3.04s
+[09:50:51] [39/140] 3bb3bb4d3e87 all PSNR 28.022 SSIM 0.9260 LPIPS 0.1412 | novel PSNR 27.522 (44f) | edge 0.0102 HF 0.847 | inter d 0.555 aniso 40.3 | infer 3.06s
+[09:50:55] [40/140] 3bb894d1933f all PSNR 27.322 SSIM 0.9082 LPIPS 0.1433 | novel PSNR 26.999 (44f) | edge 0.0185 HF 0.832 | inter d 0.521 aniso 30.0 | infer 3.04s
+[09:51:00] [41/140] 41036716da7e all PSNR 26.428 SSIM 0.8840 LPIPS 0.1905 | novel PSNR 25.908 (44f) | edge 0.0136 HF 0.824 | inter d 0.482 aniso 30.8 | infer 3.12s
+[09:51:05] [42/140] 444da1b4a3f1 all PSNR 26.582 SSIM 0.9097 LPIPS 0.1383 | novel PSNR 26.072 (44f) | edge 0.0159 HF 0.877 | inter d 0.402 aniso 37.3 | infer 3.00s
+[09:51:09] [43/140] 457e9a1ae777 all PSNR 27.655 SSIM 0.9002 LPIPS 0.1677 | novel PSNR 27.263 (44f) | edge 0.0134 HF 0.849 | inter d 0.567 aniso 37.2 | infer 3.11s
+[09:51:14] [44/140] 484c0aca40c1 all PSNR 25.656 SSIM 0.8959 LPIPS 0.1823 | novel PSNR 25.180 (44f) | edge 0.0146 HF 0.833 | inter d 0.363 aniso 36.9 | infer 3.07s
+[09:51:18] [45/140] 493816813d2d all PSNR 24.221 SSIM 0.7661 LPIPS 0.2817 | novel PSNR 23.990 (44f) | edge 0.0301 HF 0.665 | inter d 0.672 aniso 27.9 | infer 3.00s
+[09:51:23] [46/140] 4ae797d07b6d all PSNR 25.089 SSIM 0.8451 LPIPS 0.2278 | novel PSNR 24.739 (44f) | edge 0.0219 HF 0.759 | inter d 0.726 aniso 24.6 | infer 2.99s
+[09:51:28] [47/140] 4ff8650b5c11 all PSNR 30.225 SSIM 0.9348 LPIPS 0.1327 | novel PSNR 29.944 (44f) | edge 0.0117 HF 0.870 | inter d 0.500 aniso 28.2 | infer 3.08s
+[09:51:32] [48/140] 50c46cf8b8b2 all PSNR 27.074 SSIM 0.8846 LPIPS 0.2277 | novel PSNR 26.501 (44f) | edge 0.0117 HF 0.799 | inter d 0.467 aniso 37.7 | infer 3.08s
+[09:51:37] [49/140] 513e4ea2e847 all PSNR 28.166 SSIM 0.8927 LPIPS 0.1672 | novel PSNR 28.138 (44f) | edge 0.0174 HF 0.805 | inter d 1.122 aniso 16.6 | infer 2.97s
+[09:51:41] [50/140] 54bf355ca7e0 all PSNR 27.793 SSIM 0.8892 LPIPS 0.2012 | novel PSNR 27.443 (44f) | edge 0.0158 HF 0.844 | inter d 0.731 aniso 27.4 | infer 2.99s
+[09:51:46] [51/140] 56452d9cd9e2 all PSNR 23.798 SSIM 0.7483 LPIPS 0.3303 | novel PSNR 23.563 (44f) | edge 0.0240 HF 0.663 | inter d 1.280 aniso 24.0 | infer 3.02s
+[09:51:51] [52/140] 565553aa894b all PSNR 25.780 SSIM 0.8769 LPIPS 0.1994 | novel PSNR 25.519 (44f) | edge 0.0171 HF 0.833 | inter d 0.646 aniso 31.0 | infer 3.01s
+[09:51:55] [53/140] 599ca3e04cae all PSNR 22.668 SSIM 0.7388 LPIPS 0.2840 | novel PSNR 21.820 (44f) | edge 0.0183 HF 0.728 | inter d 0.502 aniso 40.0 | infer 3.17s
+[09:52:00] [54/140] 5a27c00f525f all PSNR 27.999 SSIM 0.8958 LPIPS 0.1810 | novel PSNR 27.912 (44f) | edge 0.0240 HF 0.753 | inter d 0.644 aniso 13.5 | infer 3.00s
+[09:52:05] [55/140] 5a69d1027b47 all PSNR 22.441 SSIM 0.6735 LPIPS 0.3812 | novel PSNR 22.135 (44f) | edge 0.0360 HF 0.553 | inter d 0.764 aniso 16.8 | infer 2.96s
+[09:52:09] [56/140] 5c3af5810280 all PSNR 31.975 SSIM 0.9546 LPIPS 0.0786 | novel PSNR 31.756 (44f) | edge 0.0115 HF 0.914 | inter d 0.506 aniso 28.7 | infer 3.06s
+[09:52:14] [57/140] 5c8dafad7d78 all PSNR 29.748 SSIM 0.9340 LPIPS 0.1374 | novel PSNR 29.248 (44f) | edge 0.0095 HF 0.842 | inter d 0.464 aniso 29.5 | infer 3.08s
+[09:52:18] [58/140] 5f0041e53d59 all PSNR 31.761 SSIM 0.9553 LPIPS 0.0928 | novel PSNR 31.598 (44f) | edge 0.0124 HF 0.880 | inter d 0.472 aniso 26.0 | infer 3.06s
+[09:52:23] [59/140] 63798f5c6fbf all PSNR 29.472 SSIM 0.9380 LPIPS 0.1358 | novel PSNR 29.026 (44f) | edge 0.0103 HF 0.863 | inter d 0.427 aniso 46.3 | infer 3.11s
+[09:52:28] [60/140] 669c36225b27 all PSNR 27.382 SSIM 0.9180 LPIPS 0.1314 | novel PSNR 27.094 (44f) | edge 0.0147 HF 0.858 | inter d 0.534 aniso 30.2 | infer 3.15s
+[09:52:32] [61/140] 66fd66cbed40 all PSNR 27.556 SSIM 0.9163 LPIPS 0.1594 | novel PSNR 27.023 (44f) | edge 0.0111 HF 0.836 | inter d 0.498 aniso 25.8 | infer 3.04s
+[09:52:37] [62/140] 6d221625614d all PSNR 24.799 SSIM 0.7709 LPIPS 0.3045 | novel PSNR 24.320 (44f) | edge 0.0215 HF 0.599 | inter d 0.636 aniso 21.9 | infer 3.19s
+[09:52:42] [63/140] 6d81c5ab0d48 all PSNR 28.029 SSIM 0.8997 LPIPS 0.1725 | novel PSNR 27.782 (44f) | edge 0.0150 HF 0.739 | inter d 0.697 aniso 20.3 | infer 3.03s
+[09:52:46] [64/140] 6e11e7f4fea3 all PSNR 30.388 SSIM 0.9385 LPIPS 0.1616 | novel PSNR 29.578 (44f) | edge 0.0063 HF 0.837 | inter d 0.532 aniso 34.3 | infer 3.06s
+[09:52:51] [65/140] 70eac6ff18a1 all PSNR 27.358 SSIM 0.9358 LPIPS 0.1635 | novel PSNR 27.188 (44f) | edge 0.0212 HF 0.868 | inter d 0.441 aniso 23.1 | infer 2.96s
+[09:52:55] [66/140] 71b2dc8a2aa5 all PSNR 32.324 SSIM 0.9619 LPIPS 0.0850 | novel PSNR 32.230 (44f) | edge 0.0087 HF 0.910 | inter d 0.468 aniso 32.4 | infer 3.10s
+[09:53:00] [67/140] 75fbbe467353 all PSNR 27.163 SSIM 0.9002 LPIPS 0.1879 | novel PSNR 26.785 (44f) | edge 0.0187 HF 0.819 | inter d 0.487 aniso 24.2 | infer 2.98s
+[09:53:04] [68/140] 7705a2edd022 all PSNR 27.487 SSIM 0.8662 LPIPS 0.2907 | novel PSNR 26.840 (44f) | edge 0.0115 HF 0.696 | inter d 0.484 aniso 32.2 | infer 3.22s
+[09:53:09] [69/140] 7a9f97660be8 all PSNR 30.751 SSIM 0.9288 LPIPS 0.1344 | novel PSNR 30.276 (44f) | edge 0.0097 HF 0.876 | inter d 0.374 aniso 46.7 | infer 3.13s
+[09:53:14] [70/140] 7da3db99059a all PSNR 25.160 SSIM 0.8671 LPIPS 0.2257 | novel PSNR 24.898 (44f) | edge 0.0206 HF 0.766 | inter d 0.921 aniso 21.4 | infer 2.98s
+[09:53:18] [71/140] 800cf88687a7 all PSNR 23.780 SSIM 0.7717 LPIPS 0.2904 | novel PSNR 23.274 (44f) | edge 0.0259 HF 0.702 | inter d 0.569 aniso 29.4 | infer 3.07s
+[09:53:23] [72/140] 8324b3ca2208 all PSNR 24.120 SSIM 0.8307 LPIPS 0.2493 | novel PSNR 23.551 (44f) | edge 0.0173 HF 0.791 | inter d 0.638 aniso 29.4 | infer 3.14s
+[09:53:28] [73/140] 85cd0e92110b all PSNR 25.695 SSIM 0.8455 LPIPS 0.2401 | novel PSNR 25.395 (44f) | edge 0.0204 HF 0.726 | inter d 0.465 aniso 26.7 | infer 3.12s
+[09:53:32] [74/140] 8b9fb9d9f10e all PSNR 22.736 SSIM 0.7466 LPIPS 0.3223 | novel PSNR 22.412 (44f) | edge 0.0328 HF 0.626 | inter d 0.628 aniso 23.6 | infer 3.11s
+[09:53:37] [75/140] 8cb2e97d26a6 all PSNR 31.967 SSIM 0.9347 LPIPS 0.1503 | novel PSNR 31.750 (44f) | edge 0.0132 HF 0.815 | inter d 0.394 aniso 27.0 | infer 3.10s
+[09:53:42] [76/140] 8fdc5130f073 all PSNR 27.466 SSIM 0.8894 LPIPS 0.1564 | novel PSNR 27.017 (44f) | edge 0.0116 HF 0.815 | inter d 0.773 aniso 25.5 | infer 3.05s
+[09:53:46] [77/140] 90cb7ef95384 all PSNR 25.146 SSIM 0.8411 LPIPS 0.2459 | novel PSNR 24.390 (44f) | edge 0.0149 HF 0.790 | inter d 0.412 aniso 24.9 | infer 3.05s
+[09:53:51] [78/140] 917e9c8985d3 all PSNR 28.614 SSIM 0.9260 LPIPS 0.1344 | novel PSNR 28.453 (44f) | edge 0.0183 HF 0.861 | inter d 0.607 aniso 25.9 | infer 3.07s
+[09:53:56] [79/140] 918c8dad730c all PSNR 23.327 SSIM 0.8151 LPIPS 0.2381 | novel PSNR 22.575 (44f) | edge 0.0164 HF 0.712 | inter d 0.502 aniso 28.8 | infer 3.14s
+[09:54:00] [80/140] 91afb9910b04 all PSNR 27.091 SSIM 0.8930 LPIPS 0.1593 | novel PSNR 26.501 (44f) | edge 0.0139 HF 0.834 | inter d 0.584 aniso 28.6 | infer 3.08s
+[09:54:05] [81/140] 946f49be7392 all PSNR 29.127 SSIM 0.8992 LPIPS 0.2213 | novel PSNR 28.836 (44f) | edge 0.0169 HF 0.758 | inter d 0.493 aniso 28.8 | infer 2.96s
+[09:54:10] [82/140] 9641a1ed7963 all PSNR 26.893 SSIM 0.8981 LPIPS 0.1715 | novel PSNR 26.824 (44f) | edge 0.0144 HF 0.754 | inter d 0.818 aniso 37.7 | infer 3.14s
+[09:54:15] [83/140] 9c8c0e0fadd9 all PSNR 21.310 SSIM 0.6017 LPIPS 0.4171 | novel PSNR 20.970 (44f) | edge 0.0359 HF 0.495 | inter d 0.734 aniso 13.0 | infer 3.08s
+[09:54:19] [84/140] 9cbc5548643c all PSNR 25.740 SSIM 0.8735 LPIPS 0.1887 | novel PSNR 25.575 (44f) | edge 0.0268 HF 0.763 | inter d 0.528 aniso 24.6 | infer 3.09s
+[09:54:24] [85/140] 9e9a89ae6fed all PSNR 31.274 SSIM 0.9571 LPIPS 0.1126 | novel PSNR 30.552 (44f) | edge 0.0079 HF 0.902 | inter d 0.518 aniso 28.3 | infer 3.00s
+[09:54:28] [86/140] 9fb0588ff045 all PSNR 27.850 SSIM 0.9324 LPIPS 0.1266 | novel PSNR 27.602 (44f) | edge 0.0243 HF 0.829 | inter d 0.388 aniso 19.5 | infer 2.92s
+[09:54:33] [87/140] a17a984ca90a all PSNR 27.120 SSIM 0.9150 LPIPS 0.1411 | novel PSNR 26.890 (44f) | edge 0.0187 HF 0.865 | inter d 0.601 aniso 31.1 | infer 3.06s
+[09:54:38] [88/140] a401469cb0fa all PSNR 23.531 SSIM 0.7907 LPIPS 0.2650 | novel PSNR 22.956 (44f) | edge 0.0217 HF 0.733 | inter d 0.755 aniso 20.5 | infer 3.11s
+[09:54:42] [89/140] a62c330f5403 all PSNR 21.744 SSIM 0.7433 LPIPS 0.3251 | novel PSNR 21.166 (44f) | edge 0.0236 HF 0.674 | inter d 0.666 aniso 24.0 | infer 3.11s
+[09:54:47] [90/140] a62f9a1c6362 all PSNR 28.494 SSIM 0.9298 LPIPS 0.1789 | novel PSNR 28.296 (44f) | edge 0.0200 HF 0.848 | inter d 0.421 aniso 20.4 | infer 2.96s
+[09:54:52] [91/140] a726c1112ad0 all PSNR 22.562 SSIM 0.8180 LPIPS 0.3044 | novel PSNR 21.680 (44f) | edge 0.0143 HF 0.755 | inter d 0.509 aniso 33.6 | infer 3.20s
+[09:54:57] [92/140] adb95f29c15b all PSNR 24.707 SSIM 0.7392 LPIPS 0.3412 | novel PSNR 24.348 (44f) | edge 0.0240 HF 0.585 | inter d 0.541 aniso 27.6 | infer 3.13s
+[09:55:01] [93/140] adf35184a12d all PSNR 30.943 SSIM 0.9298 LPIPS 0.1601 | novel PSNR 30.729 (44f) | edge 0.0111 HF 0.833 | inter d 0.553 aniso 33.2 | infer 3.10s
+[09:55:06] [94/140] af0d7039e64a all PSNR 20.245 SSIM 0.7101 LPIPS 0.2911 | novel PSNR 19.537 (44f) | edge 0.0345 HF 0.648 | inter d 0.464 aniso 32.2 | infer 3.11s
+[09:55:11] [95/140] b2076bc7231b all PSNR 22.939 SSIM 0.8167 LPIPS 0.2692 | novel PSNR 22.603 (44f) | edge 0.0296 HF 0.698 | inter d 0.621 aniso 20.7 | infer 3.12s
+[09:55:16] [96/140] b3bf9079b442 all PSNR 28.062 SSIM 0.9100 LPIPS 0.1735 | novel PSNR 27.620 (44f) | edge 0.0130 HF 0.830 | inter d 0.529 aniso 33.9 | infer 3.04s
+[09:55:20] [97/140] b4f53094fd31 all PSNR 27.047 SSIM 0.8784 LPIPS 0.2008 | novel PSNR 26.868 (44f) | edge 0.0214 HF 0.755 | inter d 0.645 aniso 23.7 | infer 3.07s
+[09:55:25] [98/140] b5faa2a8ce98 all PSNR 27.467 SSIM 0.8630 LPIPS 0.2739 | novel PSNR 27.040 (44f) | edge 0.0155 HF 0.775 | inter d 0.815 aniso 26.5 | infer 3.07s
+[09:55:29] [99/140] b6d1134cb03c all PSNR 24.257 SSIM 0.8503 LPIPS 0.1850 | novel PSNR 23.922 (44f) | edge 0.0283 HF 0.770 | inter d 0.508 aniso 20.4 | infer 2.98s
+[09:55:34] [100/140] b92b499c9bf9 all PSNR 30.901 SSIM 0.9584 LPIPS 0.0902 | novel PSNR 30.227 (44f) | edge 0.0073 HF 0.921 | inter d 0.538 aniso 35.6 | infer 3.11s
+[09:55:38] [101/140] ba55c875d20c all PSNR 33.178 SSIM 0.9506 LPIPS 0.1577 | novel PSNR 32.984 (44f) | edge 0.0094 HF 0.817 | inter d 0.573 aniso 33.3 | infer 3.03s
+[09:55:43] [102/140] c076929db650 all PSNR 31.932 SSIM 0.9496 LPIPS 0.1304 | novel PSNR 31.667 (44f) | edge 0.0094 HF 0.858 | inter d 0.518 aniso 26.0 | infer 3.05s
+[09:55:48] [103/140] c37109a55eff all PSNR 20.687 SSIM 0.6251 LPIPS 0.4288 | novel PSNR 20.265 (44f) | edge 0.0382 HF 0.484 | inter d 0.682 aniso 22.5 | infer 3.13s
+[09:55:53] [104/140] c37726ce770a all PSNR 23.953 SSIM 0.8075 LPIPS 0.2187 | novel PSNR 23.483 (44f) | edge 0.0274 HF 0.772 | inter d 0.504 aniso 28.8 | infer 3.21s
+[09:55:57] [105/140] c455899acfc8 all PSNR 23.024 SSIM 0.7615 LPIPS 0.2852 | novel PSNR 22.222 (44f) | edge 0.0190 HF 0.659 | inter d 0.513 aniso 34.0 | infer 3.22s
+[09:56:02] [106/140] cbd44beb04f9 all PSNR 30.107 SSIM 0.9338 LPIPS 0.1492 | novel PSNR 30.024 (44f) | edge 0.0161 HF 0.845 | inter d 0.726 aniso 23.5 | infer 3.10s
+[09:56:07] [107/140] cc08c0bdc34d all PSNR 30.075 SSIM 0.9240 LPIPS 0.1510 | novel PSNR 29.957 (44f) | edge 0.0149 HF 0.843 | inter d 0.770 aniso 21.5 | infer 2.99s
+[09:56:11] [108/140] cd9c981eeb4a all PSNR 23.149 SSIM 0.8258 LPIPS 0.2284 | novel PSNR 22.812 (44f) | edge 0.0233 HF 0.757 | inter d 0.719 aniso 27.8 | infer 3.08s
+[09:56:16] [109/140] ceb252f5d441 all PSNR 27.834 SSIM 0.9076 LPIPS 0.2015 | novel PSNR 27.430 (44f) | edge 0.0143 HF 0.828 | inter d 0.733 aniso 25.1 | infer 2.98s
+[09:56:20] [110/140] d1b3a0b37acc all PSNR 22.640 SSIM 0.7626 LPIPS 0.2714 | novel PSNR 22.049 (44f) | edge 0.0222 HF 0.745 | inter d 0.907 aniso 23.1 | infer 3.01s
+[09:56:25] [111/140] d3812aad5382 all PSNR 21.206 SSIM 0.7310 LPIPS 0.3278 | novel PSNR 20.218 (44f) | edge 0.0202 HF 0.682 | inter d 0.591 aniso 31.2 | infer 3.09s
+[09:56:30] [112/140] d3af8212ae16 all PSNR 31.425 SSIM 0.9290 LPIPS 0.1921 | novel PSNR 31.383 (44f) | edge 0.0163 HF 0.787 | inter d 0.737 aniso 15.0 | infer 3.04s
+[09:56:34] [113/140] d4fbeba0168a all PSNR 21.136 SSIM 0.6617 LPIPS 0.3167 | novel PSNR 20.663 (44f) | edge 0.0384 HF 0.593 | inter d 0.571 aniso 29.0 | infer 2.94s
+[09:56:39] [114/140] d8de66037bd0 all PSNR 27.579 SSIM 0.8543 LPIPS 0.2339 | novel PSNR 27.110 (44f) | edge 0.0186 HF 0.784 | inter d 0.453 aniso 30.8 | infer 2.94s
+[09:56:44] [115/140] d904ae2998f7 all PSNR 19.635 SSIM 0.6411 LPIPS 0.4369 | novel PSNR 18.732 (44f) | edge 0.0238 HF 0.566 | inter d 0.555 aniso 32.9 | infer 3.15s
+[09:56:48] [116/140] d9b637662374 all PSNR 24.227 SSIM 0.7781 LPIPS 0.2773 | novel PSNR 23.858 (44f) | edge 0.0216 HF 0.658 | inter d 0.633 aniso 23.1 | infer 3.22s
+[09:56:53] [117/140] d9f4c746e6fa all PSNR 31.912 SSIM 0.9598 LPIPS 0.0886 | novel PSNR 31.859 (44f) | edge 0.0133 HF 0.872 | inter d 0.659 aniso 33.1 | infer 3.05s
+[09:56:58] [118/140] dac9796dd69e all PSNR 32.152 SSIM 0.9540 LPIPS 0.0990 | novel PSNR 31.985 (44f) | edge 0.0095 HF 0.888 | inter d 0.350 aniso 37.9 | infer 3.12s
+[09:57:02] [119/140] dafa9c7cbda9 all PSNR 20.125 SSIM 0.5967 LPIPS 0.3638 | novel PSNR 19.700 (44f) | edge 0.0444 HF 0.546 | inter d 0.482 aniso 26.1 | infer 3.08s
+[09:57:07] [120/140] ddfdcfdf02d5 all PSNR 25.543 SSIM 0.8750 LPIPS 0.2125 | novel PSNR 25.233 (44f) | edge 0.0243 HF 0.804 | inter d 0.422 aniso 23.0 | infer 2.98s
+[09:57:12] [121/140] ded5e4b46aed all PSNR 30.027 SSIM 0.8997 LPIPS 0.1926 | novel PSNR 29.646 (44f) | edge 0.0105 HF 0.767 | inter d 0.481 aniso 37.4 | infer 3.05s
+[09:57:16] [122/140] df04f5806468 all PSNR 25.954 SSIM 0.8614 LPIPS 0.1886 | novel PSNR 25.688 (44f) | edge 0.0249 HF 0.756 | inter d 0.688 aniso 22.8 | infer 3.10s
+[09:57:21] [123/140] df29c225863d all PSNR 25.875 SSIM 0.8389 LPIPS 0.2294 | novel PSNR 25.506 (44f) | edge 0.0226 HF 0.754 | inter d 0.394 aniso 26.1 | infer 3.01s
+[09:57:26] [124/140] df4f9d9a0adf all PSNR 30.692 SSIM 0.9393 LPIPS 0.1522 | novel PSNR 30.367 (44f) | edge 0.0104 HF 0.877 | inter d 0.785 aniso 23.9 | infer 3.04s
+[09:57:30] [125/140] e5684b3292bf all PSNR 28.151 SSIM 0.8739 LPIPS 0.2457 | novel PSNR 27.625 (44f) | edge 0.0114 HF 0.767 | inter d 0.654 aniso 30.9 | infer 3.10s
+[09:57:35] [126/140] e78f8cebd2bd all PSNR 23.247 SSIM 0.7534 LPIPS 0.2510 | novel PSNR 22.793 (44f) | edge 0.0329 HF 0.694 | inter d 0.428 aniso 25.2 | infer 2.97s
+[09:57:40] [127/140] e8ce51b6abfe all PSNR 27.757 SSIM 0.9231 LPIPS 0.1468 | novel PSNR 27.479 (44f) | edge 0.0148 HF 0.847 | inter d 0.539 aniso 28.7 | infer 3.16s
+[09:57:44] [128/140] e9360e7a89be all PSNR 23.035 SSIM 0.8128 LPIPS 0.2402 | novel PSNR 22.539 (44f) | edge 0.0295 HF 0.768 | inter d 0.535 aniso 19.8 | infer 2.89s
+[09:57:49] [129/140] eb4cf52988f8 all PSNR 25.988 SSIM 0.8734 LPIPS 0.1966 | novel PSNR 25.391 (44f) | edge 0.0157 HF 0.823 | inter d 0.534 aniso 23.8 | infer 3.04s
+[09:57:53] [130/140] ec1e44d4dc0f all PSNR 30.178 SSIM 0.9374 LPIPS 0.1204 | novel PSNR 29.925 (44f) | edge 0.0114 HF 0.853 | inter d 0.413 aniso 34.4 | infer 3.12s
+[09:57:58] [131/140] ec305787b700 all PSNR 25.365 SSIM 0.8842 LPIPS 0.1749 | novel PSNR 24.645 (44f) | edge 0.0133 HF 0.869 | inter d 0.537 aniso 33.6 | infer 3.02s
+[09:58:03] [132/140] ed16328235c6 all PSNR 27.183 SSIM 0.8071 LPIPS 0.2617 | novel PSNR 27.028 (44f) | edge 0.0264 HF 0.650 | inter d 0.449 aniso 22.1 | infer 3.05s
+[09:58:07] [133/140] ef59aac43713 all PSNR 31.148 SSIM 0.8924 LPIPS 0.2115 | novel PSNR 31.025 (44f) | edge 0.0160 HF 0.737 | inter d 0.617 aniso 30.6 | infer 3.12s
+[09:58:12] [134/140] f004c810d94b all PSNR 31.632 SSIM 0.9620 LPIPS 0.1021 | novel PSNR 31.379 (44f) | edge 0.0103 HF 0.918 | inter d 0.548 aniso 31.8 | infer 3.07s
+[09:58:16] [135/140] f477ffc4b398 all PSNR 31.707 SSIM 0.9530 LPIPS 0.1256 | novel PSNR 31.416 (44f) | edge 0.0099 HF 0.866 | inter d 0.398 aniso 35.3 | infer 3.09s
+[09:58:21] [136/140] f71ac346cd0f all PSNR 26.366 SSIM 0.8429 LPIPS 0.1866 | novel PSNR 26.220 (44f) | edge 0.0281 HF 0.740 | inter d 0.468 aniso 23.2 | infer 3.01s
+[09:58:26] [137/140] f7aaea9ac683 all PSNR 25.352 SSIM 0.8501 LPIPS 0.2193 | novel PSNR 25.252 (44f) | edge 0.0341 HF 0.731 | inter d 0.709 aniso 21.9 | infer 3.04s
+[09:58:30] [138/140] fb2c0499c225 all PSNR 28.553 SSIM 0.9160 LPIPS 0.1233 | novel PSNR 28.307 (44f) | edge 0.0132 HF 0.889 | inter d 0.456 aniso 31.2 | infer 3.08s
+[09:58:35] [139/140] fb3b73f1d3fe all PSNR 18.601 SSIM 0.4346 LPIPS 0.4975 | novel PSNR 17.946 (44f) | edge 0.0469 HF 0.404 | inter d 0.500 aniso 28.3 | infer 3.19s
+[09:58:39] [140/140] ff592398657b all PSNR 28.991 SSIM 0.8827 LPIPS 0.2508 | novel PSNR 28.739 (44f) | edge 0.0163 HF 0.720 | inter d 0.746 aniso 20.8 | infer 3.07s
+[09:58:39] all_frames: PSNR 26.810064 SSIM 0.853921 LPIPS 0.215308 edge 0.019088 HF 0.767235
+[09:58:39] novel_only: PSNR 26.439239 SSIM 0.847330 LPIPS 0.219173 edge 0.019375 HF 0.765788
+[09:58:39] bucket d0: 840 frames PSNR 29.5294 HF 0.7778
+[09:58:39] bucket d1: 1434 frames PSNR 27.9621 HF 0.7791
+[09:58:39] bucket d2-3: 2578 frames PSNR 26.6561 HF 0.7702
+[09:58:39] bucket d4+: 2148 frames PSNR 25.1667 HF 0.7519
+[09:58:39] geometry (mean over scenes): SW 0.7119 packing 649.50/6.09 inter d 0.589 close 0.897 far 0.041 | aniso p50 27.77 needle>0.9 0.276
+[09:58:39] compare no_tuning all_frames: psnr +1.616534, ssim +0.045818, lpips -0.039617, edge_l1 -0.003349, hf_ratio +0.008526
+[09:58:39] compare no_tuning novel_only: psnr +1.432221, ssim +0.043035, lpips -0.037780, edge_l1 -0.003186, hf_ratio +0.008067
+[09:58:39] compare scene_latent_tuning_official_loop all_frames: psnr -0.589424, ssim -0.014386, lpips +0.032173
+[09:58:39] compare scene_latent_tuning_official_loop novel_only: psnr -0.404438, ssim -0.012306, lpips +0.030878
+[09:58:39] compare scene_latent_tuning_reimplemented_loop all_frames: psnr -0.589600, ssim -0.014393, lpips +0.032184, edge_l1 +0.000770, hf_ratio -0.085171
+[09:58:39] compare scene_latent_tuning_reimplemented_loop novel_only: psnr -0.405869, ssim -0.012318, lpips +0.030892, edge_l1 +0.000620, hf_ratio -0.085489
+[09:58:39] torch peak memory: allocated 15795 MiB, reserved 16750 MiB
+[09:58:39] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/token_tuning_fp32_140scenes/lr1e-4_steps50
+[09:58:39] done in 654.1s
+=== exit code: 0
+finished: 2026-10-20 09:58:41   duration: 658 s

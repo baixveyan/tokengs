@@ -1,0 +1,19 @@
+[GeometryGS] tokengs scene path: 454.51M total, 454.51M trainable parameters
+{
+  "full": true,
+  "views": 8,
+  "gaussians": [
+    1,
+    262144,
+    14
+  ],
+  "parameters": 454511201,
+  "pretrained_parameters": 340782720,
+  "loss": 0.35571593046188354,
+  "gradient_norm": 21.105295181274414,
+  "soft_chain_edges": 9983.0,
+  "anchors": 1024,
+  "step_seconds": 7.028049646876752,
+  "peak_memory_gib": 7.159552097320557,
+  "checkpoint_reload_exact": true
+}

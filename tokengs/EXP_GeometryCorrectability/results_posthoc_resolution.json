@@ -1,0 +1,344 @@
+{
+ "tokengs_release": {
+  "note": "POST-HOC, not pre-registered",
+  "step_px_(max over input views, per 2% depth step)": {
+   "p10": 0.0977,
+   "p25": 0.237,
+   "p50": 0.4908,
+   "p75": 1.0403,
+   "p90": 1.9655
+  },
+  "range_px_(max over input views, whole +-30%)": {
+   "p10": 2.8503,
+   "p25": 7.1548,
+   "p50": 14.5093,
+   "p75": 29.6034,
+   "p90": 51.1109
+  },
+  "bins": {
+   "0-0.25px": {
+    "share_in_range": 0.2433,
+    "mean_absrel": {
+     "model": 0.0935,
+     "feat_cand": 0.174,
+     "rgb_cand": 0.1548,
+     "feat_direct": 0.0858,
+     "photometric": 0.1331,
+     "oracle": 0.0051
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1421,
+     "feat_cand": 0.1573,
+     "rgb_cand": 0.1545,
+     "feat_direct": 0.1229,
+     "photometric": 0.1658,
+     "oracle": 0.005
+    }
+   },
+   "0.25-0.5px": {
+    "share_in_range": 0.2422,
+    "mean_absrel": {
+     "model": 0.0713,
+     "feat_cand": 0.1125,
+     "rgb_cand": 0.1141,
+     "feat_direct": 0.0662,
+     "photometric": 0.1213,
+     "oracle": 0.005
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1324,
+     "feat_cand": 0.1367,
+     "rgb_cand": 0.1458,
+     "feat_direct": 0.1099,
+     "photometric": 0.1646,
+     "oracle": 0.005
+    }
+   },
+   "0.5-1px": {
+    "share_in_range": 0.2404,
+    "mean_absrel": {
+     "model": 0.0683,
+     "feat_cand": 0.1009,
+     "rgb_cand": 0.1118,
+     "feat_direct": 0.0608,
+     "photometric": 0.1265,
+     "oracle": 0.0051
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1369,
+     "feat_cand": 0.138,
+     "rgb_cand": 0.1512,
+     "feat_direct": 0.1085,
+     "photometric": 0.17,
+     "oracle": 0.0052
+    }
+   },
+   "1-2px": {
+    "share_in_range": 0.1696,
+    "mean_absrel": {
+     "model": 0.0664,
+     "feat_cand": 0.1006,
+     "rgb_cand": 0.116,
+     "feat_direct": 0.0627,
+     "photometric": 0.1332,
+     "oracle": 0.0051
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1385,
+     "feat_cand": 0.1329,
+     "rgb_cand": 0.1485,
+     "feat_direct": 0.1172,
+     "photometric": 0.1664,
+     "oracle": 0.0053
+    }
+   },
+   "2-infpx": {
+    "share_in_range": 0.1045,
+    "mean_absrel": {
+     "model": 0.0683,
+     "feat_cand": 0.1019,
+     "rgb_cand": 0.123,
+     "feat_direct": 0.0571,
+     "photometric": 0.1411,
+     "oracle": 0.0052
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1378,
+     "feat_cand": 0.1392,
+     "rgb_cand": 0.1517,
+     "feat_direct": 0.1001,
+     "photometric": 0.1763,
+     "oracle": 0.0055
+    }
+   }
+  }
+ },
+ "tokengs_sft12": {
+  "note": "POST-HOC, not pre-registered",
+  "step_px_(max over input views, per 2% depth step)": {
+   "p10": 0.1014,
+   "p25": 0.2395,
+   "p50": 0.4944,
+   "p75": 1.0642,
+   "p90": 2.0547
+  },
+  "range_px_(max over input views, whole +-30%)": {
+   "p10": 2.9404,
+   "p25": 7.1643,
+   "p50": 14.4721,
+   "p75": 29.7648,
+   "p90": 51.832
+  },
+  "bins": {
+   "0-0.25px": {
+    "share_in_range": 0.2614,
+    "mean_absrel": {
+     "model": 0.0573,
+     "feat_cand": 0.1851,
+     "rgb_cand": 0.1589,
+     "feat_direct": 0.0579,
+     "photometric": 0.131,
+     "oracle": 0.005
+    },
+    "group_A_mean_absrel": {
+     "model": 0.106,
+     "feat_cand": 0.1919,
+     "rgb_cand": 0.1601,
+     "feat_direct": 0.1045,
+     "photometric": 0.1689,
+     "oracle": 0.005
+    }
+   },
+   "0.25-0.5px": {
+    "share_in_range": 0.2462,
+    "mean_absrel": {
+     "model": 0.0389,
+     "feat_cand": 0.1253,
+     "rgb_cand": 0.1178,
+     "feat_direct": 0.0402,
+     "photometric": 0.1233,
+     "oracle": 0.005
+    },
+    "group_A_mean_absrel": {
+     "model": 0.098,
+     "feat_cand": 0.1782,
+     "rgb_cand": 0.1479,
+     "feat_direct": 0.0995,
+     "photometric": 0.163,
+     "oracle": 0.005
+    }
+   },
+   "0.5-1px": {
+    "share_in_range": 0.231,
+    "mean_absrel": {
+     "model": 0.0382,
+     "feat_cand": 0.1103,
+     "rgb_cand": 0.1107,
+     "feat_direct": 0.0395,
+     "photometric": 0.124,
+     "oracle": 0.005
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1042,
+     "feat_cand": 0.1709,
+     "rgb_cand": 0.1486,
+     "feat_direct": 0.105,
+     "photometric": 0.163,
+     "oracle": 0.0051
+    }
+   },
+   "1-2px": {
+    "share_in_range": 0.1598,
+    "mean_absrel": {
+     "model": 0.0387,
+     "feat_cand": 0.1079,
+     "rgb_cand": 0.1135,
+     "feat_direct": 0.0391,
+     "photometric": 0.1307,
+     "oracle": 0.005
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1083,
+     "feat_cand": 0.1829,
+     "rgb_cand": 0.1495,
+     "feat_direct": 0.1052,
+     "photometric": 0.1609,
+     "oracle": 0.0052
+    }
+   },
+   "2-infpx": {
+    "share_in_range": 0.1016,
+    "mean_absrel": {
+     "model": 0.0411,
+     "feat_cand": 0.1034,
+     "rgb_cand": 0.1179,
+     "feat_direct": 0.0417,
+     "photometric": 0.1333,
+     "oracle": 0.005
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1113,
+     "feat_cand": 0.1724,
+     "rgb_cand": 0.1493,
+     "feat_direct": 0.1101,
+     "photometric": 0.1626,
+     "oracle": 0.0052
+    }
+   }
+  }
+ },
+ "locus_locus": {
+  "note": "POST-HOC, not pre-registered",
+  "step_px_(max over input views, per 2% depth step)": {
+   "p10": 0.0956,
+   "p25": 0.2257,
+   "p50": 0.4742,
+   "p75": 1.047,
+   "p90": 1.9894
+  },
+  "range_px_(max over input views, whole +-30%)": {
+   "p10": 2.7851,
+   "p25": 6.7681,
+   "p50": 13.9105,
+   "p75": 29.2839,
+   "p90": 51.196
+  },
+  "bins": {
+   "0-0.25px": {
+    "share_in_range": 0.2707,
+    "mean_absrel": {
+     "model": 0.0843,
+     "feat_cand": 0.2063,
+     "rgb_cand": 0.1596,
+     "feat_direct": 0.0786,
+     "photometric": 0.1389,
+     "oracle": 0.0052
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1426,
+     "feat_cand": 0.2062,
+     "rgb_cand": 0.1631,
+     "feat_direct": 0.1183,
+     "photometric": 0.1731,
+     "oracle": 0.0054
+    }
+   },
+   "0.25-0.5px": {
+    "share_in_range": 0.2425,
+    "mean_absrel": {
+     "model": 0.0677,
+     "feat_cand": 0.1422,
+     "rgb_cand": 0.1188,
+     "feat_direct": 0.0589,
+     "photometric": 0.126,
+     "oracle": 0.0052
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1316,
+     "feat_cand": 0.1577,
+     "rgb_cand": 0.1436,
+     "feat_direct": 0.0952,
+     "photometric": 0.1614,
+     "oracle": 0.0055
+    }
+   },
+   "0.5-1px": {
+    "share_in_range": 0.2244,
+    "mean_absrel": {
+     "model": 0.0677,
+     "feat_cand": 0.1214,
+     "rgb_cand": 0.1143,
+     "feat_direct": 0.0586,
+     "photometric": 0.1286,
+     "oracle": 0.0052
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1299,
+     "feat_cand": 0.1475,
+     "rgb_cand": 0.1452,
+     "feat_direct": 0.0954,
+     "photometric": 0.1626,
+     "oracle": 0.0055
+    }
+   },
+   "1-2px": {
+    "share_in_range": 0.163,
+    "mean_absrel": {
+     "model": 0.0723,
+     "feat_cand": 0.1148,
+     "rgb_cand": 0.1206,
+     "feat_direct": 0.062,
+     "photometric": 0.1373,
+     "oracle": 0.0052
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1342,
+     "feat_cand": 0.1374,
+     "rgb_cand": 0.1479,
+     "feat_direct": 0.0974,
+     "photometric": 0.1626,
+     "oracle": 0.0056
+    }
+   },
+   "2-infpx": {
+    "share_in_range": 0.0994,
+    "mean_absrel": {
+     "model": 0.0702,
+     "feat_cand": 0.1169,
+     "rgb_cand": 0.1268,
+     "feat_direct": 0.0667,
+     "photometric": 0.1422,
+     "oracle": 0.0052
+    },
+    "group_A_mean_absrel": {
+     "model": 0.1295,
+     "feat_cand": 0.1391,
+     "rgb_cand": 0.148,
+     "feat_direct": 0.1033,
+     "photometric": 0.1672,
+     "oracle": 0.0055
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,189 @@
+{
+  "checkpoint_sha256": "5913da347475049cb58e552634ee1c527293c2571576806db0d4da702ce978c3",
+  "num_scenes": 1,
+  "layers": [
+    0,
+    3,
+    7,
+    9,
+    10,
+    11
+  ],
+  "topk": 8,
+  "scene_scale": 0.3,
+  "aggregate": {
+    "layer_0": {
+      "head_mean": {
+        "rms_dispersion_m_median": 1.800135850906372,
+        "rms_dispersion_m_p90": 1.9305568933486938,
+        "mass_within_10cm_median": 0.0,
+        "mass_within_30cm_median": 0.0,
+        "effective_patches_median": 6610.82666015625,
+        "centroid_to_token_gaussians_m_median": 1.8591647148132324,
+        "attn_mass_on_valid_patches_mean": 0.9945356845855713,
+        "corr_hit_at_8": 0.25981185715720695,
+        "corr_hit_random_baseline": 0.004464285714285714,
+        "corr_pairs_evaluated": 428079
+      }
+    },
+    "layer_3": {
+      "head_mean": {
+        "rms_dispersion_m_median": 0.4584496021270752,
+        "rms_dispersion_m_p90": 0.662335216999054,
+        "mass_within_10cm_median": 0.3170967996120453,
+        "mass_within_30cm_median": 0.8749194145202637,
+        "effective_patches_median": 39.40764236450195,
+        "centroid_to_token_gaussians_m_median": 2.4942409992218018,
+        "attn_mass_on_valid_patches_mean": 0.9915062189102173,
+        "corr_hit_at_8": 0.3888535374164284,
+        "corr_hit_random_baseline": 0.004464285714285714,
+        "corr_pairs_evaluated": 465170
+      }
+    },
+    "layer_7": {
+      "head_mean": {
+        "rms_dispersion_m_median": 0.7772161960601807,
+        "rms_dispersion_m_p90": 1.012834072113037,
+        "mass_within_10cm_median": 0.0,
+        "mass_within_30cm_median": 0.7417461276054382,
+        "effective_patches_median": 73.5831527709961,
+        "centroid_to_token_gaussians_m_median": 2.406019687652588,
+        "attn_mass_on_valid_patches_mean": 0.992081880569458,
+        "corr_hit_at_8": 0.3664256677816366,
+        "corr_hit_random_baseline": 0.004464285714285714,
+        "corr_pairs_evaluated": 499864
+      }
+    },
+    "layer_9": {
+      "head_mean": {
+        "rms_dispersion_m_median": 1.0202109813690186,
+        "rms_dispersion_m_p90": 1.3094465732574463,
+        "mass_within_10cm_median": 0.0,
+        "mass_within_30cm_median": 0.13699223101139069,
+        "effective_patches_median": 134.44760131835938,
+        "centroid_to_token_gaussians_m_median": 2.3283135890960693,
+        "attn_mass_on_valid_patches_mean": 0.991861879825592,
+        "corr_hit_at_8": 0.3586556822934705,
+        "corr_hit_random_baseline": 0.004464285714285714,
+        "corr_pairs_evaluated": 528387
+      }
+    },
+    "layer_10": {
+      "head_mean": {
+        "rms_dispersion_m_median": 1.1534371376037598,
+        "rms_dispersion_m_p90": 1.3611325025558472,
+        "mass_within_10cm_median": 0.0,
+        "mass_within_30cm_median": 0.019397271797060966,
+        "effective_patches_median": 284.9138488769531,
+        "centroid_to_token_gaussians_m_median": 2.334775447845459,
+        "attn_mass_on_valid_patches_mean": 0.9919759035110474,
+        "corr_hit_at_8": 0.340333660809163,
+        "corr_hit_random_baseline": 0.004464285714285714,
+        "corr_pairs_evaluated": 548641
+      }
+    },
+    "layer_11": {
+      "head_mean": {
+        "rms_dispersion_m_median": 1.2909215688705444,
+        "rms_dispersion_m_p90": 1.4798812866210938,
+        "mass_within_10cm_median": 0.0,
+        "mass_within_30cm_median": 0.0061229681596159935,
+        "effective_patches_median": 460.41278076171875,
+        "centroid_to_token_gaussians_m_median": 2.2423911094665527,
+        "attn_mass_on_valid_patches_mean": 0.9920878410339355,
+        "corr_hit_at_8": 0.3650300019885158,
+        "corr_hit_random_baseline": 0.004464285714285714,
+        "corr_pairs_evaluated": 487801
+      }
+    }
+  },
+  "per_scene": {
+    "7b6477cb95": {
+      "layer_0": {
+        "head_mean": {
+          "rms_dispersion_m_median": 1.800135850906372,
+          "rms_dispersion_m_p90": 1.9305568933486938,
+          "mass_within_10cm_median": 0.0,
+          "mass_within_30cm_median": 0.0,
+          "effective_patches_median": 6610.82666015625,
+          "centroid_to_token_gaussians_m_median": 1.8591647148132324,
+          "attn_mass_on_valid_patches_mean": 0.9945356845855713,
+          "corr_hit_at_8": 0.25981185715720695,
+          "corr_hit_random_baseline": 0.004464285714285714,
+          "corr_pairs_evaluated": 428079
+        }
+      },
+      "layer_3": {
+        "head_mean": {
+          "rms_dispersion_m_median": 0.4584496021270752,
+          "rms_dispersion_m_p90": 0.662335216999054,
+          "mass_within_10cm_median": 0.3170967996120453,
+          "mass_within_30cm_median": 0.8749194145202637,
+          "effective_patches_median": 39.40764236450195,
+          "centroid_to_token_gaussians_m_median": 2.4942409992218018,
+          "attn_mass_on_valid_patches_mean": 0.9915062189102173,
+          "corr_hit_at_8": 0.3888535374164284,
+          "corr_hit_random_baseline": 0.004464285714285714,
+          "corr_pairs_evaluated": 465170
+        }
+      },
+      "layer_7": {
+        "head_mean": {
+          "rms_dispersion_m_median": 0.7772161960601807,
+          "rms_dispersion_m_p90": 1.012834072113037,
+          "mass_within_10cm_median": 0.0,
+          "mass_within_30cm_median": 0.7417461276054382,
+          "effective_patches_median": 73.5831527709961,
+          "centroid_to_token_gaussians_m_median": 2.406019687652588,
+          "attn_mass_on_valid_patches_mean": 0.992081880569458,
+          "corr_hit_at_8": 0.3664256677816366,
+          "corr_hit_random_baseline": 0.004464285714285714,
+          "corr_pairs_evaluated": 499864
+        }
+      },
+      "layer_9": {
+        "head_mean": {
+          "rms_dispersion_m_median": 1.0202109813690186,
+          "rms_dispersion_m_p90": 1.3094465732574463,
+          "mass_within_10cm_median": 0.0,
+          "mass_within_30cm_median": 0.13699223101139069,
+          "effective_patches_median": 134.44760131835938,
+          "centroid_to_token_gaussians_m_median": 2.3283135890960693,
+          "attn_mass_on_valid_patches_mean": 0.991861879825592,
+          "corr_hit_at_8": 0.3586556822934705,
+          "corr_hit_random_baseline": 0.004464285714285714,
+          "corr_pairs_evaluated": 528387
+        }
+      },
+      "layer_10": {
+        "head_mean": {
+          "rms_dispersion_m_median": 1.1534371376037598,
+          "rms_dispersion_m_p90": 1.3611325025558472,
+          "mass_within_10cm_median": 0.0,
+          "mass_within_30cm_median": 0.019397271797060966,
+          "effective_patches_median": 284.9138488769531,
+          "centroid_to_token_gaussians_m_median": 2.334775447845459,
+          "attn_mass_on_valid_patches_mean": 0.9919759035110474,
+          "corr_hit_at_8": 0.340333660809163,
+          "corr_hit_random_baseline": 0.004464285714285714,
+          "corr_pairs_evaluated": 548641
+        }
+      },
+      "layer_11": {
+        "head_mean": {
+          "rms_dispersion_m_median": 1.2909215688705444,
+          "rms_dispersion_m_p90": 1.4798812866210938,
+          "mass_within_10cm_median": 0.0,
+          "mass_within_30cm_median": 0.0061229681596159935,
+          "effective_patches_median": 460.41278076171875,
+          "centroid_to_token_gaussians_m_median": 2.2423911094665527,
+          "attn_mass_on_valid_patches_mean": 0.9920878410339355,
+          "corr_hit_at_8": 0.3650300019885158,
+          "corr_hit_random_baseline": 0.004464285714285714,
+          "corr_pairs_evaluated": 487801
+        }
+      },
+      "valid_patch_fraction": 0.9952567219734192
+    }
+  }
+}

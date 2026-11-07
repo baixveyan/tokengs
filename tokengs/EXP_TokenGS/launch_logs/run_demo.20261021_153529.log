@@ -1,0 +1,185 @@
+=== run_demo started 2026-10-21 15:35:29 on iZwz9foxpfyzf7f1y60xxwZ
+repo: /home/jms/xveyan/4DGS/TokenGS   git HEAD: b16269c   python: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python
+master log: EXP_TokenGS/launch_logs/run_demo.20261021_153529.log
+scenes: 2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd
+experiments with a demo: no_tuning scene_lr1e-2_tuning scene_lr1e-2_geo_tuning token_lr1e-4_tuning token_lr1e-4_geo_tuning scene_lr1e-2_token_lr1e-4_tuning scene_lr1e-2_token_lr1e-4_geo_tuning scene_lr1e-2_token_lr1e-4_vis_xyz_tuning scene_lr1e-2_token_lr1e-4_vis_opac_tuning scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning
+--- GPU status
+0, 7215 MiB, 0 %
+1, 4 MiB, 0 %
+2, 3 MiB, 0 %
+3, 3 MiB, 0 %
+4, 17591 MiB, 100 %
+5, 4 MiB, 0 %
+6, 9787 MiB, 100 %
+7, 13707 MiB, 100 %
+idle GPUs picked: 1 2 3
+skip no_tuning__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning)
+skip scene_lr1e-2_tuning__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning)
+skip scene_lr1e-2_geo_tuning__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning)
+skip token_lr1e-4_tuning__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning)
+skip token_lr1e-4_geo_tuning__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning)
+skip scene_lr1e-2_token_lr1e-4_tuning__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning)
+skip scene_lr1e-2_token_lr1e-4_geo_tuning__2f3e1c0f688c: already complete (EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning)
+[15:35:29] start scene_lr1e-2_token_lr1e-4_vis_xyz_tuning__2f3e1c0f688c on GPU 1 -> EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/console.log
+[15:35:29] start scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning__2f3e1c0f688c on GPU 3 -> EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/console.log
+[15:35:29] start scene_lr1e-2_token_lr1e-4_vis_opac_tuning__2f3e1c0f688c on GPU 2 -> EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/console.log
+[15:35:39] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning__2f3e1c0f688c: running 0/1
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning__2f3e1c0f688c: running 0/1
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning__2f3e1c0f688c: running 0/1
+[15:35:46] end scene_lr1e-2_token_lr1e-4_vis_xyz_tuning__2f3e1c0f688c (exit 0)
+[15:35:46] end scene_lr1e-2_token_lr1e-4_vis_opac_tuning__2f3e1c0f688c (exit 0)
+[15:35:46] end scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning__2f3e1c0f688c (exit 0)
+[15:35:49] progress
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning__2f3e1c0f688c: complete 1/1
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning__2f3e1c0f688c: complete 1/1
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning__2f3e1c0f688c: complete 1/1
+--- exit codes
+  scene_lr1e-2_token_lr1e-4_vis_xyz_tuning__2f3e1c0f688c: 0   log: EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/console.log
+  scene_lr1e-2_token_lr1e-4_vis_opac_tuning__2f3e1c0f688c: 0   log: EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/console.log
+  scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning__2f3e1c0f688c: 0   log: EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/console.log
+--- last lines of each group log
+## scene_lr1e-2_token_lr1e-4_vis_xyz_tuning__2f3e1c0f688c
+[15:35:44] all_frames: PSNR 25.958464 SSIM 0.851095 LPIPS 0.232039 edge 0.018414 HF 0.841827
+[15:35:44] novel_only: PSNR 25.447738 SSIM 0.839874 LPIPS 0.239686 edge 0.018960 HF 0.840752
+[15:35:44] bucket d0: 6 frames PSNR 29.7038 HF 0.8497
+[15:35:44] bucket d1: 11 frames PSNR 27.3598 HF 0.8490
+[15:35:44] bucket d2-3: 19 frames PSNR 25.6351 HF 0.8416
+[15:35:44] bucket d4+: 14 frames PSNR 23.6912 HF 0.8332
+[15:35:44] geometry (mean over scenes): SW 0.5351 packing 402.61/5.80 inter d 0.949 close 0.791 far 0.122 | aniso p50 25.08 needle>0.9 0.166
+[15:35:44] torch peak memory: allocated 15827 MiB, reserved 17290 MiB
+[15:35:44] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning
+[15:35:44] done in 12.2s
+=== exit code: 0
+finished: 2026-10-21 15:35:46   duration: 17 s
+## scene_lr1e-2_token_lr1e-4_vis_opac_tuning__2f3e1c0f688c
+[15:35:44] all_frames: PSNR 25.972534 SSIM 0.851106 LPIPS 0.233034 edge 0.018398 HF 0.841312
+[15:35:44] novel_only: PSNR 25.463042 SSIM 0.839903 LPIPS 0.240706 edge 0.018940 HF 0.840278
+[15:35:44] bucket d0: 6 frames PSNR 29.7088 HF 0.8489
+[15:35:44] bucket d1: 11 frames PSNR 27.3734 HF 0.8486
+[15:35:44] bucket d2-3: 19 frames PSNR 25.6506 HF 0.8410
+[15:35:44] bucket d4+: 14 frames PSNR 23.7074 HF 0.8327
+[15:35:44] geometry (mean over scenes): SW 0.5385 packing 413.39/5.72 inter d 0.951 close 0.792 far 0.122 | aniso p50 25.07 needle>0.9 0.168
+[15:35:44] torch peak memory: allocated 15827 MiB, reserved 17464 MiB
+[15:35:44] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning
+[15:35:44] done in 12.2s
+=== exit code: 0
+finished: 2026-10-21 15:35:46   duration: 17 s
+## scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning__2f3e1c0f688c
+[15:35:44] all_frames: PSNR 25.932229 SSIM 0.850736 LPIPS 0.233066 edge 0.018419 HF 0.840341
+[15:35:44] novel_only: PSNR 25.424717 SSIM 0.839583 LPIPS 0.240668 edge 0.018957 HF 0.839233
+[15:35:44] bucket d0: 6 frames PSNR 29.6540 HF 0.8485
+[15:35:44] bucket d1: 11 frames PSNR 27.3362 HF 0.8481
+[15:35:44] bucket d2-3: 19 frames PSNR 25.5998 HF 0.8401
+[15:35:44] bucket d4+: 14 frames PSNR 23.6852 HF 0.8311
+[15:35:44] geometry (mean over scenes): SW 0.1011 packing 5.64/5.47 inter d 1.458 close 0.652 far 0.217 | aniso p50 25.08 needle>0.9 0.168
+[15:35:44] torch peak memory: allocated 15827 MiB, reserved 17470 MiB
+[15:35:44] outputs in /home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning
+[15:35:44] done in 12.3s
+=== exit code: 0
+finished: 2026-10-21 15:35:46   duration: 17 s
+--- comparing experiments per scene
+scene_2f3e1c0f688c: no_tuning, scene_lr1e-2_tuning, scene_lr1e-2_geo_tuning, token_lr1e-4_tuning, token_lr1e-4_geo_tuning, scene_lr1e-2_token_lr1e-4_tuning, scene_lr1e-2_token_lr1e-4_geo_tuning, scene_lr1e-2_token_lr1e-4_vis_xyz_tuning, scene_lr1e-2_token_lr1e-4_vis_opac_tuning, scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning -> EXP_TokenGS/demo/scene_2f3e1c0f688c/comparison.md
+--- highlighting the same 10 / 20 tokens (with context and selected-only) in every experiment
+--- files per scene (open the .ply files in the PLY viewer)
+EXP_TokenGS/demo/scene_2f3e1c0f688c/comparison.md
+EXP_TokenGS/demo/scene_2f3e1c0f688c/highlighted_tokens.md
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/no_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/no_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_geo_tuning/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_geo_tuning/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_tuning/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_opac_tuning/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning/scene_lr1e-2_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning/scene_lr1e-2_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning/scene_lr1e-2_tuning_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning/scene_lr1e-2_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning/scene_lr1e-2_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning/scene_lr1e-2_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning/scene_lr1e-2_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/scene_lr1e-2_tuning/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_geo_tuning/tuning_curve.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning/cameras.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning/render_strip.png
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning/token_lr1e-4_tuning_highlight10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning/token_lr1e-4_tuning_highlight20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning/token_lr1e-4_tuning_minus_no_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning/token_lr1e-4_tuning_only10tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning/token_lr1e-4_tuning_only20tokens.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning/token_lr1e-4_tuning.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning/token_lr1e-4_tuning_slotcolor.ply
+EXP_TokenGS/demo/scene_2f3e1c0f688c/token_lr1e-4_tuning/tuning_curve.png
+=== run_demo finished 2026-10-21 15:35:53, failed: 0

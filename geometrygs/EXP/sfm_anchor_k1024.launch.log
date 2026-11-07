@@ -1,0 +1,13 @@
+--- GPU status
+0, 7215 MiB, 0 %
+1, 4 MiB, 0 %
+2, 3 MiB, 0 %
+3, 3 MiB, 0 %
+4, 3 MiB, 0 %
+5, 4 MiB, 0 %
+6, 3 MiB, 0 %
+7, 3 MiB, 0 %
+[10:07:53] train sfm_anchor_k1024 on GPUs [1,2,3,4,5,6,7] -> EXP/sfm_anchor_k1024/run.log
+copied best checkpoint -> EXP/sfm_anchor_k1024/model.safetensors
+[12:29:21] evaluate sfm_anchor_k1024 on GPU 1 -> EXP/sfm_anchor_k1024/run.log
+done: EXP/sfm_anchor_k1024/summary.json, demo EXP/demo/scene_7b6477cb95/sfm_anchor_k1024

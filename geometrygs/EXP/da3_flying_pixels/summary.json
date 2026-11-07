@@ -1,0 +1,81 @@
+{
+  "scenes": 20,
+  "da3_code": "/home/jms/xveyan/4DGS/Depth-Anything-3/src/depth_anything_3/api.py",
+  "definitions": "Why do DA3 points bridge front and back surfaces along camera rays? Flying-pixel diagnosis on 10 cm cells.\n\nPer DA3 pixel (pose-conditioned DA3-GIANT-1.1, camera scale, as in EXP/da3_occupancy_10cm):\n  flying  = the predicted depth lies strictly between the nearest and farthest laser depth in the pixel's 5x5\n            neighbourhood and is more than 10 cm from both (suspended between a front and a back surface);\n  laser edge = that laser neighbourhood spans more than 20 cm in depth (an occlusion boundary or grazing surface).\nFar false alarms = predicted-occupied cells that are empty and more than one cell (Chebyshev) from any surface cell.\nCounterfactuals: drop pixels whose own DA3 5x5 depth range exceeds tau * depth (deployable, no laser), or drop the\nlaser-defined flying pixels (oracle). Laser is used for labels, the flying definition and the oracle only.\n",
+  "pooled_pixels": {
+    "flying_fraction": 0.013472881872439757,
+    "laser_edge_fraction": 0.046920677088201045
+  },
+  "far_false_alarms": {
+    "cells": 60127,
+    "of_all_fp_cells": 0.344567335243553,
+    "points": 3232805,
+    "points_flying": 0.029492344429738762,
+    "points_on_laser_edge": 0.046579673070304035,
+    "points_pred_edge_0p1": 0.05500517333804801,
+    "cells_only_from_flying": 0.25444476010079387
+  },
+  "variants": {
+    "all_pixels": {
+      "tp": 116812,
+      "fp": 174500,
+      "fn": 67043,
+      "far_fp": 60127,
+      "kept": 55695360,
+      "total": 55695360,
+      "iou": 0.32596726709547796,
+      "recall": 0.6353485083353729,
+      "precision": 0.40098588454989836,
+      "pixels_kept": 1.0
+    },
+    "oracle_drop_flying": {
+      "tp": 113477,
+      "fp": 143402,
+      "fn": 70378,
+      "far_fp": 44828,
+      "kept": 54944983,
+      "total": 55695360,
+      "iou": 0.346751941134949,
+      "recall": 0.6172092137826004,
+      "precision": 0.4417527318309399,
+      "pixels_kept": 0.9865271182374977
+    },
+    "drop_pred_edge_0.05": {
+      "tp": 97734,
+      "fp": 102288,
+      "fn": 86121,
+      "far_fp": 29827,
+      "kept": 52019917,
+      "total": 55695360,
+      "iou": 0.3415564944800327,
+      "recall": 0.5315819531696173,
+      "precision": 0.48861625221225663,
+      "pixels_kept": 0.9340080933133389
+    },
+    "drop_pred_edge_0.1": {
+      "tp": 106655,
+      "fp": 112024,
+      "fn": 77200,
+      "far_fp": 31917,
+      "kept": 53551863,
+      "total": 55695360,
+      "iou": 0.36046829954136655,
+      "recall": 0.58010388621468,
+      "precision": 0.4877240155661952,
+      "pixels_kept": 0.96151390349214
+    },
+    "drop_pred_edge_0.2": {
+      "tp": 110943,
+      "fp": 125034,
+      "fn": 72912,
+      "far_fp": 35858,
+      "kept": 54399429,
+      "total": 55695360,
+      "iou": 0.35916785641444016,
+      "recall": 0.6034266133637921,
+      "precision": 0.4701432766752692,
+      "pixels_kept": 0.9767317959700772
+    }
+  },
+  "elapsed_seconds": 72.65383345261216
+}

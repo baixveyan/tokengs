@@ -1,0 +1,206 @@
+=== group: pretrained_6view_rgb_fp32_50val
+started: 2026-10-26 11:54:30   host: iZwz9foxpfyzf7f1y60xxwZ   GPU: 1
+git HEAD: 20aacebbab21f3eec6e314146739024bf823cd2a
+CUDA_HOME=/usr/local/cuda-12.8
+command: CUDA_VISIBLE_DEVICES=1 /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python -u scripts/evaluate_scannetpp.py --config EXP_ScanNetPP/configs/pretrained_6view_rgb_fp32_50val.json --output EXP_ScanNetPP/pretrained_6view_rgb_fp32_50val
+=== output (stdout + stderr, unfiltered)
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Evaluating 50 scenes on physical GPU 1 (GPU-e5407adb-2c03-14c4-997f-24b6d75f5be4)
+FP32; TF32 disabled; six RGB inputs; eight novel targets; no point cloud or optimization
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[01/50] 7b6477cb95 PSNR=29.4772 SSIM=0.94258 LPIPS=0.14890 forward=0.899s
+[02/50] c50d2d1d42 PSNR=24.4262 SSIM=0.87630 LPIPS=0.21436 forward=0.694s
+[03/50] cc5237fd77 PSNR=34.4159 SSIM=0.96444 LPIPS=0.09198 forward=0.694s
+[04/50] acd95847c5 PSNR=32.4379 SSIM=0.97667 LPIPS=0.07154 forward=0.694s
+[05/50] fb5a96b1a2 PSNR=34.5849 SSIM=0.97293 LPIPS=0.10125 forward=0.694s
+[06/50] a24f64f7fb PSNR=33.8421 SSIM=0.96699 LPIPS=0.11054 forward=0.694s
+[07/50] 1ada7a0617 PSNR=28.2767 SSIM=0.93083 LPIPS=0.17131 forward=0.694s
+[08/50] 5eb31827b7 PSNR=30.1040 SSIM=0.90796 LPIPS=0.26249 forward=0.694s
+[09/50] 3e8bba0176 PSNR=29.4208 SSIM=0.93446 LPIPS=0.16273 forward=0.694s
+[10/50] 3f15a9266d PSNR=33.1203 SSIM=0.96277 LPIPS=0.10937 forward=0.695s
+[11/50] 21d970d8de PSNR=22.9158 SSIM=0.85630 LPIPS=0.28111 forward=0.694s
+[12/50] 5748ce6f01 PSNR=34.2020 SSIM=0.97178 LPIPS=0.10029 forward=0.695s
+[13/50] c4c04e6d6c PSNR=27.6218 SSIM=0.90148 LPIPS=0.21818 forward=0.695s
+[14/50] 7831862f02 PSNR=32.0635 SSIM=0.94975 LPIPS=0.14143 forward=0.694s
+[15/50] bde1e479ad PSNR=26.6983 SSIM=0.90309 LPIPS=0.20786 forward=0.694s
+[16/50] 38d58a7a31 PSNR=27.0534 SSIM=0.91847 LPIPS=0.18747 forward=0.696s
+[17/50] 5ee7c22ba0 PSNR=36.3963 SSIM=0.98180 LPIPS=0.14184 forward=0.696s
+[18/50] f9f95681fd PSNR=36.1879 SSIM=0.97619 LPIPS=0.09468 forward=0.695s
+[19/50] 3864514494 PSNR=27.4357 SSIM=0.89949 LPIPS=0.22581 forward=0.695s
+[20/50] 40aec5fffa PSNR=27.6149 SSIM=0.92921 LPIPS=0.20439 forward=0.695s
+[21/50] 13c3e046d7 PSNR=32.1328 SSIM=0.95008 LPIPS=0.17887 forward=0.696s
+[22/50] e398684d27 PSNR=24.7500 SSIM=0.88813 LPIPS=0.25629 forward=0.696s
+[23/50] a8bf42d646 PSNR=27.6396 SSIM=0.89142 LPIPS=0.23787 forward=0.697s
+[24/50] 45b0dac5e3 PSNR=36.9185 SSIM=0.96534 LPIPS=0.11704 forward=0.696s
+[25/50] 31a2c91c43 PSNR=35.5400 SSIM=0.97559 LPIPS=0.14269 forward=0.697s
+[26/50] e7af285f7d PSNR=35.6883 SSIM=0.96993 LPIPS=0.13406 forward=0.698s
+[27/50] 286b55a2bf PSNR=31.2179 SSIM=0.94894 LPIPS=0.17994 forward=0.697s
+[28/50] 7bc286c1b6 PSNR=31.7791 SSIM=0.94062 LPIPS=0.19145 forward=0.697s
+[29/50] f3685d06a9 PSNR=22.5162 SSIM=0.86099 LPIPS=0.38184 forward=0.699s
+[30/50] b0a08200c9 PSNR=22.4940 SSIM=0.82921 LPIPS=0.28966 forward=0.698s
+[31/50] 825d228aec PSNR=37.0878 SSIM=0.97898 LPIPS=0.10623 forward=0.699s
+[32/50] a980334473 PSNR=39.3303 SSIM=0.98754 LPIPS=0.08152 forward=0.699s
+[33/50] f2dc06b1d2 PSNR=37.6093 SSIM=0.97930 LPIPS=0.10921 forward=0.700s
+[34/50] 5942004064 PSNR=24.9263 SSIM=0.87244 LPIPS=0.27075 forward=0.700s
+[35/50] 25f3b7a318 PSNR=30.6670 SSIM=0.94544 LPIPS=0.11577 forward=0.700s
+[36/50] bcd2436daf PSNR=31.3114 SSIM=0.92573 LPIPS=0.21893 forward=0.700s
+[37/50] f3d64c30f8 PSNR=26.6884 SSIM=0.89463 LPIPS=0.22610 forward=0.699s
+[38/50] 0d2ee665be PSNR=21.5095 SSIM=0.81407 LPIPS=0.32708 forward=0.699s
+[39/50] 3db0a1c8f3 PSNR=36.2999 SSIM=0.95681 LPIPS=0.15364 forward=0.701s
+[40/50] ac48a9b736 PSNR=30.5835 SSIM=0.94705 LPIPS=0.17500 forward=0.701s
+[41/50] c5439f4607 PSNR=29.1398 SSIM=0.90498 LPIPS=0.15629 forward=0.701s
+[42/50] 578511c8a9 PSNR=28.5342 SSIM=0.93060 LPIPS=0.18227 forward=0.701s
+[43/50] d755b3d9d8 PSNR=26.6176 SSIM=0.88322 LPIPS=0.18374 forward=0.701s
+[44/50] 99fa5c25e1 PSNR=24.2940 SSIM=0.80915 LPIPS=0.28000 forward=0.701s
+[45/50] 09c1414f1b PSNR=35.2721 SSIM=0.95726 LPIPS=0.12956 forward=0.702s
+[46/50] 5f99900f09 PSNR=32.8080 SSIM=0.94024 LPIPS=0.15708 forward=0.702s
+[47/50] 9071e139d9 PSNR=33.9762 SSIM=0.97040 LPIPS=0.10079 forward=0.702s
+[48/50] 6115eddb86 PSNR=34.7838 SSIM=0.97216 LPIPS=0.14686 forward=0.703s
+[49/50] 27dd4da69e PSNR=21.1793 SSIM=0.77082 LPIPS=0.41142 forward=0.701s
+[50/50] c49a8c6cff PSNR=33.5731 SSIM=0.96425 LPIPS=0.11792 forward=0.703s
+{
+  "name": "pretrained_6view_rgb_fp32_50val",
+  "psnr": 30.50327006101608,
+  "ssim": 0.9269758507609367,
+  "lpips": 0.18014729322865605,
+  "num_scenes": 50,
+  "num_target_frames": 400,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "window_size": 18,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "geometry_metrics_status": "pending discussion; not computed",
+  "forward_seconds_mean": 0.7016586687415838,
+  "forward_seconds_first_scene": 0.8985484698787332,
+  "elapsed_seconds": 56.7082141675055,
+  "peak_allocated_mib_including_lpips": 3828.12841796875,
+  "peak_reserved_mib_including_lpips": 3948.0,
+  "checkpoint_sha256": "5913da347475049cb58e552634ee1c527293c2571576806db0d4da702ce978c3",
+  "completed_at": "2026-10-26T03:55:29.166752+00:00"
+}
+=== exit code: 0
+finished: 2026-10-26 11:55:30   duration: 60 s
+=== Backfill G1-G4 started: 2026-10-26T16:36:41+08:00; GPU=3; git=20aacebbab21f3eec6e314146739024bf823cd2a
+Command: CUDA_VISIBLE_DEVICES=3 /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python -u scripts/evaluate_scannetpp.py --output EXP_ScanNetPP/baseline_pretrained_6view --checkpoint checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors --model-type tokengs --backfill-geometry-from-reconstructions /tmp/tokengs_scannetpp_layout_20261026_115429/pretrained_6view_rgb_fp32_50val/reconstructions
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[Geo 01/50] 7b6477cb95: AbsRel=0.0762 RMSE=0.174m RayThick=0.070m F@3cm=0.4107 F@5cm=0.5750 NormMed=26.71deg
+Exit code: 143; Finished: 2026-10-26T16:49:16+08:00
+=== Backfill G1-G4 started: 2026-10-26T16:49:45+08:00; GPU=2; git=20aacebbab21f3eec6e314146739024bf823cd2a
+Command: CUDA_VISIBLE_DEVICES=2 /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python -u scripts/evaluate_scannetpp.py --output EXP_ScanNetPP/baseline_pretrained_6view --checkpoint checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors --model-type tokengs --backfill-geometry-from-reconstructions /tmp/tokengs_scannetpp_layout_20261026_115429/pretrained_6view_rgb_fp32_50val/reconstructions
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[Geo 01/50] 7b6477cb95: AbsRel=0.0762 RMSE=0.174m RayThick=0.070m F@3cm=0.4107 F@5cm=0.5750 NormMed=26.71deg
+[Geo 02/50] c50d2d1d42: AbsRel=0.1095 RMSE=0.257m RayThick=0.082m F@3cm=0.2949 F@5cm=0.3977 NormMed=34.16deg
+[Geo 03/50] cc5237fd77: AbsRel=0.1523 RMSE=0.449m RayThick=0.056m F@3cm=0.4072 F@5cm=0.5466 NormMed=39.20deg
+[Geo 04/50] acd95847c5: AbsRel=0.2081 RMSE=0.665m RayThick=0.116m F@3cm=0.2291 F@5cm=0.3201 NormMed=50.73deg
+[Geo 05/50] fb5a96b1a2: AbsRel=0.3175 RMSE=1.060m RayThick=0.161m F@3cm=0.2185 F@5cm=0.3340 NormMed=42.82deg
+[Geo 06/50] a24f64f7fb: AbsRel=0.1213 RMSE=0.175m RayThick=0.054m F@3cm=0.4567 F@5cm=0.5924 NormMed=42.66deg
+[Geo 07/50] 1ada7a0617: AbsRel=0.1777 RMSE=0.381m RayThick=0.107m F@3cm=0.2492 F@5cm=0.3501 NormMed=40.67deg
+[Geo 08/50] 5eb31827b7: AbsRel=0.0505 RMSE=0.104m RayThick=0.053m F@3cm=0.5605 F@5cm=0.6923 NormMed=26.04deg
+[Geo 09/50] 3e8bba0176: AbsRel=0.0611 RMSE=0.135m RayThick=0.059m F@3cm=0.3712 F@5cm=0.5439 NormMed=23.12deg
+[Geo 10/50] 3f15a9266d: AbsRel=0.1770 RMSE=0.308m RayThick=0.095m F@3cm=0.2557 F@5cm=0.3777 NormMed=54.19deg
+[Geo 11/50] 21d970d8de: AbsRel=0.1046 RMSE=0.344m RayThick=0.135m F@3cm=0.2725 F@5cm=0.4036 NormMed=28.19deg
+[Geo 12/50] 5748ce6f01: AbsRel=0.1574 RMSE=0.505m RayThick=0.073m F@3cm=0.3284 F@5cm=0.4402 NormMed=35.42deg
+[Geo 13/50] c4c04e6d6c: AbsRel=0.1193 RMSE=0.429m RayThick=0.131m F@3cm=0.3070 F@5cm=0.4541 NormMed=22.97deg
+[Geo 14/50] 7831862f02: AbsRel=0.0762 RMSE=0.254m RayThick=0.101m F@3cm=0.2974 F@5cm=0.4388 NormMed=31.35deg
+[Geo 15/50] bde1e479ad: AbsRel=0.1357 RMSE=0.417m RayThick=0.137m F@3cm=0.2285 F@5cm=0.3529 NormMed=37.53deg
+[Geo 16/50] 38d58a7a31: AbsRel=0.1551 RMSE=0.321m RayThick=0.092m F@3cm=0.3191 F@5cm=0.4572 NormMed=26.86deg
+[Geo 17/50] 5ee7c22ba0: AbsRel=0.1624 RMSE=0.244m RayThick=0.096m F@3cm=0.2201 F@5cm=0.3140 NormMed=46.23deg
+[Geo 18/50] f9f95681fd: AbsRel=0.1919 RMSE=0.373m RayThick=0.064m F@3cm=0.3559 F@5cm=0.4867 NormMed=42.83deg
+[Geo 19/50] 3864514494: AbsRel=0.1404 RMSE=0.252m RayThick=0.054m F@3cm=0.3590 F@5cm=0.4855 NormMed=40.33deg
+[Geo 20/50] 40aec5fffa: AbsRel=0.2550 RMSE=0.358m RayThick=0.115m F@3cm=0.2801 F@5cm=0.3805 NormMed=39.85deg
+[Geo 21/50] 13c3e046d7: AbsRel=0.1366 RMSE=0.283m RayThick=0.088m F@3cm=0.2247 F@5cm=0.3178 NormMed=43.66deg
+[Geo 22/50] e398684d27: AbsRel=0.2116 RMSE=0.237m RayThick=0.084m F@3cm=0.1709 F@5cm=0.2775 NormMed=37.01deg
+[Geo 23/50] a8bf42d646: AbsRel=0.0991 RMSE=0.296m RayThick=0.081m F@3cm=0.3741 F@5cm=0.5148 NormMed=28.95deg
+[Geo 24/50] 45b0dac5e3: AbsRel=0.0471 RMSE=0.207m RayThick=0.049m F@3cm=0.5829 F@5cm=0.7202 NormMed=26.14deg
+[Geo 25/50] 31a2c91c43: AbsRel=0.1632 RMSE=0.301m RayThick=0.098m F@3cm=0.2621 F@5cm=0.3693 NormMed=46.25deg
+[Geo 26/50] e7af285f7d: AbsRel=0.1381 RMSE=0.139m RayThick=0.048m F@3cm=0.3985 F@5cm=0.5470 NormMed=45.32deg
+[Geo 27/50] 286b55a2bf: AbsRel=0.2423 RMSE=0.242m RayThick=0.061m F@3cm=0.2737 F@5cm=0.3913 NormMed=40.30deg
+[Geo 28/50] 7bc286c1b6: AbsRel=0.1355 RMSE=0.159m RayThick=0.050m F@3cm=0.3774 F@5cm=0.5186 NormMed=33.65deg
+[Geo 29/50] f3685d06a9: AbsRel=0.7320 RMSE=0.790m RayThick=0.126m F@3cm=0.1374 F@5cm=0.2190 NormMed=44.12deg
+[Geo 30/50] b0a08200c9: AbsRel=0.6059 RMSE=0.455m RayThick=0.089m F@3cm=0.2235 F@5cm=0.3093 NormMed=47.35deg
+[Geo 31/50] 825d228aec: AbsRel=0.1915 RMSE=0.253m RayThick=0.082m F@3cm=0.3432 F@5cm=0.4590 NormMed=44.48deg
+[Geo 32/50] a980334473: AbsRel=0.0520 RMSE=0.145m RayThick=0.060m F@3cm=0.5188 F@5cm=0.6547 NormMed=23.48deg
+[Geo 33/50] f2dc06b1d2: AbsRel=0.1172 RMSE=0.297m RayThick=0.064m F@3cm=0.3007 F@5cm=0.4297 NormMed=40.96deg
+[Geo 34/50] 5942004064: AbsRel=0.3510 RMSE=0.350m RayThick=0.097m F@3cm=0.2114 F@5cm=0.3225 NormMed=46.57deg
+[Geo 35/50] 25f3b7a318: AbsRel=0.1623 RMSE=0.306m RayThick=0.093m F@3cm=0.3059 F@5cm=0.4199 NormMed=50.46deg
+[Geo 36/50] bcd2436daf: AbsRel=0.1323 RMSE=0.203m RayThick=0.075m F@3cm=0.4475 F@5cm=0.5835 NormMed=24.74deg
+[Geo 37/50] f3d64c30f8: AbsRel=0.1272 RMSE=0.270m RayThick=0.064m F@3cm=0.3130 F@5cm=0.4211 NormMed=34.07deg
+[Geo 38/50] 0d2ee665be: AbsRel=0.2086 RMSE=0.403m RayThick=0.079m F@3cm=0.1999 F@5cm=0.3100 NormMed=37.70deg
+[Geo 39/50] 3db0a1c8f3: AbsRel=0.2250 RMSE=0.230m RayThick=0.076m F@3cm=0.3732 F@5cm=0.4995 NormMed=36.71deg
+[Geo 40/50] ac48a9b736: AbsRel=0.1003 RMSE=0.474m RayThick=0.141m F@3cm=0.2542 F@5cm=0.3467 NormMed=28.06deg
+[Geo 41/50] c5439f4607: AbsRel=0.0701 RMSE=0.302m RayThick=0.072m F@3cm=0.4815 F@5cm=0.6818 NormMed=29.63deg
+[Geo 42/50] 578511c8a9: AbsRel=0.0937 RMSE=0.364m RayThick=0.139m F@3cm=0.3008 F@5cm=0.4280 NormMed=33.67deg
+[Geo 43/50] d755b3d9d8: AbsRel=0.2123 RMSE=0.336m RayThick=0.048m F@3cm=0.2652 F@5cm=0.4095 NormMed=45.54deg
+[Geo 44/50] 99fa5c25e1: AbsRel=0.1215 RMSE=0.385m RayThick=0.075m F@3cm=0.4529 F@5cm=0.6218 NormMed=35.84deg
+[Geo 45/50] 09c1414f1b: AbsRel=0.1401 RMSE=0.472m RayThick=0.145m F@3cm=0.2571 F@5cm=0.3699 NormMed=39.86deg
+[Geo 46/50] 5f99900f09: AbsRel=0.0849 RMSE=0.411m RayThick=0.050m F@3cm=0.4152 F@5cm=0.5207 NormMed=25.13deg
+[Geo 47/50] 9071e139d9: AbsRel=0.1305 RMSE=0.315m RayThick=0.101m F@3cm=0.2981 F@5cm=0.4171 NormMed=43.31deg
+[Geo 48/50] 6115eddb86: AbsRel=0.1370 RMSE=0.354m RayThick=0.059m F@3cm=0.3517 F@5cm=0.4851 NormMed=35.18deg
+[Geo 49/50] 27dd4da69e: AbsRel=0.4911 RMSE=0.575m RayThick=0.072m F@3cm=0.1621 F@5cm=0.2502 NormMed=44.57deg
+[Geo 50/50] c49a8c6cff: AbsRel=0.1110 RMSE=0.209m RayThick=0.076m F@3cm=0.3585 F@5cm=0.5048 NormMed=41.32deg
+{
+  "name": "baseline_pretrained_6view",
+  "psnr": 30.50327006101608,
+  "ssim": 0.9269758507609367,
+  "lpips": 0.18014729322865605,
+  "num_scenes": 50,
+  "num_target_frames": 400,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "window_size": 18,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "geometry_metrics_status": "computed (Open3D raycast + gsplat ray thickness, physical scale)",
+  "forward_seconds_mean": 0.7016586687415838,
+  "forward_seconds_first_scene": 0.8985484698787332,
+  "elapsed_seconds": 56.7082141675055,
+  "peak_allocated_mib_including_lpips": 3828.12841796875,
+  "peak_reserved_mib_including_lpips": 3948.0,
+  "checkpoint_sha256": "5913da347475049cb58e552634ee1c527293c2571576806db0d4da702ce978c3",
+  "completed_at": "2026-10-26T03:55:29.166752+00:00",
+  "original_run_name": "pretrained_6view_rgb_fp32_50val",
+  "depth_cov": 0.9988468274902175,
+  "depth_scale_ratio_med": 1.0163035108149052,
+  "depth_absrel": 0.1744092080835253,
+  "depth_rmse_m": 0.3393755688952903,
+  "depth_delta_105": 0.46975342005724086,
+  "depth_delta_110": 0.6238503017742186,
+  "ray_thick_med_m": 0.08588120757602155,
+  "ray_thick_p90_m": 0.25682559796608984,
+  "normal_mean_deg": 40.653436636924745,
+  "normal_med_deg": 37.3184299993515,
+  "normal_lt11_25": 0.12013915464282036,
+  "normal_lt30": 0.4127121874317527,
+  "surf_acc_cm": 22.433021530508995,
+  "surf_comp_cm": 10.20884744077921,
+  "surf_prec_3cm": 0.2705563724040985,
+  "surf_rec_3cm": 0.40221571922302246,
+  "surf_fscore_3cm": 0.3211513625536592,
+  "surf_prec_5cm": 0.3870416665077209,
+  "surf_rec_5cm": 0.5332851308584213,
+  "surf_fscore_5cm": 0.44527248777792605,
+  "geometry_alignment_median_ratio": 1.0035595931112766
+}
+Exit code: 0; Finished: 2026-10-26T16:54:46+08:00

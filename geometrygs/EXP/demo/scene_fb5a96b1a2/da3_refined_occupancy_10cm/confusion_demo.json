@@ -1,0 +1,47 @@
+{
+  "scene": "fb5a96b1a2",
+  "prediction": "DA3 + edge filter + SfM scale",
+  "mask": "/mnt/disk/xveyan/workspace_scannetpp/geometrygs_da3_refined_occupancy_10cm/fb5a96b1a2.npz",
+  "mask_key": "sfm_global_edge",
+  "probability_threshold": null,
+  "grid_dims": [
+    67,
+    38,
+    49
+  ],
+  "cell_m": 0.1,
+  "cells": 124754,
+  "input_frames": [
+    357,
+    360,
+    363,
+    367,
+    370,
+    374
+  ],
+  "counts": {
+    "prediction": {
+      "tp": 4340,
+      "fp": 4420,
+      "fn": 2455,
+      "tn": 113539,
+      "recall": 0.6387049300956585,
+      "precision": 0.4954337899543379,
+      "iou": 0.38698172090949623,
+      "accuracy": 0.9448915465636373
+    }
+  },
+  "fp_shells": {
+    "fp_within_1_cells": 0.8115384615384615,
+    "fp_within_2_cells": 0.9355203619909502,
+    "fp_within_3_cells": 0.9855203619909503
+  },
+  "colours": {
+    "tp": "green",
+    "fp": "purple",
+    "fn": "red",
+    "label": "gold",
+    "prediction": "blue"
+  },
+  "coordinates": "PLY in normalized mean-camera frame (0.3 units per metre); PNG axes in metres"
+}

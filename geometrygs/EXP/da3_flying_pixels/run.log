@@ -1,0 +1,183 @@
+=== Started 2026-11-07T15:51:25+08:00; GPU=1
+Command: CUDA_VISIBLE_DEVICES=1 python -u scripts/diag_da3_flying_pixels.py --output EXP/da3_flying_pixels
+[97m[INFO ] using SwiGLU layer as FFN[0m
+[93m[WARN ] Dependency 'e3nn' not found. Required for rotating the camera space SH coeff[0m
+Loading weights from local directory
+[97m[INFO ] Processed Images Done taking 0.03405928611755371 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 1.2300362586975098 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.004669666290283203 seconds[0m
+cc5237fd77: flying 0.006 of pixels; far FP cells 121/1114 FP; their points: flying 0.11, laser edge 0.11; cells only from flying 0.25 | IoU all 0.397 drop-edge-0.1 0.428 oracle 0.405
+[97m[INFO ] Processed Images Done taking 0.03216147422790527 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8781716823577881 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0009295940399169922 seconds[0m
+acd95847c5: flying 0.009 of pixels; far FP cells 1157/3272 FP; their points: flying 0.01, laser edge 0.01; cells only from flying 0.23 | IoU all 0.288 drop-edge-0.1 0.295 oracle 0.304
+[97m[INFO ] Processed Images Done taking 0.02888774871826172 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8777716159820557 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007426738739013672 seconds[0m
+fb5a96b1a2: flying 0.023 of pixels; far FP cells 1452/6350 FP; their points: flying 0.04, laser edge 0.04; cells only from flying 0.30 | IoU all 0.332 drop-edge-0.1 0.356 oracle 0.355
+[97m[INFO ] Processed Images Done taking 0.03253030776977539 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8777456283569336 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007367134094238281 seconds[0m
+1ada7a0617: flying 0.006 of pixels; far FP cells 1660/5795 FP; their points: flying 0.28, laser edge 0.30; cells only from flying 0.55 | IoU all 0.501 drop-edge-0.1 0.594 oracle 0.552
+[97m[INFO ] Processed Images Done taking 0.028409481048583984 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.877964973449707 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.000732421875 seconds[0m
+3e8bba0176: flying 0.005 of pixels; far FP cells 973/3090 FP; their points: flying 0.03, laser edge 0.03; cells only from flying 0.41 | IoU all 0.450 drop-edge-0.1 0.526 oracle 0.489
+[97m[INFO ] Processed Images Done taking 0.027940750122070312 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8791046142578125 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007388591766357422 seconds[0m
+21d970d8de: flying 0.021 of pixels; far FP cells 4318/17723 FP; their points: flying 0.10, laser edge 0.12; cells only from flying 0.49 | IoU all 0.450 drop-edge-0.1 0.535 oracle 0.504
+[97m[INFO ] Processed Images Done taking 0.025493621826171875 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8790550231933594 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007457733154296875 seconds[0m
+c4c04e6d6c: flying 0.038 of pixels; far FP cells 6650/20471 FP; their points: flying 0.19, laser edge 0.22; cells only from flying 0.42 | IoU all 0.367 drop-edge-0.1 0.458 oracle 0.404
+[97m[INFO ] Processed Images Done taking 0.02815532684326172 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8792238235473633 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007631778717041016 seconds[0m
+7831862f02: flying 0.003 of pixels; far FP cells 440/3942 FP; their points: flying 0.02, laser edge 0.03; cells only from flying 0.24 | IoU all 0.495 drop-edge-0.1 0.531 oracle 0.509
+[97m[INFO ] Processed Images Done taking 0.03160977363586426 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8797791004180908 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007417201995849609 seconds[0m
+bde1e479ad: flying 0.019 of pixels; far FP cells 5834/22029 FP; their points: flying 0.03, laser edge 0.05; cells only from flying 0.26 | IoU all 0.305 drop-edge-0.1 0.324 oracle 0.321
+[97m[INFO ] Processed Images Done taking 0.024997949600219727 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8798313140869141 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007288455963134766 seconds[0m
+38d58a7a31: flying 0.024 of pixels; far FP cells 8004/17880 FP; their points: flying 0.02, laser edge 0.02; cells only from flying 0.16 | IoU all 0.352 drop-edge-0.1 0.407 oracle 0.373
+[97m[INFO ] Processed Images Done taking 0.025269508361816406 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8804254531860352 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007448196411132812 seconds[0m
+40aec5fffa: flying 0.004 of pixels; far FP cells 456/2965 FP; their points: flying 0.06, laser edge 0.06; cells only from flying 0.44 | IoU all 0.439 drop-edge-0.1 0.455 oracle 0.457
+[97m[INFO ] Processed Images Done taking 0.02876424789428711 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8804450035095215 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007493495941162109 seconds[0m
+286b55a2bf: flying 0.002 of pixels; far FP cells 300/894 FP; their points: flying 0.04, laser edge 0.04; cells only from flying 0.14 | IoU all 0.555 drop-edge-0.1 0.589 oracle 0.566
+[97m[INFO ] Processed Images Done taking 0.030487537384033203 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8814725875854492 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007529258728027344 seconds[0m
+7bc286c1b6: flying 0.001 of pixels; far FP cells 265/1305 FP; their points: flying 0.00, laser edge 0.00; cells only from flying 0.15 | IoU all 0.396 drop-edge-0.1 0.418 oracle 0.404
+[97m[INFO ] Processed Images Done taking 0.024408340454101562 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8818473815917969 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007297992706298828 seconds[0m
+bcd2436daf: flying 0.006 of pixels; far FP cells 561/3201 FP; their points: flying 0.01, laser edge 0.01; cells only from flying 0.49 | IoU all 0.452 drop-edge-0.1 0.467 oracle 0.479
+[97m[INFO ] Processed Images Done taking 0.02918100357055664 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8821659088134766 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007307529449462891 seconds[0m
+f3d64c30f8: flying 0.008 of pixels; far FP cells 1219/4538 FP; their points: flying 0.02, laser edge 0.03; cells only from flying 0.29 | IoU all 0.388 drop-edge-0.1 0.464 oracle 0.418
+[97m[INFO ] Processed Images Done taking 0.02566385269165039 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8821349143981934 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007433891296386719 seconds[0m
+c5439f4607: flying 0.019 of pixels; far FP cells 3782/8160 FP; their points: flying 0.04, laser edge 0.05; cells only from flying 0.28 | IoU all 0.273 drop-edge-0.1 0.356 oracle 0.300
+[97m[INFO ] Processed Images Done taking 0.03656816482543945 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8821718692779541 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007836818695068359 seconds[0m
+578511c8a9: flying 0.042 of pixels; far FP cells 17004/34132 FP; their points: flying 0.03, laser edge 0.08; cells only from flying 0.14 | IoU all 0.139 drop-edge-0.1 0.129 oracle 0.136
+[97m[INFO ] Processed Images Done taking 0.026256799697875977 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8821325302124023 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007679462432861328 seconds[0m
+09c1414f1b: flying 0.018 of pixels; far FP cells 2387/7822 FP; their points: flying 0.10, laser edge 0.13; cells only from flying 0.38 | IoU all 0.316 drop-edge-0.1 0.338 oracle 0.339
+[97m[INFO ] Processed Images Done taking 0.03624153137207031 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8821094036102295 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007328987121582031 seconds[0m
+5f99900f09: flying 0.010 of pixels; far FP cells 1372/4628 FP; their points: flying 0.01, laser edge 0.09; cells only from flying 0.01 | IoU all 0.161 drop-edge-0.1 0.146 oracle 0.162
+[97m[INFO ] Processed Images Done taking 0.02510666847229004 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8822216987609863 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007555484771728516 seconds[0m
+9071e139d9: flying 0.006 of pixels; far FP cells 2172/5189 FP; their points: flying 0.01, laser edge 0.02; cells only from flying 0.07 | IoU all 0.143 drop-edge-0.1 0.146 oracle 0.146
+{
+ "pooled_pixels": {
+  "flying_fraction": 0.013472881872439757,
+  "laser_edge_fraction": 0.046920677088201045
+ },
+ "far_false_alarms": {
+  "cells": 60127,
+  "of_all_fp_cells": 0.344567335243553,
+  "points": 3232805,
+  "points_flying": 0.029492344429738762,
+  "points_on_laser_edge": 0.046579673070304035,
+  "points_pred_edge_0p1": 0.05500517333804801,
+  "cells_only_from_flying": 0.25444476010079387
+ },
+ "variants": {
+  "all_pixels": {
+   "tp": 116812,
+   "fp": 174500,
+   "fn": 67043,
+   "far_fp": 60127,
+   "kept": 55695360,
+   "total": 55695360,
+   "iou": 0.32596726709547796,
+   "recall": 0.6353485083353729,
+   "precision": 0.40098588454989836,
+   "pixels_kept": 1.0
+  },
+  "oracle_drop_flying": {
+   "tp": 113477,
+   "fp": 143402,
+   "fn": 70378,
+   "far_fp": 44828,
+   "kept": 54944983,
+   "total": 55695360,
+   "iou": 0.346751941134949,
+   "recall": 0.6172092137826004,
+   "precision": 0.4417527318309399,
+   "pixels_kept": 0.9865271182374977
+  },
+  "drop_pred_edge_0.05": {
+   "tp": 97734,
+   "fp": 102288,
+   "fn": 86121,
+   "far_fp": 29827,
+   "kept": 52019917,
+   "total": 55695360,
+   "iou": 0.3415564944800327,
+   "recall": 0.5315819531696173,
+   "precision": 0.48861625221225663,
+   "pixels_kept": 0.9340080933133389
+  },
+  "drop_pred_edge_0.1": {
+   "tp": 106655,
+   "fp": 112024,
+   "fn": 77200,
+   "far_fp": 31917,
+   "kept": 53551863,
+   "total": 55695360,
+   "iou": 0.36046829954136655,
+   "recall": 0.58010388621468,
+   "precision": 0.4877240155661952,
+   "pixels_kept": 0.96151390349214
+  },
+  "drop_pred_edge_0.2": {
+   "tp": 110943,
+   "fp": 125034,
+   "fn": 72912,
+   "far_fp": 35858,
+   "kept": 54399429,
+   "total": 55695360,
+   "iou": 0.35916785641444016,
+   "recall": 0.6034266133637921,
+   "precision": 0.4701432766752692,
+   "pixels_kept": 0.9767317959700772
+  }
+ }
+}
+=== Finished 2026-11-07T15:52:41+08:00; exit=0

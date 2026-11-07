@@ -1,0 +1,657 @@
+{
+  "status": "complete",
+  "started_at": "2026-10-19T16:31:35.194789+08:00",
+  "completed_at": "2026-10-19T16:37:13.065979+08:00",
+  "scene_count": 140,
+  "expected_scene_count": 140,
+  "formal_complete": true,
+  "preset": "eval_dl3dv_latent_6view_ssim",
+  "ttt_enabled": false,
+  "ttt_impl": null,
+  "ttt_inner_loop_geo_weights": null,
+  "mixed_precision": "no",
+  "frame_counts": {
+    "all_frames_per_scene": [
+      50
+    ],
+    "novel_only_per_scene": [
+      44
+    ]
+  },
+  "all_frames": {
+    "metrics": {
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 25.19352917289734,
+        "sample_std": 3.132376591764928,
+        "confidence_level": 0.95,
+        "ci95_lower": 24.670102727597804,
+        "ci95_upper": 25.716955618196874,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8081023768995489,
+        "sample_std": 0.10816306977136814,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7900281098168629,
+        "ci95_upper": 0.8261766439822349,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.2549247959618058,
+        "sample_std": 0.08770493197260301,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.24026912496159855,
+        "ci95_upper": 0.269580466962013,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.022437505053888473,
+        "sample_std": 0.00914211521085913,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.020909839165974723,
+        "ci95_upper": 0.023965170941802224,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.7587096810553754,
+        "sample_std": 0.11291433770884939,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7398414675188308,
+        "ci95_upper": 0.77757789459192,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "rankings": {
+      "psnr": {
+        "top3": [
+          {
+            "scene_id": "374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e",
+            "value": 32.32876705169678
+          },
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 32.318522453308105
+          },
+          {
+            "scene_id": "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e",
+            "value": 31.332919731140137
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 18.192624855041505
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 18.652890453338625
+          },
+          {
+            "scene_id": "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a",
+            "value": 18.69848569869995
+          }
+        ]
+      },
+      "ssim": {
+        "top3": [
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 0.9495331680774689
+          },
+          {
+            "scene_id": "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e",
+            "value": 0.9429203033447265
+          },
+          {
+            "scene_id": "b92b499c9bf92327d5f3a44c9db49bde3400dcb1cfec48d6488831e2b304d0bb",
+            "value": 0.9410004997253418
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.376774930357933
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.45101519346237184
+          },
+          {
+            "scene_id": "dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751",
+            "value": 0.5162337875366211
+          }
+        ]
+      },
+      "lpips": {
+        "top3": [
+          {
+            "scene_id": "5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00",
+            "value": 0.10665547713637352
+          },
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 0.11957905739545822
+          },
+          {
+            "scene_id": "d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b",
+            "value": 0.1212176014482975
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.5270104622840881
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.4900215977430344
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 0.48037336945533754
+          }
+        ]
+      }
+    }
+  },
+  "novel_only": {
+    "metrics": {
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 25.007017172156992,
+        "sample_std": 3.19531216439784,
+        "confidence_level": 0.95,
+        "ci95_lower": 24.473074065753316,
+        "ci95_upper": 25.540960278560668,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8042956301627996,
+        "sample_std": 0.11118924918793863,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7857156823969484,
+        "ci95_upper": 0.8228755779286507,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.25695260721440244,
+        "sample_std": 0.08904607602596987,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.24207282833829868,
+        "ci95_upper": 0.2718323860905062,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.02256090907832039,
+        "sample_std": 0.009201533283892704,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.02102331431057901,
+        "ci95_upper": 0.024098503846061766,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.7577213946487996,
+        "sample_std": 0.11391730444010484,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7386855833488587,
+        "ci95_upper": 0.7767572059487405,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "rankings": {
+      "psnr": {
+        "top3": [
+          {
+            "scene_id": "374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e",
+            "value": 32.29742804440585
+          },
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 32.2444843378934
+          },
+          {
+            "scene_id": "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e",
+            "value": 31.27159768884832
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 17.778018474578857
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 18.16785840554671
+          },
+          {
+            "scene_id": "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a",
+            "value": 18.230701381509956
+          }
+        ]
+      },
+      "ssim": {
+        "top3": [
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 0.9494334134188566
+          },
+          {
+            "scene_id": "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e",
+            "value": 0.9426546367731962
+          },
+          {
+            "scene_id": "b92b499c9bf92327d5f3a44c9db49bde3400dcb1cfec48d6488831e2b304d0bb",
+            "value": 0.9389338953928514
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.3615209595723586
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.43769974396987393
+          },
+          {
+            "scene_id": "dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751",
+            "value": 0.5051955391060222
+          }
+        ]
+      },
+      "lpips": {
+        "top3": [
+          {
+            "scene_id": "5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00",
+            "value": 0.10689600895751607
+          },
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 0.11943786557425153
+          },
+          {
+            "scene_id": "d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b",
+            "value": 0.12116111848842014
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.5328929329460318
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.49456811967221176
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 0.4911996146494692
+          }
+        ]
+      }
+    }
+  },
+  "distance_buckets": {
+    "definition": "frame-index distance to the nearest context view; per-scene bucket mean, then mean over scenes that have the bucket",
+    "d0": {
+      "n_scenes": 140,
+      "n_frames": 840,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 26.561283844993227,
+        "sample_std": 2.811875966864631,
+        "confidence_level": 0.95,
+        "ci95_lower": 26.09141370044274,
+        "ci95_upper": 27.031153989543714,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8360185196357114,
+        "sample_std": 0.08786135686070924,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.821336709721252,
+        "ci95_upper": 0.8507003295501708,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.2400541801094299,
+        "sample_std": 0.07901805743549507,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.2268501033625048,
+        "ci95_upper": 0.253258256856355,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.021532542208054412,
+        "sample_std": 0.008745210086062317,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.020071199966901317,
+        "ci95_upper": 0.022993884449207507,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.7659571147035984,
+        "sample_std": 0.10629367766878481,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.748195226811109,
+        "ci95_upper": 0.7837190025960878,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "d1": {
+      "n_scenes": 140,
+      "n_frames": 1434,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 26.00397595356037,
+        "sample_std": 3.079794539718589,
+        "confidence_level": 0.95,
+        "ci95_lower": 25.489336075195833,
+        "ci95_upper": 26.518615831924908,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8265725830352151,
+        "sample_std": 0.09797657250057004,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8102005001887812,
+        "ci95_upper": 0.842944665881649,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.24202706443266817,
+        "sample_std": 0.08240396068438495,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.22825719642477085,
+        "ci95_upper": 0.2557969324405655,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.021826080369986837,
+        "sample_std": 0.008967790163871536,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.02032754454897222,
+        "ci95_upper": 0.023324616191001454,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.769593477218182,
+        "sample_std": 0.10780993931848279,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7515782189463034,
+        "ci95_upper": 0.7876087354900607,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "d2-3": {
+      "n_scenes": 140,
+      "n_frames": 2578,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 25.20679604335947,
+        "sample_std": 3.2107950297379895,
+        "confidence_level": 0.95,
+        "ci95_lower": 24.670265718934388,
+        "ci95_upper": 25.743326367784555,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8098166281612128,
+        "sample_std": 0.10883087421930296,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7916307696085686,
+        "ci95_upper": 0.828002486713857,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.2520866588466379,
+        "sample_std": 0.08774355914777421,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.23742453316756318,
+        "ci95_upper": 0.2667487845257126,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.022362210164407762,
+        "sample_std": 0.009160645956885543,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.020831447751463512,
+        "ci95_upper": 0.023892972577352012,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.7624268488009349,
+        "sample_std": 0.11172650154718844,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.743757125082419,
+        "ci95_upper": 0.7810965725194509,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "d4+": {
+      "n_scenes": 140,
+      "n_frames": 2148,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 24.107937571146504,
+        "sample_std": 3.3318950749133966,
+        "confidence_level": 0.95,
+        "ci95_lower": 23.551171184959745,
+        "ci95_upper": 24.664703957333263,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.7830227830035389,
+        "sample_std": 0.1235435231959241,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7623784111370682,
+        "ci95_upper": 0.8036671548700096,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.2725951603315471,
+        "sample_std": 0.0959979750292236,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.2565537051126559,
+        "ci95_upper": 0.28863661555043835,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.02329563617866176,
+        "sample_std": 0.009451891927658678,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.021716205976668655,
+        "ci95_upper": 0.024875066380654866,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.744414886337795,
+        "sample_std": 0.12170482356002535,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7240777648884428,
+        "ci95_upper": 0.7647520077871471,
+        "t_critical": 1.977177724490333
+      }
+    }
+  },
+  "geometry": {
+    "config": {
+      "lambda_sw": 0.0,
+      "lambda_packing": 0.0,
+      "lambda_inter": 0.0,
+      "k_neighbors": 4,
+      "target_distance": 2.0,
+      "num_sw_directions": 8,
+      "mass_weighting": "opacity_area",
+      "inter_form": "log_smooth_l1"
+    },
+    "sw_loss": {
+      "mean": 0.7128511454377856,
+      "median": 0.7132461071014404,
+      "p10": 0.6022644877433777,
+      "p90": 0.8177854239940643
+    },
+    "packing_loss": {
+      "mean": 11.2388860140528,
+      "median": 10.548506259918213,
+      "p10": 5.588564872741699,
+      "p90": 19.80978355407715
+    },
+    "inter_loss": {
+      "mean": 1.6952988880021231,
+      "median": 1.7081608176231384,
+      "p10": 1.4813495039939881,
+      "p90": 1.912618637084961
+    },
+    "packing_ratio": {
+      "mean": 642.4057213102068,
+      "median": 470.3569793701172,
+      "p10": 144.61504821777345,
+      "p90": 1387.9783691406253
+    },
+    "packing_target": {
+      "mean": 6.097633116585868,
+      "median": 6.081613302230835,
+      "p10": 5.764113998413086,
+      "p90": 6.48463625907898
+    },
+    "effective_children": {
+      "mean": 15.423060042517525,
+      "median": 15.371374130249023,
+      "p10": 14.153633308410644,
+      "p90": 16.91079177856445
+    },
+    "inter_distance": {
+      "mean": 0.5047777906060219,
+      "median": 0.4722617268562317,
+      "p10": 0.3884365350008011,
+      "p90": 0.6485140442848206
+    },
+    "inter_distance_median": {
+      "mean": 0.2247897313109466,
+      "median": 0.21544485539197922,
+      "p10": 0.16956533044576644,
+      "p90": 0.2902788370847702
+    },
+    "inter_too_close": {
+      "mean": 0.911661638532366,
+      "median": 0.9188232421875,
+      "p10": 0.863800048828125,
+      "p90": 0.950372314453125
+    },
+    "inter_too_far": {
+      "mean": 0.034668404715401786,
+      "median": 0.026397705078125,
+      "p10": 0.01207275390625,
+      "p90": 0.066021728515625
+    },
+    "active_slot_ratio": {
+      "mean": 1.0,
+      "median": 1.0,
+      "p10": 1.0,
+      "p90": 1.0
+    }
+  },
+  "needle": {
+    "alive_ratio": {
+      "mean": 0.7150416237967355,
+      "median": 0.7178840637207031,
+      "p10": 0.7012226104736328,
+      "p90": 0.7263896942138672
+    },
+    "opacity_mean": {
+      "mean": 0.06148027362568038,
+      "median": 0.06132513843476772,
+      "p10": 0.04703995771706104,
+      "p90": 0.07475875839591027
+    },
+    "aniso_p50_weighted": {
+      "mean": 27.728749758856637,
+      "median": 27.20794105529785,
+      "p10": 20.36689453125,
+      "p90": 36.64683151245117
+    },
+    "aniso_p50_unweighted": {
+      "mean": 80.59078897748675,
+      "median": 81.88106536865234,
+      "p10": 55.13058853149414,
+      "p90": 103.49423904418946
+    },
+    "cos_long_axis_ray_p50_weighted": {
+      "mean": 0.7356536022254399,
+      "median": 0.7442601025104523,
+      "p10": 0.6252137959003449,
+      "p90": 0.8321698009967804
+    },
+    "long_axis_along_ray_gt0.9_weighted": {
+      "mean": 0.27702035241283485,
+      "median": 0.27431158735086547,
+      "p10": 0.18170611046616475,
+      "p90": 0.3729252976834589
+    },
+    "outside_all_input_frustums_weighted": {
+      "mean": 0.014851967302535915,
+      "median": 0.012638068887193942,
+      "p10": 0.007778913073840968,
+      "p90": 0.02364397122449223
+    }
+  },
+  "official_release_comparison": {
+    "source": "release_2026.6.md (all target frames, 140 scenes)",
+    "reference_setting": "wo_ttt",
+    "reference": {
+      "psnr": 25.12,
+      "ssim": 0.806,
+      "lpips": 0.257
+    },
+    "delta_all_frames": {
+      "psnr": 0.07352917289733796,
+      "ssim": 0.002102376899548841,
+      "lpips": -0.0020752040381942227
+    },
+    "delta_definition": "local all_frames mean - official",
+    "official_table": {
+      "wo_ttt": {
+        "psnr": 25.12,
+        "ssim": 0.806,
+        "lpips": 0.257
+      },
+      "w_ttt": {
+        "psnr": 27.304,
+        "ssim": 0.866,
+        "lpips": 0.185
+      }
+    }
+  },
+  "timing": {
+    "evaluation_loop_seconds": 332.9137312229723,
+    "scene_total_seconds_sum": 328.5747929383069,
+    "mean_scene_total_seconds": 2.346962806702192,
+    "total_script_seconds": 337.87605883087963
+  }
+}

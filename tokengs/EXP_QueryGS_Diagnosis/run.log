@@ -1,0 +1,7 @@
+[7b6477cb95] tokengs_release_latent_6v: done ({"psnr_all_targets": 29.47718048095703, "junk_share": 0.21150970458984375, "c_centroid_mean": 0.41000786423683167})
+[7b6477cb95] tokengs_paper_4v: done ({"psnr_all_targets": 28.715984344482422, "junk_share": 0.7247085571289062, "c_centroid_mean": 0.6046535968780518})
+[7b6477cb95] locusgs_finetune_4v: done ({"psnr_all_targets": 29.6983699798584, "junk_share": 0.052730560302734375, "c_centroid_mean": 0.04120323434472084})
+[7b6477cb95] sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20: done ({"psnr_all_targets": 29.99893569946289, "junk_share": 0.012149810791015625, "c_centroid_mean": 0.039045482873916626})
+[2f3e1c0f688c] tokengs_release_latent_6v: done ({"psnr_all_targets": 23.591503143310547, "junk_share": 0.2193603515625, "c_centroid_mean": 0.5584332942962646})
+[2f3e1c0f688c] tokengs_paper_4v: done ({"psnr_all_targets": 22.712270736694336, "junk_share": 0.3303718566894531, "c_centroid_mean": 0.8523482084274292})
+[2f3e1c0f688c] locusgs_finetune_4v: done ({"psnr_all_targets": 24.49425506591797, "junk_share": 0.14600753784179688, "c_centroid_mean": 0.0797041654586792})

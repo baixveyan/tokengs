@@ -1,0 +1,181 @@
+{
+ "scene": "7b6477cb95",
+ "gpu": "1",
+ "frame": "all PLYs in the release mean_cam normalized frame (scale 0.3), overlay with gt_lidar_mesh_frustum.ply / cameras.ply; token_slots_* are in each scene's first-camera frame",
+ "per_layer_decode": {
+  "2": {
+   "psnr": 12.855758666992188,
+   "depth_absrel": 0.9039280116558075,
+   "depth_delta_105": 0.0,
+   "ray_thick_med_m": 0.05515345744788647,
+   "ray_thick_p90_m": 0.08002039999701083,
+   "normal_med_deg": 47.66635227203369,
+   "surf_acc_cm": 75.47523975372314,
+   "surf_comp_cm": 200.16632080078125,
+   "surf_fscore_5cm": 0.0
+  },
+  "4": {
+   "psnr": 12.794636726379395,
+   "depth_absrel": 0.25358676351606846,
+   "depth_delta_105": 0.06849354598671198,
+   "ray_thick_med_m": 0.2060911115258932,
+   "ray_thick_p90_m": 0.3102410454303026,
+   "normal_med_deg": 46.68370962142944,
+   "surf_acc_cm": 35.26643514633179,
+   "surf_comp_cm": 63.18039894104004,
+   "surf_fscore_5cm": 0.06742525624992596
+  },
+  "6": {
+   "psnr": 28.191465377807617,
+   "depth_absrel": 0.06898858677595854,
+   "depth_delta_105": 0.5895085148513317,
+   "ray_thick_med_m": 0.10677976347506046,
+   "ray_thick_p90_m": 0.20074477791786194,
+   "normal_med_deg": 30.021336555480957,
+   "surf_acc_cm": 9.027587622404099,
+   "surf_comp_cm": 9.669201821088791,
+   "surf_fscore_5cm": 0.5090429923844834
+  },
+  "8": {
+   "psnr": 16.490638732910156,
+   "depth_absrel": 0.13591798301786184,
+   "depth_delta_105": 0.31185871735215187,
+   "ray_thick_med_m": 0.10944002214819193,
+   "ray_thick_p90_m": 0.24510457552969456,
+   "normal_med_deg": 44.904306411743164,
+   "surf_acc_cm": 15.789484977722168,
+   "surf_comp_cm": 21.19663804769516,
+   "surf_fscore_5cm": 0.2221871262225739
+  },
+  "10": {
+   "psnr": 15.396402359008789,
+   "depth_absrel": 0.10589731391519308,
+   "depth_delta_105": 0.3740467857569456,
+   "ray_thick_med_m": 0.11564824264496565,
+   "ray_thick_p90_m": 0.24682870879769325,
+   "normal_med_deg": 33.2200288772583,
+   "surf_acc_cm": 12.176849693059921,
+   "surf_comp_cm": 11.406850069761276,
+   "surf_fscore_5cm": 0.31255334496252446
+  },
+  "12": {
+   "psnr": 29.698406219482422,
+   "depth_absrel": 0.04464928200468421,
+   "depth_delta_105": 0.7202508971095085,
+   "ray_thick_med_m": 0.08902738243341446,
+   "ray_thick_p90_m": 0.19048837944865227,
+   "normal_med_deg": 21.168092250823975,
+   "surf_acc_cm": 5.9428870677948,
+   "surf_comp_cm": 5.46037033200264,
+   "surf_fscore_5cm": 0.6508901257531111
+  }
+ },
+ "gamma_g": {
+  "2": 0.07122839242219925,
+  "6": 13.074158668518066,
+  "12": 10.60251235961914
+ },
+ "sigma_floor_active_frac_layer12_input": 0.9690568447113037,
+ "coverage_uncovered_frac": 0.19651402533054352,
+ "interventions": {
+  "baseline": {
+   "psnr": 29.698406219482422,
+   "depth_absrel": 0.04464928200468421,
+   "depth_delta_105": 0.7202508971095085,
+   "ray_thick_med_m": 0.08902738243341446,
+   "ray_thick_p90_m": 0.19048837944865227,
+   "normal_med_deg": 21.168092250823975,
+   "surf_acc_cm": 5.9428870677948,
+   "surf_comp_cm": 5.46037033200264,
+   "surf_fscore_5cm": 0.6508901257531111
+  },
+  "no_geo_bias_all": {
+   "psnr": 13.741442680358887,
+   "depth_absrel": 1.0658017545938492,
+   "depth_delta_105": 0.003199486483936198,
+   "ray_thick_med_m": 0.3252423368394375,
+   "ray_thick_p90_m": 0.5044700279831886,
+   "normal_med_deg": 48.515902042388916,
+   "surf_acc_cm": 166.20497703552246,
+   "surf_comp_cm": 153.32521200180054,
+   "surf_fscore_5cm": 0.0008833149977411554
+  },
+  "no_geo_bias_last6": {
+   "psnr": 15.363866806030273,
+   "depth_absrel": 0.27623734064400196,
+   "depth_delta_105": 0.026384108932688832,
+   "ray_thick_med_m": 0.1608210038393736,
+   "ray_thick_p90_m": 0.43745976872742176,
+   "normal_med_deg": 32.447325229644775,
+   "surf_acc_cm": 29.330334067344666,
+   "surf_comp_cm": 31.99254870414734,
+   "surf_fscore_5cm": 0.0455412848242612
+  },
+  "no_selfattn_anchor_pe": {
+   "psnr": 17.189632415771484,
+   "depth_absrel": 0.3433501869440079,
+   "depth_delta_105": 0.10137188341468573,
+   "ray_thick_med_m": 0.44881442934274673,
+   "ray_thick_p90_m": 1.1128847151994705,
+   "normal_med_deg": 62.72202014923096,
+   "surf_acc_cm": 61.35074496269226,
+   "surf_comp_cm": 29.10747528076172,
+   "surf_fscore_5cm": 0.10445668541211055
+  },
+  "frozen_anchors": {
+   "psnr": 13.700108528137207,
+   "depth_absrel": 0.7911672741174698,
+   "depth_delta_105": 0.007945857993036043,
+   "ray_thick_med_m": 0.14706090884283185,
+   "ray_thick_p90_m": 0.24618647526949644,
+   "normal_med_deg": 45.010506987571716,
+   "surf_acc_cm": 42.64591038227081,
+   "surf_comp_cm": 178.8278579711914,
+   "surf_fscore_5cm": 0.014986118199764862
+  },
+  "fixed_radius": {
+   "psnr": 13.504558563232422,
+   "depth_absrel": 0.24602372758090496,
+   "depth_delta_105": 0.20410181768238544,
+   "ray_thick_med_m": 0.3117728754878044,
+   "ray_thick_p90_m": 0.4738081805408001,
+   "normal_med_deg": 58.31895351409912,
+   "surf_acc_cm": 24.882401525974274,
+   "surf_comp_cm": 21.542710065841675,
+   "surf_fscore_5cm": 0.12758619346667374
+  },
+  "sigma_floor_removed": {
+   "psnr": 25.886821746826172,
+   "depth_absrel": 0.05069702444598079,
+   "depth_delta_105": 0.6673678457736969,
+   "ray_thick_med_m": 0.09778002183884382,
+   "ray_thick_p90_m": 0.18954931944608688,
+   "normal_med_deg": 22.286701679229736,
+   "surf_acc_cm": 6.310148537158966,
+   "surf_comp_cm": 6.218432262539864,
+   "surf_fscore_5cm": 0.6305061543024187
+  },
+  "init_anchor_jitter_0.05": {
+   "psnr": 29.356060028076172,
+   "depth_absrel": 0.047388214617967606,
+   "depth_delta_105": 0.7011637985706329,
+   "ray_thick_med_m": 0.08835936337709427,
+   "ray_thick_p90_m": 0.1914306189864874,
+   "normal_med_deg": 23.069866180419922,
+   "surf_acc_cm": 6.39367550611496,
+   "surf_comp_cm": 5.819352343678474,
+   "surf_fscore_5cm": 0.627676868651277
+  },
+  "init_anchor_permuted": {
+   "psnr": 28.070995330810547,
+   "depth_absrel": 0.058159231673926115,
+   "depth_delta_105": 0.6289132758975029,
+   "ray_thick_med_m": 0.11201741266995668,
+   "ray_thick_p90_m": 0.22425669617950916,
+   "normal_med_deg": 25.518303632736206,
+   "surf_acc_cm": 8.219479769468307,
+   "surf_comp_cm": 8.680690824985504,
+   "surf_fscore_5cm": 0.5200220224502006
+  }
+ }
+}

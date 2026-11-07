@@ -1,0 +1,25 @@
+{
+  "warning": "Thresholds chosen using TEST LABELS: diagnostic ranking only, not deployable/test performance at a calibrated threshold.",
+  "0.95": {
+    "threshold": 9.320118988398463e-05,
+    "surface_recall": 0.9502670226969292,
+    "free_closure": 0.5051124744376279,
+    "surface_precision": 0.8546982888021615,
+    "known_kept_fraction": 0.8381982888777051,
+    "unknown_closed_fraction": 0.019795790789747865,
+    "surface_cells": 2996,
+    "free_cells": 978,
+    "unknown_cells": 28794
+  },
+  "0.99": {
+    "threshold": 4.469998593492619e-09,
+    "surface_recall": 0.9903204272363151,
+    "free_closure": 0.23210633946830267,
+    "surface_precision": 0.7980096826250672,
+    "known_kept_fraction": 0.9355812783090085,
+    "unknown_closed_fraction": 0.005521983746613878,
+    "surface_cells": 2996,
+    "free_cells": 978,
+    "unknown_cells": 28794
+  }
+}

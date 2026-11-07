@@ -1,0 +1,2518 @@
+[11:14:49] start: 7 shards on GPUs 1,2,3,4,5,6,7
+GPU 3: shard 2/7: 20 scenes
+GPU 2: shard 1/7: 20 scenes
+GPU 7: shard 6/7: 20 scenes
+GPU 5: shard 4/7: 20 scenes
+GPU 4: shard 3/7: 20 scenes
+GPU 6: shard 5/7: 20 scenes
+GPU 1: shard 0/7: 20 scenes
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[shard 4] 1/20 07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b 13s psnr_all 32.32 colmap pts 18819 patch cov 0.41 decode diff 0.0e+00
+[shard 0] 1/20 032dee9fb0a8bc1b90871dc5fe950080d0bcd3caf166447f44e60ca50ac04ec7 13s psnr_all 30.10 colmap pts 48676 patch cov 0.48 decode diff 0.0e+00
+[shard 2] 1/20 06da796666297fe4c683c231edf56ec00148a6a52ab5bb159fe1be31f53a58df 14s psnr_all 23.60 colmap pts 61837 patch cov 0.38 decode diff 0.0e+00
+[shard 1] 1/20 0569e83fdc248a51fc0ab082ce5e2baff15755c53c207f545e6d02d91f01d166 21s psnr_all 23.50 colmap pts 183509 patch cov 0.77 decode diff 0.0e+00
+[shard 6] 1/20 093ef327b4e4f9d4ee52c02a354a53558a8652157fb0d58f3b4a708734afb334 21s psnr_all 24.16 colmap pts 113947 patch cov 0.60 decode diff 0.0e+00
+[shard 5] 1/20 0853979305f7ecb80bd8fc2c8df916410d471ef04ed5f1a64e9651baa41d7695 21s psnr_all 27.80 colmap pts 81120 patch cov 0.50 decode diff 0.0e+00
+[shard 3] 1/20 073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561 24s psnr_all 19.83 colmap pts 175049 patch cov 0.57 decode diff 0.0e+00
+[shard 0] 2/20 0a1b7c20a92c43c6b8954b1ac909fb2f0fa8b2997b80604bc8bbec80a1cb2da3 27s psnr_all 28.12 colmap pts 72222 patch cov 0.50 decode diff 0.0e+00
+[shard 2] 2/20 0bfdd020cf475b9c68e4b469d1d1a2d0cad303eefe8b78fb2307855afdaac8be 30s psnr_all 24.40 colmap pts 72879 patch cov 0.47 decode diff 0.0e+00
+[shard 4] 2/20 1264931635e127fb905c8953cbc2deadd0c763e633af7fbd9405a61ca849710c 30s psnr_all 22.08 colmap pts 106840 patch cov 0.44 decode diff 0.0e+00
+[shard 1] 2/20 0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6 32s psnr_all 28.87 colmap pts 87098 patch cov 0.61 decode diff 0.0e+00
+[shard 6] 2/20 15ff83e2531668d27c92091c97d31401ce323e24ee7c844cb32d5109ab9335f7 39s psnr_all 21.65 colmap pts 100357 patch cov 0.65 decode diff 0.0e+00
+[shard 0] 3/20 165f5af8bfe32f70595a1c9393a6e442acf7af019998275144f605b89a306557 40s psnr_all 23.65 colmap pts 79513 patch cov 0.47 decode diff 0.0e+00
+[shard 3] 2/20 119fd56d3797e2d349ca64ddcc5851463cd13b5974b5b2e4566ed5cf7e02e6c1 41s psnr_all 22.72 colmap pts 74124 patch cov 0.34 decode diff 0.0e+00
+[shard 2] 3/20 1ba74c22670ad047981441581d00f26f4a148d1010bcac7468c615adf5fa4d5d 43s psnr_all 27.32 colmap pts 48106 patch cov 0.30 decode diff 0.0e+00
+[shard 5] 2/20 14eb48a50e37df548894ab6d8cd628a21dae14bbe6c462e894616fc5962e6c49 43s psnr_all 25.16 colmap pts 79799 patch cov 0.49 decode diff 0.0e+00
+[shard 4] 3/20 1da888bdedfc9629c0fa9f82cf3f5d96f8103baee0ff64d9311aea1224a9f2ae 46s psnr_all 22.39 colmap pts 85967 patch cov 0.50 decode diff 0.0e+00
+[shard 1] 3/20 183dd248f6a86e07c5adf9de8ee2d0abe45b1216331c03678e89634c2e9b1c7f 46s psnr_all 27.44 colmap pts 87995 patch cov 0.39 decode diff 0.0e+00
+[shard 6] 3/20 2385549d398bdfb55ed17b547c9846f0d01d571b4e050f90df707b577084fb55 51s psnr_all 24.36 colmap pts 110573 patch cov 0.57 decode diff 0.0e+00
+[shard 0] 4/20 26fd23358fa11fff0fb3180ef0b65591b486e20dcf753ce4a7aae49a37e370c7 53s psnr_all 28.26 colmap pts 86917 patch cov 0.57 decode diff 0.0e+00
+[shard 5] 3/20 1de58be515696102c364b767f296600ffff853d4145a60dd30ece9d935317654 58s psnr_all 29.78 colmap pts 58043 patch cov 0.56 decode diff 0.0e+00
+[shard 3] 3/20 1d6a9ed47cce39fd1c4d18f776bcc97e507b81bde921ca596bd91b0b02b5e414 58s psnr_all 21.20 colmap pts 106829 patch cov 0.57 decode diff 0.0e+00
+[shard 1] 4/20 280abf7bd93b81b077af1db638229dbb09869052fa0b7b57c81c94d2db893829 63s psnr_all 25.95 colmap pts 119967 patch cov 0.57 decode diff 0.0e+00
+[shard 6] 4/20 2cbfe28643b6636f9c70813cae7625aa858a352109493ac70fb429ce94dd55b3 63s psnr_all 29.60 colmap pts 60581 patch cov 0.54 decode diff 0.0e+00
+[shard 4] 4/20 2b65ba886efac7af6253fce68ae9284bf4d4db019e17c47f3e853361acbdb066 64s psnr_all 22.52 colmap pts 176167 patch cov 0.71 decode diff 0.0e+00
+[shard 2] 4/20 286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a 65s psnr_all 18.70 colmap pts 167507 patch cov 0.61 decode diff 0.0e+00
+[shard 0] 5/20 2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd 68s psnr_all 23.59 colmap pts 85998 patch cov 0.40 decode diff 0.0e+00
+[shard 5] 4/20 2beaca318994c25409dcbb6d0bdd96c3620f2f18aec44ea3f20edd302f18ca78 72s psnr_all 23.88 colmap pts 140187 patch cov 0.68 decode diff 0.0e+00
+[shard 3] 4/20 2991a75d1f0fb2b7a891d424fc2459bb954b61599b52e74a056a7acfb2998b77 75s psnr_all 20.83 colmap pts 97104 patch cov 0.54 decode diff 0.0e+00
+[shard 6] 5/20 387eeb925ba47af5db9ce6102aaf6b07e6d3573b7e7568dda4cef22d5ab1342f 76s psnr_all 26.68 colmap pts 151404 patch cov 0.61 decode diff 0.0e+00
+[shard 1] 5/20 32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e 77s psnr_all 31.33 colmap pts 46264 patch cov 0.29 decode diff 0.0e+00
+[shard 4] 5/20 35872363e17af5d173b6a0b09fcf5de94627ad5dc5f8a9ad4c579f3e70b4797a 77s psnr_all 28.82 colmap pts 96020 patch cov 0.53 decode diff 0.0e+00
+[shard 2] 5/20 341b4ff3dfd3d377d7167bd81f443bedafbff003bf04881b99760fc0aeb69510 81s psnr_all 25.32 colmap pts 96645 patch cov 0.62 decode diff 0.0e+00
+[shard 0] 6/20 389a460ca1995e0658e85fe8e6b520b4e88b370cd6710dfe728b1564bba31aee 81s psnr_all 26.17 colmap pts 42568 patch cov 0.25 decode diff 0.0e+00
+[shard 5] 5/20 374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e 86s psnr_all 32.33 colmap pts 91598 patch cov 0.60 decode diff 0.0e+00
+[shard 6] 6/20 444da1b4a3f1ca019d4c9c1b405a579427746ccc96cab6dab7dcba5cb4fc998c 92s psnr_all 25.38 colmap pts 100030 patch cov 0.51 decode diff 0.0e+00
+[shard 4] 6/20 3bb894d1933f3081134ad2d40e54de5f0636bd8b502b0a8561873bb63b0dce85 94s psnr_all 24.51 colmap pts 106573 patch cov 0.59 decode diff 0.0e+00
+[shard 3] 5/20 35317e621976e87f0c143e66fc61fb8cddb4ff134304da7a00e32ac1983105b4 94s psnr_all 23.32 colmap pts 156414 patch cov 0.66 decode diff 0.0e+00
+[shard 1] 6/20 3b16a10ec9b4ab71580958b634485a979ffd6df0d368dbbf6fc1c5ffacf46b7a 97s psnr_all 21.45 colmap pts 144143 patch cov 0.62 decode diff 0.0e+00
+[shard 0] 7/20 457e9a1ae777b0c72be723aaeec971b39cc6d5d413d922f981ec9785395f7ca9 99s psnr_all 25.68 colmap pts 65294 patch cov 0.41 decode diff 0.0e+00
+[shard 2] 6/20 3b7529dcccf7097cba31a989536035595e214b0f3775867fd3a62eb186870090 99s psnr_all 23.97 colmap pts 112146 patch cov 0.68 decode diff 0.0e+00
+[shard 5] 6/20 41036716da7efda334c1d434c4141d15642e0e02f881a01b6c8c36f8bea64c45 102s psnr_all 25.17 colmap pts 92452 patch cov 0.50 decode diff 0.0e+00
+[shard 6] 7/20 513e4ea2e8477b06f2b32417d5c243aec71d491cb0596a60e9fe304c635f20a1 103s psnr_all 26.22 colmap pts 46239 patch cov 0.48 decode diff 0.0e+00
+[shard 3] 6/20 3bb3bb4d3e871d79eb71946cbab1e3afc7a8e33a661153033f32deb3e23d2e52 108s psnr_all 26.37 colmap pts 42542 patch cov 0.28 decode diff 0.0e+00
+[shard 4] 7/20 4ff8650b5c1140e98d957fbd1abbe2cfbbb416b37cb9f06f7f376956703801bb 108s psnr_all 28.16 colmap pts 84955 patch cov 0.52 decode diff 0.0e+00
+[shard 1] 7/20 484c0aca40c1087f196d2caf3c8cb463864c08e60b98326ca02eb6dae8ce4984 110s psnr_all 24.21 colmap pts 68203 patch cov 0.41 decode diff 0.0e+00
+[shard 0] 8/20 54bf355ca7e08ed1bc86f5772e564ac0f92981ca25dab24d86b694e915fc4c43 111s psnr_all 26.11 colmap pts 96427 patch cov 0.71 decode diff 0.0e+00
+[shard 2] 7/20 493816813d2d6d248eb3c2b0b77b63e54235266e9a06e270fd0d282f13960493 115s psnr_all 22.80 colmap pts 196178 patch cov 0.82 decode diff 0.0e+00
+[shard 6] 8/20 5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00 115s psnr_all 29.28 colmap pts 75612 patch cov 0.58 decode diff 0.0e+00
+[shard 5] 7/20 50c46cf8b8b22c8d2ffdef8964b05ddbceaef312c9a9ff331d1ecebfd223f72a 117s psnr_all 26.03 colmap pts 58887 patch cov 0.36 decode diff 0.0e+00
+[shard 3] 7/20 4ae797d07b6d1644c9db6919c8cc8c0d28d72be45108ac7a3abf8dc21b599d83 122s psnr_all 23.73 colmap pts 88103 patch cov 0.52 decode diff 0.0e+00
+[shard 4] 8/20 5a27c00f525f5484b7aa0d0107051253bf7bb395bde0b3a4486ff8c52fb4965e 122s psnr_all 25.61 colmap pts 81024 patch cov 0.58 decode diff 0.0e+00
+[shard 1] 8/20 56452d9cd9e2e034764132a57058517ab085e1352f9664d2d1e10e98741334fc 125s psnr_all 22.44 colmap pts 97531 patch cov 0.48 decode diff 0.0e+00
+[shard 0] 9/20 5c8dafad7d782c76ffad8c14e9e1244ce2b83aa12324c54a3cc10176964acf04 126s psnr_all 28.09 colmap pts 73952 patch cov 0.39 decode diff 0.0e+00
+[shard 2] 8/20 565553aa894be621e8b4773cac288e60ad0c2cf7edb621be62b348c9a0f78380 129s psnr_all 24.46 colmap pts 156490 patch cov 0.56 decode diff 0.0e+00
+[shard 6] 9/20 6d81c5ab0d480fd43d78b75ff372a8113ad38e2c03f1d69627c009883054d4c2 130s psnr_all 26.35 colmap pts 90804 patch cov 0.36 decode diff 0.0e+00
+[shard 5] 8/20 5a69d1027b477be4d2933b765723d57b272e0ace96be7885306464d54aa2c038 133s psnr_all 21.53 colmap pts 113095 patch cov 0.62 decode diff 0.0e+00
+[shard 4] 9/20 66fd66cbed40a2d11ecd17ae6d6d60cd60d476616864ecdd351fe69e644f30a1 137s psnr_all 25.68 colmap pts 77156 patch cov 0.33 decode diff 0.0e+00
+[shard 3] 8/20 599ca3e04cae3ec83affc426af7d0d7ab36eb91cd8e539edbc13070a4d455792 139s psnr_all 21.81 colmap pts 79891 patch cov 0.44 decode diff 0.0e+00
+[shard 1] 9/20 5f0041e53d59d67c3ca25db97b269db183a532c4566a6bc46ca0e69cfa4234ad 139s psnr_all 29.35 colmap pts 76844 patch cov 0.58 decode diff 0.0e+00
+[shard 0] 10/20 6e11e7f4fea305c7c4658d2c1f8df29e6f299330860cf48ffbf1c5ff8b96c0a8 140s psnr_all 29.25 colmap pts 42411 patch cov 0.22 decode diff 0.0e+00
+[shard 2] 9/20 63798f5c6fbfcb4eb686268248b8ecbc8d87d920b2bcce967eeaedfd3b3b6d82 142s psnr_all 27.84 colmap pts 51957 patch cov 0.30 decode diff 0.0e+00
+[shard 6] 10/20 7da3db99059a436adf537bc23309a6a4db9e011696d086f3a64037f7497d9df7 142s psnr_all 23.47 colmap pts 88504 patch cov 0.42 decode diff 0.0e+00
+[shard 5] 9/20 6d221625614d0515fa44d59a8797a49b64f86bc775e66be22f07a66aa0a0cb3a 152s psnr_all 23.81 colmap pts 95807 patch cov 0.40 decode diff 0.0e+00
+[shard 3] 9/20 669c36225b273e22ce08364f166dce910b708d7abd89e58463a15d2790b534d5 153s psnr_all 25.53 colmap pts 112468 patch cov 0.51 decode diff 0.0e+00
+[shard 1] 10/20 70eac6ff18a1daae4eeccc5eb18723eaf7e029a77e79c79d9573f7bac59ba92b 153s psnr_all 25.37 colmap pts 173553 patch cov 0.72 decode diff 0.0e+00
+[shard 4] 10/20 7705a2edd022de9da3f8cead677287645986e982d9247a21e1992859a59f8335 157s psnr_all 26.09 colmap pts 64244 patch cov 0.28 decode diff 0.0e+00
+[shard 0] 11/20 800cf88687a79c232700454c2f5a402e771bc7157037a17b0ce93da365b25575 158s psnr_all 22.72 colmap pts 159311 patch cov 0.63 decode diff 0.0e+00
+[shard 2] 10/20 71b2dc8a2aa553da09b8b94b9f0d5e8abcca307def74d26301616ee238464d46 158s psnr_all 29.73 colmap pts 47317 patch cov 0.44 decode diff 0.0e+00
+[shard 6] 11/20 90cb7ef95384138c2370f13a9ae1698fb1b5bdd68e8b3d01f8e53d38933a4b92 159s psnr_all 23.89 colmap pts 91621 patch cov 0.44 decode diff 0.0e+00
+[shard 5] 10/20 7a9f97660be8f2421b37dd413c898360532f17c6447c11515e8aded2d80eb99d 165s psnr_all 29.13 colmap pts 59994 patch cov 0.40 decode diff 0.0e+00
+[shard 3] 10/20 75fbbe467353cfdeb93bc1872144855576797be83a0c71c51155ee6b355d6d5e 166s psnr_all 25.54 colmap pts 156468 patch cov 0.62 decode diff 0.0e+00
+[shard 4] 11/20 8cb2e97d26a639f05a571476240a8fa86988e6853f0f13cc05830d1578002aad 171s psnr_all 29.49 colmap pts 63171 patch cov 0.36 decode diff 0.0e+00
+[shard 1] 11/20 8324b3ca22085040c2a0ecb7284e0cdf776b1f846b73a7c0df893587cb4a45f8 172s psnr_all 23.10 colmap pts 128115 patch cov 0.50 decode diff 0.0e+00
+[shard 0] 12/20 917e9c8985d353b0ee4c281f11fa84eb8550814562670cbb82cd0ec9c1194fe7 175s psnr_all 26.37 colmap pts 121584 patch cov 0.64 decode diff 0.0e+00
+[shard 5] 11/20 8fdc5130f0731360cc053f59049bfe6db509567457c5471c970292966cb34f17 178s psnr_all 26.64 colmap pts 45688 patch cov 0.39 decode diff 0.0e+00
+[shard 2] 11/20 85cd0e92110bcd35e826cbff16bb0e85d8117717adaf36f0698920f0fb9b2cfd 178s psnr_all 24.38 colmap pts 108640 patch cov 0.57 decode diff 0.0e+00
+[shard 6] 12/20 9cbc5548643ca9cfe797f871bac58bccd02f0510c49b7cb3697b38dfd780a508 179s psnr_all 23.92 colmap pts 219191 patch cov 0.76 decode diff 0.0e+00
+[shard 3] 11/20 8b9fb9d9f10e8c64d5034be69809465753b8ba88ef12da82afd47d38ee789934 180s psnr_all 21.66 colmap pts 128554 patch cov 0.70 decode diff 0.0e+00
+[shard 4] 12/20 9641a1ed7963ce5ca734cff3e6ccea3dfa8bcb0b0a3ff78f65d32a080de2d71e 185s psnr_all 25.98 colmap pts 57195 patch cov 0.27 decode diff 0.0e+00
+[shard 0] 13/20 9e9a89ae6fed06d6e2f4749b4b0059f35ca97f848cedc4a14345999e746f7884 186s psnr_all 29.40 colmap pts 43530 patch cov 0.25 decode diff 0.0e+00
+[shard 1] 12/20 918c8dad730c3b804306c5da8486124be4aa0612e85fb825338fd350c912e1b0 188s psnr_all 22.50 colmap pts 104139 patch cov 0.37 decode diff 0.0e+00
+[shard 3] 12/20 946f49be73928469000baa5ca04d2573137c5ee6a66362bcf8d130354dca8924 194s psnr_all 27.38 colmap pts 70909 patch cov 0.42 decode diff 0.0e+00
+[shard 2] 12/20 91afb9910b042f7185c2b8e4b6b24b5785dae4542617b3f8005b5492f6d123f7 198s psnr_all 25.75 colmap pts 110058 patch cov 0.48 decode diff 0.0e+00
+[shard 1] 13/20 9fb0588ff045ec64119c5bc91b44a4b7400e5fae5a17e67762b29e6855b57118 199s psnr_all 25.93 colmap pts 84841 patch cov 0.70 decode diff 0.0e+00
+[shard 6] 13/20 a726c1112ad026efc92f59f196c0698e67abd12a04135a7ff6349b1d31b089eb 199s psnr_all 21.82 colmap pts 60384 patch cov 0.30 decode diff 0.0e+00
+[shard 5] 12/20 9c8c0e0fadd97abf60088f667eba058ef077a71a8c0f5a4eff2782aa97f1ceb8 200s psnr_all 20.26 colmap pts 128378 patch cov 0.57 decode diff 0.0e+00
+[shard 4] 13/20 a62c330f5403e2e41a82a74c4e865b705c5706843b992fae2fe2e538b122d984 203s psnr_all 20.52 colmap pts 135626 patch cov 0.57 decode diff 0.0e+00
+[shard 0] 14/20 adb95f29c15b8a89e40c17d10596679be09d7719c6f08a453facd506d056ea8b 206s psnr_all 23.50 colmap pts 164070 patch cov 0.69 decode diff 0.0e+00
+[shard 3] 13/20 a401469cb0fa576b93e836a4a6d712394f1a55a0a53a42250286980bd078e669 211s psnr_all 22.47 colmap pts 115589 patch cov 0.55 decode diff 0.0e+00
+[shard 2] 13/20 a17a984ca90a9b5840fdf85b15104b0d18e25975981c1aa90fcdfd6eeeb285f3 212s psnr_all 25.01 colmap pts 98838 patch cov 0.57 decode diff 0.0e+00
+[shard 1] 14/20 adf35184a12d4cfa3f4248b87aa5adb4f39f179df460d6d76136e13d37299a2a 214s psnr_all 29.09 colmap pts 68999 patch cov 0.42 decode diff 0.0e+00
+[shard 5] 13/20 a62f9a1c6362e7c8a3440261ea0921a0a4b60cf5822bd19579836694f26b3abd 214s psnr_all 26.30 colmap pts 187651 patch cov 0.73 decode diff 0.0e+00
+[shard 6] 14/20 b5faa2a8ce980030125717352086bf9ec16c5d994bae3b3a732da3eb67cf4fa8 216s psnr_all 26.62 colmap pts 63833 patch cov 0.39 decode diff 0.0e+00
+[shard 4] 14/20 b3bf9079b442c681749f6bd95cfb0659c6d844f2228b2f4fa4b602a0e3627b9a 217s psnr_all 26.91 colmap pts 83046 patch cov 0.61 decode diff 0.0e+00
+[shard 0] 15/20 b6d1134cb03c855d246f916beaa2d3d01290cf47937a5176011ff39b850ec615 218s psnr_all 22.22 colmap pts 147699 patch cov 0.69 decode diff 0.0e+00
+[shard 3] 14/20 b2076bc7231bac445b1a3d0015a410675a3222f25cc219e8178a62a0dd4ac63d 227s psnr_all 21.31 colmap pts 161099 patch cov 0.62 decode diff 0.0e+00
+[shard 1] 15/20 b92b499c9bf92327d5f3a44c9db49bde3400dcb1cfec48d6488831e2b304d0bb 229s psnr_all 30.03 colmap pts 27759 patch cov 0.24 decode diff 0.0e+00
+[shard 2] 14/20 af0d7039e64af3959210c235e59425896ac064f4e0f721c437bbd2cf1d8ea910 230s psnr_all 19.08 colmap pts 135566 patch cov 0.53 decode diff 0.0e+00
+[shard 5] 14/20 b4f53094fd31dcc2de1c1d1fdfeffac5259e9bdf39d77b552ff948e4bdf1fd8e 232s psnr_all 25.14 colmap pts 107406 patch cov 0.56 decode diff 0.0e+00
+[shard 0] 16/20 cbd44beb04f9c98f2d2c5affff89a6e0a72c25f1aa0c6f660fbd9e4d26702f8b 237s psnr_all 27.55 colmap pts 99379 patch cov 0.61 decode diff 0.0e+00
+[shard 6] 15/20 c455899acfc8816353a55fade692d19d9c2bff68c8615f852931d5754848db74 237s psnr_all 22.27 colmap pts 84203 patch cov 0.32 decode diff 0.0e+00
+[shard 4] 15/20 c37109a55effe0000f8e40652ca935376e75bcb2a0b56de8eabd20a26e2a0f68 238s psnr_all 19.68 colmap pts 102552 patch cov 0.37 decode diff 0.0e+00
+[shard 3] 15/20 c076929db6501cf7ebe386c70e6d77ea3af844a745e794f2ec17c981c465a69b 238s psnr_all 29.91 colmap pts 72694 patch cov 0.44 decode diff 0.0e+00
+[shard 1] 16/20 cc08c0bdc34ddd2867705d0b17a86ec2a9d7c7926ce99070ed1fdc66a812de07 241s psnr_all 28.51 colmap pts 70170 patch cov 0.46 decode diff 0.0e+00
+[shard 2] 15/20 ba55c875d20c34ee85ffc72264c4d77710852e5fb7d9ce4b9c26a8442850e98f 241s psnr_all 30.87 colmap pts 76091 patch cov 0.40 decode diff 0.0e+00
+[shard 0] 17/20 d4fbeba0168af8fddb2fc695881787aedcd62f477c7dcec9ebca7b8594bbd95b 250s psnr_all 20.17 colmap pts 181414 patch cov 0.79 decode diff 0.0e+00
+[shard 5] 15/20 c37726ce770ac50a2cf5c0f43022f0268e26da0d777cd8e3a3418c4eed03fd94 250s psnr_all 22.34 colmap pts 170148 patch cov 0.62 decode diff 0.0e+00
+[shard 6] 16/20 d3af8212ae1600f078c4ac1ef3c9369a7f41ee9d005dbd0c545cf43fc35a9a23 253s psnr_all 28.97 colmap pts 55726 patch cov 0.49 decode diff 0.0e+00
+[shard 4] 16/20 d1b3a0b37acc72207295b05e8c359f8b43bf879eb882c60747cfc6d3c7d8efa3 256s psnr_all 21.77 colmap pts 114977 patch cov 0.62 decode diff 0.0e+00
+[shard 3] 16/20 ceb252f5d4419510655cf9ed7afbf3e8e688825f798d80414c7715dc8ace153a 257s psnr_all 25.88 colmap pts 80685 patch cov 0.50 decode diff 0.0e+00
+[shard 1] 17/20 d8de66037bd03dd0d39d54f9978bac3318d912e30e22c21e1ada82a98ed48c53 257s psnr_all 26.14 colmap pts 148312 patch cov 0.57 decode diff 0.0e+00
+[shard 2] 16/20 cd9c981eeb4a9091547af19181b382698e9d9eee0a838c7c9783a8a268af6aee 258s psnr_all 21.37 colmap pts 103123 patch cov 0.56 decode diff 0.0e+00
+[shard 0] 18/20 ddfdcfdf02d53dd89a055cd9e1ed30272ab3f57c7560ac2c3761bb01d76a7882 263s psnr_all 23.81 colmap pts 194613 patch cov 0.73 decode diff 0.0e+00
+[shard 5] 16/20 d3812aad538261e7f73c75762ff55f23b468bcc76f376d52ac86ca6cf3c44b4b 267s psnr_all 20.63 colmap pts 48942 patch cov 0.27 decode diff 0.0e+00
+[shard 4] 17/20 d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b 270s psnr_all 28.93 colmap pts 83884 patch cov 0.52 decode diff 0.0e+00
+[shard 6] 17/20 dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751 272s psnr_all 19.18 colmap pts 230202 patch cov 0.78 decode diff 0.0e+00
+[shard 1] 18/20 ded5e4b46aedbef4cdb7bd1db7fc4cc5b00a9979ad6464bdadfab052cd64c101 273s psnr_all 28.44 colmap pts 56511 patch cov 0.36 decode diff 0.0e+00
+[shard 0] 19/20 e8ce51b6abfe05bf8dca47e29c8be6c1e6de27a8c9fece7a121400b931b2ca0f 279s psnr_all 26.02 colmap pts 106743 patch cov 0.54 decode diff 0.0e+00
+[shard 2] 17/20 d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a 279s psnr_all 18.65 colmap pts 111437 patch cov 0.40 decode diff 0.0e+00
+[shard 3] 17/20 d9b6376623741313bf6da6bf4cdb9828be614a2ce9390ceb3f31cd535d661a75 280s psnr_all 22.93 colmap pts 123325 patch cov 0.48 decode diff 0.0e+00
+[shard 5] 17/20 dac9796dd69e1c25277e29d7e30af4f21e3b575d62a0a208c2b3d1211e2d5d77 281s psnr_all 29.79 colmap pts 66063 patch cov 0.43 decode diff 0.0e+00
+[shard 4] 18/20 df4f9d9a0adfc54c49607bc792be6ed6f751b67e37c588472ea58b0d898310dd 283s psnr_all 28.53 colmap pts 41719 patch cov 0.32 decode diff 0.0e+00
+[shard 1] 19/20 e9360e7a89bee835dc847cf8796093e634b759ff582558788dcfe8326f6e8901 283s psnr_all 21.60 colmap pts 142708 patch cov 0.69 decode diff 0.0e+00
+[shard 6] 18/20 e78f8cebd2bd93d960bfaeac18fac0bb2524f15c44288903cd20b73e599e8a81 285s psnr_all 21.80 colmap pts 158106 patch cov 0.76 decode diff 0.0e+00
+[shard 0] 20/20 f004c810d94bac93f527606a2ff859d646f99fcac0868c6c6905b29c718fa37b 291s psnr_all 28.59 colmap pts 49582 patch cov 0.46 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/shard_0.pt
+[shard 2] 18/20 df04f58064684c1a31aa0ffbbcf34199d01d0a0ff289588eb2d6c6cf50a3922c 294s psnr_all 24.21 colmap pts 104755 patch cov 0.69 decode diff 0.0e+00
+[shard 4] 19/20 ec305787b70029b782c71c1bf296c3885c7c22619e5661bd40085533ddfee5e4 297s psnr_all 23.73 colmap pts 64302 patch cov 0.36 decode diff 0.0e+00
+[shard 3] 18/20 df29c225863d0173e060b1f3fde4e6eb5a57a4e4edabd397026ba1a028aeb39e 298s psnr_all 24.19 colmap pts 73411 patch cov 0.57 decode diff 0.0e+00
+[shard 5] 18/20 e5684b3292bfd77db297839fc37ee4cce7fd59775af1a6a4827e3b4f59c036d3 299s psnr_all 26.71 colmap pts 69185 patch cov 0.51 decode diff 0.0e+00
+[shard 1] 20/20 f477ffc4b398bed8e0d921f0fba9825ca63f317381c535c84be23be991ae1d7a 299s psnr_all 29.33 colmap pts 45485 patch cov 0.30 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/shard_1.pt
+[shard 6] 19/20 ef59aac437132bfc1dd45a7e1f8e4800978e7bb28bf98c4428d26fb3e1da3e90 301s psnr_all 29.06 colmap pts 122546 patch cov 0.65 decode diff 0.0e+00
+[shard 2] 19/20 eb4cf52988f805e6fce11d1b239fa9de32eb157364cff06ebac0aa50e0a46567 307s psnr_all 24.59 colmap pts 101023 patch cov 0.59 decode diff 0.0e+00
+[shard 4] 20/20 fb2c0499c225d6124938cadcf0dc48cbb490551b8a69c98386491c1366163632 310s psnr_all 26.97 colmap pts 59476 patch cov 0.47 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/shard_4.pt
+[shard 3] 19/20 ec1e44d4dc0f8fa77610866495f9297a7f82158c43e1777668b84fd4b736c7bc 312s psnr_all 28.14 colmap pts 71337 patch cov 0.43 decode diff 0.0e+00
+[shard 5] 19/20 ed16328235c610f15405ff08711eaf15d88a0503884f3a9ccb5a0ee69cb4acb5 313s psnr_all 25.49 colmap pts 192659 patch cov 0.65 decode diff 0.0e+00
+[shard 6] 20/20 ff592398657b3dfe94153332861985194a3e3c9d199c4a3a27a0ce4038e81ade 318s psnr_all 27.14 colmap pts 111821 patch cov 0.52 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/shard_6.pt
+[shard 2] 20/20 f71ac346cd0fc4652a89afb37044887ec3907d37d01d1ceb0ad28e1a780d8e03 320s psnr_all 24.15 colmap pts 189511 patch cov 0.80 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/shard_2.pt
+[shard 3] 20/20 f7aaea9ac683bb1945cfeb1daa9abca3375249e0d19281a89a3f575040835464 325s psnr_all 23.51 colmap pts 189601 patch cov 0.79 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/shard_3.pt
+[shard 5] 20/20 fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9 334s psnr_all 18.19 colmap pts 165352 patch cov 0.55 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/shard_5.pt
+{
+  "scenes": 140,
+  "scannetpp_reference_official_model": {
+    "thickness_between_share_pooled": 0.9,
+    "thickness_between_share_per_pixel_median": 0.72,
+    "render_weight_in_attention90_median": 0.87,
+    "render_weight_in_attention90_weighted": 0.83,
+    "patches_per_latent_median": 17,
+    "latents_covering_each_patch_median": 6,
+    "near_duplicate_latent_frac": 0.19,
+    "token_flatness_median": 0.58,
+    "token_ray_over_lateral_median": 1.37,
+    "junk_slot_share": 0.24,
+    "junk_render_weight_share": 0.049,
+    "dead_child_slots_all_tokens": [
+      0,
+      7,
+      16,
+      19,
+      20
+    ],
+    "parallax_lt2deg_token_share": 0.25,
+    "spearman_error_vs_distance_over_parallax": 0.47,
+    "spearman_error_vs_parallax": 0.4,
+    "voxel_snap_between_share": 0.91,
+    "depth_absrel_vs_laser": 0.174
+  },
+  "psnr": {
+    "all_50_targets_scene_mean": 25.193166732788086,
+    "novel_44_targets_scene_mean": 25.006668090820312,
+    "earlier_official_eval_all_frames": 25.1935,
+    "release_table_6v_ssim": 25.12
+  },
+  "decode_vs_render_max_abs_diff": 0.0,
+  "colmap": {
+    "points_per_scene": {
+      "p10": 48915.4,
+      "p50": 92036.5,
+      "p90": 167771.1
+    },
+    "input_patch_coverage": {
+      "p10": 0.317,
+      "p50": 0.5215,
+      "p90": 0.6991
+    }
+  },
+  "depth_vs_colmap_heavy_targets": {
+    "points": 2089163,
+    "median_ratio_pred_over_colmap": 1.0139756456236855,
+    "absrel_pooled_mean": 0.15565624497646754,
+    "absrel_pooled_median": 0.03713183371812738,
+    "absrel_scene_mean": 0.1683979034423828,
+    "delta_lt_1.05": 0.571640891591513,
+    "delta_lt_1.10": 0.7190846286287857,
+    "note": "COLMAP points only (textured, sparse); ScanNet++ AbsRel 0.174 is dense laser depth - not directly comparable"
+  },
+  "thickness_split_heavy_targets": {
+    "between_share_pooled": 0.9466606166882285,
+    "within_share_pooled": 0.053339388546106516,
+    "between_share_per_pixel_median": 0.8324439525604248,
+    "thickness_over_depth": {
+      "p50": 0.0571,
+      "p90": 0.2507
+    },
+    "by_thickness_over_depth": {
+      "0-0.015": {
+        "pixel_share": 0.0494859375,
+        "pooled_between_share": 0.3788461698342293,
+        "median_pixel_between_share": 0.40949397173553
+      },
+      "0.015-0.05": {
+        "pixel_share": 0.39291160714285717,
+        "pooled_between_share": 0.37120261362348356,
+        "median_pixel_between_share": 0.6190304456964403
+      },
+      "0.05-0.15": {
+        "pixel_share": 0.36201763392857145,
+        "pooled_between_share": 0.7684889399024503,
+        "median_pixel_between_share": 0.8834315830147946
+      },
+      "0.15-inf": {
+        "pixel_share": 0.19558482142857142,
+        "pooled_between_share": 0.9828347417478814,
+        "median_pixel_between_share": 0.984264839753354
+      }
+    }
+  },
+  "render_ownership_input_views": {
+    "live_token_frac": 0.9986432790756226,
+    "r_in_a90": {
+      "p10": 0.6666,
+      "p50": 0.8379,
+      "p90": 0.9327
+    },
+    "r_in_a90_weighted_by_render": 0.7921321988105774,
+    "a_in_r90": {
+      "p10": 0.7715,
+      "p50": 0.8603,
+      "p90": 0.9224
+    },
+    "same_dominant_view_frac": 0.6490198373794556
+  },
+  "pixel_token_counts_input_views": {
+    "tokens_with_ge_1pct_of_pixel_weight": {
+      "p10": 7.0,
+      "p50": 11.0,
+      "p90": 17.0
+    },
+    "tokens_needed_for_90pct_weight_(capped_33)": {
+      "p10": 4.0,
+      "p50": 8.0,
+      "p90": 14.0
+    }
+  },
+  "scene_latent_overlap_layer7": {
+    "patches_per_latent": {
+      "p10": 7.0,
+      "p50": 15.0,
+      "p90": 28.0
+    },
+    "latents_covering_each_patch": {
+      "p10": 3.0,
+      "p50": 6.0,
+      "p90": 10.0
+    },
+    "other_latents_with_cosine_gt_0.5": {
+      "p10": 0.0,
+      "p50": 1.0,
+      "p90": 3.0
+    },
+    "frac_latents_with_near_duplicate_cos_gt_0.8": 0.15816301107406616,
+    "latent_rms_dispersion_over_depth": {
+      "p10": 0.0219,
+      "p50": 0.05,
+      "p90": 0.2505
+    }
+  },
+  "d0_locality": {
+    "3": {
+      "n_local_heads": 13.0,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 7.570074905667986,
+      "eff_patches_global_median": 401.85521109444755
+    },
+    "7": {
+      "n_local_heads": 12.007142857142858,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 8.01480587550572,
+      "eff_patches_global_median": 1015.2084991455079
+    },
+    "11": {
+      "n_local_heads": 7.164285714285715,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 8.543984058925084,
+      "eff_patches_global_median": 1517.8398337227957
+    }
+  },
+  "token_shape_alive_tokens": {
+    "flatness": {
+      "p10": 0.3137,
+      "p50": 0.54,
+      "p90": 0.7886
+    },
+    "thin_rel": {
+      "p10": 0.0051,
+      "p50": 0.0088,
+      "p90": 0.015
+    },
+    "long_rel": {
+      "p10": 0.0192,
+      "p50": 0.0359,
+      "p90": 0.0759
+    },
+    "ray_over_lateral": {
+      "p10": 0.6455,
+      "p50": 1.3457,
+      "p90": 3.1855
+    },
+    "share_disc_flatness_lt_0.3": 0.08496496081352234,
+    "share_ray_spread_gt_lateral": 0.6924564242362976
+  },
+  "junk_slots": {
+    "junk_share_opacity_lt_0.05_and_far": 0.15476747240339006,
+    "low_opacity_share": 0.6454789297921317,
+    "junk_share_of_heavy_target_render_weight": 0.020473931056847933,
+    "dist_to_nearest_colmap_point_normalized": {
+      "junk": {
+        "p50": 0.2251,
+        "p90": 0.7432
+      },
+      "opacity_ge_0.05": {
+        "p50": 0.0128,
+        "p90": 0.1013
+      }
+    },
+    "junk_opacity": {
+      "p50": 0.0011,
+      "p90": 0.0115
+    },
+    "far_threshold_normalized": 0.09,
+    "note": "nearest COLMAP point overestimates distance to the surface (sparse cloud)"
+  },
+  "parallax": {
+    "alive_tokens": 565845,
+    "colmap_valid_tokens": 348699,
+    "share_parallax_lt_2deg_alive_tokens_inference_time": 0.14913801848888397,
+    "share_parallax_lt_2deg_valid_tokens_colmap_region": 0.11424753069877625,
+    "spearman_e_depth_rel": {
+      "-#views": 0.21620434179765394,
+      "-parallax": 0.3418811133975558,
+      "-parallax_inference_time": 0.29764120961779167,
+      "distance/parallax_(relative)": 0.3419354934619616
+    },
+    "spearman_e_3d_rel": {
+      "-parallax": 0.298153877940954,
+      "-#views": 0.23646737068694662
+    },
+    "e_depth_rel_all_valid": {
+      "p10": 0.0033,
+      "p50": 0.0229,
+      "p90": 0.2253
+    },
+    "binned_by_colmap_region_parallax": {
+      "single view (0 deg)": {
+        "token_share_of_valid": 0.054729148745536804,
+        "e_depth_rel_median": 0.08003448694944382,
+        "e_depth_rel_p90": 0.6847646832466125
+      },
+      "0-2 deg": {
+        "token_share_of_valid": 0.05951838195323944,
+        "e_depth_rel_median": 0.10132405161857605,
+        "e_depth_rel_p90": 0.6574916243553162
+      },
+      "2-5 deg": {
+        "token_share_of_valid": 0.07988838851451874,
+        "e_depth_rel_median": 0.05712955817580223,
+        "e_depth_rel_p90": 0.35277751088142395
+      },
+      "5-10 deg": {
+        "token_share_of_valid": 0.1278323084115982,
+        "e_depth_rel_median": 0.033707570284605026,
+        "e_depth_rel_p90": 0.27054351568222046
+      },
+      "10-20 deg": {
+        "token_share_of_valid": 0.22760604321956635,
+        "e_depth_rel_median": 0.02103397250175476,
+        "e_depth_rel_p90": 0.17756542563438416
+      },
+      ">20 deg": {
+        "token_share_of_valid": 0.4504257142543793,
+        "e_depth_rel_median": 0.014685198664665222,
+        "e_depth_rel_p90": 0.10617784410715103
+      }
+    },
+    "note": "errors are relative to depth (COLMAP region centroid vs the token's opacity-weighted Gaussian centre); on a relative scale distance/parallax reduces to 1/parallax"
+  },
+  "voxel_snap": {
+    "eps_0_normalized": {
+      "between_share_pooled": 0.9460769935547942,
+      "thickness_over_depth": {
+        "p50": 0.0571,
+        "p90": 0.2495
+      },
+      "psnr_heavy_targets": 25.003856658935547,
+      "psnr_input_views": 26.56082534790039
+    },
+    "eps_0.006_normalized": {
+      "between_share_pooled": 0.9460247800915009,
+      "thickness_over_depth": {
+        "p50": 0.057,
+        "p90": 0.2488
+      },
+      "psnr_heavy_targets": 24.85592269897461,
+      "psnr_input_views": 26.32155990600586
+    },
+    "eps_0.012_normalized": {
+      "between_share_pooled": 0.9460296959085637,
+      "thickness_over_depth": {
+        "p50": 0.0569,
+        "p90": 0.2502
+      },
+      "psnr_heavy_targets": 24.042673110961914,
+      "psnr_input_views": 25.2010498046875
+    },
+    "eps_0.024_normalized": {
+      "between_share_pooled": 0.9468363431611143,
+      "thickness_over_depth": {
+        "p50": 0.0576,
+        "p90": 0.2567
+      },
+      "psnr_heavy_targets": 22.310741424560547,
+      "psnr_input_views": 23.002702713012695
+    }
+  }
+}
+dead child slots (>=99% tokens): [0, 6, 7, 16, 19, 20, 27, 61]
+{
+  "definitions": "frozen official model; features of COLMAP-valid alive tokens (<=1024 per scene); target = attention-weighted COLMAP centroid of the token's attention-90% patch set; train on the 70 even scenes, test on the 70 odd scenes; errors relative to target depth from the dominant camera",
+  "gpu": "1",
+  "train_tokens": 71602,
+  "test_tokens": 71582,
+  "official_output_gaussian_centre": {
+    "e_depth_rel": {
+      "p50": 0.0219,
+      "p90": 0.2021
+    },
+    "e_3d_rel": {
+      "p50": 0.0275,
+      "p90": 0.2067
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.0738,
+      "p90": 0.5781
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0153,
+      "p90": 0.111
+    }
+  },
+  "linear_ridge_h": {
+    "lambda": 1000.0,
+    "e_depth_rel": {
+      "p50": 0.1731,
+      "p90": 0.555
+    },
+    "e_3d_rel": {
+      "p50": 0.2963,
+      "p90": 0.7886
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.2731,
+      "p90": 0.9841
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1406,
+      "p90": 0.4025
+    }
+  },
+  "mlp_h": {
+    "e_depth_rel": {
+      "p50": 0.0543,
+      "p90": 0.2405
+    },
+    "e_3d_rel": {
+      "p50": 0.0728,
+      "p90": 0.2573
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1104,
+      "p90": 0.5324
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0421,
+      "p90": 0.1532
+    },
+    "train_fit": {
+      "e_depth_rel": {
+        "p50": 0.0154,
+        "p90": 0.0763
+      },
+      "e_3d_rel": {
+        "p50": 0.0268,
+        "p90": 0.0931
+      },
+      "e_depth_rel_1view": {
+        "p50": 0.0291,
+        "p90": 0.286
+      },
+      "e_depth_rel_4plus_views": {
+        "p50": 0.0122,
+        "p90": 0.05
+      }
+    }
+  },
+  "linear_ridge_mix": {
+    "lambda": 1000.0,
+    "e_depth_rel": {
+      "p50": 0.2066,
+      "p90": 0.7072
+    },
+    "e_3d_rel": {
+      "p50": 0.4,
+      "p90": 1.0799
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.3505,
+      "p90": 1.3924
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1628,
+      "p90": 0.4747
+    }
+  },
+  "mlp_mix": {
+    "e_depth_rel": {
+      "p50": 0.0521,
+      "p90": 0.2326
+    },
+    "e_3d_rel": {
+      "p50": 0.0716,
+      "p90": 0.256
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.116,
+      "p90": 0.5091
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.04,
+      "p90": 0.1388
+    },
+    "train_fit": {
+      "e_depth_rel": {
+        "p50": 0.0092,
+        "p90": 0.0428
+      },
+      "e_3d_rel": {
+        "p50": 0.017,
+        "p90": 0.0568
+      },
+      "e_depth_rel_1view": {
+        "p50": 0.0136,
+        "p90": 0.0939
+      },
+      "e_depth_rel_4plus_views": {
+        "p50": 0.0075,
+        "p90": 0.0315
+      }
+    }
+  }
+}
+[11:20:57] done
+[12:11:03] start tokengs_release_latent_6v: 7 shards on GPUs 1,2,3,4,5,6,7
+GPU 2: tokengs_release_latent_6v shard 1/7: 20 scenes (camera normalization mean_cam)
+GPU 6: tokengs_release_latent_6v shard 5/7: 20 scenes (camera normalization mean_cam)
+GPU 7: tokengs_release_latent_6v shard 6/7: 20 scenes (camera normalization mean_cam)
+GPU 1: tokengs_release_latent_6v shard 0/7: 20 scenes (camera normalization mean_cam)
+GPU 4: tokengs_release_latent_6v shard 3/7: 20 scenes (camera normalization mean_cam)
+GPU 5: tokengs_release_latent_6v shard 4/7: 20 scenes (camera normalization mean_cam)
+GPU 3: tokengs_release_latent_6v shard 2/7: 20 scenes (camera normalization mean_cam)
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[shard 4] 1/20 07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b 11s psnr_all 32.32 colmap pts 18819 patch cov 0.41 decode diff 0.0e+00
+[shard 2] 1/20 06da796666297fe4c683c231edf56ec00148a6a52ab5bb159fe1be31f53a58df 11s psnr_all 23.60 colmap pts 61837 patch cov 0.38 decode diff 0.0e+00
+[shard 1] 1/20 0569e83fdc248a51fc0ab082ce5e2baff15755c53c207f545e6d02d91f01d166 13s psnr_all 23.50 colmap pts 183509 patch cov 0.77 decode diff 0.0e+00
+[shard 0] 1/20 032dee9fb0a8bc1b90871dc5fe950080d0bcd3caf166447f44e60ca50ac04ec7 13s psnr_all 30.10 colmap pts 48676 patch cov 0.48 decode diff 0.0e+00
+[shard 6] 1/20 093ef327b4e4f9d4ee52c02a354a53558a8652157fb0d58f3b4a708734afb334 14s psnr_all 24.16 colmap pts 113947 patch cov 0.60 decode diff 0.0e+00
+[shard 5] 1/20 0853979305f7ecb80bd8fc2c8df916410d471ef04ed5f1a64e9651baa41d7695 14s psnr_all 27.80 colmap pts 81120 patch cov 0.50 decode diff 0.0e+00
+[shard 3] 1/20 073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561 16s psnr_all 19.83 colmap pts 175049 patch cov 0.57 decode diff 0.0e+00
+[shard 1] 2/20 0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6 24s psnr_all 28.87 colmap pts 87098 patch cov 0.61 decode diff 0.0e+00
+[shard 0] 2/20 0a1b7c20a92c43c6b8954b1ac909fb2f0fa8b2997b80604bc8bbec80a1cb2da3 24s psnr_all 28.12 colmap pts 72222 patch cov 0.50 decode diff 0.0e+00
+[shard 2] 2/20 0bfdd020cf475b9c68e4b469d1d1a2d0cad303eefe8b78fb2307855afdaac8be 24s psnr_all 24.40 colmap pts 72879 patch cov 0.47 decode diff 0.0e+00
+[shard 4] 2/20 1264931635e127fb905c8953cbc2deadd0c763e633af7fbd9405a61ca849710c 25s psnr_all 22.08 colmap pts 106840 patch cov 0.44 decode diff 0.0e+00
+[shard 6] 2/20 15ff83e2531668d27c92091c97d31401ce323e24ee7c844cb32d5109ab9335f7 29s psnr_all 21.65 colmap pts 100357 patch cov 0.65 decode diff 0.0e+00
+[shard 3] 2/20 119fd56d3797e2d349ca64ddcc5851463cd13b5974b5b2e4566ed5cf7e02e6c1 31s psnr_all 22.72 colmap pts 74124 patch cov 0.34 decode diff 0.0e+00
+[shard 5] 2/20 14eb48a50e37df548894ab6d8cd628a21dae14bbe6c462e894616fc5962e6c49 33s psnr_all 25.16 colmap pts 79799 patch cov 0.49 decode diff 0.0e+00
+[shard 1] 3/20 183dd248f6a86e07c5adf9de8ee2d0abe45b1216331c03678e89634c2e9b1c7f 36s psnr_all 27.44 colmap pts 87995 patch cov 0.39 decode diff 0.0e+00
+[shard 2] 3/20 1ba74c22670ad047981441581d00f26f4a148d1010bcac7468c615adf5fa4d5d 35s psnr_all 27.32 colmap pts 48106 patch cov 0.30 decode diff 0.0e+00
+[shard 0] 3/20 165f5af8bfe32f70595a1c9393a6e442acf7af019998275144f605b89a306557 37s psnr_all 23.65 colmap pts 79513 patch cov 0.47 decode diff 0.0e+00
+[shard 4] 3/20 1da888bdedfc9629c0fa9f82cf3f5d96f8103baee0ff64d9311aea1224a9f2ae 38s psnr_all 22.39 colmap pts 85967 patch cov 0.50 decode diff 0.0e+00
+[shard 6] 3/20 2385549d398bdfb55ed17b547c9846f0d01d571b4e050f90df707b577084fb55 41s psnr_all 24.36 colmap pts 110573 patch cov 0.57 decode diff 0.0e+00
+[shard 5] 3/20 1de58be515696102c364b767f296600ffff853d4145a60dd30ece9d935317654 43s psnr_all 29.78 colmap pts 58043 patch cov 0.56 decode diff 0.0e+00
+[shard 3] 3/20 1d6a9ed47cce39fd1c4d18f776bcc97e507b81bde921ca596bd91b0b02b5e414 45s psnr_all 21.20 colmap pts 106829 patch cov 0.57 decode diff 0.0e+00
+[shard 0] 4/20 26fd23358fa11fff0fb3180ef0b65591b486e20dcf753ce4a7aae49a37e370c7 48s psnr_all 28.26 colmap pts 86917 patch cov 0.57 decode diff 0.0e+00
+[shard 1] 4/20 280abf7bd93b81b077af1db638229dbb09869052fa0b7b57c81c94d2db893829 48s psnr_all 25.95 colmap pts 119967 patch cov 0.57 decode diff 0.0e+00
+[shard 6] 4/20 2cbfe28643b6636f9c70813cae7625aa858a352109493ac70fb429ce94dd55b3 52s psnr_all 29.60 colmap pts 60581 patch cov 0.54 decode diff 0.0e+00
+[shard 2] 4/20 286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a 51s psnr_all 18.70 colmap pts 167507 patch cov 0.61 decode diff 0.0e+00
+[shard 4] 4/20 2b65ba886efac7af6253fce68ae9284bf4d4db019e17c47f3e853361acbdb066 51s psnr_all 22.52 colmap pts 176167 patch cov 0.71 decode diff 0.0e+00
+[shard 5] 4/20 2beaca318994c25409dcbb6d0bdd96c3620f2f18aec44ea3f20edd302f18ca78 55s psnr_all 23.88 colmap pts 140187 patch cov 0.68 decode diff 0.0e+00
+[shard 3] 4/20 2991a75d1f0fb2b7a891d424fc2459bb954b61599b52e74a056a7acfb2998b77 59s psnr_all 20.83 colmap pts 97104 patch cov 0.54 decode diff 0.0e+00
+[shard 6] 5/20 387eeb925ba47af5db9ce6102aaf6b07e6d3573b7e7568dda4cef22d5ab1342f 62s psnr_all 26.68 colmap pts 151404 patch cov 0.61 decode diff 0.0e+00
+[shard 1] 5/20 32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e 62s psnr_all 31.33 colmap pts 46264 patch cov 0.29 decode diff 0.0e+00
+[shard 4] 5/20 35872363e17af5d173b6a0b09fcf5de94627ad5dc5f8a9ad4c579f3e70b4797a 62s psnr_all 28.82 colmap pts 96020 patch cov 0.53 decode diff 0.0e+00
+[shard 0] 5/20 2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd 62s psnr_all 23.59 colmap pts 85998 patch cov 0.40 decode diff 0.0e+00
+[shard 2] 5/20 341b4ff3dfd3d377d7167bd81f443bedafbff003bf04881b99760fc0aeb69510 64s psnr_all 25.32 colmap pts 96645 patch cov 0.62 decode diff 0.0e+00
+[shard 5] 5/20 374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e 68s psnr_all 32.33 colmap pts 91598 patch cov 0.60 decode diff 0.0e+00
+[shard 6] 6/20 444da1b4a3f1ca019d4c9c1b405a579427746ccc96cab6dab7dcba5cb4fc998c 73s psnr_all 25.38 colmap pts 100030 patch cov 0.51 decode diff 0.0e+00
+[shard 4] 6/20 3bb894d1933f3081134ad2d40e54de5f0636bd8b502b0a8561873bb63b0dce85 73s psnr_all 24.51 colmap pts 106573 patch cov 0.59 decode diff 0.0e+00
+[shard 0] 6/20 389a460ca1995e0658e85fe8e6b520b4e88b370cd6710dfe728b1564bba31aee 74s psnr_all 26.17 colmap pts 42568 patch cov 0.25 decode diff 0.0e+00
+[shard 1] 6/20 3b16a10ec9b4ab71580958b634485a979ffd6df0d368dbbf6fc1c5ffacf46b7a 77s psnr_all 21.45 colmap pts 144143 patch cov 0.62 decode diff 0.0e+00
+[shard 3] 5/20 35317e621976e87f0c143e66fc61fb8cddb4ff134304da7a00e32ac1983105b4 77s psnr_all 23.32 colmap pts 156414 patch cov 0.66 decode diff 0.0e+00
+[shard 2] 6/20 3b7529dcccf7097cba31a989536035595e214b0f3775867fd3a62eb186870090 78s psnr_all 23.97 colmap pts 112146 patch cov 0.68 decode diff 0.0e+00
+[shard 5] 6/20 41036716da7efda334c1d434c4141d15642e0e02f881a01b6c8c36f8bea64c45 83s psnr_all 25.17 colmap pts 92452 patch cov 0.50 decode diff 0.0e+00
+[shard 6] 7/20 513e4ea2e8477b06f2b32417d5c243aec71d491cb0596a60e9fe304c635f20a1 83s psnr_all 26.22 colmap pts 46239 patch cov 0.48 decode diff 0.0e+00
+[shard 4] 7/20 4ff8650b5c1140e98d957fbd1abbe2cfbbb416b37cb9f06f7f376956703801bb 86s psnr_all 28.16 colmap pts 84955 patch cov 0.52 decode diff 0.0e+00
+[shard 0] 7/20 457e9a1ae777b0c72be723aaeec971b39cc6d5d413d922f981ec9785395f7ca9 87s psnr_all 25.68 colmap pts 65294 patch cov 0.41 decode diff 0.0e+00
+[shard 1] 7/20 484c0aca40c1087f196d2caf3c8cb463864c08e60b98326ca02eb6dae8ce4984 90s psnr_all 24.21 colmap pts 68203 patch cov 0.41 decode diff 0.0e+00
+[shard 3] 6/20 3bb3bb4d3e871d79eb71946cbab1e3afc7a8e33a661153033f32deb3e23d2e52 90s psnr_all 26.37 colmap pts 42542 patch cov 0.28 decode diff 0.0e+00
+[shard 2] 7/20 493816813d2d6d248eb3c2b0b77b63e54235266e9a06e270fd0d282f13960493 91s psnr_all 22.80 colmap pts 196178 patch cov 0.82 decode diff 0.0e+00
+[shard 6] 8/20 5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00 94s psnr_all 29.28 colmap pts 75612 patch cov 0.58 decode diff 0.0e+00
+[shard 5] 7/20 50c46cf8b8b22c8d2ffdef8964b05ddbceaef312c9a9ff331d1ecebfd223f72a 98s psnr_all 26.03 colmap pts 58887 patch cov 0.36 decode diff 0.0e+00
+[shard 0] 8/20 54bf355ca7e08ed1bc86f5772e564ac0f92981ca25dab24d86b694e915fc4c43 98s psnr_all 26.11 colmap pts 96427 patch cov 0.71 decode diff 0.0e+00
+[shard 4] 8/20 5a27c00f525f5484b7aa0d0107051253bf7bb395bde0b3a4486ff8c52fb4965e 98s psnr_all 25.61 colmap pts 81024 patch cov 0.58 decode diff 0.0e+00
+[shard 1] 8/20 56452d9cd9e2e034764132a57058517ab085e1352f9664d2d1e10e98741334fc 101s psnr_all 22.44 colmap pts 97531 patch cov 0.48 decode diff 0.0e+00
+[shard 3] 7/20 4ae797d07b6d1644c9db6919c8cc8c0d28d72be45108ac7a3abf8dc21b599d83 102s psnr_all 23.73 colmap pts 88103 patch cov 0.52 decode diff 0.0e+00
+[shard 2] 8/20 565553aa894be621e8b4773cac288e60ad0c2cf7edb621be62b348c9a0f78380 104s psnr_all 24.46 colmap pts 156490 patch cov 0.56 decode diff 0.0e+00
+[shard 6] 9/20 6d81c5ab0d480fd43d78b75ff372a8113ad38e2c03f1d69627c009883054d4c2 106s psnr_all 26.35 colmap pts 90804 patch cov 0.36 decode diff 0.0e+00
+[shard 5] 8/20 5a69d1027b477be4d2933b765723d57b272e0ace96be7885306464d54aa2c038 111s psnr_all 21.53 colmap pts 113095 patch cov 0.62 decode diff 0.0e+00
+[shard 0] 9/20 5c8dafad7d782c76ffad8c14e9e1244ce2b83aa12324c54a3cc10176964acf04 111s psnr_all 28.09 colmap pts 73952 patch cov 0.39 decode diff 0.0e+00
+[shard 4] 9/20 66fd66cbed40a2d11ecd17ae6d6d60cd60d476616864ecdd351fe69e644f30a1 112s psnr_all 25.68 colmap pts 77156 patch cov 0.33 decode diff 0.0e+00
+[shard 1] 9/20 5f0041e53d59d67c3ca25db97b269db183a532c4566a6bc46ca0e69cfa4234ad 115s psnr_all 29.35 colmap pts 76844 patch cov 0.58 decode diff 0.0e+00
+[shard 6] 10/20 7da3db99059a436adf537bc23309a6a4db9e011696d086f3a64037f7497d9df7 117s psnr_all 23.47 colmap pts 88504 patch cov 0.42 decode diff 0.0e+00
+[shard 2] 9/20 63798f5c6fbfcb4eb686268248b8ecbc8d87d920b2bcce967eeaedfd3b3b6d82 117s psnr_all 27.84 colmap pts 51957 patch cov 0.30 decode diff 0.0e+00
+[shard 3] 8/20 599ca3e04cae3ec83affc426af7d0d7ab36eb91cd8e539edbc13070a4d455792 117s psnr_all 21.81 colmap pts 79891 patch cov 0.44 decode diff 0.0e+00
+[shard 0] 10/20 6e11e7f4fea305c7c4658d2c1f8df29e6f299330860cf48ffbf1c5ff8b96c0a8 125s psnr_all 29.25 colmap pts 42411 patch cov 0.22 decode diff 0.0e+00
+[shard 1] 10/20 70eac6ff18a1daae4eeccc5eb18723eaf7e029a77e79c79d9573f7bac59ba92b 126s psnr_all 25.37 colmap pts 173553 patch cov 0.72 decode diff 0.0e+00
+[shard 5] 9/20 6d221625614d0515fa44d59a8797a49b64f86bc775e66be22f07a66aa0a0cb3a 129s psnr_all 23.81 colmap pts 95807 patch cov 0.40 decode diff 0.0e+00
+[shard 2] 10/20 71b2dc8a2aa553da09b8b94b9f0d5e8abcca307def74d26301616ee238464d46 129s psnr_all 29.73 colmap pts 47317 patch cov 0.44 decode diff 0.0e+00
+[shard 6] 11/20 90cb7ef95384138c2370f13a9ae1698fb1b5bdd68e8b3d01f8e53d38933a4b92 131s psnr_all 23.89 colmap pts 91621 patch cov 0.44 decode diff 0.0e+00
+[shard 3] 9/20 669c36225b273e22ce08364f166dce910b708d7abd89e58463a15d2790b534d5 131s psnr_all 25.53 colmap pts 112468 patch cov 0.51 decode diff 0.0e+00
+[shard 4] 10/20 7705a2edd022de9da3f8cead677287645986e982d9247a21e1992859a59f8335 131s psnr_all 26.09 colmap pts 64244 patch cov 0.28 decode diff 0.0e+00
+[shard 0] 11/20 800cf88687a79c232700454c2f5a402e771bc7157037a17b0ce93da365b25575 137s psnr_all 22.72 colmap pts 159311 patch cov 0.63 decode diff 0.0e+00
+[shard 1] 11/20 8324b3ca22085040c2a0ecb7284e0cdf776b1f846b73a7c0df893587cb4a45f8 141s psnr_all 23.10 colmap pts 128115 patch cov 0.50 decode diff 0.0e+00
+[shard 5] 10/20 7a9f97660be8f2421b37dd413c898360532f17c6447c11515e8aded2d80eb99d 142s psnr_all 29.13 colmap pts 59994 patch cov 0.40 decode diff 0.0e+00
+[shard 3] 10/20 75fbbe467353cfdeb93bc1872144855576797be83a0c71c51155ee6b355d6d5e 142s psnr_all 25.54 colmap pts 156468 patch cov 0.62 decode diff 0.0e+00
+[shard 4] 11/20 8cb2e97d26a639f05a571476240a8fa86988e6853f0f13cc05830d1578002aad 143s psnr_all 29.49 colmap pts 63171 patch cov 0.36 decode diff 0.0e+00
+[shard 2] 11/20 85cd0e92110bcd35e826cbff16bb0e85d8117717adaf36f0698920f0fb9b2cfd 144s psnr_all 24.38 colmap pts 108640 patch cov 0.57 decode diff 0.0e+00
+[shard 6] 12/20 9cbc5548643ca9cfe797f871bac58bccd02f0510c49b7cb3697b38dfd780a508 146s psnr_all 23.92 colmap pts 219191 patch cov 0.76 decode diff 0.0e+00
+[shard 0] 12/20 917e9c8985d353b0ee4c281f11fa84eb8550814562670cbb82cd0ec9c1194fe7 150s psnr_all 26.37 colmap pts 121584 patch cov 0.64 decode diff 0.0e+00
+[shard 5] 11/20 8fdc5130f0731360cc053f59049bfe6db509567457c5471c970292966cb34f17 154s psnr_all 26.64 colmap pts 45688 patch cov 0.39 decode diff 0.0e+00
+[shard 3] 11/20 8b9fb9d9f10e8c64d5034be69809465753b8ba88ef12da82afd47d38ee789934 155s psnr_all 21.66 colmap pts 128554 patch cov 0.70 decode diff 0.0e+00
+[shard 1] 12/20 918c8dad730c3b804306c5da8486124be4aa0612e85fb825338fd350c912e1b0 156s psnr_all 22.50 colmap pts 104139 patch cov 0.37 decode diff 0.0e+00
+[shard 4] 12/20 9641a1ed7963ce5ca734cff3e6ccea3dfa8bcb0b0a3ff78f65d32a080de2d71e 156s psnr_all 25.98 colmap pts 57195 patch cov 0.27 decode diff 0.0e+00
+[shard 0] 13/20 9e9a89ae6fed06d6e2f4749b4b0059f35ca97f848cedc4a14345999e746f7884 160s psnr_all 29.40 colmap pts 43530 patch cov 0.25 decode diff 0.0e+00
+[shard 6] 13/20 a726c1112ad026efc92f59f196c0698e67abd12a04135a7ff6349b1d31b089eb 161s psnr_all 21.82 colmap pts 60384 patch cov 0.30 decode diff 0.0e+00
+[shard 2] 12/20 91afb9910b042f7185c2b8e4b6b24b5785dae4542617b3f8005b5492f6d123f7 161s psnr_all 25.75 colmap pts 110058 patch cov 0.48 decode diff 0.0e+00
+[shard 1] 13/20 9fb0588ff045ec64119c5bc91b44a4b7400e5fae5a17e67762b29e6855b57118 165s psnr_all 25.93 colmap pts 84841 patch cov 0.70 decode diff 0.0e+00
+[shard 3] 12/20 946f49be73928469000baa5ca04d2573137c5ee6a66362bcf8d130354dca8924 165s psnr_all 27.38 colmap pts 70909 patch cov 0.42 decode diff 0.0e+00
+[shard 5] 12/20 9c8c0e0fadd97abf60088f667eba058ef077a71a8c0f5a4eff2782aa97f1ceb8 172s psnr_all 20.26 colmap pts 128378 patch cov 0.57 decode diff 0.0e+00
+[shard 4] 13/20 a62c330f5403e2e41a82a74c4e865b705c5706843b992fae2fe2e538b122d984 172s psnr_all 20.52 colmap pts 135626 patch cov 0.57 decode diff 0.0e+00
+[shard 6] 14/20 b5faa2a8ce980030125717352086bf9ec16c5d994bae3b3a732da3eb67cf4fa8 175s psnr_all 26.62 colmap pts 63833 patch cov 0.39 decode diff 0.0e+00
+[shard 2] 13/20 a17a984ca90a9b5840fdf85b15104b0d18e25975981c1aa90fcdfd6eeeb285f3 174s psnr_all 25.01 colmap pts 98838 patch cov 0.57 decode diff 0.0e+00
+[shard 1] 14/20 adf35184a12d4cfa3f4248b87aa5adb4f39f179df460d6d76136e13d37299a2a 177s psnr_all 29.09 colmap pts 68999 patch cov 0.42 decode diff 0.0e+00
+[shard 0] 14/20 adb95f29c15b8a89e40c17d10596679be09d7719c6f08a453facd506d056ea8b 177s psnr_all 23.50 colmap pts 164070 patch cov 0.69 decode diff 0.0e+00
+[shard 5] 13/20 a62f9a1c6362e7c8a3440261ea0921a0a4b60cf5822bd19579836694f26b3abd 182s psnr_all 26.30 colmap pts 187651 patch cov 0.73 decode diff 0.0e+00
+[shard 3] 13/20 a401469cb0fa576b93e836a4a6d712394f1a55a0a53a42250286980bd078e669 182s psnr_all 22.47 colmap pts 115589 patch cov 0.55 decode diff 0.0e+00
+[shard 4] 14/20 b3bf9079b442c681749f6bd95cfb0659c6d844f2228b2f4fa4b602a0e3627b9a 183s psnr_all 26.91 colmap pts 83046 patch cov 0.61 decode diff 0.0e+00
+[shard 0] 15/20 b6d1134cb03c855d246f916beaa2d3d01290cf47937a5176011ff39b850ec615 188s psnr_all 22.22 colmap pts 147699 patch cov 0.69 decode diff 0.0e+00
+[shard 1] 15/20 b92b499c9bf92327d5f3a44c9db49bde3400dcb1cfec48d6488831e2b304d0bb 189s psnr_all 30.03 colmap pts 27759 patch cov 0.24 decode diff 0.0e+00
+[shard 2] 14/20 af0d7039e64af3959210c235e59425896ac064f4e0f721c437bbd2cf1d8ea910 189s psnr_all 19.08 colmap pts 135566 patch cov 0.53 decode diff 0.0e+00
+[shard 6] 15/20 c455899acfc8816353a55fade692d19d9c2bff68c8615f852931d5754848db74 191s psnr_all 22.27 colmap pts 84203 patch cov 0.32 decode diff 0.0e+00
+[shard 5] 14/20 b4f53094fd31dcc2de1c1d1fdfeffac5259e9bdf39d77b552ff948e4bdf1fd8e 194s psnr_all 25.14 colmap pts 107406 patch cov 0.56 decode diff 0.0e+00
+[shard 3] 14/20 b2076bc7231bac445b1a3d0015a410675a3222f25cc219e8178a62a0dd4ac63d 196s psnr_all 21.31 colmap pts 161099 patch cov 0.62 decode diff 0.0e+00
+[shard 1] 16/20 cc08c0bdc34ddd2867705d0b17a86ec2a9d7c7926ce99070ed1fdc66a812de07 201s psnr_all 28.51 colmap pts 70170 patch cov 0.46 decode diff 0.0e+00
+[shard 4] 15/20 c37109a55effe0000f8e40652ca935376e75bcb2a0b56de8eabd20a26e2a0f68 199s psnr_all 19.68 colmap pts 102552 patch cov 0.37 decode diff 0.0e+00
+[shard 2] 15/20 ba55c875d20c34ee85ffc72264c4d77710852e5fb7d9ce4b9c26a8442850e98f 200s psnr_all 30.87 colmap pts 76091 patch cov 0.40 decode diff 0.0e+00
+[shard 0] 16/20 cbd44beb04f9c98f2d2c5affff89a6e0a72c25f1aa0c6f660fbd9e4d26702f8b 201s psnr_all 27.55 colmap pts 99379 patch cov 0.61 decode diff 0.0e+00
+[shard 6] 16/20 d3af8212ae1600f078c4ac1ef3c9369a7f41ee9d005dbd0c545cf43fc35a9a23 202s psnr_all 28.97 colmap pts 55726 patch cov 0.49 decode diff 0.0e+00
+[shard 3] 15/20 c076929db6501cf7ebe386c70e6d77ea3af844a745e794f2ec17c981c465a69b 207s psnr_all 29.91 colmap pts 72694 patch cov 0.44 decode diff 0.0e+00
+[shard 5] 15/20 c37726ce770ac50a2cf5c0f43022f0268e26da0d777cd8e3a3418c4eed03fd94 212s psnr_all 22.34 colmap pts 170148 patch cov 0.62 decode diff 0.0e+00
+[shard 1] 17/20 d8de66037bd03dd0d39d54f9978bac3318d912e30e22c21e1ada82a98ed48c53 212s psnr_all 26.14 colmap pts 148312 patch cov 0.57 decode diff 0.0e+00
+[shard 4] 16/20 d1b3a0b37acc72207295b05e8c359f8b43bf879eb882c60747cfc6d3c7d8efa3 212s psnr_all 21.77 colmap pts 114977 patch cov 0.62 decode diff 0.0e+00
+[shard 0] 17/20 d4fbeba0168af8fddb2fc695881787aedcd62f477c7dcec9ebca7b8594bbd95b 213s psnr_all 20.17 colmap pts 181414 patch cov 0.79 decode diff 0.0e+00
+[shard 2] 16/20 cd9c981eeb4a9091547af19181b382698e9d9eee0a838c7c9783a8a268af6aee 212s psnr_all 21.37 colmap pts 103123 patch cov 0.56 decode diff 0.0e+00
+[shard 6] 17/20 dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751 219s psnr_all 19.18 colmap pts 230202 patch cov 0.78 decode diff 0.0e+00
+[shard 3] 16/20 ceb252f5d4419510655cf9ed7afbf3e8e688825f798d80414c7715dc8ace153a 219s psnr_all 25.88 colmap pts 80685 patch cov 0.50 decode diff 0.0e+00
+[shard 0] 18/20 ddfdcfdf02d53dd89a055cd9e1ed30272ab3f57c7560ac2c3761bb01d76a7882 223s psnr_all 23.81 colmap pts 194613 patch cov 0.73 decode diff 0.0e+00
+[shard 1] 18/20 ded5e4b46aedbef4cdb7bd1db7fc4cc5b00a9979ad6464bdadfab052cd64c101 223s psnr_all 28.44 colmap pts 56511 patch cov 0.36 decode diff 0.0e+00
+[shard 4] 17/20 d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b 223s psnr_all 28.93 colmap pts 83884 patch cov 0.52 decode diff 0.0e+00
+[shard 5] 16/20 d3812aad538261e7f73c75762ff55f23b468bcc76f376d52ac86ca6cf3c44b4b 227s psnr_all 20.63 colmap pts 48942 patch cov 0.27 decode diff 0.0e+00
+[shard 2] 17/20 d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a 228s psnr_all 18.65 colmap pts 111437 patch cov 0.40 decode diff 0.0e+00
+[shard 6] 18/20 e78f8cebd2bd93d960bfaeac18fac0bb2524f15c44288903cd20b73e599e8a81 231s psnr_all 21.80 colmap pts 158106 patch cov 0.76 decode diff 0.0e+00
+[shard 1] 19/20 e9360e7a89bee835dc847cf8796093e634b759ff582558788dcfe8326f6e8901 232s psnr_all 21.60 colmap pts 142708 patch cov 0.69 decode diff 0.0e+00
+[shard 0] 19/20 e8ce51b6abfe05bf8dca47e29c8be6c1e6de27a8c9fece7a121400b931b2ca0f 236s psnr_all 26.02 colmap pts 106743 patch cov 0.54 decode diff 0.0e+00
+[shard 4] 18/20 df4f9d9a0adfc54c49607bc792be6ed6f751b67e37c588472ea58b0d898310dd 236s psnr_all 28.53 colmap pts 41719 patch cov 0.32 decode diff 0.0e+00
+[shard 3] 17/20 d9b6376623741313bf6da6bf4cdb9828be614a2ce9390ceb3f31cd535d661a75 237s psnr_all 22.93 colmap pts 123325 patch cov 0.48 decode diff 0.0e+00
+[shard 5] 17/20 dac9796dd69e1c25277e29d7e30af4f21e3b575d62a0a208c2b3d1211e2d5d77 241s psnr_all 29.79 colmap pts 66063 patch cov 0.43 decode diff 0.0e+00
+[shard 2] 18/20 df04f58064684c1a31aa0ffbbcf34199d01d0a0ff289588eb2d6c6cf50a3922c 241s psnr_all 24.21 colmap pts 104755 patch cov 0.69 decode diff 0.0e+00
+[shard 6] 19/20 ef59aac437132bfc1dd45a7e1f8e4800978e7bb28bf98c4428d26fb3e1da3e90 244s psnr_all 29.06 colmap pts 122546 patch cov 0.65 decode diff 0.0e+00
+[shard 1] 20/20 f477ffc4b398bed8e0d921f0fba9825ca63f317381c535c84be23be991ae1d7a 244s psnr_all 29.33 colmap pts 45485 patch cov 0.30 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_release_latent_6v/shard_1.pt
+[shard 4] 19/20 ec305787b70029b782c71c1bf296c3885c7c22619e5661bd40085533ddfee5e4 246s psnr_all 23.73 colmap pts 64302 patch cov 0.36 decode diff 0.0e+00
+[shard 0] 20/20 f004c810d94bac93f527606a2ff859d646f99fcac0868c6c6905b29c718fa37b 249s psnr_all 28.59 colmap pts 49582 patch cov 0.46 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_release_latent_6v/shard_0.pt
+[shard 3] 18/20 df29c225863d0173e060b1f3fde4e6eb5a57a4e4edabd397026ba1a028aeb39e 251s psnr_all 24.19 colmap pts 73411 patch cov 0.57 decode diff 0.0e+00
+[shard 2] 19/20 eb4cf52988f805e6fce11d1b239fa9de32eb157364cff06ebac0aa50e0a46567 253s psnr_all 24.59 colmap pts 101023 patch cov 0.59 decode diff 0.0e+00
+[shard 5] 18/20 e5684b3292bfd77db297839fc37ee4cce7fd59775af1a6a4827e3b4f59c036d3 254s psnr_all 26.71 colmap pts 69185 patch cov 0.51 decode diff 0.0e+00
+[shard 4] 20/20 fb2c0499c225d6124938cadcf0dc48cbb490551b8a69c98386491c1366163632 258s psnr_all 26.97 colmap pts 59476 patch cov 0.47 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_release_latent_6v/shard_4.pt
+[shard 6] 20/20 ff592398657b3dfe94153332861985194a3e3c9d199c4a3a27a0ce4038e81ade 259s psnr_all 27.14 colmap pts 111821 patch cov 0.52 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_release_latent_6v/shard_6.pt
+[shard 3] 19/20 ec1e44d4dc0f8fa77610866495f9297a7f82158c43e1777668b84fd4b736c7bc 264s psnr_all 28.14 colmap pts 71337 patch cov 0.43 decode diff 0.0e+00
+[shard 5] 19/20 ed16328235c610f15405ff08711eaf15d88a0503884f3a9ccb5a0ee69cb4acb5 266s psnr_all 25.49 colmap pts 192659 patch cov 0.65 decode diff 0.0e+00
+[shard 2] 20/20 f71ac346cd0fc4652a89afb37044887ec3907d37d01d1ceb0ad28e1a780d8e03 265s psnr_all 24.15 colmap pts 189511 patch cov 0.80 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_release_latent_6v/shard_2.pt
+[shard 3] 20/20 f7aaea9ac683bb1945cfeb1daa9abca3375249e0d19281a89a3f575040835464 276s psnr_all 23.51 colmap pts 189601 patch cov 0.79 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_release_latent_6v/shard_3.pt
+[shard 5] 20/20 fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9 285s psnr_all 18.19 colmap pts 165352 patch cov 0.55 decode diff 0.0e+00
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_release_latent_6v/shard_5.pt
+{
+  "model": "tokengs_release_latent_6v",
+  "checkpoint": "/home/jms/xveyan/4DGS/TokenGS/checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors",
+  "checkpoint_sha256": "5913da347475049cb58e552634ee1c527293c2571576806db0d4da702ce978c3",
+  "scenes": 140,
+  "scannetpp_reference_official_model": {
+    "thickness_between_share_pooled": 0.9,
+    "thickness_between_share_per_pixel_median": 0.72,
+    "render_weight_in_attention90_median": 0.87,
+    "render_weight_in_attention90_weighted": 0.83,
+    "patches_per_latent_median": 17,
+    "latents_covering_each_patch_median": 6,
+    "near_duplicate_latent_frac": 0.19,
+    "token_flatness_median": 0.58,
+    "token_ray_over_lateral_median": 1.37,
+    "junk_slot_share": 0.24,
+    "junk_render_weight_share": 0.049,
+    "dead_child_slots_all_tokens": [
+      0,
+      7,
+      16,
+      19,
+      20
+    ],
+    "parallax_lt2deg_token_share": 0.25,
+    "spearman_error_vs_distance_over_parallax": 0.47,
+    "spearman_error_vs_parallax": 0.4,
+    "voxel_snap_between_share": 0.91,
+    "depth_absrel_vs_laser": 0.174
+  },
+  "psnr": {
+    "all_50_targets_scene_mean": 25.193166732788086,
+    "novel_44_targets_scene_mean": 25.006668090820312,
+    "reference": "earlier official eval 25.1935, release table 25.120"
+  },
+  "decode_vs_render_max_abs_diff": 0.0,
+  "colmap": {
+    "points_per_scene": {
+      "p10": 48915.4,
+      "p50": 92036.5,
+      "p90": 167771.1
+    },
+    "input_patch_coverage": {
+      "p10": 0.317,
+      "p50": 0.5215,
+      "p90": 0.6991
+    }
+  },
+  "depth_vs_colmap_heavy_targets": {
+    "points": 2089163,
+    "median_ratio_pred_over_colmap": 1.0139756456236855,
+    "absrel_pooled_mean": 0.15565624497646754,
+    "absrel_pooled_median": 0.03713183371812738,
+    "absrel_scene_mean": 0.1683979034423828,
+    "delta_lt_1.05": 0.571640891591513,
+    "delta_lt_1.10": 0.7190846286287857,
+    "note": "COLMAP points only (textured, sparse); ScanNet++ AbsRel 0.174 is dense laser depth - not directly comparable"
+  },
+  "thickness_split_heavy_targets": {
+    "between_share_pooled": 0.9466606166882285,
+    "within_share_pooled": 0.053339388546106516,
+    "between_share_per_pixel_median": 0.8324439525604248,
+    "thickness_over_depth": {
+      "p50": 0.0571,
+      "p90": 0.2507
+    },
+    "by_thickness_over_depth": {
+      "0-0.015": {
+        "pixel_share": 0.0494859375,
+        "pooled_between_share": 0.3788461698342293,
+        "median_pixel_between_share": 0.40949397173553
+      },
+      "0.015-0.05": {
+        "pixel_share": 0.39291160714285717,
+        "pooled_between_share": 0.37120261362348356,
+        "median_pixel_between_share": 0.6190304456964403
+      },
+      "0.05-0.15": {
+        "pixel_share": 0.36201763392857145,
+        "pooled_between_share": 0.7684889399024503,
+        "median_pixel_between_share": 0.8834315830147946
+      },
+      "0.15-inf": {
+        "pixel_share": 0.19558482142857142,
+        "pooled_between_share": 0.9828347417478814,
+        "median_pixel_between_share": 0.984264839753354
+      }
+    }
+  },
+  "render_ownership_input_views": {
+    "live_token_frac": 0.9986432790756226,
+    "r_in_a90": {
+      "p10": 0.6666,
+      "p50": 0.8379,
+      "p90": 0.9327
+    },
+    "r_in_a90_weighted_by_render": 0.7921321988105774,
+    "a_in_r90": {
+      "p10": 0.7715,
+      "p50": 0.8603,
+      "p90": 0.9224
+    },
+    "same_dominant_view_frac": 0.6490198373794556
+  },
+  "pixel_token_counts_input_views": {
+    "tokens_with_ge_1pct_of_pixel_weight": {
+      "p10": 7.0,
+      "p50": 11.0,
+      "p90": 17.0
+    },
+    "tokens_needed_for_90pct_weight_(capped_33)": {
+      "p10": 4.0,
+      "p50": 8.0,
+      "p90": 14.0
+    }
+  },
+  "scene_latent_overlap_layer7": {
+    "patches_in_90pct_set_(capped_64)": {
+      "p10": 7.0,
+      "p50": 15.0,
+      "p90": 28.0
+    },
+    "rows_covering_each_patch": {
+      "p10": 3.0,
+      "p50": 6.0,
+      "p90": 10.0
+    },
+    "other_rows_with_cosine_gt_0.5": {
+      "p10": 0.0,
+      "p50": 1.0,
+      "p90": 3.0
+    },
+    "frac_rows_with_near_duplicate_cos_gt_0.8": 0.15816301107406616,
+    "attention_mass_in_top64_patches": {
+      "p10": 0.9824,
+      "p50": 0.9961,
+      "p90": 0.9995
+    },
+    "latent_rms_dispersion_over_depth": {
+      "p10": 0.0219,
+      "p50": 0.05,
+      "p90": 0.2505
+    }
+  },
+  "gs_token_attention_overlap": {
+    "patches_in_90pct_set_(capped_64)": {
+      "p10": 12.0,
+      "p50": 24.0,
+      "p90": 43.0
+    },
+    "rows_covering_each_patch": {
+      "p10": 4.0,
+      "p50": 9.0,
+      "p90": 16.0
+    },
+    "other_rows_with_cosine_gt_0.5": {
+      "p10": 3.0,
+      "p50": 3.0,
+      "p90": 7.0
+    },
+    "frac_rows_with_near_duplicate_cos_gt_0.8": 0.9999651312828064,
+    "attention_mass_in_top64_patches": {
+      "p10": 0.958,
+      "p50": 0.9897,
+      "p90": 0.9976
+    },
+    "token_attention_rms_dispersion_over_depth": {
+      "p10": 0.0309,
+      "p50": 0.0682,
+      "p90": 0.3103
+    }
+  },
+  "d0_locality": {
+    "latent_layer_3": {
+      "n_local_heads": 13.0,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 7.570074905667986,
+      "eff_patches_global_median": 401.85521109444755
+    },
+    "latent_layer_7": {
+      "n_local_heads": 12.007142857142858,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 8.01480587550572,
+      "eff_patches_global_median": 1015.2084991455079
+    },
+    "latent_layer_11": {
+      "n_local_heads": 7.164285714285715,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 8.543984058925084,
+      "eff_patches_global_median": 1517.8398337227957
+    }
+  },
+  "token_shape_alive_tokens": {
+    "flatness": {
+      "p10": 0.3137,
+      "p50": 0.54,
+      "p90": 0.7886
+    },
+    "thin_rel": {
+      "p10": 0.0051,
+      "p50": 0.0088,
+      "p90": 0.015
+    },
+    "long_rel": {
+      "p10": 0.0192,
+      "p50": 0.0359,
+      "p90": 0.0759
+    },
+    "ray_over_lateral": {
+      "p10": 0.6455,
+      "p50": 1.3457,
+      "p90": 3.1855
+    },
+    "share_disc_flatness_lt_0.3": 0.08496496081352234,
+    "share_ray_spread_gt_lateral": 0.6924564242362976
+  },
+  "c_centroid": {
+    "locusgs_table3_definition_mean_all_children_normalized": 0.452330595991121,
+    "median": 0.4160391092300415,
+    "variance": 0.03744068186553219,
+    "alive_weighted_over_depth": {
+      "p10": 0.0215,
+      "p50": 0.0374,
+      "p90": 0.0723
+    },
+    "locusgs_paper_dl3dv": {
+      "TokenGS": {
+        "mean": 0.5881,
+        "median": 0.5531
+      },
+      "LocusGS": {
+        "mean": 0.0433,
+        "median": 0.0383
+      }
+    }
+  },
+  "junk_slots": {
+    "junk_share_opacity_lt_0.05_and_far": 0.15476747240339006,
+    "low_opacity_share": 0.6454789297921317,
+    "junk_share_of_heavy_target_render_weight": 0.02047393113812798,
+    "dist_to_nearest_colmap_point_normalized": {
+      "junk": {
+        "p50": 0.2251,
+        "p90": 0.7432
+      },
+      "opacity_ge_0.05": {
+        "p50": 0.0128,
+        "p90": 0.1013
+      }
+    },
+    "junk_opacity": {
+      "p50": 0.0011,
+      "p90": 0.0115
+    },
+    "far_threshold_normalized": 0.09,
+    "note": "nearest COLMAP point overestimates distance to the surface (sparse cloud)"
+  },
+  "parallax": {
+    "alive_tokens": 565845,
+    "colmap_valid_tokens": 348699,
+    "share_parallax_lt_2deg_alive_tokens_inference_time": 0.14913801848888397,
+    "share_parallax_lt_2deg_valid_tokens_colmap_region": 0.11424753069877625,
+    "spearman_e_depth_rel": {
+      "-#views": 0.21620434179765394,
+      "-parallax": 0.3418811133975558,
+      "-parallax_inference_time": 0.29764120961779167,
+      "distance/parallax_(relative)": 0.3419354934619616
+    },
+    "spearman_e_3d_rel": {
+      "-parallax": 0.298153877940954,
+      "-#views": 0.23646737068694662
+    },
+    "e_depth_rel_all_valid": {
+      "p10": 0.0033,
+      "p50": 0.0229,
+      "p90": 0.2253
+    },
+    "binned_by_colmap_region_parallax": {
+      "single view (0 deg)": {
+        "token_share_of_valid": 0.054729148745536804,
+        "e_depth_rel_median": 0.08003448694944382,
+        "e_depth_rel_p90": 0.6847646832466125
+      },
+      "0-2 deg": {
+        "token_share_of_valid": 0.05951838195323944,
+        "e_depth_rel_median": 0.10132405161857605,
+        "e_depth_rel_p90": 0.6574916243553162
+      },
+      "2-5 deg": {
+        "token_share_of_valid": 0.07988838851451874,
+        "e_depth_rel_median": 0.05712955817580223,
+        "e_depth_rel_p90": 0.35277751088142395
+      },
+      "5-10 deg": {
+        "token_share_of_valid": 0.1278323084115982,
+        "e_depth_rel_median": 0.033707570284605026,
+        "e_depth_rel_p90": 0.27054351568222046
+      },
+      "10-20 deg": {
+        "token_share_of_valid": 0.22760604321956635,
+        "e_depth_rel_median": 0.02103397250175476,
+        "e_depth_rel_p90": 0.17756542563438416
+      },
+      ">20 deg": {
+        "token_share_of_valid": 0.4504257142543793,
+        "e_depth_rel_median": 0.014685198664665222,
+        "e_depth_rel_p90": 0.10617784410715103
+      }
+    },
+    "note": "errors are relative to depth (COLMAP region centroid vs the token's opacity-weighted Gaussian centre); on a relative scale distance/parallax reduces to 1/parallax"
+  },
+  "voxel_snap": {
+    "eps_0_normalized": {
+      "between_share_pooled": 0.9460769935547942,
+      "thickness_over_depth": {
+        "p50": 0.0571,
+        "p90": 0.2495
+      },
+      "psnr_heavy_targets": 25.003856658935547,
+      "psnr_input_views": 26.56082534790039
+    },
+    "eps_0.006_normalized": {
+      "between_share_pooled": 0.946024782373294,
+      "thickness_over_depth": {
+        "p50": 0.057,
+        "p90": 0.2488
+      },
+      "psnr_heavy_targets": 24.85592269897461,
+      "psnr_input_views": 26.32155990600586
+    },
+    "eps_0.012_normalized": {
+      "between_share_pooled": 0.9460296939366856,
+      "thickness_over_depth": {
+        "p50": 0.0569,
+        "p90": 0.2502
+      },
+      "psnr_heavy_targets": 24.042673110961914,
+      "psnr_input_views": 25.201053619384766
+    },
+    "eps_0.024_normalized": {
+      "between_share_pooled": 0.9468363382879935,
+      "thickness_over_depth": {
+        "p50": 0.0576,
+        "p90": 0.2568
+      },
+      "psnr_heavy_targets": 22.310741424560547,
+      "psnr_input_views": 23.002708435058594
+    }
+  }
+}
+dead child slots (>=99% tokens): [0, 6, 7, 16, 19, 20, 27, 61]
+{
+  "model": "tokengs_release_latent_6v",
+  "definitions": "frozen model; features of COLMAP-valid alive tokens (<=1024 per scene); target = attention-weighted COLMAP centroid of the token's attention-90% patch set; train on the 70 even scenes, test on the 70 odd scenes; errors relative to target depth from the dominant camera",
+  "gpu": "1",
+  "train_tokens": 71602,
+  "test_tokens": 71582,
+  "official_output_gaussian_centre": {
+    "e_depth_rel": {
+      "p50": 0.0219,
+      "p90": 0.2022
+    },
+    "e_3d_rel": {
+      "p50": 0.0275,
+      "p90": 0.2068
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.0736,
+      "p90": 0.5771
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0153,
+      "p90": 0.1114
+    }
+  },
+  "linear_ridge_h": {
+    "lambda": 1000.0,
+    "e_depth_rel": {
+      "p50": 0.1729,
+      "p90": 0.5546
+    },
+    "e_3d_rel": {
+      "p50": 0.2961,
+      "p90": 0.7889
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.2739,
+      "p90": 0.9767
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1409,
+      "p90": 0.4023
+    }
+  },
+  "mlp_h": {
+    "e_depth_rel": {
+      "p50": 0.0544,
+      "p90": 0.2407
+    },
+    "e_3d_rel": {
+      "p50": 0.0729,
+      "p90": 0.258
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1116,
+      "p90": 0.5306
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0424,
+      "p90": 0.1535
+    },
+    "train_fit": {
+      "e_depth_rel": {
+        "p50": 0.0154,
+        "p90": 0.0766
+      },
+      "e_3d_rel": {
+        "p50": 0.0268,
+        "p90": 0.0935
+      },
+      "e_depth_rel_1view": {
+        "p50": 0.029,
+        "p90": 0.2862
+      },
+      "e_depth_rel_4plus_views": {
+        "p50": 0.0122,
+        "p90": 0.0505
+      }
+    }
+  },
+  "linear_ridge_mix": {
+    "lambda": 1000.0,
+    "e_depth_rel": {
+      "p50": 0.2067,
+      "p90": 0.7074
+    },
+    "e_3d_rel": {
+      "p50": 0.4,
+      "p90": 1.0793
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.3528,
+      "p90": 1.3897
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1632,
+      "p90": 0.4769
+    }
+  },
+  "mlp_mix": {
+    "e_depth_rel": {
+      "p50": 0.0521,
+      "p90": 0.2338
+    },
+    "e_3d_rel": {
+      "p50": 0.0718,
+      "p90": 0.2565
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1168,
+      "p90": 0.5055
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.04,
+      "p90": 0.1412
+    },
+    "train_fit": {
+      "e_depth_rel": {
+        "p50": 0.0093,
+        "p90": 0.0437
+      },
+      "e_3d_rel": {
+        "p50": 0.0171,
+        "p90": 0.0576
+      },
+      "e_depth_rel_1view": {
+        "p50": 0.0138,
+        "p90": 0.0954
+      },
+      "e_depth_rel_4plus_views": {
+        "p50": 0.0076,
+        "p90": 0.0317
+      }
+    }
+  }
+}
+[12:16:22] done tokengs_release_latent_6v
+[12:16:22] start tokengs_paper_4v: 7 shards on GPUs 1,2,3,4,5,6,7
+GPU 2: tokengs_paper_4v shard 1/7: 20 scenes (camera normalization first_cam)
+GPU 4: tokengs_paper_4v shard 3/7: 20 scenes (camera normalization first_cam)
+GPU 3: tokengs_paper_4v shard 2/7: 20 scenes (camera normalization first_cam)
+GPU 5: tokengs_paper_4v shard 4/7: 20 scenes (camera normalization first_cam)
+GPU 6: tokengs_paper_4v shard 5/7: 20 scenes (camera normalization first_cam)
+GPU 1: tokengs_paper_4v shard 0/7: 20 scenes (camera normalization first_cam)
+GPU 7: tokengs_paper_4v shard 6/7: 20 scenes (camera normalization first_cam)
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[shard 1] 1/20 0569e83fdc248a51fc0ab082ce5e2baff15755c53c207f545e6d02d91f01d166 8s psnr_all 22.10 colmap pts 183509 patch cov 0.77 decode diff 1.0e-03
+[shard 2] 1/20 06da796666297fe4c683c231edf56ec00148a6a52ab5bb159fe1be31f53a58df 7s psnr_all 22.36 colmap pts 61837 patch cov 0.38 decode diff 3.9e-03
+[shard 4] 1/20 07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b 7s psnr_all 30.22 colmap pts 18819 patch cov 0.41 decode diff 1.3e-03
+[shard 0] 1/20 032dee9fb0a8bc1b90871dc5fe950080d0bcd3caf166447f44e60ca50ac04ec7 7s psnr_all 29.30 colmap pts 48676 patch cov 0.48 decode diff 1.1e-03
+[shard 5] 1/20 0853979305f7ecb80bd8fc2c8df916410d471ef04ed5f1a64e9651baa41d7695 7s psnr_all 26.47 colmap pts 81120 patch cov 0.50 decode diff 1.2e-03
+[shard 3] 1/20 073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561 8s psnr_all 19.27 colmap pts 175049 patch cov 0.57 decode diff 4.6e-04
+[shard 6] 1/20 093ef327b4e4f9d4ee52c02a354a53558a8652157fb0d58f3b4a708734afb334 7s psnr_all 22.12 colmap pts 113947 patch cov 0.60 decode diff 1.9e-02
+[shard 1] 2/20 0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6 14s psnr_all 27.12 colmap pts 87098 patch cov 0.61 decode diff 1.9e-03
+[shard 2] 2/20 0bfdd020cf475b9c68e4b469d1d1a2d0cad303eefe8b78fb2307855afdaac8be 14s psnr_all 23.37 colmap pts 72879 patch cov 0.47 decode diff 2.4e-03
+[shard 4] 2/20 1264931635e127fb905c8953cbc2deadd0c763e633af7fbd9405a61ca849710c 14s psnr_all 21.35 colmap pts 106840 patch cov 0.44 decode diff 1.4e-03
+[shard 0] 2/20 0a1b7c20a92c43c6b8954b1ac909fb2f0fa8b2997b80604bc8bbec80a1cb2da3 14s psnr_all 25.70 colmap pts 72222 patch cov 0.50 decode diff 1.3e-03
+[shard 6] 2/20 15ff83e2531668d27c92091c97d31401ce323e24ee7c844cb32d5109ab9335f7 15s psnr_all 21.33 colmap pts 100357 patch cov 0.65 decode diff 5.2e-04
+[shard 5] 2/20 14eb48a50e37df548894ab6d8cd628a21dae14bbe6c462e894616fc5962e6c49 15s psnr_all 23.00 colmap pts 79799 patch cov 0.49 decode diff 1.1e-03
+[shard 3] 2/20 119fd56d3797e2d349ca64ddcc5851463cd13b5974b5b2e4566ed5cf7e02e6c1 16s psnr_all 21.53 colmap pts 74124 patch cov 0.34 decode diff 1.0e-03
+[shard 1] 3/20 183dd248f6a86e07c5adf9de8ee2d0abe45b1216331c03678e89634c2e9b1c7f 21s psnr_all 26.62 colmap pts 87995 patch cov 0.39 decode diff 8.7e-04
+[shard 2] 3/20 1ba74c22670ad047981441581d00f26f4a148d1010bcac7468c615adf5fa4d5d 21s psnr_all 26.31 colmap pts 48106 patch cov 0.30 decode diff 7.2e-04
+[shard 4] 3/20 1da888bdedfc9629c0fa9f82cf3f5d96f8103baee0ff64d9311aea1224a9f2ae 21s psnr_all 21.57 colmap pts 85967 patch cov 0.50 decode diff 6.4e-04
+[shard 0] 3/20 165f5af8bfe32f70595a1c9393a6e442acf7af019998275144f605b89a306557 21s psnr_all 22.54 colmap pts 79513 patch cov 0.47 decode diff 3.9e-04
+[shard 6] 3/20 2385549d398bdfb55ed17b547c9846f0d01d571b4e050f90df707b577084fb55 22s psnr_all 23.17 colmap pts 110573 patch cov 0.57 decode diff 9.1e-04
+[shard 3] 3/20 1d6a9ed47cce39fd1c4d18f776bcc97e507b81bde921ca596bd91b0b02b5e414 23s psnr_all 20.20 colmap pts 106829 patch cov 0.57 decode diff 1.4e-03
+[shard 5] 3/20 1de58be515696102c364b767f296600ffff853d4145a60dd30ece9d935317654 22s psnr_all 27.26 colmap pts 58043 patch cov 0.56 decode diff 9.0e-04
+[shard 1] 4/20 280abf7bd93b81b077af1db638229dbb09869052fa0b7b57c81c94d2db893829 27s psnr_all 24.22 colmap pts 119967 patch cov 0.57 decode diff 6.1e-04
+[shard 0] 4/20 26fd23358fa11fff0fb3180ef0b65591b486e20dcf753ce4a7aae49a37e370c7 27s psnr_all 26.91 colmap pts 86917 patch cov 0.57 decode diff 3.1e-04
+[shard 4] 4/20 2b65ba886efac7af6253fce68ae9284bf4d4db019e17c47f3e853361acbdb066 28s psnr_all 20.72 colmap pts 176167 patch cov 0.71 decode diff 6.1e-04
+[shard 2] 4/20 286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a 29s psnr_all 18.84 colmap pts 167507 patch cov 0.61 decode diff 1.4e-03
+[shard 6] 4/20 2cbfe28643b6636f9c70813cae7625aa858a352109493ac70fb429ce94dd55b3 28s psnr_all 27.55 colmap pts 60581 patch cov 0.54 decode diff 3.5e-04
+[shard 3] 4/20 2991a75d1f0fb2b7a891d424fc2459bb954b61599b52e74a056a7acfb2998b77 30s psnr_all 19.93 colmap pts 97104 patch cov 0.54 decode diff 5.5e-03
+[shard 5] 4/20 2beaca318994c25409dcbb6d0bdd96c3620f2f18aec44ea3f20edd302f18ca78 30s psnr_all 21.28 colmap pts 140187 patch cov 0.68 decode diff 5.0e-04
+[shard 1] 5/20 32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e 34s psnr_all 29.33 colmap pts 46264 patch cov 0.29 decode diff 4.4e-04
+[shard 4] 5/20 35872363e17af5d173b6a0b09fcf5de94627ad5dc5f8a9ad4c579f3e70b4797a 34s psnr_all 26.98 colmap pts 96020 patch cov 0.53 decode diff 4.1e-04
+[shard 6] 5/20 387eeb925ba47af5db9ce6102aaf6b07e6d3573b7e7568dda4cef22d5ab1342f 35s psnr_all 24.26 colmap pts 151404 patch cov 0.61 decode diff 1.0e-03
+[shard 0] 5/20 2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd 35s psnr_all 22.71 colmap pts 85998 patch cov 0.40 decode diff 1.6e-03
+[shard 2] 5/20 341b4ff3dfd3d377d7167bd81f443bedafbff003bf04881b99760fc0aeb69510 35s psnr_all 23.76 colmap pts 96645 patch cov 0.62 decode diff 9.3e-04
+[shard 5] 5/20 374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e 37s psnr_all 30.13 colmap pts 91598 patch cov 0.60 decode diff 2.2e-04
+[shard 3] 5/20 35317e621976e87f0c143e66fc61fb8cddb4ff134304da7a00e32ac1983105b4 38s psnr_all 21.06 colmap pts 156414 patch cov 0.66 decode diff 5.3e-03
+[shard 1] 6/20 3b16a10ec9b4ab71580958b634485a979ffd6df0d368dbbf6fc1c5ffacf46b7a 42s psnr_all 21.01 colmap pts 144143 patch cov 0.62 decode diff 1.4e-03
+[shard 4] 6/20 3bb894d1933f3081134ad2d40e54de5f0636bd8b502b0a8561873bb63b0dce85 41s psnr_all 22.86 colmap pts 106573 patch cov 0.59 decode diff 3.9e-04
+[shard 6] 6/20 444da1b4a3f1ca019d4c9c1b405a579427746ccc96cab6dab7dcba5cb4fc998c 41s psnr_all 23.95 colmap pts 100030 patch cov 0.51 decode diff 7.4e-04
+[shard 0] 6/20 389a460ca1995e0658e85fe8e6b520b4e88b370cd6710dfe728b1564bba31aee 42s psnr_all 24.25 colmap pts 42568 patch cov 0.25 decode diff 9.5e-04
+[shard 2] 6/20 3b7529dcccf7097cba31a989536035595e214b0f3775867fd3a62eb186870090 43s psnr_all 21.98 colmap pts 112146 patch cov 0.68 decode diff 6.9e-03
+[shard 5] 6/20 41036716da7efda334c1d434c4141d15642e0e02f881a01b6c8c36f8bea64c45 43s psnr_all 23.68 colmap pts 92452 patch cov 0.50 decode diff 9.4e-04
+[shard 3] 6/20 3bb3bb4d3e871d79eb71946cbab1e3afc7a8e33a661153033f32deb3e23d2e52 45s psnr_all 24.62 colmap pts 42542 patch cov 0.28 decode diff 4.8e-04
+[shard 6] 7/20 513e4ea2e8477b06f2b32417d5c243aec71d491cb0596a60e9fe304c635f20a1 47s psnr_all 26.18 colmap pts 46239 patch cov 0.48 decode diff 7.7e-04
+[shard 1] 7/20 484c0aca40c1087f196d2caf3c8cb463864c08e60b98326ca02eb6dae8ce4984 49s psnr_all 23.16 colmap pts 68203 patch cov 0.41 decode diff 1.4e-03
+[shard 4] 7/20 4ff8650b5c1140e98d957fbd1abbe2cfbbb416b37cb9f06f7f376956703801bb 48s psnr_all 25.61 colmap pts 84955 patch cov 0.52 decode diff 4.8e-04
+[shard 0] 7/20 457e9a1ae777b0c72be723aaeec971b39cc6d5d413d922f981ec9785395f7ca9 49s psnr_all 24.38 colmap pts 65294 patch cov 0.41 decode diff 6.9e-04
+[shard 2] 7/20 493816813d2d6d248eb3c2b0b77b63e54235266e9a06e270fd0d282f13960493 50s psnr_all 21.55 colmap pts 196178 patch cov 0.82 decode diff 5.7e-03
+[shard 5] 7/20 50c46cf8b8b22c8d2ffdef8964b05ddbceaef312c9a9ff331d1ecebfd223f72a 51s psnr_all 24.75 colmap pts 58887 patch cov 0.36 decode diff 7.7e-04
+[shard 3] 7/20 4ae797d07b6d1644c9db6919c8cc8c0d28d72be45108ac7a3abf8dc21b599d83 51s psnr_all 22.37 colmap pts 88103 patch cov 0.52 decode diff 1.7e-03
+[shard 6] 8/20 5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00 54s psnr_all 26.68 colmap pts 75612 patch cov 0.58 decode diff 3.2e-03
+[shard 4] 8/20 5a27c00f525f5484b7aa0d0107051253bf7bb395bde0b3a4486ff8c52fb4965e 54s psnr_all 24.24 colmap pts 81024 patch cov 0.58 decode diff 1.3e-03
+[shard 1] 8/20 56452d9cd9e2e034764132a57058517ab085e1352f9664d2d1e10e98741334fc 55s psnr_all 21.64 colmap pts 97531 patch cov 0.48 decode diff 1.6e-03
+[shard 0] 8/20 54bf355ca7e08ed1bc86f5772e564ac0f92981ca25dab24d86b694e915fc4c43 56s psnr_all 23.66 colmap pts 96427 patch cov 0.71 decode diff 1.7e-03
+[shard 2] 8/20 565553aa894be621e8b4773cac288e60ad0c2cf7edb621be62b348c9a0f78380 57s psnr_all 23.02 colmap pts 156490 patch cov 0.56 decode diff 1.8e-03
+[shard 5] 8/20 5a69d1027b477be4d2933b765723d57b272e0ace96be7885306464d54aa2c038 57s psnr_all 20.66 colmap pts 113095 patch cov 0.62 decode diff 3.2e-03
+[shard 3] 8/20 599ca3e04cae3ec83affc426af7d0d7ab36eb91cd8e539edbc13070a4d455792 58s psnr_all 21.77 colmap pts 79891 patch cov 0.44 decode diff 1.1e-03
+[shard 4] 9/20 66fd66cbed40a2d11ecd17ae6d6d60cd60d476616864ecdd351fe69e644f30a1 61s psnr_all 23.93 colmap pts 77156 patch cov 0.33 decode diff 6.4e-04
+[shard 6] 9/20 6d81c5ab0d480fd43d78b75ff372a8113ad38e2c03f1d69627c009883054d4c2 61s psnr_all 25.20 colmap pts 90804 patch cov 0.36 decode diff 4.1e-04
+[shard 1] 9/20 5f0041e53d59d67c3ca25db97b269db183a532c4566a6bc46ca0e69cfa4234ad 63s psnr_all 27.31 colmap pts 76844 patch cov 0.58 decode diff 4.6e-04
+[shard 0] 9/20 5c8dafad7d782c76ffad8c14e9e1244ce2b83aa12324c54a3cc10176964acf04 62s psnr_all 25.55 colmap pts 73952 patch cov 0.39 decode diff 3.4e-04
+[shard 2] 9/20 63798f5c6fbfcb4eb686268248b8ecbc8d87d920b2bcce967eeaedfd3b3b6d82 64s psnr_all 26.38 colmap pts 51957 patch cov 0.30 decode diff 1.0e-03
+[shard 3] 9/20 669c36225b273e22ce08364f166dce910b708d7abd89e58463a15d2790b534d5 65s psnr_all 23.96 colmap pts 112468 patch cov 0.51 decode diff 1.1e-03
+[shard 5] 9/20 6d221625614d0515fa44d59a8797a49b64f86bc775e66be22f07a66aa0a0cb3a 66s psnr_all 22.93 colmap pts 95807 patch cov 0.40 decode diff 5.6e-04
+[shard 6] 10/20 7da3db99059a436adf537bc23309a6a4db9e011696d086f3a64037f7497d9df7 67s psnr_all 21.84 colmap pts 88504 patch cov 0.42 decode diff 2.3e-03
+[shard 1] 10/20 70eac6ff18a1daae4eeccc5eb18723eaf7e029a77e79c79d9573f7bac59ba92b 69s psnr_all 23.18 colmap pts 173553 patch cov 0.72 decode diff 3.6e-04
+[shard 4] 10/20 7705a2edd022de9da3f8cead677287645986e982d9247a21e1992859a59f8335 69s psnr_all 25.29 colmap pts 64244 patch cov 0.28 decode diff 1.5e-03
+[shard 0] 10/20 6e11e7f4fea305c7c4658d2c1f8df29e6f299330860cf48ffbf1c5ff8b96c0a8 70s psnr_all 28.08 colmap pts 42411 patch cov 0.22 decode diff 3.2e-02
+[shard 2] 10/20 71b2dc8a2aa553da09b8b94b9f0d5e8abcca307def74d26301616ee238464d46 71s psnr_all 27.18 colmap pts 47317 patch cov 0.44 decode diff 1.0e-02
+[shard 3] 10/20 75fbbe467353cfdeb93bc1872144855576797be83a0c71c51155ee6b355d6d5e 72s psnr_all 24.10 colmap pts 156468 patch cov 0.62 decode diff 5.7e-04
+[shard 5] 10/20 7a9f97660be8f2421b37dd413c898360532f17c6447c11515e8aded2d80eb99d 73s psnr_all 27.38 colmap pts 59994 patch cov 0.40 decode diff 7.4e-04
+[shard 6] 11/20 90cb7ef95384138c2370f13a9ae1698fb1b5bdd68e8b3d01f8e53d38933a4b92 74s psnr_all 22.51 colmap pts 91621 patch cov 0.44 decode diff 5.6e-03
+[shard 1] 11/20 8324b3ca22085040c2a0ecb7284e0cdf776b1f846b73a7c0df893587cb4a45f8 77s psnr_all 21.63 colmap pts 128115 patch cov 0.50 decode diff 1.2e-03
+[shard 4] 11/20 8cb2e97d26a639f05a571476240a8fa86988e6853f0f13cc05830d1578002aad 76s psnr_all 27.63 colmap pts 63171 patch cov 0.36 decode diff 1.6e-03
+[shard 0] 11/20 800cf88687a79c232700454c2f5a402e771bc7157037a17b0ce93da365b25575 77s psnr_all 22.03 colmap pts 159311 patch cov 0.63 decode diff 3.2e-03
+[shard 2] 11/20 85cd0e92110bcd35e826cbff16bb0e85d8117717adaf36f0698920f0fb9b2cfd 79s psnr_all 23.40 colmap pts 108640 patch cov 0.57 decode diff 1.1e-03
+[shard 3] 11/20 8b9fb9d9f10e8c64d5034be69809465753b8ba88ef12da82afd47d38ee789934 79s psnr_all 20.48 colmap pts 128554 patch cov 0.70 decode diff 8.3e-04
+[shard 5] 11/20 8fdc5130f0731360cc053f59049bfe6db509567457c5471c970292966cb34f17 80s psnr_all 26.37 colmap pts 45688 patch cov 0.39 decode diff 1.1e-03
+[shard 6] 12/20 9cbc5548643ca9cfe797f871bac58bccd02f0510c49b7cb3697b38dfd780a508 81s psnr_all 22.42 colmap pts 219191 patch cov 0.76 decode diff 1.7e-03
+[shard 4] 12/20 9641a1ed7963ce5ca734cff3e6ccea3dfa8bcb0b0a3ff78f65d32a080de2d71e 83s psnr_all 25.24 colmap pts 57195 patch cov 0.27 decode diff 1.3e-03
+[shard 1] 12/20 918c8dad730c3b804306c5da8486124be4aa0612e85fb825338fd350c912e1b0 84s psnr_all 21.28 colmap pts 104139 patch cov 0.37 decode diff 8.4e-03
+[shard 0] 12/20 917e9c8985d353b0ee4c281f11fa84eb8550814562670cbb82cd0ec9c1194fe7 83s psnr_all 23.66 colmap pts 121584 patch cov 0.64 decode diff 1.4e-03
+[shard 3] 12/20 946f49be73928469000baa5ca04d2573137c5ee6a66362bcf8d130354dca8924 85s psnr_all 26.33 colmap pts 70909 patch cov 0.42 decode diff 1.6e-03
+[shard 2] 12/20 91afb9910b042f7185c2b8e4b6b24b5785dae4542617b3f8005b5492f6d123f7 86s psnr_all 23.89 colmap pts 110058 patch cov 0.48 decode diff 1.7e-03
+[shard 6] 13/20 a726c1112ad026efc92f59f196c0698e67abd12a04135a7ff6349b1d31b089eb 88s psnr_all 21.26 colmap pts 60384 patch cov 0.30 decode diff 4.1e-03
+[shard 1] 13/20 9fb0588ff045ec64119c5bc91b44a4b7400e5fae5a17e67762b29e6855b57118 90s psnr_all 24.56 colmap pts 84841 patch cov 0.70 decode diff 9.7e-04
+[shard 5] 12/20 9c8c0e0fadd97abf60088f667eba058ef077a71a8c0f5a4eff2782aa97f1ceb8 89s psnr_all 19.48 colmap pts 128378 patch cov 0.57 decode diff 2.9e-03
+[shard 0] 13/20 9e9a89ae6fed06d6e2f4749b4b0059f35ca97f848cedc4a14345999e746f7884 89s psnr_all 27.03 colmap pts 43530 patch cov 0.25 decode diff 8.6e-04
+[shard 4] 13/20 a62c330f5403e2e41a82a74c4e865b705c5706843b992fae2fe2e538b122d984 90s psnr_all 18.83 colmap pts 135626 patch cov 0.57 decode diff 7.5e-04
+[shard 3] 13/20 a401469cb0fa576b93e836a4a6d712394f1a55a0a53a42250286980bd078e669 92s psnr_all 21.03 colmap pts 115589 patch cov 0.55 decode diff 1.9e-03
+[shard 2] 13/20 a17a984ca90a9b5840fdf85b15104b0d18e25975981c1aa90fcdfd6eeeb285f3 93s psnr_all 22.99 colmap pts 98838 patch cov 0.57 decode diff 4.5e-04
+[shard 6] 14/20 b5faa2a8ce980030125717352086bf9ec16c5d994bae3b3a732da3eb67cf4fa8 95s psnr_all 25.41 colmap pts 63833 patch cov 0.39 decode diff 9.4e-04
+[shard 5] 13/20 a62f9a1c6362e7c8a3440261ea0921a0a4b60cf5822bd19579836694f26b3abd 95s psnr_all 24.63 colmap pts 187651 patch cov 0.73 decode diff 7.9e-04
+[shard 1] 14/20 adf35184a12d4cfa3f4248b87aa5adb4f39f179df460d6d76136e13d37299a2a 97s psnr_all 27.50 colmap pts 68999 patch cov 0.42 decode diff 5.7e-04
+[shard 0] 14/20 adb95f29c15b8a89e40c17d10596679be09d7719c6f08a453facd506d056ea8b 97s psnr_all 22.46 colmap pts 164070 patch cov 0.69 decode diff 3.8e-03
+[shard 4] 14/20 b3bf9079b442c681749f6bd95cfb0659c6d844f2228b2f4fa4b602a0e3627b9a 97s psnr_all 25.93 colmap pts 83046 patch cov 0.61 decode diff 5.7e-03
+[shard 3] 14/20 b2076bc7231bac445b1a3d0015a410675a3222f25cc219e8178a62a0dd4ac63d 100s psnr_all 19.43 colmap pts 161099 patch cov 0.62 decode diff 4.7e-04
+[shard 2] 14/20 af0d7039e64af3959210c235e59425896ac064f4e0f721c437bbd2cf1d8ea910 100s psnr_all 18.59 colmap pts 135566 patch cov 0.53 decode diff 1.4e-03
+[shard 5] 14/20 b4f53094fd31dcc2de1c1d1fdfeffac5259e9bdf39d77b552ff948e4bdf1fd8e 102s psnr_all 23.69 colmap pts 107406 patch cov 0.56 decode diff 7.3e-04
+[shard 1] 15/20 b92b499c9bf92327d5f3a44c9db49bde3400dcb1cfec48d6488831e2b304d0bb 104s psnr_all 27.97 colmap pts 27759 patch cov 0.24 decode diff 5.3e-04
+[shard 6] 15/20 c455899acfc8816353a55fade692d19d9c2bff68c8615f852931d5754848db74 103s psnr_all 21.94 colmap pts 84203 patch cov 0.32 decode diff 2.8e-03
+[shard 0] 15/20 b6d1134cb03c855d246f916beaa2d3d01290cf47937a5176011ff39b850ec615 104s psnr_all 20.46 colmap pts 147699 patch cov 0.69 decode diff 7.3e-04
+[shard 4] 15/20 c37109a55effe0000f8e40652ca935376e75bcb2a0b56de8eabd20a26e2a0f68 104s psnr_all 19.23 colmap pts 102552 patch cov 0.37 decode diff 9.3e-04
+[shard 3] 15/20 c076929db6501cf7ebe386c70e6d77ea3af844a745e794f2ec17c981c465a69b 107s psnr_all 28.48 colmap pts 72694 patch cov 0.44 decode diff 5.4e-04
+[shard 2] 15/20 ba55c875d20c34ee85ffc72264c4d77710852e5fb7d9ce4b9c26a8442850e98f 107s psnr_all 29.53 colmap pts 76091 patch cov 0.40 decode diff 4.5e-04
+[shard 1] 16/20 cc08c0bdc34ddd2867705d0b17a86ec2a9d7c7926ce99070ed1fdc66a812de07 110s psnr_all 27.13 colmap pts 70170 patch cov 0.46 decode diff 5.5e-04
+[shard 6] 16/20 d3af8212ae1600f078c4ac1ef3c9369a7f41ee9d005dbd0c545cf43fc35a9a23 109s psnr_all 27.27 colmap pts 55726 patch cov 0.49 decode diff 6.5e-04
+[shard 0] 16/20 cbd44beb04f9c98f2d2c5affff89a6e0a72c25f1aa0c6f660fbd9e4d26702f8b 110s psnr_all 24.73 colmap pts 99379 patch cov 0.61 decode diff 6.1e-04
+[shard 5] 15/20 c37726ce770ac50a2cf5c0f43022f0268e26da0d777cd8e3a3418c4eed03fd94 111s psnr_all 21.34 colmap pts 170148 patch cov 0.62 decode diff 9.1e-04
+[shard 4] 16/20 d1b3a0b37acc72207295b05e8c359f8b43bf879eb882c60747cfc6d3c7d8efa3 111s psnr_all 20.98 colmap pts 114977 patch cov 0.62 decode diff 2.2e-03
+[shard 3] 16/20 ceb252f5d4419510655cf9ed7afbf3e8e688825f798d80414c7715dc8ace153a 114s psnr_all 23.70 colmap pts 80685 patch cov 0.50 decode diff 2.0e-03
+[shard 2] 16/20 cd9c981eeb4a9091547af19181b382698e9d9eee0a838c7c9783a8a268af6aee 115s psnr_all 19.99 colmap pts 103123 patch cov 0.56 decode diff 1.4e-03
+[shard 1] 17/20 d8de66037bd03dd0d39d54f9978bac3318d912e30e22c21e1ada82a98ed48c53 118s psnr_all 24.80 colmap pts 148312 patch cov 0.57 decode diff 6.1e-04
+[shard 0] 17/20 d4fbeba0168af8fddb2fc695881787aedcd62f477c7dcec9ebca7b8594bbd95b 117s psnr_all 19.17 colmap pts 181414 patch cov 0.79 decode diff 6.8e-04
+[shard 4] 17/20 d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b 117s psnr_all 26.50 colmap pts 83884 patch cov 0.52 decode diff 4.8e-04
+[shard 6] 17/20 dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751 118s psnr_all 18.32 colmap pts 230202 patch cov 0.78 decode diff 1.7e-03
+[shard 5] 16/20 d3812aad538261e7f73c75762ff55f23b468bcc76f376d52ac86ca6cf3c44b4b 118s psnr_all 20.41 colmap pts 48942 patch cov 0.27 decode diff 1.0e-03
+[shard 3] 17/20 d9b6376623741313bf6da6bf4cdb9828be614a2ce9390ceb3f31cd535d661a75 121s psnr_all 21.97 colmap pts 123325 patch cov 0.48 decode diff 3.8e-03
+[shard 2] 17/20 d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a 122s psnr_all 18.44 colmap pts 111437 patch cov 0.40 decode diff 6.2e-03
+[shard 1] 18/20 ded5e4b46aedbef4cdb7bd1db7fc4cc5b00a9979ad6464bdadfab052cd64c101 124s psnr_all 27.31 colmap pts 56511 patch cov 0.36 decode diff 4.8e-04
+[shard 0] 18/20 ddfdcfdf02d53dd89a055cd9e1ed30272ab3f57c7560ac2c3761bb01d76a7882 123s psnr_all 22.16 colmap pts 194613 patch cov 0.73 decode diff 4.3e-04
+[shard 4] 18/20 df4f9d9a0adfc54c49607bc792be6ed6f751b67e37c588472ea58b0d898310dd 124s psnr_all 26.37 colmap pts 41719 patch cov 0.32 decode diff 1.0e-03
+[shard 6] 18/20 e78f8cebd2bd93d960bfaeac18fac0bb2524f15c44288903cd20b73e599e8a81 124s psnr_all 20.52 colmap pts 158106 patch cov 0.76 decode diff 1.0e-03
+[shard 5] 17/20 dac9796dd69e1c25277e29d7e30af4f21e3b575d62a0a208c2b3d1211e2d5d77 126s psnr_all 27.71 colmap pts 66063 patch cov 0.43 decode diff 2.3e-04
+[shard 3] 18/20 df29c225863d0173e060b1f3fde4e6eb5a57a4e4edabd397026ba1a028aeb39e 128s psnr_all 23.45 colmap pts 73411 patch cov 0.57 decode diff 2.7e-04
+[shard 2] 18/20 df04f58064684c1a31aa0ffbbcf34199d01d0a0ff289588eb2d6c6cf50a3922c 128s psnr_all 22.29 colmap pts 104755 patch cov 0.69 decode diff 1.8e-03
+[shard 1] 19/20 e9360e7a89bee835dc847cf8796093e634b759ff582558788dcfe8326f6e8901 130s psnr_all 20.00 colmap pts 142708 patch cov 0.69 decode diff 7.2e-04
+[shard 0] 19/20 e8ce51b6abfe05bf8dca47e29c8be6c1e6de27a8c9fece7a121400b931b2ca0f 130s psnr_all 24.41 colmap pts 106743 patch cov 0.54 decode diff 1.9e-03
+[shard 6] 19/20 ef59aac437132bfc1dd45a7e1f8e4800978e7bb28bf98c4428d26fb3e1da3e90 131s psnr_all 27.83 colmap pts 122546 patch cov 0.65 decode diff 1.7e-03
+[shard 4] 19/20 ec305787b70029b782c71c1bf296c3885c7c22619e5661bd40085533ddfee5e4 131s psnr_all 21.88 colmap pts 64302 patch cov 0.36 decode diff 1.4e-03
+[shard 5] 18/20 e5684b3292bfd77db297839fc37ee4cce7fd59775af1a6a4827e3b4f59c036d3 134s psnr_all 25.07 colmap pts 69185 patch cov 0.51 decode diff 5.0e-04
+[shard 2] 19/20 eb4cf52988f805e6fce11d1b239fa9de32eb157364cff06ebac0aa50e0a46567 135s psnr_all 22.85 colmap pts 101023 patch cov 0.59 decode diff 6.3e-04
+[shard 3] 19/20 ec1e44d4dc0f8fa77610866495f9297a7f82158c43e1777668b84fd4b736c7bc 135s psnr_all 26.30 colmap pts 71337 patch cov 0.43 decode diff 8.0e-04
+[shard 1] 20/20 f477ffc4b398bed8e0d921f0fba9825ca63f317381c535c84be23be991ae1d7a 137s psnr_all 27.24 colmap pts 45485 patch cov 0.30 decode diff 8.0e-04
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_paper_4v/shard_1.pt
+[shard 0] 20/20 f004c810d94bac93f527606a2ff859d646f99fcac0868c6c6905b29c718fa37b 137s psnr_all 26.47 colmap pts 49582 patch cov 0.46 decode diff 5.8e-04
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_paper_4v/shard_0.pt
+[shard 4] 20/20 fb2c0499c225d6124938cadcf0dc48cbb490551b8a69c98386491c1366163632 138s psnr_all 25.90 colmap pts 59476 patch cov 0.47 decode diff 5.4e-04
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_paper_4v/shard_4.pt
+[shard 6] 20/20 ff592398657b3dfe94153332861985194a3e3c9d199c4a3a27a0ce4038e81ade 140s psnr_all 25.88 colmap pts 111821 patch cov 0.52 decode diff 1.4e-03
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_paper_4v/shard_6.pt
+[shard 5] 19/20 ed16328235c610f15405ff08711eaf15d88a0503884f3a9ccb5a0ee69cb4acb5 140s psnr_all 24.35 colmap pts 192659 patch cov 0.65 decode diff 1.5e-03
+[shard 2] 20/20 f71ac346cd0fc4652a89afb37044887ec3907d37d01d1ceb0ad28e1a780d8e03 142s psnr_all 22.89 colmap pts 189511 patch cov 0.80 decode diff 3.7e-04
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_paper_4v/shard_2.pt
+[shard 3] 20/20 f7aaea9ac683bb1945cfeb1daa9abca3375249e0d19281a89a3f575040835464 143s psnr_all 22.08 colmap pts 189601 patch cov 0.79 decode diff 2.5e-03
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_paper_4v/shard_3.pt
+[shard 5] 20/20 fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9 148s psnr_all 17.89 colmap pts 165352 patch cov 0.55 decode diff 1.1e-03
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/tokengs_paper_4v/shard_5.pt
+{
+  "model": "tokengs_paper_4v",
+  "checkpoint": "/home/jms/xveyan/4DGS/TokenGS/checkpoints_hf/checkpoints/dl3dv_4v.safetensors",
+  "checkpoint_sha256": "0d6012d133e2488be82da4c747aae9e7cf7f2320d4d72f6bc224387f65e11980",
+  "scenes": 140,
+  "scannetpp_reference_official_model": {
+    "thickness_between_share_pooled": 0.9,
+    "thickness_between_share_per_pixel_median": 0.72,
+    "render_weight_in_attention90_median": 0.87,
+    "render_weight_in_attention90_weighted": 0.83,
+    "patches_per_latent_median": 17,
+    "latents_covering_each_patch_median": 6,
+    "near_duplicate_latent_frac": 0.19,
+    "token_flatness_median": 0.58,
+    "token_ray_over_lateral_median": 1.37,
+    "junk_slot_share": 0.24,
+    "junk_render_weight_share": 0.049,
+    "dead_child_slots_all_tokens": [
+      0,
+      7,
+      16,
+      19,
+      20
+    ],
+    "parallax_lt2deg_token_share": 0.25,
+    "spearman_error_vs_distance_over_parallax": 0.47,
+    "spearman_error_vs_parallax": 0.4,
+    "voxel_snap_between_share": 0.91,
+    "depth_absrel_vs_laser": 0.174
+  },
+  "psnr": {
+    "all_50_targets_scene_mean": 23.7705135345459,
+    "novel_44_targets_scene_mean": 23.638669967651367,
+    "reference": "LocusGS paper Table 1 (6 views) 24.16"
+  },
+  "decode_vs_render_max_abs_diff": 0.0320281982421875,
+  "colmap": {
+    "points_per_scene": {
+      "p10": 48915.4,
+      "p50": 92036.5,
+      "p90": 167771.1
+    },
+    "input_patch_coverage": {
+      "p10": 0.317,
+      "p50": 0.5215,
+      "p90": 0.6991
+    }
+  },
+  "depth_vs_colmap_heavy_targets": {
+    "points": 2089163,
+    "median_ratio_pred_over_colmap": 1.0230913889418134,
+    "absrel_pooled_mean": 0.18477198779179968,
+    "absrel_pooled_median": 0.0597668246861691,
+    "absrel_scene_mean": 0.19824644923210144,
+    "delta_lt_1.05": 0.4483259563758309,
+    "delta_lt_1.10": 0.6245247498639407,
+    "note": "COLMAP points only (textured, sparse); ScanNet++ AbsRel 0.174 is dense laser depth - not directly comparable"
+  },
+  "thickness_split_heavy_targets": {
+    "between_share_pooled": 0.6208346411689597,
+    "within_share_pooled": 0.3791653617237939,
+    "between_share_per_pixel_median": 0.8171849416334616,
+    "thickness_over_depth": {
+      "p50": 0.1347,
+      "p90": 0.3982
+    },
+    "by_thickness_over_depth": {
+      "0-0.015": {
+        "pixel_share": 0.010921875,
+        "pooled_between_share": 0.5457916149301442,
+        "median_pixel_between_share": 0.5833241400877947
+      },
+      "0.015-0.05": {
+        "pixel_share": 0.1546828125,
+        "pooled_between_share": 0.5239610626068272,
+        "median_pixel_between_share": 0.6985702863883237
+      },
+      "0.05-0.15": {
+        "pixel_share": 0.37926138392857145,
+        "pooled_between_share": 0.5124700818829199,
+        "median_pixel_between_share": 0.8150027440757365
+      },
+      "0.15-inf": {
+        "pixel_share": 0.4551339285714286,
+        "pooled_between_share": 0.6255864893095897,
+        "median_pixel_between_share": 0.8749174572046191
+      }
+    }
+  },
+  "render_ownership_input_views": {
+    "live_token_frac": 0.998547375202179,
+    "r_in_a90": {
+      "p10": 0.8524,
+      "p50": 1.0,
+      "p90": 1.0
+    },
+    "r_in_a90_weighted_by_render": 0.9591416120529175,
+    "a_in_r90": {
+      "p10": 0.2104,
+      "p50": 0.3116,
+      "p90": 0.4136
+    },
+    "same_dominant_view_frac": 0.5325379967689514
+  },
+  "pixel_token_counts_input_views": {
+    "tokens_with_ge_1pct_of_pixel_weight": {
+      "p10": 6.0,
+      "p50": 11.0,
+      "p90": 17.0
+    },
+    "tokens_needed_for_90pct_weight_(capped_33)": {
+      "p10": 4.0,
+      "p50": 8.0,
+      "p90": 15.0
+    }
+  },
+  "gs_token_attention_overlap": {
+    "patches_in_90pct_set_(capped_64)": {
+      "p10": 64.0,
+      "p50": 64.0,
+      "p90": 64.0
+    },
+    "rows_covering_each_patch": {
+      "p10": 6.0,
+      "p50": 21.0,
+      "p90": 44.0
+    },
+    "other_rows_with_cosine_gt_0.5": {
+      "p10": 0.0,
+      "p50": 2.0,
+      "p90": 5.0
+    },
+    "frac_rows_with_near_duplicate_cos_gt_0.8": 0.2689557671546936,
+    "attention_mass_in_top64_patches": {
+      "p10": 0.4231,
+      "p50": 0.5205,
+      "p90": 0.5889
+    },
+    "token_attention_rms_dispersion_over_depth": {
+      "p10": 0.0638,
+      "p50": 0.1615,
+      "p90": 0.5552
+    }
+  },
+  "d0_locality": {
+    "decoder_layer_4": {
+      "n_local_heads": 0.45,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 27.789135835608658,
+      "eff_patches_global_median": 113.29455915178572
+    },
+    "decoder_layer_8": {
+      "n_local_heads": 13.57857142857143,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 4.028688590867179,
+      "eff_patches_global_median": 2826.48081741333
+    },
+    "decoder_layer_12": {
+      "n_local_heads": 4.8428571428571425,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 16.783735629490444,
+      "eff_patches_global_median": 344.3252123151507
+    }
+  },
+  "token_shape_alive_tokens": {
+    "flatness": {
+      "p10": 0.2981,
+      "p50": 0.5254,
+      "p90": 0.7734
+    },
+    "thin_rel": {
+      "p10": 0.0039,
+      "p50": 0.0062,
+      "p90": 0.0112
+    },
+    "long_rel": {
+      "p10": 0.0151,
+      "p50": 0.0435,
+      "p90": 0.1898
+    },
+    "ray_over_lateral": {
+      "p10": 1.1875,
+      "p50": 3.3887,
+      "p90": 15.2812
+    },
+    "share_disc_flatness_lt_0.3": 0.10199868679046631,
+    "share_ray_spread_gt_lateral": 0.9363565444946289
+  },
+  "c_centroid": {
+    "locusgs_table3_definition_mean_all_children_normalized": 0.6893588926032992,
+    "median": 0.6223880052566528,
+    "variance": 0.11232890910803243,
+    "alive_weighted_over_depth": {
+      "p10": 0.016,
+      "p50": 0.0374,
+      "p90": 0.1541
+    },
+    "locusgs_paper_dl3dv": {
+      "TokenGS": {
+        "mean": 0.5881,
+        "median": 0.5531
+      },
+      "LocusGS": {
+        "mean": 0.0433,
+        "median": 0.0383
+      }
+    }
+  },
+  "junk_slots": {
+    "junk_share_opacity_lt_0.05_and_far": 0.47469212668282645,
+    "low_opacity_share": 0.8220195770263672,
+    "junk_share_of_heavy_target_render_weight": 0.009124064713735152,
+    "dist_to_nearest_colmap_point_normalized": {
+      "junk": {
+        "p50": 0.1938,
+        "p90": 0.5562
+      },
+      "opacity_ge_0.05": {
+        "p50": 0.0149,
+        "p90": 0.1248
+      }
+    },
+    "junk_opacity": {
+      "p50": 0.0014,
+      "p90": 0.0028
+    },
+    "far_threshold_normalized": 0.09,
+    "note": "nearest COLMAP point overestimates distance to the surface (sparse cloud)"
+  },
+  "parallax": {
+    "alive_tokens": 547409,
+    "colmap_valid_tokens": 388976,
+    "share_parallax_lt_2deg_alive_tokens_inference_time": 0.045181937515735626,
+    "share_parallax_lt_2deg_valid_tokens_colmap_region": 0.023664699867367744,
+    "spearman_e_depth_rel": {
+      "-#views": 0.09764002930149633,
+      "-parallax": 0.11433328366036787,
+      "-parallax_inference_time": 0.09277735644404767,
+      "distance/parallax_(relative)": 0.11433703206469872
+    },
+    "spearman_e_3d_rel": {
+      "-parallax": 0.0721943981300427,
+      "-#views": 0.20248150380265434
+    },
+    "e_depth_rel_all_valid": {
+      "p10": 0.0185,
+      "p50": 0.117,
+      "p90": 0.4547
+    },
+    "binned_by_colmap_region_parallax": {
+      "single view (0 deg)": {
+        "token_share_of_valid": 0.005403932183980942,
+        "e_depth_rel_median": 0.20240257680416107,
+        "e_depth_rel_p90": 1.0675880908966064
+      },
+      "0-2 deg": {
+        "token_share_of_valid": 0.018260765820741653,
+        "e_depth_rel_median": 0.15755712985992432,
+        "e_depth_rel_p90": 0.6270767450332642
+      },
+      "2-5 deg": {
+        "token_share_of_valid": 0.06347692757844925,
+        "e_depth_rel_median": 0.1659345179796219,
+        "e_depth_rel_p90": 0.6001355051994324
+      },
+      "5-10 deg": {
+        "token_share_of_valid": 0.12930874526500702,
+        "e_depth_rel_median": 0.14606916904449463,
+        "e_depth_rel_p90": 0.5450671911239624
+      },
+      "10-20 deg": {
+        "token_share_of_valid": 0.24415388703346252,
+        "e_depth_rel_median": 0.12070616334676743,
+        "e_depth_rel_p90": 0.4503578245639801
+      },
+      ">20 deg": {
+        "token_share_of_valid": 0.5393957495689392,
+        "e_depth_rel_median": 0.10296895354986191,
+        "e_depth_rel_p90": 0.39779093861579895
+      }
+    },
+    "note": "errors are relative to depth (COLMAP region centroid vs the token's opacity-weighted Gaussian centre); on a relative scale distance/parallax reduces to 1/parallax"
+  },
+  "voxel_snap": {
+    "eps_0_normalized": {
+      "between_share_pooled": 0.6152621720713072,
+      "thickness_over_depth": {
+        "p50": 0.1341,
+        "p90": 0.3983
+      },
+      "psnr_heavy_targets": 23.617897033691406,
+      "psnr_input_views": 24.73737335205078
+    },
+    "eps_0.006_normalized": {
+      "between_share_pooled": 0.6152606318496794,
+      "thickness_over_depth": {
+        "p50": 0.1341,
+        "p90": 0.3983
+      },
+      "psnr_heavy_targets": 23.570226669311523,
+      "psnr_input_views": 24.662290573120117
+    },
+    "eps_0.012_normalized": {
+      "between_share_pooled": 0.6151313790362286,
+      "thickness_over_depth": {
+        "p50": 0.1339,
+        "p90": 0.3979
+      },
+      "psnr_heavy_targets": 23.119565963745117,
+      "psnr_input_views": 24.048301696777344
+    },
+    "eps_0.024_normalized": {
+      "between_share_pooled": 0.6158270482214683,
+      "thickness_over_depth": {
+        "p50": 0.1339,
+        "p90": 0.3974
+      },
+      "psnr_heavy_targets": 21.865285873413086,
+      "psnr_input_views": 22.484230041503906
+    }
+  }
+}
+dead child slots (>=99% tokens): [3, 11, 15, 18, 20, 34, 36, 43, 50, 52, 54, 59, 60, 62]
+{
+  "model": "tokengs_paper_4v",
+  "definitions": "frozen model; features of COLMAP-valid alive tokens (<=1024 per scene); target = attention-weighted COLMAP centroid of the token's attention-90% patch set; train on the 70 even scenes, test on the 70 odd scenes; errors relative to target depth from the dominant camera",
+  "gpu": "1",
+  "train_tokens": 71197,
+  "test_tokens": 70883,
+  "official_output_gaussian_centre": {
+    "e_depth_rel": {
+      "p50": 0.1144,
+      "p90": 0.4368
+    },
+    "e_3d_rel": {
+      "p50": 0.1691,
+      "p90": 0.4739
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.2125,
+      "p90": 0.9042
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1031,
+      "p90": 0.4029
+    }
+  },
+  "linear_ridge_h": {
+    "lambda": 1000.0,
+    "e_depth_rel": {
+      "p50": 0.167,
+      "p90": 0.5138
+    },
+    "e_3d_rel": {
+      "p50": 0.2718,
+      "p90": 0.6954
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.2493,
+      "p90": 1.1834
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1586,
+      "p90": 0.468
+    }
+  },
+  "mlp_h": {
+    "e_depth_rel": {
+      "p50": 0.0886,
+      "p90": 0.2928
+    },
+    "e_3d_rel": {
+      "p50": 0.1186,
+      "p90": 0.3239
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1619,
+      "p90": 0.5577
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0813,
+      "p90": 0.2698
+    },
+    "train_fit": {
+      "e_depth_rel": {
+        "p50": 0.0102,
+        "p90": 0.0535
+      },
+      "e_3d_rel": {
+        "p50": 0.0216,
+        "p90": 0.0712
+      },
+      "e_depth_rel_1view": {
+        "p50": 0.0121,
+        "p90": 0.082
+      },
+      "e_depth_rel_4plus_views": {
+        "p50": 0.0097,
+        "p90": 0.0508
+      }
+    }
+  }
+}
+[12:19:19] done tokengs_paper_4v
+[12:19:19] start locusgs_finetune_4v: 7 shards on GPUs 1,2,3,4,5,6,7
+GPU 4: locusgs_finetune_4v shard 3/7: 20 scenes (camera normalization first_cam)
+GPU 2: locusgs_finetune_4v shard 1/7: 20 scenes (camera normalization first_cam)
+GPU 1: locusgs_finetune_4v shard 0/7: 20 scenes (camera normalization first_cam)
+GPU 7: locusgs_finetune_4v shard 6/7: 20 scenes (camera normalization first_cam)
+GPU 5: locusgs_finetune_4v shard 4/7: 20 scenes (camera normalization first_cam)
+GPU 6: locusgs_finetune_4v shard 5/7: 20 scenes (camera normalization first_cam)
+GPU 3: locusgs_finetune_4v shard 2/7: 20 scenes (camera normalization first_cam)
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[shard 4] 1/20 07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b 11s psnr_all 31.40 colmap pts 18819 patch cov 0.41 decode diff 1.0e-03
+[shard 2] 1/20 06da796666297fe4c683c231edf56ec00148a6a52ab5bb159fe1be31f53a58df 12s psnr_all 24.04 colmap pts 61837 patch cov 0.38 decode diff 6.0e-04
+[shard 1] 1/20 0569e83fdc248a51fc0ab082ce5e2baff15755c53c207f545e6d02d91f01d166 13s psnr_all 23.26 colmap pts 183509 patch cov 0.77 decode diff 1.3e-03
+[shard 5] 1/20 0853979305f7ecb80bd8fc2c8df916410d471ef04ed5f1a64e9651baa41d7695 12s psnr_all 27.61 colmap pts 81120 patch cov 0.50 decode diff 9.4e-04
+[shard 0] 1/20 032dee9fb0a8bc1b90871dc5fe950080d0bcd3caf166447f44e60ca50ac04ec7 14s psnr_all 30.23 colmap pts 48676 patch cov 0.48 decode diff 8.6e-04
+[shard 6] 1/20 093ef327b4e4f9d4ee52c02a354a53558a8652157fb0d58f3b4a708734afb334 15s psnr_all 24.94 colmap pts 113947 patch cov 0.60 decode diff 9.7e-04
+[shard 3] 1/20 073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561 20s psnr_all 20.04 colmap pts 175049 patch cov 0.57 decode diff 8.3e-04
+[shard 1] 2/20 0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6 22s psnr_all 29.17 colmap pts 87098 patch cov 0.61 decode diff 8.0e-04
+[shard 0] 2/20 0a1b7c20a92c43c6b8954b1ac909fb2f0fa8b2997b80604bc8bbec80a1cb2da3 25s psnr_all 28.58 colmap pts 72222 patch cov 0.50 decode diff 5.5e-03
+[shard 4] 2/20 1264931635e127fb905c8953cbc2deadd0c763e633af7fbd9405a61ca849710c 26s psnr_all 22.22 colmap pts 106840 patch cov 0.44 decode diff 1.1e-03
+[shard 6] 2/20 15ff83e2531668d27c92091c97d31401ce323e24ee7c844cb32d5109ab9335f7 31s psnr_all 22.89 colmap pts 100357 patch cov 0.65 decode diff 5.0e-03
+[shard 2] 2/20 0bfdd020cf475b9c68e4b469d1d1a2d0cad303eefe8b78fb2307855afdaac8be 31s psnr_all 24.71 colmap pts 72879 patch cov 0.47 decode diff 1.7e-03
+[shard 1] 3/20 183dd248f6a86e07c5adf9de8ee2d0abe45b1216331c03678e89634c2e9b1c7f 34s psnr_all 27.84 colmap pts 87995 patch cov 0.39 decode diff 8.8e-04
+[shard 3] 2/20 119fd56d3797e2d349ca64ddcc5851463cd13b5974b5b2e4566ed5cf7e02e6c1 36s psnr_all 23.12 colmap pts 74124 patch cov 0.34 decode diff 6.9e-04
+[shard 5] 2/20 14eb48a50e37df548894ab6d8cd628a21dae14bbe6c462e894616fc5962e6c49 37s psnr_all 24.86 colmap pts 79799 patch cov 0.49 decode diff 6.5e-04
+[shard 0] 3/20 165f5af8bfe32f70595a1c9393a6e442acf7af019998275144f605b89a306557 39s psnr_all 23.89 colmap pts 79513 patch cov 0.47 decode diff 8.1e-03
+[shard 4] 3/20 1da888bdedfc9629c0fa9f82cf3f5d96f8103baee0ff64d9311aea1224a9f2ae 39s psnr_all 23.14 colmap pts 85967 patch cov 0.50 decode diff 1.9e-03
+[shard 6] 3/20 2385549d398bdfb55ed17b547c9846f0d01d571b4e050f90df707b577084fb55 42s psnr_all 25.11 colmap pts 110573 patch cov 0.57 decode diff 1.3e-03
+[shard 2] 3/20 1ba74c22670ad047981441581d00f26f4a148d1010bcac7468c615adf5fa4d5d 42s psnr_all 27.01 colmap pts 48106 patch cov 0.30 decode diff 1.3e-03
+[shard 1] 4/20 280abf7bd93b81b077af1db638229dbb09869052fa0b7b57c81c94d2db893829 46s psnr_all 25.28 colmap pts 119967 patch cov 0.57 decode diff 1.1e-03
+[shard 5] 3/20 1de58be515696102c364b767f296600ffff853d4145a60dd30ece9d935317654 47s psnr_all 29.50 colmap pts 58043 patch cov 0.56 decode diff 4.4e-04
+[shard 3] 3/20 1d6a9ed47cce39fd1c4d18f776bcc97e507b81bde921ca596bd91b0b02b5e414 49s psnr_all 21.33 colmap pts 106829 patch cov 0.57 decode diff 1.0e-02
+[shard 0] 4/20 26fd23358fa11fff0fb3180ef0b65591b486e20dcf753ce4a7aae49a37e370c7 50s psnr_all 27.96 colmap pts 86917 patch cov 0.57 decode diff 6.9e-03
+[shard 4] 4/20 2b65ba886efac7af6253fce68ae9284bf4d4db019e17c47f3e853361acbdb066 51s psnr_all 22.35 colmap pts 176167 patch cov 0.71 decode diff 2.5e-03
+[shard 6] 4/20 2cbfe28643b6636f9c70813cae7625aa858a352109493ac70fb429ce94dd55b3 53s psnr_all 28.80 colmap pts 60581 patch cov 0.54 decode diff 1.5e-03
+[shard 5] 4/20 2beaca318994c25409dcbb6d0bdd96c3620f2f18aec44ea3f20edd302f18ca78 59s psnr_all 24.50 colmap pts 140187 patch cov 0.68 decode diff 4.4e-03
+[shard 4] 5/20 35872363e17af5d173b6a0b09fcf5de94627ad5dc5f8a9ad4c579f3e70b4797a 59s psnr_all 28.22 colmap pts 96020 patch cov 0.53 decode diff 1.5e-02
+[shard 2] 4/20 286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a 59s psnr_all 19.47 colmap pts 167507 patch cov 0.61 decode diff 2.7e-03
+[shard 1] 5/20 32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e 61s psnr_all 30.89 colmap pts 46264 patch cov 0.29 decode diff 1.6e-03
+[shard 6] 5/20 387eeb925ba47af5db9ce6102aaf6b07e6d3573b7e7568dda4cef22d5ab1342f 63s psnr_all 26.61 colmap pts 151404 patch cov 0.61 decode diff 4.2e-03
+[shard 3] 4/20 2991a75d1f0fb2b7a891d424fc2459bb954b61599b52e74a056a7acfb2998b77 64s psnr_all 21.65 colmap pts 97104 patch cov 0.54 decode diff 8.2e-04
+[shard 0] 5/20 2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd 67s psnr_all 24.49 colmap pts 85998 patch cov 0.40 decode diff 1.6e-03
+[shard 2] 5/20 341b4ff3dfd3d377d7167bd81f443bedafbff003bf04881b99760fc0aeb69510 71s psnr_all 26.46 colmap pts 96645 patch cov 0.62 decode diff 1.4e-03
+[shard 4] 6/20 3bb894d1933f3081134ad2d40e54de5f0636bd8b502b0a8561873bb63b0dce85 73s psnr_all 26.54 colmap pts 106573 patch cov 0.59 decode diff 3.3e-03
+[shard 6] 6/20 444da1b4a3f1ca019d4c9c1b405a579427746ccc96cab6dab7dcba5cb4fc998c 74s psnr_all 25.19 colmap pts 100030 patch cov 0.51 decode diff 1.2e-03
+[shard 1] 6/20 3b16a10ec9b4ab71580958b634485a979ffd6df0d368dbbf6fc1c5ffacf46b7a 75s psnr_all 21.91 colmap pts 144143 patch cov 0.62 decode diff 1.0e-03
+[shard 5] 5/20 374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e 76s psnr_all 31.97 colmap pts 91598 patch cov 0.60 decode diff 9.0e-04
+[shard 0] 6/20 389a460ca1995e0658e85fe8e6b520b4e88b370cd6710dfe728b1564bba31aee 79s psnr_all 25.89 colmap pts 42568 patch cov 0.25 decode diff 2.8e-03
+[shard 3] 5/20 35317e621976e87f0c143e66fc61fb8cddb4ff134304da7a00e32ac1983105b4 81s psnr_all 23.10 colmap pts 156414 patch cov 0.66 decode diff 1.7e-03
+[shard 6] 7/20 513e4ea2e8477b06f2b32417d5c243aec71d491cb0596a60e9fe304c635f20a1 84s psnr_all 28.83 colmap pts 46239 patch cov 0.48 decode diff 8.1e-04
+[shard 2] 6/20 3b7529dcccf7097cba31a989536035595e214b0f3775867fd3a62eb186870090 84s psnr_all 24.29 colmap pts 112146 patch cov 0.68 decode diff 8.2e-04
+[shard 1] 7/20 484c0aca40c1087f196d2caf3c8cb463864c08e60b98326ca02eb6dae8ce4984 87s psnr_all 24.42 colmap pts 68203 patch cov 0.41 decode diff 4.8e-04
+[shard 4] 7/20 4ff8650b5c1140e98d957fbd1abbe2cfbbb416b37cb9f06f7f376956703801bb 87s psnr_all 27.55 colmap pts 84955 patch cov 0.52 decode diff 9.4e-04
+[shard 5] 6/20 41036716da7efda334c1d434c4141d15642e0e02f881a01b6c8c36f8bea64c45 92s psnr_all 25.17 colmap pts 92452 patch cov 0.50 decode diff 7.0e-04
+[shard 0] 7/20 457e9a1ae777b0c72be723aaeec971b39cc6d5d413d922f981ec9785395f7ca9 93s psnr_all 26.09 colmap pts 65294 patch cov 0.41 decode diff 4.5e-04
+[shard 3] 6/20 3bb3bb4d3e871d79eb71946cbab1e3afc7a8e33a661153033f32deb3e23d2e52 96s psnr_all 26.25 colmap pts 42542 patch cov 0.28 decode diff 1.4e-03
+[shard 6] 8/20 5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00 97s psnr_all 29.60 colmap pts 75612 patch cov 0.58 decode diff 3.0e-04
+[shard 1] 8/20 56452d9cd9e2e034764132a57058517ab085e1352f9664d2d1e10e98741334fc 98s psnr_all 22.48 colmap pts 97531 patch cov 0.48 decode diff 5.0e-03
+[shard 2] 7/20 493816813d2d6d248eb3c2b0b77b63e54235266e9a06e270fd0d282f13960493 99s psnr_all 23.00 colmap pts 196178 patch cov 0.82 decode diff 1.4e-03
+[shard 4] 8/20 5a27c00f525f5484b7aa0d0107051253bf7bb395bde0b3a4486ff8c52fb4965e 101s psnr_all 25.85 colmap pts 81024 patch cov 0.58 decode diff 1.3e-03
+[shard 0] 8/20 54bf355ca7e08ed1bc86f5772e564ac0f92981ca25dab24d86b694e915fc4c43 104s psnr_all 26.06 colmap pts 96427 patch cov 0.71 decode diff 5.1e-04
+[shard 5] 7/20 50c46cf8b8b22c8d2ffdef8964b05ddbceaef312c9a9ff331d1ecebfd223f72a 105s psnr_all 26.38 colmap pts 58887 patch cov 0.36 decode diff 3.7e-04
+[shard 3] 7/20 4ae797d07b6d1644c9db6919c8cc8c0d28d72be45108ac7a3abf8dc21b599d83 109s psnr_all 23.90 colmap pts 88103 patch cov 0.52 decode diff 1.3e-03
+[shard 6] 9/20 6d81c5ab0d480fd43d78b75ff372a8113ad38e2c03f1d69627c009883054d4c2 109s psnr_all 26.29 colmap pts 90804 patch cov 0.36 decode diff 5.0e-03
+[shard 2] 8/20 565553aa894be621e8b4773cac288e60ad0c2cf7edb621be62b348c9a0f78380 111s psnr_all 24.21 colmap pts 156490 patch cov 0.56 decode diff 8.9e-04
+[shard 1] 9/20 5f0041e53d59d67c3ca25db97b269db183a532c4566a6bc46ca0e69cfa4234ad 115s psnr_all 28.58 colmap pts 76844 patch cov 0.58 decode diff 6.1e-04
+[shard 4] 9/20 66fd66cbed40a2d11ecd17ae6d6d60cd60d476616864ecdd351fe69e644f30a1 115s psnr_all 26.25 colmap pts 77156 patch cov 0.33 decode diff 1.1e-03
+[shard 0] 9/20 5c8dafad7d782c76ffad8c14e9e1244ce2b83aa12324c54a3cc10176964acf04 117s psnr_all 27.74 colmap pts 73952 patch cov 0.39 decode diff 1.6e-03
+[shard 6] 10/20 7da3db99059a436adf537bc23309a6a4db9e011696d086f3a64037f7497d9df7 120s psnr_all 24.39 colmap pts 88504 patch cov 0.42 decode diff 7.1e-04
+[shard 3] 8/20 599ca3e04cae3ec83affc426af7d0d7ab36eb91cd8e539edbc13070a4d455792 121s psnr_all 22.52 colmap pts 79891 patch cov 0.44 decode diff 6.0e-04
+[shard 5] 8/20 5a69d1027b477be4d2933b765723d57b272e0ace96be7885306464d54aa2c038 120s psnr_all 21.69 colmap pts 113095 patch cov 0.62 decode diff 5.3e-03
+[shard 2] 9/20 63798f5c6fbfcb4eb686268248b8ecbc8d87d920b2bcce967eeaedfd3b3b6d82 123s psnr_all 27.30 colmap pts 51957 patch cov 0.30 decode diff 1.0e-03
+[shard 1] 10/20 70eac6ff18a1daae4eeccc5eb18723eaf7e029a77e79c79d9573f7bac59ba92b 125s psnr_all 24.85 colmap pts 173553 patch cov 0.72 decode diff 2.7e-03
+[shard 6] 11/20 90cb7ef95384138c2370f13a9ae1698fb1b5bdd68e8b3d01f8e53d38933a4b92 132s psnr_all 24.48 colmap pts 91621 patch cov 0.44 decode diff 2.2e-03
+[shard 0] 10/20 6e11e7f4fea305c7c4658d2c1f8df29e6f299330860cf48ffbf1c5ff8b96c0a8 134s psnr_all 29.28 colmap pts 42411 patch cov 0.22 decode diff 7.6e-04
+[shard 3] 9/20 669c36225b273e22ce08364f166dce910b708d7abd89e58463a15d2790b534d5 136s psnr_all 25.39 colmap pts 112468 patch cov 0.51 decode diff 6.7e-04
+[shard 2] 10/20 71b2dc8a2aa553da09b8b94b9f0d5e8abcca307def74d26301616ee238464d46 137s psnr_all 28.66 colmap pts 47317 patch cov 0.44 decode diff 7.9e-04
+[shard 4] 10/20 7705a2edd022de9da3f8cead677287645986e982d9247a21e1992859a59f8335 138s psnr_all 25.94 colmap pts 64244 patch cov 0.28 decode diff 8.7e-04
+[shard 5] 9/20 6d221625614d0515fa44d59a8797a49b64f86bc775e66be22f07a66aa0a0cb3a 139s psnr_all 23.62 colmap pts 95807 patch cov 0.40 decode diff 3.4e-03
+[shard 1] 11/20 8324b3ca22085040c2a0ecb7284e0cdf776b1f846b73a7c0df893587cb4a45f8 141s psnr_all 22.81 colmap pts 128115 patch cov 0.50 decode diff 9.1e-04
+[shard 3] 10/20 75fbbe467353cfdeb93bc1872144855576797be83a0c71c51155ee6b355d6d5e 146s psnr_all 25.37 colmap pts 156468 patch cov 0.62 decode diff 9.2e-03
+[shard 6] 12/20 9cbc5548643ca9cfe797f871bac58bccd02f0510c49b7cb3697b38dfd780a508 146s psnr_all 23.94 colmap pts 219191 patch cov 0.76 decode diff 7.8e-04
+[shard 0] 11/20 800cf88687a79c232700454c2f5a402e771bc7157037a17b0ce93da365b25575 150s psnr_all 23.02 colmap pts 159311 patch cov 0.63 decode diff 1.1e-03
+[shard 5] 10/20 7a9f97660be8f2421b37dd413c898360532f17c6447c11515e8aded2d80eb99d 150s psnr_all 28.66 colmap pts 59994 patch cov 0.40 decode diff 6.9e-04
+[shard 2] 11/20 85cd0e92110bcd35e826cbff16bb0e85d8117717adaf36f0698920f0fb9b2cfd 150s psnr_all 24.13 colmap pts 108640 patch cov 0.57 decode diff 2.4e-03
+[shard 4] 11/20 8cb2e97d26a639f05a571476240a8fa86988e6853f0f13cc05830d1578002aad 154s psnr_all 29.06 colmap pts 63171 patch cov 0.36 decode diff 7.1e-04
+[shard 1] 12/20 918c8dad730c3b804306c5da8486124be4aa0612e85fb825338fd350c912e1b0 155s psnr_all 23.05 colmap pts 104139 patch cov 0.37 decode diff 7.4e-03
+[shard 5] 11/20 8fdc5130f0731360cc053f59049bfe6db509567457c5471c970292966cb34f17 160s psnr_all 29.07 colmap pts 45688 patch cov 0.39 decode diff 1.3e-03
+[shard 3] 11/20 8b9fb9d9f10e8c64d5034be69809465753b8ba88ef12da82afd47d38ee789934 161s psnr_all 21.87 colmap pts 128554 patch cov 0.70 decode diff 1.3e-03
+[shard 6] 13/20 a726c1112ad026efc92f59f196c0698e67abd12a04135a7ff6349b1d31b089eb 160s psnr_all 21.96 colmap pts 60384 patch cov 0.30 decode diff 8.4e-04
+[shard 0] 12/20 917e9c8985d353b0ee4c281f11fa84eb8550814562670cbb82cd0ec9c1194fe7 163s psnr_all 26.46 colmap pts 121584 patch cov 0.64 decode diff 7.7e-04
+[shard 1] 13/20 9fb0588ff045ec64119c5bc91b44a4b7400e5fae5a17e67762b29e6855b57118 166s psnr_all 25.40 colmap pts 84841 patch cov 0.70 decode diff 2.9e-03
+[shard 2] 12/20 91afb9910b042f7185c2b8e4b6b24b5785dae4542617b3f8005b5492f6d123f7 167s psnr_all 25.85 colmap pts 110058 patch cov 0.48 decode diff 2.8e-03
+[shard 4] 12/20 9641a1ed7963ce5ca734cff3e6ccea3dfa8bcb0b0a3ff78f65d32a080de2d71e 168s psnr_all 25.37 colmap pts 57195 patch cov 0.27 decode diff 2.8e-03
+[shard 3] 12/20 946f49be73928469000baa5ca04d2573137c5ee6a66362bcf8d130354dca8924 170s psnr_all 26.35 colmap pts 70909 patch cov 0.42 decode diff 1.5e-03
+[shard 0] 13/20 9e9a89ae6fed06d6e2f4749b4b0059f35ca97f848cedc4a14345999e746f7884 172s psnr_all 29.07 colmap pts 43530 patch cov 0.25 decode diff 5.1e-04
+[shard 6] 14/20 b5faa2a8ce980030125717352086bf9ec16c5d994bae3b3a732da3eb67cf4fa8 172s psnr_all 26.48 colmap pts 63833 patch cov 0.39 decode diff 4.1e-04
+[shard 1] 14/20 adf35184a12d4cfa3f4248b87aa5adb4f39f179df460d6d76136e13d37299a2a 180s psnr_all 28.69 colmap pts 68999 patch cov 0.42 decode diff 2.3e-03
+[shard 5] 12/20 9c8c0e0fadd97abf60088f667eba058ef077a71a8c0f5a4eff2782aa97f1ceb8 180s psnr_all 20.68 colmap pts 128378 patch cov 0.57 decode diff 1.6e-03
+[shard 2] 13/20 a17a984ca90a9b5840fdf85b15104b0d18e25975981c1aa90fcdfd6eeeb285f3 180s psnr_all 25.19 colmap pts 98838 patch cov 0.57 decode diff 6.6e-04
+[shard 4] 13/20 a62c330f5403e2e41a82a74c4e865b705c5706843b992fae2fe2e538b122d984 184s psnr_all 20.37 colmap pts 135626 patch cov 0.57 decode diff 1.4e-03
+[shard 3] 13/20 a401469cb0fa576b93e836a4a6d712394f1a55a0a53a42250286980bd078e669 186s psnr_all 22.86 colmap pts 115589 patch cov 0.55 decode diff 8.9e-04
+[shard 6] 15/20 c455899acfc8816353a55fade692d19d9c2bff68c8615f852931d5754848db74 186s psnr_all 22.98 colmap pts 84203 patch cov 0.32 decode diff 1.7e-03
+[shard 0] 14/20 adb95f29c15b8a89e40c17d10596679be09d7719c6f08a453facd506d056ea8b 188s psnr_all 23.46 colmap pts 164070 patch cov 0.69 decode diff 2.5e-03
+[shard 5] 13/20 a62f9a1c6362e7c8a3440261ea0921a0a4b60cf5822bd19579836694f26b3abd 190s psnr_all 25.73 colmap pts 187651 patch cov 0.73 decode diff 2.4e-03
+[shard 1] 15/20 b92b499c9bf92327d5f3a44c9db49bde3400dcb1cfec48d6488831e2b304d0bb 192s psnr_all 28.76 colmap pts 27759 patch cov 0.24 decode diff 3.9e-04
+[shard 2] 14/20 af0d7039e64af3959210c235e59425896ac064f4e0f721c437bbd2cf1d8ea910 193s psnr_all 19.32 colmap pts 135566 patch cov 0.53 decode diff 3.6e-03
+[shard 4] 14/20 b3bf9079b442c681749f6bd95cfb0659c6d844f2228b2f4fa4b602a0e3627b9a 195s psnr_all 27.04 colmap pts 83046 patch cov 0.61 decode diff 5.6e-03
+[shard 3] 14/20 b2076bc7231bac445b1a3d0015a410675a3222f25cc219e8178a62a0dd4ac63d 200s psnr_all 21.56 colmap pts 161099 patch cov 0.62 decode diff 1.2e-03
+[shard 6] 16/20 d3af8212ae1600f078c4ac1ef3c9369a7f41ee9d005dbd0c545cf43fc35a9a23 200s psnr_all 29.07 colmap pts 55726 patch cov 0.49 decode diff 3.7e-03
+[shard 0] 15/20 b6d1134cb03c855d246f916beaa2d3d01290cf47937a5176011ff39b850ec615 200s psnr_all 22.49 colmap pts 147699 patch cov 0.69 decode diff 5.5e-04
+[shard 1] 16/20 cc08c0bdc34ddd2867705d0b17a86ec2a9d7c7926ce99070ed1fdc66a812de07 202s psnr_all 28.12 colmap pts 70170 patch cov 0.46 decode diff 2.7e-03
+[shard 5] 14/20 b4f53094fd31dcc2de1c1d1fdfeffac5259e9bdf39d77b552ff948e4bdf1fd8e 201s psnr_all 25.30 colmap pts 107406 patch cov 0.56 decode diff 3.7e-03
+[shard 2] 15/20 ba55c875d20c34ee85ffc72264c4d77710852e5fb7d9ce4b9c26a8442850e98f 205s psnr_all 30.40 colmap pts 76091 patch cov 0.40 decode diff 7.1e-04
+[shard 3] 15/20 c076929db6501cf7ebe386c70e6d77ea3af844a745e794f2ec17c981c465a69b 210s psnr_all 29.58 colmap pts 72694 patch cov 0.44 decode diff 3.3e-03
+[shard 1] 17/20 d8de66037bd03dd0d39d54f9978bac3318d912e30e22c21e1ada82a98ed48c53 212s psnr_all 25.88 colmap pts 148312 patch cov 0.57 decode diff 4.9e-04
+[shard 4] 15/20 c37109a55effe0000f8e40652ca935376e75bcb2a0b56de8eabd20a26e2a0f68 213s psnr_all 20.20 colmap pts 102552 patch cov 0.37 decode diff 5.7e-03
+[shard 0] 16/20 cbd44beb04f9c98f2d2c5affff89a6e0a72c25f1aa0c6f660fbd9e4d26702f8b 213s psnr_all 27.82 colmap pts 99379 patch cov 0.61 decode diff 3.3e-03
+[shard 5] 15/20 c37726ce770ac50a2cf5c0f43022f0268e26da0d777cd8e3a3418c4eed03fd94 215s psnr_all 22.12 colmap pts 170148 patch cov 0.62 decode diff 1.5e-03
+[shard 2] 16/20 cd9c981eeb4a9091547af19181b382698e9d9eee0a838c7c9783a8a268af6aee 217s psnr_all 22.61 colmap pts 103123 patch cov 0.56 decode diff 1.0e-02
+[shard 6] 17/20 dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751 217s psnr_all 19.12 colmap pts 230202 patch cov 0.78 decode diff 9.8e-04
+[shard 3] 16/20 ceb252f5d4419510655cf9ed7afbf3e8e688825f798d80414c7715dc8ace153a 222s psnr_all 26.08 colmap pts 80685 patch cov 0.50 decode diff 3.8e-04
+[shard 0] 17/20 d4fbeba0168af8fddb2fc695881787aedcd62f477c7dcec9ebca7b8594bbd95b 223s psnr_all 20.36 colmap pts 181414 patch cov 0.79 decode diff 2.1e-03
+[shard 1] 18/20 ded5e4b46aedbef4cdb7bd1db7fc4cc5b00a9979ad6464bdadfab052cd64c101 225s psnr_all 28.34 colmap pts 56511 patch cov 0.36 decode diff 1.2e-03
+[shard 6] 18/20 e78f8cebd2bd93d960bfaeac18fac0bb2524f15c44288903cd20b73e599e8a81 226s psnr_all 21.62 colmap pts 158106 patch cov 0.76 decode diff 2.7e-03
+[shard 4] 16/20 d1b3a0b37acc72207295b05e8c359f8b43bf879eb882c60747cfc6d3c7d8efa3 226s psnr_all 22.38 colmap pts 114977 patch cov 0.62 decode diff 9.3e-04
+[shard 5] 16/20 d3812aad538261e7f73c75762ff55f23b468bcc76f376d52ac86ca6cf3c44b4b 229s psnr_all 21.45 colmap pts 48942 patch cov 0.27 decode diff 1.2e-03
+[shard 1] 19/20 e9360e7a89bee835dc847cf8796093e634b759ff582558788dcfe8326f6e8901 233s psnr_all 22.03 colmap pts 142708 patch cov 0.69 decode diff 3.1e-03
+[shard 0] 18/20 ddfdcfdf02d53dd89a055cd9e1ed30272ab3f57c7560ac2c3761bb01d76a7882 233s psnr_all 23.38 colmap pts 194613 patch cov 0.73 decode diff 8.3e-03
+[shard 2] 17/20 d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a 233s psnr_all 19.69 colmap pts 111437 patch cov 0.40 decode diff 1.4e-03
+[shard 4] 17/20 d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b 236s psnr_all 28.63 colmap pts 83884 patch cov 0.52 decode diff 9.6e-04
+[shard 3] 17/20 d9b6376623741313bf6da6bf4cdb9828be614a2ce9390ceb3f31cd535d661a75 241s psnr_all 23.19 colmap pts 123325 patch cov 0.48 decode diff 8.6e-04
+[shard 6] 19/20 ef59aac437132bfc1dd45a7e1f8e4800978e7bb28bf98c4428d26fb3e1da3e90 241s psnr_all 29.26 colmap pts 122546 patch cov 0.65 decode diff 9.5e-04
+[shard 5] 17/20 dac9796dd69e1c25277e29d7e30af4f21e3b575d62a0a208c2b3d1211e2d5d77 242s psnr_all 29.33 colmap pts 66063 patch cov 0.43 decode diff 6.0e-04
+[shard 2] 18/20 df04f58064684c1a31aa0ffbbcf34199d01d0a0ff289588eb2d6c6cf50a3922c 244s psnr_all 24.60 colmap pts 104755 patch cov 0.69 decode diff 1.0e-03
+[shard 0] 19/20 e8ce51b6abfe05bf8dca47e29c8be6c1e6de27a8c9fece7a121400b931b2ca0f 245s psnr_all 26.19 colmap pts 106743 patch cov 0.54 decode diff 1.2e-03
+[shard 1] 20/20 f477ffc4b398bed8e0d921f0fba9825ca63f317381c535c84be23be991ae1d7a 248s psnr_all 29.22 colmap pts 45485 patch cov 0.30 decode diff 9.7e-04
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/locusgs_finetune_4v/shard_1.pt
+[shard 4] 18/20 df4f9d9a0adfc54c49607bc792be6ed6f751b67e37c588472ea58b0d898310dd 249s psnr_all 29.06 colmap pts 41719 patch cov 0.32 decode diff 5.2e-04
+[shard 3] 18/20 df29c225863d0173e060b1f3fde4e6eb5a57a4e4edabd397026ba1a028aeb39e 254s psnr_all 24.23 colmap pts 73411 patch cov 0.57 decode diff 2.1e-03
+[shard 5] 18/20 e5684b3292bfd77db297839fc37ee4cce7fd59775af1a6a4827e3b4f59c036d3 257s psnr_all 26.79 colmap pts 69185 patch cov 0.51 decode diff 7.4e-04
+[shard 6] 20/20 ff592398657b3dfe94153332861985194a3e3c9d199c4a3a27a0ce4038e81ade 257s psnr_all 26.68 colmap pts 111821 patch cov 0.52 decode diff 6.7e-03
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/locusgs_finetune_4v/shard_6.pt
+[shard 2] 19/20 eb4cf52988f805e6fce11d1b239fa9de32eb157364cff06ebac0aa50e0a46567 257s psnr_all 24.88 colmap pts 101023 patch cov 0.59 decode diff 8.5e-04
+[shard 0] 20/20 f004c810d94bac93f527606a2ff859d646f99fcac0868c6c6905b29c718fa37b 258s psnr_all 28.65 colmap pts 49582 patch cov 0.46 decode diff 7.0e-04
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/locusgs_finetune_4v/shard_0.pt
+[shard 4] 19/20 ec305787b70029b782c71c1bf296c3885c7c22619e5661bd40085533ddfee5e4 259s psnr_all 24.24 colmap pts 64302 patch cov 0.36 decode diff 1.0e-03
+[shard 3] 19/20 ec1e44d4dc0f8fa77610866495f9297a7f82158c43e1777668b84fd4b736c7bc 268s psnr_all 27.78 colmap pts 71337 patch cov 0.43 decode diff 2.3e-03
+[shard 2] 20/20 f71ac346cd0fc4652a89afb37044887ec3907d37d01d1ceb0ad28e1a780d8e03 268s psnr_all 23.82 colmap pts 189511 patch cov 0.80 decode diff 2.4e-03
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/locusgs_finetune_4v/shard_2.pt
+[shard 5] 19/20 ed16328235c610f15405ff08711eaf15d88a0503884f3a9ccb5a0ee69cb4acb5 269s psnr_all 25.28 colmap pts 192659 patch cov 0.65 decode diff 2.4e-03
+[shard 4] 20/20 fb2c0499c225d6124938cadcf0dc48cbb490551b8a69c98386491c1366163632 270s psnr_all 26.35 colmap pts 59476 patch cov 0.47 decode diff 2.8e-03
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/locusgs_finetune_4v/shard_4.pt
+[shard 3] 20/20 f7aaea9ac683bb1945cfeb1daa9abca3375249e0d19281a89a3f575040835464 280s psnr_all 23.69 colmap pts 189601 patch cov 0.79 decode diff 9.4e-04
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/locusgs_finetune_4v/shard_3.pt
+[shard 5] 20/20 fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9 288s psnr_all 18.90 colmap pts 165352 patch cov 0.55 decode diff 1.1e-03
+wrote /mnt/disk/xveyan/workspace_dl3dv/diag_dl3dv/locusgs_finetune_4v/shard_5.pt
+/home/jms/xveyan/4DGS/TokenGS/scripts/diag_dl3dv.py:622: RuntimeWarning: Mean of empty slice
+  res["d0_locality"] = {li: {k: float(np.nanmean([r["d0"][li][k] for r in recs])) for k in recs[0]["d0"][li]} for li in recs[0]["d0"]}
+{
+  "model": "locusgs_finetune_4v",
+  "checkpoint": "/mnt/disk/xveyan/checkpoints/locusgs/checkpoints/dl3dv/finetune/model.safetensors",
+  "checkpoint_sha256": "a554f552505f97122ae7e745090d37cefd023b4d9c7f87de3ce22e5683e09ec0",
+  "scenes": 140,
+  "scannetpp_reference_official_model": {
+    "thickness_between_share_pooled": 0.9,
+    "thickness_between_share_per_pixel_median": 0.72,
+    "render_weight_in_attention90_median": 0.87,
+    "render_weight_in_attention90_weighted": 0.83,
+    "patches_per_latent_median": 17,
+    "latents_covering_each_patch_median": 6,
+    "near_duplicate_latent_frac": 0.19,
+    "token_flatness_median": 0.58,
+    "token_ray_over_lateral_median": 1.37,
+    "junk_slot_share": 0.24,
+    "junk_render_weight_share": 0.049,
+    "dead_child_slots_all_tokens": [
+      0,
+      7,
+      16,
+      19,
+      20
+    ],
+    "parallax_lt2deg_token_share": 0.25,
+    "spearman_error_vs_distance_over_parallax": 0.47,
+    "spearman_error_vs_parallax": 0.4,
+    "voxel_snap_between_share": 0.91,
+    "depth_absrel_vs_laser": 0.174
+  },
+  "psnr": {
+    "all_50_targets_scene_mean": 25.289899826049805,
+    "novel_44_targets_scene_mean": 25.18194007873535,
+    "reference": "LocusGS paper Table 1 (6 views) 25.78"
+  },
+  "decode_vs_render_max_abs_diff": 0.014948397874832153,
+  "colmap": {
+    "points_per_scene": {
+      "p10": 48915.4,
+      "p50": 92036.5,
+      "p90": 167771.1
+    },
+    "input_patch_coverage": {
+      "p10": 0.317,
+      "p50": 0.5215,
+      "p90": 0.6991
+    }
+  },
+  "depth_vs_colmap_heavy_targets": {
+    "points": 2089163,
+    "median_ratio_pred_over_colmap": 1.0253927596746821,
+    "absrel_pooled_mean": 0.20544434783097426,
+    "absrel_pooled_median": 0.04636666903584243,
+    "absrel_scene_mean": 0.22030720114707947,
+    "delta_lt_1.05": 0.5158731032475685,
+    "delta_lt_1.10": 0.6776053376400022,
+    "note": "COLMAP points only (textured, sparse); ScanNet++ AbsRel 0.174 is dense laser depth - not directly comparable"
+  },
+  "thickness_split_heavy_targets": {
+    "between_share_pooled": 0.9922314611480788,
+    "within_share_pooled": 0.007768541438964314,
+    "between_share_per_pixel_median": 0.9586057349542728,
+    "thickness_over_depth": {
+      "p50": 0.1015,
+      "p90": 0.4248
+    },
+    "by_thickness_over_depth": {
+      "0-0.015": {
+        "pixel_share": 0.02985134594896115,
+        "pooled_between_share": 0.3763740008589845,
+        "median_pixel_between_share": 0.48926192573879074
+      },
+      "0.015-0.05": {
+        "pixel_share": 0.23489514171766557,
+        "pooled_between_share": 0.8094001259535306,
+        "median_pixel_between_share": 0.7836889890160891
+      },
+      "0.05-0.15": {
+        "pixel_share": 0.3640904830559114,
+        "pooled_between_share": 0.9603064017918419,
+        "median_pixel_between_share": 0.9461163580023944
+      },
+      "0.15-inf": {
+        "pixel_share": 0.3711630292774619,
+        "pooled_between_share": 0.9957643540198414,
+        "median_pixel_between_share": 0.9921010770889982
+      }
+    }
+  },
+  "render_ownership_input_views": {
+    "live_token_frac": 0.9446166753768921,
+    "r_in_a90": {
+      "p10": 0.2731,
+      "p50": 0.5687,
+      "p90": 0.8686
+    },
+    "r_in_a90_weighted_by_render": 0.4686543643474579,
+    "a_in_r90": {
+      "p10": 0.7786,
+      "p50": 0.9556,
+      "p90": 0.999
+    },
+    "same_dominant_view_frac": 0.581696629524231
+  },
+  "pixel_token_counts_input_views": {
+    "tokens_with_ge_1pct_of_pixel_weight": {
+      "p10": 5.0,
+      "p50": 9.0,
+      "p90": 16.0
+    },
+    "tokens_needed_for_90pct_weight_(capped_33)": {
+      "p10": 3.0,
+      "p50": 6.0,
+      "p90": 14.0
+    }
+  },
+  "gs_token_attention_overlap": {
+    "patches_in_90pct_set_(capped_64)": {
+      "p10": 4.0,
+      "p50": 9.0,
+      "p90": 26.0
+    },
+    "rows_covering_each_patch": {
+      "p10": 1.0,
+      "p50": 3.0,
+      "p90": 13.0
+    },
+    "other_rows_with_cosine_gt_0.5": {
+      "p10": 0.0,
+      "p50": 1.0,
+      "p90": 4.0
+    },
+    "frac_rows_with_near_duplicate_cos_gt_0.8": 0.3315237760543823,
+    "attention_mass_in_top64_patches": {
+      "p10": 0.9893,
+      "p50": 1.0,
+      "p90": 1.0
+    },
+    "token_attention_rms_dispersion_over_depth": {
+      "p10": 0.0123,
+      "p50": 0.0395,
+      "p90": 0.2279
+    }
+  },
+  "d0_locality": {
+    "decoder_layer_4": {
+      "n_local_heads": 0.0,
+      "n_heads": 16.0,
+      "eff_patches_local_median": NaN,
+      "eff_patches_global_median": 304.93675122942244
+    },
+    "decoder_layer_8": {
+      "n_local_heads": 1.6642857142857144,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 24.27917574714212,
+      "eff_patches_global_median": 93.0442996433803
+    },
+    "decoder_layer_12": {
+      "n_local_heads": 15.864285714285714,
+      "n_heads": 16.0,
+      "eff_patches_local_median": 6.083415222167969,
+      "eff_patches_global_median": 38.27067642211914
+    }
+  },
+  "token_shape_alive_tokens": {
+    "flatness": {
+      "p10": 0.3862,
+      "p50": 0.6353,
+      "p90": 0.8511
+    },
+    "thin_rel": {
+      "p10": 0.0045,
+      "p50": 0.0084,
+      "p90": 0.0154
+    },
+    "long_rel": {
+      "p10": 0.0133,
+      "p50": 0.0229,
+      "p90": 0.0433
+    },
+    "ray_over_lateral": {
+      "p10": 0.6333,
+      "p50": 1.1982,
+      "p90": 2.2305
+    },
+    "share_disc_flatness_lt_0.3": 0.03577999398112297,
+    "share_ray_spread_gt_lateral": 0.6475145816802979
+  },
+  "c_centroid": {
+    "locusgs_table3_definition_mean_all_children_normalized": 0.039689671466808005,
+    "median": 0.02141183242201805,
+    "variance": 0.003075409173890422,
+    "alive_weighted_over_depth": {
+      "p10": 0.0158,
+      "p50": 0.0254,
+      "p90": 0.046
+    },
+    "locusgs_paper_dl3dv": {
+      "TokenGS": {
+        "mean": 0.5881,
+        "median": 0.5531
+      },
+      "LocusGS": {
+        "mean": 0.0433,
+        "median": 0.0383
+      }
+    }
+  },
+  "junk_slots": {
+    "junk_share_opacity_lt_0.05_and_far": 0.05253729139055525,
+    "low_opacity_share": 0.6044666017804827,
+    "junk_share_of_heavy_target_render_weight": 0.01087105963600487,
+    "dist_to_nearest_colmap_point_normalized": {
+      "junk": {
+        "p50": 0.1742,
+        "p90": 0.5557
+      },
+      "opacity_ge_0.05": {
+        "p50": 0.0114,
+        "p90": 0.1037
+      }
+    },
+    "junk_opacity": {
+      "p50": 0.0059,
+      "p90": 0.0372
+    },
+    "far_threshold_normalized": 0.09,
+    "note": "nearest COLMAP point overestimates distance to the surface (sparse cloud)"
+  },
+  "parallax": {
+    "alive_tokens": 502208,
+    "colmap_valid_tokens": 307733,
+    "share_parallax_lt_2deg_alive_tokens_inference_time": 0.25201907753944397,
+    "share_parallax_lt_2deg_valid_tokens_colmap_region": 0.22023962438106537,
+    "spearman_e_depth_rel": {
+      "-#views": 0.09925153949287548,
+      "-parallax": 0.18248297817275727,
+      "-parallax_inference_time": 0.1893044079185991,
+      "distance/parallax_(relative)": 0.18326076859563806
+    },
+    "spearman_e_3d_rel": {
+      "-parallax": 0.18134797094172617,
+      "-#views": 0.11888265813320062
+    },
+    "e_depth_rel_all_valid": {
+      "p10": 0.0033,
+      "p50": 0.0237,
+      "p90": 0.2418
+    },
+    "binned_by_colmap_region_parallax": {
+      "single view (0 deg)": {
+        "token_share_of_valid": 0.12000662833452225,
+        "e_depth_rel_median": 0.03805268928408623,
+        "e_depth_rel_p90": 0.4125976860523224
+      },
+      "0-2 deg": {
+        "token_share_of_valid": 0.10023299604654312,
+        "e_depth_rel_median": 0.04945242777466774,
+        "e_depth_rel_p90": 0.3871130347251892
+      },
+      "2-5 deg": {
+        "token_share_of_valid": 0.08538895845413208,
+        "e_depth_rel_median": 0.03703689202666283,
+        "e_depth_rel_p90": 0.2908019721508026
+      },
+      "5-10 deg": {
+        "token_share_of_valid": 0.14761823415756226,
+        "e_depth_rel_median": 0.02334284409880638,
+        "e_depth_rel_p90": 0.2213238626718521
+      },
+      "10-20 deg": {
+        "token_share_of_valid": 0.24567076563835144,
+        "e_depth_rel_median": 0.01797175221145153,
+        "e_depth_rel_p90": 0.17721331119537354
+      },
+      ">20 deg": {
+        "token_share_of_valid": 0.30108243227005005,
+        "e_depth_rel_median": 0.018014945089817047,
+        "e_depth_rel_p90": 0.1750829517841339
+      }
+    },
+    "note": "errors are relative to depth (COLMAP region centroid vs the token's opacity-weighted Gaussian centre); on a relative scale distance/parallax reduces to 1/parallax"
+  },
+  "voxel_snap": {
+    "eps_0_normalized": {
+      "between_share_pooled": 0.9922047380504362,
+      "thickness_over_depth": {
+        "p50": 0.1015,
+        "p90": 0.427
+      },
+      "psnr_heavy_targets": 25.10331916809082,
+      "psnr_input_views": 26.08160972595215
+    },
+    "eps_0.006_normalized": {
+      "between_share_pooled": 0.9921990544061855,
+      "thickness_over_depth": {
+        "p50": 0.1014,
+        "p90": 0.4267
+      },
+      "psnr_heavy_targets": 24.88958740234375,
+      "psnr_input_views": 25.790456771850586
+    },
+    "eps_0.012_normalized": {
+      "between_share_pooled": 0.9921924260815025,
+      "thickness_over_depth": {
+        "p50": 0.1007,
+        "p90": 0.4283
+      },
+      "psnr_heavy_targets": 23.997547149658203,
+      "psnr_input_views": 24.683557510375977
+    },
+    "eps_0.024_normalized": {
+      "between_share_pooled": 0.9922686169430757,
+      "thickness_over_depth": {
+        "p50": 0.102,
+        "p90": 0.4381
+      },
+      "psnr_heavy_targets": 22.199445724487305,
+      "psnr_input_views": 22.598657608032227
+    }
+  },
+  "locusgs_anchor": {
+    "radius_over_depth_alive_tokens": {
+      "p10": 0.0903,
+      "p50": 0.1278,
+      "p90": 0.1909
+    },
+    "radius_normalized_alive_tokens": {
+      "p10": 0.0577,
+      "p50": 0.0989,
+      "p90": 0.2618
+    },
+    "alive_child_mass_within_1r": {
+      "p10": 0.0,
+      "p50": 1.0
+    },
+    "alive_child_mass_within_2r": {
+      "p10": 0.1937,
+      "p50": 1.0
+    },
+    "alive_child_offset_over_r": {
+      "p50": 0.4468,
+      "p90": 2.1387,
+      "p99": 4.3281
+    },
+    "anchor_to_gaussian_centre_over_depth": {
+      "p10": 0.0151,
+      "p50": 0.0448,
+      "p90": 0.3276
+    },
+    "e_depth_rel_valid_tokens": {
+      "anchor": {
+        "p10": 0.0071,
+        "p50": 0.0446,
+        "p90": 0.3786
+      },
+      "gaussian_centre": {
+        "p10": 0.0033,
+        "p50": 0.0237,
+        "p90": 0.2418
+      }
+    },
+    "e_3d_rel_valid_tokens_anchor": {
+      "p10": 0.0173,
+      "p50": 0.0635,
+      "p90": 0.4682
+    },
+    "nearest_other_anchor_over_own_radius": {
+      "p10": 0.0647,
+      "p50": 0.1651,
+      "p90": 0.3836
+    },
+    "other_anchors_within_own_radius": {
+      "p10": 10.0,
+      "p50": 52.0,
+      "p90": 234.0
+    },
+    "other_anchors_with_overlapping_support": {
+      "p10": 48.0,
+      "p50": 241.0,
+      "p90": 812.0
+    },
+    "spearman_radius_over_depth_vs": {
+      "-parallax_colmap_region": -0.14110540228632554,
+      "e_depth_rel_gaussian_centre": 0.17299576931327756,
+      "-#views": 0.306215648899254
+    },
+    "note": "anchor / radius of the final decoder layer, normalized units; child offset = |mu_k - anchor| / radius"
+  }
+}
+dead child slots (>=99% tokens): []
+{
+  "model": "locusgs_finetune_4v",
+  "definitions": "frozen model; features of COLMAP-valid alive tokens (<=1024 per scene); target = attention-weighted COLMAP centroid of the token's attention-90% patch set; train on the 70 even scenes, test on the 70 odd scenes; errors relative to target depth from the dominant camera",
+  "gpu": "1",
+  "train_tokens": 71268,
+  "test_tokens": 71410,
+  "official_output_gaussian_centre": {
+    "e_depth_rel": {
+      "p50": 0.0225,
+      "p90": 0.2259
+    },
+    "e_3d_rel": {
+      "p50": 0.0267,
+      "p90": 0.229
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.0389,
+      "p90": 0.4267
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.022,
+      "p90": 0.2422
+    }
+  },
+  "locusgs_anchor": {
+    "e_depth_rel": {
+      "p50": 0.0413,
+      "p90": 0.3613
+    },
+    "e_3d_rel": {
+      "p50": 0.0586,
+      "p90": 0.46
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1374,
+      "p90": 0.908
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0252,
+      "p90": 0.2447
+    }
+  },
+  "linear_ridge_h": {
+    "lambda": 1000.0,
+    "e_depth_rel": {
+      "p50": 0.2207,
+      "p90": 0.7418
+    },
+    "e_3d_rel": {
+      "p50": 0.4118,
+      "p90": 1.157
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.2795,
+      "p90": 1.1366
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1778,
+      "p90": 0.5317
+    }
+  },
+  "mlp_h": {
+    "e_depth_rel": {
+      "p50": 0.0826,
+      "p90": 0.2951
+    },
+    "e_3d_rel": {
+      "p50": 0.1428,
+      "p90": 0.4023
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1175,
+      "p90": 0.4299
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0703,
+      "p90": 0.245
+    },
+    "train_fit": {
+      "e_depth_rel": {
+        "p50": 0.0144,
+        "p90": 0.0683
+      },
+      "e_3d_rel": {
+        "p50": 0.0291,
+        "p90": 0.0932
+      },
+      "e_depth_rel_1view": {
+        "p50": 0.0165,
+        "p90": 0.0816
+      },
+      "e_depth_rel_4plus_views": {
+        "p50": 0.0109,
+        "p90": 0.0554
+      }
+    }
+  }
+}
+[12:24:40] done locusgs_finetune_4v

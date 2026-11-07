@@ -1,0 +1,700 @@
+=== Started: 2026-10-27T19:04:33+08:00; git=11bd347c72c703fe864886afe43fb92d56a6428b
+Train GPUs=0,1,2,3,4,5,6,7 (8 GPUs); Command: CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch --multi_gpu --num_processes 8 --num_machines 1 --mixed_precision no --dynamo_backend no --main_process_port 29813 -m tokengs.train sft_scannetpp_readout_rgb_only --workspace workspace_scannetpp/sft_readout_rgb_only --resume checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 921, in <module>
+    main()
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 792, in main
+    verify_idle_gpus()
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 750, in verify_idle_gpus
+    raise RuntimeError(
+RuntimeError: GPU 6 (GPU-405bf148-2c1b-83b0-bab3-649cd0658693) is not idle: memory_used=349 MiB (limit 100.0 MiB), utilization=1%, memory_free=72483 MiB (need >= 32768), other_pids=[]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 921, in <module>
+    main()
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 792, in main
+    verify_idle_gpus()
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 750, in verify_idle_gpus
+    raise RuntimeError(
+RuntimeError: GPU 6 (GPU-405bf148-2c1b-83b0-bab3-649cd0658693) is not idle: memory_used=403 MiB (limit 100.0 MiB), utilization=1%, memory_free=72429 MiB (need >= 32768), other_pids=[]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 921, in <module>
+    main()
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 792, in main
+    verify_idle_gpus()
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 750, in verify_idle_gpus
+    raise RuntimeError(
+RuntimeError: GPU 6 (GPU-405bf148-2c1b-83b0-bab3-649cd0658693) is not idle: memory_used=403 MiB (limit 100.0 MiB), utilization=1%, memory_free=72429 MiB (need >= 32768), other_pids=[]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 921, in <module>
+    main()
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 792, in main
+    verify_idle_gpus()
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 750, in verify_idle_gpus
+    raise RuntimeError(
+RuntimeError: GPU 6 (GPU-405bf148-2c1b-83b0-bab3-649cd0658693) is not idle: memory_used=403 MiB (limit 100.0 MiB), utilization=1%, memory_free=72429 MiB (need >= 32768), other_pids=[]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 921, in <module>
+    main()
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 792, in main
+    verify_idle_gpus()
+  File "/home/jms/xveyan/4DGS/TokenGS/tokengs/train.py", line 750, in verify_idle_gpus
+    raise RuntimeError(
+RuntimeError: GPU 6 (GPU-405bf148-2c1b-83b0-bab3-649cd0658693) is not idle: memory_used=403 MiB (limit 100.0 MiB), utilization=1%, memory_free=72429 MiB (need >= 32768), other_pids=[]
+W1027 19:04:59.552000 64197 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 64236 closing signal SIGTERM
+W1027 19:04:59.553000 64197 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 64238 closing signal SIGTERM
+W1027 19:04:59.556000 64197 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 64241 closing signal SIGTERM
+E1027 19:04:59.971000 64197 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 64235) of binary: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python3.11
+Traceback (most recent call last):
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/accelerate", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/accelerate/commands/launch.py", line 1048, in launch_command
+    multi_gpu_launcher(args)
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/accelerate/commands/launch.py", line 702, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+tokengs.train FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-10-27_19:04:59
+  host      : iZwz9foxpfyzf7f1y60xxwZ
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 64237)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-10-27_19:04:59
+  host      : iZwz9foxpfyzf7f1y60xxwZ
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 64239)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-10-27_19:04:59
+  host      : iZwz9foxpfyzf7f1y60xxwZ
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 64240)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2026-10-27_19:04:59
+  host      : iZwz9foxpfyzf7f1y60xxwZ
+  rank      : 7 (local_rank: 7)
+  exitcode  : 1 (pid: 64242)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-27_19:04:59
+  host      : iZwz9foxpfyzf7f1y60xxwZ
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 64235)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Exit code: 1; Finished: 2026-10-27T19:05:00+08:00
+=== Started: 2026-11-02T10:42:10+08:00; git=11bd347c72c703fe864886afe43fb92d56a6428b
+Train GPUs=0,1,2,3,4,5,6,7 (8 GPUs); Command: CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch --multi_gpu --num_processes 8 --num_machines 1 --mixed_precision no --dynamo_backend no --main_process_port 29895 -m tokengs.train sft_scannetpp_readout_rgb_only --workspace workspace_scannetpp/sft_readout_rgb_only --resume checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors
+Options(evaluating=False, workspace='workspace_scannetpp/sft_readout_rgb_only', resume='checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors', model_type='tokengs', seed=42, use_wandb=False, experiment_name='sft_readout_rgb_only', out_dir='outputs', project_name='TokenGS', img_size=(256, 448), patch_size=8, dec_patch_size=8, enc_depth=12, dec_depth=1, enc_embed_dim=1024, enc_num_heads=16, mlp_ratio=4, clip_head_readout_std=0.002, clip_head_z_init=0.1, dec_init_values=0.01, bg_color='grey', gaussian_scale_cap=0.075, opacity_bias=2.0, gaussian_z_offset=0.0, num_gs_tokens=4096, token_dim=1024, gs_token_std=0.02, num_dynamic_gs_tokens=0, init_dynamic_tokens_from_static=False, init_tokens_from_existing=False, init_latents_from_existing=False, load_lidar_pc=False, lidar_sft_mode='scene_latent_probe', sft_unfreeze_latent_tail=False, sft_unfreeze_readout=True, sft_readout_head_lr_scale=0.1, render_geo_warmup_epochs=0.0, val_depth_metric=True, val_depth_cache_path='/home/jms/xveyan/4DGS/TokenGS/workspace_scannetpp/val_depth_cache/scannetpp_val_scaled_0.3_wdefault.pt', val_depth_cache_build=False, use_render_geo_supervision=False, lambda_render_depth=0.0, lambda_render_alpha=0.0, lambda_render_thickness=0.0, lambda_render_normal=0.0, data_mode=(('scannetpp_scaled_0.3', 4),), num_views=10, num_input_views=6, znear=0.025, zfar=125.0, camera_normalization_method='mean_cam', camera_scale_method='constant', pointmap_trim_lo=0.0, pointmap_trim_hi=1.0, num_workers=4, dataset_kwargs=None, validation_data_mode='scannetpp_val_scaled_0.3', validation_dataset_kwargs=None, validation_batch_size=1, train_read_error_policy='retry', eval_read_error_policy='fail_fast', train_read_max_retries=8, batch_size=1, gradient_accumulation_steps=2, num_epochs=10, max_iters_per_epoch=1000000, lr=4e-05, pct_start_steps=200, final_div_factor=1000.0, gradient_clip=1.0, mixed_precision='no', deferred_bp=False, use_input_supervision=True, mean_of_grads='none', mean_of_grads_scene_chunk_size=1, mean_of_grads_view_chunk_size=None, rgb_loss_type='l1', lambda_rgb=0.8, lambda_lpips=0.0, lambda_mask=0.0, lambda_ssim=0.2, lambda_visibility=1.0, visibility_distance_threshold=1.0, lambda_opacity=0.0, lambda_dyn_aux=0.0, lambda_dyn_aux_warmup_steps=0, lambda_dyn_aux_decay_steps=0, lambda_dyn_aux_min=0.0, use_geo_losses=False, lambda_geo_sw=0.01, lambda_geo_packing=0.01, lambda_geo_inter=0.01, geo_k_neighbors=4, geo_target_distance=2.0, geo_num_sw_directions=8, geo_mass_weighting='opacity_area', geo_inter_form='log_smooth_l1', print_freq=10, log_image_freq=100, eval_n_media_dumps=0, strict_checkpoint_loading=True, use_ttt_for_eval=False, ttt_mode='token-tuning', ttt_n_steps=50, ttt_lr=0.0001, time_embedding=False, time_embedding_dim=2, use_interp_target=False, use_multiscale_encoder=True, multiscale_encoder_layers=(5, 7, 9, 11), use_latent_bottleneck=True, num_latents=4096, latent_cross_attn_depth=12, random_reflect=True)
+[INFO] Config saved to config_save_path='workspace_scannetpp/sft_readout_rgb_only/config.yaml'
+[TokenGS-SFT] group=readout: trainable=21.91M params, frozen=340.78M params
+Loaded scannetpp_scaled_0.3, train size: 3412, loading took 11.334166526794434 seconds
+Loaded explicit validation scannetpp_val_scaled_0.3, size: 50
+[eval] epoch: -1 psnr: 30.5052 depth_absrel: 0.1748 unique_scenes: 50
+[INFO] Setting RNG epoch to 0
+[INFO] 0/426 mem: 10.33/71.12G lr: 0.0000016000 loss: 0.009639 speed: 5.94 it/s
+[INFO] 10/426 mem: 10.73/71.12G lr: 0.0000016598 loss: 0.018894 speed: 1.31 it/s
+[INFO] 20/426 mem: 10.73/71.12G lr: 0.0000018388 loss: 0.015488 speed: 1.34 it/s
+[INFO] 30/426 mem: 10.73/71.12G lr: 0.0000021358 loss: 0.014053 speed: 1.34 it/s
+[INFO] 40/426 mem: 10.73/71.12G lr: 0.0000025491 loss: 0.011787 speed: 1.34 it/s
+[INFO] 50/426 mem: 10.73/71.12G lr: 0.0000030760 loss: 0.013756 speed: 1.33 it/s
+[INFO] 60/426 mem: 10.73/71.12G lr: 0.0000037134 loss: 0.014954 speed: 1.33 it/s
+[INFO] 70/426 mem: 10.73/71.12G lr: 0.0000044571 loss: 0.008211 speed: 1.32 it/s
+[INFO] 80/426 mem: 10.73/71.12G lr: 0.0000053026 loss: 0.056445 speed: 1.32 it/s
+[INFO] 90/426 mem: 10.73/71.12G lr: 0.0000062446 loss: 0.015545 speed: 1.31 it/s
+[INFO] 100/426 mem: 10.73/71.12G lr: 0.0000072772 loss: 0.010147 speed: 1.31 it/s
+[INFO] 110/426 mem: 10.73/71.12G lr: 0.0000083941 loss: 0.013975 speed: 1.31 it/s
+[INFO] 120/426 mem: 10.73/71.12G lr: 0.0000095882 loss: 0.011121 speed: 1.31 it/s
+[INFO] 130/426 mem: 10.73/71.12G lr: 0.0000108522 loss: 0.017188 speed: 1.31 it/s
+[INFO] 140/426 mem: 10.73/71.12G lr: 0.0000121780 loss: 0.010996 speed: 1.30 it/s
+[INFO] 150/426 mem: 10.73/71.12G lr: 0.0000135576 loss: 0.025031 speed: 1.31 it/s
+[INFO] 160/426 mem: 10.73/71.12G lr: 0.0000149823 loss: 0.008301 speed: 1.30 it/s
+[INFO] 170/426 mem: 10.73/71.12G lr: 0.0000164432 loss: 0.023618 speed: 1.30 it/s
+[INFO] 180/426 mem: 10.73/71.12G lr: 0.0000179313 loss: 0.013569 speed: 1.30 it/s
+[INFO] 190/426 mem: 10.73/71.12G lr: 0.0000194372 loss: 0.015599 speed: 1.30 it/s
+[INFO] 200/426 mem: 10.73/71.12G lr: 0.0000209516 loss: 0.011742 speed: 1.30 it/s
+[INFO] 210/426 mem: 10.73/71.12G lr: 0.0000224650 loss: 0.016080 speed: 1.30 it/s
+[INFO] 220/426 mem: 10.73/71.12G lr: 0.0000239681 loss: 0.009325 speed: 1.30 it/s
+[INFO] 230/426 mem: 10.73/71.12G lr: 0.0000254514 loss: 0.015574 speed: 1.31 it/s
+[INFO] 240/426 mem: 10.73/71.12G lr: 0.0000269058 loss: 0.014924 speed: 1.31 it/s
+[INFO] 250/426 mem: 10.73/71.12G lr: 0.0000283222 loss: 0.019553 speed: 1.30 it/s
+[INFO] 260/426 mem: 10.73/71.12G lr: 0.0000296917 loss: 0.070792 speed: 1.30 it/s
+[INFO] 270/426 mem: 10.73/71.12G lr: 0.0000310058 loss: 0.012156 speed: 1.30 it/s
+[INFO] 280/426 mem: 10.73/71.12G lr: 0.0000322564 loss: 0.016930 speed: 1.30 it/s
+[INFO] 290/426 mem: 10.73/71.12G lr: 0.0000334357 loss: 0.016141 speed: 1.30 it/s
+[INFO] 300/426 mem: 10.73/71.12G lr: 0.0000345362 loss: 0.009862 speed: 1.31 it/s
+[INFO] 310/426 mem: 10.73/71.12G lr: 0.0000355513 loss: 0.009347 speed: 1.30 it/s
+[INFO] 320/426 mem: 10.73/71.12G lr: 0.0000364744 loss: 0.019187 speed: 1.30 it/s
+[INFO] 330/426 mem: 10.73/71.12G lr: 0.0000373000 loss: 0.011946 speed: 1.30 it/s
+[INFO] 340/426 mem: 10.73/71.12G lr: 0.0000380227 loss: 0.018284 speed: 1.31 it/s
+[INFO] 350/426 mem: 10.73/71.12G lr: 0.0000386383 loss: 0.014443 speed: 1.30 it/s
+[INFO] 360/426 mem: 10.73/71.12G lr: 0.0000391427 loss: 0.010339 speed: 1.30 it/s
+[INFO] 370/426 mem: 10.73/71.12G lr: 0.0000395330 loss: 0.036145 speed: 1.30 it/s
+[INFO] 380/426 mem: 10.73/71.12G lr: 0.0000398065 loss: 0.067644 speed: 1.30 it/s
+[INFO] 390/426 mem: 10.73/71.12G lr: 0.0000399617 loss: 0.013922 speed: 1.30 it/s
+[INFO] 400/426 mem: 10.73/71.12G lr: 0.0000400000 loss: 0.018531 speed: 1.30 it/s
+[INFO] 410/426 mem: 10.73/71.12G lr: 0.0000399990 loss: 0.017090 speed: 1.30 it/s
+[INFO] 420/426 mem: 10.73/71.12G lr: 0.0000399968 loss: 0.012822 speed: 1.30 it/s
+[train] epoch: 0 loss: 0.015782 psnr: 33.4122
+[eval] epoch: 0 psnr: 30.4017 depth_absrel: 0.1747 unique_scenes: 50
+[INFO] Setting RNG epoch to 1
+[INFO] 0/426 mem: 10.49/71.12G lr: 0.0000399948 loss: 0.016158 speed: 5.48 it/s
+[INFO] 10/426 mem: 10.65/71.12G lr: 0.0000399904 loss: 0.020848 speed: 1.32 it/s
+[INFO] 20/426 mem: 10.65/71.12G lr: 0.0000399847 loss: 0.007792 speed: 1.32 it/s
+[INFO] 30/426 mem: 10.65/71.12G lr: 0.0000399777 loss: 0.014040 speed: 1.32 it/s
+[INFO] 40/426 mem: 10.65/71.12G lr: 0.0000399694 loss: 0.008995 speed: 1.32 it/s
+[INFO] 50/426 mem: 10.65/71.12G lr: 0.0000399597 loss: 0.039333 speed: 1.32 it/s
+[INFO] 60/426 mem: 10.65/71.12G lr: 0.0000399487 loss: 0.019494 speed: 1.31 it/s
+[INFO] 70/426 mem: 10.65/71.12G lr: 0.0000399364 loss: 0.011897 speed: 1.31 it/s
+[INFO] 80/426 mem: 10.65/71.12G lr: 0.0000399228 loss: 0.006881 speed: 1.31 it/s
+[INFO] 90/426 mem: 10.65/71.12G lr: 0.0000399078 loss: 0.013440 speed: 1.31 it/s
+[INFO] 100/426 mem: 10.65/71.12G lr: 0.0000398916 loss: 0.022239 speed: 1.31 it/s
+[INFO] 110/426 mem: 10.65/71.12G lr: 0.0000398740 loss: 0.008332 speed: 1.31 it/s
+[INFO] 120/426 mem: 10.65/71.12G lr: 0.0000398551 loss: 0.015817 speed: 1.31 it/s
+[INFO] 130/426 mem: 10.65/71.12G lr: 0.0000398349 loss: 0.006449 speed: 1.31 it/s
+[INFO] 140/426 mem: 10.65/71.12G lr: 0.0000398133 loss: 0.007710 speed: 1.31 it/s
+[INFO] 150/426 mem: 10.65/71.12G lr: 0.0000397905 loss: 0.011342 speed: 1.31 it/s
+[INFO] 160/426 mem: 10.65/71.12G lr: 0.0000397663 loss: 0.008687 speed: 1.31 it/s
+[INFO] 170/426 mem: 10.65/71.12G lr: 0.0000397409 loss: 0.035311 speed: 1.31 it/s
+[INFO] 180/426 mem: 10.65/71.12G lr: 0.0000397141 loss: 0.013639 speed: 1.31 it/s
+[INFO] 190/426 mem: 10.65/71.12G lr: 0.0000396860 loss: 0.014279 speed: 1.30 it/s
+[INFO] 200/426 mem: 10.65/71.12G lr: 0.0000396567 loss: 0.005712 speed: 1.30 it/s
+[INFO] 210/426 mem: 10.65/71.12G lr: 0.0000396260 loss: 0.018188 speed: 1.31 it/s
+[INFO] 220/426 mem: 10.65/71.12G lr: 0.0000395940 loss: 0.008224 speed: 1.30 it/s
+[INFO] 230/426 mem: 10.65/71.12G lr: 0.0000395607 loss: 0.015623 speed: 1.30 it/s
+[INFO] 240/426 mem: 10.65/71.12G lr: 0.0000395261 loss: 0.006088 speed: 1.30 it/s
+[INFO] 250/426 mem: 10.65/71.12G lr: 0.0000394903 loss: 0.037124 speed: 1.31 it/s
+[INFO] 260/426 mem: 10.65/71.12G lr: 0.0000394531 loss: 0.008632 speed: 1.30 it/s
+[INFO] 270/426 mem: 10.65/71.12G lr: 0.0000394147 loss: 0.011550 speed: 1.30 it/s
+[INFO] 280/426 mem: 10.65/71.12G lr: 0.0000393749 loss: 0.010220 speed: 1.30 it/s
+[INFO] 290/426 mem: 10.65/71.12G lr: 0.0000393339 loss: 0.019219 speed: 1.31 it/s
+[INFO] 300/426 mem: 10.65/71.12G lr: 0.0000392916 loss: 0.013376 speed: 1.30 it/s
+[INFO] 310/426 mem: 10.65/71.12G lr: 0.0000392480 loss: 0.020230 speed: 1.31 it/s
+[INFO] 320/426 mem: 10.65/71.12G lr: 0.0000392032 loss: 0.009672 speed: 1.31 it/s
+[INFO] 330/426 mem: 10.65/71.12G lr: 0.0000391571 loss: 0.016752 speed: 1.30 it/s
+[INFO] 340/426 mem: 10.65/71.12G lr: 0.0000391097 loss: 0.016330 speed: 1.31 it/s
+[INFO] 350/426 mem: 10.65/71.12G lr: 0.0000390610 loss: 0.007993 speed: 1.30 it/s
+[INFO] 360/426 mem: 10.65/71.12G lr: 0.0000390111 loss: 0.014584 speed: 1.30 it/s
+[INFO] 370/426 mem: 10.65/71.12G lr: 0.0000389599 loss: 0.010185 speed: 1.30 it/s
+[INFO] 380/426 mem: 10.65/71.12G lr: 0.0000389075 loss: 0.007815 speed: 1.30 it/s
+[INFO] 390/426 mem: 10.65/71.12G lr: 0.0000388538 loss: 0.025557 speed: 1.31 it/s
+[INFO] 400/426 mem: 10.65/71.12G lr: 0.0000387988 loss: 0.009395 speed: 1.30 it/s
+[INFO] 410/426 mem: 10.65/71.12G lr: 0.0000387427 loss: 0.014701 speed: 1.30 it/s
+[INFO] 420/426 mem: 10.65/71.12G lr: 0.0000386852 loss: 0.014364 speed: 1.30 it/s
+[train] epoch: 1 loss: 0.015928 psnr: 33.1390
+[eval] epoch: 1 psnr: 30.4718 depth_absrel: 0.1746 unique_scenes: 50
+[INFO] Setting RNG epoch to 2
+[INFO] 0/426 mem: 10.47/71.12G lr: 0.0000386502 loss: 0.025350 speed: 5.34 it/s
+[INFO] 10/426 mem: 10.63/71.12G lr: 0.0000385908 loss: 0.013073 speed: 1.31 it/s
+[INFO] 20/426 mem: 10.63/71.12G lr: 0.0000385302 loss: 0.022466 speed: 1.32 it/s
+[INFO] 30/426 mem: 10.63/71.12G lr: 0.0000384683 loss: 0.011892 speed: 1.32 it/s
+[INFO] 40/426 mem: 10.63/71.12G lr: 0.0000384052 loss: 0.009426 speed: 1.32 it/s
+[INFO] 50/426 mem: 10.63/71.12G lr: 0.0000383409 loss: 0.024102 speed: 1.31 it/s
+[INFO] 60/426 mem: 10.63/71.12G lr: 0.0000382754 loss: 0.016621 speed: 1.31 it/s
+[INFO] 70/426 mem: 10.63/71.12G lr: 0.0000382087 loss: 0.018645 speed: 1.31 it/s
+[INFO] 80/426 mem: 10.63/71.12G lr: 0.0000381407 loss: 0.010601 speed: 1.31 it/s
+[INFO] 90/426 mem: 10.63/71.12G lr: 0.0000380716 loss: 0.008505 speed: 1.31 it/s
+[INFO] 100/426 mem: 10.63/71.12G lr: 0.0000380013 loss: 0.006059 speed: 1.31 it/s
+[INFO] 110/426 mem: 10.63/71.12G lr: 0.0000379297 loss: 0.037090 speed: 1.31 it/s
+[INFO] 120/426 mem: 10.63/71.12G lr: 0.0000378570 loss: 0.004580 speed: 1.31 it/s
+[INFO] 130/426 mem: 10.63/71.12G lr: 0.0000377831 loss: 0.017453 speed: 1.31 it/s
+[INFO] 140/426 mem: 10.63/71.12G lr: 0.0000377080 loss: 0.011642 speed: 1.31 it/s
+[INFO] 150/426 mem: 10.63/71.12G lr: 0.0000376318 loss: 0.018551 speed: 1.31 it/s
+[INFO] 160/426 mem: 10.63/71.12G lr: 0.0000375544 loss: 0.006805 speed: 1.31 it/s
+[INFO] 170/426 mem: 10.63/71.12G lr: 0.0000374758 loss: 0.024896 speed: 1.31 it/s
+[INFO] 180/426 mem: 10.63/71.12G lr: 0.0000373961 loss: 0.013195 speed: 1.30 it/s
+[INFO] 190/426 mem: 10.63/71.12G lr: 0.0000373152 loss: 0.012425 speed: 1.30 it/s
+[INFO] 200/426 mem: 10.63/71.12G lr: 0.0000372332 loss: 0.010258 speed: 1.30 it/s
+[INFO] 210/426 mem: 10.63/71.12G lr: 0.0000371500 loss: 0.011207 speed: 1.30 it/s
+[INFO] 220/426 mem: 10.63/71.12G lr: 0.0000370657 loss: 0.021183 speed: 1.30 it/s
+[INFO] 230/426 mem: 10.63/71.12G lr: 0.0000369802 loss: 0.006141 speed: 1.30 it/s
+[INFO] 240/426 mem: 10.63/71.12G lr: 0.0000368937 loss: 0.010257 speed: 1.30 it/s
+[INFO] 250/426 mem: 10.63/71.12G lr: 0.0000368060 loss: 0.010659 speed: 1.30 it/s
+[INFO] 260/426 mem: 10.63/71.12G lr: 0.0000367172 loss: 0.007161 speed: 1.30 it/s
+[INFO] 270/426 mem: 10.63/71.12G lr: 0.0000366273 loss: 0.006322 speed: 1.30 it/s
+[INFO] 280/426 mem: 10.63/71.12G lr: 0.0000365363 loss: 0.012174 speed: 1.30 it/s
+[INFO] 290/426 mem: 10.63/71.12G lr: 0.0000364442 loss: 0.014440 speed: 1.31 it/s
+[INFO] 300/426 mem: 10.63/71.12G lr: 0.0000363510 loss: 0.009977 speed: 1.31 it/s
+[INFO] 310/426 mem: 10.63/71.12G lr: 0.0000362567 loss: 0.021925 speed: 1.30 it/s
+[INFO] 320/426 mem: 10.63/71.12G lr: 0.0000361613 loss: 0.007348 speed: 1.30 it/s
+[INFO] 330/426 mem: 10.63/71.12G lr: 0.0000360649 loss: 0.007979 speed: 1.30 it/s
+[INFO] 340/426 mem: 10.63/71.12G lr: 0.0000359674 loss: 0.018061 speed: 1.30 it/s
+[INFO] 350/426 mem: 10.63/71.12G lr: 0.0000358689 loss: 0.014124 speed: 1.30 it/s
+[INFO] 360/426 mem: 10.63/71.12G lr: 0.0000357693 loss: 0.009449 speed: 1.30 it/s
+[INFO] 370/426 mem: 10.63/71.12G lr: 0.0000356686 loss: 0.010407 speed: 1.30 it/s
+[INFO] 380/426 mem: 10.63/71.12G lr: 0.0000355670 loss: 0.008651 speed: 1.31 it/s
+[INFO] 390/426 mem: 10.63/71.12G lr: 0.0000354643 loss: 0.012496 speed: 1.31 it/s
+[INFO] 400/426 mem: 10.63/71.12G lr: 0.0000353605 loss: 0.020721 speed: 1.30 it/s
+[INFO] 410/426 mem: 10.63/71.12G lr: 0.0000352558 loss: 0.010975 speed: 1.30 it/s
+[INFO] 420/426 mem: 10.63/71.12G lr: 0.0000351500 loss: 0.013153 speed: 1.30 it/s
+[train] epoch: 2 loss: 0.015386 psnr: 33.5408
+[eval] epoch: 2 psnr: 30.6202 depth_absrel: 0.1742 unique_scenes: 50
+[INFO] Setting RNG epoch to 3
+[INFO] 0/426 mem: 10.49/71.12G lr: 0.0000350861 loss: 0.018304 speed: 5.67 it/s
+[INFO] 10/426 mem: 10.65/71.12G lr: 0.0000349787 loss: 0.006754 speed: 1.31 it/s
+[INFO] 20/426 mem: 10.65/71.12G lr: 0.0000348704 loss: 0.012032 speed: 1.32 it/s
+[INFO] 30/426 mem: 10.65/71.12G lr: 0.0000347610 loss: 0.015328 speed: 1.32 it/s
+[INFO] 40/426 mem: 10.65/71.12G lr: 0.0000346507 loss: 0.013800 speed: 1.32 it/s
+[INFO] 50/426 mem: 10.65/71.12G lr: 0.0000345394 loss: 0.009630 speed: 1.32 it/s
+[INFO] 60/426 mem: 10.65/71.12G lr: 0.0000344272 loss: 0.018855 speed: 1.32 it/s
+[INFO] 70/426 mem: 10.65/71.12G lr: 0.0000343140 loss: 0.012450 speed: 1.31 it/s
+[INFO] 80/426 mem: 10.65/71.12G lr: 0.0000341998 loss: 0.015693 speed: 1.31 it/s
+[INFO] 90/426 mem: 10.65/71.12G lr: 0.0000340847 loss: 0.016642 speed: 1.31 it/s
+[INFO] 100/426 mem: 10.65/71.12G lr: 0.0000339687 loss: 0.010374 speed: 1.31 it/s
+[INFO] 110/426 mem: 10.65/71.12G lr: 0.0000338517 loss: 0.011412 speed: 1.31 it/s
+[INFO] 120/426 mem: 10.65/71.12G lr: 0.0000337339 loss: 0.004705 speed: 1.31 it/s
+[INFO] 130/426 mem: 10.65/71.12G lr: 0.0000336151 loss: 0.012922 speed: 1.31 it/s
+[INFO] 140/426 mem: 10.65/71.12G lr: 0.0000334954 loss: 0.005568 speed: 1.31 it/s
+[INFO] 150/426 mem: 10.65/71.12G lr: 0.0000333748 loss: 0.009189 speed: 1.31 it/s
+[INFO] 160/426 mem: 10.65/71.12G lr: 0.0000332533 loss: 0.009703 speed: 1.31 it/s
+[INFO] 170/426 mem: 10.65/71.12G lr: 0.0000331310 loss: 0.006663 speed: 1.31 it/s
+[INFO] 180/426 mem: 10.65/71.12G lr: 0.0000330078 loss: 0.011611 speed: 1.31 it/s
+[INFO] 190/426 mem: 10.65/71.12G lr: 0.0000328837 loss: 0.052202 speed: 1.30 it/s
+[INFO] 200/426 mem: 10.65/71.12G lr: 0.0000327588 loss: 0.031663 speed: 1.30 it/s
+[INFO] 210/426 mem: 10.65/71.12G lr: 0.0000326330 loss: 0.009747 speed: 1.30 it/s
+[INFO] 220/426 mem: 10.65/71.12G lr: 0.0000325064 loss: 0.049296 speed: 1.30 it/s
+[INFO] 230/426 mem: 10.65/71.12G lr: 0.0000323790 loss: 0.056949 speed: 1.30 it/s
+[INFO] 240/426 mem: 10.65/71.12G lr: 0.0000322507 loss: 0.008607 speed: 1.31 it/s
+[INFO] 250/426 mem: 10.65/71.12G lr: 0.0000321217 loss: 0.013278 speed: 1.30 it/s
+[INFO] 260/426 mem: 10.65/71.12G lr: 0.0000319918 loss: 0.007243 speed: 1.31 it/s
+[INFO] 270/426 mem: 10.65/71.12G lr: 0.0000318611 loss: 0.009458 speed: 1.30 it/s
+[INFO] 280/426 mem: 10.65/71.12G lr: 0.0000317297 loss: 0.025670 speed: 1.31 it/s
+[INFO] 290/426 mem: 10.65/71.12G lr: 0.0000315975 loss: 0.020231 speed: 1.30 it/s
+[INFO] 300/426 mem: 10.65/71.12G lr: 0.0000314645 loss: 0.010590 speed: 1.30 it/s
+[INFO] 310/426 mem: 10.65/71.12G lr: 0.0000313307 loss: 0.018550 speed: 1.30 it/s
+[INFO] 320/426 mem: 10.65/71.12G lr: 0.0000311962 loss: 0.010415 speed: 1.30 it/s
+[INFO] 330/426 mem: 10.65/71.12G lr: 0.0000310610 loss: 0.011044 speed: 1.31 it/s
+[INFO] 340/426 mem: 10.65/71.12G lr: 0.0000309250 loss: 0.012659 speed: 1.30 it/s
+[INFO] 350/426 mem: 10.65/71.12G lr: 0.0000307883 loss: 0.015506 speed: 1.30 it/s
+[INFO] 360/426 mem: 10.65/71.12G lr: 0.0000306509 loss: 0.020785 speed: 1.30 it/s
+[INFO] 370/426 mem: 10.65/71.12G lr: 0.0000305127 loss: 0.014761 speed: 1.30 it/s
+[INFO] 380/426 mem: 10.65/71.12G lr: 0.0000303739 loss: 0.006993 speed: 1.30 it/s
+[INFO] 390/426 mem: 10.65/71.12G lr: 0.0000302344 loss: 0.011992 speed: 1.30 it/s
+[INFO] 400/426 mem: 10.65/71.12G lr: 0.0000300942 loss: 0.033608 speed: 1.30 it/s
+[INFO] 410/426 mem: 10.65/71.12G lr: 0.0000299534 loss: 0.005899 speed: 1.30 it/s
+[INFO] 420/426 mem: 10.65/71.12G lr: 0.0000298119 loss: 0.010209 speed: 1.31 it/s
+[train] epoch: 3 loss: 0.015537 psnr: 33.4454
+[eval] epoch: 3 psnr: 30.6471 depth_absrel: 0.1750 unique_scenes: 50
+[INFO] Setting RNG epoch to 4
+[INFO] 0/426 mem: 10.47/71.12G lr: 0.0000297266 loss: 0.013577 speed: 5.81 it/s
+[INFO] 10/426 mem: 10.63/71.12G lr: 0.0000295841 loss: 0.010496 speed: 1.28 it/s
+[INFO] 20/426 mem: 10.63/71.12G lr: 0.0000294409 loss: 0.024137 speed: 1.32 it/s
+[INFO] 30/426 mem: 10.63/71.12G lr: 0.0000292971 loss: 0.023282 speed: 1.32 it/s
+[INFO] 40/426 mem: 10.63/71.12G lr: 0.0000291527 loss: 0.014009 speed: 1.32 it/s
+[INFO] 50/426 mem: 10.63/71.12G lr: 0.0000290077 loss: 0.018102 speed: 1.32 it/s
+[INFO] 60/426 mem: 10.63/71.12G lr: 0.0000288620 loss: 0.014031 speed: 1.31 it/s
+[INFO] 70/426 mem: 10.63/71.12G lr: 0.0000287158 loss: 0.006032 speed: 1.31 it/s
+[INFO] 80/426 mem: 10.63/71.12G lr: 0.0000285690 loss: 0.009075 speed: 1.31 it/s
+[INFO] 90/426 mem: 10.63/71.12G lr: 0.0000284217 loss: 0.016656 speed: 1.31 it/s
+[INFO] 100/426 mem: 10.63/71.12G lr: 0.0000282738 loss: 0.012943 speed: 1.31 it/s
+[INFO] 110/426 mem: 10.63/71.12G lr: 0.0000281253 loss: 0.019197 speed: 1.31 it/s
+[INFO] 120/426 mem: 10.63/71.12G lr: 0.0000279763 loss: 0.013590 speed: 1.31 it/s
+[INFO] 130/426 mem: 10.63/71.12G lr: 0.0000278268 loss: 0.018479 speed: 1.31 it/s
+[INFO] 140/426 mem: 10.63/71.12G lr: 0.0000276767 loss: 0.019246 speed: 1.31 it/s
+[INFO] 150/426 mem: 10.63/71.12G lr: 0.0000275262 loss: 0.007478 speed: 1.31 it/s
+[INFO] 160/426 mem: 10.63/71.12G lr: 0.0000273751 loss: 0.023900 speed: 1.31 it/s
+[INFO] 170/426 mem: 10.63/71.12G lr: 0.0000272236 loss: 0.011026 speed: 1.31 it/s
+[INFO] 180/426 mem: 10.63/71.12G lr: 0.0000270715 loss: 0.007192 speed: 1.31 it/s
+[INFO] 190/426 mem: 10.63/71.12G lr: 0.0000269190 loss: 0.009395 speed: 1.31 it/s
+[INFO] 200/426 mem: 10.63/71.12G lr: 0.0000267661 loss: 0.008080 speed: 1.31 it/s
+[INFO] 210/426 mem: 10.63/71.12G lr: 0.0000266127 loss: 0.007718 speed: 1.31 it/s
+[INFO] 220/426 mem: 10.63/71.12G lr: 0.0000264589 loss: 0.009032 speed: 1.30 it/s
+[INFO] 230/426 mem: 10.63/71.12G lr: 0.0000263046 loss: 0.008631 speed: 1.31 it/s
+[INFO] 240/426 mem: 10.63/71.12G lr: 0.0000261499 loss: 0.027699 speed: 1.31 it/s
+[INFO] 250/426 mem: 10.63/71.12G lr: 0.0000259948 loss: 0.008840 speed: 1.30 it/s
+[INFO] 260/426 mem: 10.63/71.12G lr: 0.0000258394 loss: 0.007203 speed: 1.30 it/s
+[INFO] 270/426 mem: 10.63/71.12G lr: 0.0000256835 loss: 0.009124 speed: 1.30 it/s
+[INFO] 280/426 mem: 10.63/71.12G lr: 0.0000255272 loss: 0.009661 speed: 1.30 it/s
+[INFO] 290/426 mem: 10.63/71.12G lr: 0.0000253706 loss: 0.011437 speed: 1.31 it/s
+[INFO] 300/426 mem: 10.63/71.12G lr: 0.0000252137 loss: 0.014883 speed: 1.30 it/s
+[INFO] 310/426 mem: 10.63/71.12G lr: 0.0000250563 loss: 0.023880 speed: 1.30 it/s
+[INFO] 320/426 mem: 10.63/71.12G lr: 0.0000248987 loss: 0.016758 speed: 1.30 it/s
+[INFO] 330/426 mem: 10.63/71.12G lr: 0.0000247407 loss: 0.010774 speed: 1.30 it/s
+[INFO] 340/426 mem: 10.63/71.12G lr: 0.0000245824 loss: 0.015025 speed: 1.31 it/s
+[INFO] 350/426 mem: 10.63/71.12G lr: 0.0000244238 loss: 0.038797 speed: 1.30 it/s
+[INFO] 360/426 mem: 10.63/71.12G lr: 0.0000242649 loss: 0.009690 speed: 1.30 it/s
+[INFO] 370/426 mem: 10.63/71.12G lr: 0.0000241058 loss: 0.009192 speed: 1.30 it/s
+[INFO] 380/426 mem: 10.63/71.12G lr: 0.0000239463 loss: 0.011073 speed: 1.30 it/s
+[INFO] 390/426 mem: 10.63/71.12G lr: 0.0000237866 loss: 0.017091 speed: 1.31 it/s
+[INFO] 400/426 mem: 10.63/71.12G lr: 0.0000236267 loss: 0.061101 speed: 1.30 it/s
+[INFO] 410/426 mem: 10.63/71.12G lr: 0.0000234665 loss: 0.030629 speed: 1.30 it/s
+[INFO] 420/426 mem: 10.63/71.12G lr: 0.0000233061 loss: 0.022610 speed: 1.31 it/s
+[train] epoch: 4 loss: 0.015225 psnr: 33.7190
+[eval] epoch: 4 psnr: 30.6697 depth_absrel: 0.1734 unique_scenes: 50
+[INFO] Setting RNG epoch to 5
+[INFO] 0/426 mem: 10.49/71.12G lr: 0.0000232097 loss: 0.008738 speed: 5.82 it/s
+[INFO] 10/426 mem: 10.89/71.12G lr: 0.0000230490 loss: 0.028433 speed: 1.29 it/s
+[INFO] 20/426 mem: 10.89/71.12G lr: 0.0000228880 loss: 0.015988 speed: 1.32 it/s
+[INFO] 30/426 mem: 10.89/71.12G lr: 0.0000227268 loss: 0.029211 speed: 1.32 it/s
+[INFO] 40/426 mem: 10.89/71.12G lr: 0.0000225655 loss: 0.016783 speed: 1.32 it/s
+[INFO] 50/426 mem: 10.89/71.12G lr: 0.0000224040 loss: 0.015458 speed: 1.31 it/s
+[INFO] 60/426 mem: 10.89/71.12G lr: 0.0000222423 loss: 0.017400 speed: 1.31 it/s
+[INFO] 70/426 mem: 10.89/71.12G lr: 0.0000220805 loss: 0.013671 speed: 1.31 it/s
+[INFO] 80/426 mem: 10.89/71.12G lr: 0.0000219185 loss: 0.018602 speed: 1.31 it/s
+[INFO] 90/426 mem: 10.89/71.12G lr: 0.0000217565 loss: 0.012633 speed: 1.31 it/s
+[INFO] 100/426 mem: 10.89/71.12G lr: 0.0000215943 loss: 0.012731 speed: 1.31 it/s
+[INFO] 110/426 mem: 10.89/71.12G lr: 0.0000214320 loss: 0.018259 speed: 1.31 it/s
+[INFO] 120/426 mem: 10.89/71.12G lr: 0.0000212696 loss: 0.013513 speed: 1.31 it/s
+[INFO] 130/426 mem: 10.89/71.12G lr: 0.0000211071 loss: 0.010775 speed: 1.31 it/s
+[INFO] 140/426 mem: 10.89/71.12G lr: 0.0000209445 loss: 0.011821 speed: 1.31 it/s
+[INFO] 150/426 mem: 10.89/71.12G lr: 0.0000207819 loss: 0.017198 speed: 1.31 it/s
+[INFO] 160/426 mem: 10.89/71.12G lr: 0.0000206192 loss: 0.015269 speed: 1.30 it/s
+[INFO] 170/426 mem: 10.89/71.12G lr: 0.0000204565 loss: 0.009801 speed: 1.30 it/s
+[INFO] 180/426 mem: 10.89/71.12G lr: 0.0000202938 loss: 0.037621 speed: 1.31 it/s
+[INFO] 190/426 mem: 10.89/71.12G lr: 0.0000201310 loss: 0.029808 speed: 1.30 it/s
+[INFO] 200/426 mem: 10.89/71.12G lr: 0.0000199682 loss: 0.009618 speed: 1.30 it/s
+[INFO] 210/426 mem: 10.89/71.12G lr: 0.0000198055 loss: 0.019430 speed: 1.30 it/s
+[INFO] 220/426 mem: 10.89/71.12G lr: 0.0000196427 loss: 0.010727 speed: 1.30 it/s
+[INFO] 230/426 mem: 10.89/71.12G lr: 0.0000194800 loss: 0.010632 speed: 1.31 it/s
+[INFO] 240/426 mem: 10.89/71.12G lr: 0.0000193173 loss: 0.006391 speed: 1.30 it/s
+[INFO] 250/426 mem: 10.89/71.12G lr: 0.0000191546 loss: 0.016095 speed: 1.31 it/s
+[INFO] 260/426 mem: 10.89/71.12G lr: 0.0000189921 loss: 0.020809 speed: 1.31 it/s
+[INFO] 270/426 mem: 10.89/71.12G lr: 0.0000188295 loss: 0.023101 speed: 1.30 it/s
+[INFO] 280/426 mem: 10.89/71.12G lr: 0.0000186671 loss: 0.007604 speed: 1.30 it/s
+[INFO] 290/426 mem: 10.89/71.12G lr: 0.0000185047 loss: 0.026960 speed: 1.30 it/s
+[INFO] 300/426 mem: 10.89/71.12G lr: 0.0000183424 loss: 0.010448 speed: 1.30 it/s
+[INFO] 310/426 mem: 10.89/71.12G lr: 0.0000181803 loss: 0.007826 speed: 1.30 it/s
+[INFO] 320/426 mem: 10.89/71.12G lr: 0.0000180183 loss: 0.008635 speed: 1.31 it/s
+[INFO] 330/426 mem: 10.89/71.12G lr: 0.0000178564 loss: 0.006739 speed: 1.31 it/s
+[INFO] 340/426 mem: 10.89/71.12G lr: 0.0000176946 loss: 0.010930 speed: 1.31 it/s
+[INFO] 350/426 mem: 10.89/71.12G lr: 0.0000175330 loss: 0.020844 speed: 1.31 it/s
+[INFO] 360/426 mem: 10.89/71.12G lr: 0.0000173716 loss: 0.007165 speed: 1.30 it/s
+[INFO] 370/426 mem: 10.89/71.12G lr: 0.0000172103 loss: 0.007965 speed: 1.30 it/s
+[INFO] 380/426 mem: 10.89/71.12G lr: 0.0000170492 loss: 0.009399 speed: 1.31 it/s
+[INFO] 390/426 mem: 10.89/71.12G lr: 0.0000168883 loss: 0.018890 speed: 1.31 it/s
+[INFO] 400/426 mem: 10.89/71.12G lr: 0.0000167276 loss: 0.007643 speed: 1.31 it/s
+[INFO] 410/426 mem: 10.89/71.12G lr: 0.0000165672 loss: 0.009746 speed: 1.31 it/s
+[INFO] 420/426 mem: 10.89/71.12G lr: 0.0000164069 loss: 0.013269 speed: 1.30 it/s
+[train] epoch: 5 loss: 0.015314 psnr: 33.7007
+[eval] epoch: 5 psnr: 30.7113 depth_absrel: 0.1746 unique_scenes: 50
+[INFO] Setting RNG epoch to 6
+[INFO] 0/426 mem: 10.48/71.12G lr: 0.0000163109 loss: 0.011744 speed: 5.91 it/s
+[INFO] 10/426 mem: 10.65/71.12G lr: 0.0000161510 loss: 0.005661 speed: 1.28 it/s
+[INFO] 20/426 mem: 10.65/71.12G lr: 0.0000159915 loss: 0.006234 speed: 1.32 it/s
+[INFO] 30/426 mem: 10.65/71.12G lr: 0.0000158321 loss: 0.013685 speed: 1.32 it/s
+[INFO] 40/426 mem: 10.65/71.12G lr: 0.0000156731 loss: 0.015294 speed: 1.32 it/s
+[INFO] 50/426 mem: 10.65/71.12G lr: 0.0000155143 loss: 0.013633 speed: 1.32 it/s
+[INFO] 60/426 mem: 10.65/71.12G lr: 0.0000153558 loss: 0.020089 speed: 1.32 it/s
+[INFO] 70/426 mem: 10.65/71.12G lr: 0.0000151977 loss: 0.011949 speed: 1.31 it/s
+[INFO] 80/426 mem: 10.65/71.12G lr: 0.0000150398 loss: 0.006891 speed: 1.31 it/s
+[INFO] 90/426 mem: 10.65/71.12G lr: 0.0000148823 loss: 0.031341 speed: 1.31 it/s
+[INFO] 100/426 mem: 10.65/71.12G lr: 0.0000147251 loss: 0.026358 speed: 1.31 it/s
+[INFO] 110/426 mem: 10.65/71.12G lr: 0.0000145683 loss: 0.007470 speed: 1.31 it/s
+[INFO] 120/426 mem: 10.65/71.12G lr: 0.0000144118 loss: 0.010172 speed: 1.31 it/s
+[INFO] 130/426 mem: 10.65/71.12G lr: 0.0000142557 loss: 0.016805 speed: 1.31 it/s
+[INFO] 140/426 mem: 10.65/71.12G lr: 0.0000141000 loss: 0.008129 speed: 1.31 it/s
+[INFO] 150/426 mem: 10.65/71.12G lr: 0.0000139447 loss: 0.009834 speed: 1.31 it/s
+[INFO] 160/426 mem: 10.65/71.12G lr: 0.0000137898 loss: 0.022618 speed: 1.31 it/s
+[INFO] 170/426 mem: 10.65/71.12G lr: 0.0000136352 loss: 0.016161 speed: 1.30 it/s
+[INFO] 180/426 mem: 10.65/71.12G lr: 0.0000134811 loss: 0.013283 speed: 1.31 it/s
+[INFO] 190/426 mem: 10.65/71.12G lr: 0.0000133275 loss: 0.008094 speed: 1.30 it/s
+[INFO] 200/426 mem: 10.65/71.12G lr: 0.0000131743 loss: 0.014566 speed: 1.31 it/s
+[INFO] 210/426 mem: 10.65/71.12G lr: 0.0000130215 loss: 0.011284 speed: 1.30 it/s
+[INFO] 220/426 mem: 10.65/71.12G lr: 0.0000128692 loss: 0.005704 speed: 1.31 it/s
+[INFO] 230/426 mem: 10.65/71.12G lr: 0.0000127174 loss: 0.007616 speed: 1.30 it/s
+[INFO] 240/426 mem: 10.65/71.12G lr: 0.0000125660 loss: 0.007372 speed: 1.30 it/s
+[INFO] 250/426 mem: 10.65/71.12G lr: 0.0000124152 loss: 0.035188 speed: 1.30 it/s
+[INFO] 260/426 mem: 10.65/71.12G lr: 0.0000122648 loss: 0.017324 speed: 1.30 it/s
+[INFO] 270/426 mem: 10.65/71.12G lr: 0.0000121150 loss: 0.006224 speed: 1.30 it/s
+[INFO] 280/426 mem: 10.65/71.12G lr: 0.0000119656 loss: 0.027945 speed: 1.30 it/s
+[INFO] 290/426 mem: 10.65/71.12G lr: 0.0000118169 loss: 0.006593 speed: 1.31 it/s
+[INFO] 300/426 mem: 10.65/71.12G lr: 0.0000116686 loss: 0.036062 speed: 1.31 it/s
+[INFO] 310/426 mem: 10.65/71.12G lr: 0.0000115209 loss: 0.007520 speed: 1.30 it/s
+[INFO] 320/426 mem: 10.65/71.12G lr: 0.0000113738 loss: 0.006409 speed: 1.30 it/s
+[INFO] 330/426 mem: 10.65/71.12G lr: 0.0000112272 loss: 0.006075 speed: 1.30 it/s
+[INFO] 340/426 mem: 10.65/71.12G lr: 0.0000110812 loss: 0.017879 speed: 1.30 it/s
+[INFO] 350/426 mem: 10.65/71.12G lr: 0.0000109359 loss: 0.015988 speed: 1.30 it/s
+[INFO] 360/426 mem: 10.65/71.12G lr: 0.0000107911 loss: 0.014747 speed: 1.31 it/s
+[INFO] 370/426 mem: 10.65/71.12G lr: 0.0000106469 loss: 0.007786 speed: 1.30 it/s
+[INFO] 380/426 mem: 10.65/71.12G lr: 0.0000105033 loss: 0.009399 speed: 1.30 it/s
+[INFO] 390/426 mem: 10.65/71.12G lr: 0.0000103604 loss: 0.019366 speed: 1.30 it/s
+[INFO] 400/426 mem: 10.65/71.12G lr: 0.0000102181 loss: 0.010636 speed: 1.30 it/s
+[INFO] 410/426 mem: 10.65/71.12G lr: 0.0000100765 loss: 0.016650 speed: 1.30 it/s
+[INFO] 420/426 mem: 10.65/71.12G lr: 0.0000099355 loss: 0.014430 speed: 1.31 it/s
+[train] epoch: 6 loss: 0.014908 psnr: 33.8984
+[eval] epoch: 6 psnr: 30.8888 depth_absrel: 0.1744 unique_scenes: 50
+[INFO] Setting RNG epoch to 7
+[INFO] 0/426 mem: 10.48/71.12G lr: 0.0000098512 loss: 0.008638 speed: 5.81 it/s
+[INFO] 10/426 mem: 10.65/71.12G lr: 0.0000097113 loss: 0.016532 speed: 1.30 it/s
+[INFO] 20/426 mem: 10.65/71.12G lr: 0.0000095721 loss: 0.006085 speed: 1.32 it/s
+[INFO] 30/426 mem: 10.65/71.12G lr: 0.0000094335 loss: 0.017162 speed: 1.32 it/s
+[INFO] 40/426 mem: 10.65/71.12G lr: 0.0000092957 loss: 0.012184 speed: 1.32 it/s
+[INFO] 50/426 mem: 10.65/71.12G lr: 0.0000091586 loss: 0.028783 speed: 1.32 it/s
+[INFO] 60/426 mem: 10.65/71.12G lr: 0.0000090221 loss: 0.010232 speed: 1.31 it/s
+[INFO] 70/426 mem: 10.65/71.12G lr: 0.0000088865 loss: 0.021180 speed: 1.31 it/s
+[INFO] 80/426 mem: 10.65/71.12G lr: 0.0000087515 loss: 0.013066 speed: 1.31 it/s
+[INFO] 90/426 mem: 10.65/71.12G lr: 0.0000086173 loss: 0.007757 speed: 1.31 it/s
+[INFO] 100/426 mem: 10.65/71.12G lr: 0.0000084838 loss: 0.034296 speed: 1.31 it/s
+[INFO] 110/426 mem: 10.65/71.12G lr: 0.0000083512 loss: 0.010667 speed: 1.31 it/s
+[INFO] 120/426 mem: 10.65/71.12G lr: 0.0000082192 loss: 0.017046 speed: 1.31 it/s
+[INFO] 130/426 mem: 10.65/71.12G lr: 0.0000080881 loss: 0.011003 speed: 1.31 it/s
+[INFO] 140/426 mem: 10.65/71.12G lr: 0.0000079578 loss: 0.007080 speed: 1.31 it/s
+[INFO] 150/426 mem: 10.65/71.12G lr: 0.0000078282 loss: 0.007378 speed: 1.31 it/s
+[INFO] 160/426 mem: 10.65/71.12G lr: 0.0000076995 loss: 0.013926 speed: 1.31 it/s
+[INFO] 170/426 mem: 10.65/71.12G lr: 0.0000075715 loss: 0.033928 speed: 1.31 it/s
+[INFO] 180/426 mem: 10.65/71.12G lr: 0.0000074444 loss: 0.018288 speed: 1.30 it/s
+[INFO] 190/426 mem: 10.65/71.12G lr: 0.0000073182 loss: 0.009969 speed: 1.30 it/s
+[INFO] 200/426 mem: 10.65/71.12G lr: 0.0000071927 loss: 0.012437 speed: 1.31 it/s
+[INFO] 210/426 mem: 10.65/71.12G lr: 0.0000070681 loss: 0.009687 speed: 1.31 it/s
+[INFO] 220/426 mem: 10.65/71.12G lr: 0.0000069444 loss: 0.018172 speed: 1.30 it/s
+[INFO] 230/426 mem: 10.65/71.12G lr: 0.0000068216 loss: 0.008191 speed: 1.30 it/s
+[INFO] 240/426 mem: 10.65/71.12G lr: 0.0000066996 loss: 0.014196 speed: 1.31 it/s
+[INFO] 250/426 mem: 10.65/71.12G lr: 0.0000065785 loss: 0.024093 speed: 1.31 it/s
+[INFO] 260/426 mem: 10.65/71.12G lr: 0.0000064582 loss: 0.005416 speed: 1.30 it/s
+[INFO] 270/426 mem: 10.65/71.12G lr: 0.0000063389 loss: 0.007017 speed: 1.31 it/s
+[INFO] 280/426 mem: 10.65/71.12G lr: 0.0000062205 loss: 0.005452 speed: 1.30 it/s
+[INFO] 290/426 mem: 10.65/71.12G lr: 0.0000061030 loss: 0.008285 speed: 1.30 it/s
+[INFO] 300/426 mem: 10.65/71.12G lr: 0.0000059864 loss: 0.013244 speed: 1.31 it/s
+[INFO] 310/426 mem: 10.65/71.12G lr: 0.0000058707 loss: 0.012271 speed: 1.30 it/s
+[INFO] 320/426 mem: 10.65/71.12G lr: 0.0000057560 loss: 0.007464 speed: 1.31 it/s
+[INFO] 330/426 mem: 10.65/71.12G lr: 0.0000056422 loss: 0.009863 speed: 1.30 it/s
+[INFO] 340/426 mem: 10.65/71.12G lr: 0.0000055294 loss: 0.012650 speed: 1.31 it/s
+[INFO] 350/426 mem: 10.65/71.12G lr: 0.0000054176 loss: 0.010821 speed: 1.31 it/s
+[INFO] 360/426 mem: 10.65/71.12G lr: 0.0000053067 loss: 0.020489 speed: 1.31 it/s
+[INFO] 370/426 mem: 10.65/71.12G lr: 0.0000051967 loss: 0.011808 speed: 1.30 it/s
+[INFO] 380/426 mem: 10.65/71.12G lr: 0.0000050878 loss: 0.007284 speed: 1.30 it/s
+[INFO] 390/426 mem: 10.65/71.12G lr: 0.0000049798 loss: 0.010133 speed: 1.31 it/s
+[INFO] 400/426 mem: 10.65/71.12G lr: 0.0000048729 loss: 0.019359 speed: 1.30 it/s
+[INFO] 410/426 mem: 10.65/71.12G lr: 0.0000047669 loss: 0.017498 speed: 1.31 it/s
+[INFO] 420/426 mem: 10.65/71.12G lr: 0.0000046619 loss: 0.007621 speed: 1.31 it/s
+[train] epoch: 7 loss: 0.014895 psnr: 33.9765
+[eval] epoch: 7 psnr: 30.9467 depth_absrel: 0.1748 unique_scenes: 50
+[INFO] Setting RNG epoch to 8
+[INFO] 0/426 mem: 10.46/71.12G lr: 0.0000045995 loss: 0.012703 speed: 5.73 it/s
+[INFO] 10/426 mem: 10.63/71.12G lr: 0.0000044961 loss: 0.022239 speed: 1.28 it/s
+[INFO] 20/426 mem: 10.63/71.12G lr: 0.0000043938 loss: 0.008466 speed: 1.32 it/s
+[INFO] 30/426 mem: 10.63/71.12G lr: 0.0000042926 loss: 0.006375 speed: 1.32 it/s
+[INFO] 40/426 mem: 10.63/71.12G lr: 0.0000041923 loss: 0.010254 speed: 1.32 it/s
+[INFO] 50/426 mem: 10.63/71.12G lr: 0.0000040932 loss: 0.012840 speed: 1.32 it/s
+[INFO] 60/426 mem: 10.63/71.12G lr: 0.0000039951 loss: 0.006437 speed: 1.31 it/s
+[INFO] 70/426 mem: 10.63/71.12G lr: 0.0000038980 loss: 0.007629 speed: 1.31 it/s
+[INFO] 80/426 mem: 10.63/71.12G lr: 0.0000038020 loss: 0.005915 speed: 1.31 it/s
+[INFO] 90/426 mem: 10.63/71.12G lr: 0.0000037071 loss: 0.026036 speed: 1.31 it/s
+[INFO] 100/426 mem: 10.63/71.12G lr: 0.0000036132 loss: 0.013851 speed: 1.31 it/s
+[INFO] 110/426 mem: 10.63/71.12G lr: 0.0000035205 loss: 0.015921 speed: 1.31 it/s
+[INFO] 120/426 mem: 10.63/71.12G lr: 0.0000034288 loss: 0.004420 speed: 1.31 it/s
+[INFO] 130/426 mem: 10.63/71.12G lr: 0.0000033382 loss: 0.011918 speed: 1.31 it/s
+[INFO] 140/426 mem: 10.63/71.12G lr: 0.0000032488 loss: 0.027292 speed: 1.31 it/s
+[INFO] 150/426 mem: 10.63/71.12G lr: 0.0000031604 loss: 0.025496 speed: 1.30 it/s
+[INFO] 160/426 mem: 10.63/71.12G lr: 0.0000030732 loss: 0.010534 speed: 1.31 it/s
+[INFO] 170/426 mem: 10.63/71.12G lr: 0.0000029871 loss: 0.009256 speed: 1.31 it/s
+[INFO] 180/426 mem: 10.63/71.12G lr: 0.0000029021 loss: 0.010013 speed: 1.31 it/s
+[INFO] 190/426 mem: 10.63/71.12G lr: 0.0000028182 loss: 0.015675 speed: 1.30 it/s
+[INFO] 200/426 mem: 10.63/71.12G lr: 0.0000027355 loss: 0.021676 speed: 1.31 it/s
+[INFO] 210/426 mem: 10.63/71.12G lr: 0.0000026539 loss: 0.012958 speed: 1.31 it/s
+[INFO] 220/426 mem: 10.63/71.12G lr: 0.0000025735 loss: 0.008545 speed: 1.30 it/s
+[INFO] 230/426 mem: 10.63/71.12G lr: 0.0000024942 loss: 0.009234 speed: 1.31 it/s
+[INFO] 240/426 mem: 10.63/71.12G lr: 0.0000024161 loss: 0.018737 speed: 1.31 it/s
+[INFO] 250/426 mem: 10.63/71.12G lr: 0.0000023392 loss: 0.016960 speed: 1.30 it/s
+[INFO] 260/426 mem: 10.63/71.12G lr: 0.0000022634 loss: 0.008653 speed: 1.31 it/s
+[INFO] 270/426 mem: 10.63/71.12G lr: 0.0000021888 loss: 0.008973 speed: 1.31 it/s
+[INFO] 280/426 mem: 10.96/71.12G lr: 0.0000021154 loss: 0.010861 speed: 1.30 it/s
+[INFO] 290/426 mem: 10.96/71.12G lr: 0.0000020431 loss: 0.026392 speed: 1.30 it/s
+[INFO] 300/426 mem: 10.96/71.12G lr: 0.0000019721 loss: 0.009551 speed: 1.30 it/s
+[INFO] 310/426 mem: 10.96/71.12G lr: 0.0000019022 loss: 0.014956 speed: 1.31 it/s
+[INFO] 320/426 mem: 10.96/71.12G lr: 0.0000018336 loss: 0.021151 speed: 1.30 it/s
+[INFO] 330/426 mem: 10.96/71.12G lr: 0.0000017661 loss: 0.011032 speed: 1.30 it/s
+[INFO] 340/426 mem: 10.96/71.12G lr: 0.0000016999 loss: 0.018849 speed: 1.30 it/s
+[INFO] 350/426 mem: 10.96/71.12G lr: 0.0000016348 loss: 0.011786 speed: 1.30 it/s
+[INFO] 360/426 mem: 10.96/71.12G lr: 0.0000015710 loss: 0.020946 speed: 1.28 it/s
+[INFO] 370/426 mem: 10.96/71.12G lr: 0.0000015084 loss: 0.004893 speed: 1.30 it/s
+[INFO] 380/426 mem: 10.96/71.12G lr: 0.0000014470 loss: 0.008968 speed: 1.31 it/s
+[INFO] 390/426 mem: 10.96/71.12G lr: 0.0000013869 loss: 0.012761 speed: 1.30 it/s
+[INFO] 400/426 mem: 10.96/71.12G lr: 0.0000013280 loss: 0.006670 speed: 1.30 it/s
+[INFO] 410/426 mem: 10.96/71.12G lr: 0.0000012703 loss: 0.011929 speed: 1.30 it/s
+[INFO] 420/426 mem: 10.96/71.12G lr: 0.0000012139 loss: 0.020161 speed: 1.30 it/s
+[train] epoch: 8 loss: 0.014665 psnr: 34.0916
+[eval] epoch: 8 psnr: 30.9670 depth_absrel: 0.1744 unique_scenes: 50
+[INFO] Setting RNG epoch to 9
+[INFO] 0/426 mem: 10.48/71.12G lr: 0.0000011806 loss: 0.014160 speed: 5.84 it/s
+[INFO] 10/426 mem: 10.65/71.12G lr: 0.0000011262 loss: 0.009159 speed: 1.27 it/s
+[INFO] 20/426 mem: 10.65/71.12G lr: 0.0000010730 loss: 0.010816 speed: 1.32 it/s
+[INFO] 30/426 mem: 10.65/71.12G lr: 0.0000010211 loss: 0.026485 speed: 1.32 it/s
+[INFO] 40/426 mem: 10.65/71.12G lr: 0.0000009704 loss: 0.011825 speed: 1.32 it/s
+[INFO] 50/426 mem: 10.65/71.12G lr: 0.0000009210 loss: 0.019625 speed: 1.32 it/s
+[INFO] 60/426 mem: 10.65/71.12G lr: 0.0000008728 loss: 0.011151 speed: 1.31 it/s
+[INFO] 70/426 mem: 10.65/71.12G lr: 0.0000008259 loss: 0.005061 speed: 1.31 it/s
+[INFO] 80/426 mem: 10.65/71.12G lr: 0.0000007803 loss: 0.015206 speed: 1.31 it/s
+[INFO] 90/426 mem: 10.65/71.12G lr: 0.0000007360 loss: 0.063358 speed: 1.31 it/s
+[INFO] 100/426 mem: 10.65/71.12G lr: 0.0000006929 loss: 0.023878 speed: 1.31 it/s
+[INFO] 110/426 mem: 10.65/71.12G lr: 0.0000006511 loss: 0.010272 speed: 1.31 it/s
+[INFO] 120/426 mem: 10.65/71.12G lr: 0.0000006106 loss: 0.027775 speed: 1.31 it/s
+[INFO] 130/426 mem: 10.65/71.12G lr: 0.0000005714 loss: 0.021721 speed: 1.31 it/s
+[INFO] 140/426 mem: 10.65/71.12G lr: 0.0000005335 loss: 0.026029 speed: 1.30 it/s
+[INFO] 150/426 mem: 10.65/71.12G lr: 0.0000004968 loss: 0.006612 speed: 1.30 it/s
+[INFO] 160/426 mem: 10.65/71.12G lr: 0.0000004615 loss: 0.011354 speed: 1.31 it/s
+[INFO] 170/426 mem: 10.65/71.12G lr: 0.0000004274 loss: 0.012671 speed: 1.31 it/s
+[INFO] 180/426 mem: 10.65/71.12G lr: 0.0000003947 loss: 0.006874 speed: 1.30 it/s
+[INFO] 190/426 mem: 10.65/71.12G lr: 0.0000003632 loss: 0.012809 speed: 1.30 it/s
+[INFO] 200/426 mem: 10.65/71.12G lr: 0.0000003330 loss: 0.007021 speed: 1.30 it/s
+[INFO] 210/426 mem: 10.65/71.12G lr: 0.0000003042 loss: 0.006397 speed: 1.30 it/s
+[INFO] 220/426 mem: 10.65/71.12G lr: 0.0000002766 loss: 0.012843 speed: 1.30 it/s
+[INFO] 230/426 mem: 10.65/71.12G lr: 0.0000002504 loss: 0.006921 speed: 1.31 it/s
+[INFO] 240/426 mem: 10.65/71.12G lr: 0.0000002254 loss: 0.011215 speed: 1.30 it/s
+[INFO] 250/426 mem: 10.65/71.12G lr: 0.0000002018 loss: 0.025798 speed: 1.31 it/s
+[INFO] 260/426 mem: 10.65/71.12G lr: 0.0000001795 loss: 0.011105 speed: 1.30 it/s
+[INFO] 270/426 mem: 10.65/71.12G lr: 0.0000001585 loss: 0.015160 speed: 1.30 it/s
+[INFO] 280/426 mem: 10.65/71.12G lr: 0.0000001388 loss: 0.037257 speed: 1.30 it/s
+[INFO] 290/426 mem: 10.65/71.12G lr: 0.0000001204 loss: 0.029479 speed: 1.30 it/s
+[INFO] 300/426 mem: 10.65/71.12G lr: 0.0000001034 loss: 0.008033 speed: 1.30 it/s
+[INFO] 310/426 mem: 10.65/71.12G lr: 0.0000000876 loss: 0.007793 speed: 1.30 it/s
+[INFO] 320/426 mem: 10.65/71.12G lr: 0.0000000732 loss: 0.021681 speed: 1.31 it/s
+[INFO] 330/426 mem: 10.65/71.12G lr: 0.0000000601 loss: 0.010264 speed: 1.31 it/s
+[INFO] 340/426 mem: 10.65/71.12G lr: 0.0000000483 loss: 0.009782 speed: 1.31 it/s
+[INFO] 350/426 mem: 10.65/71.12G lr: 0.0000000379 loss: 0.059459 speed: 1.31 it/s
+[INFO] 360/426 mem: 10.65/71.12G lr: 0.0000000287 loss: 0.011131 speed: 1.31 it/s
+[INFO] 370/426 mem: 10.65/71.12G lr: 0.0000000209 loss: 0.016135 speed: 1.31 it/s
+[INFO] 380/426 mem: 10.65/71.12G lr: 0.0000000144 loss: 0.013569 speed: 1.31 it/s
+[INFO] 390/426 mem: 10.65/71.12G lr: 0.0000000093 loss: 0.012239 speed: 1.30 it/s
+[INFO] 400/426 mem: 10.65/71.12G lr: 0.0000000054 loss: 0.006105 speed: 1.30 it/s
+[INFO] 410/426 mem: 10.65/71.12G lr: 0.0000000029 loss: 0.030470 speed: 1.31 it/s
+[INFO] 420/426 mem: 10.65/71.12G lr: 0.0000000017 loss: 0.009108 speed: 1.31 it/s
+[train] epoch: 9 loss: 0.014595 psnr: 34.2310
+[eval] epoch: 9 psnr: 30.9678 depth_absrel: 0.1745 unique_scenes: 50
+[INFO] Training completed successfully after 10 epochs
+[rank0]:[W1102 11:41:50.371326283 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+Eval GPU=0; Command: CUDA_VISIBLE_DEVICES=0 /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python -u scripts/evaluate_scannetpp.py --output EXP_ScanNetPP/sft_readout_rgb_only --checkpoint EXP_ScanNetPP/sft_readout_rgb_only/model.safetensors --model-type tokengs
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+GPU 0 (GPU-9b68aa16-5309-b90b-1a07-2e2868715a95): 50 scene(s), FP32, no TF32, no point cloud
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[01/50] 7b6477cb95: PSNR=29.6277 SSIM=0.94429 LPIPS=0.14808 AbsRel=0.0750 F@3cm=0.4162
+[02/50] c50d2d1d42: PSNR=24.4692 SSIM=0.87657 LPIPS=0.21553 AbsRel=0.1100 F@3cm=0.2973
+[03/50] cc5237fd77: PSNR=35.4403 SSIM=0.96936 LPIPS=0.08841 AbsRel=0.1485 F@3cm=0.4124
+[04/50] acd95847c5: PSNR=33.9367 SSIM=0.98051 LPIPS=0.06946 AbsRel=0.2108 F@3cm=0.2282
+[05/50] fb5a96b1a2: PSNR=34.8064 SSIM=0.97343 LPIPS=0.10153 AbsRel=0.3138 F@3cm=0.2180
+[06/50] a24f64f7fb: PSNR=35.1050 SSIM=0.97102 LPIPS=0.10439 AbsRel=0.1221 F@3cm=0.4498
+[07/50] 1ada7a0617: PSNR=28.3543 SSIM=0.93135 LPIPS=0.17251 AbsRel=0.1793 F@3cm=0.2422
+[08/50] 5eb31827b7: PSNR=30.2159 SSIM=0.90946 LPIPS=0.26106 AbsRel=0.0495 F@3cm=0.5729
+[09/50] 3e8bba0176: PSNR=29.6027 SSIM=0.93619 LPIPS=0.16316 AbsRel=0.0605 F@3cm=0.3773
+[10/50] 3f15a9266d: PSNR=34.7451 SSIM=0.97206 LPIPS=0.10062 AbsRel=0.1801 F@3cm=0.2501
+[11/50] 21d970d8de: PSNR=22.9032 SSIM=0.85579 LPIPS=0.27918 AbsRel=0.1081 F@3cm=0.2782
+[12/50] 5748ce6f01: PSNR=35.3269 SSIM=0.97734 LPIPS=0.09677 AbsRel=0.1570 F@3cm=0.3324
+[13/50] c4c04e6d6c: PSNR=27.6735 SSIM=0.90175 LPIPS=0.21847 AbsRel=0.1202 F@3cm=0.2957
+[14/50] 7831862f02: PSNR=32.1751 SSIM=0.95155 LPIPS=0.14207 AbsRel=0.0776 F@3cm=0.2816
+[15/50] bde1e479ad: PSNR=26.7687 SSIM=0.90385 LPIPS=0.20793 AbsRel=0.1373 F@3cm=0.2213
+[16/50] 38d58a7a31: PSNR=27.0844 SSIM=0.91814 LPIPS=0.18715 AbsRel=0.1573 F@3cm=0.3206
+[17/50] 5ee7c22ba0: PSNR=37.2700 SSIM=0.98460 LPIPS=0.12991 AbsRel=0.1667 F@3cm=0.2180
+[18/50] f9f95681fd: PSNR=37.8945 SSIM=0.98144 LPIPS=0.08752 AbsRel=0.1882 F@3cm=0.3583
+[19/50] 3864514494: PSNR=27.5896 SSIM=0.90199 LPIPS=0.22274 AbsRel=0.1381 F@3cm=0.3636
+[20/50] 40aec5fffa: PSNR=27.9842 SSIM=0.92982 LPIPS=0.20425 AbsRel=0.2525 F@3cm=0.2744
+[21/50] 13c3e046d7: PSNR=32.6657 SSIM=0.95358 LPIPS=0.17521 AbsRel=0.1378 F@3cm=0.2225
+[22/50] e398684d27: PSNR=24.8844 SSIM=0.88912 LPIPS=0.25724 AbsRel=0.2104 F@3cm=0.1792
+[23/50] a8bf42d646: PSNR=27.7865 SSIM=0.89358 LPIPS=0.23515 AbsRel=0.0977 F@3cm=0.3840
+[24/50] 45b0dac5e3: PSNR=37.1931 SSIM=0.96729 LPIPS=0.11593 AbsRel=0.0465 F@3cm=0.5782
+[25/50] 31a2c91c43: PSNR=35.6170 SSIM=0.97594 LPIPS=0.14423 AbsRel=0.1636 F@3cm=0.2596
+[26/50] e7af285f7d: PSNR=36.2832 SSIM=0.97291 LPIPS=0.12930 AbsRel=0.1379 F@3cm=0.3968
+[27/50] 286b55a2bf: PSNR=31.3545 SSIM=0.95042 LPIPS=0.17945 AbsRel=0.2424 F@3cm=0.2817
+[28/50] 7bc286c1b6: PSNR=31.9230 SSIM=0.94236 LPIPS=0.18912 AbsRel=0.1343 F@3cm=0.3793
+[29/50] f3685d06a9: PSNR=22.6206 SSIM=0.86090 LPIPS=0.38319 AbsRel=0.7239 F@3cm=0.1388
+[30/50] b0a08200c9: PSNR=22.5316 SSIM=0.83032 LPIPS=0.28952 AbsRel=0.6111 F@3cm=0.2277
+[31/50] 825d228aec: PSNR=38.4044 SSIM=0.98099 LPIPS=0.10308 AbsRel=0.1900 F@3cm=0.3511
+[32/50] a980334473: PSNR=39.4993 SSIM=0.98795 LPIPS=0.08324 AbsRel=0.0508 F@3cm=0.5225
+[33/50] f2dc06b1d2: PSNR=39.2144 SSIM=0.98370 LPIPS=0.10444 AbsRel=0.1156 F@3cm=0.3100
+[34/50] 5942004064: PSNR=25.1624 SSIM=0.87659 LPIPS=0.26647 AbsRel=0.3502 F@3cm=0.2081
+[35/50] 25f3b7a318: PSNR=31.6366 SSIM=0.95369 LPIPS=0.10980 AbsRel=0.1634 F@3cm=0.3039
+[36/50] bcd2436daf: PSNR=31.5875 SSIM=0.92714 LPIPS=0.21863 AbsRel=0.1308 F@3cm=0.4485
+[37/50] f3d64c30f8: PSNR=26.6458 SSIM=0.89487 LPIPS=0.22522 AbsRel=0.1276 F@3cm=0.3127
+[38/50] 0d2ee665be: PSNR=21.5120 SSIM=0.81441 LPIPS=0.32647 AbsRel=0.2048 F@3cm=0.2039
+[39/50] 3db0a1c8f3: PSNR=36.8608 SSIM=0.95925 LPIPS=0.15186 AbsRel=0.2261 F@3cm=0.3714
+[40/50] ac48a9b736: PSNR=30.8051 SSIM=0.94875 LPIPS=0.17395 AbsRel=0.1006 F@3cm=0.2554
+[41/50] c5439f4607: PSNR=29.2708 SSIM=0.90612 LPIPS=0.15585 AbsRel=0.0699 F@3cm=0.4701
+[42/50] 578511c8a9: PSNR=28.7013 SSIM=0.93173 LPIPS=0.18194 AbsRel=0.0931 F@3cm=0.3040
+[43/50] d755b3d9d8: PSNR=26.8317 SSIM=0.88572 LPIPS=0.18107 AbsRel=0.2110 F@3cm=0.2620
+[44/50] 99fa5c25e1: PSNR=24.3062 SSIM=0.80923 LPIPS=0.27938 AbsRel=0.1207 F@3cm=0.4480
+[45/50] 09c1414f1b: PSNR=35.6681 SSIM=0.95987 LPIPS=0.12567 AbsRel=0.1404 F@3cm=0.2622
+[46/50] 5f99900f09: PSNR=33.6350 SSIM=0.94378 LPIPS=0.15598 AbsRel=0.0867 F@3cm=0.4078
+[47/50] 9071e139d9: PSNR=35.2161 SSIM=0.97469 LPIPS=0.09714 AbsRel=0.1296 F@3cm=0.3001
+[48/50] 6115eddb86: PSNR=35.9035 SSIM=0.97622 LPIPS=0.14277 AbsRel=0.1358 F@3cm=0.3529
+[49/50] 27dd4da69e: PSNR=21.1993 SSIM=0.77138 LPIPS=0.41172 AbsRel=0.4889 F@3cm=0.1647
+[50/50] c49a8c6cff: PSNR=34.5120 SSIM=0.96872 LPIPS=0.11429 AbsRel=0.1101 F@3cm=0.3508
+{
+  "name": "sft_readout_rgb_only",
+  "psnr": 30.968104274272918,
+  "ssim": 0.9292343603074551,
+  "lpips": 0.1781609507650137,
+  "depth_cov": 0.9990361293524543,
+  "depth_scale_ratio_med": 1.0139155685901642,
+  "depth_absrel": 0.1740937689691782,
+  "depth_rmse_m": 0.33892574473284187,
+  "depth_delta_105": 0.47063537776935843,
+  "depth_delta_110": 0.6240130681870505,
+  "ray_thick_med_m": 0.08175229690968991,
+  "ray_thick_p90_m": 0.2482240482699126,
+  "normal_mean_deg": 40.65254137516022,
+  "normal_med_deg": 37.326271591186526,
+  "normal_lt11_25": 0.120464832149446,
+  "normal_lt30": 0.41273732885718345,
+  "surf_acc_cm": 22.384991705417633,
+  "surf_comp_cm": 10.257962472736835,
+  "surf_prec_3cm": 0.2720767426490784,
+  "surf_rec_3cm": 0.3996944561600685,
+  "surf_fscore_3cm": 0.3213269427382371,
+  "surf_prec_5cm": 0.3872365072369576,
+  "surf_rec_5cm": 0.5304045438766479,
+  "surf_fscore_5cm": 0.44429912519791503,
+  "num_scenes": 50,
+  "num_target_frames": 400,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "window_size": 18,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "geometry_metrics_status": "computed (Open3D raycast + gsplat ray thickness, physical scale)",
+  "geometry_alignment_median_ratio": 1.0005144849419594,
+  "forward_seconds_mean": 0.6874862828105688,
+  "elapsed_seconds": 351.88971424195915,
+  "peak_allocated_mib_including_lpips": 3836.7529296875,
+  "checkpoint_sha256": "ee3b22d3d13939c1dc4fcbd6144e8c6b27d6d851c1ceb17f4cba20c077280386",
+  "gpu": {
+    "index": "0",
+    "uuid": "GPU-9b68aa16-5309-b90b-1a07-2e2868715a95",
+    "memory_used_mib": "7215",
+    "memory_free_mib": "65617",
+    "utilization_pct": "0"
+  },
+  "completed_at": "2026-11-02T03:47:56.114206+00:00"
+}
+Exit code: 0; Finished: 2026-11-02T11:47:57+08:00

@@ -1,0 +1,3105 @@
+{
+  "scene": "scene_2f3e1c0f688c",
+  "reference_method": "no_tuning",
+  "selection": {
+    "reference_opacity_mass_median": 3.2612686157226562,
+    "active_tokens": 2048,
+    "total_tokens": 4096,
+    "seed": 0
+  },
+  "counts": [
+    10,
+    20
+  ],
+  "grey_opacity_scale": 0.1,
+  "tokens": [
+    {
+      "rank": 0,
+      "token": 3691,
+      "colour": "red",
+      "hex": "#e6194b"
+    },
+    {
+      "rank": 1,
+      "token": 886,
+      "colour": "green",
+      "hex": "#3cb44b"
+    },
+    {
+      "rank": 2,
+      "token": 787,
+      "colour": "yellow",
+      "hex": "#ffe119"
+    },
+    {
+      "rank": 3,
+      "token": 3820,
+      "colour": "blue",
+      "hex": "#4363d8"
+    },
+    {
+      "rank": 4,
+      "token": 1793,
+      "colour": "orange",
+      "hex": "#f58231"
+    },
+    {
+      "rank": 5,
+      "token": 2252,
+      "colour": "purple",
+      "hex": "#911eb4"
+    },
+    {
+      "rank": 6,
+      "token": 2031,
+      "colour": "cyan",
+      "hex": "#42d4f4"
+    },
+    {
+      "rank": 7,
+      "token": 3937,
+      "colour": "magenta",
+      "hex": "#f032e6"
+    },
+    {
+      "rank": 8,
+      "token": 2378,
+      "colour": "lime",
+      "hex": "#bfef45"
+    },
+    {
+      "rank": 9,
+      "token": 2458,
+      "colour": "pink",
+      "hex": "#fabed4"
+    },
+    {
+      "rank": 10,
+      "token": 505,
+      "colour": "teal",
+      "hex": "#469990"
+    },
+    {
+      "rank": 11,
+      "token": 3211,
+      "colour": "lavender",
+      "hex": "#dcbeff"
+    },
+    {
+      "rank": 12,
+      "token": 2376,
+      "colour": "brown",
+      "hex": "#9a6324"
+    },
+    {
+      "rank": 13,
+      "token": 41,
+      "colour": "beige",
+      "hex": "#fffac8"
+    },
+    {
+      "rank": 14,
+      "token": 1950,
+      "colour": "maroon",
+      "hex": "#800000"
+    },
+    {
+      "rank": 15,
+      "token": 213,
+      "colour": "mint",
+      "hex": "#aaffc3"
+    },
+    {
+      "rank": 16,
+      "token": 3372,
+      "colour": "olive",
+      "hex": "#808000"
+    },
+    {
+      "rank": 17,
+      "token": 1778,
+      "colour": "apricot",
+      "hex": "#ffd8b1"
+    },
+    {
+      "rank": 18,
+      "token": 2840,
+      "colour": "navy",
+      "hex": "#000075"
+    },
+    {
+      "rank": 19,
+      "token": 110,
+      "colour": "black",
+      "hex": "#000000"
+    }
+  ],
+  "files": {
+    "no_tuning": [
+      "no_tuning/no_tuning_highlight10tokens.ply",
+      "no_tuning/no_tuning_only10tokens.ply",
+      "no_tuning/no_tuning_highlight20tokens.ply",
+      "no_tuning/no_tuning_only20tokens.ply"
+    ],
+    "scene_lr1e-2_tuning": [
+      "scene_lr1e-2_tuning/scene_lr1e-2_tuning_highlight10tokens.ply",
+      "scene_lr1e-2_tuning/scene_lr1e-2_tuning_only10tokens.ply",
+      "scene_lr1e-2_tuning/scene_lr1e-2_tuning_highlight20tokens.ply",
+      "scene_lr1e-2_tuning/scene_lr1e-2_tuning_only20tokens.ply"
+    ],
+    "scene_lr1e-2_geo_tuning": [
+      "scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning_highlight10tokens.ply",
+      "scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning_only10tokens.ply",
+      "scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning_highlight20tokens.ply",
+      "scene_lr1e-2_geo_tuning/scene_lr1e-2_geo_tuning_only20tokens.ply"
+    ],
+    "token_lr1e-4_tuning": [
+      "token_lr1e-4_tuning/token_lr1e-4_tuning_highlight10tokens.ply",
+      "token_lr1e-4_tuning/token_lr1e-4_tuning_only10tokens.ply",
+      "token_lr1e-4_tuning/token_lr1e-4_tuning_highlight20tokens.ply",
+      "token_lr1e-4_tuning/token_lr1e-4_tuning_only20tokens.ply"
+    ],
+    "token_lr1e-4_geo_tuning": [
+      "token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning_highlight10tokens.ply",
+      "token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning_only10tokens.ply",
+      "token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning_highlight20tokens.ply",
+      "token_lr1e-4_geo_tuning/token_lr1e-4_geo_tuning_only20tokens.ply"
+    ],
+    "scene_lr1e-2_token_lr1e-4_tuning": [
+      "scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning_highlight10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning_only10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning_highlight20tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_tuning/scene_lr1e-2_token_lr1e-4_tuning_only20tokens.ply"
+    ],
+    "scene_lr1e-2_token_lr1e-4_geo_tuning": [
+      "scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning_highlight10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning_only10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning_highlight20tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_geo_tuning/scene_lr1e-2_token_lr1e-4_geo_tuning_only20tokens.ply"
+    ],
+    "scene_lr1e-2_token_lr1e-4_vis_xyz_tuning": [
+      "scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning_highlight10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning_only10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning_highlight20tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vis_xyz_tuning/scene_lr1e-2_token_lr1e-4_vis_xyz_tuning_only20tokens.ply"
+    ],
+    "scene_lr1e-2_token_lr1e-4_vis_opac_tuning": [
+      "scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning_highlight10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning_only10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning_highlight20tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vis_opac_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_tuning_only20tokens.ply"
+    ],
+    "scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning": [
+      "scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning_highlight10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning_only10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning_highlight20tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning/scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning_only20tokens.ply"
+    ],
+    "scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning": [
+      "scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning_highlight10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning_only10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning_highlight20tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning_only20tokens.ply"
+    ],
+    "scene_lr1e-2_token_lr1e-4_colmap_clean_depth0.01_tuning": [
+      "scene_lr1e-2_token_lr1e-4_colmap_clean_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_colmap_clean_depth0.01_tuning_highlight10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_colmap_clean_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_colmap_clean_depth0.01_tuning_only10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_colmap_clean_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_colmap_clean_depth0.01_tuning_highlight20tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_colmap_clean_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_colmap_clean_depth0.01_tuning_only20tokens.ply"
+    ],
+    "scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning": [
+      "scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning_highlight10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning_only10tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning_highlight20tokens.ply",
+      "scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning/scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning_only20tokens.ply"
+    ]
+  },
+  "token_stats": {
+    "no_tuning": {
+      "3691": {
+        "alive": 38,
+        "opacity_mass": 7.821694747943866,
+        "centre": [
+          -4.541790640052895,
+          -1.2324747272162657,
+          2.7864695893785134
+        ],
+        "spread": 0.3586670943274766,
+        "centre_shift": 0.0
+      },
+      "886": {
+        "alive": 50,
+        "opacity_mass": 4.696254900947679,
+        "centre": [
+          0.08752743918911296,
+          0.023126119442147295,
+          1.4676864979729198
+        ],
+        "spread": 0.17608181325935682,
+        "centre_shift": 0.0
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 4.7869783755159006,
+        "centre": [
+          0.1005649471855313,
+          0.2138238008841431,
+          0.6793250890267639
+        ],
+        "spread": 0.09399827358805671,
+        "centre_shift": 0.0
+      },
+      "3820": {
+        "alive": 42,
+        "opacity_mass": 6.165835686880541,
+        "centre": [
+          2.0004723103454993,
+          -0.761965186341381,
+          3.6107766180972938
+        ],
+        "spread": 0.40563929353475836,
+        "centre_shift": 0.0
+      },
+      "1793": {
+        "alive": 37,
+        "opacity_mass": 4.34790422476029,
+        "centre": [
+          -2.4924878844828307,
+          -0.838307845127303,
+          5.3049189586700995
+        ],
+        "spread": 0.43510880491718507,
+        "centre_shift": 0.0
+      },
+      "2252": {
+        "alive": 51,
+        "opacity_mass": 4.621054780902341,
+        "centre": [
+          -0.30289154406286833,
+          0.40869917340784695,
+          1.3358838410561407
+        ],
+        "spread": 0.1583518835087409,
+        "centre_shift": 0.0
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 4.394209015241358,
+        "centre": [
+          0.004975722200815537,
+          0.1355887994550101,
+          0.7632713038944119
+        ],
+        "spread": 0.08313437163391033,
+        "centre_shift": 0.0
+      },
+      "3937": {
+        "alive": 52,
+        "opacity_mass": 6.823548953318095,
+        "centre": [
+          -0.4692734719249403,
+          0.036352226084112954,
+          2.571035500676159
+        ],
+        "spread": 0.29379339205517013,
+        "centre_shift": 0.0
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 6.093955329473829,
+        "centre": [
+          -2.0859956278900493,
+          0.05268872740352199,
+          1.3326899296829369
+        ],
+        "spread": 0.25722972131866684,
+        "centre_shift": 0.0
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 6.398225828395113,
+        "centre": [
+          -1.356369496100997,
+          -1.4883542717292664,
+          2.7737724152786467
+        ],
+        "spread": 0.4074232962932163,
+        "centre_shift": 0.0
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 4.007265659236936,
+        "centre": [
+          -3.817669998430553,
+          -0.6221533633890862,
+          2.7995936083958295
+        ],
+        "spread": 0.32614332790502343,
+        "centre_shift": 0.0
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 7.607912845558218,
+        "centre": [
+          -4.504158214799893,
+          -0.921766597695214,
+          5.816242294295617
+        ],
+        "spread": 0.31225178837079837,
+        "centre_shift": 0.0
+      },
+      "2376": {
+        "alive": 38,
+        "opacity_mass": 5.222637041930284,
+        "centre": [
+          1.5186418687154253,
+          -0.6207246593261317,
+          0.3362175410276224
+        ],
+        "spread": 0.1816533355554732,
+        "centre_shift": 0.0
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 5.103668385272613,
+        "centre": [
+          -0.07080019713903596,
+          0.09310899910073661,
+          0.8890115204336357
+        ],
+        "spread": 0.09753031613626076,
+        "centre_shift": 0.0
+      },
+      "1950": {
+        "alive": 52,
+        "opacity_mass": 3.5480289529932634,
+        "centre": [
+          -0.4004177707002126,
+          -0.029135935435990568,
+          2.6328347148837628
+        ],
+        "spread": 0.265895766824719,
+        "centre_shift": 0.0
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 5.344035376953343,
+        "centre": [
+          2.60326292980911,
+          -1.0034949997610243,
+          1.4875718578178352
+        ],
+        "spread": 0.18977946074741664,
+        "centre_shift": 0.0
+      },
+      "3372": {
+        "alive": 51,
+        "opacity_mass": 7.323630597082229,
+        "centre": [
+          -1.6512320783413252,
+          -0.15957076804627407,
+          5.046519945354919
+        ],
+        "spread": 0.6718742756056248,
+        "centre_shift": 0.0
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 4.989824711799052,
+        "centre": [
+          -3.856260617918202,
+          -1.8866380518591261,
+          6.158060927415512
+        ],
+        "spread": 0.4032403860011948,
+        "centre_shift": 0.0
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 4.755954337739581,
+        "centre": [
+          -0.887538858007261,
+          -1.1965239742922729,
+          2.5615769979172596
+        ],
+        "spread": 0.1435505169579684,
+        "centre_shift": 0.0
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.6224582609610465,
+        "centre": [
+          -2.3735476527555064,
+          -1.4810171982440354,
+          4.942115108838944
+        ],
+        "spread": 0.29214387100234557,
+        "centre_shift": 0.0
+      }
+    },
+    "scene_lr1e-2_tuning": {
+      "3691": {
+        "alive": 40,
+        "opacity_mass": 9.122633791335659,
+        "centre": [
+          -4.863519837886816,
+          -1.2991549816995231,
+          3.022093944202756
+        ],
+        "spread": 0.3818211602501528,
+        "centre_shift": 0.4043201326463362
+      },
+      "886": {
+        "alive": 51,
+        "opacity_mass": 8.362967991706682,
+        "centre": [
+          0.05694174937325792,
+          0.02119617552000173,
+          1.5186115883860372
+        ],
+        "spread": 0.18729918343985955,
+        "centre_shift": 0.05943546027952084
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 4.94066064490471,
+        "centre": [
+          0.10498689393028954,
+          0.21345615615481553,
+          0.6706631560764418
+        ],
+        "spread": 0.09431976213048876,
+        "centre_shift": 0.00973231000823323
+      },
+      "3820": {
+        "alive": 46,
+        "opacity_mass": 6.796115267535072,
+        "centre": [
+          2.064131981033505,
+          -0.7708530708610158,
+          3.6391598143121273
+        ],
+        "spread": 0.44661479061749615,
+        "centre_shift": 0.0702648844780194
+      },
+      "1793": {
+        "alive": 38,
+        "opacity_mass": 5.5908969728039395,
+        "centre": [
+          -2.3219019586174063,
+          -0.7738679835598418,
+          4.89234019377861
+        ],
+        "spread": 0.42596164733123654,
+        "centre_shift": 0.4510801382255537
+      },
+      "2252": {
+        "alive": 50,
+        "opacity_mass": 4.268520646961406,
+        "centre": [
+          -0.3100226623598042,
+          0.3957058770404188,
+          1.3082997802093062
+        ],
+        "spread": 0.1584136565543386,
+        "centre_shift": 0.03131387889512545
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 5.10696822789032,
+        "centre": [
+          0.005407689408735408,
+          0.1331719344124855,
+          0.7638809436503579
+        ],
+        "spread": 0.08047802808661818,
+        "centre_shift": 0.002529721908535662
+      },
+      "3937": {
+        "alive": 51,
+        "opacity_mass": 7.667178959627563,
+        "centre": [
+          -0.45550685512752725,
+          0.03990566021456128,
+          2.6087066888894244
+        ],
+        "spread": 0.31770512661399514,
+        "centre_shift": 0.040264935782458634
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 7.877589585223177,
+        "centre": [
+          -2.303863256709408,
+          0.06401374080784387,
+          1.450580561420159
+        ],
+        "spread": 0.32317404766897984,
+        "centre_shift": 0.24797733901987762
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 5.848198416533364,
+        "centre": [
+          -1.3950369413327333,
+          -1.5328395944253819,
+          2.8565891454687358
+        ],
+        "spread": 0.413165120743358,
+        "centre_shift": 0.10165001748895497
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 6.132143900701664,
+        "centre": [
+          -3.295422091087368,
+          -0.5546065008816167,
+          2.414370183698065
+        ],
+        "spread": 0.4260493568546904,
+        "centre_shift": 0.6524588433723716
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 6.728161709741329,
+        "centre": [
+          -4.5204174586540455,
+          -0.9175330268372723,
+          5.83800956911147
+        ],
+        "spread": 0.35347704667454727,
+        "centre_shift": 0.027497279607752008
+      },
+      "2376": {
+        "alive": 39,
+        "opacity_mass": 5.4754321601431,
+        "centre": [
+          1.5202390294152401,
+          -0.6267596158907665,
+          0.329932453272364
+        ],
+        "spread": 0.17980618146357288,
+        "centre_shift": 0.008858552428549495
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 7.019270513497759,
+        "centre": [
+          -0.07560858010704048,
+          0.09115024002602029,
+          0.8839818474953623
+        ],
+        "spread": 0.09282619680661762,
+        "centre_shift": 0.007228754646948476
+      },
+      "1950": {
+        "alive": 52,
+        "opacity_mass": 5.642125207757999,
+        "centre": [
+          -0.2867724418010643,
+          -0.024363163571389755,
+          2.764611441942343
+        ],
+        "spread": 0.24603693701589377,
+        "centre_shift": 0.17407798805747582
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 5.814037100832138,
+        "centre": [
+          2.698291967022346,
+          -1.0355023372860808,
+          1.5295046240240848
+        ],
+        "spread": 0.18828499568142268,
+        "centre_shift": 0.1086892103698681
+      },
+      "3372": {
+        "alive": 50,
+        "opacity_mass": 11.317598661733427,
+        "centre": [
+          -1.654559435026386,
+          -0.15911275147570503,
+          5.224674129451444
+        ],
+        "spread": 1.132347796816457,
+        "centre_shift": 0.17818584229053386
+      },
+      "1778": {
+        "alive": 38,
+        "opacity_mass": 5.976756807052219,
+        "centre": [
+          -4.3947812385592,
+          -2.1403217508693126,
+          6.981921255400447
+        ],
+        "spread": 0.47277258156969487,
+        "centre_shift": 1.016418082300045
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 4.988713798204174,
+        "centre": [
+          -0.8987317482066459,
+          -1.2145336169899705,
+          2.594997474526783
+        ],
+        "spread": 0.13795659891111456,
+        "centre_shift": 0.03957974580416004
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.324918837197615,
+        "centre": [
+          -2.3592239329316045,
+          -1.4981550230005607,
+          5.000022975663258
+        ],
+        "spread": 0.3087953001963042,
+        "centre_shift": 0.06206605374213407
+      }
+    },
+    "scene_lr1e-2_geo_tuning": {
+      "3691": {
+        "alive": 39,
+        "opacity_mass": 9.063653014988745,
+        "centre": [
+          -5.156564933674574,
+          -1.360404025191864,
+          3.1957059784925272
+        ],
+        "spread": 0.37136672689982303,
+        "centre_shift": 0.7495250226334275
+      },
+      "886": {
+        "alive": 55,
+        "opacity_mass": 10.695198482950218,
+        "centre": [
+          0.07706705874788132,
+          0.02279090706017627,
+          1.5150148285222285
+        ],
+        "spread": 0.15290537093144854,
+        "centre_shift": 0.048471670065110696
+      },
+      "787": {
+        "alive": 53,
+        "opacity_mass": 11.335417488473468,
+        "centre": [
+          0.10647110545625679,
+          0.2271328785869966,
+          0.6973776614238446
+        ],
+        "spread": 0.10595666633136498,
+        "centre_shift": 0.02319287875558554
+      },
+      "3820": {
+        "alive": 46,
+        "opacity_mass": 7.606658456845253,
+        "centre": [
+          1.975146866015931,
+          -0.7217303106751028,
+          3.4823411087981473
+        ],
+        "spread": 0.32375370218518645,
+        "centre_shift": 0.13695219384625448
+      },
+      "1793": {
+        "alive": 38,
+        "opacity_mass": 6.7739150413496105,
+        "centre": [
+          -2.265319843015343,
+          -0.7573666146033288,
+          4.831173024956805
+        ],
+        "spread": 0.24066650465441683,
+        "centre_shift": 0.5315938407965147
+      },
+      "2252": {
+        "alive": 54,
+        "opacity_mass": 5.501658227178268,
+        "centre": [
+          -0.2747897304160291,
+          0.47923045851322976,
+          1.4698853793309903
+        ],
+        "spread": 0.2008208079588936,
+        "centre_shift": 0.15401553937471524
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 7.064349617692642,
+        "centre": [
+          0.01673940625671443,
+          0.14428861336602436,
+          0.7914711296317735
+        ],
+        "spread": 0.07539953096739963,
+        "centre_shift": 0.0317695010390602
+      },
+      "3937": {
+        "alive": 52,
+        "opacity_mass": 7.872429885210295,
+        "centre": [
+          -0.44241929373716793,
+          0.050808924689977386,
+          2.835369095254199
+        ],
+        "spread": 0.26977652904448396,
+        "centre_shift": 0.26608718917540725
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 6.574841898724117,
+        "centre": [
+          -2.2450375957532964,
+          0.0638751484523166,
+          1.3655698814628414
+        ],
+        "spread": 0.2189228303962824,
+        "centre_shift": 0.16278997139487397
+      },
+      "2458": {
+        "alive": 38,
+        "opacity_mass": 4.538799208823605,
+        "centre": [
+          -1.495408567569526,
+          -1.6304123915747155,
+          3.0544151781654243
+        ],
+        "spread": 0.31403409212504263,
+        "centre_shift": 0.3439080301033675
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 5.624440548661227,
+        "centre": [
+          -3.131231487519216,
+          -0.5265985458586709,
+          2.2902288594933276
+        ],
+        "spread": 0.253908389823722,
+        "centre_shift": 0.8601052260275792
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 7.056444387272535,
+        "centre": [
+          -4.63098978664621,
+          -0.9391912298098414,
+          5.9789638120638235
+        ],
+        "spread": 0.3309988912986075,
+        "centre_shift": 0.20704626962620293
+      },
+      "2376": {
+        "alive": 39,
+        "opacity_mass": 4.999461604820681,
+        "centre": [
+          1.5812904692599747,
+          -0.6352123639708173,
+          0.331743276244603
+        ],
+        "spread": 0.22412194197198612,
+        "centre_shift": 0.06445742611531066
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 9.276544127933448,
+        "centre": [
+          -0.052857316733660266,
+          0.09835650007807416,
+          0.9331463693505189
+        ],
+        "spread": 0.1044044734938704,
+        "centre_shift": 0.0479308680566592
+      },
+      "1950": {
+        "alive": 51,
+        "opacity_mass": 4.662148947372771,
+        "centre": [
+          -0.2597998473448316,
+          -0.019240224690317206,
+          3.060935305637904
+        ],
+        "spread": 0.24117808489670672,
+        "centre_shift": 0.4507121490086401
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 6.441731666131318,
+        "centre": [
+          2.8444432882436255,
+          -1.084459428942749,
+          1.5740375574685692
+        ],
+        "spread": 0.2198104318118256,
+        "centre_shift": 0.2686996860873022
+      },
+      "3372": {
+        "alive": 50,
+        "opacity_mass": 11.096736228942973,
+        "centre": [
+          -2.09532229505076,
+          -0.1943714774411117,
+          6.221586262851371
+        ],
+        "spread": 0.8474864692296964,
+        "centre_shift": 1.2566654528815895
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 5.050152338081935,
+        "centre": [
+          -4.412049890271036,
+          -2.157770696479768,
+          7.040289383885278
+        ],
+        "spread": 0.4531015698553988,
+        "centre_shift": 1.077377220682942
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 5.514050995767889,
+        "centre": [
+          -0.9024800183023163,
+          -1.3199651668993906,
+          2.769526242525833
+        ],
+        "spread": 0.1775606699693758,
+        "centre_shift": 0.24228878355488606
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.820602105125573,
+        "centre": [
+          -2.5399105710587437,
+          -1.6554207862490902,
+          5.552236899259157
+        ],
+        "spread": 0.3345356429107743,
+        "centre_shift": 0.6560044445283675
+      }
+    },
+    "token_lr1e-4_tuning": {
+      "3691": {
+        "alive": 38,
+        "opacity_mass": 8.525500146452032,
+        "centre": [
+          -4.858286278365377,
+          -1.3123664294416357,
+          3.0051840854870564
+        ],
+        "spread": 0.37684642028524357,
+        "centre_shift": 0.3929226437395869
+      },
+      "886": {
+        "alive": 50,
+        "opacity_mass": 4.343965040054172,
+        "centre": [
+          0.07693808511270951,
+          0.02097201911243209,
+          1.4643811675268033
+        ],
+        "spread": 0.1639693158053519,
+        "centre_shift": 0.011300432617557025
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 4.670743058552034,
+        "centre": [
+          0.10212331542292617,
+          0.21253323834343987,
+          0.6703768158347092
+        ],
+        "spread": 0.09425364829270168,
+        "centre_shift": 0.00917418423373068
+      },
+      "3820": {
+        "alive": 42,
+        "opacity_mass": 6.224813373761549,
+        "centre": [
+          2.023084730082738,
+          -0.7726794824097609,
+          3.6344942822758535
+        ],
+        "spread": 0.4104649552085353,
+        "centre_shift": 0.03447673506440108
+      },
+      "1793": {
+        "alive": 37,
+        "opacity_mass": 3.544186014743403,
+        "centre": [
+          -2.3005433041174705,
+          -0.7710151339489693,
+          4.870019042326487
+        ],
+        "spread": 0.4160356516721812,
+        "centre_shift": 0.4801134950665788
+      },
+      "2252": {
+        "alive": 50,
+        "opacity_mass": 4.423186922911555,
+        "centre": [
+          -0.29578321122415546,
+          0.4030409590950335,
+          1.3180589981317645
+        ],
+        "spread": 0.15818170272682297,
+        "centre_shift": 0.020006719127191562
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 4.836285041645169,
+        "centre": [
+          0.007425245332084732,
+          0.14044238345022178,
+          0.769795852824867
+        ],
+        "spread": 0.08006258419931897,
+        "centre_shift": 0.008492772216131797
+      },
+      "3937": {
+        "alive": 52,
+        "opacity_mass": 6.85755556364893,
+        "centre": [
+          -0.4891327063886171,
+          0.032253684059485255,
+          2.5959477345330093
+        ],
+        "spread": 0.2975355720862483,
+        "centre_shift": 0.032121747087437987
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 6.447077705335687,
+        "centre": [
+          -2.2405353238783237,
+          0.06552224626468522,
+          1.3980672715184397
+        ],
+        "spread": 0.2746193881668903,
+        "centre_shift": 0.1682896718993304
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 6.27557665344159,
+        "centre": [
+          -1.4196937126059952,
+          -1.5899425493587571,
+          2.94303326371837
+        ],
+        "spread": 0.4194903851659197,
+        "centre_shift": 0.2073146626802681
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 4.204738721362077,
+        "centre": [
+          -3.456142209677783,
+          -0.5548251612424905,
+          2.5516924643397445
+        ],
+        "spread": 0.3058073609795008,
+        "centre_shift": 0.44349792115530384
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 7.407783781571126,
+        "centre": [
+          -4.556300658879514,
+          -0.9206671013441307,
+          5.832813848946886
+        ],
+        "spread": 0.31598901329844603,
+        "centre_shift": 0.05472348481577572
+      },
+      "2376": {
+        "alive": 38,
+        "opacity_mass": 5.178174606371613,
+        "centre": [
+          1.5265961924565759,
+          -0.6284664815680306,
+          0.3356988913961693
+        ],
+        "spread": 0.18456353992855704,
+        "centre_shift": 0.011111978907665302
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 5.216473222739296,
+        "centre": [
+          -0.0745971671592811,
+          0.0949355326569697,
+          0.8914714371558841
+        ],
+        "spread": 0.0976839836918615,
+        "centre_shift": 0.004878974938148667
+      },
+      "1950": {
+        "alive": 52,
+        "opacity_mass": 3.427670134242362,
+        "centre": [
+          -0.3939848070901454,
+          -0.025395088479504103,
+          2.8065008539557557
+        ],
+        "spread": 0.26611145743200365,
+        "centre_shift": 0.1738255010547448
+      },
+      "213": {
+        "alive": 38,
+        "opacity_mass": 5.402011272531581,
+        "centre": [
+          2.7112249863899796,
+          -1.0404305144872021,
+          1.5351213975015972
+        ],
+        "spread": 0.19344910859878325,
+        "centre_shift": 0.12361632834458483
+      },
+      "3372": {
+        "alive": 51,
+        "opacity_mass": 8.96365432894595,
+        "centre": [
+          -1.8836706831610168,
+          -0.19581047813369865,
+          5.759815082775994
+        ],
+        "spread": 0.7964619511286087,
+        "centre_shift": 0.7510865294134196
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 5.730556515004793,
+        "centre": [
+          -4.340989326430661,
+          -2.129847985175154,
+          6.994076972910238
+        ],
+        "spread": 0.4542328835775064,
+        "centre_shift": 0.9965118267458659
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 4.630727888409524,
+        "centre": [
+          -0.8488786790387702,
+          -1.1834046187362621,
+          2.512594089946549
+        ],
+        "spread": 0.1353773707224143,
+        "centre_shift": 0.06376560359118288
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.57975902929849,
+        "centre": [
+          -2.4251801136505025,
+          -1.5328932535087554,
+          5.112411723366385
+        ],
+        "spread": 0.3034648502699721,
+        "centre_shift": 0.18535903821343425
+      }
+    },
+    "token_lr1e-4_geo_tuning": {
+      "3691": {
+        "alive": 38,
+        "opacity_mass": 9.010865850827116,
+        "centre": [
+          -5.242305645233345,
+          -1.3976041946215612,
+          3.1712579298059222
+        ],
+        "spread": 0.4120347573049943,
+        "centre_shift": 0.8161195258155524
+      },
+      "886": {
+        "alive": 50,
+        "opacity_mass": 4.490217888785992,
+        "centre": [
+          0.05987012949717051,
+          0.022332801839643448,
+          1.4034089605327749
+        ],
+        "spread": 0.1653769106869846,
+        "centre_shift": 0.06997969670971499
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 4.897257711971179,
+        "centre": [
+          0.10334762476775648,
+          0.21157555800988898,
+          0.6665327075223156
+        ],
+        "spread": 0.0942224327704789,
+        "centre_shift": 0.013283181663427008
+      },
+      "3820": {
+        "alive": 42,
+        "opacity_mass": 6.047146363386673,
+        "centre": [
+          1.9593816089686127,
+          -0.7430149026174078,
+          3.49286573401322
+        ],
+        "spread": 0.38963746392959864,
+        "centre_shift": 0.1262954297603497
+      },
+      "1793": {
+        "alive": 37,
+        "opacity_mass": 4.231046140196259,
+        "centre": [
+          -2.2924470800292474,
+          -0.771980668794557,
+          4.880310061170562
+        ],
+        "spread": 0.39652866596869624,
+        "centre_shift": 0.4740341059485963
+      },
+      "2252": {
+        "alive": 51,
+        "opacity_mass": 4.958608257700689,
+        "centre": [
+          -0.2755746734738458,
+          0.4301903813964454,
+          1.3747038483421206
+        ],
+        "spread": 0.16316506557870364,
+        "centre_shift": 0.05210639505156862
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 4.7500656946212985,
+        "centre": [
+          0.007023256534682221,
+          0.13238105850303694,
+          0.7710669472172056
+        ],
+        "spread": 0.08150762720914664,
+        "centre_shift": 0.00867490943350687
+      },
+      "3937": {
+        "alive": 52,
+        "opacity_mass": 7.262996707355342,
+        "centre": [
+          -0.4919894801689476,
+          0.038273756079243194,
+          2.742702448560852
+        ],
+        "spread": 0.31319182432162324,
+        "centre_shift": 0.17317404627746594
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 6.022918830873095,
+        "centre": [
+          -2.161993680480007,
+          0.06472457199182345,
+          1.3436658502943633
+        ],
+        "spread": 0.2568045115674781,
+        "centre_shift": 0.07772410427716764
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 6.226943695482646,
+        "centre": [
+          -1.4755380365766455,
+          -1.6542190483164916,
+          3.048889103082965
+        ],
+        "spread": 0.4186100470298137,
+        "centre_shift": 0.3426389602188359
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 3.6047905492709447,
+        "centre": [
+          -3.3363552581561597,
+          -0.5394498063007316,
+          2.4487451070771282
+        ],
+        "spread": 0.26040271183684066,
+        "centre_shift": 0.6013305483991745
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 7.123548803810166,
+        "centre": [
+          -4.447499295960677,
+          -0.9043921468798866,
+          5.713802295329099
+        ],
+        "spread": 0.3102901622815732,
+        "centre_shift": 0.11834719267233708
+      },
+      "2376": {
+        "alive": 38,
+        "opacity_mass": 5.140698045237514,
+        "centre": [
+          1.6050340977302813,
+          -0.6514300627074463,
+          0.359038934914233
+        ],
+        "spread": 0.18964199792207007,
+        "centre_shift": 0.094484152374313
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 5.352105675920029,
+        "centre": [
+          -0.05848755436317209,
+          0.09963952135763843,
+          0.913189508323563
+        ],
+        "spread": 0.09885490269397627,
+        "centre_shift": 0.027907418215940265
+      },
+      "1950": {
+        "alive": 52,
+        "opacity_mass": 3.5369144430824235,
+        "centre": [
+          -0.35609639333357174,
+          -0.027650510117678405,
+          2.8320324772511727
+        ],
+        "spread": 0.25868353083461854,
+        "centre_shift": 0.20407434800149574
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 5.453780335713418,
+        "centre": [
+          2.697429496593232,
+          -1.0355573476169067,
+          1.5226265255553273
+        ],
+        "spread": 0.19294092503544885,
+        "centre_shift": 0.1054711627892954
+      },
+      "3372": {
+        "alive": 50,
+        "opacity_mass": 9.360702361954964,
+        "centre": [
+          -1.9482372458552415,
+          -0.20293641127253306,
+          5.991052337090142
+        ],
+        "spread": 0.7902277067595983,
+        "centre_shift": 0.9910772359304084
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 4.759746926522411,
+        "centre": [
+          -3.7940411444260977,
+          -1.9061937862644067,
+          6.246118606743978
+        ],
+        "spread": 0.4015216305659901,
+        "centre_shift": 0.10958031081576393
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 4.633609866411604,
+        "centre": [
+          -0.9368511157459491,
+          -1.3274651282411534,
+          2.7583365963047295
+        ],
+        "spread": 0.1512917669266406,
+        "centre_shift": 0.24143658405127774
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.793395391965049,
+        "centre": [
+          -2.63469754000693,
+          -1.6617192949697446,
+          5.548024264586
+        ],
+        "spread": 0.32874723244697446,
+        "centre_shift": 0.6840894798128448
+      }
+    },
+    "scene_lr1e-2_token_lr1e-4_tuning": {
+      "3691": {
+        "alive": 38,
+        "opacity_mass": 9.042118721918712,
+        "centre": [
+          -5.22940069409514,
+          -1.3847241911745147,
+          3.235224433194621
+        ],
+        "spread": 0.4204959644802474,
+        "centre_shift": 0.8350858611807364
+      },
+      "886": {
+        "alive": 50,
+        "opacity_mass": 9.328661367064342,
+        "centre": [
+          0.044292779719528955,
+          0.024481601593803096,
+          1.5009986539384936
+        ],
+        "spread": 0.1782463268072688,
+        "centre_shift": 0.05459645452214879
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 5.269190585124306,
+        "centre": [
+          0.10571497742777416,
+          0.21385037855114633,
+          0.6679750719019562
+        ],
+        "spread": 0.09184588685388605,
+        "centre_shift": 0.012463803857644302
+      },
+      "3820": {
+        "alive": 43,
+        "opacity_mass": 6.740047220928005,
+        "centre": [
+          2.087820658850523,
+          -0.7817014134511814,
+          3.678746194307886
+        ],
+        "spread": 0.4521346648200376,
+        "centre_shift": 0.11242382281941925
+      },
+      "1793": {
+        "alive": 38,
+        "opacity_mass": 5.776102867846081,
+        "centre": [
+          -2.2445493042012328,
+          -0.7587801898829504,
+          4.774215857561096
+        ],
+        "spread": 0.4063087418468235,
+        "centre_shift": 0.5911378596126562
+      },
+      "2252": {
+        "alive": 50,
+        "opacity_mass": 4.342117206542753,
+        "centre": [
+          -0.3101318203766926,
+          0.39872257558014684,
+          1.3212763395334943
+        ],
+        "spread": 0.1639602383600469,
+        "centre_shift": 0.019113691586146057
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 5.621328550274484,
+        "centre": [
+          0.007659520989808457,
+          0.13746201191535698,
+          0.7672981123556378
+        ],
+        "spread": 0.07799911973290587,
+        "centre_shift": 0.005189112375426024
+      },
+      "3937": {
+        "alive": 51,
+        "opacity_mass": 7.486143423579051,
+        "centre": [
+          -0.4626452077225942,
+          0.041400128593000914,
+          2.627870116670382
+        ],
+        "spread": 0.31956065559769087,
+        "centre_shift": 0.057442047154381004
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 8.701396264874347,
+        "centre": [
+          -2.352064832716663,
+          0.06311138943578921,
+          1.4760629996079062
+        ],
+        "spread": 0.3180613758588734,
+        "centre_shift": 0.30241906490930026
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 5.931893211996794,
+        "centre": [
+          -1.3857344627333783,
+          -1.5309741187247583,
+          2.8495398977113884
+        ],
+        "spread": 0.4223693783022874,
+        "centre_shift": 0.09175763737932566
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 5.596837567577552,
+        "centre": [
+          -3.2272997793516947,
+          -0.529136097192387,
+          2.358567046476147
+        ],
+        "spread": 0.38628706950965885,
+        "centre_shift": 0.7427608199848874
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 7.221892370443747,
+        "centre": [
+          -4.640360401890565,
+          -0.9437190878983839,
+          5.973715856148581
+        ],
+        "spread": 0.3496787116395228,
+        "centre_shift": 0.20935823431874326
+      },
+      "2376": {
+        "alive": 39,
+        "opacity_mass": 5.507931705105875,
+        "centre": [
+          1.520126447748053,
+          -0.6273332315599641,
+          0.32983311740803023
+        ],
+        "spread": 0.18086607660100384,
+        "centre_shift": 0.009307957178044198
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 7.595517729991116,
+        "centre": [
+          -0.07586731095955516,
+          0.09309458015266066,
+          0.8852073731737017
+        ],
+        "spread": 0.08868373460177538,
+        "centre_shift": 0.006336196552461432
+      },
+      "1950": {
+        "alive": 52,
+        "opacity_mass": 6.065369381582059,
+        "centre": [
+          -0.2849144597697574,
+          -0.009747041060329231,
+          2.765845648311222
+        ],
+        "spread": 0.18731546428887472,
+        "centre_shift": 0.1772254284019424
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 5.795744567134079,
+        "centre": [
+          2.6971557971378424,
+          -1.0360803498149926,
+          1.5292001032250542
+        ],
+        "spread": 0.18892906737306192,
+        "centre_shift": 0.1077524310121782
+      },
+      "3372": {
+        "alive": 50,
+        "opacity_mass": 10.613848551911701,
+        "centre": [
+          -1.850822988487976,
+          -0.19190806249032347,
+          5.686813560625028
+        ],
+        "spread": 1.2238584300749515,
+        "centre_shift": 0.6714597127012136
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 5.900860597168787,
+        "centre": [
+          -4.479653199404939,
+          -2.188149659659322,
+          7.147610520937441
+        ],
+        "spread": 0.4696881657983744,
+        "centre_shift": 1.207781419930929
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 5.015319218364425,
+        "centre": [
+          -0.8749018314103959,
+          -1.1972983568146258,
+          2.545801585453505
+        ],
+        "spread": 0.1417305260500809,
+        "centre_shift": 0.020227648106054662
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.3012213439916565,
+        "centre": [
+          -2.3594868568097067,
+          -1.4967129816913247,
+          4.996082250420984
+        ],
+        "spread": 0.3042358376200931,
+        "centre_shift": 0.05793544658660634
+      }
+    },
+    "scene_lr1e-2_token_lr1e-4_geo_tuning": {
+      "3691": {
+        "alive": 39,
+        "opacity_mass": 9.77143192190934,
+        "centre": [
+          -5.5519078769052514,
+          -1.4392403977261894,
+          3.4191547270969345
+        ],
+        "spread": 0.40100838450711546,
+        "centre_shift": 1.2097021774707342
+      },
+      "886": {
+        "alive": 54,
+        "opacity_mass": 12.611046653153608,
+        "centre": [
+          0.06224672437375264,
+          0.017989094037780356,
+          1.4336515436105497
+        ],
+        "spread": 0.1666384751934825,
+        "centre_shift": 0.04270692789266524
+      },
+      "787": {
+        "alive": 53,
+        "opacity_mass": 11.098443825379945,
+        "centre": [
+          0.10703499869519381,
+          0.2260009984243288,
+          0.6979969583354402
+        ],
+        "spread": 0.1066651486845954,
+        "centre_shift": 0.02321173000770682
+      },
+      "3820": {
+        "alive": 45,
+        "opacity_mass": 7.07551649651964,
+        "centre": [
+          1.9668213105366485,
+          -0.7205920202748635,
+          3.4532068690670865
+        ],
+        "spread": 0.35330091927585716,
+        "centre_shift": 0.16635009608637266
+      },
+      "1793": {
+        "alive": 39,
+        "opacity_mass": 7.066712327894379,
+        "centre": [
+          -2.27414386223253,
+          -0.7654956418706897,
+          4.845863863759069
+        ],
+        "spread": 0.24942147766143952,
+        "centre_shift": 0.5135243997701543
+      },
+      "2252": {
+        "alive": 54,
+        "opacity_mass": 6.456514139892533,
+        "centre": [
+          -0.2600707993605094,
+          0.4941427731944574,
+          1.5180390447575354
+        ],
+        "spread": 0.1982325635222724,
+        "centre_shift": 0.20570547673033804
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 8.270213491981849,
+        "centre": [
+          0.006060483801319742,
+          0.12726330467283073,
+          0.7823368978425999
+        ],
+        "spread": 0.06890344151130681,
+        "centre_shift": 0.02083236529286115
+      },
+      "3937": {
+        "alive": 52,
+        "opacity_mass": 7.988932629777992,
+        "centre": [
+          -0.4582051321013917,
+          0.05065765261889835,
+          2.989081947873172
+        ],
+        "spread": 0.28783226001647294,
+        "centre_shift": 0.41843755255573895
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 5.335543741684887,
+        "centre": [
+          -2.256658618672083,
+          0.06676581731934286,
+          1.333617025454032
+        ],
+        "spread": 0.2223653096899815,
+        "centre_shift": 0.17124508865872753
+      },
+      "2458": {
+        "alive": 38,
+        "opacity_mass": 4.441653251466846,
+        "centre": [
+          -1.5426167367823573,
+          -1.6862338211625205,
+          3.140731096811406
+        ],
+        "spread": 0.32597699189023416,
+        "centre_shift": 0.4566213143268603
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 5.027860916101389,
+        "centre": [
+          -3.1295229477501105,
+          -0.5099076877883054,
+          2.2721083668610094
+        ],
+        "spread": 0.22305368884607743,
+        "centre_shift": 0.8742917905872813
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 6.789478328821346,
+        "centre": [
+          -4.44928712128401,
+          -0.9100957235783945,
+          5.770272090939361
+        ],
+        "spread": 0.3234390368827654,
+        "centre_shift": 0.07252796566080486
+      },
+      "2376": {
+        "alive": 40,
+        "opacity_mass": 6.131676626217086,
+        "centre": [
+          1.7147374849662773,
+          -0.6736767631795336,
+          0.36293963577864374
+        ],
+        "spread": 0.24535339700514436,
+        "centre_shift": 0.20486943735751667
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 10.606849730567774,
+        "centre": [
+          -0.042713033161261064,
+          0.10300979264210244,
+          0.9167230364117834
+        ],
+        "spread": 0.0982110370174997,
+        "centre_shift": 0.04067975677004844
+      },
+      "1950": {
+        "alive": 52,
+        "opacity_mass": 5.20305065431603,
+        "centre": [
+          -0.17462705829067543,
+          -0.04035190331064809,
+          3.1461137416814595
+        ],
+        "spread": 0.22625198306689262,
+        "centre_shift": 0.5608588085215052
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 6.697289730674129,
+        "centre": [
+          2.928189099427506,
+          -1.1099197936074783,
+          1.6082256890290687
+        ],
+        "spread": 0.22196305838951097,
+        "centre_shift": 0.3625749569869541
+      },
+      "3372": {
+        "alive": 50,
+        "opacity_mass": 12.361514268632163,
+        "centre": [
+          -2.2428839643512233,
+          -0.2169116505253616,
+          6.72466013808146
+        ],
+        "spread": 0.8058058808589206,
+        "centre_shift": 1.7803073997113037
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 5.091736255322228,
+        "centre": [
+          -4.413167616025207,
+          -2.196430368256678,
+          7.144089693752881
+        ],
+        "spread": 0.4524837398824273,
+        "centre_shift": 1.1740397829223292
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 5.024091139363918,
+        "centre": [
+          -0.8629338476586806,
+          -1.2961798643822682,
+          2.6904107215560047
+        ],
+        "spread": 0.17087113946666038,
+        "centre_shift": 0.1647265349314054
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.964333191012365,
+        "centre": [
+          -2.643585777251261,
+          -1.6999217795198913,
+          5.69774063738727
+        ],
+        "spread": 0.3444372770576666,
+        "centre_shift": 0.8317510106868993
+      }
+    },
+    "scene_lr1e-2_token_lr1e-4_vis_xyz_tuning": {
+      "3691": {
+        "alive": 39,
+        "opacity_mass": 9.050576085780335,
+        "centre": [
+          -5.230876278303184,
+          -1.3841301648136517,
+          3.2324118306418206
+        ],
+        "spread": 0.4208832854802213,
+        "centre_shift": 0.8346872894315601
+      },
+      "886": {
+        "alive": 50,
+        "opacity_mass": 8.939870624046307,
+        "centre": [
+          0.047918236489183794,
+          0.023730475677377804,
+          1.4987574802320085
+        ],
+        "spread": 0.1780108615983892,
+        "centre_shift": 0.05034540816725732
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 5.252972049289383,
+        "centre": [
+          0.10581060962466793,
+          0.21368875550432226,
+          0.6674264146628044
+        ],
+        "spread": 0.09183349451238951,
+        "centre_shift": 0.013004370930557443
+      },
+      "3820": {
+        "alive": 43,
+        "opacity_mass": 6.8068243257709184,
+        "centre": [
+          2.093917912771195,
+          -0.7835979658803621,
+          3.690284195749497
+        ],
+        "spread": 0.453366788203897,
+        "centre_shift": 0.12458536297416511
+      },
+      "1793": {
+        "alive": 38,
+        "opacity_mass": 5.772571178453816,
+        "centre": [
+          -2.2448353084970205,
+          -0.7590999291332392,
+          4.776338103676454
+        ],
+        "spread": 0.4065306373673258,
+        "centre_shift": 0.5890699556201652
+      },
+      "2252": {
+        "alive": 50,
+        "opacity_mass": 4.5213906017597765,
+        "centre": [
+          -0.30536832130465136,
+          0.39586878907401973,
+          1.2989034790731233
+        ],
+        "spread": 0.15733807621553086,
+        "centre_shift": 0.039221172344208785
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 5.617592123046052,
+        "centre": [
+          0.00766135459258538,
+          0.13739200869270915,
+          0.7677333739516332
+        ],
+        "spread": 0.07798612156022915,
+        "centre_shift": 0.005511284250898126
+      },
+      "3937": {
+        "alive": 51,
+        "opacity_mass": 7.456783456585981,
+        "centre": [
+          -0.4617508269077796,
+          0.04152188492322102,
+          2.6254095334586145
+        ],
+        "spread": 0.31937926027201274,
+        "centre_shift": 0.05513484380674832
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 8.733368782359321,
+        "centre": [
+          -2.355874758137591,
+          0.06342199756406806,
+          1.4791887800527053
+        ],
+        "spread": 0.31870154892530866,
+        "centre_shift": 0.3072651317529742
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 5.823654142895521,
+        "centre": [
+          -1.4007561419946302,
+          -1.5409504578411444,
+          2.8713361138263758
+        ],
+        "spread": 0.4195387055268963,
+        "centre_shift": 0.11939517746338932
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 5.597216288889314,
+        "centre": [
+          -3.2275659531899423,
+          -0.5292076886917478,
+          2.35889844439567
+        ],
+        "spread": 0.3860917252557843,
+        "centre_shift": 0.7423435257530058
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 7.22352283357408,
+        "centre": [
+          -4.638218291565476,
+          -0.9429798573246831,
+          5.968507526970991
+        ],
+        "spread": 0.349375459826608,
+        "centre_shift": 0.20397746848166112
+      },
+      "2376": {
+        "alive": 39,
+        "opacity_mass": 5.0151879686673055,
+        "centre": [
+          1.5300068871593715,
+          -0.6314289555289625,
+          0.35079626410010256
+        ],
+        "spread": 0.1538887071737264,
+        "centre_shift": 0.02136082320167553
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 7.542315762897488,
+        "centre": [
+          -0.07592868404859232,
+          0.09297904682434055,
+          0.8844010110132747
+        ],
+        "spread": 0.08872749386631881,
+        "centre_shift": 0.006897467846309187
+      },
+      "1950": {
+        "alive": 52,
+        "opacity_mass": 6.0639180403450155,
+        "centre": [
+          -0.2845804706395957,
+          -0.010196154413190462,
+          2.7571801617854885
+        ],
+        "spread": 0.18621359068261298,
+        "centre_shift": 0.17099352489411676
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 5.800116926086503,
+        "centre": [
+          2.6965879953409706,
+          -1.0359186819512842,
+          1.5288128561364918
+        ],
+        "spread": 0.18867531454149775,
+        "centre_shift": 0.10705924979010673
+      },
+      "3372": {
+        "alive": 50,
+        "opacity_mass": 10.650594433328479,
+        "centre": [
+          -1.8562628009749862,
+          -0.19240008125876865,
+          5.713521584840614
+        ],
+        "spread": 1.2233439808033881,
+        "centre_shift": 0.6985746546406411
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 5.8991999506567385,
+        "centre": [
+          -4.47926691770244,
+          -2.187981744331811,
+          7.147251198881066
+        ],
+        "spread": 0.4695114203381165,
+        "centre_shift": 1.2072457346066774
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 5.116423266972674,
+        "centre": [
+          -0.8788947188104277,
+          -1.1998733894185054,
+          2.5537641268899893
+        ],
+        "spread": 0.14233258270963198,
+        "centre_shift": 0.012123558793969015
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.297497881593252,
+        "centre": [
+          -2.3587139456831006,
+          -1.4958827103083063,
+          4.993536796576531
+        ],
+        "spread": 0.3041631280088197,
+        "centre_shift": 0.05554468727272454
+      }
+    },
+    "scene_lr1e-2_token_lr1e-4_vis_opac_tuning": {
+      "3691": {
+        "alive": 38,
+        "opacity_mass": 8.99693352427363,
+        "centre": [
+          -5.22053034330842,
+          -1.3812945474074643,
+          3.227263519148142
+        ],
+        "spread": 0.41844131772109266,
+        "centre_shift": 0.822881651380617
+      },
+      "886": {
+        "alive": 50,
+        "opacity_mass": 9.462578569509787,
+        "centre": [
+          0.04314228700231441,
+          0.023834213907774283,
+          1.4903151695227344
+        ],
+        "spread": 0.17514131359207155,
+        "centre_shift": 0.04982569526385864
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 5.268164528999478,
+        "centre": [
+          0.10581279657785479,
+          0.21372748837223007,
+          0.6675623542947923
+        ],
+        "spread": 0.09181041316269639,
+        "centre_shift": 0.012880649351612407
+      },
+      "3820": {
+        "alive": 43,
+        "opacity_mass": 6.735253592783948,
+        "centre": [
+          2.08762323471536,
+          -0.7815873204543285,
+          3.677366773426328
+        ],
+        "spread": 0.4502063067068046,
+        "centre_shift": 0.11142064688563134
+      },
+      "1793": {
+        "alive": 38,
+        "opacity_mass": 5.764389974299686,
+        "centre": [
+          -2.2470643718115024,
+          -0.7595896127064032,
+          4.779556935974772
+        ],
+        "spread": 0.4069378278521942,
+        "centre_shift": 0.5851790457440615
+      },
+      "2252": {
+        "alive": 50,
+        "opacity_mass": 4.386247773072682,
+        "centre": [
+          -0.310548011797305,
+          0.40074076223295985,
+          1.3272338652179387
+        ],
+        "spread": 0.1640540231175796,
+        "centre_shift": 0.014027825512121079
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 5.591811895719729,
+        "centre": [
+          0.007794424234174989,
+          0.13777479185710825,
+          0.7692590045938622
+        ],
+        "spread": 0.07828359675689775,
+        "centre_shift": 0.006969663090931539
+      },
+      "3937": {
+        "alive": 51,
+        "opacity_mass": 7.462303930045891,
+        "centre": [
+          -0.46279931623080073,
+          0.04143523279832978,
+          2.6274264154205187
+        ],
+        "spread": 0.3193613341088451,
+        "centre_shift": 0.05698848054575928
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 8.712977490773483,
+        "centre": [
+          -2.361782533784268,
+          0.06383575670739686,
+          1.4842563203022847
+        ],
+        "spread": 0.3193779007710634,
+        "centre_shift": 0.3148889399302314
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 6.243206906867357,
+        "centre": [
+          -1.3895708109433453,
+          -1.5497212517403953,
+          2.8608640048118184
+        ],
+        "spread": 0.42466822233528495,
+        "centre_shift": 0.11159381035864617
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 5.598495570787122,
+        "centre": [
+          -3.226870687516494,
+          -0.528939398155232,
+          2.358063152802668
+        ],
+        "spread": 0.38708935576363984,
+        "centre_shift": 0.7434257274990219
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 7.217349797942454,
+        "centre": [
+          -4.639306487148849,
+          -0.94321751083613,
+          5.971000897804842
+        ],
+        "spread": 0.34955979209462396,
+        "centre_shift": 0.20658030533817154
+      },
+      "2376": {
+        "alive": 28,
+        "opacity_mass": 1.5085087397897041,
+        "centre": [
+          1.495435989001507,
+          -0.6276695740736774,
+          0.35255237056384625
+        ],
+        "spread": 0.22023353673403395,
+        "centre_shift": 0.0292159434234976
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 7.5449257554719225,
+        "centre": [
+          -0.07597761046661206,
+          0.09298520257621266,
+          0.8842420722832564
+        ],
+        "spread": 0.08865900715458873,
+        "centre_shift": 0.007040495011233524
+      },
+      "1950": {
+        "alive": 52,
+        "opacity_mass": 6.047293969944803,
+        "centre": [
+          -0.28440091309979026,
+          -0.009919589956141079,
+          2.760186211807297
+        ],
+        "spread": 0.18662519895040217,
+        "centre_shift": 0.17334238647757963
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 5.7948173776348995,
+        "centre": [
+          2.696914434958015,
+          -1.0359998246816042,
+          1.5288567847425667
+        ],
+        "spread": 0.1889337553025861,
+        "centre_shift": 0.10738534933105785
+      },
+      "3372": {
+        "alive": 50,
+        "opacity_mass": 10.724494937648501,
+        "centre": [
+          -1.872790025797825,
+          -0.19493006186253578,
+          5.755634935071154
+        ],
+        "spread": 1.2298027006787482,
+        "centre_shift": 0.7437622418357757
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 5.8922440622169105,
+        "centre": [
+          -4.479936535774016,
+          -2.1881309193037644,
+          7.149664462950529
+        ],
+        "spread": 0.46965642030704297,
+        "centre_shift": 1.2096062050596579
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 5.065593064154029,
+        "centre": [
+          -0.8759044431424723,
+          -1.197347948939203,
+          2.54736786924618
+        ],
+        "spread": 0.1422162221445952,
+        "centre_shift": 0.01838308682066476
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.292843471510274,
+        "centre": [
+          -2.359079981673911,
+          -1.496090541800527,
+          4.99371459387017
+        ],
+        "spread": 0.30424353662788345,
+        "centre_shift": 0.05566889659392315
+      }
+    },
+    "scene_lr1e-2_token_lr1e-4_vis_opac_core_gate2.5_tuning": {
+      "3691": {
+        "alive": 34,
+        "opacity_mass": 8.978270120133928,
+        "centre": [
+          -5.260181768830985,
+          -1.392813321105082,
+          3.246344362037593
+        ],
+        "spread": 0.31993815831709954,
+        "centre_shift": 0.8679165196754473
+      },
+      "886": {
+        "alive": 45,
+        "opacity_mass": 6.177416223517078,
+        "centre": [
+          0.08166317604666529,
+          0.018111775308226594,
+          1.3759196499529742
+        ],
+        "spread": 0.09866406157751309,
+        "centre_shift": 0.09209064895423992
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 5.584448576904833,
+        "centre": [
+          0.106234540962799,
+          0.21393916106593872,
+          0.6630036049039364
+        ],
+        "spread": 0.04294736888800524,
+        "centre_shift": 0.017278554498061677
+      },
+      "3820": {
+        "alive": 42,
+        "opacity_mass": 6.429707279863423,
+        "centre": [
+          2.0849795040911983,
+          -0.7752044030123645,
+          3.6304565583152946
+        ],
+        "spread": 0.4081411207837861,
+        "centre_shift": 0.08777267627125442
+      },
+      "1793": {
+        "alive": 38,
+        "opacity_mass": 5.786410956970198,
+        "centre": [
+          -2.251873205303935,
+          -0.7604523037529535,
+          4.781654499842151
+        ],
+        "spread": 0.37815695848268305,
+        "centre_shift": 0.5811734706880223
+      },
+      "2252": {
+        "alive": 50,
+        "opacity_mass": 4.377680628252064,
+        "centre": [
+          -0.31164781643286904,
+          0.40079473442006613,
+          1.3144143236835761
+        ],
+        "spread": 0.12935174607613845,
+        "centre_shift": 0.024496788314798276
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 5.56978912174236,
+        "centre": [
+          0.007541993862447846,
+          0.13792390038552194,
+          0.7649057621315636
+        ],
+        "spread": 0.0283222646828698,
+        "centre_shift": 0.0038353487880461844
+      },
+      "3937": {
+        "alive": 50,
+        "opacity_mass": 7.657957046311944,
+        "centre": [
+          -0.4617264586502499,
+          0.03970201448979425,
+          2.613889400500169
+        ],
+        "spread": 0.3184391525854618,
+        "centre_shift": 0.043642126688069105
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 8.744285615772242,
+        "centre": [
+          -2.364030971167648,
+          0.0639673042093512,
+          1.480898067630982
+        ],
+        "spread": 0.30276593817351116,
+        "centre_shift": 0.31527212144476713
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 6.006034336207931,
+        "centre": [
+          -1.388569580599136,
+          -1.5629924996188822,
+          2.8761151543578496
+        ],
+        "spread": 0.40419081742612323,
+        "centre_shift": 0.13069715661185333
+      },
+      "505": {
+        "alive": 34,
+        "opacity_mass": 5.423340308427323,
+        "centre": [
+          -3.1980758736677153,
+          -0.5192949418533639,
+          2.3212608916609216
+        ],
+        "spread": 0.3176348486251111,
+        "centre_shift": 0.7894801594849897
+      },
+      "3211": {
+        "alive": 34,
+        "opacity_mass": 7.159204116159344,
+        "centre": [
+          -4.652661981627737,
+          -0.9445572043504114,
+          5.963532583592159
+        ],
+        "spread": 0.30006121282214254,
+        "centre_shift": 0.21039774199080558
+      },
+      "2376": {
+        "alive": 29,
+        "opacity_mass": 1.6675890963983333,
+        "centre": [
+          1.51588950528904,
+          -0.640733630276753,
+          0.3445201511950707
+        ],
+        "spread": 0.07670560236856329,
+        "centre_shift": 0.02183730199741544
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 7.544200662632898,
+        "centre": [
+          -0.07622496581263244,
+          0.0931736831126751,
+          0.8830160433326112
+        ],
+        "spread": 0.0654934071249909,
+        "centre_shift": 0.008085669103564893
+      },
+      "1950": {
+        "alive": 50,
+        "opacity_mass": 5.871012507704092,
+        "centre": [
+          -0.26899351650385606,
+          -0.017003222206766054,
+          2.809294922073888
+        ],
+        "spread": 0.20331984721164298,
+        "centre_shift": 0.22035821301452105
+      },
+      "213": {
+        "alive": 37,
+        "opacity_mass": 5.7084591394683954,
+        "centre": [
+          2.698888353890399,
+          -1.0378388686346849,
+          1.5230229468201115
+        ],
+        "spread": 0.10452414912339228,
+        "centre_shift": 0.10761274446544351
+      },
+      "3372": {
+        "alive": 49,
+        "opacity_mass": 12.337309983075556,
+        "centre": [
+          -1.9755651543185762,
+          -0.19799510947262816,
+          5.94175065699684
+        ],
+        "spread": 1.1582743035227494,
+        "centre_shift": 0.9529461691269947
+      },
+      "1778": {
+        "alive": 36,
+        "opacity_mass": 5.666023953866404,
+        "centre": [
+          -4.506765119902134,
+          -2.1900767944268327,
+          7.1538046623298674
+        ],
+        "spread": 0.35991572320804754,
+        "centre_shift": 1.2274920623831438
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 4.9522294006755025,
+        "centre": [
+          -0.8800769726838789,
+          -1.203623735639867,
+          2.5488571570381757
+        ],
+        "spread": 0.09754154611080595,
+        "centre_shift": 0.016367061304990216
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.104522466407647,
+        "centre": [
+          -2.3728955900785706,
+          -1.5053725860053917,
+          5.006155369272452
+        ],
+        "spread": 0.23991079323816536,
+        "centre_shift": 0.0685183556073276
+      }
+    },
+    "scene_lr1e-2_token_lr1e-4_colmap_depth0.01_tuning": {
+      "3691": {
+        "alive": 39,
+        "opacity_mass": 8.813113616643278,
+        "centre": [
+          -5.91264642645295,
+          -1.5519011534341944,
+          3.598581981163916
+        ],
+        "spread": 0.4706338791638966,
+        "centre_shift": 1.6250554962105999
+      },
+      "886": {
+        "alive": 50,
+        "opacity_mass": 3.14632444261224,
+        "centre": [
+          0.07204061949815545,
+          0.02435470266181855,
+          1.6421089246103433
+        ],
+        "spread": 0.205990187281386,
+        "centre_shift": 0.1751129176130512
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 5.354879453894682,
+        "centre": [
+          0.10592179890529849,
+          0.2136871085480051,
+          0.6674694343260387
+        ],
+        "spread": 0.09147462657153607,
+        "centre_shift": 0.013010422496028337
+      },
+      "3820": {
+        "alive": 42,
+        "opacity_mass": 8.96036467542043,
+        "centre": [
+          3.589221085357217,
+          -1.2878255321590462,
+          6.083551588330663
+        ],
+        "spread": 0.815044403545381,
+        "centre_shift": 2.985844575127337
+      },
+      "1793": {
+        "alive": 38,
+        "opacity_mass": 5.831749545329615,
+        "centre": [
+          -2.274600509301873,
+          -0.7566143813108014,
+          4.836997669109382
+        ],
+        "spread": 0.37812592376660115,
+        "centre_shift": 0.5225888092159552
+      },
+      "2252": {
+        "alive": 50,
+        "opacity_mass": 4.602757432963699,
+        "centre": [
+          -0.3056861760795213,
+          0.38831070735436596,
+          1.2801522100608327
+        ],
+        "spread": 0.1565325054537041,
+        "centre_shift": 0.0594097147739292
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 6.065771301800851,
+        "centre": [
+          0.008457877792793974,
+          0.13910613892571955,
+          0.7692133466447969
+        ],
+        "spread": 0.07539635804093363,
+        "centre_shift": 0.0077333664445932235
+      },
+      "3937": {
+        "alive": 51,
+        "opacity_mass": 7.339712748049351,
+        "centre": [
+          -0.48787767419664396,
+          0.03741281046288936,
+          2.653816503889853
+        ],
+        "spread": 0.31045603374622943,
+        "centre_shift": 0.08485243469963946
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 8.06265345792417,
+        "centre": [
+          -2.3514180071573847,
+          0.06296396929016121,
+          1.4845586649875653
+        ],
+        "spread": 0.3155947796358236,
+        "centre_shift": 0.30597178427886035
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 5.809570135543424,
+        "centre": [
+          -1.4372790077267437,
+          -1.5706721396781458,
+          2.9324089557308586
+        ],
+        "spread": 0.4235661616648725,
+        "centre_shift": 0.19618392498319587
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 4.380739345690728,
+        "centre": [
+          -3.5674158143110097,
+          -0.5730077758612391,
+          2.6427829663845888
+        ],
+        "spread": 0.4414464340752378,
+        "centre_shift": 0.2993860766481517
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 6.86729004240329,
+        "centre": [
+          -5.003712755829034,
+          -1.017761724107034,
+          6.418145688405726
+        ],
+        "spread": 0.43182930757538923,
+        "centre_shift": 0.7880720142213696
+      },
+      "2376": {
+        "alive": 39,
+        "opacity_mass": 5.489706380147254,
+        "centre": [
+          1.5216927367160231,
+          -0.6278462768774549,
+          0.3298108762111894
+        ],
+        "spread": 0.18126357733830795,
+        "centre_shift": 0.010053386801198211
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 7.775260904250899,
+        "centre": [
+          -0.07587835235237143,
+          0.0926406861948879,
+          0.8865304960866232
+        ],
+        "spread": 0.08751391621769267,
+        "centre_shift": 0.005671195566984086
+      },
+      "1950": {
+        "alive": 53,
+        "opacity_mass": 7.794904020503964,
+        "centre": [
+          -0.25155723931969076,
+          -0.020852453652350562,
+          3.3451097273028054
+        ],
+        "spread": 0.3129758835821971,
+        "centre_shift": 0.7277113213286561
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 5.907742111618973,
+        "centre": [
+          2.6921600595253676,
+          -1.0340606295682284,
+          1.5252689673532895
+        ],
+        "spread": 0.18829412067993845,
+        "centre_shift": 0.10128193059291575
+      },
+      "3372": {
+        "alive": 50,
+        "opacity_mass": 13.023651149803527,
+        "centre": [
+          -2.1029782159407797,
+          -0.19053050347516068,
+          6.192345079391428
+        ],
+        "spread": 1.140616288521951,
+        "centre_shift": 1.2320504518255884
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 5.8008348793393925,
+        "centre": [
+          -4.43607283582242,
+          -2.1582196355998757,
+          7.061223483884619
+        ],
+        "spread": 0.48383720641548744,
+        "centre_shift": 1.1070868837024284
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 5.0985335335561786,
+        "centre": [
+          -0.8774893037828473,
+          -1.199361727410009,
+          2.550499539683049
+        ],
+        "spread": 0.13943249755017148,
+        "centre_shift": 0.015223549645116501
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.6082169619637625,
+        "centre": [
+          -2.3484459971606237,
+          -1.4883972507198246,
+          4.98380418026968
+        ],
+        "spread": 0.3009085969493581,
+        "centre_shift": 0.049219274323241524
+      }
+    },
+    "scene_lr1e-2_token_lr1e-4_colmap_clean_depth0.01_tuning": {
+      "3691": {
+        "alive": 39,
+        "opacity_mass": 9.191919177491187,
+        "centre": [
+          -5.904300465858961,
+          -1.5583276399839825,
+          3.604963096192654
+        ],
+        "spread": 0.49336199297120525,
+        "centre_shift": 1.6225118695634224
+      },
+      "886": {
+        "alive": 50,
+        "opacity_mass": 3.850268054404296,
+        "centre": [
+          0.0829217146360376,
+          0.02544225174152675,
+          1.6597012608206227
+        ],
+        "spread": 0.20703954514151476,
+        "centre_shift": 0.19208395643297912
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 5.360421441146173,
+        "centre": [
+          0.10594479872219782,
+          0.2134890108868082,
+          0.6669990957162913
+        ],
+        "spread": 0.0913837529204989,
+        "centre_shift": 0.013453066490161387
+      },
+      "3820": {
+        "alive": 47,
+        "opacity_mass": 9.021212810567114,
+        "centre": [
+          2.9104442228690166,
+          -1.056228452316878,
+          5.026589180318244
+        ],
+        "spread": 0.7540817749567391,
+        "centre_shift": 1.7085563972625915
+      },
+      "1793": {
+        "alive": 38,
+        "opacity_mass": 6.498782827059134,
+        "centre": [
+          -2.3403442012010016,
+          -0.7894459960387464,
+          4.972528146804127
+        ],
+        "spread": 0.3927945806514402,
+        "centre_shift": 0.3688073107624562
+      },
+      "2252": {
+        "alive": 50,
+        "opacity_mass": 4.822296791826375,
+        "centre": [
+          -0.30615991745898036,
+          0.3902729908332023,
+          1.2868637284260276
+        ],
+        "spread": 0.15377843860407794,
+        "centre_shift": 0.052470733854211735
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 6.059827961202245,
+        "centre": [
+          0.008249120982944872,
+          0.13879173100261236,
+          0.7690172007881
+        ],
+        "spread": 0.07524261867724664,
+        "centre_shift": 0.007347737148154262
+      },
+      "3937": {
+        "alive": 51,
+        "opacity_mass": 7.256061353084078,
+        "centre": [
+          -0.47887498211741014,
+          0.03980345672075073,
+          2.7007242735214887
+        ],
+        "spread": 0.3175116343570872,
+        "centre_shift": 0.13008949916503987
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 7.726168009932735,
+        "centre": [
+          -2.3627884825123404,
+          0.06438901104562714,
+          1.4910580622255782
+        ],
+        "spread": 0.31835709589654165,
+        "centre_shift": 0.3191107118419971
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 5.829431133756259,
+        "centre": [
+          -1.4321570297705304,
+          -1.5669490740338425,
+          2.9223630603772555
+        ],
+        "spread": 0.4206002928837242,
+        "centre_shift": 0.184391087148557
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 4.254859156959995,
+        "centre": [
+          -3.5948925719262697,
+          -0.5737060437765908,
+          2.657497728786867
+        ],
+        "spread": 0.4382663627142995,
+        "centre_shift": 0.26864132879985414
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 6.816666881570406,
+        "centre": [
+          -4.989854899141062,
+          -1.007772583628026,
+          6.398363282161579
+        ],
+        "spread": 0.42529072069477103,
+        "centre_shift": 0.7629961620547802
+      },
+      "2376": {
+        "alive": 39,
+        "opacity_mass": 5.494666263955878,
+        "centre": [
+          1.5216630060672962,
+          -0.627849754105909,
+          0.3298650189386095
+        ],
+        "spread": 0.18124252421411993,
+        "centre_shift": 0.01001243144351444
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 7.817618931992911,
+        "centre": [
+          -0.07601346708453556,
+          0.09249644346905474,
+          0.8858874956196289
+        ],
+        "spread": 0.08729015459116132,
+        "centre_shift": 0.006108431792619545
+      },
+      "1950": {
+        "alive": 53,
+        "opacity_mass": 6.542597075615049,
+        "centre": [
+          -0.25643630138072315,
+          -0.018540832083289528,
+          3.296628854689748
+        ],
+        "spread": 0.3035274564171303,
+        "centre_shift": 0.6793125788348258
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 5.914447609879517,
+        "centre": [
+          2.689666214290511,
+          -1.0331267164877018,
+          1.5236827987429185
+        ],
+        "spread": 0.18825613340290315,
+        "centre_shift": 0.09822202532955022
+      },
+      "3372": {
+        "alive": 50,
+        "opacity_mass": 14.041278661332854,
+        "centre": [
+          -2.010208593237182,
+          -0.18213753890761883,
+          5.922131985277889
+        ],
+        "spread": 1.1504280473135582,
+        "centre_shift": 0.9466096565385063
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 5.524151211697372,
+        "centre": [
+          -4.4386154475674235,
+          -2.1482984558940785,
+          7.0351588103815095
+        ],
+        "spread": 0.49008223498404896,
+        "centre_shift": 1.084852068698282
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 5.000863725934664,
+        "centre": [
+          -0.875859610431489,
+          -1.19843672548434,
+          2.548641875192568
+        ],
+        "spread": 0.14031006578811872,
+        "centre_shift": 0.01753227997043622
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.798304335790249,
+        "centre": [
+          -2.347386085088628,
+          -1.48210779569531,
+          4.965104504891891
+        ],
+        "spread": 0.31001544962667615,
+        "centre_shift": 0.034844359033689154
+      }
+    },
+    "scene_lr1e-2_token_lr1e-4_vggt_omega_depth0.01_tuning": {
+      "3691": {
+        "alive": 39,
+        "opacity_mass": 9.297759194635915,
+        "centre": [
+          -5.408368548523392,
+          -1.4247808931933377,
+          3.315050079981865
+        ],
+        "spread": 0.438890598555664,
+        "centre_shift": 1.0331196774664506
+      },
+      "886": {
+        "alive": 50,
+        "opacity_mass": 7.48848081525648,
+        "centre": [
+          0.05146321313723697,
+          0.025394201573533177,
+          1.5106513700177446
+        ],
+        "spread": 0.18400212528148588,
+        "centre_shift": 0.0561404740548536
+      },
+      "787": {
+        "alive": 51,
+        "opacity_mass": 4.85005426837597,
+        "centre": [
+          0.10451315007933491,
+          0.21212948836195258,
+          0.666636295008468
+        ],
+        "spread": 0.09388118395916423,
+        "centre_shift": 0.013396435893633546
+      },
+      "3820": {
+        "alive": 46,
+        "opacity_mass": 6.92270585472545,
+        "centre": [
+          1.9930504931786353,
+          -0.7448623198641682,
+          3.5475532141689015
+        ],
+        "spread": 0.4120046514050735,
+        "centre_shift": 0.06591502268897723
+      },
+      "1793": {
+        "alive": 38,
+        "opacity_mass": 5.795562446823357,
+        "centre": [
+          -2.2446613151739743,
+          -0.7583474486000866,
+          4.777436207205142
+        ],
+        "spread": 0.4041101179579059,
+        "centre_shift": 0.5882599141206458
+      },
+      "2252": {
+        "alive": 50,
+        "opacity_mass": 5.1890631399000995,
+        "centre": [
+          -0.3294173827486323,
+          0.3638230322663898,
+          1.2224369469770657
+        ],
+        "spread": 0.14300328022863637,
+        "centre_shift": 0.12485065453540885
+      },
+      "2031": {
+        "alive": 50,
+        "opacity_mass": 5.676913514034823,
+        "centre": [
+          0.008010568785338451,
+          0.13769772153822732,
+          0.7683344795247848
+        ],
+        "spread": 0.07765258282155943,
+        "centre_shift": 0.006268460226297541
+      },
+      "3937": {
+        "alive": 51,
+        "opacity_mass": 7.593784723188946,
+        "centre": [
+          -0.4847218047990808,
+          0.03912252562871206,
+          2.688802777836956
+        ],
+        "spread": 0.3218501001818977,
+        "centre_shift": 0.1188084892506637
+      },
+      "2378": {
+        "alive": 49,
+        "opacity_mass": 8.770492130101047,
+        "centre": [
+          -2.342040907290787,
+          0.06475060985410597,
+          1.474122056267128
+        ],
+        "spread": 0.31444368085407803,
+        "centre_shift": 0.292758809503284
+      },
+      "2458": {
+        "alive": 37,
+        "opacity_mass": 5.807758234346181,
+        "centre": [
+          -1.4320363380619223,
+          -1.5577019672862198,
+          2.886310646065506
+        ],
+        "spread": 0.36754126555242717,
+        "centre_shift": 0.15231358192897937
+      },
+      "505": {
+        "alive": 35,
+        "opacity_mass": 5.60959373872484,
+        "centre": [
+          -3.2288343422780703,
+          -0.5289008436410171,
+          2.359649022969612
+        ],
+        "spread": 0.38595652784016277,
+        "centre_shift": 0.7409282695657758
+      },
+      "3211": {
+        "alive": 37,
+        "opacity_mass": 7.156808257930351,
+        "centre": [
+          -4.633672066231644,
+          -0.9424093662757819,
+          5.965327006468643
+        ],
+        "spread": 0.3480737969148846,
+        "centre_shift": 0.19856035105496384
+      },
+      "2376": {
+        "alive": 39,
+        "opacity_mass": 4.887879521396826,
+        "centre": [
+          1.6319080924503726,
+          -0.6615898878255994,
+          0.33609090573992867
+        ],
+        "spread": 0.19694783107661104,
+        "centre_shift": 0.12041270853188601
+      },
+      "41": {
+        "alive": 50,
+        "opacity_mass": 7.693735596229089,
+        "centre": [
+          -0.07608988261559732,
+          0.09285975087687003,
+          0.8854298480363756
+        ],
+        "spread": 0.08799970157511049,
+        "centre_shift": 0.006393064545219305
+      },
+      "1950": {
+        "alive": 53,
+        "opacity_mass": 7.6552105962127825,
+        "centre": [
+          -0.27597124088073643,
+          -0.021289349830010847,
+          3.1791894581019147
+        ],
+        "spread": 0.29020331768855917,
+        "centre_shift": 0.560403437825603
+      },
+      "213": {
+        "alive": 39,
+        "opacity_mass": 5.626581905747116,
+        "centre": [
+          2.7051784528335876,
+          -1.0396183483799846,
+          1.530950510790124
+        ],
+        "spread": 0.1902698041920016,
+        "centre_shift": 0.11650483973848469
+      },
+      "3372": {
+        "alive": 51,
+        "opacity_mass": 13.431251093589026,
+        "centre": [
+          -1.905486632565521,
+          -0.1774336202547577,
+          5.679859932752793
+        ],
+        "spread": 1.0459151652187075,
+        "centre_shift": 0.6827034491416503
+      },
+      "1778": {
+        "alive": 37,
+        "opacity_mass": 5.613120447549207,
+        "centre": [
+          -4.443507615692676,
+          -2.171817970761432,
+          7.102769132527826
+        ],
+        "spread": 0.47686065839156494,
+        "centre_shift": 1.1483293148512705
+      },
+      "2840": {
+        "alive": 37,
+        "opacity_mass": 5.444379319754034,
+        "centre": [
+          -0.8861794802248136,
+          -1.1999587944165688,
+          2.558208537059951
+        ],
+        "spread": 0.14244484627888562,
+        "centre_shift": 0.0049992425215124835
+      },
+      "110": {
+        "alive": 37,
+        "opacity_mass": 4.969647672855935,
+        "centre": [
+          -2.4355540933409165,
+          -1.5535429240461858,
+          5.156902012792587
+        ],
+        "spread": 0.3099969751616809,
+        "centre_shift": 0.23502806999844095
+      }
+    }
+  }
+}

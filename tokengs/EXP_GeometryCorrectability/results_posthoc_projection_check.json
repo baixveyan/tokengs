@@ -1,0 +1,53 @@
+{
+ "note": "POST-HOC positive control: candidates centred on the laser depth (index 15 = truth); photometric 3x3 NCC cost; 12 val scenes, tokengs/release cache, pixels with >=3 visible input views",
+ "bins": {
+  "tex 0-0.02 step 0-1px": {
+   "n": 9841,
+   "GT_rank_median(of 31)": 8.0,
+   "argmin_within_1_step_of_GT": 0.237,
+   "chance_within_1": 0.097
+  },
+  "tex 0-0.02 step 1-99px": {
+   "n": 14664,
+   "GT_rank_median(of 31)": 10.0,
+   "argmin_within_1_step_of_GT": 0.172,
+   "chance_within_1": 0.097
+  },
+  "tex 0.02-0.05 step 0-1px": {
+   "n": 38634,
+   "GT_rank_median(of 31)": 8.0,
+   "argmin_within_1_step_of_GT": 0.244,
+   "chance_within_1": 0.097
+  },
+  "tex 0.02-0.05 step 1-99px": {
+   "n": 25140,
+   "GT_rank_median(of 31)": 9.0,
+   "argmin_within_1_step_of_GT": 0.22,
+   "chance_within_1": 0.097
+  },
+  "tex 0.05-0.1 step 0-1px": {
+   "n": 24196,
+   "GT_rank_median(of 31)": 4.0,
+   "argmin_within_1_step_of_GT": 0.393,
+   "chance_within_1": 0.097
+  },
+  "tex 0.05-0.1 step 1-99px": {
+   "n": 27918,
+   "GT_rank_median(of 31)": 10.0,
+   "argmin_within_1_step_of_GT": 0.209,
+   "chance_within_1": 0.097
+  },
+  "tex 0.1-9 step 0-1px": {
+   "n": 62551,
+   "GT_rank_median(of 31)": 6.0,
+   "argmin_within_1_step_of_GT": 0.314,
+   "chance_within_1": 0.097
+  },
+  "tex 0.1-9 step 1-99px": {
+   "n": 37056,
+   "GT_rank_median(of 31)": 7.0,
+   "argmin_within_1_step_of_GT": 0.302,
+   "chance_within_1": 0.097
+  }
+ }
+}

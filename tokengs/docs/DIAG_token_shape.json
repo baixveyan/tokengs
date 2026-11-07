@@ -1,0 +1,184 @@
+{
+  "definitions": "Is a token's group of 64 Gaussians a disc on the surface, or a blob?  (no training; 50 validation windows)",
+  "gpu": "1",
+  "models": {
+    "laser_region": {
+      "tokens": 192116,
+      "flatness": {
+        "p10": 0.0077,
+        "p50": 0.3116,
+        "p90": 0.7173
+      },
+      "thickness_cm": {
+        "p10": 0.0296,
+        "p50": 1.3074,
+        "p90": 4.7852
+      },
+      "extent_cm": {
+        "p10": 3.7568,
+        "p50": 9.531,
+        "p90": 40.1247
+      },
+      "ray_over_lateral": {
+        "p10": 0.4042,
+        "p50": 1.3229,
+        "p90": 5.4524
+      },
+      "no_depth_jump": {
+        "flatness": {
+          "p10": 0.007,
+          "p50": 0.2427,
+          "p90": 0.6951
+        },
+        "thickness_cm": {
+          "p10": 0.0271,
+          "p50": 0.8978,
+          "p90": 3.7327
+        }
+      },
+      "share_disc_flatness_lt_0.3": 0.5514715909957886,
+      "share_ray_spread_gt_lateral": 0.6180849075317383
+    },
+    "official": {
+      "tokens": 192116,
+      "flatness": {
+        "p10": 0.3572,
+        "p50": 0.5783,
+        "p90": 0.81
+      },
+      "thickness_cm": {
+        "p10": 0.7787,
+        "p50": 1.8554,
+        "p90": 5.1913
+      },
+      "extent_cm": {
+        "p10": 2.7868,
+        "p50": 6.6907,
+        "p90": 20.1429
+      },
+      "ray_over_lateral": {
+        "p10": 0.6978,
+        "p50": 1.3726,
+        "p90": 3.112
+      },
+      "normal_cos": {
+        "p10": 0.1364,
+        "p50": 0.6842,
+        "p90": 0.9788
+      },
+      "no_depth_jump": {
+        "flatness": {
+          "p10": 0.3681,
+          "p50": 0.5838,
+          "p90": 0.8129
+        },
+        "thickness_cm": {
+          "p10": 0.8064,
+          "p50": 1.8918,
+          "p90": 5.195
+        },
+        "normal_cos": {
+          "p10": 0.1248,
+          "p50": 0.6364,
+          "p90": 0.9718
+        }
+      },
+      "share_disc_flatness_lt_0.3": 0.038839191198349,
+      "share_ray_spread_gt_lateral": 0.7168273329734802
+    },
+    "sft_readout_rgb_depth": {
+      "tokens": 187104,
+      "flatness": {
+        "p10": 0.3404,
+        "p50": 0.5584,
+        "p90": 0.7965
+      },
+      "thickness_cm": {
+        "p10": 0.8776,
+        "p50": 2.1916,
+        "p90": 6.0517
+      },
+      "extent_cm": {
+        "p10": 3.1856,
+        "p50": 9.6496,
+        "p90": 30.5077
+      },
+      "ray_over_lateral": {
+        "p10": 0.9819,
+        "p50": 2.0535,
+        "p90": 4.8094
+      },
+      "normal_cos": {
+        "p10": 0.0958,
+        "p50": 0.5776,
+        "p90": 0.9753
+      },
+      "no_depth_jump": {
+        "flatness": {
+          "p10": 0.3474,
+          "p50": 0.5621,
+          "p90": 0.7982
+        },
+        "thickness_cm": {
+          "p10": 0.92,
+          "p50": 2.2481,
+          "p90": 6.0604
+        },
+        "normal_cos": {
+          "p10": 0.0842,
+          "p50": 0.5026,
+          "p90": 0.9594
+        }
+      },
+      "share_disc_flatness_lt_0.3": 0.05175211653113365,
+      "share_ray_spread_gt_lateral": 0.8936420679092407
+    },
+    "sft_readout_rgb_depth_thick": {
+      "tokens": 195993,
+      "flatness": {
+        "p10": 0.3101,
+        "p50": 0.5223,
+        "p90": 0.7784
+      },
+      "thickness_cm": {
+        "p10": 0.6982,
+        "p50": 1.4254,
+        "p90": 3.222
+      },
+      "extent_cm": {
+        "p10": 2.4669,
+        "p50": 5.5543,
+        "p90": 15.1652
+      },
+      "ray_over_lateral": {
+        "p10": 0.5185,
+        "p50": 1.029,
+        "p90": 2.339
+      },
+      "normal_cos": {
+        "p10": 0.2307,
+        "p50": 0.8429,
+        "p90": 0.9882
+      },
+      "no_depth_jump": {
+        "flatness": {
+          "p10": 0.3179,
+          "p50": 0.5268,
+          "p90": 0.781
+        },
+        "thickness_cm": {
+          "p10": 0.7147,
+          "p50": 1.4353,
+          "p90": 3.1737
+        },
+        "normal_cos": {
+          "p10": 0.23,
+          "p50": 0.8431,
+          "p90": 0.988
+        }
+      },
+      "share_disc_flatness_lt_0.3": 0.07773644477128983,
+      "share_ray_spread_gt_lateral": 0.5194777250289917
+    }
+  }
+}

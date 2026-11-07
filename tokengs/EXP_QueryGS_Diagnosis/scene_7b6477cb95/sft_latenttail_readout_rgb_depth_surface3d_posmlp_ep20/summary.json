@@ -1,0 +1,79 @@
+{
+ "checkpoint": "/home/jms/xveyan/4DGS/TokenGS/EXP_ScanNetPP/sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20/model.safetensors",
+ "psnr_all_targets": 29.99893569946289,
+ "psnr_shown_views": [
+  29.067,
+  32.176,
+  32.33
+ ],
+ "depth_absrel_shown_views": 0.0326690673828125,
+ "thickness_shown_views_p50_p90": [
+  0.05241921544075012,
+  0.11452029645442963
+ ],
+ "junk_share": 0.012149810791015625,
+ "visible_gaussians_dist_p50_p90": [
+  0.02824641391634941,
+  0.12130078673362732
+ ],
+ "c_centroid_mean": 0.039045482873916626,
+ "token_parallax_lt2deg_alive": 0.1164383590221405,
+ "tokens20": [
+  564,
+  875,
+  1190,
+  213,
+  2734,
+  170,
+  884,
+  547,
+  250,
+  896,
+  357,
+  95,
+  151,
+  643,
+  942,
+  305,
+  818,
+  236,
+  542,
+  1011
+ ],
+ "tokens20_render_in_attention90": [
+  0.922,
+  0.796,
+  0.851,
+  0.964,
+  0.908,
+  0.711,
+  0.882,
+  0.856,
+  0.943,
+  0.868,
+  0.902,
+  0.785,
+  0.878,
+  0.872,
+  0.917,
+  0.812,
+  0.799,
+  0.97,
+  0.884,
+  0.973
+ ],
+ "ray_probe_tokens_per_pixel": [
+  13,
+  14,
+  11,
+  9,
+  11,
+  8,
+  13,
+  20,
+  21,
+  15,
+  19,
+  24
+ ]
+}

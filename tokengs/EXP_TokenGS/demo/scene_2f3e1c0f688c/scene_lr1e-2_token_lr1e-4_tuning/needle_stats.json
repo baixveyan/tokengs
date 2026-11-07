@@ -1,0 +1,95 @@
+{
+  "scene_id": "2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd",
+  "definitions": {
+    "alive": "opacity > 1/255; all percentiles/fractions opacity-weighted over alive children unless noted",
+    "aniso": "max scale / min scale",
+    "cos_long_axis_ray": "|cos| between the longest axis and the ray from the nearest input camera centre",
+    "parallax_deg": "largest angle between the rays from the 6 input cameras to the child centre",
+    "outside_all_input_frustums": "centre not inside any input view (z > znear and inside the image)"
+  },
+  "needle": {
+    "alive_ratio": 0.6992568969726562,
+    "opacity_mean": 0.06993477046489716,
+    "children": 183306,
+    "opacity_mass_fraction": 0.9947378635406494,
+    "aniso_p50_weighted": 24.991649627685547,
+    "aniso_p50_unweighted": 60.99984359741211,
+    "cos_long_axis_ray_p50_weighted": 0.5951507091522217,
+    "long_axis_along_ray_gt0.9_weighted": 0.1675747939977405,
+    "outside_all_input_frustums_weighted": 0.01118855844558157,
+    "outside_all_input_frustums_count_opacity_gt0.1": 708,
+    "parallax_buckets": [
+      {
+        "parallax_deg": [
+          0.0,
+          4.0
+        ],
+        "children": 0,
+        "opacity_mass_fraction": 0.0,
+        "aniso_p50_weighted": NaN,
+        "aniso_p50_unweighted": NaN,
+        "cos_long_axis_ray_p50_weighted": NaN,
+        "long_axis_along_ray_gt0.9_weighted": NaN
+      },
+      {
+        "parallax_deg": [
+          4.0,
+          9.0
+        ],
+        "children": 14349,
+        "opacity_mass_fraction": 0.17794863879680634,
+        "aniso_p50_weighted": 8.72149658203125,
+        "aniso_p50_unweighted": 12.423187255859375,
+        "cos_long_axis_ray_p50_weighted": 0.4125719964504242,
+        "long_axis_along_ray_gt0.9_weighted": 0.06152098854895911
+      },
+      {
+        "parallax_deg": [
+          9.0,
+          20.0
+        ],
+        "children": 43384,
+        "opacity_mass_fraction": 0.3207944631576538,
+        "aniso_p50_weighted": 20.909055709838867,
+        "aniso_p50_unweighted": 30.615196228027344,
+        "cos_long_axis_ray_p50_weighted": 0.6614866852760315,
+        "long_axis_along_ray_gt0.9_weighted": 0.1713553979831699
+      },
+      {
+        "parallax_deg": [
+          20.0,
+          180.0
+        ],
+        "children": 125573,
+        "opacity_mass_fraction": 0.49599477648735046,
+        "aniso_p50_weighted": 46.989723205566406,
+        "aniso_p50_unweighted": 101.702392578125,
+        "cos_long_axis_ray_p50_weighted": 0.6188117861747742,
+        "long_axis_along_ray_gt0.9_weighted": 0.2031786588592562
+      }
+    ],
+    "opacity_quantiles": {
+      "0.1": 0.0007167649455368519,
+      "0.5": 0.02345946989953518,
+      "0.9": 0.19446520507335663,
+      "0.99": 0.6329829096794128
+    },
+    "opacity_low_ratio_lt0.1": 0.7980804443359375,
+    "opacity_high_ratio_gt0.9": 0.001049041748046875
+  },
+  "geometry": {
+    "sw_loss": 0.5319622159004211,
+    "packing_loss": 8.415054321289062,
+    "inter_loss": 1.2163563966751099,
+    "packing_ratio": 402.41796875,
+    "packing_target": 5.776834964752197,
+    "effective_children": 14.290018081665039,
+    "center_variance": 0.03902494162321091,
+    "local_scale_variance": 0.0013297381810843945,
+    "inter_distance": 0.9566278457641602,
+    "inter_distance_median": 0.4350857734680176,
+    "inter_too_close": 0.79052734375,
+    "inter_too_far": 0.12298583984375,
+    "active_slot_ratio": 1.0
+  }
+}

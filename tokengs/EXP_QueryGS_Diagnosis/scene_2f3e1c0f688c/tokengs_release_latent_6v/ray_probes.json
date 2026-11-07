@@ -1,0 +1,1045 @@
+[
+ {
+  "probe": 0,
+  "kind": "fixed",
+  "pixel_yx": [
+   64,
+   75
+  ],
+  "rendered_depth": 3.0669748783111572,
+  "gt_depth": 0.0,
+  "thickness": 0.18584178388118744,
+  "n_tokens_ge_1pct": 15,
+  "tokens": [
+   {
+    "token": 898,
+    "weight": 0.182,
+    "token_centre_depth": 2.5978
+   },
+   {
+    "token": 3802,
+    "weight": 0.1629,
+    "token_centre_depth": 3.7998
+   },
+   {
+    "token": 3970,
+    "weight": 0.1562,
+    "token_centre_depth": 2.8508
+   },
+   {
+    "token": 2946,
+    "weight": 0.0838,
+    "token_centre_depth": 2.5431
+   },
+   {
+    "token": 730,
+    "weight": 0.0763,
+    "token_centre_depth": 4.2066
+   },
+   {
+    "token": 2778,
+    "weight": 0.061,
+    "token_centre_depth": 3.5321
+   },
+   {
+    "token": 1922,
+    "weight": 0.0583,
+    "token_centre_depth": 2.5559
+   },
+   {
+    "token": 1754,
+    "weight": 0.0407,
+    "token_centre_depth": 4.196
+   },
+   {
+    "token": 2844,
+    "weight": 0.0396,
+    "token_centre_depth": 2.4238
+   },
+   {
+    "token": 3989,
+    "weight": 0.0353,
+    "token_centre_depth": 4.3029
+   },
+   {
+    "token": 796,
+    "weight": 0.0313,
+    "token_centre_depth": 2.4536
+   },
+   {
+    "token": 3868,
+    "weight": 0.0205,
+    "token_centre_depth": 2.4219
+   },
+   {
+    "token": 2965,
+    "weight": 0.0151,
+    "token_centre_depth": 4.3703
+   },
+   {
+    "token": 1941,
+    "weight": 0.0145,
+    "token_centre_depth": 4.3648
+   },
+   {
+    "token": 917,
+    "weight": 0.0118,
+    "token_centre_depth": 4.464
+   }
+  ]
+ },
+ {
+  "probe": 1,
+  "kind": "fixed",
+  "pixel_yx": [
+   64,
+   224
+  ],
+  "rendered_depth": 5.279576778411865,
+  "gt_depth": 0.0,
+  "thickness": 0.09268521517515182,
+  "n_tokens_ge_1pct": 8,
+  "tokens": [
+   {
+    "token": 3976,
+    "weight": 0.3241,
+    "token_centre_depth": 5.6836
+   },
+   {
+    "token": 1928,
+    "weight": 0.213,
+    "token_centre_depth": 5.4062
+   },
+   {
+    "token": 904,
+    "weight": 0.2067,
+    "token_centre_depth": 5.4967
+   },
+   {
+    "token": 2952,
+    "weight": 0.0805,
+    "token_centre_depth": 5.717
+   },
+   {
+    "token": 1304,
+    "weight": 0.027,
+    "token_centre_depth": 3.7363
+   },
+   {
+    "token": 280,
+    "weight": 0.0187,
+    "token_centre_depth": 3.3857
+   },
+   {
+    "token": 1499,
+    "weight": 0.0148,
+    "token_centre_depth": 4.986
+   },
+   {
+    "token": 3547,
+    "weight": 0.011,
+    "token_centre_depth": 5.1376
+   }
+  ]
+ },
+ {
+  "probe": 2,
+  "kind": "fixed",
+  "pixel_yx": [
+   64,
+   373
+  ],
+  "rendered_depth": 2.560695171356201,
+  "gt_depth": 0.0,
+  "thickness": 0.24279579520225525,
+  "n_tokens_ge_1pct": 7,
+  "tokens": [
+   {
+    "token": 2088,
+    "weight": 0.2962,
+    "token_centre_depth": 2.83
+   },
+   {
+    "token": 1064,
+    "weight": 0.248,
+    "token_centre_depth": 2.8475
+   },
+   {
+    "token": 40,
+    "weight": 0.1706,
+    "token_centre_depth": 2.9272
+   },
+   {
+    "token": 3112,
+    "weight": 0.1598,
+    "token_centre_depth": 2.9353
+   },
+   {
+    "token": 3996,
+    "weight": 0.0282,
+    "token_centre_depth": 0.7456
+   },
+   {
+    "token": 924,
+    "weight": 0.0236,
+    "token_centre_depth": 0.7476
+   },
+   {
+    "token": 2972,
+    "weight": 0.0196,
+    "token_centre_depth": 0.7492
+   }
+  ]
+ },
+ {
+  "probe": 3,
+  "kind": "fixed",
+  "pixel_yx": [
+   192,
+   75
+  ],
+  "rendered_depth": 0.9128561615943909,
+  "gt_depth": 0.0,
+  "thickness": 0.17139241099357605,
+  "n_tokens_ge_1pct": 23,
+  "tokens": [
+   {
+    "token": 114,
+    "weight": 0.1394,
+    "token_centre_depth": 0.8827
+   },
+   {
+    "token": 3186,
+    "weight": 0.1067,
+    "token_centre_depth": 0.8767
+   },
+   {
+    "token": 377,
+    "weight": 0.1012,
+    "token_centre_depth": 0.8507
+   },
+   {
+    "token": 3449,
+    "weight": 0.0663,
+    "token_centre_depth": 0.8476
+   },
+   {
+    "token": 1138,
+    "weight": 0.0593,
+    "token_centre_depth": 0.8792
+   },
+   {
+    "token": 2425,
+    "weight": 0.0536,
+    "token_centre_depth": 0.8479
+   },
+   {
+    "token": 168,
+    "weight": 0.0438,
+    "token_centre_depth": 0.8586
+   },
+   {
+    "token": 1401,
+    "weight": 0.0364,
+    "token_centre_depth": 0.8513
+   },
+   {
+    "token": 3240,
+    "weight": 0.0268,
+    "token_centre_depth": 0.8417
+   },
+   {
+    "token": 1192,
+    "weight": 0.0261,
+    "token_centre_depth": 0.8488
+   },
+   {
+    "token": 121,
+    "weight": 0.0242,
+    "token_centre_depth": 1.1223
+   },
+   {
+    "token": 2162,
+    "weight": 0.0237,
+    "token_centre_depth": 0.8818
+   },
+   {
+    "token": 663,
+    "weight": 0.021,
+    "token_centre_depth": 0.8513
+   },
+   {
+    "token": 199,
+    "weight": 0.0201,
+    "token_centre_depth": 1.5356
+   },
+   {
+    "token": 2216,
+    "weight": 0.0185,
+    "token_centre_depth": 0.8527
+   },
+   {
+    "token": 3271,
+    "weight": 0.0175,
+    "token_centre_depth": 1.5429
+   },
+   {
+    "token": 2711,
+    "weight": 0.0169,
+    "token_centre_depth": 0.8498
+   },
+   {
+    "token": 3735,
+    "weight": 0.0167,
+    "token_centre_depth": 0.8439
+   },
+   {
+    "token": 2169,
+    "weight": 0.0143,
+    "token_centre_depth": 1.134
+   },
+   {
+    "token": 2247,
+    "weight": 0.0118,
+    "token_centre_depth": 1.5061
+   },
+   {
+    "token": 3193,
+    "weight": 0.0118,
+    "token_centre_depth": 1.0097
+   },
+   {
+    "token": 1223,
+    "weight": 0.0116,
+    "token_centre_depth": 1.5793
+   },
+   {
+    "token": 1145,
+    "weight": 0.01,
+    "token_centre_depth": 1.0636
+   }
+  ]
+ },
+ {
+  "probe": 4,
+  "kind": "fixed",
+  "pixel_yx": [
+   192,
+   224
+  ],
+  "rendered_depth": 0.8722736835479736,
+  "gt_depth": 0.0,
+  "thickness": 0.12936033308506012,
+  "n_tokens_ge_1pct": 16,
+  "tokens": [
+   {
+    "token": 45,
+    "weight": 0.1657,
+    "token_centre_depth": 0.838
+   },
+   {
+    "token": 3117,
+    "weight": 0.1187,
+    "token_centre_depth": 0.8369
+   },
+   {
+    "token": 632,
+    "weight": 0.1151,
+    "token_centre_depth": 0.8744
+   },
+   {
+    "token": 1656,
+    "weight": 0.0955,
+    "token_centre_depth": 0.8672
+   },
+   {
+    "token": 1069,
+    "weight": 0.0773,
+    "token_centre_depth": 0.8352
+   },
+   {
+    "token": 3704,
+    "weight": 0.073,
+    "token_centre_depth": 0.8534
+   },
+   {
+    "token": 208,
+    "weight": 0.0572,
+    "token_centre_depth": 0.8333
+   },
+   {
+    "token": 2093,
+    "weight": 0.0551,
+    "token_centre_depth": 0.8341
+   },
+   {
+    "token": 2680,
+    "weight": 0.0543,
+    "token_centre_depth": 0.852
+   },
+   {
+    "token": 2256,
+    "weight": 0.0427,
+    "token_centre_depth": 0.8332
+   },
+   {
+    "token": 1232,
+    "weight": 0.0325,
+    "token_centre_depth": 0.83
+   },
+   {
+    "token": 3416,
+    "weight": 0.0227,
+    "token_centre_depth": 0.8603
+   },
+   {
+    "token": 3280,
+    "weight": 0.0191,
+    "token_centre_depth": 0.8329
+   },
+   {
+    "token": 344,
+    "weight": 0.0114,
+    "token_centre_depth": 0.8673
+   },
+   {
+    "token": 2392,
+    "weight": 0.0111,
+    "token_centre_depth": 0.8599
+   },
+   {
+    "token": 1368,
+    "weight": 0.0107,
+    "token_centre_depth": 0.8641
+   }
+  ]
+ },
+ {
+  "probe": 5,
+  "kind": "fixed",
+  "pixel_yx": [
+   192,
+   373
+  ],
+  "rendered_depth": 0.780773401260376,
+  "gt_depth": 0.0,
+  "thickness": 0.03436185419559479,
+  "n_tokens_ge_1pct": 18,
+  "tokens": [
+   {
+    "token": 978,
+    "weight": 0.1679,
+    "token_centre_depth": 0.7865
+   },
+   {
+    "token": 1662,
+    "weight": 0.109,
+    "token_centre_depth": 0.7621
+   },
+   {
+    "token": 2002,
+    "weight": 0.0949,
+    "token_centre_depth": 0.7835
+   },
+   {
+    "token": 2686,
+    "weight": 0.0804,
+    "token_centre_depth": 0.7601
+   },
+   {
+    "token": 638,
+    "weight": 0.0669,
+    "token_centre_depth": 0.7588
+   },
+   {
+    "token": 4050,
+    "weight": 0.0652,
+    "token_centre_depth": 0.7877
+   },
+   {
+    "token": 207,
+    "weight": 0.0617,
+    "token_centre_depth": 0.778
+   },
+   {
+    "token": 3026,
+    "weight": 0.0435,
+    "token_centre_depth": 0.7867
+   },
+   {
+    "token": 2255,
+    "weight": 0.0412,
+    "token_centre_depth": 0.7786
+   },
+   {
+    "token": 3710,
+    "weight": 0.0357,
+    "token_centre_depth": 0.7602
+   },
+   {
+    "token": 3279,
+    "weight": 0.0351,
+    "token_centre_depth": 0.7734
+   },
+   {
+    "token": 2010,
+    "weight": 0.0329,
+    "token_centre_depth": 0.8069
+   },
+   {
+    "token": 986,
+    "weight": 0.0289,
+    "token_centre_depth": 0.8045
+   },
+   {
+    "token": 928,
+    "weight": 0.0282,
+    "token_centre_depth": 0.8086
+   },
+   {
+    "token": 1231,
+    "weight": 0.0213,
+    "token_centre_depth": 0.7781
+   },
+   {
+    "token": 4000,
+    "weight": 0.0144,
+    "token_centre_depth": 0.8062
+   },
+   {
+    "token": 4058,
+    "weight": 0.0118,
+    "token_centre_depth": 0.8007
+   },
+   {
+    "token": 1952,
+    "weight": 0.0103,
+    "token_centre_depth": 0.8077
+   }
+  ]
+ },
+ {
+  "probe": 6,
+  "kind": "worst_thickness",
+  "pixel_yx": [
+   108,
+   360
+  ],
+  "rendered_depth": 1.2926280498504639,
+  "gt_depth": 0.0,
+  "thickness": 0.7722527384757996,
+  "n_tokens_ge_1pct": 12,
+  "tokens": [
+   {
+    "token": 289,
+    "weight": 0.2459,
+    "token_centre_depth": 0.7766
+   },
+   {
+    "token": 2337,
+    "weight": 0.1957,
+    "token_centre_depth": 0.7762
+   },
+   {
+    "token": 3361,
+    "weight": 0.1251,
+    "token_centre_depth": 0.7745
+   },
+   {
+    "token": 1313,
+    "weight": 0.0863,
+    "token_centre_depth": 0.774
+   },
+   {
+    "token": 588,
+    "weight": 0.0599,
+    "token_centre_depth": 3.0916
+   },
+   {
+    "token": 2636,
+    "weight": 0.0546,
+    "token_centre_depth": 3.1178
+   },
+   {
+    "token": 3660,
+    "weight": 0.048,
+    "token_centre_depth": 3.0789
+   },
+   {
+    "token": 1612,
+    "weight": 0.0324,
+    "token_centre_depth": 3.126
+   },
+   {
+    "token": 241,
+    "weight": 0.0305,
+    "token_centre_depth": 0.7745
+   },
+   {
+    "token": 969,
+    "weight": 0.0214,
+    "token_centre_depth": 0.7761
+   },
+   {
+    "token": 201,
+    "weight": 0.0136,
+    "token_centre_depth": 0.7746
+   },
+   {
+    "token": 340,
+    "weight": 0.013,
+    "token_centre_depth": 0.7724
+   }
+  ]
+ },
+ {
+  "probe": 7,
+  "kind": "worst_thickness",
+  "pixel_yx": [
+   62,
+   362
+  ],
+  "rendered_depth": 1.2365766763687134,
+  "gt_depth": 0.0,
+  "thickness": 0.7371922135353088,
+  "n_tokens_ge_1pct": 9,
+  "tokens": [
+   {
+    "token": 281,
+    "weight": 0.2515,
+    "token_centre_depth": 0.7493
+   },
+   {
+    "token": 1305,
+    "weight": 0.1987,
+    "token_centre_depth": 0.752
+   },
+   {
+    "token": 3353,
+    "weight": 0.1504,
+    "token_centre_depth": 0.7483
+   },
+   {
+    "token": 2329,
+    "weight": 0.1474,
+    "token_centre_depth": 0.7482
+   },
+   {
+    "token": 40,
+    "weight": 0.048,
+    "token_centre_depth": 2.9272
+   },
+   {
+    "token": 2088,
+    "weight": 0.0439,
+    "token_centre_depth": 2.83
+   },
+   {
+    "token": 3112,
+    "weight": 0.0429,
+    "token_centre_depth": 2.9353
+   },
+   {
+    "token": 1064,
+    "weight": 0.0426,
+    "token_centre_depth": 2.8475
+   },
+   {
+    "token": 912,
+    "weight": 0.0101,
+    "token_centre_depth": 2.7421
+   }
+  ]
+ },
+ {
+  "probe": 8,
+  "kind": "worst_thickness",
+  "pixel_yx": [
+   127,
+   388
+  ],
+  "rendered_depth": 1.1411454677581787,
+  "gt_depth": 0.0,
+  "thickness": 0.6189094185829163,
+  "n_tokens_ge_1pct": 19,
+  "tokens": [
+   {
+    "token": 126,
+    "weight": 0.1444,
+    "token_centre_depth": 0.7495
+   },
+   {
+    "token": 2174,
+    "weight": 0.0862,
+    "token_centre_depth": 0.748
+   },
+   {
+    "token": 3198,
+    "weight": 0.0855,
+    "token_centre_depth": 0.7485
+   },
+   {
+    "token": 1150,
+    "weight": 0.0787,
+    "token_centre_depth": 0.7499
+   },
+   {
+    "token": 888,
+    "weight": 0.0427,
+    "token_centre_depth": 0.7686
+   },
+   {
+    "token": 3736,
+    "weight": 0.0411,
+    "token_centre_depth": 0.7518
+   },
+   {
+    "token": 664,
+    "weight": 0.0396,
+    "token_centre_depth": 0.7563
+   },
+   {
+    "token": 896,
+    "weight": 0.0386,
+    "token_centre_depth": 2.5142
+   },
+   {
+    "token": 2944,
+    "weight": 0.0349,
+    "token_centre_depth": 2.5062
+   },
+   {
+    "token": 1920,
+    "weight": 0.032,
+    "token_centre_depth": 2.5114
+   },
+   {
+    "token": 698,
+    "weight": 0.0308,
+    "token_centre_depth": 2.2617
+   },
+   {
+    "token": 3968,
+    "weight": 0.0266,
+    "token_centre_depth": 2.5197
+   },
+   {
+    "token": 2936,
+    "weight": 0.0208,
+    "token_centre_depth": 0.7681
+   },
+   {
+    "token": 2712,
+    "weight": 0.0204,
+    "token_centre_depth": 0.7555
+   },
+   {
+    "token": 1688,
+    "weight": 0.0172,
+    "token_centre_depth": 0.7554
+   },
+   {
+    "token": 3960,
+    "weight": 0.0142,
+    "token_centre_depth": 0.7666
+   },
+   {
+    "token": 1912,
+    "weight": 0.0134,
+    "token_centre_depth": 0.7672
+   },
+   {
+    "token": 1722,
+    "weight": 0.0125,
+    "token_centre_depth": 2.2623
+   },
+   {
+    "token": 583,
+    "weight": 0.0093,
+    "token_centre_depth": 0.7506
+   }
+  ]
+ },
+ {
+  "probe": 9,
+  "kind": "worst_thickness",
+  "pixel_yx": [
+   133,
+   266
+  ],
+  "rendered_depth": 1.692534327507019,
+  "gt_depth": 0.0,
+  "thickness": 0.6082460880279541,
+  "n_tokens_ge_1pct": 15,
+  "tokens": [
+   {
+    "token": 476,
+    "weight": 0.2395,
+    "token_centre_depth": 1.0675
+   },
+   {
+    "token": 1500,
+    "weight": 0.1352,
+    "token_centre_depth": 1.0504
+   },
+   {
+    "token": 3548,
+    "weight": 0.1242,
+    "token_centre_depth": 1.0614
+   },
+   {
+    "token": 2524,
+    "weight": 0.0791,
+    "token_centre_depth": 1.0716
+   },
+   {
+    "token": 933,
+    "weight": 0.0518,
+    "token_centre_depth": 2.4957
+   },
+   {
+    "token": 3051,
+    "weight": 0.0408,
+    "token_centre_depth": 2.2084
+   },
+   {
+    "token": 1003,
+    "weight": 0.0397,
+    "token_centre_depth": 2.1986
+   },
+   {
+    "token": 743,
+    "weight": 0.0383,
+    "token_centre_depth": 4.3443
+   },
+   {
+    "token": 1957,
+    "weight": 0.0368,
+    "token_centre_depth": 2.4838
+   },
+   {
+    "token": 2981,
+    "weight": 0.0302,
+    "token_centre_depth": 2.4698
+   },
+   {
+    "token": 2791,
+    "weight": 0.0215,
+    "token_centre_depth": 4.3181
+   },
+   {
+    "token": 4005,
+    "weight": 0.0185,
+    "token_centre_depth": 2.4474
+   },
+   {
+    "token": 3815,
+    "weight": 0.0161,
+    "token_centre_depth": 4.3125
+   },
+   {
+    "token": 1767,
+    "weight": 0.011,
+    "token_centre_depth": 4.5098
+   },
+   {
+    "token": 4075,
+    "weight": 0.0105,
+    "token_centre_depth": 2.1979
+   }
+  ]
+ },
+ {
+  "probe": 10,
+  "kind": "worst_thickness",
+  "pixel_yx": [
+   107,
+   172
+  ],
+  "rendered_depth": 3.740067720413208,
+  "gt_depth": 0.0,
+  "thickness": 0.6020869016647339,
+  "n_tokens_ge_1pct": 13,
+  "tokens": [
+   {
+    "token": 1038,
+    "weight": 0.1256,
+    "token_centre_depth": 2.4867
+   },
+   {
+    "token": 225,
+    "weight": 0.095,
+    "token_centre_depth": 2.5276
+   },
+   {
+    "token": 14,
+    "weight": 0.0897,
+    "token_centre_depth": 2.5712
+   },
+   {
+    "token": 2062,
+    "weight": 0.0867,
+    "token_centre_depth": 2.5121
+   },
+   {
+    "token": 3086,
+    "weight": 0.0828,
+    "token_centre_depth": 2.3277
+   },
+   {
+    "token": 948,
+    "weight": 0.0717,
+    "token_centre_depth": 4.7464
+   },
+   {
+    "token": 1384,
+    "weight": 0.0608,
+    "token_centre_depth": 7.8466
+   },
+   {
+    "token": 360,
+    "weight": 0.0582,
+    "token_centre_depth": 7.9407
+   },
+   {
+    "token": 2408,
+    "weight": 0.0519,
+    "token_centre_depth": 7.7775
+   },
+   {
+    "token": 1972,
+    "weight": 0.0461,
+    "token_centre_depth": 4.4975
+   },
+   {
+    "token": 3297,
+    "weight": 0.041,
+    "token_centre_depth": 2.5026
+   },
+   {
+    "token": 1249,
+    "weight": 0.0207,
+    "token_centre_depth": 2.3225
+   },
+   {
+    "token": 2273,
+    "weight": 0.0151,
+    "token_centre_depth": 2.5714
+   }
+  ]
+ },
+ {
+  "probe": 11,
+  "kind": "worst_thickness",
+  "pixel_yx": [
+   168,
+   310
+  ],
+  "rendered_depth": 1.248018503189087,
+  "gt_depth": 0.0,
+  "thickness": 0.599914014339447,
+  "n_tokens_ge_1pct": 20,
+  "tokens": [
+   {
+    "token": 43,
+    "weight": 0.1271,
+    "token_centre_depth": 0.8922
+   },
+   {
+    "token": 337,
+    "weight": 0.1092,
+    "token_centre_depth": 0.8423
+   },
+   {
+    "token": 3409,
+    "weight": 0.0838,
+    "token_centre_depth": 0.8401
+   },
+   {
+    "token": 2385,
+    "weight": 0.0783,
+    "token_centre_depth": 0.8425
+   },
+   {
+    "token": 27,
+    "weight": 0.0766,
+    "token_centre_depth": 0.8514
+   },
+   {
+    "token": 2213,
+    "weight": 0.0633,
+    "token_centre_depth": 2.7475
+   },
+   {
+    "token": 2091,
+    "weight": 0.0566,
+    "token_centre_depth": 0.8998
+   },
+   {
+    "token": 3237,
+    "weight": 0.0511,
+    "token_centre_depth": 2.7514
+   },
+   {
+    "token": 1067,
+    "weight": 0.0455,
+    "token_centre_depth": 0.909
+   },
+   {
+    "token": 3115,
+    "weight": 0.0419,
+    "token_centre_depth": 0.9073
+   },
+   {
+    "token": 1189,
+    "weight": 0.0338,
+    "token_centre_depth": 2.842
+   },
+   {
+    "token": 1361,
+    "weight": 0.0308,
+    "token_centre_depth": 0.8375
+   },
+   {
+    "token": 287,
+    "weight": 0.0194,
+    "token_centre_depth": 0.8241
+   },
+   {
+    "token": 3359,
+    "weight": 0.0187,
+    "token_centre_depth": 0.8243
+   },
+   {
+    "token": 2335,
+    "weight": 0.0179,
+    "token_centre_depth": 0.8417
+   },
+   {
+    "token": 165,
+    "weight": 0.0177,
+    "token_centre_depth": 2.572
+   },
+   {
+    "token": 2075,
+    "weight": 0.0165,
+    "token_centre_depth": 0.8485
+   },
+   {
+    "token": 1051,
+    "weight": 0.0126,
+    "token_centre_depth": 0.8408
+   },
+   {
+    "token": 557,
+    "weight": 0.0108,
+    "token_centre_depth": 0.9102
+   },
+   {
+    "token": 3099,
+    "weight": 0.0103,
+    "token_centre_depth": 0.8412
+   }
+  ]
+ }
+]

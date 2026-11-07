@@ -1,0 +1,89 @@
+{
+  "definitions": {
+    "render weight": "per input-view pixel alpha-compositing weight of the token's 64 Gaussians, summed over pixels (1.0 = one fully owned pixel); 6 input views, official validation windows",
+    "attention": "A_dec @ A_lat (layer 7 local heads), as in probe_gs_token_*.py",
+    "r_in_a90": "share of a token's render weight that falls in its attention-90% patch set",
+    "a_in_r90": "share of a token's attention that falls in its render-90% patch set",
+    "centroid_cm": "distance between the laser-surface centroids of the attention and render regions (patch centres with a GT mesh hit; tokens with >50% of both masses on valid patches)",
+    "live token": "render weight >= 1 pixel"
+  },
+  "tokens_total": 204800,
+  "live_token_frac": 0.9969921708106995,
+  "render_weight_per_token": {
+    "p10": 38.456336975097656,
+    "p50": 116.88925170898438,
+    "p90": 342.0906677246094,
+    "mean": 162.7346954345703
+  },
+  "render_weight_share_top10pct_tokens": 0.31712594628334045,
+  "r_in_a90": {
+    "p10": 0.7447046041488647,
+    "p50": 0.8719024658203125,
+    "p90": 0.9512796998023987,
+    "mean": 0.8559105396270752
+  },
+  "r_in_a90_weighted_by_render": 0.8333405256271362,
+  "a_in_r90": {
+    "p10": 0.7520098090171814,
+    "p50": 0.8571677207946777,
+    "p90": 0.9257968068122864,
+    "mean": 0.8438672423362732
+  },
+  "same_dominant_view_frac": 0.6856021881103516,
+  "same_dominant_view_frac_weighted": 0.6622700691223145,
+  "centroid_cm": {
+    "p10": 0.7148030996322632,
+    "p50": 2.518812417984009,
+    "p90": 10.515554428100586,
+    "mean": 4.72772216796875
+  },
+  "centroid_cm_by_attention_views": {
+    "1.0": {
+      "p10": 0.8163858652114868,
+      "p50": 3.0629630088806152,
+      "p90": 11.878157615661621,
+      "mean": 5.400418758392334
+    },
+    "2.0": {
+      "p10": 0.7863620519638062,
+      "p50": 2.950500965118408,
+      "p90": 13.554265975952148,
+      "mean": 5.736503601074219
+    },
+    "3.0": {
+      "p10": 0.7120295166969299,
+      "p50": 2.7071540355682373,
+      "p90": 11.962218284606934,
+      "mean": 5.282222270965576
+    },
+    "4+": {
+      "p10": 0.6598265767097473,
+      "p50": 2.1240062713623047,
+      "p90": 7.595872402191162,
+      "mean": 3.6223978996276855
+    }
+  },
+  "rendered_weight_share_by_gaussian_distance_to_mesh": {
+    "<3cm": 0.3080544173717499,
+    "3-10cm": 0.28403592109680176,
+    "10-30cm": 0.23004582524299622,
+    ">30cm": 0.17786385118961334
+  },
+  "rendered_weight_share_by_gaussian_distance_to_mesh_gt_pixels": {
+    "<3cm": 0.3215998411178589,
+    "3-10cm": 0.28887030482292175,
+    "10-30cm": 0.2275049239397049,
+    ">30cm": 0.1620248556137085
+  },
+  "gaussian_distance_to_mesh_cm_all": {
+    "p50": 7.32421875,
+    "p90": 267.578125,
+    "mean": 73.39032888412476
+  },
+  "gaussian_distance_to_mesh_cm_opacity_ge_0.05": {
+    "p50": 4.1656494140625,
+    "p90": 41.943359375,
+    "mean": 25.07070302963257
+  },
+  "alpha_check_max_abs_diff": 1.0728836059570312e-06
+}

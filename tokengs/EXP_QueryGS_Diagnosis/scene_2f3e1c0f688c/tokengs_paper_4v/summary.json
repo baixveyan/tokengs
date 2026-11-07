@@ -1,0 +1,80 @@
+{
+ "checkpoint": "/home/jms/xveyan/4DGS/TokenGS/checkpoints_hf/checkpoints/dl3dv_4v.safetensors",
+ "frame_transform_max_abs_image_diff": 0.002393364906311035,
+ "psnr_all_targets": 22.712270736694336,
+ "psnr_shown_views": [
+  24.081,
+  22.483,
+  20.233
+ ],
+ "depth_absrel_shown_views": 0.3398505747318268,
+ "thickness_shown_views_p50_p90": [
+  0.211299866437912,
+  0.3866334557533264
+ ],
+ "junk_share": 0.3303718566894531,
+ "visible_gaussians_dist_p50_p90": [
+  0.08824534714221954,
+  0.2684882879257202
+ ],
+ "c_centroid_mean": 0.8523482084274292,
+ "token_parallax_lt2deg_alive": 0.005880780518054962,
+ "tokens20": [
+  1740,
+  2235,
+  4082,
+  925,
+  4008,
+  2888,
+  3611,
+  224,
+  1885,
+  2322,
+  3253,
+  15,
+  3359,
+  1786,
+  3541,
+  3258,
+  1985,
+  2122,
+  3498,
+  1470
+ ],
+ "tokens20_render_in_attention90": [
+  0.888,
+  0.779,
+  0.978,
+  0.999,
+  1.0,
+  0.604,
+  1.0,
+  0.876,
+  1.0,
+  1.0,
+  0.862,
+  1.0,
+  0.939,
+  0.997,
+  1.0,
+  0.923,
+  0.927,
+  0.879,
+  0.797,
+  0.998
+ ],
+ "ray_probe_tokens_per_pixel": [
+  13,
+  13,
+  17,
+  11,
+  7,
+  15,
+  15,
+  13,
+  14,
+  14,
+  23,
+  15
+ ]
+}

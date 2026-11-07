@@ -1,0 +1,1151 @@
+[15:54:08] phase A: extract / conflict / recover
+[15:56:21] start GPU 6: extract --family tokengs --split train --shard 2 --num-shards 4
+[15:56:23] start GPU 5: conflict --shard 3 --num-shards 4
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[release shard 3] 1 acd95847c5
+[release shard 3] 2 5eb31827b7
+[release shard 3] 3 5748ce6f01
+[release shard 3] 4 38d58a7a31
+[release shard 3] 5 40aec5fffa
+[15:56:52] start GPU 2: extract --family tokengs --split val --shard 1 --num-shards 2
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[release shard 3] 6 45b0dac5e3
+[extract tokengs/train shard 2] 27 99010a8938
+[release shard 3] 7 7bc286c1b6
+[extract tokengs/train shard 2] 28 216b9e55e8
+[15:57:00] start GPU 4: extract --family locus --split train --shard 3 --num-shards 4
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[release shard 3] 8 a980334473
+[extract tokengs/val shard 1] 1 c50d2d1d42
+[extract tokengs/train shard 2] 29 57d9fecae9
+[extract tokengs/val shard 1] 2 acd95847c5
+[extract tokengs/train shard 2] 30 7becc8122c
+[15:57:06] start GPU 3: conflict --shard 0 --num-shards 4
+[release shard 3] 9 bcd2436daf
+[15:57:07] start GPU 1: extract --family tokengs --split train --shard 0 --num-shards 4
+[extract tokengs/val shard 1] 3 a24f64f7fb
+[extract tokengs/train shard 2] 31 f9397af4cb
+[extract tokengs/val shard 1] 4 5eb31827b7
+[extract tokengs/train shard 2] 32 f576071590
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[release shard 3] 10 ac48a9b736
+[extract tokengs/train shard 2] 33 7b4a316aea
+[extract tokengs/val shard 1] 5 3f15a9266d
+[release shard 0] 1 7b6477cb95
+[extract tokengs/train shard 2] 34 45ba9ea301
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[extract locus/train shard 3] 1 88cf747085
+[extract tokengs/val shard 1] 6 5748ce6f01
+[release shard 3] 11 99fa5c25e1
+[extract tokengs/train shard 2] 35 a766294249
+[extract locus/train shard 3] 2 2e74812d00
+[release shard 0] 2 fb5a96b1a2
+[extract tokengs/val shard 1] 7 7831862f02
+[extract locus/train shard 3] 3 2a496183e1
+[release shard 3] 12 6115eddb86
+[extract locus/train shard 3] 4 8b5caf3398
+[extract tokengs/train shard 2] 36 39705fbdf1
+[release shard 0] 3 3e8bba0176
+[extract tokengs/val shard 1] 8 38d58a7a31
+[extract locus/train shard 3] 5 d415cc449b
+[extract tokengs/train shard 2] 37 934599022f
+[extract tokengs/val shard 1] 9 f9f95681fd
+[sft12 shard 3] 1 acd95847c5
+[extract locus/train shard 3] 6 a29cccc784
+[extract tokengs/train shard 2] 38 faba6e97d7
+[extract tokengs/val shard 1] 10 40aec5fffa
+[extract locus/train shard 3] 7 55b2bf8036
+[sft12 shard 3] 2 5eb31827b7
+[15:57:33] start GPU 7: conflict --shard 1 --num-shards 4
+[release shard 0] 4 c4c04e6d6c
+[extract locus/train shard 3] 8 9859de300f
+[extract tokengs/val shard 1] 11 e398684d27
+[extract tokengs/train shard 2] 39 95c9a0f535
+[extract locus/train shard 3] 9 c413b34238
+[sft12 shard 3] 3 5748ce6f01
+[release shard 0] 5 5ee7c22ba0
+[extract tokengs/val shard 1] 12 45b0dac5e3
+[extract locus/train shard 3] 10 eb4bc76767
+[extract tokengs/train shard 2] 40 70945f435a
+[15:57:40] exit 0 GPU 6: extract --family tokengs --split train --shard 2 --num-shards 4
+[extract tokengs/val shard 1] 13 e7af285f7d
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[extract locus/train shard 3] 11 5fb5d2dbf2
+[release shard 0] 6 13c3e046d7
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[sft12 shard 3] 4 38d58a7a31
+[release shard 1] 1 c50d2d1d42
+[extract tokengs/val shard 1] 14 7bc286c1b6
+[extract locus/train shard 3] 12 aad55d46ad
+[15:57:44] start GPU 6: extract --family locus --split train --shard 0 --num-shards 4
+[extract tokengs/train shard 0] 30 3ce88cdad2
+[release shard 0] 7 31a2c91c43
+[sft12 shard 3] 5 40aec5fffa
+[extract tokengs/val shard 1] 15 b0a08200c9
+[release shard 1] 2 a24f64f7fb
+[extract tokengs/train shard 0] 31 c4aaedcfd1
+[extract locus/train shard 3] 13 a56eda3549
+[extract tokengs/val shard 1] 16 a980334473
+[extract tokengs/train shard 0] 32 8c3169b088
+[sft12 shard 3] 6 45b0dac5e3
+[release shard 1] 3 3f15a9266d
+[release shard 0] 8 f3685d06a9
+[extract tokengs/train shard 0] 33 2267ee32f3
+[sft12 shard 3] 7 7bc286c1b6
+[extract tokengs/val shard 1] 17 5942004064
+[extract locus/train shard 3] 14 6bd39ac392
+[release shard 0] 9 f2dc06b1d2
+[extract tokengs/train shard 0] 34 6c14d5fd01
+[release shard 1] 4 7831862f02
+[extract tokengs/val shard 1] 18 bcd2436daf
+[sft12 shard 3] 8 a980334473
+[extract tokengs/train shard 0] 35 e1fb8626c8
+[extract locus/train shard 3] 15 4f341f3af0
+[release shard 1] 5 f9f95681fd
+[extract tokengs/val shard 1] 19 0d2ee665be
+[release shard 0] 10 f3d64c30f8
+[sft12 shard 3] 9 bcd2436daf
+[extract locus/train shard 3] 16 a6e1a3bdda
+[extract tokengs/train shard 0] 36 27be88d408
+[release shard 1] 6 e398684d27
+[extract locus/train shard 3] 17 2284bf5c9d
+[extract tokengs/train shard 0] 37 ba8e2bce5d
+[release shard 0] 11 c5439f4607
+[extract tokengs/val shard 1] 20 ac48a9b736
+[release shard 1] 7 e7af285f7d
+[extract locus/train shard 3] 18 5b38982d25
+[extract tokengs/train shard 0] 38 64b8886d68
+[sft12 shard 3] 10 ac48a9b736
+[extract locus/train shard 3] 19 10242d1eaf
+[release shard 0] 12 09c1414f1b
+[release shard 1] 8 b0a08200c9
+[sft12 shard 3] 11 99fa5c25e1
+[extract tokengs/val shard 1] 21 578511c8a9
+[extract locus/train shard 3] 20 e1aa584dd5
+[extract tokengs/train shard 0] 39 64672b5bf5
+[extract tokengs/val shard 1] 22 99fa5c25e1
+[extract tokengs/train shard 0] 40 589f5c7c58
+[release shard 0] 13 27dd4da69e
+[extract locus/train shard 3] 21 0eba3981c9
+[release shard 1] 9 5942004064
+[sft12 shard 3] 12 6115eddb86
+[15:58:18] exit 0 GPU 1: extract --family tokengs --split train --shard 0 --num-shards 4
+[extract locus/train shard 3] 22 7c31bccde5
+[extract locus/train shard 3] 23 02c2ddee2a
+[extract tokengs/val shard 1] 23 5f99900f09
+[release shard 1] 10 0d2ee665be
+[15:58:21] exit 0 GPU 6: extract --family locus --split train --shard 0 --num-shards 4
+[extract locus/train shard 3] 24 9cfea269dd
+[sft12 shard 0] 1 7b6477cb95
+[locus shard 3] 1 acd95847c5
+[15:58:23] start GPU 1: extract --family locus --split train --shard 1 --num-shards 4
+[extract locus/train shard 3] 25 cba701332a
+[extract tokengs/val shard 1] 24 6115eddb86
+[15:58:25] start GPU 6: conflict --shard 2 --num-shards 4
+[extract locus/train shard 3] 26 3a3745a437
+[locus shard 3] 2 5eb31827b7
+[extract locus/train shard 3] 27 3ce6d36ab5
+[extract tokengs/val shard 1] 25 c49a8c6cff
+[sft12 shard 0] 2 fb5a96b1a2
+[release shard 1] 11 578511c8a9
+[15:58:29] exit 0 GPU 2: extract --family tokengs --split val --shard 1 --num-shards 2
+[extract locus/train shard 3] 28 307e3262f1
+[locus shard 3] 3 5748ce6f01
+[extract locus/train shard 3] 29 12b2b1c6d9
+[sft12 shard 0] 3 3e8bba0176
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[extract locus/train shard 3] 30 867d97cf3d
+[release shard 2] 1 cc5237fd77
+[release shard 1] 12 5f99900f09
+[extract locus/train shard 3] 31 7e7d2e8640
+[15:58:36] start GPU 2: extract --family tokengs --split train --shard 1 --num-shards 4
+[locus shard 3] 4 38d58a7a31
+[extract locus/train shard 3] 32 2634683a9f
+[sft12 shard 0] 4 c4c04e6d6c
+[release shard 1] 13 c49a8c6cff
+[release shard 2] 2 1ada7a0617
+[extract locus/train shard 3] 33 ca0c580422
+[locus shard 3] 5 40aec5fffa
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[extract locus/train shard 3] 34 3b50ff5f35
+[extract locus/train shard 1] 1 ef18cf0708
+[sft12 shard 0] 5 5ee7c22ba0
+[locus shard 3] 6 45b0dac5e3
+[extract locus/train shard 3] 35 956e415fb1
+[extract locus/train shard 1] 2 aaa11940d3
+[sft12 shard 1] 1 c50d2d1d42
+[extract locus/train shard 3] 36 db5293a870
+[extract locus/train shard 1] 3 8e00ac7f59
+[release shard 2] 3 21d970d8de
+[extract locus/train shard 3] 37 617dc40bca
+[locus shard 3] 7 7bc286c1b6
+[sft12 shard 0] 6 13c3e046d7
+[extract locus/train shard 3] 38 9ad3639fbe
+[extract locus/train shard 1] 4 ed2216380b
+[sft12 shard 1] 2 a24f64f7fb
+[extract locus/train shard 1] 5 40b56bf310
+[locus shard 3] 8 a980334473
+[sft12 shard 0] 7 31a2c91c43
+[extract locus/train shard 3] 39 523657b4d0
+[release shard 2] 4 bde1e479ad
+[extract locus/train shard 1] 6 e7ac609391
+[sft12 shard 1] 3 3f15a9266d
+[locus shard 3] 9 bcd2436daf
+[extract locus/train shard 1] 7 1f7cbbdde1
+[sft12 shard 0] 8 f3685d06a9
+[release shard 2] 5 3864514494
+[extract locus/train shard 3] 40 2b5ef64cad
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[extract locus/train shard 1] 8 6855e1ac32
+[sft12 shard 1] 4 7831862f02
+[15:58:57] exit 0 GPU 4: extract --family locus --split train --shard 3 --num-shards 4
+[extract tokengs/train shard 1] 1 ef18cf0708
+[extract locus/train shard 1] 9 b08a908f0f
+[sft12 shard 0] 9 f2dc06b1d2
+[sft12 shard 1] 5 f9f95681fd
+[extract locus/train shard 1] 10 d7abfc4b17
+[extract tokengs/train shard 1] 2 aaa11940d3
+[locus shard 3] 10 ac48a9b736
+[release shard 2] 6 a8bf42d646
+[extract locus/train shard 1] 11 a5114ca13d
+[15:59:03] start GPU 4: extract --family locus --split train --shard 2 --num-shards 4
+[sft12 shard 1] 6 e398684d27
+[sft12 shard 0] 10 f3d64c30f8
+[extract tokengs/train shard 1] 3 8e00ac7f59
+[locus shard 3] 11 99fa5c25e1
+[extract locus/train shard 1] 12 2489b7f4fe
+[release shard 2] 7 286b55a2bf
+[sft12 shard 1] 7 e7af285f7d
+[extract tokengs/train shard 1] 4 ed2216380b
+[sft12 shard 0] 11 c5439f4607
+[extract locus/train shard 1] 13 712b9ae775
+[release shard 2] 8 825d228aec
+[extract tokengs/train shard 1] 5 40b56bf310
+[locus shard 3] 12 6115eddb86
+[sft12 shard 1] 8 b0a08200c9
+[release shard 2] 9 25f3b7a318
+[sft12 shard 0] 12 09c1414f1b
+[extract tokengs/train shard 1] 6 e7ac609391
+[paper shard 3] 1 acd95847c5
+[sft12 shard 1] 9 5942004064
+[extract locus/train shard 1] 14 0fe8539661
+[paper shard 3] 2 5eb31827b7
+[extract tokengs/train shard 1] 7 1f7cbbdde1
+[sft12 shard 0] 13 27dd4da69e
+[sft12 shard 1] 10 0d2ee665be
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[paper shard 3] 3 5748ce6f01
+[extract locus/train shard 2] 1 07f5b601ee
+[extract locus/train shard 1] 15 c340418532
+[release shard 2] 10 3db0a1c8f3
+[extract tokengs/train shard 1] 8 6855e1ac32
+[extract locus/train shard 1] 16 9dc5ad040f
+[paper shard 3] 4 38d58a7a31
+[locus shard 0] 1 7b6477cb95
+[extract locus/train shard 2] 2 fe1733741f
+[release shard 2] 11 d755b3d9d8
+[extract tokengs/train shard 1] 9 b08a908f0f
+[paper shard 3] 5 40aec5fffa
+[extract locus/train shard 2] 3 3928249b53
+[sft12 shard 1] 11 578511c8a9
+[extract locus/train shard 1] 17 bfcfe53c6a
+[extract tokengs/train shard 1] 10 d7abfc4b17
+[paper shard 3] 6 45b0dac5e3
+[locus shard 0] 2 fb5a96b1a2
+[extract locus/train shard 2] 4 036bce3393
+[release shard 2] 12 9071e139d9
+[extract locus/train shard 1] 18 a7631adbe7
+[paper shard 3] 7 7bc286c1b6
+[extract tokengs/train shard 1] 11 a5114ca13d
+[extract locus/train shard 2] 5 e8ea9b4da8
+[extract locus/train shard 1] 19 eab5494dca
+[sft12 shard 1] 12 5f99900f09
+[locus shard 0] 3 3e8bba0176
+[paper shard 3] 8 a980334473
+[extract locus/train shard 2] 6 7e09430da7
+[extract locus/train shard 1] 20 928c9da20c
+[extract locus/train shard 2] 7 b97261909e
+[sft12 shard 2] 1 cc5237fd77
+[paper shard 3] 9 bcd2436daf
+[extract locus/train shard 1] 21 04df8734b7
+[extract tokengs/train shard 1] 12 2489b7f4fe
+[sft12 shard 1] 13 c49a8c6cff
+[extract locus/train shard 2] 8 e01b287af5
+[extract locus/train shard 1] 22 0271889ec0
+[locus shard 0] 4 c4c04e6d6c
+[extract locus/train shard 1] 23 d240136ce4
+[sft12 shard 2] 2 1ada7a0617
+[extract tokengs/train shard 1] 13 712b9ae775
+[extract locus/train shard 2] 9 410c470782
+[extract locus/train shard 1] 24 052d72e137
+[paper shard 3] 10 ac48a9b736
+[locus shard 1] 1 c50d2d1d42
+[extract locus/train shard 1] 25 7efa3f6b1b
+[locus shard 0] 5 5ee7c22ba0
+[paper shard 3] 11 99fa5c25e1
+[extract locus/train shard 2] 10 7f4d173c9c
+[extract locus/train shard 1] 26 f1e01af60a
+[locus shard 1] 2 a24f64f7fb
+[extract locus/train shard 1] 27 b8d441d736
+[sft12 shard 2] 3 21d970d8de
+[paper shard 3] 12 6115eddb86
+[locus shard 0] 6 13c3e046d7
+[15:59:49] exit 0 GPU 5: conflict --shard 3 --num-shards 4
+[extract locus/train shard 2] 11 281ba69af1
+[locus shard 1] 3 3f15a9266d
+[extract locus/train shard 1] 28 623c973c56
+[locus shard 0] 7 31a2c91c43
+[extract tokengs/train shard 1] 14 0fe8539661
+[sft12 shard 2] 4 bde1e479ad
+[extract locus/train shard 1] 29 0affa0f99f
+[extract locus/train shard 1] 30 3d0b7d4b4e
+[15:59:55] start GPU 5: extract --family tokengs --split train --shard 3 --num-shards 4
+[locus shard 1] 4 7831862f02
+[extract locus/train shard 1] 31 07e6f56969
+[sft12 shard 2] 5 3864514494
+[extract locus/train shard 2] 12 151178afd7
+[locus shard 0] 8 f3685d06a9
+[extract tokengs/train shard 1] 15 c340418532
+[extract locus/train shard 1] 32 c8fc01c453
+[locus shard 1] 5 f9f95681fd
+[extract locus/train shard 2] 13 791a5c253d
+[extract locus/train shard 1] 33 94b1acde81
+[locus shard 0] 9 f2dc06b1d2
+[extract locus/train shard 1] 34 0452249a1e
+[extract locus/train shard 2] 14 020312de8d
+[extract tokengs/train shard 1] 16 9dc5ad040f
+[locus shard 1] 6 e398684d27
+[sft12 shard 2] 6 a8bf42d646
+[extract locus/train shard 1] 35 c026d108e0
+[extract locus/train shard 2] 15 37562e7f48
+[extract locus/train shard 1] 36 5c21213f16
+[extract locus/train shard 1] 37 4291be3b44
+[locus shard 0] 10 f3d64c30f8
+[sft12 shard 2] 7 286b55a2bf
+[locus shard 1] 7 e7af285f7d
+[extract locus/train shard 2] 16 de3c77cecd
+[extract locus/train shard 1] 38 7543973e1a
+[extract tokengs/train shard 1] 17 bfcfe53c6a
+[extract locus/train shard 1] 39 909a9ea5fc
+[locus shard 0] 11 c5439f4607
+[sft12 shard 2] 8 825d228aec
+[locus shard 1] 8 b0a08200c9
+[extract locus/train shard 2] 17 acc5c94ec9
+[extract tokengs/train shard 1] 18 a7631adbe7
+[extract locus/train shard 1] 40 9d8fcc4215
+[extract locus/train shard 2] 18 afd049e07c
+[16:00:13] exit 0 GPU 1: extract --family locus --split train --shard 1 --num-shards 4
+[sft12 shard 2] 9 25f3b7a318
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[extract tokengs/train shard 1] 19 eab5494dca
+[locus shard 1] 9 5942004064
+[extract locus/train shard 2] 19 fb152519ad
+[extract tokengs/train shard 3] 1 88cf747085
+[locus shard 0] 12 09c1414f1b
+[extract locus/train shard 2] 20 98cc0b7c9a
+[extract tokengs/train shard 1] 20 928c9da20c
+[locus shard 1] 10 0d2ee665be
+[extract tokengs/train shard 3] 2 2e74812d00
+[sft12 shard 2] 10 3db0a1c8f3
+[extract locus/train shard 2] 21 ca3b651c23
+[locus shard 0] 13 27dd4da69e
+[extract tokengs/train shard 1] 21 04df8734b7
+[16:00:21] start GPU 1: recover --shard 0 --num-shards 2
+[extract locus/train shard 2] 22 2f6f83ea1f
+[extract tokengs/train shard 3] 3 2a496183e1
+[extract locus/train shard 2] 23 3391ff8a71
+[extract tokengs/train shard 1] 22 0271889ec0
+[sft12 shard 2] 11 d755b3d9d8
+[paper shard 0] 1 7b6477cb95
+[extract locus/train shard 2] 24 69e56cf0f8
+[extract tokengs/train shard 3] 4 8b5caf3398
+[locus shard 1] 11 578511c8a9
+[extract locus/train shard 2] 25 1cbb105c6a
+[extract tokengs/train shard 1] 23 d240136ce4
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[paper shard 0] 2 fb5a96b1a2
+[extract locus/train shard 2] 26 d054227009
+[sft12 shard 2] 12 9071e139d9
+[extract tokengs/train shard 3] 5 d415cc449b
+[extract locus/train shard 2] 27 99010a8938
+[extract tokengs/train shard 1] 24 052d72e137
+[locus shard 1] 12 5f99900f09
+[paper shard 0] 3 3e8bba0176
+[recover shard 0] 1 7b6477cb95 L7 depth10 r_gauss median 0.760
+[extract locus/train shard 2] 28 216b9e55e8
+[extract tokengs/train shard 3] 6 a29cccc784
+[extract tokengs/train shard 1] 25 7efa3f6b1b
+[extract locus/train shard 2] 29 57d9fecae9
+[locus shard 2] 1 cc5237fd77
+[locus shard 1] 13 c49a8c6cff
+[extract locus/train shard 2] 30 7becc8122c
+[paper shard 0] 4 c4c04e6d6c
+[extract tokengs/train shard 1] 26 f1e01af60a
+[extract tokengs/train shard 3] 7 55b2bf8036
+[recover shard 0] 2 cc5237fd77 L7 depth10 r_gauss median 0.803
+[extract locus/train shard 2] 31 f9397af4cb
+[paper shard 0] 5 5ee7c22ba0
+[extract tokengs/train shard 3] 8 9859de300f
+[paper shard 1] 1 c50d2d1d42
+[extract locus/train shard 2] 32 f576071590
+[extract tokengs/train shard 1] 27 b8d441d736
+[locus shard 2] 2 1ada7a0617
+[extract locus/train shard 2] 33 7b4a316aea
+[paper shard 1] 2 a24f64f7fb
+[extract locus/train shard 2] 34 45ba9ea301
+[paper shard 0] 6 13c3e046d7
+[extract tokengs/train shard 3] 9 c413b34238
+[recover shard 0] 3 fb5a96b1a2 L7 depth10 r_gauss median 0.757
+[extract locus/train shard 2] 35 a766294249
+[paper shard 0] 7 31a2c91c43
+[paper shard 1] 3 3f15a9266d
+[locus shard 2] 3 21d970d8de
+[extract tokengs/train shard 3] 10 eb4bc76767
+[extract tokengs/train shard 1] 28 623c973c56
+[paper shard 0] 8 f3685d06a9
+[extract locus/train shard 2] 36 39705fbdf1
+[paper shard 1] 4 7831862f02
+[extract tokengs/train shard 1] 29 0affa0f99f
+[recover shard 0] 4 1ada7a0617 L7 depth10 r_gauss median 0.811
+[extract locus/train shard 2] 37 934599022f
+[paper shard 0] 9 f2dc06b1d2
+[paper shard 1] 5 f9f95681fd
+[locus shard 2] 4 bde1e479ad
+[extract locus/train shard 2] 38 faba6e97d7
+[extract tokengs/train shard 3] 11 5fb5d2dbf2
+[extract tokengs/train shard 1] 30 3d0b7d4b4e
+[extract locus/train shard 2] 39 95c9a0f535
+[paper shard 1] 6 e398684d27
+[paper shard 0] 10 f3d64c30f8
+[extract tokengs/train shard 1] 31 07e6f56969
+[locus shard 2] 5 3864514494
+[extract locus/train shard 2] 40 70945f435a
+[extract tokengs/train shard 3] 12 aad55d46ad
+[recover shard 0] 5 3e8bba0176 L7 depth10 r_gauss median 0.801
+[16:00:56] exit 0 GPU 4: extract --family locus --split train --shard 2 --num-shards 4
+[paper shard 1] 7 e7af285f7d
+[paper shard 0] 11 c5439f4607
+[extract tokengs/train shard 1] 32 c8fc01c453
+[16:00:59] start GPU 4: extract --family locus --split val --shard 0 --num-shards 2
+[paper shard 1] 8 b0a08200c9
+[locus shard 2] 6 a8bf42d646
+[extract tokengs/train shard 3] 13 a56eda3549
+[extract tokengs/train shard 1] 33 94b1acde81
+[paper shard 0] 12 09c1414f1b
+[recover shard 0] 6 21d970d8de L7 depth10 r_gauss median 0.631
+[paper shard 1] 9 5942004064
+[extract tokengs/train shard 1] 34 0452249a1e
+[locus shard 2] 7 286b55a2bf
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[paper shard 1] 10 0d2ee665be
+[paper shard 0] 13 27dd4da69e
+[extract locus/val shard 0] 1 7b6477cb95
+[extract tokengs/train shard 1] 35 c026d108e0
+[extract tokengs/train shard 3] 14 6bd39ac392
+[16:01:07] exit 0 GPU 3: conflict --shard 0 --num-shards 4
+[extract locus/val shard 0] 2 cc5237fd77
+[locus shard 2] 8 825d228aec
+[extract tokengs/train shard 1] 36 5c21213f16
+[extract locus/val shard 0] 3 fb5a96b1a2
+[recover shard 0] 7 c4c04e6d6c L7 depth10 r_gauss median 0.774
+[paper shard 1] 11 578511c8a9
+[16:01:11] start GPU 3: extract --family tokengs --split val --shard 0 --num-shards 2
+[extract locus/val shard 0] 4 1ada7a0617
+[extract tokengs/train shard 1] 37 4291be3b44
+[locus shard 2] 9 25f3b7a318
+[extract tokengs/train shard 3] 15 4f341f3af0
+[extract locus/val shard 0] 5 3e8bba0176
+[paper shard 1] 12 5f99900f09
+[extract tokengs/train shard 1] 38 7543973e1a
+[extract tokengs/train shard 3] 16 a6e1a3bdda
+[recover shard 0] 8 bde1e479ad L7 depth10 r_gauss median 0.727
+[extract locus/val shard 0] 6 21d970d8de
+[paper shard 1] 13 c49a8c6cff
+[extract tokengs/train shard 1] 39 909a9ea5fc
+[locus shard 2] 10 3db0a1c8f3
+[extract tokengs/train shard 3] 17 2284bf5c9d
+[16:01:19] exit 0 GPU 7: conflict --shard 1 --num-shards 4
+[extract locus/val shard 0] 7 c4c04e6d6c
+[recover shard 0] 9 5ee7c22ba0 L7 depth10 r_gauss median 0.818
+[extract tokengs/train shard 1] 40 9d8fcc4215
+[locus shard 2] 11 d755b3d9d8
+[16:01:24] exit 0 GPU 2: extract --family tokengs --split train --shard 1 --num-shards 4
+[extract locus/val shard 0] 8 bde1e479ad
+[extract tokengs/train shard 3] 18 5b38982d25
+[16:01:25] start GPU 7: recover --shard 1 --num-shards 2
+[extract locus/val shard 0] 9 5ee7c22ba0
+[recover shard 0] 10 3864514494 L7 depth10 r_gauss median 0.742
+[extract locus/val shard 0] 10 3864514494
+[locus shard 2] 12 9071e139d9
+[extract locus/val shard 0] 11 13c3e046d7
+[extract tokengs/train shard 3] 19 10242d1eaf
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[16:01:32] exit 0 GPU 3: extract --family tokengs --split val --shard 0 --num-shards 2
+[extract locus/val shard 0] 12 a8bf42d646
+[extract tokengs/train shard 3] 20 e1aa584dd5
+[paper shard 2] 1 cc5237fd77
+[recover shard 0] 11 13c3e046d7 L7 depth10 r_gauss median 0.842
+[extract locus/val shard 0] 13 31a2c91c43
+[extract locus/val shard 0] 14 286b55a2bf
+[recover shard 1] 1 c50d2d1d42 L7 depth10 r_gauss median 0.670
+[paper shard 2] 2 1ada7a0617
+[extract locus/val shard 0] 15 f3685d06a9
+[extract locus/val shard 0] 16 825d228aec
+[16:01:38] start GPU 2: extract --family locus --split val --shard 1 --num-shards 2
+[extract tokengs/train shard 3] 21 0eba3981c9
+[extract locus/val shard 0] 17 f2dc06b1d2
+[recover shard 0] 12 a8bf42d646 L7 depth10 r_gauss median 0.837
+[paper shard 2] 3 21d970d8de
+[recover shard 1] 2 acd95847c5 L7 depth10 r_gauss median 0.832
+[extract tokengs/train shard 3] 22 7c31bccde5
+[extract locus/val shard 0] 18 25f3b7a318
+[extract tokengs/train shard 3] 23 02c2ddee2a
+[extract locus/val shard 0] 19 f3d64c30f8
+[paper shard 2] 4 bde1e479ad
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[recover shard 0] 13 31a2c91c43 L7 depth10 r_gauss median 0.825
+[extract locus/val shard 1] 1 c50d2d1d42
+[recover shard 1] 3 a24f64f7fb L7 depth10 r_gauss median 0.823
+[paper shard 2] 5 3864514494
+[extract tokengs/train shard 3] 24 9cfea269dd
+[extract locus/val shard 1] 2 acd95847c5
+[extract locus/val shard 0] 20 3db0a1c8f3
+[extract locus/val shard 1] 3 a24f64f7fb
+[recover shard 0] 14 286b55a2bf L7 depth10 r_gauss median 0.829
+[extract tokengs/train shard 3] 25 cba701332a
+[extract locus/val shard 0] 21 c5439f4607
+[paper shard 2] 6 a8bf42d646
+[extract locus/val shard 1] 4 5eb31827b7
+[recover shard 1] 4 5eb31827b7 L7 depth10 r_gauss median 0.770
+[extract locus/val shard 1] 5 3f15a9266d
+[extract locus/val shard 0] 22 d755b3d9d8
+[paper shard 2] 7 286b55a2bf
+[extract tokengs/train shard 3] 26 3a3745a437
+[extract locus/val shard 1] 6 5748ce6f01
+[recover shard 0] 15 f3685d06a9 L7 depth10 r_gauss median 0.646
+[paper shard 2] 8 825d228aec
+[extract tokengs/train shard 3] 27 3ce6d36ab5
+[extract locus/val shard 0] 23 09c1414f1b
+[recover shard 1] 5 3f15a9266d L7 depth10 r_gauss median 0.846
+[extract locus/val shard 1] 7 7831862f02
+[paper shard 2] 9 25f3b7a318
+[extract tokengs/train shard 3] 28 307e3262f1
+[extract locus/val shard 0] 24 9071e139d9
+[recover shard 0] 16 825d228aec L7 depth10 r_gauss median 0.805
+[extract locus/val shard 1] 8 38d58a7a31
+[extract locus/val shard 1] 9 f9f95681fd
+[recover shard 1] 6 5748ce6f01 L7 depth10 r_gauss median 0.854
+[extract tokengs/train shard 3] 29 12b2b1c6d9
+[extract locus/val shard 1] 10 40aec5fffa
+[paper shard 2] 10 3db0a1c8f3
+[extract locus/val shard 0] 25 27dd4da69e
+[extract locus/val shard 1] 11 e398684d27
+[16:02:04] exit 0 GPU 4: extract --family locus --split val --shard 0 --num-shards 2
+[recover shard 0] 17 f2dc06b1d2 L7 depth10 r_gauss median 0.789
+[extract locus/val shard 1] 12 45b0dac5e3
+[paper shard 2] 11 d755b3d9d8
+[extract tokengs/train shard 3] 30 867d97cf3d
+[extract locus/val shard 1] 13 e7af285f7d
+[extract locus/val shard 1] 14 7bc286c1b6
+[recover shard 1] 7 7831862f02 L7 depth10 r_gauss median 0.840
+[paper shard 2] 12 9071e139d9
+[extract tokengs/train shard 3] 31 7e7d2e8640
+[extract locus/val shard 1] 15 b0a08200c9
+[recover shard 0] 18 25f3b7a318 L7 depth10 r_gauss median 0.826
+[16:02:11] exit 0 GPU 6: conflict --shard 2 --num-shards 4
+[extract locus/val shard 1] 16 a980334473
+[extract tokengs/train shard 3] 32 2634683a9f
+[extract locus/val shard 1] 17 5942004064
+[recover shard 1] 8 38d58a7a31 L7 depth10 r_gauss median 0.802
+[extract locus/val shard 1] 18 bcd2436daf
+[extract tokengs/train shard 3] 33 ca0c580422
+[recover shard 0] 19 f3d64c30f8 L7 depth10 r_gauss median 0.830
+[extract locus/val shard 1] 19 0d2ee665be
+[extract tokengs/train shard 3] 34 3b50ff5f35
+[recover shard 1] 9 f9f95681fd L7 depth10 r_gauss median 0.837
+[extract tokengs/train shard 3] 35 956e415fb1
+[extract locus/val shard 1] 20 ac48a9b736
+[recover shard 0] 20 3db0a1c8f3 L7 depth10 r_gauss median 0.793
+[extract tokengs/train shard 3] 36 db5293a870
+[recover shard 1] 10 40aec5fffa L7 depth10 r_gauss median 0.762
+[extract tokengs/train shard 3] 37 617dc40bca
+[extract locus/val shard 1] 21 578511c8a9
+[extract locus/val shard 1] 22 99fa5c25e1
+[extract tokengs/train shard 3] 38 9ad3639fbe
+[recover shard 0] 21 c5439f4607 L7 depth10 r_gauss median 0.827
+[recover shard 1] 11 e398684d27 L7 depth10 r_gauss median 0.652
+[extract locus/val shard 1] 23 5f99900f09
+[extract tokengs/train shard 3] 39 523657b4d0
+[extract locus/val shard 1] 24 6115eddb86
+[recover shard 1] 12 45b0dac5e3 L7 depth10 r_gauss median 0.786
+[recover shard 0] 22 d755b3d9d8 L7 depth10 r_gauss median 0.840
+[extract locus/val shard 1] 25 c49a8c6cff
+[16:02:39] exit 0 GPU 2: extract --family locus --split val --shard 1 --num-shards 2
+[extract tokengs/train shard 3] 40 2b5ef64cad
+[recover shard 1] 13 e7af285f7d L7 depth10 r_gauss median 0.840
+[16:02:43] exit 0 GPU 5: extract --family tokengs --split train --shard 3 --num-shards 4
+[16:02:43] phase B: probes
+[recover shard 0] 23 09c1414f1b L7 depth10 r_gauss median 0.859
+[recover shard 1] 14 7bc286c1b6 L7 depth10 r_gauss median 0.825
+[16:02:48] start GPU 0: probe --family tokengs --source release
+[16:02:50] start GPU 2: probe --family tokengs --source sft12
+[recover shard 0] 24 9071e139d9 L7 depth10 r_gauss median 0.828
+[16:02:52] start GPU 3: probe --family locus --source locus
+[recover shard 1] 15 b0a08200c9 L7 depth10 r_gauss median 0.752
+[recover shard 1] 16 a980334473 L7 depth10 r_gauss median 0.840
+[recover shard 0] 25 27dd4da69e L7 depth10 r_gauss median 0.744
+[16:03:00] exit 0 GPU 1: recover --shard 0 --num-shards 2
+[recover shard 1] 17 5942004064 L7 depth10 r_gauss median 0.695
+[probe tokengs/release] feat_cand step 500/4000 loss 3.2736 15s
+[probe tokengs/sft12] feat_cand step 500/4000 loss 3.2987 15s
+[recover shard 1] 18 bcd2436daf L7 depth10 r_gauss median 0.764
+[probe locus/locus] feat_cand step 500/4000 loss 3.3169 15s
+[recover shard 1] 19 0d2ee665be L7 depth10 r_gauss median 0.777
+[probe tokengs/release] feat_cand step 1000/4000 loss 3.1202 29s
+[probe tokengs/sft12] feat_cand step 1000/4000 loss 3.1688 29s
+[recover shard 1] 20 ac48a9b736 L7 depth10 r_gauss median 0.786
+[probe locus/locus] feat_cand step 1000/4000 loss 3.2178 29s
+[recover shard 1] 21 578511c8a9 L7 depth10 r_gauss median 0.764
+[probe tokengs/release] feat_cand step 1500/4000 loss 3.0689 44s
+[probe tokengs/sft12] feat_cand step 1500/4000 loss 3.1349 43s
+[recover shard 1] 22 99fa5c25e1 L7 depth10 r_gauss median 0.709
+[probe locus/locus] feat_cand step 1500/4000 loss 3.2057 44s
+[recover shard 1] 23 5f99900f09 L7 depth10 r_gauss median 0.879
+[probe tokengs/release] feat_cand step 2000/4000 loss 3.0525 58s
+[probe tokengs/sft12] feat_cand step 2000/4000 loss 3.0947 57s
+[recover shard 1] 24 6115eddb86 L7 depth10 r_gauss median 0.803
+[probe locus/locus] feat_cand step 2000/4000 loss 3.1908 59s
+[recover shard 1] 25 c49a8c6cff L7 depth10 r_gauss median 0.840
+[16:03:59] exit 0 GPU 7: recover --shard 1 --num-shards 2
+[probe tokengs/release] feat_cand step 2500/4000 loss 3.0177 73s
+[probe tokengs/sft12] feat_cand step 2500/4000 loss 3.0815 72s
+[probe locus/locus] feat_cand step 2500/4000 loss 3.1855 73s
+[probe tokengs/release] feat_cand step 3000/4000 loss 2.9985 88s
+[probe tokengs/sft12] feat_cand step 3000/4000 loss 3.0851 86s
+[probe locus/locus] feat_cand step 3000/4000 loss 3.1633 88s
+[probe tokengs/sft12] feat_cand step 3500/4000 loss 3.0656 100s
+[probe tokengs/release] feat_cand step 3500/4000 loss 2.9931 102s
+[probe locus/locus] feat_cand step 3500/4000 loss 3.1613 102s
+[probe tokengs/sft12] feat_cand step 4000/4000 loss 3.0484 115s
+[probe tokengs/release] feat_cand step 4000/4000 loss 2.9809 117s
+[probe locus/locus] feat_cand step 4000/4000 loss 3.1647 116s
+[probe tokengs/sft12] rgb_cand step 500/4000 loss 3.3381 16s
+[probe tokengs/release] rgb_cand step 500/4000 loss 3.3215 16s
+[probe locus/locus] rgb_cand step 500/4000 loss 3.3420 16s
+[probe tokengs/sft12] rgb_cand step 1000/4000 loss 3.1884 33s
+[probe tokengs/release] rgb_cand step 1000/4000 loss 3.1374 33s
+[probe locus/locus] rgb_cand step 1000/4000 loss 3.1752 32s
+[probe tokengs/sft12] rgb_cand step 1500/4000 loss 3.1416 49s
+[probe tokengs/release] rgb_cand step 1500/4000 loss 3.0882 49s
+[probe locus/locus] rgb_cand step 1500/4000 loss 3.1416 48s
+[probe tokengs/sft12] rgb_cand step 2000/4000 loss 3.1262 65s
+[probe tokengs/release] rgb_cand step 2000/4000 loss 3.0690 65s
+[probe locus/locus] rgb_cand step 2000/4000 loss 3.1072 64s
+[probe tokengs/sft12] rgb_cand step 2500/4000 loss 3.1118 81s
+[probe tokengs/release] rgb_cand step 2500/4000 loss 3.0525 81s
+[probe locus/locus] rgb_cand step 2500/4000 loss 3.0848 80s
+[probe tokengs/sft12] rgb_cand step 3000/4000 loss 3.1033 98s
+[probe tokengs/release] rgb_cand step 3000/4000 loss 3.0280 97s
+[probe locus/locus] rgb_cand step 3000/4000 loss 3.0838 96s
+[probe tokengs/release] rgb_cand step 3500/4000 loss 3.0297 113s
+[probe tokengs/sft12] rgb_cand step 3500/4000 loss 3.1026 114s
+[probe locus/locus] rgb_cand step 3500/4000 loss 3.0766 112s
+[probe tokengs/release] rgb_cand step 4000/4000 loss 3.0259 129s
+[probe tokengs/sft12] rgb_cand step 4000/4000 loss 3.0810 130s
+[probe locus/locus] rgb_cand step 4000/4000 loss 3.0646 128s
+[probe tokengs/release] feat_direct step 500/4000 loss 0.0707 4s
+[probe tokengs/sft12] feat_direct step 500/4000 loss 0.0450 4s
+[probe locus/locus] feat_direct step 500/4000 loss 0.0654 4s
+[probe tokengs/release] feat_direct step 1000/4000 loss 0.0663 8s
+[probe tokengs/sft12] feat_direct step 1000/4000 loss 0.0430 8s
+[probe locus/locus] feat_direct step 1000/4000 loss 0.0613 7s
+[probe tokengs/release] feat_direct step 1500/4000 loss 0.0653 12s
+[probe tokengs/sft12] feat_direct step 1500/4000 loss 0.0431 12s
+[probe locus/locus] feat_direct step 1500/4000 loss 0.0577 11s
+[probe tokengs/release] feat_direct step 2000/4000 loss 0.0618 16s
+[probe tokengs/sft12] feat_direct step 2000/4000 loss 0.0420 16s
+[probe locus/locus] feat_direct step 2000/4000 loss 0.0561 15s
+[probe tokengs/release] feat_direct step 2500/4000 loss 0.0608 20s
+[probe tokengs/sft12] feat_direct step 2500/4000 loss 0.0426 20s
+[probe locus/locus] feat_direct step 2500/4000 loss 0.0561 19s
+[probe tokengs/release] feat_direct step 3000/4000 loss 0.0612 24s
+[probe tokengs/sft12] feat_direct step 3000/4000 loss 0.0426 24s
+[probe locus/locus] feat_direct step 3000/4000 loss 0.0551 23s
+[probe tokengs/release] feat_direct step 3500/4000 loss 0.0613 28s
+[probe tokengs/sft12] feat_direct step 3500/4000 loss 0.0417 28s
+[probe locus/locus] feat_direct step 3500/4000 loss 0.0546 26s
+[probe tokengs/release] feat_direct step 4000/4000 loss 0.0598 32s
+[probe locus/locus] feat_direct step 4000/4000 loss 0.0529 30s
+[probe tokengs/sft12] feat_direct step 4000/4000 loss 0.0419 33s
+{
+ "pixels": 10657061,
+ "in_range_frac": 0.8531067967414856,
+ "group_A_frac_of_all(model>5%,vis>=2,in_range)": 0.3046821355819702,
+ "mean_absrel_all_pixels": {
+  "model": 0.1762,
+  "feat_cand": 0.1998,
+  "rgb_cand": 0.2083,
+  "feat_direct": 0.1546,
+  "photometric": 0.2178,
+  "oracle": 0.0549
+ },
+ "mean_absrel_in_range": {
+  "model": 0.0748,
+  "feat_cand": 0.1215,
+  "rgb_cand": 0.1247,
+  "feat_direct": 0.0681,
+  "photometric": 0.1295,
+  "oracle": 0.0051
+ },
+ "group_A": {
+  "model": {
+   "mean_absrel": 0.1374,
+   "reduction_vs_model": 0.0,
+   "corrected_lt_2pct": 0.0
+  },
+  "feat_cand": {
+   "mean_absrel": 0.1417,
+   "reduction_vs_model": -0.0314,
+   "corrected_lt_2pct": 0.108
+  },
+  "rgb_cand": {
+   "mean_absrel": 0.1502,
+   "reduction_vs_model": -0.0937,
+   "corrected_lt_2pct": 0.1474
+  },
+  "feat_direct": {
+   "mean_absrel": 0.1129,
+   "reduction_vs_model": 0.1779,
+   "corrected_lt_2pct": 0.0713
+  },
+  "photometric": {
+   "mean_absrel": 0.1676,
+   "reduction_vs_model": -0.2203,
+   "corrected_lt_2pct": 0.1237
+  },
+  "oracle": {
+   "mean_absrel": 0.0052,
+   "reduction_vs_model": 0.9625,
+   "corrected_lt_2pct": 1.0
+  }
+ },
+ "harm_on_model_lt_2pct(err>5%)": {
+  "feat_cand": 0.4552,
+  "rgb_cand": 0.4359,
+  "feat_direct": 0.0901,
+  "photometric": 0.4481,
+  "oracle": 0.0
+ },
+ "evidence_but_uncorrected_frac_of_all(A & feat_cand<2%)": 0.03291657939553261,
+ "model_err_gt_5pct_in_range_by_visible_views": {
+  "0": {
+   "share": 0.0168,
+   "model": 0.1655,
+   "feat_cand": 0.2371,
+   "rgb_cand": 0.2254,
+   "feat_direct": 0.1492,
+   "photometric": 0.1808,
+   "oracle": 0.0053
+  },
+  "1": {
+   "share": 0.0587,
+   "model": 0.1645,
+   "feat_cand": 0.2688,
+   "rgb_cand": 0.2342,
+   "feat_direct": 0.1332,
+   "photometric": 0.1956,
+   "oracle": 0.0054
+  },
+  "2": {
+   "share": 0.0671,
+   "model": 0.1412,
+   "feat_cand": 0.1877,
+   "rgb_cand": 0.1702,
+   "feat_direct": 0.1143,
+   "photometric": 0.1741,
+   "oracle": 0.0052
+  },
+  "3+": {
+   "share": 0.2376,
+   "model": 0.1363,
+   "feat_cand": 0.1287,
+   "rgb_cand": 0.1446,
+   "feat_direct": 0.1125,
+   "photometric": 0.1658,
+   "oracle": 0.0051
+  }
+ },
+ "in_range_by_model_error": {
+  "0-0.02": {
+   "share": 0.2566,
+   "model": 0.0095,
+   "feat_cand": 0.077,
+   "rgb_cand": 0.0817,
+   "feat_direct": 0.0211,
+   "photometric": 0.0871,
+   "oracle": 0.005
+  },
+  "0.02-0.05": {
+   "share": 0.2163,
+   "model": 0.033,
+   "feat_cand": 0.097,
+   "rgb_cand": 0.102,
+   "feat_direct": 0.0368,
+   "photometric": 0.1042,
+   "oracle": 0.0049
+  },
+  "0.05-0.15": {
+   "share": 0.2435,
+   "model": 0.0897,
+   "feat_cand": 0.1381,
+   "rgb_cand": 0.1415,
+   "feat_direct": 0.0776,
+   "photometric": 0.142,
+   "oracle": 0.005
+  },
+  "0.15-0.31": {
+   "share": 0.1104,
+   "model": 0.2049,
+   "feat_cand": 0.1971,
+   "rgb_cand": 0.1945,
+   "feat_direct": 0.1625,
+   "photometric": 0.2061,
+   "oracle": 0.0052
+  }
+ },
+ "H1_supported": false,
+ "H1b_supported": false
+}
+{
+ "pixels": 10662489,
+ "in_range_frac": 0.922835648059845,
+ "group_A_frac_of_all(model>5%,vis>=2,in_range)": 0.3180679380893707,
+ "mean_absrel_all_pixels": {
+  "model": 0.131,
+  "feat_cand": 0.1895,
+  "rgb_cand": 0.178,
+  "feat_direct": 0.1174,
+  "photometric": 0.1836,
+  "oracle": 0.0315
+ },
+ "mean_absrel_in_range": {
+  "model": 0.0732,
+  "feat_cand": 0.1479,
+  "rgb_cand": 0.1299,
+  "feat_direct": 0.0654,
+  "photometric": 0.1335,
+  "oracle": 0.0052
+ },
+ "group_A": {
+  "model": {
+   "mean_absrel": 0.1341,
+   "reduction_vs_model": 0.0,
+   "corrected_lt_2pct": 0.0
+  },
+  "feat_cand": {
+   "mean_absrel": 0.1616,
+   "reduction_vs_model": -0.2052,
+   "corrected_lt_2pct": 0.1064
+  },
+  "rgb_cand": {
+   "mean_absrel": 0.1499,
+   "reduction_vs_model": -0.1178,
+   "corrected_lt_2pct": 0.1682
+  },
+  "feat_direct": {
+   "mean_absrel": 0.102,
+   "reduction_vs_model": 0.2392,
+   "corrected_lt_2pct": 0.0924
+  },
+  "photometric": {
+   "mean_absrel": 0.1653,
+   "reduction_vs_model": -0.2325,
+   "corrected_lt_2pct": 0.1451
+  },
+  "oracle": {
+   "mean_absrel": 0.0055,
+   "reduction_vs_model": 0.9591,
+   "corrected_lt_2pct": 1.0
+  }
+ },
+ "harm_on_model_lt_2pct(err>5%)": {
+  "feat_cand": 0.6153,
+  "rgb_cand": 0.499,
+  "feat_direct": 0.1196,
+  "photometric": 0.501,
+  "oracle": 0.0
+ },
+ "evidence_but_uncorrected_frac_of_all(A & feat_cand<2%)": 0.033844348043203354,
+ "model_err_gt_5pct_in_range_by_visible_views": {
+  "0": {
+   "share": 0.0209,
+   "model": 0.1729,
+   "feat_cand": 0.2224,
+   "rgb_cand": 0.2173,
+   "feat_direct": 0.1578,
+   "photometric": 0.1867,
+   "oracle": 0.0054
+  },
+  "1": {
+   "share": 0.0686,
+   "model": 0.1536,
+   "feat_cand": 0.2683,
+   "rgb_cand": 0.223,
+   "feat_direct": 0.1308,
+   "photometric": 0.1841,
+   "oracle": 0.0054
+  },
+  "2": {
+   "share": 0.0751,
+   "model": 0.1387,
+   "feat_cand": 0.1877,
+   "rgb_cand": 0.164,
+   "feat_direct": 0.1054,
+   "photometric": 0.1672,
+   "oracle": 0.0054
+  },
+  "3+": {
+   "share": 0.2429,
+   "model": 0.1327,
+   "feat_cand": 0.1536,
+   "rgb_cand": 0.1455,
+   "feat_direct": 0.101,
+   "photometric": 0.1647,
+   "oracle": 0.0055
+  }
+ },
+ "in_range_by_model_error": {
+  "0-0.02": {
+   "share": 0.27,
+   "model": 0.0095,
+   "feat_cand": 0.113,
+   "rgb_cand": 0.0937,
+   "feat_direct": 0.025,
+   "photometric": 0.0983,
+   "oracle": 0.0051
+  },
+  "0.02-0.05": {
+   "share": 0.2453,
+   "model": 0.0333,
+   "feat_cand": 0.1285,
+   "rgb_cand": 0.1104,
+   "feat_direct": 0.0364,
+   "photometric": 0.1123,
+   "oracle": 0.0049
+  },
+  "0.05-0.15": {
+   "share": 0.2724,
+   "model": 0.0876,
+   "feat_cand": 0.1635,
+   "rgb_cand": 0.144,
+   "feat_direct": 0.0735,
+   "photometric": 0.141,
+   "oracle": 0.0053
+  },
+  "0.15-0.31": {
+   "share": 0.1068,
+   "model": 0.2103,
+   "feat_cand": 0.2138,
+   "rgb_cand": 0.1956,
+   "feat_direct": 0.1565,
+   "photometric": 0.2065,
+   "oracle": 0.0057
+  }
+ },
+ "H1_supported": false,
+ "H1b_supported": false
+}
+[16:08:14] exit 0 GPU 0: probe --family tokengs --source release
+{
+ "pixels": 10637407,
+ "in_range_frac": 0.9584612250328064,
+ "group_A_frac_of_all(model>5%,vis>=2,in_range)": 0.1689283847808838,
+ "mean_absrel_all_pixels": {
+  "model": 0.0664,
+  "feat_cand": 0.1512,
+  "rgb_cand": 0.1449,
+  "feat_direct": 0.0673,
+  "photometric": 0.1467,
+  "oracle": 0.0158
+ },
+ "mean_absrel_in_range": {
+  "model": 0.0437,
+  "feat_cand": 0.1324,
+  "rgb_cand": 0.1262,
+  "feat_direct": 0.0446,
+  "photometric": 0.1277,
+  "oracle": 0.005
+ },
+ "group_A": {
+  "model": {
+   "mean_absrel": 0.1047,
+   "reduction_vs_model": 0.0,
+   "corrected_lt_2pct": 0.0
+  },
+  "feat_cand": {
+   "mean_absrel": 0.1808,
+   "reduction_vs_model": -0.7277,
+   "corrected_lt_2pct": 0.0703
+  },
+  "rgb_cand": {
+   "mean_absrel": 0.1521,
+   "reduction_vs_model": -0.4533,
+   "corrected_lt_2pct": 0.1238
+  },
+  "feat_direct": {
+   "mean_absrel": 0.1042,
+   "reduction_vs_model": 0.0049,
+   "corrected_lt_2pct": 0.0013
+  },
+  "photometric": {
+   "mean_absrel": 0.1644,
+   "reduction_vs_model": -0.5708,
+   "corrected_lt_2pct": 0.1093
+  },
+  "oracle": {
+   "mean_absrel": 0.0051,
+   "reduction_vs_model": 0.9516,
+   "corrected_lt_2pct": 1.0
+  }
+ },
+ "harm_on_model_lt_2pct(err>5%)": {
+  "feat_cand": 0.5319,
+  "rgb_cand": 0.5251,
+  "feat_direct": 0.0015,
+  "photometric": 0.5412,
+  "oracle": 0.0
+ },
+ "evidence_but_uncorrected_frac_of_all(A & feat_cand<2%)": 0.011876484379172325,
+ "model_err_gt_5pct_in_range_by_visible_views": {
+  "0": {
+   "share": 0.0174,
+   "model": 0.1486,
+   "feat_cand": 0.2541,
+   "rgb_cand": 0.243,
+   "feat_direct": 0.1486,
+   "photometric": 0.1644,
+   "oracle": 0.0051
+  },
+  "1": {
+   "share": 0.063,
+   "model": 0.1405,
+   "feat_cand": 0.27,
+   "rgb_cand": 0.221,
+   "feat_direct": 0.139,
+   "photometric": 0.1699,
+   "oracle": 0.0052
+  },
+  "2": {
+   "share": 0.0522,
+   "model": 0.116,
+   "feat_cand": 0.1967,
+   "rgb_cand": 0.162,
+   "feat_direct": 0.1147,
+   "photometric": 0.1673,
+   "oracle": 0.0051
+  },
+  "3+": {
+   "share": 0.1167,
+   "model": 0.0996,
+   "feat_cand": 0.1737,
+   "rgb_cand": 0.1477,
+   "feat_direct": 0.0995,
+   "photometric": 0.1631,
+   "oracle": 0.0051
+  }
+ },
+ "in_range_by_model_error": {
+  "0-0.02": {
+   "share": 0.4348,
+   "model": 0.0091,
+   "feat_cand": 0.092,
+   "rgb_cand": 0.0994,
+   "feat_direct": 0.0119,
+   "photometric": 0.1077,
+   "oracle": 0.0051
+  },
+  "0.02-0.05": {
+   "share": 0.2744,
+   "model": 0.0323,
+   "feat_cand": 0.1274,
+   "rgb_cand": 0.1236,
+   "feat_direct": 0.0317,
+   "photometric": 0.1246,
+   "oracle": 0.0049
+  },
+  "0.05-0.15": {
+   "share": 0.1928,
+   "model": 0.0844,
+   "feat_cand": 0.1879,
+   "rgb_cand": 0.1598,
+   "feat_direct": 0.0835,
+   "photometric": 0.1468,
+   "oracle": 0.005
+  },
+  "0.15-0.31": {
+   "share": 0.0479,
+   "model": 0.2019,
+   "feat_cand": 0.2666,
+   "rgb_cand": 0.2192,
+   "feat_direct": 0.2015,
+   "photometric": 0.2102,
+   "oracle": 0.0051
+  }
+ },
+ "H1_supported": false,
+ "H1b_supported": false
+}
+[16:08:15] exit 0 GPU 3: probe --family locus --source locus
+[16:08:15] exit 0 GPU 2: probe --family tokengs --source sft12
+[16:08:15] phase C: summarize / demo
+Traceback (most recent call last):
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/verify_geometry_correctability.py", line 827, in <module>
+    main()
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/verify_geometry_correctability.py", line 822, in main
+    {"conflict": cmd_conflict, "recover": cmd_recover, "fitpca": cmd_fitpca, "extract": cmd_extract, "probe": cmd_probe,
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/verify_geometry_correctability.py", line 575, in cmd_summarize
+    out[g] = {"pixels": int(v["bias"].numel()), "abs_bias_m": q(v["bias"].abs()), "between_m": q(v["between"]), "within_m": q(v["within"]),
+                                                              ^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/verify_geometry_correctability.py", line 552, in q
+    return {f"p{int(p * 100)}": round(float(x.quantile(p)), 4) for p in ps} if x.numel() else {}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jms/xveyan/4DGS/TokenGS/scripts/verify_geometry_correctability.py", line 552, in <dictcomp>
+    return {f"p{int(p * 100)}": round(float(x.quantile(p)), 4) for p in ps} if x.numel() else {}
+                                            ^^^^^^^^^^^^^
+RuntimeError: quantile() input tensor is too large
+/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/utils/cpp_extension.py:2356: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+{"E2_demo_r_gauss_median": 0.7526628375053406, "E2_demo_tokens": 504}

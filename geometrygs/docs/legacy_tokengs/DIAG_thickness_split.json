@@ -1,0 +1,72 @@
+{
+  "definitions": "Where does the ray thickness come from?  (no training; official interpolation targets of the 50 validation scenes)",
+  "gpu": "1",
+  "models": {
+    "official": {
+      "ray_thickness_total": {
+        "p50_cm": 7.84,
+        "p90_cm": 25.78
+      },
+      "within_token": {
+        "p50_cm": 3.97,
+        "p90_cm": 9.42
+      },
+      "between_token": {
+        "p50_cm": 6.09,
+        "p90_cm": 23.87
+      },
+      "variance_share_within_token": 0.09700507444635957,
+      "variance_share_between_token": 0.9029949270792077,
+      "intrinsic_gaussian_extent_along_ray": {
+        "p50_cm": 2.16,
+        "p90_cm": 4.85
+      },
+      "psnr_target_views": 30.503,
+      "psnr_input_views": 32.352
+    },
+    "sft_readout_rgb_depth": {
+      "ray_thickness_total": {
+        "p50_cm": 11.39,
+        "p90_cm": 29.91
+      },
+      "within_token": {
+        "p50_cm": 7.22,
+        "p90_cm": 19.44
+      },
+      "between_token": {
+        "p50_cm": 7.61,
+        "p90_cm": 22.22
+      },
+      "variance_share_within_token": 0.3566809799249431,
+      "variance_share_between_token": 0.6433190183453296,
+      "intrinsic_gaussian_extent_along_ray": {
+        "p50_cm": 1.97,
+        "p90_cm": 4.52
+      },
+      "psnr_target_views": 30.502,
+      "psnr_input_views": 32.17
+    },
+    "sft_readout_rgb_depth_thick": {
+      "ray_thickness_total": {
+        "p50_cm": 2.75,
+        "p90_cm": 7.09
+      },
+      "within_token": {
+        "p50_cm": 1.88,
+        "p90_cm": 4.01
+      },
+      "between_token": {
+        "p50_cm": 1.66,
+        "p90_cm": 5.68
+      },
+      "variance_share_within_token": 0.17893315693004894,
+      "variance_share_between_token": 0.821066860912996,
+      "intrinsic_gaussian_extent_along_ray": {
+        "p50_cm": 1.68,
+        "p90_cm": 3.89
+      },
+      "psnr_target_views": 29.845,
+      "psnr_input_views": 31.211
+    }
+  }
+}

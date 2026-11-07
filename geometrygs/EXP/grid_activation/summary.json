@@ -1,0 +1,227 @@
+{
+  "protocol": {
+    "output": "EXP/grid_activation",
+    "demo": "EXP/demo/scene_7b6477cb95/grid_activation",
+    "train_scenes": 16,
+    "calibration_scenes": 4,
+    "test_scenes": 8,
+    "resolution": 16,
+    "extent_m": 6.0,
+    "steps": 1000,
+    "batch_per_rank": 512,
+    "seed": 42
+  },
+  "checkpoint": "/home/jms/xveyan/4DGS/TokenGS/checkpoints_hf/checkpoints_26.06/dl3dv_latent_6v_ssim.safetensors",
+  "checkpoint_sha256": "5913da347475049cb58e552634ee1c527293c2571576806db0d4da702ce978c3",
+  "world_size": 7,
+  "grid_lower_m": [
+    -3.0,
+    -3.0,
+    0
+  ],
+  "cell_size_m": 0.375,
+  "label_definition": "observed input surface / conservative confirmed free / unknown",
+  "feature_definition": "64D fixed random projection of frozen multi-scale image features; 9 samples per cell",
+  "predictor_inputs": "RGB image features and input camera/grid geometry only; no depth, SfM, GS or mesh",
+  "gaussian_count_definition": "centres of GS with exact summed input-render compositing weight >1e-6",
+  "checkpoints_are_probe_only": true,
+  "models": {
+    "camera_geometry": {
+      "parameters": 12033,
+      "thresholds": {
+        "calibration_recall_0.95": 0.00251730321906507,
+        "calibration_recall_0.99": 5.534607883106446e-09
+      },
+      "splits": {
+        "train": {
+          "calibration_recall_0.95": {
+            "surface_recall": 1.0,
+            "free_closure": 0.085003711952487,
+            "surface_precision": 0.7161119428768858,
+            "known_kept_fraction": 0.9743043087971275,
+            "unknown_closed_fraction": 0.0004061881887538853,
+            "surface_cells": 6218,
+            "free_cells": 2694,
+            "unknown_cells": 56624,
+            "auc": 0.9743373227569552,
+            "average_precision": 0.989259217415982
+          },
+          "calibration_recall_0.99": {
+            "surface_recall": 1.0,
+            "free_closure": 0.0003711952487008166,
+            "surface_precision": 0.6977892492425093,
+            "known_kept_fraction": 0.9998877917414721,
+            "unknown_closed_fraction": 3.532071206555524e-05,
+            "surface_cells": 6218,
+            "free_cells": 2694,
+            "unknown_cells": 56624,
+            "auc": 0.9743373227569552,
+            "average_precision": 0.989259217415982
+          }
+        },
+        "calibration": {
+          "calibration_recall_0.95": {
+            "surface_recall": 0.9501267962806424,
+            "free_closure": 0.0518783542039356,
+            "surface_precision": 0.6795646916565901,
+            "known_kept_fraction": 0.9494833524684271,
+            "unknown_closed_fraction": 0.06727223056959432,
+            "surface_cells": 1183,
+            "free_cells": 559,
+            "unknown_cells": 14642,
+            "auc": 0.6915319440432967,
+            "average_precision": 0.7725231296678559
+          },
+          "calibration_recall_0.99": {
+            "surface_recall": 0.9907016060862215,
+            "free_closure": 0.0,
+            "surface_precision": 0.6770652801848642,
+            "known_kept_fraction": 0.9936854190585533,
+            "unknown_closed_fraction": 0.004780767654691982,
+            "surface_cells": 1183,
+            "free_cells": 559,
+            "unknown_cells": 14642,
+            "auc": 0.6915319440432967,
+            "average_precision": 0.7725231296678559
+          }
+        },
+        "test": {
+          "calibration_recall_0.95": {
+            "surface_recall": 0.9048731642189586,
+            "free_closure": 0.1574642126789366,
+            "surface_precision": 0.7669024045261669,
+            "known_kept_fraction": 0.8895319577252139,
+            "unknown_closed_fraction": 0.07564075849135236,
+            "surface_cells": 2996,
+            "free_cells": 978,
+            "unknown_cells": 28794,
+            "auc": 0.6589728704393861,
+            "average_precision": 0.8463907972099147
+          },
+          "calibration_recall_0.99": {
+            "surface_recall": 0.9796395193591455,
+            "free_closure": 0.012269938650306749,
+            "surface_precision": 0.7523711868751602,
+            "known_kept_fraction": 0.9816305988928032,
+            "unknown_closed_fraction": 0.03490310481350281,
+            "surface_cells": 2996,
+            "free_cells": 978,
+            "unknown_cells": 28794,
+            "auc": 0.6589728704393861,
+            "average_precision": 0.8463907972099147
+          }
+        }
+      }
+    },
+    "projected_image": {
+      "parameters": 28417,
+      "thresholds": {
+        "calibration_recall_0.95": 3.798439842623105e-16,
+        "calibration_recall_0.99": 8.487733763596096e-23
+      },
+      "splits": {
+        "train": {
+          "calibration_recall_0.95": {
+            "surface_recall": 1.0,
+            "free_closure": 0.012620638455827766,
+            "surface_precision": 0.7003829691371931,
+            "known_kept_fraction": 0.9961849192100538,
+            "unknown_closed_fraction": 3.532071206555524e-05,
+            "surface_cells": 6218,
+            "free_cells": 2694,
+            "unknown_cells": 56624,
+            "auc": 0.9999683009525474,
+            "average_precision": 0.9999864308056381
+          },
+          "calibration_recall_0.99": {
+            "surface_recall": 1.0,
+            "free_closure": 0.0,
+            "surface_precision": 0.6977109515260324,
+            "known_kept_fraction": 1.0,
+            "unknown_closed_fraction": 0.0,
+            "surface_cells": 6218,
+            "free_cells": 2694,
+            "unknown_cells": 56624,
+            "auc": 0.9999683009525474,
+            "average_precision": 0.9999864308056381
+          }
+        },
+        "calibration": {
+          "calibration_recall_0.95": {
+            "surface_recall": 0.9501267962806424,
+            "free_closure": 0.01967799642218247,
+            "surface_precision": 0.6722488038277512,
+            "known_kept_fraction": 0.9598163030998852,
+            "unknown_closed_fraction": 0.014683786367982517,
+            "surface_cells": 1183,
+            "free_cells": 559,
+            "unknown_cells": 14642,
+            "auc": 0.5821272438858789,
+            "average_precision": 0.7292568656258523
+          },
+          "calibration_recall_0.99": {
+            "surface_recall": 0.9907016060862215,
+            "free_closure": 0.01073345259391771,
+            "surface_precision": 0.6794202898550724,
+            "known_kept_fraction": 0.9902411021814007,
+            "unknown_closed_fraction": 0.0012976369348449664,
+            "surface_cells": 1183,
+            "free_cells": 559,
+            "unknown_cells": 14642,
+            "auc": 0.5821272438858789,
+            "average_precision": 0.7292568656258523
+          }
+        },
+        "test": {
+          "calibration_recall_0.95": {
+            "surface_recall": 1.0,
+            "free_closure": 0.011247443762781187,
+            "surface_precision": 0.7559929346454706,
+            "known_kept_fraction": 0.9972320080523402,
+            "unknown_closed_fraction": 0.0006945891505174689,
+            "surface_cells": 2996,
+            "free_cells": 978,
+            "unknown_cells": 28794,
+            "auc": 0.8964138619727461,
+            "average_precision": 0.9584738622192855
+          },
+          "calibration_recall_0.99": {
+            "surface_recall": 1.0,
+            "free_closure": 0.0,
+            "surface_precision": 0.7539003522898843,
+            "known_kept_fraction": 1.0,
+            "unknown_closed_fraction": 0.0,
+            "surface_cells": 2996,
+            "free_cells": 978,
+            "unknown_cells": 28794,
+            "auc": 0.8964138619727461,
+            "average_precision": 0.9584738622192855
+          }
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 18.053646570071578,
+  "test_occupancy_scene_mean": {
+    "grid_cells": 4096.0,
+    "surface_cells": 374.5,
+    "free_cells": 122.25,
+    "unknown_cells": 3599.25,
+    "surface_fraction": 0.0914306640625,
+    "free_fraction": 0.02984619140625,
+    "unknown_fraction": 0.87872314453125,
+    "input_surface_hit_coverage": 0.9248999282717705,
+    "contributing_gaussians": 185390.625,
+    "inside_contributing_gaussians": 167608.0,
+    "compositing_mass_inside": 0.9078982621431351,
+    "surface_cell_gs_mean": 498.2842655181885,
+    "surface_cell_gs_median": 190.5,
+    "surface_cell_gs_p90": 1241.124885559082,
+    "surface_cells_gt64": 0.632274653762579,
+    "free_mass_fraction": 0.03709089305266389,
+    "high_texture_gs_mean": 484.02910137176514,
+    "lower_texture_gs_mean": 503.0801200866699,
+    "varying_normal_gs_mean": 686.2842979431152,
+    "planar_gs_mean": 334.3216562271118
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "tokens": 196216,
+  "definitions": "\"TokenGS geometry is multi-view-matching-like (triangulation limit)\": per GS token (official model, 50 validation windows, readout-capacity probe cache),\n    parallax = largest angle between the rays from the input cameras that attend to the token (attention mass > 0.1\n    per view) to the token's laser region centroid; also an inference-time version using the token's own Gaussian\n    centre instead of the laser centroid.  Errors: (E1) official output, per-token median child -> own laser region\n    distance; (E2) information ceiling, set-Transformer probe distance-from-camera error (probe_gs_token_limit).\n    Spearman correlations with #views, parallax, distance and distance/parallax (triangulation error ~ z / angle),\n    overall and within fixed #views; binned medians.\n\n  PYTHONPATH=scripts:. python scripts/diag_thinning_and_parallax.py thinning_cost\n  PYTHONPATH=scripts:. python scripts/diag_thinning_and_parallax.py parallax",
+  "spearman": {
+    "e1": {
+      "#views": 0.22099229653199623,
+      "parallax_deg (higher=better)": 0.3978195241896754,
+      "parallax_deg_inference_time": 0.4001698636154949,
+      "distance_m": 0.3462728285794123,
+      "distance/parallax": 0.47296995097440275
+    },
+    "e2": {
+      "#views": 0.23400782125415906,
+      "parallax_deg (higher=better)": 0.26693421642970483,
+      "parallax_deg_inference_time": 0.2607173588705833,
+      "distance_m": 0.2526515455251328,
+      "distance/parallax": 0.33211227014450495
+    }
+  },
+  "spearman_recall5_vs_parallax": 0.26192806753978637,
+  "spearman_within_views": {
+    "2 views": {
+      "tokens": 47398,
+      "e1_vs_-parallax": 0.29994267631283356,
+      "e2_vs_-parallax": 0.16610367431009437,
+      "e1_vs_distance/parallax": 0.3878945882691321,
+      "e2_vs_distance/parallax": 0.24132515790337244
+    },
+    "3 views": {
+      "tokens": 46118,
+      "e1_vs_-parallax": 0.38465547848282494,
+      "e2_vs_-parallax": 0.20745113047592476,
+      "e1_vs_distance/parallax": 0.48446575835451944,
+      "e2_vs_distance/parallax": 0.2973035751216585
+    },
+    "4+ views": {
+      "tokens": 72201,
+      "e1_vs_-parallax": 0.3482763290332362,
+      "e2_vs_-parallax": 0.16831456727805558,
+      "e1_vs_distance/parallax": 0.4630511579560725,
+      "e2_vs_distance/parallax": 0.26644601120727957
+    }
+  },
+  "binned": {
+    "single view (0 deg)": {
+      "token_share": 0.10791678726673126,
+      "e1_median_cm": 14.308805465698242,
+      "e1_recall5_mean": 0.30927738547325134,
+      "e2_median_cm": 13.1879243850708,
+      "e2_p90_cm": 61.74685287475586
+    },
+    "0-2 deg": {
+      "token_share": 0.14623680710792542,
+      "e1_median_cm": 13.15945816040039,
+      "e1_recall5_mean": 0.36369195580482483,
+      "e2_median_cm": 10.13253116607666,
+      "e2_p90_cm": 53.5258903503418
+    },
+    "2-5 deg": {
+      "token_share": 0.20642048120498657,
+      "e1_median_cm": 7.681704998016357,
+      "e1_recall5_mean": 0.5127164721488953,
+      "e2_median_cm": 6.047188758850098,
+      "e2_p90_cm": 31.411964416503906
+    },
+    "5-10 deg": {
+      "token_share": 0.21280120313167572,
+      "e1_median_cm": 5.221667289733887,
+      "e1_recall5_mean": 0.5875531435012817,
+      "e2_median_cm": 4.4050116539001465,
+      "e2_p90_cm": 27.751819610595703
+    },
+    "10-20 deg": {
+      "token_share": 0.1902240365743637,
+      "e1_median_cm": 4.377922058105469,
+      "e1_recall5_mean": 0.5953271985054016,
+      "e2_median_cm": 4.073709487915039,
+      "e2_p90_cm": 22.016084671020508
+    },
+    ">20 deg": {
+      "token_share": 0.13640069961547852,
+      "e1_median_cm": 3.386335849761963,
+      "e1_recall5_mean": 0.6089974641799927,
+      "e2_median_cm": 3.8646557331085205,
+      "e2_p90_cm": 28.70354652404785
+    }
+  }
+}

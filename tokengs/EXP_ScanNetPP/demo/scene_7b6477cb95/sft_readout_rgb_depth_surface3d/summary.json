@@ -1,0 +1,19 @@
+{
+  "name": "sft_readout_rgb_depth_surface3d",
+  "scene_id": "7b6477cb95",
+  "psnr": 29.312219381332397,
+  "ssim": 0.9377527460455894,
+  "lpips": 0.1649235188961029,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "checkpoint_sha256": "051d8dba4e4634ab228bfb3ce1e7e012d66a7e3ec1e37b51661d8701c92fec94",
+  "completed_at": "2026-11-03T11:35:36.936096+00:00"
+}

@@ -1,0 +1,354 @@
+Started 2026-11-07T11:33:22+08:00; GPUs=1,2,3,4,5,6,7
+Command: CUDA_VISIBLE_DEVICES=1,2,3,4,5,6,7 torchrun --standalone --nproc_per_node=7 scripts/check_grid_queries.py --output EXP/grid_activation
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 388, in <module>
+[rank5]:     main()
+[rank5]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 280, in main
+[rank5]:     rec = scene_extract(providers[split], i, role, model, opt, projector, args, device)
+[rank5]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 73, in scene_extract
+[rank5]:     mi, _ = split_data(batch, opt)
+[rank5]:             ^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/home/jms/xveyan/4DGS/TokenGS/tokengs/models/input_types.py", line 251, in split_data
+[rank5]:     has_mask=batch['has_mask'],
+[rank5]:              ~~~~~^^^^^^^^^^^^
+[rank5]: KeyError: 'has_mask'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 388, in <module>
+[rank1]:     main()
+[rank1]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 280, in main
+[rank1]:     rec = scene_extract(providers[split], i, role, model, opt, projector, args, device)
+[rank1]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 73, in scene_extract
+[rank1]:     mi, _ = split_data(batch, opt)
+[rank1]:             ^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/jms/xveyan/4DGS/TokenGS/tokengs/models/input_types.py", line 251, in split_data
+[rank1]:     has_mask=batch['has_mask'],
+[rank1]:              ~~~~~^^^^^^^^^^^^
+[rank1]: KeyError: 'has_mask'
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 388, in <module>
+[rank4]:     main()
+[rank4]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 280, in main
+[rank4]:     rec = scene_extract(providers[split], i, role, model, opt, projector, args, device)
+[rank4]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 73, in scene_extract
+[rank4]:     mi, _ = split_data(batch, opt)
+[rank4]:             ^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/home/jms/xveyan/4DGS/TokenGS/tokengs/models/input_types.py", line 251, in split_data
+[rank4]:     has_mask=batch['has_mask'],
+[rank4]:              ~~~~~^^^^^^^^^^^^
+[rank4]: KeyError: 'has_mask'
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 388, in <module>
+[rank3]:     main()
+[rank3]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 280, in main
+[rank3]:     rec = scene_extract(providers[split], i, role, model, opt, projector, args, device)
+[rank3]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 73, in scene_extract
+[rank3]:     mi, _ = split_data(batch, opt)
+[rank3]:             ^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/jms/xveyan/4DGS/TokenGS/tokengs/models/input_types.py", line 251, in split_data
+[rank3]:     has_mask=batch['has_mask'],
+[rank3]:              ~~~~~^^^^^^^^^^^^
+[rank3]: KeyError: 'has_mask'
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 388, in <module>
+[rank6]:     main()
+[rank6]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 280, in main
+[rank6]:     rec = scene_extract(providers[split], i, role, model, opt, projector, args, device)
+[rank6]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 73, in scene_extract
+[rank6]:     mi, _ = split_data(batch, opt)
+[rank6]:             ^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/home/jms/xveyan/4DGS/TokenGS/tokengs/models/input_types.py", line 251, in split_data
+[rank6]:     has_mask=batch['has_mask'],
+[rank6]:              ~~~~~^^^^^^^^^^^^
+[rank6]: KeyError: 'has_mask'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 388, in <module>
+[rank2]:     main()
+[rank2]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 280, in main
+[rank2]:     rec = scene_extract(providers[split], i, role, model, opt, projector, args, device)
+[rank2]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 73, in scene_extract
+[rank2]:     mi, _ = split_data(batch, opt)
+[rank2]:             ^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/jms/xveyan/4DGS/TokenGS/tokengs/models/input_types.py", line 251, in split_data
+[rank2]:     has_mask=batch['has_mask'],
+[rank2]:              ~~~~~^^^^^^^^^^^^
+[rank2]: KeyError: 'has_mask'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 388, in <module>
+[rank0]:     main()
+[rank0]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 280, in main
+[rank0]:     rec = scene_extract(providers[split], i, role, model, opt, projector, args, device)
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jms/xveyan/4DGS/GeometryGS/scripts/check_grid_queries.py", line 73, in scene_extract
+[rank0]:     mi, _ = split_data(batch, opt)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jms/xveyan/4DGS/TokenGS/tokengs/models/input_types.py", line 251, in split_data
+[rank0]:     has_mask=batch['has_mask'],
+[rank0]:              ~~~~~^^^^^^^^^^^^
+[rank0]: KeyError: 'has_mask'
+[rank0]:[W1107 11:33:50.953899993 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W1107 11:33:50.758000 2624801 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2624805 closing signal SIGTERM
+W1107 11:33:50.758000 2624801 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2624806 closing signal SIGTERM
+W1107 11:33:50.759000 2624801 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2624807 closing signal SIGTERM
+W1107 11:33:50.760000 2624801 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2624808 closing signal SIGTERM
+W1107 11:33:50.761000 2624801 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2624809 closing signal SIGTERM
+W1107 11:33:50.761000 2624801 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 2624811 closing signal SIGTERM
+E1107 11:33:51.380000 2624801 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 5 (pid: 2624810) of binary: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python3.11
+Traceback (most recent call last):
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/run.py", line 892, in main
+    run(args)
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/run.py", line 883, in run
+    elastic_launch(
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/disk/jinsoo/anaconda3/envs/tokengs/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/check_grid_queries.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-07_11:33:50
+  host      : iZwz9foxpfyzf7f1y60xxwZ
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 2624810)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Finished 2026-11-07T11:33:51+08:00; exit=1
+Started 2026-11-07T11:35:39+08:00; GPUs=1,2,3,4,5,6,7
+Command: CUDA_VISIBLE_DEVICES=1,2,3,4,5,6,7 torchrun --standalone --nproc_per_node=7 scripts/check_grid_queries.py --output EXP/grid_activation
+[rank 1] train 934599022f: surface/free/unknown=244/46/3806; live GS=182263
+[rank 2] train 7c31a42404: surface/free/unknown=290/43/3763; live GS=185810
+[rank 6] train 9ef704a38d: surface/free/unknown=328/91/3677; live GS=185151
+[rank 3] train 206bccc898: surface/free/unknown=231/10/3855; live GS=185406
+[rank 5] train 6855e1ac32: surface/free/unknown=274/126/3696; live GS=186456
+[rank 6] train 0e28968c1f: surface/free/unknown=119/3/3974; live GS=176891
+[rank 1] train c06a983e63: surface/free/unknown=614/276/3206; live GS=186871
+[rank 0] train de83a9c2d7: surface/free/unknown=607/231/3258; live GS=181910
+[rank 4] train a892730b61: surface/free/unknown=671/871/2554; live GS=186916
+[rank 3] train f7da3f0714: surface/free/unknown=319/55/3722; live GS=187425
+[rank 5] train 1cefb55d50: surface/free/unknown=317/1/3778; live GS=185980
+[rank 1] train ba8e2bce5d: surface/free/unknown=278/67/3751; live GS=186194
+[rank 3] calibration 7d75c00a32: surface/free/unknown=103/6/3987; live GS=176033
+[rank 0] train ec2cb8dae1: surface/free/unknown=522/165/3409; live GS=188231
+[rank 2] train c6e247f6c3: surface/free/unknown=1069/685/2342; live GS=180221
+[rank 6] test 7b6477cb95: surface/free/unknown=432/187/3477; live GS=185910
+[rank 4] train 6b19334aeb: surface/free/unknown=169/8/3919; live GS=183866
+[rank 1] test cc5237fd77: surface/free/unknown=158/13/3925; live GS=185913
+[rank 5] calibration 9471b8d485: surface/free/unknown=236/15/3845; live GS=170634
+[rank 0] train d986399f4c: surface/free/unknown=166/16/3914; live GS=183478
+[rank 6] test 5eb31827b7: surface/free/unknown=222/47/3827; live GS=180652
+[rank 5] test 1ada7a0617: surface/free/unknown=639/257/3200; live GS=185040
+[rank 4] calibration da1df716a5: surface/free/unknown=163/36/3897; live GS=187325
+[rank 3] test fb5a96b1a2: surface/free/unknown=546/202/3348; live GS=188608
+[rank 2] calibration c842edbdf5: surface/free/unknown=681/502/2913; live GS=186747
+[rank 0] test c50d2d1d42: surface/free/unknown=480/138/3478; live GS=185320
+[rank 4] test a24f64f7fb: surface/free/unknown=211/40/3845; live GS=185194
+[rank 2] test acd95847c5: surface/free/unknown=308/94/3694; live GS=186488
+[camera_geometry] step 200/1000 train balanced BCE=0.34614
+[camera_geometry] step 400/1000 train balanced BCE=0.30013
+[camera_geometry] step 600/1000 train balanced BCE=0.23667
+[camera_geometry] step 800/1000 train balanced BCE=0.28583
+[camera_geometry] step 1000/1000 train balanced BCE=0.22295
+{
+  "camera_geometry": {
+    "parameters": 12033,
+    "thresholds": {
+      "calibration_recall_0.95": 0.00251730321906507,
+      "calibration_recall_0.99": 5.534607883106446e-09
+    },
+    "splits": {
+      "train": {
+        "calibration_recall_0.95": {
+          "surface_recall": 1.0,
+          "free_closure": 0.085003711952487,
+          "surface_precision": 0.7161119428768858,
+          "known_kept_fraction": 0.9743043087971275,
+          "unknown_closed_fraction": 0.0004061881887538853,
+          "surface_cells": 6218,
+          "free_cells": 2694,
+          "unknown_cells": 56624,
+          "auc": 0.9743373227569552,
+          "average_precision": 0.989259217415982
+        },
+        "calibration_recall_0.99": {
+          "surface_recall": 1.0,
+          "free_closure": 0.0003711952487008166,
+          "surface_precision": 0.6977892492425093,
+          "known_kept_fraction": 0.9998877917414721,
+          "unknown_closed_fraction": 3.532071206555524e-05,
+          "surface_cells": 6218,
+          "free_cells": 2694,
+          "unknown_cells": 56624,
+          "auc": 0.9743373227569552,
+          "average_precision": 0.989259217415982
+        }
+      },
+      "calibration": {
+        "calibration_recall_0.95": {
+          "surface_recall": 0.9501267962806424,
+          "free_closure": 0.0518783542039356,
+          "surface_precision": 0.6795646916565901,
+          "known_kept_fraction": 0.9494833524684271,
+          "unknown_closed_fraction": 0.06727223056959432,
+          "surface_cells": 1183,
+          "free_cells": 559,
+          "unknown_cells": 14642,
+          "auc": 0.6915319440432967,
+          "average_precision": 0.7725231296678559
+        },
+        "calibration_recall_0.99": {
+          "surface_recall": 0.9907016060862215,
+          "free_closure": 0.0,
+          "surface_precision": 0.6770652801848642,
+          "known_kept_fraction": 0.9936854190585533,
+          "unknown_closed_fraction": 0.004780767654691982,
+          "surface_cells": 1183,
+          "free_cells": 559,
+          "unknown_cells": 14642,
+          "auc": 0.6915319440432967,
+          "average_precision": 0.7725231296678559
+        }
+      },
+      "test": {
+        "calibration_recall_0.95": {
+          "surface_recall": 0.9048731642189586,
+          "free_closure": 0.1574642126789366,
+          "surface_precision": 0.7669024045261669,
+          "known_kept_fraction": 0.8895319577252139,
+          "unknown_closed_fraction": 0.07564075849135236,
+          "surface_cells": 2996,
+          "free_cells": 978,
+          "unknown_cells": 28794,
+          "auc": 0.6589728704393861,
+          "average_precision": 0.8463907972099147
+        },
+        "calibration_recall_0.99": {
+          "surface_recall": 0.9796395193591455,
+          "free_closure": 0.012269938650306749,
+          "surface_precision": 0.7523711868751602,
+          "known_kept_fraction": 0.9816305988928032,
+          "unknown_closed_fraction": 0.03490310481350281,
+          "surface_cells": 2996,
+          "free_cells": 978,
+          "unknown_cells": 28794,
+          "auc": 0.6589728704393861,
+          "average_precision": 0.8463907972099147
+        }
+      }
+    }
+  }
+}
+[projected_image] step 200/1000 train balanced BCE=0.11792
+[projected_image] step 400/1000 train balanced BCE=0.06464
+[projected_image] step 600/1000 train balanced BCE=0.03757
+[projected_image] step 800/1000 train balanced BCE=0.02194
+[projected_image] step 1000/1000 train balanced BCE=0.01036
+{
+  "projected_image": {
+    "parameters": 28417,
+    "thresholds": {
+      "calibration_recall_0.95": 3.798439842623105e-16,
+      "calibration_recall_0.99": 8.487733763596096e-23
+    },
+    "splits": {
+      "train": {
+        "calibration_recall_0.95": {
+          "surface_recall": 1.0,
+          "free_closure": 0.012620638455827766,
+          "surface_precision": 0.7003829691371931,
+          "known_kept_fraction": 0.9961849192100538,
+          "unknown_closed_fraction": 3.532071206555524e-05,
+          "surface_cells": 6218,
+          "free_cells": 2694,
+          "unknown_cells": 56624,
+          "auc": 0.9999683009525474,
+          "average_precision": 0.9999864308056381
+        },
+        "calibration_recall_0.99": {
+          "surface_recall": 1.0,
+          "free_closure": 0.0,
+          "surface_precision": 0.6977109515260324,
+          "known_kept_fraction": 1.0,
+          "unknown_closed_fraction": 0.0,
+          "surface_cells": 6218,
+          "free_cells": 2694,
+          "unknown_cells": 56624,
+          "auc": 0.9999683009525474,
+          "average_precision": 0.9999864308056381
+        }
+      },
+      "calibration": {
+        "calibration_recall_0.95": {
+          "surface_recall": 0.9501267962806424,
+          "free_closure": 0.01967799642218247,
+          "surface_precision": 0.6722488038277512,
+          "known_kept_fraction": 0.9598163030998852,
+          "unknown_closed_fraction": 0.014683786367982517,
+          "surface_cells": 1183,
+          "free_cells": 559,
+          "unknown_cells": 14642,
+          "auc": 0.5821272438858789,
+          "average_precision": 0.7292568656258523
+        },
+        "calibration_recall_0.99": {
+          "surface_recall": 0.9907016060862215,
+          "free_closure": 0.01073345259391771,
+          "surface_precision": 0.6794202898550724,
+          "known_kept_fraction": 0.9902411021814007,
+          "unknown_closed_fraction": 0.0012976369348449664,
+          "surface_cells": 1183,
+          "free_cells": 559,
+          "unknown_cells": 14642,
+          "auc": 0.5821272438858789,
+          "average_precision": 0.7292568656258523
+        }
+      },
+      "test": {
+        "calibration_recall_0.95": {
+          "surface_recall": 1.0,
+          "free_closure": 0.011247443762781187,
+          "surface_precision": 0.7559929346454706,
+          "known_kept_fraction": 0.9972320080523402,
+          "unknown_closed_fraction": 0.0006945891505174689,
+          "surface_cells": 2996,
+          "free_cells": 978,
+          "unknown_cells": 28794,
+          "auc": 0.8964138619727461,
+          "average_precision": 0.9584738622192855
+        },
+        "calibration_recall_0.99": {
+          "surface_recall": 1.0,
+          "free_closure": 0.0,
+          "surface_precision": 0.7539003522898843,
+          "known_kept_fraction": 1.0,
+          "unknown_closed_fraction": 0.0,
+          "surface_cells": 2996,
+          "free_cells": 978,
+          "unknown_cells": 28794,
+          "auc": 0.8964138619727461,
+          "average_precision": 0.9584738622192855
+        }
+      }
+    }
+  }
+}
+Completed: EXP/grid_activation/summary.json
+Finished 2026-11-07T11:36:21+08:00; exit=0

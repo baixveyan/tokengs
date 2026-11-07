@@ -1,0 +1,19 @@
+{
+  "name": "spatial_full_smoke",
+  "scene_id": "7b6477cb95",
+  "psnr": 13.142685532569885,
+  "ssim": 0.668677918612957,
+  "lpips": 0.6604641154408455,
+  "num_input_views": 6,
+  "num_target_views": 8,
+  "image_size": [
+    256,
+    448
+  ],
+  "precision": "float32",
+  "tf32": false,
+  "point_cloud_input": false,
+  "optimization_steps": 0,
+  "checkpoint_sha256": "c68b4540e519d07da0b50c21c5bd3aa92bf15769c62316595bd5cefdcc7aa4cf",
+  "completed_at": "2026-11-06T09:24:05.919077+00:00"
+}

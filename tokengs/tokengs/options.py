@@ -1,0 +1,797 @@
+# SPDX-FileCopyrightText: Copyright (c) 2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""Tyro CLI options and named presets (`AllConfigs` subcommands)."""
+
+from __future__ import annotations
+
+import copy
+import dataclasses
+from dataclasses import dataclass
+from typing import Any, Literal
+
+import tyro
+
+
+@dataclass
+class Options:
+    # --- general
+    evaluating: bool = False
+    workspace: str = "./workspace"
+    resume: str | None = None
+    model_type: str = "tokengs"
+    seed: int = 42
+
+    # --- wandb / logging
+    use_wandb: bool = False
+    experiment_name: str = "tokengs"
+    out_dir: str = "outputs"
+    project_name: str = "TokenGS"
+
+    # --- model architecture
+    img_size: tuple[int, int] = (256, 256)
+    patch_size: int = 8
+    dec_patch_size: int | None = None
+    enc_depth: int = 3
+    dec_depth: int = 12
+    enc_embed_dim: int = 1024
+    enc_num_heads: int = 16
+    mlp_ratio: int = 4
+    clip_head_readout_std: float = 0.002
+    clip_head_z_init: float | None = None
+    dec_init_values: float | None = None
+
+    # --- gaussian splatting
+    bg_color: Literal["white", "black", "grey"] = "grey"
+    gaussian_scale_cap: float = 0.075
+    opacity_bias: float = 2.0
+    gaussian_z_offset: float = 1.0
+    num_gs_tokens: int = 1024
+    token_dim: int = 1024
+    gs_token_std: float = 1e-2
+    num_dynamic_gs_tokens: int = 0
+    init_dynamic_tokens_from_static: bool = False
+    init_tokens_from_existing: bool = False
+    init_latents_from_existing: bool = False
+    load_lidar_pc: bool = False
+    lidar_sft_mode: Literal["scene_latent_probe", "surface_self_attn", "fused_full_decoder"] = "scene_latent_probe"
+    sft_unfreeze_latent_tail: bool = False
+    # R-series: unfreeze only the readout chain after the scene latents
+    # (gs_tokens + latent_kv_proj/k_proj_norm + decoder_blocks + activation_head); latents stay frozen.
+    sft_unfreeze_readout: bool = False
+    # LR multiplier for the final linear readout head (`activation_head`) in readout mode. Adam's sign-like
+    # early steps shift a 1024-fan-in linear output coherently, so the head gets a smaller step than the rest.
+    sft_readout_head_lr_scale: float = 0.1
+    # Step 2a: nonlinear residual MLP on the deconv position channels (zero-init last layer, full LR).
+    readout_pos_mlp: bool = False
+    readout_pos_mlp_hidden: int = 1024
+    # Nonlinear residual on the 11 non-position raw channels (rgb 3, scale 3, rotation 4, opacity 1); zero-init.
+    readout_attr_mlp: bool = False
+    readout_attr_mlp_channels: str = "all"  # "all" = rgb+scale+rotation+opacity (11 channels), "opacity" = opacity only
+    # Step 2b: surfel constraint on child offsets along the token's local (PCA) normal, annealed r_n (normalized units).
+    readout_surfel: bool = False
+    surfel_rn_start: float = 0.3
+    surfel_rn_end: float = 0.009
+    surfel_anneal_epochs: float = 5.0
+    # Opacity binarization penalty mean(4*a*(1-a)) over all Gaussians.
+    lambda_opacity_binarize: float = 0.0
+    # View-dependent colour: zero-initialised residual SH of this degree on top of the RGB (= SH DC) term.
+    readout_sh_degree: int = 0
+    # L2 penalty on the higher-order SH coefficients (mean of squares).
+    lambda_sh_l2: float = 0.0
+    # Token-level 3D surface loss: each GS token's 64 children vs the laser points of the input-view patches the token
+    # attends to (child->region + attention-weighted region->child, smooth-L1 in metres). Needs input-view GT depth.
+    lambda_surface3d: float = 0.0
+    surface3d_beta_m: float = 0.02
+    # Linear warm-up (in epochs) of the total rendered-geometry loss weight; 0 = no warm-up.
+    render_geo_warmup_epochs: float = 0.0
+    # Report validation depth AbsRel each epoch (raycasts GT depth for validation target views).
+    val_depth_metric: bool = False
+    # Validation GT depth maps are read from this cache (built once by scripts/cache_scannetpp_val_depth.py in a
+    # separate process, because Open3D must not run inside the training process). Set automatically by train.py.
+    val_depth_cache_path: str | None = None
+    # Only the cache-building script sets this: raycast validation maps on the fly instead of reading the cache.
+    val_depth_cache_build: bool = False
+    use_render_geo_supervision: bool = False
+    lambda_render_depth: float = 0.0
+    lambda_render_alpha: float = 0.0
+    lambda_render_thickness: float = 0.0
+    lambda_render_normal: float = 0.0
+
+    # --- dataset
+    data_mode: tuple[tuple[str, int], ...] = (("dl3dv_scaled_0.15", 6),)
+    num_views: int = 8
+    num_input_views: int = 4
+    znear: float = 0.025
+    zfar: float = 125.0
+    camera_normalization_method: Literal["mean_cam", "first_cam"] = "first_cam"
+    camera_scale_method: Literal["constant", "distance", "bound", "pointmap"] = "constant"
+    pointmap_trim_lo: float = 0.0
+    pointmap_trim_hi: float = 1.0
+    num_workers: int = 16
+    dataset_kwargs: dict[str, str] | None = None
+    # 可选独立场景验证集；未指定时保留旧版batch尾切分。
+    validation_data_mode: str | None = None
+    validation_dataset_kwargs: dict[str, str] | None = None
+    validation_batch_size: int | None = None
+    train_read_error_policy: Literal["retry", "fail_fast"] = "retry"
+    eval_read_error_policy: Literal["fail_fast"] = "fail_fast"
+    train_read_max_retries: int = 8
+
+    # --- training
+    batch_size: int = 8
+    gradient_accumulation_steps: int = 1
+    num_epochs: int = 30
+    max_iters_per_epoch: int = 1_000_000
+    lr: float = 4e-4
+    pct_start_steps: int = 1000
+    final_div_factor: float = 1000.0
+    gradient_clip: float = 1.0
+    mixed_precision: str = "bf16"
+    deferred_bp: bool = False
+    use_input_supervision: bool = False
+    mean_of_grads: Literal["none", "per-scene", "per-view"] = "none"
+    mean_of_grads_scene_chunk_size: int = 1
+    mean_of_grads_view_chunk_size: int | None = None
+
+    # --- loss weights
+    rgb_loss_type: Literal["l1", "l2"] = "l2"
+    lambda_rgb: float = 1.0
+    lambda_lpips: float = 0.0
+    lambda_mask: float = 0.0
+    lambda_ssim: float = 0.2
+    lambda_visibility: float = 1.0
+    visibility_distance_threshold: float = 1.0
+    lambda_opacity: float = 0.0
+    lambda_dyn_aux: float = 0.0
+    lambda_dyn_aux_warmup_steps: int = 0
+    lambda_dyn_aux_decay_steps: int = 0
+    lambda_dyn_aux_min: float = 0.0
+    use_geo_losses: bool = False
+    lambda_geo_sw: float = 0.01
+    lambda_geo_packing: float = 0.01
+    lambda_geo_inter: float = 0.01
+    geo_k_neighbors: int = 4
+    geo_target_distance: float = 2.0
+    geo_num_sw_directions: int = 8
+    # FFRGS 写法：质量 opacity*(prod scale)^(2/3)；inter 为 smooth_l1(log(d/target))
+    geo_mass_weighting: Literal["opacity", "opacity_area"] = "opacity_area"
+    geo_inter_form: Literal["squared", "log_smooth_l1"] = "log_smooth_l1"
+
+    # --- logging frequency
+    print_freq: int = 10
+    log_image_freq: int = 100
+
+    # --- evaluation
+    eval_n_media_dumps: int = 0
+    strict_checkpoint_loading: bool = True
+
+    # --- test-time training (eval)
+    use_ttt_for_eval: bool = False
+    ttt_mode: Literal["token-tuning", "scene-latent-tuning", "tokens", "latents"] = "token-tuning"
+    ttt_n_steps: int = 50
+    ttt_lr: float = 1e-4
+
+    # --- dynamic scenes
+    time_embedding: bool = False
+    time_embedding_dim: int = 2
+    use_interp_target: bool = False
+
+    # --- latent bottleneck release architecture
+    use_multiscale_encoder: bool = False
+    multiscale_encoder_layers: tuple[int, ...] = (5, 7, 9, 11)
+    use_latent_bottleneck: bool = False
+    num_latents: int = 4096
+    latent_cross_attn_depth: int = 12
+
+    # --- augmentation
+    random_reflect: bool = True
+
+    def __post_init__(self) -> None:
+        if self.dec_patch_size is None:
+            self.dec_patch_size = self.patch_size
+        self.validate()
+
+    def validate(self) -> None:
+        if self.validation_batch_size is not None and self.validation_batch_size <= 0:
+            raise ValueError("validation_batch_size must be positive")
+        if self.validation_dataset_kwargs is not None and self.validation_data_mode is None:
+            raise ValueError("validation_dataset_kwargs requires validation_data_mode")
+        if self.train_read_error_policy not in ("retry", "fail_fast"):
+            raise ValueError("train_read_error_policy must be retry or fail_fast")
+        if self.eval_read_error_policy != "fail_fast":
+            raise ValueError("eval_read_error_policy must be fail_fast")
+        if self.train_read_max_retries < 0:
+            raise ValueError("train_read_max_retries must be non-negative")
+        if self.evaluating:
+            assert not self.use_input_supervision, "use_input_supervision must be False when evaluating"
+        if self.mean_of_grads not in ("none", "per-scene", "per-view"):
+            raise ValueError("mean_of_grads must be one of: none, per-scene, per-view")
+        if self.deferred_bp and self.mean_of_grads != "none":
+            raise ValueError("deferred_bp and mean_of_grads are mutually exclusive backprop strategies")
+        if self.mean_of_grads_scene_chunk_size <= 0:
+            raise ValueError("mean_of_grads_scene_chunk_size must be positive")
+        if self.mean_of_grads_view_chunk_size is not None and self.mean_of_grads_view_chunk_size <= 0:
+            raise ValueError("mean_of_grads_view_chunk_size must be positive")
+        if min(self.lambda_geo_sw, self.lambda_geo_packing, self.lambda_geo_inter) < 0:
+            raise ValueError("geometry loss weights must be non-negative")
+        if self.geo_k_neighbors <= 0:
+            raise ValueError("geo_k_neighbors must be positive")
+        if self.geo_target_distance <= 0:
+            raise ValueError("geo_target_distance must be positive")
+        if self.geo_num_sw_directions <= 0:
+            raise ValueError("geo_num_sw_directions must be positive")
+        if self.use_render_geo_supervision and self.mean_of_grads != "none":
+            raise ValueError("use_render_geo_supervision requires mean_of_grads='none' so rendered depth/alpha retain gradients")
+        if min(
+            self.lambda_render_depth,
+            self.lambda_render_alpha,
+            self.lambda_render_thickness,
+            self.lambda_render_normal,
+        ) < 0:
+            raise ValueError("render geometry supervision weights must be non-negative")
+
+    def evolve(self, **changes: Any) -> Options:
+        """Return a deep copy of dataclass fields with the given fields replaced."""
+        field_values = {
+            f.name: copy.deepcopy(getattr(self, f.name))
+            for f in dataclasses.fields(self)
+        }
+        for key, value in changes.items():
+            if key not in field_values:
+                raise AttributeError(f"Options has no attribute '{key}'")
+            field_values[key] = value
+        return Options(**field_values)
+
+
+config_defaults: dict[str, Options] = {}
+config_doc: dict[str, str] = {}
+
+config_doc["train_dl3dv_base"] = "DL3DV training defaults (long schedule, capped iters/epoch)."
+config_defaults["train_dl3dv_base"] = Options(
+    num_epochs=300,
+    max_iters_per_epoch=500,
+    pct_start_steps=2000,
+)
+
+config_doc["finetune_dl3dv_2view"] = "Short finetune from existing tokens, 2 input views, wide images."
+config_defaults["finetune_dl3dv_2view"] = config_defaults["train_dl3dv_base"].evolve(
+    num_epochs=20,
+    pct_start_steps=400,
+    lr=4e-5,
+    num_gs_tokens=4096,
+    init_tokens_from_existing=True,
+    num_input_views=2,
+    img_size=(256, 448),
+)
+
+config_doc["finetune_dl3dv_4view"] = "Like finetune_dl3dv_2view with 4 input views."
+config_defaults["finetune_dl3dv_4view"] = config_defaults["finetune_dl3dv_2view"].evolve(
+    num_input_views=4,
+)
+
+config_doc["finetune_dl3dv_6view"] = "Like finetune_dl3dv_2view with 6 input views and 10 total views."
+config_defaults["finetune_dl3dv_6view"] = config_defaults["finetune_dl3dv_2view"].evolve(
+    num_input_views=6,
+    num_views=10,
+)
+
+config_doc["eval_dl3dv_2view"] = "DL3DV eval preset: 2 views, eval JSON, single batch."
+config_defaults["eval_dl3dv_2view"] = Options(
+    data_mode=(("dl3dv_eval_scaled_0.15", 1),),
+    dataset_kwargs={"evaluation_json": "assets/evaluation_idx_dl3dv_depthsplat_2v.json"},
+    num_input_views=2,
+    img_size=(256, 448),
+    evaluating=True,
+    num_gs_tokens=4096,
+    use_input_supervision=False,
+    batch_size=1,
+)
+
+config_doc["eval_dl3dv_4view"] = "DL3DV eval preset: 4 input views."
+config_defaults["eval_dl3dv_4view"] = config_defaults["eval_dl3dv_2view"].evolve(
+    num_input_views=4,
+    dataset_kwargs={"evaluation_json": "assets/evaluation_idx_dl3dv_depthsplat_4v.json"},
+)
+config_doc["eval_dl3dv_6view"] = "DL3DV eval preset: 6 input views."
+config_defaults["eval_dl3dv_6view"] = config_defaults["eval_dl3dv_2view"].evolve(
+    num_input_views=6,
+    dataset_kwargs={"evaluation_json": "assets/evaluation_idx_dl3dv_depthsplat_6v.json"},
+)
+
+
+# ----- DL3DV latent-bottleneck release presets -----
+_LATENT_D12_ARCH = {
+    "enc_depth": 12,
+    "dec_depth": 1,
+    "dec_patch_size": 8,
+    "clip_head_readout_std": 0.002,
+    "clip_head_z_init": 0.1,
+    "dec_init_values": 0.01,
+    "gaussian_z_offset": 0.0,
+    "opacity_bias": 2.0,
+    "gs_token_std": 0.02,
+    "use_multiscale_encoder": True,
+    "multiscale_encoder_layers": (5, 7, 9, 11),
+    "use_latent_bottleneck": True,
+    "num_latents": 4096,
+    "latent_cross_attn_depth": 12,
+    "camera_normalization_method": "mean_cam",
+    "camera_scale_method": "constant",
+}
+
+_SSIM_LOSS = {
+    "rgb_loss_type": "l1",
+    "lambda_rgb": 0.8,
+    "lambda_ssim": 0.2,
+    "lambda_lpips": 0.0,
+}
+
+_LPIPS_LOSS = {
+    "rgb_loss_type": "l2",
+    "lambda_rgb": 1.0,
+    "lambda_ssim": 0.0,
+    "lambda_lpips": 0.5,
+}
+
+
+def _latent_dl3dv_train_preset(num_input_views: int, num_views: int) -> Options:
+    return config_defaults["train_dl3dv_base"].evolve(
+        data_mode=(("dl3dv_scaled_0.15", 6),),
+        num_epochs=20,
+        pct_start_steps=400,
+        lr=4e-5,
+        num_gs_tokens=4096,
+        init_tokens_from_existing=True,
+        init_latents_from_existing=True,
+        num_input_views=num_input_views,
+        num_views=num_views,
+        img_size=(256, 448),
+        **_LATENT_D12_ARCH,
+    )
+
+
+config_doc["train_dl3dv_latent_base"] = (
+    "Scratch DL3DV latent-bottleneck training base. Uses pointmap scene "
+    "rescaling, the 12-layer encoder latent architecture, and no checkpoint "
+    "initialization."
+)
+config_defaults["train_dl3dv_latent_base"] = Options(
+    data_mode=(("dl3dv_scaled_1.0", 6),),
+    num_epochs=178,
+    pct_start_steps=2000,
+    use_input_supervision=True,
+    rgb_loss_type="l1",
+    lambda_rgb=0.8,
+    **{**_LATENT_D12_ARCH, "camera_scale_method": "pointmap"},
+)
+
+
+def _latent_dl3dv_eval_preset(num_input_views: int, evaluation_json: str) -> Options:
+    return Options(
+        data_mode=(("dl3dv_eval_scaled_0.15", 1),),
+        dataset_kwargs={"evaluation_json": evaluation_json},
+        num_input_views=num_input_views,
+        img_size=(256, 448),
+        evaluating=True,
+        num_gs_tokens=4096,
+        use_input_supervision=False,
+        ttt_mode="scene-latent-tuning",
+        ttt_lr=1e-2,
+        batch_size=1,
+        **_LATENT_D12_ARCH,
+    )
+
+
+for _num_input_views, _num_views in ((2, 8), (4, 8), (6, 10)):
+    _name = f"finetune_dl3dv_latent_{_num_input_views}view_ssim"
+    config_doc[_name] = (
+        f"Finetune the released SA d12 latent-bottleneck DL3DV {_num_input_views}-view SSIM model."
+    )
+    config_defaults[_name] = _latent_dl3dv_train_preset(
+        _num_input_views, _num_views
+    ).evolve(**_SSIM_LOSS)
+
+    _name = f"finetune_dl3dv_latent_{_num_input_views}view_lpips"
+    config_doc[_name] = (
+        f"Finetune the released SA d12 latent-bottleneck DL3DV {_num_input_views}-view LPIPS model."
+    )
+    config_defaults[_name] = _latent_dl3dv_train_preset(
+        _num_input_views, _num_views
+    ).evolve(**_LPIPS_LOSS)
+
+for _num_input_views in (2, 4, 6):
+    _eval_json = f"assets/evaluation_idx_dl3dv_depthsplat_{_num_input_views}v.json"
+
+    _name = f"eval_dl3dv_latent_{_num_input_views}view_ssim"
+    config_doc[_name] = (
+        f"Evaluate the released SA d12 latent-bottleneck DL3DV {_num_input_views}-view SSIM checkpoint."
+    )
+    config_defaults[_name] = _latent_dl3dv_eval_preset(
+        _num_input_views, _eval_json
+    ).evolve(**_SSIM_LOSS)
+
+    _name = f"eval_dl3dv_latent_{_num_input_views}view_lpips"
+    config_doc[_name] = (
+        f"Evaluate the released SA d12 latent-bottleneck DL3DV {_num_input_views}-view LPIPS checkpoint."
+    )
+    config_defaults[_name] = _latent_dl3dv_eval_preset(
+        _num_input_views, _eval_json
+    ).evolve(**_LPIPS_LOSS)
+
+# ----- ScanNet++ v2 latent-bottleneck training & evaluation presets -----
+config_doc["finetune_scannetpp_latent_6view_ssim"] = (
+    "Train/finetune the SA d12 latent-bottleneck 6-view SSIM TokenGS baseline on ScanNet++ v2 DSLR "
+    "(853 train scenes from nvs_sem_train.txt, validated on 50 scenes from nvs_sem_val.txt)."
+)
+config_defaults["finetune_scannetpp_latent_6view_ssim"] = _latent_dl3dv_train_preset(6, 10).evolve(
+    data_mode=(("scannetpp_scaled_0.3", 4),),
+    validation_data_mode="scannetpp_val_scaled_0.3",
+    validation_batch_size=1,
+    num_epochs=30,
+    pct_start_steps=400,
+    lr=4e-5,
+    batch_size=2,
+    gradient_accumulation_steps=1,
+    num_workers=4,
+    print_freq=10,
+    use_wandb=False,
+    **_SSIM_LOSS,
+)
+
+config_doc["train_scannetpp_latent_6view_ssim_scratch"] = (
+    "Full from-scratch training of the SA d12 latent-bottleneck 6-view SSIM TokenGS baseline on ScanNet++ v2 DSLR "
+    "(matches official train_dl3dv_latent_base scratch recipe: 180 epochs, repeat=6, lr=4e-4, warmup=2000, use_input_supervision=True)."
+)
+config_defaults["train_scannetpp_latent_6view_ssim_scratch"] = config_defaults["train_dl3dv_latent_base"].evolve(
+    data_mode=(("scannetpp_scaled_0.3", 6),),
+    validation_data_mode="scannetpp_val_scaled_0.3",
+    validation_batch_size=1,
+    num_epochs=180,
+    max_iters_per_epoch=1_000_000,
+    pct_start_steps=2000,
+    lr=4e-4,
+    num_gs_tokens=4096,
+    num_input_views=6,
+    num_views=10,
+    img_size=(256, 448),
+    batch_size=2,
+    gradient_accumulation_steps=1,
+    num_workers=4,
+    print_freq=10,
+    use_wandb=False,
+    use_input_supervision=True,
+    init_tokens_from_existing=False,
+    init_latents_from_existing=False,
+    **_LATENT_D12_ARCH,
+    **_SSIM_LOSS,
+)
+
+config_doc["eval_scannetpp_latent_6view_ssim"] = (
+    "Evaluate a 6-view latent-bottleneck TokenGS checkpoint on the 50 ScanNet++ v2 validation scenes (nvs_sem_val.txt)."
+)
+config_defaults["eval_scannetpp_latent_6view_ssim"] = Options(
+    data_mode=(("scannetpp_val_scaled_0.3", 1),),
+    num_input_views=6,
+    num_views=14,
+    img_size=(256, 448),
+    evaluating=True,
+    num_gs_tokens=4096,
+    use_input_supervision=False,
+    ttt_mode="scene-latent-tuning",
+    ttt_lr=1e-2,
+    batch_size=1,
+    **_LATENT_D12_ARCH,
+    **_SSIM_LOSS,
+)
+
+config_doc["sft_scannetpp_latenttail_rgb"] = (
+    "[sft_latenttail_rgb] RGB-only post-training on ScanNet++, scene-latent tail trainable (latent_blocks.8..11 + "
+    "latents + latent_kv_proj + k_proj_norm, FP32, no point cloud)."
+)
+config_defaults["sft_scannetpp_latenttail_rgb"] = config_defaults["finetune_scannetpp_latent_6view_ssim"].evolve(
+    model_type="tokengs",
+    experiment_name="sft_latenttail_rgb",
+    sft_unfreeze_latent_tail=True,
+    use_render_geo_supervision=False,
+    load_lidar_pc=False,
+    use_input_supervision=True,
+    init_tokens_from_existing=False,
+    init_latents_from_existing=False,
+    max_iters_per_epoch=1_000_000,
+    num_epochs=30,
+    pct_start_steps=400,
+    lr=4e-5,
+    batch_size=1,
+    gradient_accumulation_steps=2,
+    mixed_precision="no",
+    mean_of_grads="none",
+    deferred_bp=False,
+    strict_checkpoint_loading=True,
+)
+
+config_doc["sft_scannetpp_render_geo"] = (
+    "[sft_render_geo: started twice 2026-10-26/27, never completed, not in the registry] Matched post-training on ScanNet++ with rendered depth, alpha opacity, "
+    "ray thickness, and normal supervision against ground-truth ScanNet++ mesh."
+)
+config_defaults["sft_scannetpp_render_geo"] = config_defaults["sft_scannetpp_latenttail_rgb"].evolve(
+    experiment_name="sft_render_geo",
+    use_render_geo_supervision=True,
+    lambda_render_depth=0.05,
+    lambda_render_alpha=0.01,
+    lambda_render_thickness=0.05,
+    lambda_render_normal=0.02,
+)
+
+# ---------------------------------------------------------------------------------------------
+# Readout-chain post-training family: official weights, scene latents frozen, readout chain
+# (gs_tokens + latent KV proj + decoder + deconv) trainable, 10 epochs.  Names list what is added:
+#   sft_readout_rgb -> +depth -> +thick -> (+sh1 | +posmlp -> +surfel_binar)
+# ---------------------------------------------------------------------------------------------
+config_doc["sft_scannetpp_readout_rgb"] = (
+    "[sft_readout_rgb] Readout chain only, RGB losses (no geometry supervision)."
+)
+config_defaults["sft_scannetpp_readout_rgb"] = config_defaults["sft_scannetpp_latenttail_rgb"].evolve(
+    experiment_name="sft_readout_rgb",
+    sft_unfreeze_latent_tail=False,
+    sft_unfreeze_readout=True,
+    num_epochs=10,
+    pct_start_steps=200,
+    val_depth_metric=True,
+)
+
+config_doc["sft_scannetpp_readout_rgb_depth"] = (
+    "[sft_readout_rgb_depth] sft_readout_rgb + one rendered log-depth L1 against the GT mesh (weight 0.1, 1-epoch warm-up)."
+)
+config_defaults["sft_scannetpp_readout_rgb_depth"] = config_defaults["sft_scannetpp_readout_rgb"].evolve(
+    experiment_name="sft_readout_rgb_depth",
+    use_render_geo_supervision=True,
+    lambda_render_depth=0.1,
+    lambda_render_alpha=0.0,
+    lambda_render_thickness=0.0,
+    lambda_render_normal=0.0,
+    render_geo_warmup_epochs=1.0,
+)
+
+config_doc["sft_scannetpp_readout_rgb_depth_surface3d"] = (
+    "[sft_readout_rgb_depth_surface3d] sft_readout_rgb_depth + token-level 3D surface loss (weight 0.05, same warm-up): "
+    "each token's 64 children are pulled onto, and must cover, the laser points of the input-view patches it attends to."
+)
+config_defaults["sft_scannetpp_readout_rgb_depth_surface3d"] = config_defaults["sft_scannetpp_readout_rgb_depth"].evolve(
+    experiment_name="sft_readout_rgb_depth_surface3d",
+    lambda_surface3d=0.05,
+)
+
+config_doc["sft_scannetpp_readout_rgb_depth_surface3d_posmlp"] = (
+    "[sft_readout_rgb_depth_surface3d_posmlp] sft_readout_rgb_depth_surface3d + zero-init residual MLP position head."
+)
+config_defaults["sft_scannetpp_readout_rgb_depth_surface3d_posmlp"] = config_defaults["sft_scannetpp_readout_rgb_depth_surface3d"].evolve(
+    experiment_name="sft_readout_rgb_depth_surface3d_posmlp",
+    readout_pos_mlp=True,
+)
+
+config_doc["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp"] = (
+    "[sft_latenttail_readout_rgb_depth_surface3d_posmlp] same + scene-latent tail (latent_blocks.8..11) also trainable, "
+    "so the 3D surface loss can reach the scene latents (upstream prior for low-parallax regions)."
+)
+config_defaults["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp"] = config_defaults["sft_scannetpp_readout_rgb_depth_surface3d_posmlp"].evolve(
+    experiment_name="sft_latenttail_readout_rgb_depth_surface3d_posmlp",
+    sft_unfreeze_latent_tail=True,
+)
+
+config_doc["sft_scannetpp_readout_rgb_depth_surface3d_posmlp_ep20"] = (
+    "[sft_readout_rgb_depth_surface3d_posmlp_ep20] sft_readout_rgb_depth_surface3d_posmlp trained 20 epochs (convergence check)."
+)
+config_defaults["sft_scannetpp_readout_rgb_depth_surface3d_posmlp_ep20"] = config_defaults["sft_scannetpp_readout_rgb_depth_surface3d_posmlp"].evolve(
+    experiment_name="sft_readout_rgb_depth_surface3d_posmlp_ep20",
+    num_epochs=20,
+)
+
+config_doc["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp_ep20"] = (
+    "[sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20] the latent-tail + readout 3D-surface model trained 20 epochs."
+)
+config_defaults["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp_ep20"] = config_defaults["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp"].evolve(
+    experiment_name="sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20",
+    num_epochs=20,
+)
+
+config_doc["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp_attrmlp_ep20"] = (
+    "[sft_latenttail_readout_rgb_depth_surface3d_posmlp_attrmlp_ep20] the current best recipe (latent tail + readout, "
+    "depth + 3D surface loss, position MLP, 20 epochs) + a zero-init residual MLP on all non-position attributes."
+)
+config_defaults["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp_attrmlp_ep20"] = config_defaults["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp_ep20"].evolve(
+    experiment_name="sft_latenttail_readout_rgb_depth_surface3d_posmlp_attrmlp_ep20",
+    readout_attr_mlp=True,
+)
+
+config_doc["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp_opamlp"] = (
+    "[sft_latenttail_readout_rgb_depth_surface3d_posmlp_opamlp] sft_latenttail_readout_rgb_depth_surface3d_posmlp (10 epochs) "
+    "+ a zero-init residual MLP on the opacity channel only (can the dormant on-surface Gaussians be revived?)."
+)
+config_defaults["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp_opamlp"] = config_defaults["sft_scannetpp_latenttail_readout_rgb_depth_surface3d_posmlp"].evolve(
+    experiment_name="sft_latenttail_readout_rgb_depth_surface3d_posmlp_opamlp",
+    readout_attr_mlp=True,
+    readout_attr_mlp_channels="opacity",
+)
+
+config_doc["sft_scannetpp_readout_rgb_depth_thick"] = (
+    "[sft_readout_rgb_depth_thick] + rendered ray-thickness loss (per-ray depth variance in m^2, weight 1.0; "
+    "the depth-only model has variance ~0.016 m^2, comparable to the 0.1-weighted log-depth term) on GT-valid pixels."
+)
+config_defaults["sft_scannetpp_readout_rgb_depth_thick"] = config_defaults["sft_scannetpp_readout_rgb_depth"].evolve(
+    experiment_name="sft_readout_rgb_depth_thick",
+    lambda_render_thickness=1.0,
+)
+
+config_doc["sft_scannetpp_readout_rgb_depth_thick_sh1"] = (
+    "[sft_readout_rgb_depth_thick_sh1] + zero-initialised residual degree-1 SH colour (RGB = SH DC), "
+    "full LR on the new SH head, L2 0.01 on the SH-1 coefficients."
+)
+config_defaults["sft_scannetpp_readout_rgb_depth_thick_sh1"] = config_defaults["sft_scannetpp_readout_rgb_depth_thick"].evolve(
+    experiment_name="sft_readout_rgb_depth_thick_sh1",
+    readout_sh_degree=1,
+    lambda_sh_l2=0.01,
+)
+
+config_doc["sft_scannetpp_readout_rgb_depth_thick_posmlp"] = (
+    "[sft_readout_rgb_depth_thick_posmlp] + nonlinear residual MLP position head (zero-init, full LR) on top of deconv."
+)
+config_defaults["sft_scannetpp_readout_rgb_depth_thick_posmlp"] = config_defaults["sft_scannetpp_readout_rgb_depth_thick"].evolve(
+    experiment_name="sft_readout_rgb_depth_thick_posmlp",
+    readout_pos_mlp=True,
+)
+
+config_doc["sft_scannetpp_readout_rgb_depth_thick_posmlp_surfel_binar"] = (
+    "[sft_readout_rgb_depth_thick_posmlp_surfel_binar] + surfel constraint (child normal offset soft-clamped, "
+    "r_n 0.3->0.009 normalized (~1 m -> 3 cm) over 5 epochs) + opacity binarization 0.01 (two additions at once)."
+)
+config_defaults["sft_scannetpp_readout_rgb_depth_thick_posmlp_surfel_binar"] = config_defaults["sft_scannetpp_readout_rgb_depth_thick_posmlp"].evolve(
+    experiment_name="sft_readout_rgb_depth_thick_posmlp_surfel_binar",
+    readout_surfel=True,
+    lambda_opacity_binarize=0.01,
+)
+
+config_doc["sft1_scannetpp_lidar_scene_latent"] = (
+    "[Exp-SFT-1 / 方式一] Post-training SFT on ScanNet++ with LiDAR 3D Surface Introspection & Zero-Init Residual "
+    "Injection at `scene_latents` (freezes ViT encoder + gs_tokens + decoder + deconv)."
+)
+config_defaults["sft1_scannetpp_lidar_scene_latent"] = config_defaults["finetune_scannetpp_latent_6view_ssim"].evolve(
+    model_type="tokengs_lidar_sft",
+    experiment_name="sft1_lidar_scene_latent",
+    load_lidar_pc=True,
+    lidar_sft_mode="scene_latent_probe",
+    num_epochs=15,
+    pct_start_steps=200,
+    lr=4e-5,
+    strict_checkpoint_loading=False,
+    mean_of_grads="per-scene",
+    mean_of_grads_scene_chunk_size=1,
+)
+
+config_doc["sft2_scannetpp_lidar_surface_sa"] = (
+    "[Exp-SFT-2 / 方式二] Post-training SFT on ScanNet++ with LiDAR 3D Surface Introspection + Waking up "
+    "`gs_self_attn` (0.00036) Token 3D Surface Self-Attention (freezes ViT encoder + deconv)."
+)
+config_defaults["sft2_scannetpp_lidar_surface_sa"] = config_defaults["sft1_scannetpp_lidar_scene_latent"].evolve(
+    experiment_name="sft2_lidar_surface_sa",
+    lidar_sft_mode="surface_self_attn",
+)
+
+config_doc["sft3_scannetpp_lidar_fused_100ep"] = (
+    "[Exp-SFT-3 / 融合方案 + 解冻 deconv, 100 Epochs] Fuses Mode 1 + Mode 2 + unfrozen `activation_head.deconv` "
+    "with differential learning rates and individual child LiDAR surface + needle + blade-orientation supervision."
+)
+config_defaults["sft3_scannetpp_lidar_fused_100ep"] = config_defaults["sft1_scannetpp_lidar_scene_latent"].evolve(
+    experiment_name="sft3_lidar_fused_100ep",
+    lidar_sft_mode="fused_full_decoder",
+    num_epochs=100,
+    pct_start_steps=600,
+    lr=4e-5,
+)
+
+config_doc["sft4_scannetpp_lidar_area_preserving_40ep"] = (
+    "[Exp-SFT-4 / 面积守恒 + 纯旋转刀片修正 + 探针梯度隔离, 40 Epochs] Fixes all 3 PSNR-drop root causes "
+    "(detached probe input, area-preserving s1*s2=const needle loss, pure-rotation blade hinge cos>0.35) for 40 epochs."
+)
+config_defaults["sft4_scannetpp_lidar_area_preserving_40ep"] = config_defaults["sft3_scannetpp_lidar_fused_100ep"].evolve(
+    experiment_name="sft4_lidar_area_preserving_40ep",
+    num_epochs=40,
+    pct_start_steps=300,
+    lr=4e-5,
+)
+
+
+# ----- Kubric 4D dynamic finetune -----
+config_doc["finetune_dl3dv_kubric_dyn"] = (
+    "Dynamic finetune of the DL3DV base on Kubric4D. Adds dynamic GS tokens "
+    "warm-started from the static tokens, sinusoidal time embeddings, "
+    "interpolated target-frame sampling, and pointmap camera scaling."
+)
+config_defaults["finetune_dl3dv_kubric_dyn"] = config_defaults["train_dl3dv_base"].evolve(
+    use_input_supervision=False,
+    data_mode=(("kubric_scaled_1.0", 100),),
+    dataset_kwargs={},
+    num_input_views=4,
+    num_views=8,
+    img_size=(256, 256),
+    num_epochs=100,
+    max_iters_per_epoch=500,
+    pct_start_steps=2500,
+    lr=4e-5,
+    init_tokens_from_existing=True,
+    num_gs_tokens=1024,
+    num_dynamic_gs_tokens=256,
+    init_dynamic_tokens_from_static=True,
+    time_embedding=True,
+    time_embedding_dim=2,
+    use_interp_target=True,
+    camera_normalization_method="mean_cam",
+    camera_scale_method="pointmap",
+    enc_depth=12,
+    dec_depth=1,
+    dec_patch_size=8,
+    clip_head_readout_std=0.002,
+    clip_head_z_init=0.1,
+    dec_init_values=0.01,
+    gaussian_z_offset=0.0,
+    opacity_bias=2.0,
+    gs_token_std=0.02,
+    use_multiscale_encoder=True,
+    multiscale_encoder_layers=(5, 7, 9, 11),
+    use_latent_bottleneck=True,
+    num_latents=4096,
+    latent_cross_attn_depth=12,
+    rgb_loss_type="l1",
+    lambda_rgb=0.8,
+    lambda_ssim=0.2,
+    lambda_visibility=1.0,
+    lambda_opacity=0.0,
+    project_name="TokenGS-Kubric",
+)
+
+config_doc["finetune_dl3dv_kubric_static"] = (
+    "Stage-1 Kubric domain finetune without dynamic tokens or time embeddings. "
+    "Use this when reproducing the two-stage warm-start variant."
+)
+config_defaults["finetune_dl3dv_kubric_static"] = config_defaults["finetune_dl3dv_kubric_dyn"].evolve(
+    num_dynamic_gs_tokens=0,
+    init_dynamic_tokens_from_static=False,
+    time_embedding=False,
+)
+
+config_doc["finetune_dl3dv_kubric_dyn_v2"] = (
+    "Kubric dynamic finetune with an auxiliary dynamic-only render loss."
+)
+config_defaults["finetune_dl3dv_kubric_dyn_v2"] = config_defaults["finetune_dl3dv_kubric_dyn"].evolve(
+    lambda_dyn_aux=0.3,
+)
+
+_kubric_dyn_release = config_defaults["finetune_dl3dv_kubric_dyn_v2"].evolve(
+    lambda_dyn_aux=0.3,
+    lambda_dyn_aux_warmup_steps=5000,
+    lambda_dyn_aux_decay_steps=10000,
+    lambda_dyn_aux_min=0.0,
+)
+config_doc["finetune_dl3dv_kubric_dyn_release"] = (
+    "Released Kubric dynamic finetune schedule: hold lambda_dyn_aux=0.3 for "
+    "5K steps, then linearly decay it to 0 over 10K steps."
+)
+config_defaults["finetune_dl3dv_kubric_dyn_release"] = _kubric_dyn_release
+config_doc["finetune_dl3dv_kubric_dyn_v3"] = (
+    "Backward-compatible alias for finetune_dl3dv_kubric_dyn_release."
+)
+config_defaults["finetune_dl3dv_kubric_dyn_v3"] = _kubric_dyn_release
+
+AllConfigs = tyro.extras.subcommand_type_from_defaults(config_defaults, config_doc)

@@ -1,0 +1,228 @@
+{
+ "view": 0,
+ "min_share": 0.01,
+ "pixels": [
+  {
+   "pixel": [
+    51,
+    53
+   ],
+   "laser_depth_m": 2.367,
+   "tokens_ge_1pct": 12,
+   "tokens_for_90pct": 10,
+   "token_centre_depth_minus_laser_cm": [
+    -0.5,
+    -0.4,
+    0.5,
+    0.9,
+    0.9,
+    1.0,
+    2.4,
+    2.7,
+    11.4,
+    12.9,
+    13.8,
+    15.5
+   ],
+   "weighted_spread_of_token_depths_cm": 5.8
+  },
+  {
+   "pixel": [
+    51,
+    138
+   ],
+   "laser_depth_m": 2.968,
+   "tokens_ge_1pct": 8,
+   "tokens_for_90pct": 7,
+   "token_centre_depth_minus_laser_cm": [
+    -14.6,
+    -8.5,
+    -5.0,
+    -2.9,
+    3.7,
+    5.2,
+    6.2,
+    6.3
+   ],
+   "weighted_spread_of_token_depths_cm": 5.2
+  },
+  {
+   "pixel": [
+    51,
+    224
+   ],
+   "laser_depth_m": 3.322,
+   "tokens_ge_1pct": 10,
+   "tokens_for_90pct": 8,
+   "token_centre_depth_minus_laser_cm": [
+    -0.2,
+    0.1,
+    15.4,
+    17.2,
+    18.4,
+    18.8,
+    19.1,
+    20.3,
+    20.6,
+    20.7
+   ],
+   "weighted_spread_of_token_depths_cm": 4.0
+  },
+  {
+   "pixel": [
+    51,
+    309
+   ],
+   "laser_depth_m": 2.571,
+   "tokens_ge_1pct": 11,
+   "tokens_for_90pct": 6,
+   "token_centre_depth_minus_laser_cm": [
+    0.2,
+    1.1,
+    1.2,
+    1.4,
+    11.1,
+    12.1,
+    12.2,
+    15.2,
+    15.6,
+    15.7,
+    16.9
+   ],
+   "weighted_spread_of_token_depths_cm": 4.3
+  },
+  {
+   "pixel": [
+    51,
+    394
+   ],
+   "laser_depth_m": 2.026,
+   "tokens_ge_1pct": 8,
+   "tokens_for_90pct": 5,
+   "token_centre_depth_minus_laser_cm": [
+    19.0,
+    20.4,
+    22.3,
+    22.3,
+    23.0,
+    23.6,
+    24.5,
+    25.5
+   ],
+   "weighted_spread_of_token_depths_cm": 1.8
+  },
+  {
+   "pixel": [
+    204,
+    53
+   ],
+   "laser_depth_m": 2.017,
+   "tokens_ge_1pct": 12,
+   "tokens_for_90pct": 11,
+   "token_centre_depth_minus_laser_cm": [
+    -16.7,
+    -16.2,
+    -15.4,
+    -14.1,
+    -1.2,
+    -0.1,
+    1.1,
+    1.4,
+    2.5,
+    16.7,
+    21.3,
+    21.3
+   ],
+   "weighted_spread_of_token_depths_cm": 7.9
+  },
+  {
+   "pixel": [
+    204,
+    138
+   ],
+   "laser_depth_m": 2.023,
+   "tokens_ge_1pct": 14,
+   "tokens_for_90pct": 8,
+   "token_centre_depth_minus_laser_cm": [
+    -28.6,
+    -20.5,
+    -16.9,
+    -6.4,
+    -5.9,
+    -5.4,
+    -5.3,
+    -5.3,
+    -4.5,
+    -4.2,
+    9.5,
+    9.8,
+    10.7,
+    11.4
+   ],
+   "weighted_spread_of_token_depths_cm": 5.7
+  },
+  {
+   "pixel": [
+    204,
+    224
+   ],
+   "laser_depth_m": 1.049,
+   "tokens_ge_1pct": 8,
+   "tokens_for_90pct": 4,
+   "token_centre_depth_minus_laser_cm": [
+    -10.5,
+    4.1,
+    4.4,
+    4.7,
+    4.9,
+    7.9,
+    8.0,
+    8.2
+   ],
+   "weighted_spread_of_token_depths_cm": 2.7
+  },
+  {
+   "pixel": [
+    204,
+    309
+   ],
+   "laser_depth_m": 1.054,
+   "tokens_ge_1pct": 10,
+   "tokens_for_90pct": 7,
+   "token_centre_depth_minus_laser_cm": [
+    -7.1,
+    -7.0,
+    -6.0,
+    -5.9,
+    -5.4,
+    -3.8,
+    4.4,
+    5.2,
+    5.2,
+    5.3
+   ],
+   "weighted_spread_of_token_depths_cm": 5.5
+  },
+  {
+   "pixel": [
+    204,
+    394
+   ],
+   "laser_depth_m": 0.957,
+   "tokens_ge_1pct": 9,
+   "tokens_for_90pct": 7,
+   "token_centre_depth_minus_laser_cm": [
+    19.7,
+    20.9,
+    61.2,
+    61.2,
+    61.8,
+    66.4,
+    67.0,
+    67.1,
+    67.2
+   ],
+   "weighted_spread_of_token_depths_cm": 9.6
+  }
+ ]
+}

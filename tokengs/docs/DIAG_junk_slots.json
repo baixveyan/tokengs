@@ -1,0 +1,51 @@
+{
+  "definitions": "Did the far, transparent Gaussians that the 3D surface loss pulled back become useful?  (no training; 50 val windows)",
+  "gpu": "2",
+  "models": {
+    "official": {
+      "junk_slot_share_of_all_slots": 0.24020553588867188,
+      "junk_dist_to_mesh_cm_p50_p90": [
+        179.5,
+        586.9
+      ],
+      "junk_opacity_p50_p90": [
+        0.0011,
+        0.0163
+      ],
+      "junk_share_on_surface_lt5cm": 0.0,
+      "junk_share_opaque_ge0.5": 0.0,
+      "junk_share_on_surface_and_opaque": 0.0,
+      "junk_share_of_target_view_render_weight": 0.048933940996522415
+    },
+    "sft_readout_rgb_depth": {
+      "junk_slot_share_of_all_slots": 0.24020553588867188,
+      "junk_dist_to_mesh_cm_p50_p90": [
+        180.8,
+        595.2
+      ],
+      "junk_opacity_p50_p90": [
+        0.001,
+        0.0094
+      ],
+      "junk_share_on_surface_lt5cm": 0.0037291697237536773,
+      "junk_share_opaque_ge0.5": 6.987627452736641e-06,
+      "junk_share_on_surface_and_opaque": 0.0,
+      "junk_share_of_target_view_render_weight": 0.0343998501166838
+    },
+    "sft_latenttail_readout_rgb_depth_surface3d_posmlp_ep20": {
+      "junk_slot_share_of_all_slots": 0.24020553588867188,
+      "junk_dist_to_mesh_cm_p50_p90": [
+        5.6,
+        28.1
+      ],
+      "junk_opacity_p50_p90": [
+        0.0018,
+        0.0163
+      ],
+      "junk_share_on_surface_lt5cm": 0.46104143599555586,
+      "junk_share_opaque_ge0.5": 3.8114331560381678e-06,
+      "junk_share_on_surface_and_opaque": 3.176194296698473e-07,
+      "junk_share_of_target_view_render_weight": 0.04952232482652048
+    }
+  }
+}

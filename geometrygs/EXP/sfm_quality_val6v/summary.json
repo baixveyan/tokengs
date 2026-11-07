@@ -1,0 +1,53 @@
+{
+  "num_scenes": 50,
+  "num_input_views": 6,
+  "window_size": 18,
+  "sfm_image_size": [
+    1024,
+    1792
+  ],
+  "num_anchors_max": 1024,
+  "config": {
+    "sfm_num_features": 8192,
+    "sfm_match_ratio": 0.9,
+    "sfm_max_epipolar_px": 2.0,
+    "sfm_max_reproj_px": 2.0,
+    "sfm_min_tri_angle_deg": 1.5,
+    "sfm_min_track": 2
+  },
+  "scene_mean": {
+    "num_points": 2279.92,
+    "num_anchors": 861.64,
+    "num_matches": 9564.3,
+    "track_len_mean": 2.5260029554367067,
+    "points_dist_med_cm": 2.5314422762021422,
+    "points_dist_p90_cm": 24.356726728379734,
+    "points_within_2cm": 0.545642161801708,
+    "points_within_5cm": 0.7689343623826405,
+    "anchors_dist_med_cm": 1.5451336316764355,
+    "anchors_dist_p90_cm": 15.906372180581096,
+    "surface_to_anchor_med_cm": 33.946522772312164,
+    "surface_to_anchor_p90_cm": 115.10259795188907,
+    "surface_within_10cm_of_anchor": 0.2872763315937726,
+    "surface_within_20cm_of_anchor": 0.43472658137891085,
+    "sfm_seconds": 0.31438371635973456
+  },
+  "scene_median": {
+    "num_points": 2266.0,
+    "num_anchors": 1024.0,
+    "num_matches": 6647.5,
+    "track_len_mean": 2.3898894786834717,
+    "points_dist_med_cm": 1.6777687706053257,
+    "points_dist_p90_cm": 9.159127175807962,
+    "points_within_2cm": 0.5575463481398533,
+    "points_within_5cm": 0.8021768982404909,
+    "anchors_dist_med_cm": 1.4587843092158437,
+    "anchors_dist_p90_cm": 5.658265687525272,
+    "surface_to_anchor_med_cm": 24.568861722946167,
+    "surface_to_anchor_p90_cm": 100.90390980243683,
+    "surface_within_10cm_of_anchor": 0.2968066081607733,
+    "surface_within_20cm_of_anchor": 0.44723101183043557,
+    "sfm_seconds": 0.3075920566916466
+  },
+  "scenes_with_fewer_points_than_anchors": 8
+}

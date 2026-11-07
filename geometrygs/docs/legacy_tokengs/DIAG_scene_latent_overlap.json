@@ -1,0 +1,40 @@
+{
+  "patches_per_latent": {
+    "median": 17.0,
+    "p10": 8.0,
+    "p90": 38.0
+  },
+  "latents_covering_each_patch": {
+    "median": 6.0,
+    "p10": 3.0,
+    "p90": 11.0
+  },
+  "other_latents_with_cosine_gt_0.5": {
+    "median": 2.0,
+    "p10": 0.0,
+    "p90": 4.0
+  },
+  "frac_latents_with_a_near_duplicate_cos_gt_0.8": 0.1886827051639557,
+  "max_cosine_to_another_latent": {
+    "median": 0.646929919719696,
+    "p10": 0.4337652623653412,
+    "p90": 0.8639229536056519
+  },
+  "frac_latents_spanning_depth_jump": 0.09330406785011292,
+  "depth_jump_gap_m": 0.15,
+  "probe_error_no_jump": {
+    "median_cm": 5.568823218345642,
+    "p75_cm": 11.690402776002884,
+    "p90_cm": 24.394247531890876,
+    "frac_lt_5cm": 0.4581418720332716,
+    "frac_lt_15cm": 0.8103885268593605
+  },
+  "probe_error_with_jump": {
+    "median_cm": 14.637991786003113,
+    "p75_cm": 28.879314661026,
+    "p90_cm": 49.59450960159302,
+    "frac_lt_5cm": 0.16786438179473007,
+    "frac_lt_15cm": 0.5084454271850624
+  },
+  "frac_tail_spanning_depth_jump": 0.2011965960264206
+}

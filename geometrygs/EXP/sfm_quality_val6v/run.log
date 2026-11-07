@@ -1,0 +1,106 @@
+=== Started: 2026-11-06T10:00:50+08:00; GPU=7
+Command: CUDA_VISIBLE_DEVICES=7 python -u scripts/check_sfm_quality.py --output EXP/sfm_quality_val6v
+[01] 7b6477cb95: pts=1944 anchors=1024 dist med/p90=2.4/10.7 cm surf->anchor med=21.8 cm cover10=0.25 0.91s
+[02] c50d2d1d42: pts=809 anchors=584 dist med/p90=1.4/6.0 cm surf->anchor med=53.1 cm cover10=0.20 0.28s
+[03] cc5237fd77: pts=2841 anchors=1024 dist med/p90=1.8/8.5 cm surf->anchor med=9.6 cm cover10=0.51 0.31s
+[04] acd95847c5: pts=2503 anchors=1024 dist med/p90=3.5/28.6 cm surf->anchor med=27.0 cm cover10=0.30 0.32s
+[05] fb5a96b1a2: pts=1052 anchors=371 dist med/p90=3.5/17.7 cm surf->anchor med=50.2 cm cover10=0.10 0.31s
+[06] a24f64f7fb: pts=3248 anchors=1024 dist med/p90=1.4/7.5 cm surf->anchor med=12.7 cm cover10=0.43 0.32s
+[07] 1ada7a0617: pts=1395 anchors=976 dist med/p90=1.4/17.5 cm surf->anchor med=54.9 cm cover10=0.18 0.29s
+[08] 5eb31827b7: pts=3660 anchors=1024 dist med/p90=1.0/8.4 cm surf->anchor med=23.0 cm cover10=0.34 0.31s
+[09] 3e8bba0176: pts=1402 anchors=1024 dist med/p90=1.2/4.7 cm surf->anchor med=25.9 cm cover10=0.27 0.29s
+[10] 3f15a9266d: pts=2691 anchors=1024 dist med/p90=1.7/7.9 cm surf->anchor med=15.2 cm cover10=0.37 0.33s
+[11] 21d970d8de: pts=452 anchors=76 dist med/p90=5.2/22.1 cm surf->anchor med=190.1 cm cover10=0.02 0.26s
+[12] 5748ce6f01: pts=2902 anchors=1024 dist med/p90=1.8/14.0 cm surf->anchor med=17.7 cm cover10=0.34 0.31s
+[13] c4c04e6d6c: pts=2157 anchors=964 dist med/p90=2.1/13.9 cm surf->anchor med=38.9 cm cover10=0.16 0.30s
+[14] 7831862f02: pts=2229 anchors=1024 dist med/p90=4.0/13.9 cm surf->anchor med=37.1 cm cover10=0.19 0.30s
+[15] bde1e479ad: pts=1279 anchors=311 dist med/p90=4.8/23.6 cm surf->anchor med=109.8 cm cover10=0.04 0.27s
+[16] 38d58a7a31: pts=1649 anchors=291 dist med/p90=3.9/66.0 cm surf->anchor med=64.4 cm cover10=0.04 0.29s
+[17] 5ee7c22ba0: pts=1604 anchors=961 dist med/p90=2.1/13.5 cm surf->anchor med=28.1 cm cover10=0.23 0.30s
+[18] f9f95681fd: pts=2667 anchors=1024 dist med/p90=2.4/21.2 cm surf->anchor med=10.8 cm cover10=0.47 0.31s
+[19] 3864514494: pts=1998 anchors=1024 dist med/p90=0.8/3.8 cm surf->anchor med=14.5 cm cover10=0.42 0.30s
+[20] 40aec5fffa: pts=1010 anchors=567 dist med/p90=2.1/14.0 cm surf->anchor med=50.2 cm cover10=0.17 0.29s
+[21] 13c3e046d7: pts=3060 anchors=1024 dist med/p90=1.5/6.4 cm surf->anchor med=16.4 cm cover10=0.39 0.31s
+[22] e398684d27: pts=428 anchors=303 dist med/p90=2.5/10.7 cm surf->anchor med=31.8 cm cover10=0.17 0.27s
+[23] a8bf42d646: pts=3438 anchors=1024 dist med/p90=1.2/3.8 cm surf->anchor med=18.3 cm cover10=0.36 0.31s
+[24] 45b0dac5e3: pts=3624 anchors=1024 dist med/p90=1.5/8.7 cm surf->anchor med=8.1 cm cover10=0.58 0.31s
+[25] 31a2c91c43: pts=2091 anchors=1024 dist med/p90=1.5/6.5 cm surf->anchor med=24.5 cm cover10=0.27 0.30s
+[26] e7af285f7d: pts=2303 anchors=1024 dist med/p90=1.4/6.8 cm surf->anchor med=6.9 cm cover10=0.61 0.31s
+[27] 286b55a2bf: pts=1090 anchors=937 dist med/p90=1.5/5.6 cm surf->anchor med=26.6 cm cover10=0.21 0.29s
+[28] 7bc286c1b6: pts=2505 anchors=1024 dist med/p90=0.8/7.5 cm surf->anchor med=16.6 cm cover10=0.40 0.30s
+[29] f3685d06a9: pts=215 anchors=106 dist med/p90=1.7/6.5 cm surf->anchor med=106.1 cm cover10=0.03 0.26s
+[30] b0a08200c9: pts=482 anchors=344 dist med/p90=0.9/7.0 cm surf->anchor med=60.8 cm cover10=0.13 0.27s
+[31] 825d228aec: pts=1944 anchors=1024 dist med/p90=1.7/9.7 cm surf->anchor med=13.2 cm cover10=0.43 0.31s
+[32] a980334473: pts=2310 anchors=1024 dist med/p90=1.5/7.9 cm surf->anchor med=15.4 cm cover10=0.35 0.31s
+[33] f2dc06b1d2: pts=2679 anchors=1024 dist med/p90=1.6/9.6 cm surf->anchor med=9.6 cm cover10=0.51 0.31s
+[34] 5942004064: pts=2728 anchors=1024 dist med/p90=1.9/10.3 cm surf->anchor med=24.6 cm cover10=0.32 0.31s
+[35] 25f3b7a318: pts=3466 anchors=1024 dist med/p90=2.1/18.4 cm surf->anchor med=18.4 cm cover10=0.33 0.32s
+[36] bcd2436daf: pts=1844 anchors=1024 dist med/p90=0.6/4.0 cm surf->anchor med=26.8 cm cover10=0.28 0.30s
+[37] f3d64c30f8: pts=2153 anchors=1024 dist med/p90=1.2/8.1 cm surf->anchor med=23.3 cm cover10=0.30 0.30s
+[38] 0d2ee665be: pts=1414 anchors=1024 dist med/p90=2.6/12.4 cm surf->anchor med=41.6 cm cover10=0.14 0.29s
+[39] 3db0a1c8f3: pts=5061 anchors=1024 dist med/p90=1.1/6.5 cm surf->anchor med=22.7 cm cover10=0.30 0.32s
+[40] ac48a9b736: pts=2639 anchors=1024 dist med/p90=2.5/15.4 cm surf->anchor med=38.7 cm cover10=0.20 0.31s
+[41] c5439f4607: pts=3169 anchors=1024 dist med/p90=1.9/10.9 cm surf->anchor med=18.9 cm cover10=0.33 0.31s
+[42] 578511c8a9: pts=2951 anchors=1024 dist med/p90=2.2/13.3 cm surf->anchor med=45.3 cm cover10=0.15 0.31s
+[43] d755b3d9d8: pts=2203 anchors=1024 dist med/p90=2.0/6.7 cm surf->anchor med=32.7 cm cover10=0.30 0.35s
+[44] 99fa5c25e1: pts=2752 anchors=1024 dist med/p90=32.1/645.5 cm surf->anchor med=29.6 cm cover10=0.29 0.31s
+[45] 09c1414f1b: pts=4527 anchors=1024 dist med/p90=1.4/7.6 cm surf->anchor med=29.7 cm cover10=0.32 0.33s
+[46] 5f99900f09: pts=5307 anchors=1024 dist med/p90=0.8/3.8 cm surf->anchor med=8.4 cm cover10=0.54 0.33s
+[47] 9071e139d9: pts=2619 anchors=1024 dist med/p90=2.2/11.5 cm surf->anchor med=22.3 cm cover10=0.30 0.32s
+[48] 6115eddb86: pts=827 anchors=438 dist med/p90=2.9/15.2 cm surf->anchor med=23.2 cm cover10=0.27 0.28s
+[49] 27dd4da69e: pts=26 anchors=13 dist med/p90=0.4/2.5 cm surf->anchor med=72.3 cm cover10=0.01 0.26s
+[50] c49a8c6cff: pts=4649 anchors=1024 dist med/p90=1.1/5.4 cm surf->anchor med=9.4 cm cover10=0.51 0.33s
+{
+  "num_scenes": 50,
+  "num_input_views": 6,
+  "window_size": 18,
+  "sfm_image_size": [
+    1024,
+    1792
+  ],
+  "num_anchors_max": 1024,
+  "config": {
+    "sfm_num_features": 8192,
+    "sfm_match_ratio": 0.9,
+    "sfm_max_epipolar_px": 2.0,
+    "sfm_max_reproj_px": 2.0,
+    "sfm_min_tri_angle_deg": 1.5,
+    "sfm_min_track": 2
+  },
+  "scene_mean": {
+    "num_points": 2279.92,
+    "num_anchors": 861.64,
+    "num_matches": 9564.3,
+    "track_len_mean": 2.5260029554367067,
+    "points_dist_med_cm": 2.5314422762021422,
+    "points_dist_p90_cm": 24.356726728379734,
+    "points_within_2cm": 0.545642161801708,
+    "points_within_5cm": 0.7689343623826405,
+    "anchors_dist_med_cm": 1.5451336316764355,
+    "anchors_dist_p90_cm": 15.906372180581096,
+    "surface_to_anchor_med_cm": 33.946522772312164,
+    "surface_to_anchor_p90_cm": 115.10259795188907,
+    "surface_within_10cm_of_anchor": 0.2872763315937726,
+    "surface_within_20cm_of_anchor": 0.43472658137891085,
+    "sfm_seconds": 0.31438371635973456
+  },
+  "scene_median": {
+    "num_points": 2266.0,
+    "num_anchors": 1024.0,
+    "num_matches": 6647.5,
+    "track_len_mean": 2.3898894786834717,
+    "points_dist_med_cm": 1.6777687706053257,
+    "points_dist_p90_cm": 9.159127175807962,
+    "points_within_2cm": 0.5575463481398533,
+    "points_within_5cm": 0.8021768982404909,
+    "anchors_dist_med_cm": 1.4587843092158437,
+    "anchors_dist_p90_cm": 5.658265687525272,
+    "surface_to_anchor_med_cm": 24.568861722946167,
+    "surface_to_anchor_p90_cm": 100.90390980243683,
+    "surface_within_10cm_of_anchor": 0.2968066081607733,
+    "surface_within_20cm_of_anchor": 0.44723101183043557,
+    "sfm_seconds": 0.3075920566916466
+  },
+  "scenes_with_fewer_points_than_anchors": 8
+}
+Exit code: 0; Finished: 2026-11-06T10:02:34+08:00

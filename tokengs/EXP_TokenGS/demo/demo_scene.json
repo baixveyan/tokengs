@@ -1,0 +1,7 @@
+{
+  "rule": "scene_tuning - no_tuning all_frames PSNR gain closest to the 140-scene median; ties -> lexicographically first scene_id (pre-registered)",
+  "scene_id": "2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd",
+  "gain_db": 2.21241542816162,
+  "median_gain_db": 2.2147720146179193,
+  "n_scenes": 140
+}

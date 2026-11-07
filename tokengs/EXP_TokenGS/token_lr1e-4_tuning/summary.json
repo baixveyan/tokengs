@@ -1,0 +1,1865 @@
+{
+  "status": "complete",
+  "started_at": "2026-10-20T09:47:45.837170+08:00",
+  "completed_at": "2026-10-20T09:58:39.399332+08:00",
+  "scene_count": 140,
+  "expected_scene_count": 140,
+  "formal_complete": true,
+  "preset": "eval_dl3dv_latent_6view_ssim",
+  "tuning_target": "gs_tokens",
+  "scene_latent_tuning_enabled": false,
+  "token_tuning_enabled": true,
+  "tuning_steps": 50,
+  "tuning_lr": 0.0001,
+  "tuning_loop": "official",
+  "tuning_loop_geo_weights": null,
+  "mixed_precision": "no",
+  "frame_counts": {
+    "all_frames_per_scene": [
+      50
+    ],
+    "novel_only_per_scene": [
+      44
+    ]
+  },
+  "all_frames": {
+    "metrics": {
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 26.810063538415093,
+        "sample_std": 3.5331185247471195,
+        "confidence_level": 0.95,
+        "ci95_lower": 26.219672307969738,
+        "ci95_upper": 27.40045476886045,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8539207499665874,
+        "sample_std": 0.09695819594791304,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8377188398957818,
+        "ci95_upper": 0.870122660037393,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.21530792344574415,
+        "sample_std": 0.086039877864177,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.20093048634483757,
+        "ci95_upper": 0.22968536054665073,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.01908837219434125,
+        "sample_std": 0.008554312459762195,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.01765892933151102,
+        "ci95_upper": 0.02051781505717148,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.7672354387513227,
+        "sample_std": 0.10252301965384981,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7501036354171161,
+        "ci95_upper": 0.7843672420855293,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "rankings": {
+      "psnr": {
+        "top3": [
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 34.957330207824704
+          },
+          {
+            "scene_id": "374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e",
+            "value": 34.56212097167969
+          },
+          {
+            "scene_id": "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e",
+            "value": 33.72947719573975
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 18.600717372894287
+          },
+          {
+            "scene_id": "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a",
+            "value": 19.53175807952881
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 19.63524751663208
+          }
+        ]
+      },
+      "ssim": {
+        "top3": [
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 0.9701748609542846
+          },
+          {
+            "scene_id": "2cbfe28643b6636f9c70813cae7625aa858a352109493ac70fb429ce94dd55b3",
+            "value": 0.9633173108100891
+          },
+          {
+            "scene_id": "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e",
+            "value": 0.9631256556510925
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.4346360397338867
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.5201072227954865
+          },
+          {
+            "scene_id": "dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751",
+            "value": 0.5966907346248627
+          }
+        ]
+      },
+      "lpips": {
+        "top3": [
+          {
+            "scene_id": "5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00",
+            "value": 0.07863012686371804
+          },
+          {
+            "scene_id": "71b2dc8a2aa553da09b8b94b9f0d5e8abcca307def74d26301616ee238464d46",
+            "value": 0.08495036497712136
+          },
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 0.08504388630390167
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.49748533010482787
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.45618020236492157
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 0.4369254010915756
+          }
+        ]
+      }
+    }
+  },
+  "novel_only": {
+    "metrics": {
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 26.439238559425654,
+        "sample_std": 3.641763782555651,
+        "confidence_level": 0.95,
+        "ci95_lower": 25.830692487304212,
+        "ci95_upper": 27.047784631547096,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.847330434064006,
+        "sample_std": 0.10234469309504672,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8302284294573924,
+        "ci95_upper": 0.8644324386706196,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.21917265312770357,
+        "sample_std": 0.08823108088984451,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.20442906158238244,
+        "ci95_upper": 0.2339162446730247,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.019374688301619463,
+        "sample_std": 0.008693279805647013,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.017922023715047447,
+        "ci95_upper": 0.02082735288819148,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.7657882602135468,
+        "sample_std": 0.10384070905051403,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7484362683238779,
+        "ci95_upper": 0.7831402521032158,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "rankings": {
+      "psnr": {
+        "top3": [
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 34.760558518496424
+          },
+          {
+            "scene_id": "374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e",
+            "value": 34.427733421325684
+          },
+          {
+            "scene_id": "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e",
+            "value": 33.536334081129596
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 17.94635627486489
+          },
+          {
+            "scene_id": "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a",
+            "value": 18.73131309856068
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 18.73249784382907
+          }
+        ]
+      },
+      "ssim": {
+        "top3": [
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 0.9695157517086376
+          },
+          {
+            "scene_id": "2cbfe28643b6636f9c70813cae7625aa858a352109493ac70fb429ce94dd55b3",
+            "value": 0.9626489349386909
+          },
+          {
+            "scene_id": "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e",
+            "value": 0.9623046178709377
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.40643151239915326
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.49596921422264795
+          },
+          {
+            "scene_id": "dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751",
+            "value": 0.5771680257537148
+          }
+        ]
+      },
+      "lpips": {
+        "top3": [
+          {
+            "scene_id": "5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00",
+            "value": 0.0793973058462143
+          },
+          {
+            "scene_id": "71b2dc8a2aa553da09b8b94b9f0d5e8abcca307def74d26301616ee238464d46",
+            "value": 0.08549523472108624
+          },
+          {
+            "scene_id": "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b",
+            "value": 0.08613240312446248
+          }
+        ],
+        "bottom3": [
+          {
+            "scene_id": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "value": 0.5080476890910756
+          },
+          {
+            "scene_id": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "value": 0.46412281827493146
+          },
+          {
+            "scene_id": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "value": 0.4538809379393404
+          }
+        ]
+      }
+    }
+  },
+  "distance_buckets": {
+    "definition": "frame-index distance to the nearest context view; per-scene bucket mean, then mean over scenes that have the bucket",
+    "d0": {
+      "n_scenes": 140,
+      "n_frames": 840,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 29.529446717670986,
+        "sample_std": 3.0447258358134426,
+        "confidence_level": 0.95,
+        "ci95_lower": 29.020666890449277,
+        "ci95_upper": 30.038226544892694,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.9022497332521847,
+        "sample_std": 0.061064392914567264,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.892045750052439,
+        "ci95_upper": 0.9124537164519304,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.18696657244470855,
+        "sample_std": 0.0722632785226262,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.17489123287595112,
+        "ci95_upper": 0.19904191201346597,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.016988720740967744,
+        "sample_std": 0.007642826327156266,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.01571158904901781,
+        "ci95_upper": 0.01826585243291768,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.7778480813616797,
+        "sample_std": 0.09394183580122431,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7621502111542402,
+        "ci95_upper": 0.7935459515691192,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "d1": {
+      "n_scenes": 140,
+      "n_frames": 1434,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 27.962115048247497,
+        "sample_std": 3.5343454146802595,
+        "confidence_level": 0.95,
+        "ci95_lower": 27.37151880202014,
+        "ci95_upper": 28.552711294474854,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8767627141634365,
+        "sample_std": 0.0834558986243896,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8628170652044046,
+        "ci95_upper": 0.8907083631224685,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.1985060931984093,
+        "sample_std": 0.07936740548696283,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.18524363968758142,
+        "ci95_upper": 0.2117685467092372,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.018179075370675746,
+        "sample_std": 0.00825870646640425,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.016799028865460808,
+        "ci95_upper": 0.019559121875890685,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.7790504823508974,
+        "sample_std": 0.09645070482914475,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.762933375069455,
+        "ci95_upper": 0.7951675896323397,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "d2-3": {
+      "n_scenes": 140,
+      "n_frames": 2578,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 26.65614814287354,
+        "sample_std": 3.6922131417273225,
+        "confidence_level": 0.95,
+        "ci95_lower": 26.03917188109729,
+        "ci95_upper": 27.273124404649792,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.852465557869083,
+        "sample_std": 0.1001376202964514,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8357323595779435,
+        "ci95_upper": 0.8691987561602225,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.2142931613973372,
+        "sample_std": 0.086966466380847,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.19976088948671744,
+        "ci95_upper": 0.22882543330795696,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.01915736694404281,
+        "sample_std": 0.008647783590287488,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.017712304866805983,
+        "ci95_upper": 0.02060242902127964,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.7701961185958558,
+        "sample_std": 0.10165717947486458,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7532089989016288,
+        "ci95_upper": 0.7871832382900827,
+        "t_critical": 1.977177724490333
+      }
+    },
+    "d4+": {
+      "n_scenes": 140,
+      "n_frames": 2148,
+      "psnr": {
+        "n_scenes": 140,
+        "mean": 25.166714942455616,
+        "sample_std": 3.7549797578892377,
+        "confidence_level": 0.95,
+        "ci95_lower": 24.539250252542246,
+        "ci95_upper": 25.794179632368987,
+        "t_critical": 1.977177724490333
+      },
+      "ssim": {
+        "n_scenes": 140,
+        "mean": 0.8217022883259064,
+        "sample_std": 0.11841996089737693,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.8019140740518049,
+        "ci95_upper": 0.8414905026000079,
+        "t_critical": 1.977177724490333
+      },
+      "lpips": {
+        "n_scenes": 140,
+        "mean": 0.23868309047510486,
+        "sample_std": 0.09683380357036458,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.2225019666214398,
+        "ci95_upper": 0.2548642143287699,
+        "t_critical": 1.977177724490333
+      },
+      "edge_l1": {
+        "n_scenes": 140,
+        "mean": 0.02044114623998181,
+        "sample_std": 0.009094910334168297,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.01892136838215743,
+        "ci95_upper": 0.021960924097806186,
+        "t_critical": 1.977177724490333
+      },
+      "hf_ratio": {
+        "n_scenes": 140,
+        "mean": 0.7519193324627614,
+        "sample_std": 0.11258154501352909,
+        "confidence_level": 0.95,
+        "ci95_lower": 0.7331067292567215,
+        "ci95_upper": 0.7707319356688014,
+        "t_critical": 1.977177724490333
+      }
+    }
+  },
+  "geometry": {
+    "config": {
+      "lambda_sw": 0.0,
+      "lambda_packing": 0.0,
+      "lambda_inter": 0.0,
+      "k_neighbors": 4,
+      "target_distance": 2.0,
+      "num_sw_directions": 8,
+      "mass_weighting": "opacity_area",
+      "inter_form": "log_smooth_l1"
+    },
+    "sw_loss": {
+      "mean": 0.7119185958589827,
+      "median": 0.7121754288673401,
+      "p10": 0.6000318884849548,
+      "p90": 0.8165279567241669
+    },
+    "packing_loss": {
+      "mean": 11.325787625994002,
+      "median": 10.654630661010742,
+      "p10": 5.647470951080322,
+      "p90": 19.850801086425783
+    },
+    "inter_loss": {
+      "mean": 1.4689155480691365,
+      "median": 1.4751492738723755,
+      "p10": 1.226241445541382,
+      "p90": 1.709198808670044
+    },
+    "packing_ratio": {
+      "mean": 649.5028132847377,
+      "median": 475.1097717285156,
+      "p10": 146.39021911621094,
+      "p90": 1363.040832519532
+    },
+    "packing_target": {
+      "mean": 6.094581174850464,
+      "median": 6.08318018913269,
+      "p10": 5.765656185150147,
+      "p90": 6.481748294830322
+    },
+    "effective_children": {
+      "mean": 15.41094492503575,
+      "median": 15.377268314361572,
+      "p10": 14.130857849121094,
+      "p90": 16.868569374084473
+    },
+    "inter_distance": {
+      "mean": 0.5892237884657724,
+      "median": 0.5383608043193817,
+      "p10": 0.4267513811588287,
+      "p90": 0.7875099539756777
+    },
+    "inter_distance_median": {
+      "mean": 0.30142083529915126,
+      "median": 0.28764861822128296,
+      "p10": 0.21665046066045762,
+      "p90": 0.39202710986137396
+    },
+    "inter_too_close": {
+      "mean": 0.8968658447265625,
+      "median": 0.910308837890625,
+      "p10": 0.832330322265625,
+      "p90": 0.945794677734375
+    },
+    "inter_too_far": {
+      "mean": 0.0413543701171875,
+      "median": 0.0296630859375,
+      "p10": 0.01256103515625,
+      "p90": 0.08450927734375002
+    },
+    "active_slot_ratio": {
+      "mean": 1.0,
+      "median": 1.0,
+      "p10": 1.0,
+      "p90": 1.0
+    }
+  },
+  "needle": {
+    "alive_ratio": {
+      "mean": 0.7158609390258789,
+      "median": 0.7181930541992188,
+      "p10": 0.7028182983398438,
+      "p90": 0.7265090942382812
+    },
+    "opacity_mean": {
+      "mean": 0.0632829302655799,
+      "median": 0.06275316327810287,
+      "p10": 0.04840202033519745,
+      "p90": 0.07764471024274826
+    },
+    "aniso_p50_weighted": {
+      "mean": 27.771210105078563,
+      "median": 27.312265396118164,
+      "p10": 20.268656730651855,
+      "p90": 36.933725738525396
+    },
+    "aniso_p50_unweighted": {
+      "mean": 80.96910899026054,
+      "median": 81.88093566894531,
+      "p10": 55.20593376159668,
+      "p90": 103.82363128662111
+    },
+    "cos_long_axis_ray_p50_weighted": {
+      "mean": 0.733563049350466,
+      "median": 0.7427038550376892,
+      "p10": 0.6233349502086639,
+      "p90": 0.8329991042613983
+    },
+    "long_axis_along_ray_gt0.9_weighted": {
+      "mean": 0.2763481657086038,
+      "median": 0.2747592717041749,
+      "p10": 0.1819037126814657,
+      "p90": 0.37241268426229535
+    },
+    "outside_all_input_frustums_weighted": {
+      "mean": 0.015010808796687489,
+      "median": 0.012999807470927452,
+      "p10": 0.008043400315646912,
+      "p90": 0.024049754841387567
+    }
+  },
+  "paired_comparisons": [
+    {
+      "label": "no_tuning",
+      "reference_dir": "/home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/no_tuning_fp32_140scenes",
+      "delta_definition": "this_run - reference",
+      "n_paired_scenes": 140,
+      "reference_restricted_to_this_run_scenes": false,
+      "all_frames": {
+        "psnr": {
+          "this_run_mean": 26.810063538415093,
+          "reference_mean": 25.19352917289734,
+          "delta_mean": 1.6165343655177524,
+          "delta_median": 1.6246455001831048,
+          "paired_delta_std": 0.5673060161134929,
+          "paired_delta_ci95": [
+            1.521736386184107,
+            1.711332344851398
+          ],
+          "scenes_this_run_better": 140,
+          "scenes_reference_better": 0,
+          "scenes_tied": 0
+        },
+        "ssim": {
+          "this_run_mean": 0.8539207499665874,
+          "reference_mean": 0.8081023768995489,
+          "delta_mean": 0.0458183730670384,
+          "delta_median": 0.04404397785663605,
+          "paired_delta_std": 0.015798585722374962,
+          "paired_delta_ci95": [
+            0.04317839753307383,
+            0.04845834860100297
+          ],
+          "scenes_this_run_better": 140,
+          "scenes_reference_better": 0,
+          "scenes_tied": 0
+        },
+        "lpips": {
+          "this_run_mean": 0.21530792344574415,
+          "reference_mean": 0.2549247959618058,
+          "delta_mean": -0.03961687251606158,
+          "delta_median": -0.03941063702106477,
+          "paired_delta_std": 0.006417455934218638,
+          "paired_delta_ci95": [
+            -0.04068924234424428,
+            -0.03854450268787888
+          ],
+          "scenes_this_run_better": 140,
+          "scenes_reference_better": 0,
+          "scenes_tied": 0
+        },
+        "edge_l1": {
+          "this_run_mean": 0.01908837219434125,
+          "reference_mean": 0.022437505053888473,
+          "delta_mean": -0.0033491328595472232,
+          "delta_median": -0.0030480622872710236,
+          "paired_delta_std": 0.0012664220367676591,
+          "paired_delta_ci95": [
+            -0.0035607545357840505,
+            -0.003137511183310396
+          ],
+          "scenes_this_run_better": 140,
+          "scenes_reference_better": 0,
+          "scenes_tied": 0
+        },
+        "hf_ratio": {
+          "this_run_mean": 0.7672354387513227,
+          "reference_mean": 0.7587096810553754,
+          "delta_mean": 0.008525757695947385,
+          "delta_median": 0.008395704030990603,
+          "paired_delta_std": 0.01287717589412846,
+          "paired_delta_ci95": [
+            0.006373955635658473,
+            0.010677559756236297
+          ],
+          "scenes_this_run_better": 100,
+          "scenes_reference_better": 40,
+          "scenes_tied": 0
+        }
+      },
+      "novel_only": {
+        "psnr": {
+          "this_run_mean": 26.439238559425654,
+          "reference_mean": 25.007017172156992,
+          "delta_mean": 1.432221387268661,
+          "delta_median": 1.416637680747293,
+          "paired_delta_std": 0.6189232953526239,
+          "paired_delta_ci95": [
+            1.3287980564816806,
+            1.5356447180556416
+          ],
+          "scenes_this_run_better": 140,
+          "scenes_reference_better": 0,
+          "scenes_tied": 0
+        },
+        "ssim": {
+          "this_run_mean": 0.847330434064006,
+          "reference_mean": 0.8042956301627996,
+          "delta_mean": 0.04303480390120636,
+          "delta_median": 0.041015360165726045,
+          "paired_delta_std": 0.0148261723352248,
+          "paired_delta_ci95": [
+            0.040557320605223594,
+            0.04551228719718913
+          ],
+          "scenes_this_run_better": 140,
+          "scenes_reference_better": 0,
+          "scenes_tied": 0
+        },
+        "lpips": {
+          "this_run_mean": 0.21917265312770357,
+          "reference_mean": 0.25695260721440244,
+          "delta_mean": -0.03777995408669888,
+          "delta_median": -0.03759658074175769,
+          "paired_delta_std": 0.006225355087255714,
+          "paired_delta_ci95": [
+            -0.03882022347595953,
+            -0.036739684697438234
+          ],
+          "scenes_this_run_better": 140,
+          "scenes_reference_better": 0,
+          "scenes_tied": 0
+        },
+        "edge_l1": {
+          "this_run_mean": 0.019374688301619463,
+          "reference_mean": 0.02256090907832039,
+          "delta_mean": -0.003186220776700935,
+          "delta_median": -0.0028756394432010984,
+          "paired_delta_std": 0.0012805302263359977,
+          "paired_delta_ci95": [
+            -0.003400199959865499,
+            -0.0029722415935363707
+          ],
+          "scenes_this_run_better": 140,
+          "scenes_reference_better": 0,
+          "scenes_tied": 0
+        },
+        "hf_ratio": {
+          "this_run_mean": 0.7657882602135468,
+          "reference_mean": 0.7577213946487996,
+          "delta_mean": 0.008066865564747292,
+          "delta_median": 0.007929572327570467,
+          "paired_delta_std": 0.012560549245897683,
+          "paired_delta_ci95": [
+            0.0059679724558936095,
+            0.010165758673600974
+          ],
+          "scenes_this_run_better": 98,
+          "scenes_reference_better": 42,
+          "scenes_tied": 0
+        }
+      },
+      "geometry": {
+        "sw_loss": {
+          "this_run_mean": 0.7119185958589827,
+          "reference_mean": 0.7128511454377856,
+          "delta_mean": -0.0009325495788029262,
+          "delta_median": -0.001040041446685791,
+          "paired_delta_std": 0.0013120606365368723,
+          "paired_delta_ci95": [
+            -0.0011517975570969363,
+            -0.0007133016005089163
+          ]
+        },
+        "packing_loss": {
+          "this_run_mean": 11.325787625994002,
+          "reference_mean": 11.2388860140528,
+          "delta_mean": 0.08690161194120134,
+          "delta_median": 0.069732666015625,
+          "paired_delta_std": 0.08978301761414594,
+          "paired_delta_ci95": [
+            0.07189868863958167,
+            0.10190453524282102
+          ]
+        },
+        "inter_loss": {
+          "this_run_mean": 1.4689155480691365,
+          "reference_mean": 1.6952988880021231,
+          "delta_mean": -0.22638333993298668,
+          "delta_median": -0.22739547491073608,
+          "paired_delta_std": 0.04651835954229391,
+          "paired_delta_ci95": [
+            -0.23415665162239288,
+            -0.21861002824358047
+          ]
+        },
+        "packing_ratio": {
+          "this_run_mean": 649.5028132847377,
+          "reference_mean": 642.4057213102068,
+          "delta_mean": 7.097091974530901,
+          "delta_median": 3.3746337890625,
+          "paired_delta_std": 15.645205614512097,
+          "paired_delta_ci95": [
+            4.482746565899725,
+            9.711437383162078
+          ]
+        },
+        "packing_target": {
+          "this_run_mean": 6.094581174850464,
+          "reference_mean": 6.097633116585868,
+          "delta_mean": -0.0030519417354038783,
+          "delta_median": -0.0016121864318847656,
+          "paired_delta_std": 0.0108837303559597,
+          "paired_delta_ci95": [
+            -0.0048706350262411645,
+            -0.0012332484445665918
+          ]
+        },
+        "effective_children": {
+          "this_run_mean": 15.41094492503575,
+          "reference_mean": 15.423060042517525,
+          "delta_mean": -0.012115117481776646,
+          "delta_median": -0.007456779479980469,
+          "paired_delta_std": 0.041294748928622664,
+          "paired_delta_ci95": [
+            -0.01901555330359685,
+            -0.005214681659956443
+          ]
+        },
+        "inter_distance": {
+          "this_run_mean": 0.5892237884657724,
+          "reference_mean": 0.5047777906060219,
+          "delta_mean": 0.08444599785975047,
+          "delta_median": 0.06935127079486847,
+          "paired_delta_std": 0.047191917451611616,
+          "paired_delta_ci95": [
+            0.07656013328538644,
+            0.09233186243411451
+          ]
+        },
+        "inter_distance_median": {
+          "this_run_mean": 0.30142083529915126,
+          "reference_mean": 0.2247897313109466,
+          "delta_mean": 0.07663110398820468,
+          "delta_median": 0.07186807692050934,
+          "paired_delta_std": 0.029937568859718582,
+          "paired_delta_ci95": [
+            0.07162847585902328,
+            0.08163373211738607
+          ]
+        },
+        "inter_too_close": {
+          "this_run_mean": 0.8968658447265625,
+          "reference_mean": 0.911661638532366,
+          "delta_mean": -0.014795793805803571,
+          "delta_median": -0.008544921875,
+          "paired_delta_std": 0.016021398325558767,
+          "paired_delta_ci95": [
+            -0.017473001775088672,
+            -0.01211858583651847
+          ]
+        },
+        "inter_too_far": {
+          "this_run_mean": 0.0413543701171875,
+          "reference_mean": 0.034668404715401786,
+          "delta_mean": 0.006685965401785714,
+          "delta_median": 0.002655029296875,
+          "paired_delta_std": 0.009516209107497208,
+          "paired_delta_ci95": [
+            0.005095787669338229,
+            0.008276143134233199
+          ]
+        },
+        "active_slot_ratio": {
+          "this_run_mean": 1.0,
+          "reference_mean": 1.0,
+          "delta_mean": 0.0,
+          "delta_median": 0.0,
+          "paired_delta_std": 0.0,
+          "paired_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "needle": {
+        "alive_ratio": {
+          "this_run_mean": 0.7158609390258789,
+          "reference_mean": 0.7150416237967355,
+          "delta_mean": 0.0008193152291434152,
+          "delta_median": 0.00060272216796875,
+          "paired_delta_std": 0.0008705359102588162,
+          "paired_delta_ci95": [
+            0.000673846922998391,
+            0.0009647835352884394
+          ]
+        },
+        "opacity_mean": {
+          "this_run_mean": 0.0632829302655799,
+          "reference_mean": 0.06148027362568038,
+          "delta_mean": 0.0018026566398995263,
+          "delta_median": 0.0017180908471345901,
+          "paired_delta_std": 0.0005996121439270304,
+          "paired_delta_ci95": [
+            0.001702460241459031,
+            0.0019028530383400216
+          ]
+        },
+        "aniso_p50_weighted": {
+          "this_run_mean": 27.771210105078563,
+          "reference_mean": 27.728749758856637,
+          "delta_mean": 0.04246034622192383,
+          "delta_median": 0.05810260772705078,
+          "paired_delta_std": 0.24374142341411195,
+          "paired_delta_ci95": [
+            0.0017306628354148076,
+            0.08319002960843286
+          ]
+        },
+        "aniso_p50_unweighted": {
+          "this_run_mean": 80.96910899026054,
+          "reference_mean": 80.59078897748675,
+          "delta_mean": 0.3783200127737863,
+          "delta_median": 0.3641510009765625,
+          "paired_delta_std": 0.35063035801809483,
+          "paired_delta_ci95": [
+            0.3197289728605088,
+            0.4369110526870638
+          ]
+        },
+        "cos_long_axis_ray_p50_weighted": {
+          "this_run_mean": 0.733563049350466,
+          "reference_mean": 0.7356536022254399,
+          "delta_mean": -0.002090552874973842,
+          "delta_median": -0.0017728805541992188,
+          "paired_delta_std": 0.002194283707498361,
+          "paired_delta_ci95": [
+            -0.002457222107534863,
+            -0.0017238836424128205
+          ]
+        },
+        "long_axis_along_ray_gt0.9_weighted": {
+          "this_run_mean": 0.2763481657086038,
+          "reference_mean": 0.27702035241283485,
+          "delta_mean": -0.0006721867042309998,
+          "delta_median": -0.0006539239598690044,
+          "paired_delta_std": 0.0015485151136984212,
+          "paired_delta_ci95": [
+            -0.0009309467024977084,
+            -0.0004134267059642911
+          ]
+        },
+        "outside_all_input_frustums_weighted": {
+          "this_run_mean": 0.015010808796687489,
+          "reference_mean": 0.014851967302535915,
+          "delta_mean": 0.00015884149415157213,
+          "delta_median": 0.00025802888144389963,
+          "paired_delta_std": 0.0006017763633323183,
+          "paired_delta_ci95": [
+            5.82834502840435e-05,
+            0.00025939953801910073
+          ]
+        }
+      },
+      "paired_psnr_deltas_by_scene": {
+        "032dee9fb0a8bc1b90871dc5fe950080d0bcd3caf166447f44e60ca50ac04ec7": 1.9105705642700208,
+        "0569e83fdc248a51fc0ab082ce5e2baff15755c53c207f545e6d02d91f01d166": 1.8221634674072256,
+        "06da796666297fe4c683c231edf56ec00148a6a52ab5bb159fe1be31f53a58df": 1.0282644653320325,
+        "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561": 0.7534164047241205,
+        "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b": 2.6388077545165984,
+        "0853979305f7ecb80bd8fc2c8df916410d471ef04ed5f1a64e9651baa41d7695": 1.6315767288208,
+        "093ef327b4e4f9d4ee52c02a354a53558a8652157fb0d58f3b4a708734afb334": 1.5897641754150413,
+        "0a1b7c20a92c43c6b8954b1ac909fb2f0fa8b2997b80604bc8bbec80a1cb2da3": 2.575276031494141,
+        "0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6": 1.8583805847167945,
+        "0bfdd020cf475b9c68e4b469d1d1a2d0cad303eefe8b78fb2307855afdaac8be": 1.310873413085936,
+        "119fd56d3797e2d349ca64ddcc5851463cd13b5974b5b2e4566ed5cf7e02e6c1": 1.016423873901367,
+        "1264931635e127fb905c8953cbc2deadd0c763e633af7fbd9405a61ca849710c": 0.9626231765747093,
+        "14eb48a50e37df548894ab6d8cd628a21dae14bbe6c462e894616fc5962e6c49": 1.5820536422729496,
+        "15ff83e2531668d27c92091c97d31401ce323e24ee7c844cb32d5109ab9335f7": 0.9271421432495117,
+        "165f5af8bfe32f70595a1c9393a6e442acf7af019998275144f605b89a306557": 1.0098844909667974,
+        "183dd248f6a86e07c5adf9de8ee2d0abe45b1216331c03678e89634c2e9b1c7f": 1.1303930282592773,
+        "1ba74c22670ad047981441581d00f26f4a148d1010bcac7468c615adf5fa4d5d": 1.4983179473876937,
+        "1d6a9ed47cce39fd1c4d18f776bcc97e507b81bde921ca596bd91b0b02b5e414": 1.006394996643067,
+        "1da888bdedfc9629c0fa9f82cf3f5d96f8103baee0ff64d9311aea1224a9f2ae": 1.8411352157592766,
+        "1de58be515696102c364b767f296600ffff853d4145a60dd30ece9d935317654": 2.668921241760252,
+        "2385549d398bdfb55ed17b547c9846f0d01d571b4e050f90df707b577084fb55": 1.6274555206298835,
+        "26fd23358fa11fff0fb3180ef0b65591b486e20dcf753ce4a7aae49a37e370c7": 1.663564567565917,
+        "280abf7bd93b81b077af1db638229dbb09869052fa0b7b57c81c94d2db893829": 1.6000847244262673,
+        "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a": 0.8332723808288591,
+        "2991a75d1f0fb2b7a891d424fc2459bb954b61599b52e74a056a7acfb2998b77": 1.3543363571167006,
+        "2b65ba886efac7af6253fce68ae9284bf4d4db019e17c47f3e853361acbdb066": 1.7444487762451182,
+        "2beaca318994c25409dcbb6d0bdd96c3620f2f18aec44ea3f20edd302f18ca78": 1.905989646911621,
+        "2cbfe28643b6636f9c70813cae7625aa858a352109493ac70fb429ce94dd55b3": 3.1077217102050803,
+        "2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd": 1.5576663208007808,
+        "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e": 2.39655746459961,
+        "341b4ff3dfd3d377d7167bd81f443bedafbff003bf04881b99760fc0aeb69510": 1.4755532073974607,
+        "35317e621976e87f0c143e66fc61fb8cddb4ff134304da7a00e32ac1983105b4": 1.2875397872924772,
+        "35872363e17af5d173b6a0b09fcf5de94627ad5dc5f8a9ad4c579f3e70b4797a": 2.3823942565917946,
+        "374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e": 2.2333539199829104,
+        "387eeb925ba47af5db9ce6102aaf6b07e6d3573b7e7568dda4cef22d5ab1342f": 2.6600621414184573,
+        "389a460ca1995e0658e85fe8e6b520b4e88b370cd6710dfe728b1564bba31aee": 1.3937907791137683,
+        "3b16a10ec9b4ab71580958b634485a979ffd6df0d368dbbf6fc1c5ffacf46b7a": 0.6034529113769516,
+        "3b7529dcccf7097cba31a989536035595e214b0f3775867fd3a62eb186870090": 1.8885651016235343,
+        "3bb3bb4d3e871d79eb71946cbab1e3afc7a8e33a661153033f32deb3e23d2e52": 1.655784339904784,
+        "3bb894d1933f3081134ad2d40e54de5f0636bd8b502b0a8561873bb63b0dce85": 2.8100786590576163,
+        "41036716da7efda334c1d434c4141d15642e0e02f881a01b6c8c36f8bea64c45": 1.2592196273803715,
+        "444da1b4a3f1ca019d4c9c1b405a579427746ccc96cab6dab7dcba5cb4fc998c": 1.2017486572265632,
+        "457e9a1ae777b0c72be723aaeec971b39cc6d5d413d922f981ec9785395f7ca9": 1.9773459243774418,
+        "484c0aca40c1087f196d2caf3c8cb463864c08e60b98326ca02eb6dae8ce4984": 1.4444783782958979,
+        "493816813d2d6d248eb3c2b0b77b63e54235266e9a06e270fd0d282f13960493": 1.4226327133178707,
+        "4ae797d07b6d1644c9db6919c8cc8c0d28d72be45108ac7a3abf8dc21b599d83": 1.3611580657958982,
+        "4ff8650b5c1140e98d957fbd1abbe2cfbbb416b37cb9f06f7f376956703801bb": 2.0636336135864255,
+        "50c46cf8b8b22c8d2ffdef8964b05ddbceaef312c9a9ff331d1ecebfd223f72a": 1.0432080078125026,
+        "513e4ea2e8477b06f2b32417d5c243aec71d491cb0596a60e9fe304c635f20a1": 1.9449987030029305,
+        "54bf355ca7e08ed1bc86f5772e564ac0f92981ca25dab24d86b694e915fc4c43": 1.6801155090332038,
+        "56452d9cd9e2e034764132a57058517ab085e1352f9664d2d1e10e98741334fc": 1.3592324447631832,
+        "565553aa894be621e8b4773cac288e60ad0c2cf7edb621be62b348c9a0f78380": 1.3172135162353484,
+        "599ca3e04cae3ec83affc426af7d0d7ab36eb91cd8e539edbc13070a4d455792": 0.8552426147460963,
+        "5a27c00f525f5484b7aa0d0107051253bf7bb395bde0b3a4486ff8c52fb4965e": 2.3916389083862306,
+        "5a69d1027b477be4d2933b765723d57b272e0ace96be7885306464d54aa2c038": 0.9154359436035158,
+        "5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00": 2.693438377380371,
+        "5c8dafad7d782c76ffad8c14e9e1244ce2b83aa12324c54a3cc10176964acf04": 1.6554257965087906,
+        "5f0041e53d59d67c3ca25db97b269db183a532c4566a6bc46ca0e69cfa4234ad": 2.4061185455322267,
+        "63798f5c6fbfcb4eb686268248b8ecbc8d87d920b2bcce967eeaedfd3b3b6d82": 1.6286371231079073,
+        "669c36225b273e22ce08364f166dce910b708d7abd89e58463a15d2790b534d5": 1.8476116180419915,
+        "66fd66cbed40a2d11ecd17ae6d6d60cd60d476616864ecdd351fe69e644f30a1": 1.8722477340698234,
+        "6d221625614d0515fa44d59a8797a49b64f86bc775e66be22f07a66aa0a0cb3a": 0.9913470458984364,
+        "6d81c5ab0d480fd43d78b75ff372a8113ad38e2c03f1d69627c009883054d4c2": 1.6821122741699241,
+        "6e11e7f4fea305c7c4658d2c1f8df29e6f299330860cf48ffbf1c5ff8b96c0a8": 1.1353890991210918,
+        "70eac6ff18a1daae4eeccc5eb18723eaf7e029a77e79c79d9573f7bac59ba92b": 1.9832541656494165,
+        "71b2dc8a2aa553da09b8b94b9f0d5e8abcca307def74d26301616ee238464d46": 2.5992549133300784,
+        "75fbbe467353cfdeb93bc1872144855576797be83a0c71c51155ee6b355d6d5e": 1.6259432601928694,
+        "7705a2edd022de9da3f8cead677287645986e982d9247a21e1992859a59f8335": 1.3928553771972645,
+        "7a9f97660be8f2421b37dd413c898360532f17c6447c11515e8aded2d80eb99d": 1.6233477401733403,
+        "7da3db99059a436adf537bc23309a6a4db9e011696d086f3a64037f7497d9df7": 1.6854848861694336,
+        "800cf88687a79c232700454c2f5a402e771bc7157037a17b0ce93da365b25575": 1.0583299255371088,
+        "8324b3ca22085040c2a0ecb7284e0cdf776b1f846b73a7c0df893587cb4a45f8": 1.0204084396362312,
+        "85cd0e92110bcd35e826cbff16bb0e85d8117717adaf36f0698920f0fb9b2cfd": 1.319605102539061,
+        "8b9fb9d9f10e8c64d5034be69809465753b8ba88ef12da82afd47d38ee789934": 1.080643234252932,
+        "8cb2e97d26a639f05a571476240a8fa86988e6853f0f13cc05830d1578002aad": 2.4784444808959947,
+        "8fdc5130f0731360cc053f59049bfe6db509567457c5471c970292966cb34f17": 0.826464500427246,
+        "90cb7ef95384138c2370f13a9ae1698fb1b5bdd68e8b3d01f8e53d38933a4b92": 1.2524667358398425,
+        "917e9c8985d353b0ee4c281f11fa84eb8550814562670cbb82cd0ec9c1194fe7": 2.2390284347534184,
+        "918c8dad730c3b804306c5da8486124be4aa0612e85fb825338fd350c912e1b0": 0.8294890594482425,
+        "91afb9910b042f7185c2b8e4b6b24b5785dae4542617b3f8005b5492f6d123f7": 1.3439771270751955,
+        "946f49be73928469000baa5ca04d2573137c5ee6a66362bcf8d130354dca8924": 1.7432205963134777,
+        "9641a1ed7963ce5ca734cff3e6ccea3dfa8bcb0b0a3ff78f65d32a080de2d71e": 0.9109471130371105,
+        "9c8c0e0fadd97abf60088f667eba058ef077a71a8c0f5a4eff2782aa97f1ceb8": 1.0483303451538077,
+        "9cbc5548643ca9cfe797f871bac58bccd02f0510c49b7cb3697b38dfd780a508": 1.8196677780151376,
+        "9e9a89ae6fed06d6e2f4749b4b0059f35ca97f848cedc4a14345999e746f7884": 1.8760272598266603,
+        "9fb0588ff045ec64119c5bc91b44a4b7400e5fae5a17e67762b29e6855b57118": 1.919730873107909,
+        "a17a984ca90a9b5840fdf85b15104b0d18e25975981c1aa90fcdfd6eeeb285f3": 2.1077494430541996,
+        "a401469cb0fa576b93e836a4a6d712394f1a55a0a53a42250286980bd078e669": 1.0608856582641586,
+        "a62c330f5403e2e41a82a74c4e865b705c5706843b992fae2fe2e538b122d984": 1.2204882049560553,
+        "a62f9a1c6362e7c8a3440261ea0921a0a4b60cf5822bd19579836694f26b3abd": 2.191832656860349,
+        "a726c1112ad026efc92f59f196c0698e67abd12a04135a7ff6349b1d31b089eb": 0.7437642669677764,
+        "adb95f29c15b8a89e40c17d10596679be09d7719c6f08a453facd506d056ea8b": 1.2050281906127935,
+        "adf35184a12d4cfa3f4248b87aa5adb4f39f179df460d6d76136e13d37299a2a": 1.851964645385742,
+        "af0d7039e64af3959210c235e59425896ac064f4e0f721c437bbd2cf1d8ea910": 1.1675267028808598,
+        "b2076bc7231bac445b1a3d0015a410675a3222f25cc219e8178a62a0dd4ac63d": 1.6292747879028333,
+        "b3bf9079b442c681749f6bd95cfb0659c6d844f2228b2f4fa4b602a0e3627b9a": 1.1519813156127938,
+        "b4f53094fd31dcc2de1c1d1fdfeffac5259e9bdf39d77b552ff948e4bdf1fd8e": 1.9103192138671865,
+        "b5faa2a8ce980030125717352086bf9ec16c5d994bae3b3a732da3eb67cf4fa8": 0.850387268066406,
+        "b6d1134cb03c855d246f916beaa2d3d01290cf47937a5176011ff39b850ec615": 2.0351604461669908,
+        "b92b499c9bf92327d5f3a44c9db49bde3400dcb1cfec48d6488831e2b304d0bb": 0.8677081298828107,
+        "ba55c875d20c34ee85ffc72264c4d77710852e5fb7d9ce4b9c26a8442850e98f": 2.313440513610839,
+        "c076929db6501cf7ebe386c70e6d77ea3af844a745e794f2ec17c981c465a69b": 2.019319419860839,
+        "c37109a55effe0000f8e40652ca935376e75bcb2a0b56de8eabd20a26e2a0f68": 1.0038209915161147,
+        "c37726ce770ac50a2cf5c0f43022f0268e26da0d777cd8e3a3418c4eed03fd94": 1.6146995544433587,
+        "c455899acfc8816353a55fade692d19d9c2bff68c8615f852931d5754848db74": 0.7547003173828131,
+        "cbd44beb04f9c98f2d2c5affff89a6e0a72c25f1aa0c6f660fbd9e4d26702f8b": 2.555705604553225,
+        "cc08c0bdc34ddd2867705d0b17a86ec2a9d7c7926ce99070ed1fdc66a812de07": 1.5620508193969727,
+        "cd9c981eeb4a9091547af19181b382698e9d9eee0a838c7c9783a8a268af6aee": 1.7823443222045903,
+        "ceb252f5d4419510655cf9ed7afbf3e8e688825f798d80414c7715dc8ace153a": 1.9586672210693372,
+        "d1b3a0b37acc72207295b05e8c359f8b43bf879eb882c60747cfc6d3c7d8efa3": 0.8723552322387711,
+        "d3812aad538261e7f73c75762ff55f23b468bcc76f376d52ac86ca6cf3c44b4b": 0.5776155471801765,
+        "d3af8212ae1600f078c4ac1ef3c9369a7f41ee9d005dbd0c545cf43fc35a9a23": 2.4517084503173834,
+        "d4fbeba0168af8fddb2fc695881787aedcd62f477c7dcec9ebca7b8594bbd95b": 0.9655052947998044,
+        "d8de66037bd03dd0d39d54f9978bac3318d912e30e22c21e1ada82a98ed48c53": 1.4355789184570327,
+        "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a": 0.9823570632934562,
+        "d9b6376623741313bf6da6bf4cdb9828be614a2ce9390ceb3f31cd535d661a75": 1.2942981719970703,
+        "d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b": 2.984895286560061,
+        "dac9796dd69e1c25277e29d7e30af4f21e3b575d62a0a208c2b3d1211e2d5d77": 2.3556137847900374,
+        "dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751": 0.9486516380310057,
+        "ddfdcfdf02d53dd89a055cd9e1ed30272ab3f57c7560ac2c3761bb01d76a7882": 1.7333280563354485,
+        "ded5e4b46aedbef4cdb7bd1db7fc4cc5b00a9979ad6464bdadfab052cd64c101": 1.5810621261596687,
+        "df04f58064684c1a31aa0ffbbcf34199d01d0a0ff289588eb2d6c6cf50a3922c": 1.7438035202026363,
+        "df29c225863d0173e060b1f3fde4e6eb5a57a4e4edabd397026ba1a028aeb39e": 1.6832236099243154,
+        "df4f9d9a0adfc54c49607bc792be6ed6f751b67e37c588472ea58b0d898310dd": 2.158827323913574,
+        "e5684b3292bfd77db297839fc37ee4cce7fd59775af1a6a4827e3b4f59c036d3": 1.4429837799072267,
+        "e78f8cebd2bd93d960bfaeac18fac0bb2524f15c44288903cd20b73e599e8a81": 1.4474859619140616,
+        "e8ce51b6abfe05bf8dca47e29c8be6c1e6de27a8c9fece7a121400b931b2ca0f": 1.7385003280639637,
+        "e9360e7a89bee835dc847cf8796093e634b759ff582558788dcfe8326f6e8901": 1.4345371246337884,
+        "eb4cf52988f805e6fce11d1b239fa9de32eb157364cff06ebac0aa50e0a46567": 1.3931708145141606,
+        "ec1e44d4dc0f8fa77610866495f9297a7f82158c43e1777668b84fd4b736c7bc": 2.0367799377441393,
+        "ec305787b70029b782c71c1bf296c3885c7c22619e5661bd40085533ddfee5e4": 1.6326611137390152,
+        "ed16328235c610f15405ff08711eaf15d88a0503884f3a9ccb5a0ee69cb4acb5": 1.6932178878784185,
+        "ef59aac437132bfc1dd45a7e1f8e4800978e7bb28bf98c4428d26fb3e1da3e90": 2.082950401306153,
+        "f004c810d94bac93f527606a2ff859d646f99fcac0868c6c6905b29c718fa37b": 3.041818008422851,
+        "f477ffc4b398bed8e0d921f0fba9825ca63f317381c535c84be23be991ae1d7a": 2.3776868057250944,
+        "f71ac346cd0fc4652a89afb37044887ec3907d37d01d1ceb0ad28e1a780d8e03": 2.2165202331542986,
+        "f7aaea9ac683bb1945cfeb1daa9abca3375249e0d19281a89a3f575040835464": 1.8397635650634747,
+        "fb2c0499c225d6124938cadcf0dc48cbb490551b8a69c98386491c1366163632": 1.5795790863037098,
+        "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9": 0.4080925178527828,
+        "ff592398657b3dfe94153332861985194a3e3c9d199c4a3a27a0ce4038e81ade": 1.8508123779296888
+      }
+    },
+    {
+      "label": "scene_latent_tuning_official_loop",
+      "reference_dir": "/home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/scene_latent_tuning_fp32_140scenes/official_loop",
+      "delta_definition": "this_run - reference",
+      "n_paired_scenes": 140,
+      "reference_restricted_to_this_run_scenes": false,
+      "all_frames": {
+        "psnr": {
+          "this_run_mean": 26.810063538415093,
+          "reference_mean": 27.399487153053286,
+          "delta_mean": -0.5894236146381923,
+          "delta_median": -0.5440882110595702,
+          "paired_delta_std": 0.34861533511274023,
+          "paired_delta_ci95": [
+            -0.647677940160448,
+            -0.5311692891159365
+          ],
+          "scenes_this_run_better": 4,
+          "scenes_reference_better": 136,
+          "scenes_tied": 0
+        },
+        "ssim": {
+          "this_run_mean": 0.8539207499665874,
+          "reference_mean": 0.8683071553749697,
+          "delta_mean": -0.014386405408382404,
+          "delta_median": -0.012462118864059457,
+          "paired_delta_std": 0.009103027076281398,
+          "paired_delta_ci95": [
+            -0.015907539590182273,
+            -0.012865271226582537
+          ],
+          "scenes_this_run_better": 4,
+          "scenes_reference_better": 136,
+          "scenes_tied": 0
+        },
+        "lpips": {
+          "this_run_mean": 0.21530792344574415,
+          "reference_mean": 0.1831351527885667,
+          "delta_mean": 0.03217277065717748,
+          "delta_median": 0.03144995659589765,
+          "paired_delta_std": 0.00994441891006437,
+          "paired_delta_ci95": [
+            0.030511038203184255,
+            0.03383450311117071
+          ],
+          "scenes_this_run_better": 0,
+          "scenes_reference_better": 140,
+          "scenes_tied": 0
+        }
+      },
+      "novel_only": {
+        "psnr": {
+          "this_run_mean": 26.439238559425654,
+          "reference_mean": 26.843676516762027,
+          "delta_mean": -0.4044379573363763,
+          "delta_median": -0.3528970154848974,
+          "paired_delta_std": 0.39927964787420994,
+          "paired_delta_ci95": [
+            -0.47115839169177776,
+            -0.3377175229809748
+          ],
+          "scenes_this_run_better": 26,
+          "scenes_reference_better": 114,
+          "scenes_tied": 0
+        },
+        "ssim": {
+          "this_run_mean": 0.847330434064006,
+          "reference_mean": 0.8596359817190217,
+          "delta_mean": -0.012305547655015797,
+          "delta_median": -0.010580983351577422,
+          "paired_delta_std": 0.008885985593051314,
+          "paired_delta_ci95": [
+            -0.013790413767277559,
+            -0.010820681542754035
+          ],
+          "scenes_this_run_better": 5,
+          "scenes_reference_better": 135,
+          "scenes_tied": 0
+        },
+        "lpips": {
+          "this_run_mean": 0.21917265312770357,
+          "reference_mean": 0.18829481228641778,
+          "delta_mean": 0.03087784084128579,
+          "delta_median": 0.029738269492306485,
+          "paired_delta_std": 0.009818967846197466,
+          "paired_delta_ci95": [
+            0.02923707151305194,
+            0.032518610169519645
+          ],
+          "scenes_this_run_better": 0,
+          "scenes_reference_better": 140,
+          "scenes_tied": 0
+        }
+      },
+      "geometry": {},
+      "needle": {},
+      "paired_psnr_deltas_by_scene": {
+        "032dee9fb0a8bc1b90871dc5fe950080d0bcd3caf166447f44e60ca50ac04ec7": -0.8807659149169922,
+        "0569e83fdc248a51fc0ab082ce5e2baff15755c53c207f545e6d02d91f01d166": -0.8122131729125996,
+        "06da796666297fe4c683c231edf56ec00148a6a52ab5bb159fe1be31f53a58df": -0.32670417785644545,
+        "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561": 0.18816452026366903,
+        "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b": -1.2444028854370117,
+        "0853979305f7ecb80bd8fc2c8df916410d471ef04ed5f1a64e9651baa41d7695": -0.7631340789794905,
+        "093ef327b4e4f9d4ee52c02a354a53558a8652157fb0d58f3b4a708734afb334": -0.808905258178708,
+        "0a1b7c20a92c43c6b8954b1ac909fb2f0fa8b2997b80604bc8bbec80a1cb2da3": -1.4019863510131856,
+        "0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6": -0.43700546264648565,
+        "0bfdd020cf475b9c68e4b469d1d1a2d0cad303eefe8b78fb2307855afdaac8be": -0.48214870452881087,
+        "119fd56d3797e2d349ca64ddcc5851463cd13b5974b5b2e4566ed5cf7e02e6c1": -0.18339923858642848,
+        "1264931635e127fb905c8953cbc2deadd0c763e633af7fbd9405a61ca849710c": -0.1703693389892571,
+        "14eb48a50e37df548894ab6d8cd628a21dae14bbe6c462e894616fc5962e6c49": -0.6258303070068365,
+        "15ff83e2531668d27c92091c97d31401ce323e24ee7c844cb32d5109ab9335f7": -0.21524364471435575,
+        "165f5af8bfe32f70595a1c9393a6e442acf7af019998275144f605b89a306557": -0.1758688735961904,
+        "183dd248f6a86e07c5adf9de8ee2d0abe45b1216331c03678e89634c2e9b1c7f": -0.4856499481201162,
+        "1ba74c22670ad047981441581d00f26f4a148d1010bcac7468c615adf5fa4d5d": -0.7834259796142575,
+        "1d6a9ed47cce39fd1c4d18f776bcc97e507b81bde921ca596bd91b0b02b5e414": -0.12207153320312614,
+        "1da888bdedfc9629c0fa9f82cf3f5d96f8103baee0ff64d9311aea1224a9f2ae": -1.3219223403930656,
+        "1de58be515696102c364b767f296600ffff853d4145a60dd30ece9d935317654": -1.466976051330569,
+        "2385549d398bdfb55ed17b547c9846f0d01d571b4e050f90df707b577084fb55": -1.0371118545532205,
+        "26fd23358fa11fff0fb3180ef0b65591b486e20dcf753ce4a7aae49a37e370c7": -0.4941450500488287,
+        "280abf7bd93b81b077af1db638229dbb09869052fa0b7b57c81c94d2db893829": -0.5883540725708016,
+        "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a": -0.23795888900756523,
+        "2991a75d1f0fb2b7a891d424fc2459bb954b61599b52e74a056a7acfb2998b77": -0.4577552032470713,
+        "2b65ba886efac7af6253fce68ae9284bf4d4db019e17c47f3e853361acbdb066": -0.6495758819580075,
+        "2beaca318994c25409dcbb6d0bdd96c3620f2f18aec44ea3f20edd302f18ca78": -0.8128065490722634,
+        "2cbfe28643b6636f9c70813cae7625aa858a352109493ac70fb429ce94dd55b3": -0.8536160659790042,
+        "2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd": -0.6534203720092755,
+        "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e": -0.8771770858764611,
+        "341b4ff3dfd3d377d7167bd81f443bedafbff003bf04881b99760fc0aeb69510": -0.8659409713745099,
+        "35317e621976e87f0c143e66fc61fb8cddb4ff134304da7a00e32ac1983105b4": -0.37354129791259894,
+        "35872363e17af5d173b6a0b09fcf5de94627ad5dc5f8a9ad4c579f3e70b4797a": -0.3267918395996112,
+        "374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e": -0.9992899322509743,
+        "387eeb925ba47af5db9ce6102aaf6b07e6d3573b7e7568dda4cef22d5ab1342f": -0.6010632324218754,
+        "389a460ca1995e0658e85fe8e6b520b4e88b370cd6710dfe728b1564bba31aee": -0.3751397705078112,
+        "3b16a10ec9b4ab71580958b634485a979ffd6df0d368dbbf6fc1c5ffacf46b7a": -0.33616653442382827,
+        "3b7529dcccf7097cba31a989536035595e214b0f3775867fd3a62eb186870090": -0.8341529464721695,
+        "3bb3bb4d3e871d79eb71946cbab1e3afc7a8e33a661153033f32deb3e23d2e52": -0.5695877456665066,
+        "3bb894d1933f3081134ad2d40e54de5f0636bd8b502b0a8561873bb63b0dce85": -0.8722234344482409,
+        "41036716da7efda334c1d434c4141d15642e0e02f881a01b6c8c36f8bea64c45": -0.4553690338134757,
+        "444da1b4a3f1ca019d4c9c1b405a579427746ccc96cab6dab7dcba5cb4fc998c": -0.3530643081665019,
+        "457e9a1ae777b0c72be723aaeec971b39cc6d5d413d922f981ec9785395f7ca9": -0.8912856292724598,
+        "484c0aca40c1087f196d2caf3c8cb463864c08e60b98326ca02eb6dae8ce4984": -0.5111404037475609,
+        "493816813d2d6d248eb3c2b0b77b63e54235266e9a06e270fd0d282f13960493": -0.46751888275146314,
+        "4ae797d07b6d1644c9db6919c8cc8c0d28d72be45108ac7a3abf8dc21b599d83": -0.6767779922485353,
+        "4ff8650b5c1140e98d957fbd1abbe2cfbbb416b37cb9f06f7f376956703801bb": -0.7530353164672867,
+        "50c46cf8b8b22c8d2ffdef8964b05ddbceaef312c9a9ff331d1ecebfd223f72a": -0.18897224426269332,
+        "513e4ea2e8477b06f2b32417d5c243aec71d491cb0596a60e9fe304c635f20a1": -0.8179398345947249,
+        "54bf355ca7e08ed1bc86f5772e564ac0f92981ca25dab24d86b694e915fc4c43": -0.85358673095703,
+        "56452d9cd9e2e034764132a57058517ab085e1352f9664d2d1e10e98741334fc": -0.5436108398437511,
+        "565553aa894be621e8b4773cac288e60ad0c2cf7edb621be62b348c9a0f78380": -0.3566417694091797,
+        "599ca3e04cae3ec83affc426af7d0d7ab36eb91cd8e539edbc13070a4d455792": -0.28432626724243093,
+        "5a27c00f525f5484b7aa0d0107051253bf7bb395bde0b3a4486ff8c52fb4965e": -0.9097876358032231,
+        "5a69d1027b477be4d2933b765723d57b272e0ace96be7885306464d54aa2c038": 0.01573520660400618,
+        "5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00": -1.0074457931518594,
+        "5c8dafad7d782c76ffad8c14e9e1244ce2b83aa12324c54a3cc10176964acf04": -0.43774288177490206,
+        "5f0041e53d59d67c3ca25db97b269db183a532c4566a6bc46ca0e69cfa4234ad": -1.0181860351562513,
+        "63798f5c6fbfcb4eb686268248b8ecbc8d87d920b2bcce967eeaedfd3b3b6d82": -0.7325189971923827,
+        "669c36225b273e22ce08364f166dce910b708d7abd89e58463a15d2790b534d5": -0.7530520248413097,
+        "66fd66cbed40a2d11ecd17ae6d6d60cd60d476616864ecdd351fe69e644f30a1": -0.5933542633056632,
+        "6d221625614d0515fa44d59a8797a49b64f86bc775e66be22f07a66aa0a0cb3a": -0.14136886596679688,
+        "6d81c5ab0d480fd43d78b75ff372a8113ad38e2c03f1d69627c009883054d4c2": -0.8810642623901366,
+        "6e11e7f4fea305c7c4658d2c1f8df29e6f299330860cf48ffbf1c5ff8b96c0a8": -0.25380405426025376,
+        "70eac6ff18a1daae4eeccc5eb18723eaf7e029a77e79c79d9573f7bac59ba92b": -0.4090405273437483,
+        "71b2dc8a2aa553da09b8b94b9f0d5e8abcca307def74d26301616ee238464d46": -1.362499618530272,
+        "75fbbe467353cfdeb93bc1872144855576797be83a0c71c51155ee6b355d6d5e": -0.4099003601074216,
+        "7705a2edd022de9da3f8cead677287645986e982d9247a21e1992859a59f8335": -0.4927530288696289,
+        "7a9f97660be8f2421b37dd413c898360532f17c6447c11515e8aded2d80eb99d": -0.5576870346069356,
+        "7da3db99059a436adf537bc23309a6a4db9e011696d086f3a64037f7497d9df7": -0.6102788543701188,
+        "800cf88687a79c232700454c2f5a402e771bc7157037a17b0ce93da365b25575": -0.17116245269775376,
+        "8324b3ca22085040c2a0ecb7284e0cdf776b1f846b73a7c0df893587cb4a45f8": -0.3407085418701179,
+        "85cd0e92110bcd35e826cbff16bb0e85d8117717adaf36f0698920f0fb9b2cfd": -0.34200054168701044,
+        "8b9fb9d9f10e8c64d5034be69809465753b8ba88ef12da82afd47d38ee789934": -0.2614971542358404,
+        "8cb2e97d26a639f05a571476240a8fa86988e6853f0f13cc05830d1578002aad": -1.1383082962036113,
+        "8fdc5130f0731360cc053f59049bfe6db509567457c5471c970292966cb34f17": -0.15336170196533416,
+        "90cb7ef95384138c2370f13a9ae1698fb1b5bdd68e8b3d01f8e53d38933a4b92": -0.40002140045166,
+        "917e9c8985d353b0ee4c281f11fa84eb8550814562670cbb82cd0ec9c1194fe7": -1.013786163330078,
+        "918c8dad730c3b804306c5da8486124be4aa0612e85fb825338fd350c912e1b0": -0.12103279113769361,
+        "91afb9910b042f7185c2b8e4b6b24b5785dae4542617b3f8005b5492f6d123f7": -0.4785477447509763,
+        "946f49be73928469000baa5ca04d2573137c5ee6a66362bcf8d130354dca8924": -0.4865441513061519,
+        "9641a1ed7963ce5ca734cff3e6ccea3dfa8bcb0b0a3ff78f65d32a080de2d71e": -0.3827183532714855,
+        "9c8c0e0fadd97abf60088f667eba058ef077a71a8c0f5a4eff2782aa97f1ceb8": -0.010785675048829546,
+        "9cbc5548643ca9cfe797f871bac58bccd02f0510c49b7cb3697b38dfd780a508": -0.8870991134643553,
+        "9e9a89ae6fed06d6e2f4749b4b0059f35ca97f848cedc4a14345999e746f7884": -0.41480850219726406,
+        "9fb0588ff045ec64119c5bc91b44a4b7400e5fae5a17e67762b29e6855b57118": -0.4704137039184566,
+        "a17a984ca90a9b5840fdf85b15104b0d18e25975981c1aa90fcdfd6eeeb285f3": -1.0227094650268533,
+        "a401469cb0fa576b93e836a4a6d712394f1a55a0a53a42250286980bd078e669": -0.31286491394043026,
+        "a62c330f5403e2e41a82a74c4e865b705c5706843b992fae2fe2e538b122d984": -0.48399620056152415,
+        "a62f9a1c6362e7c8a3440261ea0921a0a4b60cf5822bd19579836694f26b3abd": -0.7523246765136733,
+        "a726c1112ad026efc92f59f196c0698e67abd12a04135a7ff6349b1d31b089eb": -0.1640202331542966,
+        "adb95f29c15b8a89e40c17d10596679be09d7719c6f08a453facd506d056ea8b": -0.35060764312744297,
+        "adf35184a12d4cfa3f4248b87aa5adb4f39f179df460d6d76136e13d37299a2a": -1.164415817260739,
+        "af0d7039e64af3959210c235e59425896ac064f4e0f721c437bbd2cf1d8ea910": -0.19916553497314382,
+        "b2076bc7231bac445b1a3d0015a410675a3222f25cc219e8178a62a0dd4ac63d": -0.5266691207885721,
+        "b3bf9079b442c681749f6bd95cfb0659c6d844f2228b2f4fa4b602a0e3627b9a": -0.35481201171874943,
+        "b4f53094fd31dcc2de1c1d1fdfeffac5259e9bdf39d77b552ff948e4bdf1fd8e": -0.9420153045654303,
+        "b5faa2a8ce980030125717352086bf9ec16c5d994bae3b3a732da3eb67cf4fa8": -0.27062911987304616,
+        "b6d1134cb03c855d246f916beaa2d3d01290cf47937a5176011ff39b850ec615": -0.7528106689453153,
+        "b92b499c9bf92327d5f3a44c9db49bde3400dcb1cfec48d6488831e2b304d0bb": -0.13193981170654467,
+        "ba55c875d20c34ee85ffc72264c4d77710852e5fb7d9ce4b9c26a8442850e98f": -1.3744261169433614,
+        "c076929db6501cf7ebe386c70e6d77ea3af844a745e794f2ec17c981c465a69b": -0.6479815292358424,
+        "c37109a55effe0000f8e40652ca935376e75bcb2a0b56de8eabd20a26e2a0f68": -0.150039253234862,
+        "c37726ce770ac50a2cf5c0f43022f0268e26da0d777cd8e3a3418c4eed03fd94": -0.4264348220825198,
+        "c455899acfc8816353a55fade692d19d9c2bff68c8615f852931d5754848db74": -0.24706218719482465,
+        "cbd44beb04f9c98f2d2c5affff89a6e0a72c25f1aa0c6f660fbd9e4d26702f8b": -1.330350189208982,
+        "cc08c0bdc34ddd2867705d0b17a86ec2a9d7c7926ce99070ed1fdc66a812de07": -0.6597953414916979,
+        "cd9c981eeb4a9091547af19181b382698e9d9eee0a838c7c9783a8a268af6aee": -0.7297526168823261,
+        "ceb252f5d4419510655cf9ed7afbf3e8e688825f798d80414c7715dc8ace153a": -1.024357185363769,
+        "d1b3a0b37acc72207295b05e8c359f8b43bf879eb882c60747cfc6d3c7d8efa3": -0.2632554626464838,
+        "d3812aad538261e7f73c75762ff55f23b468bcc76f376d52ac86ca6cf3c44b4b": 0.011879920959472656,
+        "d3af8212ae1600f078c4ac1ef3c9369a7f41ee9d005dbd0c545cf43fc35a9a23": -1.2655606079101567,
+        "d4fbeba0168af8fddb2fc695881787aedcd62f477c7dcec9ebca7b8594bbd95b": -0.2747670555114752,
+        "d8de66037bd03dd0d39d54f9978bac3318d912e30e22c21e1ada82a98ed48c53": -0.1603717803955078,
+        "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a": -0.4684055519104007,
+        "d9b6376623741313bf6da6bf4cdb9828be614a2ce9390ceb3f31cd535d661a75": -0.47828704833984403,
+        "d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b": -1.3325384140014656,
+        "dac9796dd69e1c25277e29d7e30af4f21e3b575d62a0a208c2b3d1211e2d5d77": -0.5669778823852525,
+        "dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751": -0.10353242874145607,
+        "ddfdcfdf02d53dd89a055cd9e1ed30272ab3f57c7560ac2c3761bb01d76a7882": -0.5872474288940452,
+        "ded5e4b46aedbef4cdb7bd1db7fc4cc5b00a9979ad6464bdadfab052cd64c101": -0.5445655822753892,
+        "df04f58064684c1a31aa0ffbbcf34199d01d0a0ff289588eb2d6c6cf50a3922c": -0.8016847229003901,
+        "df29c225863d0173e060b1f3fde4e6eb5a57a4e4edabd397026ba1a028aeb39e": -0.5277975082397468,
+        "df4f9d9a0adfc54c49607bc792be6ed6f751b67e37c588472ea58b0d898310dd": -0.9380464553833008,
+        "e5684b3292bfd77db297839fc37ee4cce7fd59775af1a6a4827e3b4f59c036d3": -0.4064134216308588,
+        "e78f8cebd2bd93d960bfaeac18fac0bb2524f15c44288903cd20b73e599e8a81": -0.5078501129150403,
+        "e8ce51b6abfe05bf8dca47e29c8be6c1e6de27a8c9fece7a121400b931b2ca0f": -0.6392864608764661,
+        "e9360e7a89bee835dc847cf8796093e634b759ff582558788dcfe8326f6e8901": -0.35346660614013814,
+        "eb4cf52988f805e6fce11d1b239fa9de32eb157364cff06ebac0aa50e0a46567": -0.5245121383666991,
+        "ec1e44d4dc0f8fa77610866495f9297a7f82158c43e1777668b84fd4b736c7bc": -0.7357077407836918,
+        "ec305787b70029b782c71c1bf296c3885c7c22619e5661bd40085533ddfee5e4": -0.7613471221923795,
+        "ed16328235c610f15405ff08711eaf15d88a0503884f3a9ccb5a0ee69cb4acb5": -0.6422363281250014,
+        "ef59aac437132bfc1dd45a7e1f8e4800978e7bb28bf98c4428d26fb3e1da3e90": -1.0242050552368198,
+        "f004c810d94bac93f527606a2ff859d646f99fcac0868c6c6905b29c718fa37b": -0.8944944763183571,
+        "f477ffc4b398bed8e0d921f0fba9825ca63f317381c535c84be23be991ae1d7a": -0.5681104278564497,
+        "f71ac346cd0fc4652a89afb37044887ec3907d37d01d1ceb0ad28e1a780d8e03": -1.0390699768066405,
+        "f7aaea9ac683bb1945cfeb1daa9abca3375249e0d19281a89a3f575040835464": -1.0276600265502935,
+        "fb2c0499c225d6124938cadcf0dc48cbb490551b8a69c98386491c1366163632": -0.5532664108276393,
+        "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9": 0.24723190307617315,
+        "ff592398657b3dfe94153332861985194a3e3c9d199c4a3a27a0ce4038e81ade": -0.6520818328857416
+      }
+    },
+    {
+      "label": "scene_latent_tuning_reimplemented_loop",
+      "reference_dir": "/home/jms/xveyan/4DGS/TokenGS/EXP_TokenGS/scene_latent_tuning_fp32_140scenes/reimplemented_loop",
+      "delta_definition": "this_run - reference",
+      "n_paired_scenes": 140,
+      "reference_restricted_to_this_run_scenes": false,
+      "all_frames": {
+        "psnr": {
+          "this_run_mean": 26.810063538415093,
+          "reference_mean": 27.399663656643458,
+          "delta_mean": -0.5896001182283676,
+          "delta_median": -0.5416496849060053,
+          "paired_delta_std": 0.3513184107492197,
+          "paired_delta_ci95": [
+            -0.6483061331405574,
+            -0.5308941033161777
+          ],
+          "scenes_this_run_better": 5,
+          "scenes_reference_better": 135,
+          "scenes_tied": 0
+        },
+        "ssim": {
+          "this_run_mean": 0.8539207499665874,
+          "reference_mean": 0.8683136905304023,
+          "delta_mean": -0.01439294056381497,
+          "delta_median": -0.012425982356071452,
+          "paired_delta_std": 0.009105288234605819,
+          "paired_delta_ci95": [
+            -0.015914452589730746,
+            -0.012871428537899193
+          ],
+          "scenes_this_run_better": 4,
+          "scenes_reference_better": 136,
+          "scenes_tied": 0
+        },
+        "lpips": {
+          "this_run_mean": 0.21530792344574415,
+          "reference_mean": 0.18312362588143774,
+          "delta_mean": 0.03218429756430643,
+          "delta_median": 0.031461684554815295,
+          "paired_delta_std": 0.00995360233168529,
+          "paired_delta_ci95": [
+            0.030521030542040865,
+            0.03384756458657199
+          ],
+          "scenes_this_run_better": 0,
+          "scenes_reference_better": 140,
+          "scenes_tied": 0
+        },
+        "edge_l1": {
+          "this_run_mean": 0.01908837219434125,
+          "reference_mean": 0.018318682484262223,
+          "delta_mean": 0.0007696897100790271,
+          "delta_median": 0.0006880753254517903,
+          "paired_delta_std": 0.0007735527624286432,
+          "paired_delta_ci95": [
+            0.0006404274835146526,
+            0.0008989519366434016
+          ],
+          "scenes_this_run_better": 17,
+          "scenes_reference_better": 123,
+          "scenes_tied": 0
+        },
+        "hf_ratio": {
+          "this_run_mean": 0.7672354387513227,
+          "reference_mean": 0.8524059716463088,
+          "delta_mean": -0.08517053289498602,
+          "delta_median": -0.0812827640771866,
+          "paired_delta_std": 0.033418802930863585,
+          "paired_delta_ci95": [
+            -0.0907548822577846,
+            -0.07958618353218745
+          ],
+          "scenes_this_run_better": 0,
+          "scenes_reference_better": 140,
+          "scenes_tied": 0
+        }
+      },
+      "novel_only": {
+        "psnr": {
+          "this_run_mean": 26.439238559425654,
+          "reference_mean": 26.84510743633493,
+          "delta_mean": -0.4058688769092808,
+          "delta_median": -0.3500002947720606,
+          "paired_delta_std": 0.4000775868016489,
+          "paired_delta_ci95": [
+            -0.4727226484685976,
+            -0.33901510534996404
+          ],
+          "scenes_this_run_better": 24,
+          "scenes_reference_better": 116,
+          "scenes_tied": 0
+        },
+        "ssim": {
+          "this_run_mean": 0.847330434064006,
+          "reference_mean": 0.859648802310422,
+          "delta_mean": -0.012318368246415993,
+          "delta_median": -0.010541454634883152,
+          "paired_delta_std": 0.008876223447837122,
+          "paired_delta_ci95": [
+            -0.01380160308452592,
+            -0.010835133408306066
+          ],
+          "scenes_this_run_better": 5,
+          "scenes_reference_better": 135,
+          "scenes_tied": 0
+        },
+        "lpips": {
+          "this_run_mean": 0.21917265312770357,
+          "reference_mean": 0.18828033711882186,
+          "delta_mean": 0.030892316008881704,
+          "delta_median": 0.029829011468047437,
+          "paired_delta_std": 0.009822868137352274,
+          "paired_delta_ci95": [
+            0.029250894934130477,
+            0.032533737083632934
+          ],
+          "scenes_this_run_better": 0,
+          "scenes_reference_better": 140,
+          "scenes_tied": 0
+        },
+        "edge_l1": {
+          "this_run_mean": 0.019374688301619463,
+          "reference_mean": 0.01875435916461994,
+          "delta_mean": 0.0006203291369995175,
+          "delta_median": 0.0005909780421378937,
+          "paired_delta_std": 0.0008505170905213473,
+          "paired_delta_ci95": [
+            0.0004782060160029915,
+            0.0007624522579960435
+          ],
+          "scenes_this_run_better": 24,
+          "scenes_reference_better": 116,
+          "scenes_tied": 0
+        },
+        "hf_ratio": {
+          "this_run_mean": 0.7657882602135468,
+          "reference_mean": 0.8512776901679381,
+          "delta_mean": -0.08548942995439102,
+          "delta_median": -0.08176478269425302,
+          "paired_delta_std": 0.0336478429274531,
+          "paired_delta_ci95": [
+            -0.09111205236250651,
+            -0.07986680754627552
+          ],
+          "scenes_this_run_better": 0,
+          "scenes_reference_better": 140,
+          "scenes_tied": 0
+        }
+      },
+      "geometry": {
+        "sw_loss": {
+          "this_run_mean": 0.7119185958589827,
+          "reference_mean": 0.7119156198842185,
+          "delta_mean": 2.9759747641427178e-06,
+          "delta_median": 0.00017336010932922363,
+          "paired_delta_std": 0.004296683941486906,
+          "paired_delta_ci95": [
+            -0.0007150085766402911,
+            0.0007209605261685765
+          ]
+        },
+        "packing_loss": {
+          "this_run_mean": 11.325787625994002,
+          "reference_mean": 11.719449724469866,
+          "delta_mean": -0.393662098475865,
+          "delta_median": -0.31280946731567383,
+          "paired_delta_std": 0.42416984470257063,
+          "paired_delta_ci95": [
+            -0.4645417349153728,
+            -0.32278246203635713
+          ]
+        },
+        "inter_loss": {
+          "this_run_mean": 1.4689155480691365,
+          "reference_mean": 1.686319888489587,
+          "delta_mean": -0.21740434042045048,
+          "delta_median": -0.214607834815979,
+          "paired_delta_std": 0.049151185545804506,
+          "paired_delta_ci95": [
+            -0.22561760264445482,
+            -0.20919107819644614
+          ]
+        },
+        "packing_ratio": {
+          "this_run_mean": 649.5028132847377,
+          "reference_mean": 703.9064480372838,
+          "delta_mean": -54.40363475254604,
+          "delta_median": -22.26439666748047,
+          "paired_delta_std": 95.70871600816272,
+          "paired_delta_ci95": [
+            -70.39675420569222,
+            -38.410515299399854
+          ]
+        },
+        "packing_target": {
+          "this_run_mean": 6.094581174850464,
+          "reference_mean": 5.852153164999826,
+          "delta_mean": 0.24242800985063825,
+          "delta_median": 0.22789716720581055,
+          "paired_delta_std": 0.07927889823118968,
+          "paired_delta_ci95": [
+            0.22918034608073562,
+            0.2556756736205409
+          ]
+        },
+        "effective_children": {
+          "this_run_mean": 15.41094492503575,
+          "reference_mean": 14.53444104875837,
+          "delta_mean": 0.8765038762773786,
+          "delta_median": 0.8221244812011719,
+          "paired_delta_std": 0.2956600375087393,
+          "paired_delta_ci95": [
+            0.8270984877755031,
+            0.9259092647792541
+          ]
+        },
+        "inter_distance": {
+          "this_run_mean": 0.5892237884657724,
+          "reference_mean": 0.5225784503987857,
+          "delta_mean": 0.06664533806698662,
+          "delta_median": 0.058830782771110535,
+          "paired_delta_std": 0.03148309660446262,
+          "paired_delta_ci95": [
+            0.061384449134915184,
+            0.07190622699905806
+          ]
+        },
+        "inter_distance_median": {
+          "this_run_mean": 0.30142083529915126,
+          "reference_mean": 0.2291295424103737,
+          "delta_mean": 0.0722912928887776,
+          "delta_median": 0.06798634678125381,
+          "paired_delta_std": 0.02805438921750085,
+          "paired_delta_ci95": [
+            0.06760334787546991,
+            0.07697923790208529
+          ]
+        },
+        "inter_too_close": {
+          "this_run_mean": 0.8968658447265625,
+          "reference_mean": 0.9077061244419643,
+          "delta_mean": -0.010840279715401786,
+          "delta_median": -0.0072021484375,
+          "paired_delta_std": 0.011351416928146795,
+          "paired_delta_ci95": [
+            -0.012737124375597979,
+            -0.008943435055205593
+          ]
+        },
+        "inter_too_far": {
+          "this_run_mean": 0.0413543701171875,
+          "reference_mean": 0.03725193568638393,
+          "delta_mean": 0.004102434430803571,
+          "delta_median": 0.001861572265625,
+          "paired_delta_std": 0.006463206283555541,
+          "paired_delta_ci95": [
+            0.0030224196269855686,
+            0.0051824492346215735
+          ]
+        },
+        "active_slot_ratio": {
+          "this_run_mean": 1.0,
+          "reference_mean": 1.0,
+          "delta_mean": 0.0,
+          "delta_median": 0.0,
+          "paired_delta_std": 0.0,
+          "paired_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "needle": {
+        "alive_ratio": {
+          "this_run_mean": 0.7158609390258789,
+          "reference_mean": 0.7143277304513114,
+          "delta_mean": 0.0015332085745675223,
+          "delta_median": 0.001094818115234375,
+          "paired_delta_std": 0.0023713822678645114,
+          "paired_delta_ci95": [
+            0.0011369458154286865,
+            0.0019294713337063582
+          ]
+        },
+        "opacity_mean": {
+          "this_run_mean": 0.0632829302655799,
+          "reference_mean": 0.07416074379746403,
+          "delta_mean": -0.010877813531884125,
+          "delta_median": -0.00949510931968689,
+          "paired_delta_std": 0.005932797651076379,
+          "paired_delta_ci95": [
+            -0.011869195983581809,
+            -0.009886431080186442
+          ]
+        },
+        "aniso_p50_weighted": {
+          "this_run_mean": 27.771210105078563,
+          "reference_mean": 28.820705699920655,
+          "delta_mean": -1.0494955948420934,
+          "delta_median": -1.0126104354858398,
+          "paired_delta_std": 1.0969615134841002,
+          "paired_delta_ci95": [
+            -1.2328000759006312,
+            -0.8661911137835555
+          ]
+        },
+        "aniso_p50_unweighted": {
+          "this_run_mean": 80.96910899026054,
+          "reference_mean": 83.35208552224296,
+          "delta_mean": -2.382976531982422,
+          "delta_median": -2.0501670837402344,
+          "paired_delta_std": 2.327069646353846,
+          "paired_delta_ci95": [
+            -2.771834562705074,
+            -1.99411850125977
+          ]
+        },
+        "cos_long_axis_ray_p50_weighted": {
+          "this_run_mean": 0.733563049350466,
+          "reference_mean": 0.7121421154056277,
+          "delta_mean": 0.021420933944838388,
+          "delta_median": 0.02048012614250183,
+          "paired_delta_std": 0.011665174283147306,
+          "paired_delta_ci95": [
+            0.01947165979789202,
+            0.023370208091784757
+          ]
+        },
+        "long_axis_along_ray_gt0.9_weighted": {
+          "this_run_mean": 0.2763481657086038,
+          "reference_mean": 0.26524083403645493,
+          "delta_mean": 0.011107331672148873,
+          "delta_median": 0.011659213931268952,
+          "paired_delta_std": 0.008938700910114474,
+          "paired_delta_ci95": [
+            0.009613656724099053,
+            0.012601006620198692
+          ]
+        },
+        "outside_all_input_frustums_weighted": {
+          "this_run_mean": 0.015010808796687489,
+          "reference_mean": 0.01281489860776486,
+          "delta_mean": 0.0021959101889226285,
+          "delta_median": 0.0017673638578507983,
+          "paired_delta_std": 0.001509402174830378,
+          "paired_delta_ci95": [
+            0.001943686041616734,
+            0.002448134336228523
+          ]
+        }
+      },
+      "paired_psnr_deltas_by_scene": {
+        "032dee9fb0a8bc1b90871dc5fe950080d0bcd3caf166447f44e60ca50ac04ec7": -0.8836415863037104,
+        "0569e83fdc248a51fc0ab082ce5e2baff15755c53c207f545e6d02d91f01d166": -0.8145817565917994,
+        "06da796666297fe4c683c231edf56ec00148a6a52ab5bb159fe1be31f53a58df": -0.3366876983642584,
+        "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561": 0.18368427276611143,
+        "07d9f9724ca854fae07cb4c57d7ea22bf667d5decd4058f547728922f909956b": -1.2518313980102604,
+        "0853979305f7ecb80bd8fc2c8df916410d471ef04ed5f1a64e9651baa41d7695": -0.7628173446655282,
+        "093ef327b4e4f9d4ee52c02a354a53558a8652157fb0d58f3b4a708734afb334": -0.8144298553466776,
+        "0a1b7c20a92c43c6b8954b1ac909fb2f0fa8b2997b80604bc8bbec80a1cb2da3": -1.3934367370605472,
+        "0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6": -0.45095405578613423,
+        "0bfdd020cf475b9c68e4b469d1d1a2d0cad303eefe8b78fb2307855afdaac8be": -0.4865357589721704,
+        "119fd56d3797e2d349ca64ddcc5851463cd13b5974b5b2e4566ed5cf7e02e6c1": -0.18208381652832273,
+        "1264931635e127fb905c8953cbc2deadd0c763e633af7fbd9405a61ca849710c": -0.1700981903076162,
+        "14eb48a50e37df548894ab6d8cd628a21dae14bbe6c462e894616fc5962e6c49": -0.6246551895141614,
+        "15ff83e2531668d27c92091c97d31401ce323e24ee7c844cb32d5109ab9335f7": -0.21577342987060533,
+        "165f5af8bfe32f70595a1c9393a6e442acf7af019998275144f605b89a306557": -0.17333835601806769,
+        "183dd248f6a86e07c5adf9de8ee2d0abe45b1216331c03678e89634c2e9b1c7f": -0.493468093872071,
+        "1ba74c22670ad047981441581d00f26f4a148d1010bcac7468c615adf5fa4d5d": -0.7647768402099615,
+        "1d6a9ed47cce39fd1c4d18f776bcc97e507b81bde921ca596bd91b0b02b5e414": -0.12180568695068317,
+        "1da888bdedfc9629c0fa9f82cf3f5d96f8103baee0ff64d9311aea1224a9f2ae": -1.3484024429321302,
+        "1de58be515696102c364b767f296600ffff853d4145a60dd30ece9d935317654": -1.4717840194702134,
+        "2385549d398bdfb55ed17b547c9846f0d01d571b4e050f90df707b577084fb55": -1.0432403564453132,
+        "26fd23358fa11fff0fb3180ef0b65591b486e20dcf753ce4a7aae49a37e370c7": -0.49686382293701215,
+        "280abf7bd93b81b077af1db638229dbb09869052fa0b7b57c81c94d2db893829": -0.5853229141235374,
+        "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a": -0.2319470405578592,
+        "2991a75d1f0fb2b7a891d424fc2459bb954b61599b52e74a056a7acfb2998b77": -0.4465101623535155,
+        "2b65ba886efac7af6253fce68ae9284bf4d4db019e17c47f3e853361acbdb066": -0.6499855422973617,
+        "2beaca318994c25409dcbb6d0bdd96c3620f2f18aec44ea3f20edd302f18ca78": -0.8120067596435554,
+        "2cbfe28643b6636f9c70813cae7625aa858a352109493ac70fb429ce94dd55b3": -0.8470698547363256,
+        "2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd": -0.6547491073608391,
+        "32c2b92fac40c698fa92de008a9aad0857168d255363a850a89de88b5b3ec42e": -0.8686397171020488,
+        "341b4ff3dfd3d377d7167bd81f443bedafbff003bf04881b99760fc0aeb69510": -0.8556172943115214,
+        "35317e621976e87f0c143e66fc61fb8cddb4ff134304da7a00e32ac1983105b4": -0.38557785034180014,
+        "35872363e17af5d173b6a0b09fcf5de94627ad5dc5f8a9ad4c579f3e70b4797a": -0.3272962951660148,
+        "374ffd0c5ff8e544f588f1da3ce0d5b69dc39ff3af95d7ccec480fe5e533c45e": -1.0013460540771462,
+        "387eeb925ba47af5db9ce6102aaf6b07e6d3573b7e7568dda4cef22d5ab1342f": -0.6065259552001976,
+        "389a460ca1995e0658e85fe8e6b520b4e88b370cd6710dfe728b1564bba31aee": -0.3784691238403326,
+        "3b16a10ec9b4ab71580958b634485a979ffd6df0d368dbbf6fc1c5ffacf46b7a": -0.37019355773925966,
+        "3b7529dcccf7097cba31a989536035595e214b0f3775867fd3a62eb186870090": -0.8304248428344749,
+        "3bb3bb4d3e871d79eb71946cbab1e3afc7a8e33a661153033f32deb3e23d2e52": -0.5740495300292991,
+        "3bb894d1933f3081134ad2d40e54de5f0636bd8b502b0a8561873bb63b0dce85": -0.872951698303222,
+        "41036716da7efda334c1d434c4141d15642e0e02f881a01b6c8c36f8bea64c45": -0.4563683700561505,
+        "444da1b4a3f1ca019d4c9c1b405a579427746ccc96cab6dab7dcba5cb4fc998c": -0.3514157485961924,
+        "457e9a1ae777b0c72be723aaeec971b39cc6d5d413d922f981ec9785395f7ca9": -0.8928850936889638,
+        "484c0aca40c1087f196d2caf3c8cb463864c08e60b98326ca02eb6dae8ce4984": -0.5101671600341788,
+        "493816813d2d6d248eb3c2b0b77b63e54235266e9a06e270fd0d282f13960493": -0.46607074737548615,
+        "4ae797d07b6d1644c9db6919c8cc8c0d28d72be45108ac7a3abf8dc21b599d83": -0.672147064208982,
+        "4ff8650b5c1140e98d957fbd1abbe2cfbbb416b37cb9f06f7f376956703801bb": -0.7510292053222685,
+        "50c46cf8b8b22c8d2ffdef8964b05ddbceaef312c9a9ff331d1ecebfd223f72a": -0.19248561859130575,
+        "513e4ea2e8477b06f2b32417d5c243aec71d491cb0596a60e9fe304c635f20a1": -0.8133292770385729,
+        "54bf355ca7e08ed1bc86f5772e564ac0f92981ca25dab24d86b694e915fc4c43": -0.8504638290405282,
+        "56452d9cd9e2e034764132a57058517ab085e1352f9664d2d1e10e98741334fc": -0.5427566909790045,
+        "565553aa894be621e8b4773cac288e60ad0c2cf7edb621be62b348c9a0f78380": -0.3615081405639664,
+        "599ca3e04cae3ec83affc426af7d0d7ab36eb91cd8e539edbc13070a4d455792": -0.28057495117187514,
+        "5a27c00f525f5484b7aa0d0107051253bf7bb395bde0b3a4486ff8c52fb4965e": -0.9064295578002941,
+        "5a69d1027b477be4d2933b765723d57b272e0ace96be7885306464d54aa2c038": 0.011717262268067685,
+        "5c3af581028068a3c402c7cbe16ecf9471ddf2897c34ab634b7b1b6cf81aba00": -1.0060781097412104,
+        "5c8dafad7d782c76ffad8c14e9e1244ce2b83aa12324c54a3cc10176964acf04": -0.4375533676147434,
+        "5f0041e53d59d67c3ca25db97b269db183a532c4566a6bc46ca0e69cfa4234ad": -1.02297134399414,
+        "63798f5c6fbfcb4eb686268248b8ecbc8d87d920b2bcce967eeaedfd3b3b6d82": -0.7220759582519563,
+        "669c36225b273e22ce08364f166dce910b708d7abd89e58463a15d2790b534d5": -0.7507447814941415,
+        "66fd66cbed40a2d11ecd17ae6d6d60cd60d476616864ecdd351fe69e644f30a1": -0.6061473464965808,
+        "6d221625614d0515fa44d59a8797a49b64f86bc775e66be22f07a66aa0a0cb3a": -0.14622859954834055,
+        "6d81c5ab0d480fd43d78b75ff372a8113ad38e2c03f1d69627c009883054d4c2": -0.8898028564453107,
+        "6e11e7f4fea305c7c4658d2c1f8df29e6f299330860cf48ffbf1c5ff8b96c0a8": -0.25597385406494055,
+        "70eac6ff18a1daae4eeccc5eb18723eaf7e029a77e79c79d9573f7bac59ba92b": -0.41136100769042727,
+        "71b2dc8a2aa553da09b8b94b9f0d5e8abcca307def74d26301616ee238464d46": -1.373591842651365,
+        "75fbbe467353cfdeb93bc1872144855576797be83a0c71c51155ee6b355d6d5e": -0.4156249618530268,
+        "7705a2edd022de9da3f8cead677287645986e982d9247a21e1992859a59f8335": -0.49927276611328253,
+        "7a9f97660be8f2421b37dd413c898360532f17c6447c11515e8aded2d80eb99d": -0.5876485824584989,
+        "7da3db99059a436adf537bc23309a6a4db9e011696d086f3a64037f7497d9df7": -0.6021310043334971,
+        "800cf88687a79c232700454c2f5a402e771bc7157037a17b0ce93da365b25575": -0.1691447067260725,
+        "8324b3ca22085040c2a0ecb7284e0cdf776b1f846b73a7c0df893587cb4a45f8": -0.3549124526977536,
+        "85cd0e92110bcd35e826cbff16bb0e85d8117717adaf36f0698920f0fb9b2cfd": -0.3431500244140615,
+        "8b9fb9d9f10e8c64d5034be69809465753b8ba88ef12da82afd47d38ee789934": -0.2926504898071265,
+        "8cb2e97d26a639f05a571476240a8fa86988e6853f0f13cc05830d1578002aad": -1.137357559204105,
+        "8fdc5130f0731360cc053f59049bfe6db509567457c5471c970292966cb34f17": -0.15490978240967124,
+        "90cb7ef95384138c2370f13a9ae1698fb1b5bdd68e8b3d01f8e53d38933a4b92": -0.38989780426025433,
+        "917e9c8985d353b0ee4c281f11fa84eb8550814562670cbb82cd0ec9c1194fe7": -1.0121077728271466,
+        "918c8dad730c3b804306c5da8486124be4aa0612e85fb825338fd350c912e1b0": -0.12946029663086023,
+        "91afb9910b042f7185c2b8e4b6b24b5785dae4542617b3f8005b5492f6d123f7": -0.4735066986084,
+        "946f49be73928469000baa5ca04d2573137c5ee6a66362bcf8d130354dca8924": -0.4899724197387698,
+        "9641a1ed7963ce5ca734cff3e6ccea3dfa8bcb0b0a3ff78f65d32a080de2d71e": -0.366852951049804,
+        "9c8c0e0fadd97abf60088f667eba058ef077a71a8c0f5a4eff2782aa97f1ceb8": -0.007158966064455541,
+        "9cbc5548643ca9cfe797f871bac58bccd02f0510c49b7cb3697b38dfd780a508": -0.8866199493408189,
+        "9e9a89ae6fed06d6e2f4749b4b0059f35ca97f848cedc4a14345999e746f7884": -0.42155193328857266,
+        "9fb0588ff045ec64119c5bc91b44a4b7400e5fae5a17e67762b29e6855b57118": -0.47641986846923956,
+        "a17a984ca90a9b5840fdf85b15104b0d18e25975981c1aa90fcdfd6eeeb285f3": -1.0212678909301758,
+        "a401469cb0fa576b93e836a4a6d712394f1a55a0a53a42250286980bd078e669": -0.3154519653320307,
+        "a62c330f5403e2e41a82a74c4e865b705c5706843b992fae2fe2e538b122d984": -0.47957752227783246,
+        "a62f9a1c6362e7c8a3440261ea0921a0a4b60cf5822bd19579836694f26b3abd": -0.7449547958374048,
+        "a726c1112ad026efc92f59f196c0698e67abd12a04135a7ff6349b1d31b089eb": 0.10128150939941705,
+        "adb95f29c15b8a89e40c17d10596679be09d7719c6f08a453facd506d056ea8b": -0.3618386840820307,
+        "adf35184a12d4cfa3f4248b87aa5adb4f39f179df460d6d76136e13d37299a2a": -1.164535827636719,
+        "af0d7039e64af3959210c235e59425896ac064f4e0f721c437bbd2cf1d8ea910": -0.2054956245422339,
+        "b2076bc7231bac445b1a3d0015a410675a3222f25cc219e8178a62a0dd4ac63d": -0.5267238998413077,
+        "b3bf9079b442c681749f6bd95cfb0659c6d844f2228b2f4fa4b602a0e3627b9a": -0.3537257003784191,
+        "b4f53094fd31dcc2de1c1d1fdfeffac5259e9bdf39d77b552ff948e4bdf1fd8e": -0.9443732452392588,
+        "b5faa2a8ce980030125717352086bf9ec16c5d994bae3b3a732da3eb67cf4fa8": -0.2661318969726558,
+        "b6d1134cb03c855d246f916beaa2d3d01290cf47937a5176011ff39b850ec615": -0.7538890457153329,
+        "b92b499c9bf92327d5f3a44c9db49bde3400dcb1cfec48d6488831e2b304d0bb": -0.13393970489502038,
+        "ba55c875d20c34ee85ffc72264c4d77710852e5fb7d9ce4b9c26a8442850e98f": -1.3691816329956055,
+        "c076929db6501cf7ebe386c70e6d77ea3af844a745e794f2ec17c981c465a69b": -0.6502933502197266,
+        "c37109a55effe0000f8e40652ca935376e75bcb2a0b56de8eabd20a26e2a0f68": -0.16002859115600288,
+        "c37726ce770ac50a2cf5c0f43022f0268e26da0d777cd8e3a3418c4eed03fd94": -0.44571281433105625,
+        "c455899acfc8816353a55fade692d19d9c2bff68c8615f852931d5754848db74": -0.24826702117919908,
+        "cbd44beb04f9c98f2d2c5affff89a6e0a72c25f1aa0c6f660fbd9e4d26702f8b": -1.3318386459350577,
+        "cc08c0bdc34ddd2867705d0b17a86ec2a9d7c7926ce99070ed1fdc66a812de07": -0.6582668304443366,
+        "cd9c981eeb4a9091547af19181b382698e9d9eee0a838c7c9783a8a268af6aee": -0.726118431091308,
+        "ceb252f5d4419510655cf9ed7afbf3e8e688825f798d80414c7715dc8ace153a": -1.0283331298828102,
+        "d1b3a0b37acc72207295b05e8c359f8b43bf879eb882c60747cfc6d3c7d8efa3": -0.2781371688842782,
+        "d3812aad538261e7f73c75762ff55f23b468bcc76f376d52ac86ca6cf3c44b4b": 0.004382247924805682,
+        "d3af8212ae1600f078c4ac1ef3c9369a7f41ee9d005dbd0c545cf43fc35a9a23": -1.2813584136962923,
+        "d4fbeba0168af8fddb2fc695881787aedcd62f477c7dcec9ebca7b8594bbd95b": -0.2750847434997574,
+        "d8de66037bd03dd0d39d54f9978bac3318d912e30e22c21e1ada82a98ed48c53": -0.17118896484375057,
+        "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a": -0.4590188217163096,
+        "d9b6376623741313bf6da6bf4cdb9828be614a2ce9390ceb3f31cd535d661a75": -0.49054458618164176,
+        "d9f4c746e6fa456323601b8ca05357c5585d34663c765107d901b4fd929d784b": -1.3417979812622072,
+        "dac9796dd69e1c25277e29d7e30af4f21e3b575d62a0a208c2b3d1211e2d5d77": -0.552948417663579,
+        "dafa9c7cbda9d1ddaa8a2b51fc8c54f4eb44161f5e5c53685dc744580ca77751": -0.10400312423706026,
+        "ddfdcfdf02d53dd89a055cd9e1ed30272ab3f57c7560ac2c3761bb01d76a7882": -0.5922911453247082,
+        "ded5e4b46aedbef4cdb7bd1db7fc4cc5b00a9979ad6464bdadfab052cd64c101": -0.5405426788330061,
+        "df04f58064684c1a31aa0ffbbcf34199d01d0a0ff289588eb2d6c6cf50a3922c": -0.8107399749755864,
+        "df29c225863d0173e060b1f3fde4e6eb5a57a4e4edabd397026ba1a028aeb39e": -0.5339049911499032,
+        "df4f9d9a0adfc54c49607bc792be6ed6f751b67e37c588472ea58b0d898310dd": -0.940171012878416,
+        "e5684b3292bfd77db297839fc37ee4cce7fd59775af1a6a4827e3b4f59c036d3": -0.4055274963378892,
+        "e78f8cebd2bd93d960bfaeac18fac0bb2524f15c44288903cd20b73e599e8a81": -0.5069335556030268,
+        "e8ce51b6abfe05bf8dca47e29c8be6c1e6de27a8c9fece7a121400b931b2ca0f": -0.639668998718264,
+        "e9360e7a89bee835dc847cf8796093e634b759ff582558788dcfe8326f6e8901": -0.3459533309936518,
+        "eb4cf52988f805e6fce11d1b239fa9de32eb157364cff06ebac0aa50e0a46567": -0.5200790405273423,
+        "ec1e44d4dc0f8fa77610866495f9297a7f82158c43e1777668b84fd4b736c7bc": -0.7303601074218768,
+        "ec305787b70029b782c71c1bf296c3885c7c22619e5661bd40085533ddfee5e4": -0.7630681800842254,
+        "ed16328235c610f15405ff08711eaf15d88a0503884f3a9ccb5a0ee69cb4acb5": -0.6423963546752915,
+        "ef59aac437132bfc1dd45a7e1f8e4800978e7bb28bf98c4428d26fb3e1da3e90": -1.014198341369628,
+        "f004c810d94bac93f527606a2ff859d646f99fcac0868c6c6905b29c718fa37b": -0.9152010345459018,
+        "f477ffc4b398bed8e0d921f0fba9825ca63f317381c535c84be23be991ae1d7a": -0.5750352859497063,
+        "f71ac346cd0fc4652a89afb37044887ec3907d37d01d1ceb0ad28e1a780d8e03": -1.0359425735473629,
+        "f7aaea9ac683bb1945cfeb1daa9abca3375249e0d19281a89a3f575040835464": -1.0305599975585942,
+        "fb2c0499c225d6124938cadcf0dc48cbb490551b8a69c98386491c1366163632": -0.5682757568359378,
+        "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9": 0.24754159927368136,
+        "ff592398657b3dfe94153332861985194a3e3c9d199c4a3a27a0ce4038e81ade": -0.657343864440918
+      }
+    }
+  ],
+  "timing": {
+    "evaluation_loop_seconds": 650.602249241434,
+    "scene_total_seconds_sum": 645.867314921692,
+    "mean_scene_total_seconds": 4.613337963726371,
+    "total_script_seconds": 653.5778568256646
+  }
+}

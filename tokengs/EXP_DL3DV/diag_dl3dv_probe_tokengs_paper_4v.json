@@ -1,0 +1,80 @@
+{
+  "model": "tokengs_paper_4v",
+  "definitions": "frozen model; features of COLMAP-valid alive tokens (<=1024 per scene); target = attention-weighted COLMAP centroid of the token's attention-90% patch set; train on the 70 even scenes, test on the 70 odd scenes; errors relative to target depth from the dominant camera",
+  "gpu": "1",
+  "train_tokens": 71197,
+  "test_tokens": 70883,
+  "official_output_gaussian_centre": {
+    "e_depth_rel": {
+      "p50": 0.1144,
+      "p90": 0.4368
+    },
+    "e_3d_rel": {
+      "p50": 0.1691,
+      "p90": 0.4739
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.2125,
+      "p90": 0.9042
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1031,
+      "p90": 0.4029
+    }
+  },
+  "linear_ridge_h": {
+    "lambda": 1000.0,
+    "e_depth_rel": {
+      "p50": 0.167,
+      "p90": 0.5138
+    },
+    "e_3d_rel": {
+      "p50": 0.2718,
+      "p90": 0.6954
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.2493,
+      "p90": 1.1834
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.1586,
+      "p90": 0.468
+    }
+  },
+  "mlp_h": {
+    "e_depth_rel": {
+      "p50": 0.0886,
+      "p90": 0.2928
+    },
+    "e_3d_rel": {
+      "p50": 0.1186,
+      "p90": 0.3239
+    },
+    "e_depth_rel_1view": {
+      "p50": 0.1619,
+      "p90": 0.5577
+    },
+    "e_depth_rel_4plus_views": {
+      "p50": 0.0813,
+      "p90": 0.2698
+    },
+    "train_fit": {
+      "e_depth_rel": {
+        "p50": 0.0102,
+        "p90": 0.0535
+      },
+      "e_3d_rel": {
+        "p50": 0.0216,
+        "p90": 0.0712
+      },
+      "e_depth_rel_1view": {
+        "p50": 0.0121,
+        "p90": 0.082
+      },
+      "e_depth_rel_4plus_views": {
+        "p50": 0.0097,
+        "p90": 0.0508
+      }
+    }
+  }
+}

@@ -1,0 +1,1463 @@
+=== DA3 occupancy started 2026-11-07T15:15:58+08:00; GPU=1
+Command: CUDA_VISIBLE_DEVICES=1 python -u scripts/check_da3_occupancy.py --output EXP/da3_occupancy_10cm --labels /mnt/disk/xveyan/workspace_scannetpp/geometrygs_grid_occupancy_10cm --workspace /mnt/disk/xveyan/workspace_scannetpp/geometrygs_da3_occupancy_10cm --demo-scene fb5a96b1a2
+[97m[INFO ] using SwiGLU layer as FFN[0m
+[93m[WARN ] Dependency 'e3nn' not found. Required for rotating the camera space SH coeff[0m
+Loading weights from local directory
+[97m[INFO ] Processed Images Done taking 0.035181283950805664 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 1.1514503955841064 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.004999399185180664 seconds[0m
+[1/50] 7b6477cb95 (da3_maybe_seen) 518x896 1.4s | depth |err|<10cm 0.958 (oracle 0.958, scale x0.974) | cells TP/FP/FN 4757/4555/1381 IoU 0.445
+[97m[INFO ] Processed Images Done taking 0.03355050086975098 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8786177635192871 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.001771688461303711 seconds[0m
+[2/50] c50d2d1d42 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.633 (oracle 0.923, scale x0.936) | cells TP/FP/FN 3350/9275/4115 IoU 0.200
+[97m[INFO ] Processed Images Done taking 0.02830791473388672 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8774681091308594 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007696151733398438 seconds[0m
+[3/50] cc5237fd77 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.931 (oracle 0.977, scale x1.040) | cells TP/FP/FN 1262/1114/799 IoU 0.397
+[97m[INFO ] Processed Images Done taking 0.027183055877685547 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8780536651611328 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007698535919189453 seconds[0m
+[4/50] acd95847c5 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.723 (oracle 0.828, scale x0.967) | cells TP/FP/FN 1948/3272/1544 IoU 0.288
+[97m[INFO ] Processed Images Done taking 0.0240478515625 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8785629272460938 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007722377777099609 seconds[0m
+[5/50] fb5a96b1a2 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.762 (oracle 0.852, scale x1.016) | cells TP/FP/FN 4361/6350/2434 IoU 0.332
+[97m[INFO ] Processed Images Done taking 0.0313568115234375 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.878983736038208 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007781982421875 seconds[0m
+[6/50] a24f64f7fb (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.854 (oracle 0.900, scale x1.015) | cells TP/FP/FN 1508/1563/1272 IoU 0.347
+[97m[INFO ] Processed Images Done taking 0.03262209892272949 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8792755603790283 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007655620574951172 seconds[0m
+[7/50] 1ada7a0617 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.942 (oracle 0.941, scale x0.999) | cells TP/FP/FN 7340/5795/1529 IoU 0.501
+[97m[INFO ] Processed Images Done taking 0.026848316192626953 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8801727294921875 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0008199214935302734 seconds[0m
+[8/50] 5eb31827b7 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.418 (oracle 0.959, scale x0.911) | cells TP/FP/FN 1972/7079/4539 IoU 0.145
+[97m[INFO ] Processed Images Done taking 0.03022599220275879 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8799755573272705 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007648468017578125 seconds[0m
+[9/50] 3e8bba0176 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.962 (oracle 0.965, scale x1.017) | cells TP/FP/FN 3446/3090/1129 IoU 0.450
+[97m[INFO ] Processed Images Done taking 0.02879047393798828 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8802316188812256 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007741451263427734 seconds[0m
+[10/50] 3f15a9266d (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.000 (oracle 0.992, scale x0.687) | cells TP/FP/FN 17/2088/2439 IoU 0.004
+[97m[INFO ] Processed Images Done taking 0.029059410095214844 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8808169364929199 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007739067077636719 seconds[0m
+[11/50] 21d970d8de (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.924 (oracle 0.923, scale x0.994) | cells TP/FP/FN 17821/17723/4087 IoU 0.450
+[97m[INFO ] Processed Images Done taking 0.03383064270019531 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8802201747894287 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0008480548858642578 seconds[0m
+[12/50] 5748ce6f01 (da3_maybe_seen) 518x896 1.0s | depth |err|<10cm 0.783 (oracle 0.930, scale x1.044) | cells TP/FP/FN 1406/2339/1270 IoU 0.280
+[97m[INFO ] Processed Images Done taking 0.03014993667602539 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.880474328994751 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007898807525634766 seconds[0m
+[13/50] c4c04e6d6c (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.847 (oracle 0.873, scale x0.990) | cells TP/FP/FN 14489/20471/4485 IoU 0.367
+[97m[INFO ] Processed Images Done taking 0.026166200637817383 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8801693916320801 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0011756420135498047 seconds[0m
+[14/50] 7831862f02 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.940 (oracle 0.965, scale x1.007) | cells TP/FP/FN 5750/3942/1918 IoU 0.495
+[97m[INFO ] Processed Images Done taking 0.027318716049194336 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8800585269927979 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007634162902832031 seconds[0m
+[15/50] bde1e479ad (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.694 (oracle 0.895, scale x0.973) | cells TP/FP/FN 14030/22029/9946 IoU 0.305
+[97m[INFO ] Processed Images Done taking 0.033931732177734375 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8799076080322266 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.001577615737915039 seconds[0m
+[16/50] 38d58a7a31 (da3_held_out) 518x896 1.0s | depth |err|<10cm 0.898 (oracle 0.898, scale x0.996) | cells TP/FP/FN 12207/17880/4628 IoU 0.352
+[97m[INFO ] Processed Images Done taking 0.031709909439086914 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.879868745803833 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0015287399291992188 seconds[0m
+[17/50] 5ee7c22ba0 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.257 (oracle 0.970, scale x0.890) | cells TP/FP/FN 572/2541/1472 IoU 0.125
+[97m[INFO ] Processed Images Done taking 0.03219246864318848 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8805685043334961 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007750988006591797 seconds[0m
+[18/50] f9f95681fd (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.996 (oracle 0.996, scale x0.978) | cells TP/FP/FN 768/534/231 IoU 0.501
+[97m[INFO ] Processed Images Done taking 0.023333311080932617 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8817532062530518 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007712841033935547 seconds[0m
+[19/50] 3864514494 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.939 (oracle 0.960, scale x1.019) | cells TP/FP/FN 3920/2148/1478 IoU 0.519
+[97m[INFO ] Processed Images Done taking 0.033135414123535156 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8815231323242188 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007736682891845703 seconds[0m
+[20/50] 40aec5fffa (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.849 (oracle 0.964, scale x0.968) | cells TP/FP/FN 3296/2965/1255 IoU 0.439
+[97m[INFO ] Processed Images Done taking 0.02422952651977539 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8816802501678467 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007648468017578125 seconds[0m
+[21/50] 13c3e046d7 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.001 (oracle 0.784, scale x0.531) | cells TP/FP/FN 599/15925/7042 IoU 0.025
+[97m[INFO ] Processed Images Done taking 0.02672433853149414 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8815348148345947 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007901191711425781 seconds[0m
+[22/50] e398684d27 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.911 (oracle 0.914, scale x1.004) | cells TP/FP/FN 2874/2886/1335 IoU 0.405
+[97m[INFO ] Processed Images Done taking 0.028371810913085938 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8820197582244873 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007603168487548828 seconds[0m
+[23/50] a8bf42d646 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.602 (oracle 0.816, scale x1.066) | cells TP/FP/FN 3106/11282/6471 IoU 0.149
+[97m[INFO ] Processed Images Done taking 0.023866653442382812 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8818306922912598 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007655620574951172 seconds[0m
+[24/50] 45b0dac5e3 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.801 (oracle 0.989, scale x0.946) | cells TP/FP/FN 1313/1478/714 IoU 0.375
+[97m[INFO ] Processed Images Done taking 0.028368234634399414 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.882305383682251 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007774829864501953 seconds[0m
+[25/50] 31a2c91c43 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.003 (oracle 0.964, scale x0.790) | cells TP/FP/FN 98/2409/1569 IoU 0.024
+[97m[INFO ] Processed Images Done taking 0.031261444091796875 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8828263282775879 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007772445678710938 seconds[0m
+[26/50] e7af285f7d (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.978 (oracle 0.976, scale x0.951) | cells TP/FP/FN 643/471/288 IoU 0.459
+[97m[INFO ] Processed Images Done taking 0.030263662338256836 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8828754425048828 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007839202880859375 seconds[0m
+[27/50] 286b55a2bf (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.953 (oracle 0.955, scale x1.002) | cells TP/FP/FN 1532/894/336 IoU 0.555
+[97m[INFO ] Processed Images Done taking 0.0321652889251709 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8833668231964111 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007755756378173828 seconds[0m
+[28/50] 7bc286c1b6 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.931 (oracle 0.980, scale x0.940) | cells TP/FP/FN 1087/1305/352 IoU 0.396
+[97m[INFO ] Processed Images Done taking 0.03422141075134277 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8840928077697754 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007681846618652344 seconds[0m
+[29/50] f3685d06a9 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.796 (oracle 0.814, scale x0.982) | cells TP/FP/FN 2121/2626/734 IoU 0.387
+[97m[INFO ] Processed Images Done taking 0.027302980422973633 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8840737342834473 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.003749370574951172 seconds[0m
+[30/50] b0a08200c9 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.800 (oracle 0.779, scale x0.979) | cells TP/FP/FN 4179/3589/1708 IoU 0.441
+[97m[INFO ] Processed Images Done taking 0.023628711700439453 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8835725784301758 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007727146148681641 seconds[0m
+[31/50] 825d228aec (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.911 (oracle 0.987, scale x1.033) | cells TP/FP/FN 1424/1023/723 IoU 0.449
+[97m[INFO ] Processed Images Done taking 0.034664154052734375 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8839895725250244 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0010809898376464844 seconds[0m
+[32/50] a980334473 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.979 (oracle 0.978, scale x0.990) | cells TP/FP/FN 1743/989/295 IoU 0.576
+[97m[INFO ] Processed Images Done taking 0.025168418884277344 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8842148780822754 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007712841033935547 seconds[0m
+[33/50] f2dc06b1d2 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.007 (oracle 0.979, scale x0.719) | cells TP/FP/FN 65/2163/1964 IoU 0.016
+[97m[INFO ] Processed Images Done taking 0.030529499053955078 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8840904235839844 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007646083831787109 seconds[0m
+[34/50] 5942004064 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.555 (oracle 0.846, scale x0.921) | cells TP/FP/FN 5663/10833/4920 IoU 0.264
+[97m[INFO ] Processed Images Done taking 0.026462316513061523 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8827850818634033 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007641315460205078 seconds[0m
+[35/50] 25f3b7a318 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.001 (oracle 0.908, scale x0.685) | cells TP/FP/FN 111/5291/3343 IoU 0.013
+[97m[INFO ] Processed Images Done taking 0.03685307502746582 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8829770088195801 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007722377777099609 seconds[0m
+[36/50] bcd2436daf (da3_held_out) 518x896 1.0s | depth |err|<10cm 0.874 (oracle 0.965, scale x0.962) | cells TP/FP/FN 3647/3201/1213 IoU 0.452
+[97m[INFO ] Processed Images Done taking 0.02823662757873535 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8825364112854004 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007834434509277344 seconds[0m
+[37/50] f3d64c30f8 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.922 (oracle 0.922, scale x1.000) | cells TP/FP/FN 3905/4538/1624 IoU 0.388
+[97m[INFO ] Processed Images Done taking 0.024843215942382812 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8822708129882812 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0008456707000732422 seconds[0m
+[38/50] 0d2ee665be (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.836 (oracle 0.933, scale x0.959) | cells TP/FP/FN 4375/4948/2215 IoU 0.379
+[97m[INFO ] Processed Images Done taking 0.02621603012084961 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8828639984130859 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0009737014770507812 seconds[0m
+[39/50] 3db0a1c8f3 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.893 (oracle 0.905, scale x0.979) | cells TP/FP/FN 3161/2232/964 IoU 0.497
+[97m[INFO ] Processed Images Done taking 0.027508258819580078 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.883148193359375 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007927417755126953 seconds[0m
+[40/50] ac48a9b736 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.022 (oracle 0.740, scale x0.860) | cells TP/FP/FN 3773/33799/28720 IoU 0.057
+[97m[INFO ] Processed Images Done taking 0.030713319778442383 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8807682991027832 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007951259613037109 seconds[0m
+[41/50] c5439f4607 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.808 (oracle 0.858, scale x1.018) | cells TP/FP/FN 4036/8160/2614 IoU 0.273
+[97m[INFO ] Processed Images Done taking 0.028338193893432617 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8813936710357666 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007891654968261719 seconds[0m
+[42/50] 578511c8a9 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.241 (oracle 0.831, scale x0.921) | cells TP/FP/FN 7897/34132/14731 IoU 0.139
+[97m[INFO ] Processed Images Done taking 0.027842044830322266 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8805961608886719 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007777214050292969 seconds[0m
+[43/50] d755b3d9d8 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.797 (oracle 0.799, scale x0.968) | cells TP/FP/FN 2918/1941/1293 IoU 0.474
+[97m[INFO ] Processed Images Done taking 0.025492191314697266 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8815803527832031 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007703304290771484 seconds[0m
+[44/50] 99fa5c25e1 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.889 (oracle 0.877, scale x1.027) | cells TP/FP/FN 2802/5927/954 IoU 0.289
+[97m[INFO ] Processed Images Done taking 0.03104853630065918 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8819422721862793 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.004703521728515625 seconds[0m
+[45/50] 09c1414f1b (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.827 (oracle 0.768, scale x0.988) | cells TP/FP/FN 5487/7822/4071 IoU 0.316
+[97m[INFO ] Processed Images Done taking 0.03010082244873047 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8813135623931885 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007631778717041016 seconds[0m
+[46/50] 5f99900f09 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.567 (oracle 0.798, scale x1.073) | cells TP/FP/FN 1806/4628/4783 IoU 0.161
+[97m[INFO ] Processed Images Done taking 0.030634403228759766 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8817586898803711 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007910728454589844 seconds[0m
+[47/50] 9071e139d9 (da3_held_out) 518x896 0.9s | depth |err|<10cm 0.569 (oracle 0.896, scale x1.069) | cells TP/FP/FN 1465/5189/3565 IoU 0.143
+[97m[INFO ] Processed Images Done taking 0.02984309196472168 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8817193508148193 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007815361022949219 seconds[0m
+[48/50] 6115eddb86 (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.435 (oracle 0.860, scale x0.894) | cells TP/FP/FN 1866/4802/2060 IoU 0.214
+[97m[INFO ] Processed Images Done taking 0.031141281127929688 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8823461532592773 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007851123809814453 seconds[0m
+[49/50] 27dd4da69e (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.967 (oracle 0.964, scale x0.971) | cells TP/FP/FN 1653/688/899 IoU 0.510
+[97m[INFO ] Processed Images Done taking 0.029913663864135742 seconds. Shape:  torch.Size([6, 3, 518, 896])[0m
+[97m[INFO ] Using camera conditions provided by the user[0m
+[97m[INFO ] Model Forward Pass Done. Time: 0.8818190097808838 seconds[0m
+[97m[INFO ] Conversion to Prediction Done. Time: 0.0007574558258056641 seconds[0m
+[50/50] c49a8c6cff (da3_maybe_seen) 518x896 0.9s | depth |err|<10cm 0.846 (oracle 0.941, scale x1.038) | cells TP/FP/FN 1618/1968/1454 IoU 0.321
+{
+ "pooled": {
+  "da3_maybe_seen/camera_scale/all_pixels": {
+   "tp": 64375,
+   "fp": 149392,
+   "fn": 87862,
+   "tn": 2639579,
+   "fp_within_1": 75091,
+   "fn_within_1": 40874,
+   "fp_within_2": 106784,
+   "fn_within_2": 52079,
+   "fp_within_3": 121565,
+   "fn_within_3": 58199,
+   "cells": 2941208,
+   "correct": 2703954,
+   "wrong": 237254,
+   "accuracy": 0.9193345047341093,
+   "recall": 0.42286040844210016,
+   "precision": 0.3011456398789336,
+   "iou": 0.21342443863156393,
+   "f1": 0.3517721117801991,
+   "fp_within_1_fraction": 0.502644050551569,
+   "fp_within_2_fraction": 0.7147906179715112,
+   "fp_within_3_fraction": 0.8137316589911107,
+   "fn_within_1_fraction": 0.46520680157519745,
+   "fn_within_2_fraction": 0.5927363365277367,
+   "fn_within_3_fraction": 0.6623910222849468
+  },
+  "da3_maybe_seen/camera_scale/all_pixels_min3": {
+   "tp": 60896,
+   "fp": 126995,
+   "fn": 91341,
+   "tn": 2661976,
+   "fp_within_1": 66372,
+   "fn_within_1": 42752,
+   "fp_within_2": 92668,
+   "fn_within_2": 54671,
+   "fp_within_3": 104224,
+   "fn_within_3": 61002,
+   "cells": 2941208,
+   "correct": 2722872,
+   "wrong": 218336,
+   "accuracy": 0.925766555782522,
+   "recall": 0.40000788244644864,
+   "precision": 0.3241028042854634,
+   "iou": 0.2180838872335549,
+   "f1": 0.35807695926239536,
+   "fp_within_1_fraction": 0.5226347493995827,
+   "fp_within_2_fraction": 0.7296980196070711,
+   "fp_within_3_fraction": 0.8206937280995314,
+   "fn_within_1_fraction": 0.46804830251475243,
+   "fn_within_2_fraction": 0.5985373490546414,
+   "fn_within_3_fraction": 0.6678490491674056
+  },
+  "da3_maybe_seen/camera_scale/all_pixels_min10": {
+   "tp": 55911,
+   "fp": 102697,
+   "fn": 96326,
+   "tn": 2686274,
+   "fp_within_1": 55066,
+   "fn_within_1": 44231,
+   "fp_within_2": 75633,
+   "fn_within_2": 57532,
+   "fp_within_3": 84419,
+   "fn_within_3": 64169,
+   "cells": 2941208,
+   "correct": 2742185,
+   "wrong": 199023,
+   "accuracy": 0.9323329053912542,
+   "recall": 0.36726288615776714,
+   "precision": 0.35251059215172,
+   "iou": 0.21931558756384006,
+   "f1": 0.35973555952323505,
+   "fp_within_1_fraction": 0.5361987205079018,
+   "fp_within_2_fraction": 0.7364674722728025,
+   "fp_within_3_fraction": 0.8220201174328364,
+   "fn_within_1_fraction": 0.4591802836202064,
+   "fn_within_2_fraction": 0.5972634595021075,
+   "fn_within_3_fraction": 0.6661648983659656
+  },
+  "da3_maybe_seen/camera_scale/conf_top60": {
+   "tp": 29938,
+   "fp": 42499,
+   "fn": 122299,
+   "tn": 2746472,
+   "fp_within_1": 23099,
+   "fn_within_1": 29205,
+   "fp_within_2": 29778,
+   "fn_within_2": 42144,
+   "fp_within_3": 33189,
+   "fn_within_3": 51826,
+   "cells": 2941208,
+   "correct": 2776410,
+   "wrong": 164798,
+   "accuracy": 0.9439692806493114,
+   "recall": 0.1966539014825568,
+   "precision": 0.41329707193837406,
+   "iou": 0.15373634048147236,
+   "f1": 0.2665016868885585,
+   "fp_within_1_fraction": 0.5435186710275536,
+   "fp_within_2_fraction": 0.7006753100072943,
+   "fp_within_3_fraction": 0.7809360220240477,
+   "fn_within_1_fraction": 0.23879999018798193,
+   "fn_within_2_fraction": 0.3445980752091186,
+   "fn_within_3_fraction": 0.42376470780627806
+  },
+  "da3_maybe_seen/camera_scale/conf_top60_min3": {
+   "tp": 29206,
+   "fp": 41046,
+   "fn": 123031,
+   "tn": 2747925,
+   "fp_within_1": 22302,
+   "fn_within_1": 29351,
+   "fp_within_2": 28801,
+   "fn_within_2": 42346,
+   "fp_within_3": 32096,
+   "fn_within_3": 52088,
+   "cells": 2941208,
+   "correct": 2777131,
+   "wrong": 164077,
+   "accuracy": 0.9442144180214388,
+   "recall": 0.19184560914889284,
+   "precision": 0.41573193645732504,
+   "iou": 0.15110485660922068,
+   "f1": 0.2625388221440161,
+   "fp_within_1_fraction": 0.5433416167227013,
+   "fp_within_2_fraction": 0.70167616820153,
+   "fp_within_3_fraction": 0.7819519563416655,
+   "fn_within_1_fraction": 0.23856588989766805,
+   "fn_within_2_fraction": 0.3441896757727727,
+   "fn_within_3_fraction": 0.42337297103981925
+  },
+  "da3_maybe_seen/camera_scale/conf_top60_min10": {
+   "tp": 27909,
+   "fp": 38558,
+   "fn": 124328,
+   "tn": 2750413,
+   "fp_within_1": 20938,
+   "fn_within_1": 29589,
+   "fp_within_2": 27091,
+   "fn_within_2": 42609,
+   "fp_within_3": 30216,
+   "fn_within_3": 52314,
+   "cells": 2941208,
+   "correct": 2778322,
+   "wrong": 162886,
+   "accuracy": 0.9446193536805285,
+   "recall": 0.1833259982789992,
+   "precision": 0.4198925782719244,
+   "iou": 0.14627741817133572,
+   "f1": 0.2552216694710659,
+   "fp_within_1_fraction": 0.5430260905648633,
+   "fp_within_2_fraction": 0.7026038694953057,
+   "fp_within_3_fraction": 0.7836506042844545,
+   "fn_within_1_fraction": 0.2379914419921498,
+   "fn_within_2_fraction": 0.3427144327906827,
+   "fn_within_3_fraction": 0.4207740814619394
+  },
+  "da3_maybe_seen/oracle_scale/all_pixels": {
+   "tp": 94861,
+   "fp": 102347,
+   "fn": 57376,
+   "tn": 2686624,
+   "fp_within_1": 67919,
+   "fn_within_1": 29604,
+   "fp_within_2": 84430,
+   "fn_within_2": 33936,
+   "fp_within_3": 92397,
+   "fn_within_3": 35758,
+   "cells": 2941208,
+   "correct": 2781485,
+   "wrong": 159723,
+   "accuracy": 0.9456947621521498,
+   "recall": 0.623113960469531,
+   "precision": 0.48102003975497953,
+   "iou": 0.37261179021462465,
+   "f1": 0.5429237791354863,
+   "fp_within_1_fraction": 0.6636149569601454,
+   "fp_within_2_fraction": 0.824938688969877,
+   "fp_within_3_fraction": 0.9027817131913979,
+   "fn_within_1_fraction": 0.5159648633575014,
+   "fn_within_2_fraction": 0.5914668153931958,
+   "fn_within_3_fraction": 0.6232222532069158
+  },
+  "da3_maybe_seen/oracle_scale/all_pixels_min3": {
+   "tp": 92374,
+   "fp": 83125,
+   "fn": 59863,
+   "tn": 2705846,
+   "fp_within_1": 59807,
+   "fn_within_1": 31554,
+   "fp_within_2": 71131,
+   "fn_within_2": 36171,
+   "fp_within_3": 76167,
+   "fn_within_3": 38125,
+   "cells": 2941208,
+   "correct": 2798220,
+   "wrong": 142988,
+   "accuracy": 0.9513846011570756,
+   "recall": 0.6067775902047465,
+   "precision": 0.5263505774961681,
+   "iou": 0.3924762705959331,
+   "f1": 0.5637098152171259,
+   "fp_within_1_fraction": 0.7194827067669173,
+   "fp_within_2_fraction": 0.8557112781954888,
+   "fp_within_3_fraction": 0.9162947368421053,
+   "fn_within_1_fraction": 0.5271035531129412,
+   "fn_within_2_fraction": 0.6042296577184572,
+   "fn_within_3_fraction": 0.6368708551191888
+  },
+  "da3_maybe_seen/oracle_scale/all_pixels_min10": {
+   "tp": 87352,
+   "fp": 61633,
+   "fn": 64885,
+   "tn": 2727338,
+   "fp_within_1": 47906,
+   "fn_within_1": 35308,
+   "fp_within_2": 54584,
+   "fn_within_2": 40623,
+   "fp_within_3": 57439,
+   "fn_within_3": 42804,
+   "cells": 2941208,
+   "correct": 2814690,
+   "wrong": 126518,
+   "accuracy": 0.9569843411278631,
+   "recall": 0.5737895518172323,
+   "precision": 0.5863140584622613,
+   "iou": 0.4084350306260813,
+   "f1": 0.5799841977013631,
+   "fp_within_1_fraction": 0.7772784060487077,
+   "fp_within_2_fraction": 0.8856294517547417,
+   "fp_within_3_fraction": 0.931952038680577,
+   "fn_within_1_fraction": 0.544162749479849,
+   "fn_within_2_fraction": 0.6260769052939816,
+   "fn_within_3_fraction": 0.6596902211605148
+  },
+  "da3_maybe_seen/oracle_scale/conf_top60": {
+   "tp": 46826,
+   "fp": 16808,
+   "fn": 105411,
+   "tn": 2772163,
+   "fp_within_1": 15627,
+   "fn_within_1": 24381,
+   "fp_within_2": 16159,
+   "fn_within_2": 34099,
+   "fp_within_3": 16387,
+   "fn_within_3": 41027,
+   "cells": 2941208,
+   "correct": 2818989,
+   "wrong": 122219,
+   "accuracy": 0.9584459854590359,
+   "recall": 0.30758619783626845,
+   "precision": 0.735864474966213,
+   "iou": 0.2770031648377651,
+   "f1": 0.4338331688832682,
+   "fp_within_1_fraction": 0.9297358400761542,
+   "fp_within_2_fraction": 0.9613874345549738,
+   "fp_within_3_fraction": 0.974952403617325,
+   "fn_within_1_fraction": 0.23129464666875374,
+   "fn_within_2_fraction": 0.32348616368310706,
+   "fn_within_3_fraction": 0.389209854758991
+  },
+  "da3_maybe_seen/oracle_scale/conf_top60_min3": {
+   "tp": 45860,
+   "fp": 15976,
+   "fn": 106377,
+   "tn": 2772995,
+   "fp_within_1": 14853,
+   "fn_within_1": 24675,
+   "fp_within_2": 15349,
+   "fn_within_2": 34508,
+   "fp_within_3": 15566,
+   "fn_within_3": 41592,
+   "cells": 2941208,
+   "correct": 2818855,
+   "wrong": 122353,
+   "accuracy": 0.9584004259474338,
+   "recall": 0.30124082844512173,
+   "precision": 0.7416391745908533,
+   "iou": 0.2726305339064163,
+   "f1": 0.42845197666216667,
+   "fp_within_1_fraction": 0.9297070605908864,
+   "fp_within_2_fraction": 0.9607536304456685,
+   "fp_within_3_fraction": 0.9743365047571357,
+   "fn_within_1_fraction": 0.23195803604162554,
+   "fn_within_2_fraction": 0.3243934309108172,
+   "fn_within_3_fraction": 0.39098677345666827
+  },
+  "da3_maybe_seen/oracle_scale/conf_top60_min10": {
+   "tp": 44134,
+   "fp": 14637,
+   "fn": 108103,
+   "tn": 2774334,
+   "fp_within_1": 13622,
+   "fn_within_1": 25017,
+   "fp_within_2": 14073,
+   "fn_within_2": 34831,
+   "fp_within_3": 14273,
+   "fn_within_3": 42005,
+   "cells": 2941208,
+   "correct": 2818468,
+   "wrong": 122740,
+   "accuracy": 0.9582688473579564,
+   "recall": 0.2899032429698431,
+   "precision": 0.7509485970972078,
+   "iou": 0.2644749931085729,
+   "f1": 0.4183158932362754,
+   "fp_within_1_fraction": 0.9306551889048302,
+   "fp_within_2_fraction": 0.9614675138348022,
+   "fp_within_3_fraction": 0.9751315160210425,
+   "fn_within_1_fraction": 0.23141818450921806,
+   "fn_within_2_fraction": 0.32220197404327355,
+   "fn_within_3_fraction": 0.38856460967780726
+  },
+  "da3_maybe_seen/laser_reference_exact/all_pixels": {
+   "tp": 150328,
+   "fp": 2055,
+   "fn": 1909,
+   "tn": 2786916,
+   "fp_within_1": 2039,
+   "fn_within_1": 1902,
+   "fp_within_2": 2050,
+   "fn_within_2": 1908,
+   "fp_within_3": 2051,
+   "fn_within_3": 1909,
+   "cells": 2941208,
+   "correct": 2937244,
+   "wrong": 3964,
+   "accuracy": 0.9986522544478323,
+   "recall": 0.9874603414413053,
+   "precision": 0.9865142437148501,
+   "iou": 0.9743084541000181,
+   "f1": 0.9869870658525376,
+   "fp_within_1_fraction": 0.9922141119221412,
+   "fp_within_2_fraction": 0.9975669099756691,
+   "fp_within_3_fraction": 0.9980535279805353,
+   "fn_within_1_fraction": 0.9963331587218439,
+   "fn_within_2_fraction": 0.9994761655316919,
+   "fn_within_3_fraction": 1.0
+  },
+  "da3_maybe_seen/laser_reference_exact/all_pixels_min3": {
+   "tp": 144009,
+   "fp": 313,
+   "fn": 8228,
+   "tn": 2788658,
+   "fp_within_1": 312,
+   "fn_within_1": 8062,
+   "fp_within_2": 313,
+   "fn_within_2": 8181,
+   "fp_within_3": 313,
+   "fn_within_3": 8215,
+   "cells": 2941208,
+   "correct": 2932667,
+   "wrong": 8541,
+   "accuracy": 0.997096091129903,
+   "recall": 0.9459526921838974,
+   "precision": 0.9978312384806197,
+   "iou": 0.9440117994100296,
+   "f1": 0.9711996601013626,
+   "fp_within_1_fraction": 0.9968051118210862,
+   "fp_within_2_fraction": 1.0,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.9798249878463782,
+   "fn_within_2_fraction": 0.9942877977637335,
+   "fn_within_3_fraction": 0.9984200291686923
+  },
+  "da3_maybe_seen/laser_reference_exact/all_pixels_min10": {
+   "tp": 128398,
+   "fp": 8,
+   "fn": 23839,
+   "tn": 2788963,
+   "fp_within_1": 8,
+   "fn_within_1": 20764,
+   "fp_within_2": 8,
+   "fn_within_2": 22695,
+   "fp_within_3": 8,
+   "fn_within_3": 23416,
+   "cells": 2941208,
+   "correct": 2917361,
+   "wrong": 23847,
+   "accuracy": 0.9918921069166139,
+   "recall": 0.8434086325926023,
+   "precision": 0.9999376976153762,
+   "iou": 0.8433643140989852,
+   "f1": 0.9150272766468431,
+   "fp_within_1_fraction": 1.0,
+   "fp_within_2_fraction": 1.0,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.8710096900037754,
+   "fn_within_2_fraction": 0.9520114098745752,
+   "fn_within_3_fraction": 0.9822559671127145
+  },
+  "da3_maybe_seen/laser_reference_noise_2cm/all_pixels": {
+   "tp": 150880,
+   "fp": 85084,
+   "fn": 1357,
+   "tn": 2703887,
+   "fp_within_1": 84958,
+   "fn_within_1": 1353,
+   "fp_within_2": 85079,
+   "fn_within_2": 1356,
+   "fp_within_3": 85080,
+   "fn_within_3": 1357,
+   "cells": 2941208,
+   "correct": 2854767,
+   "wrong": 86441,
+   "accuracy": 0.9706103750567794,
+   "recall": 0.9910862668076749,
+   "precision": 0.6394195724771575,
+   "iou": 0.6357633753439434,
+   "f1": 0.7773292701461356,
+   "fp_within_1_fraction": 0.9985191105260683,
+   "fp_within_2_fraction": 0.9999412345446852,
+   "fp_within_3_fraction": 0.9999529876357482,
+   "fn_within_1_fraction": 0.9970523212969786,
+   "fn_within_2_fraction": 0.9992630803242447,
+   "fn_within_3_fraction": 1.0
+  },
+  "da3_maybe_seen/laser_reference_noise_2cm/all_pixels_min3": {
+   "tp": 146847,
+   "fp": 60894,
+   "fn": 5390,
+   "tn": 2728077,
+   "fp_within_1": 60887,
+   "fn_within_1": 5194,
+   "fp_within_2": 60894,
+   "fn_within_2": 5333,
+   "fp_within_3": 60894,
+   "fn_within_3": 5368,
+   "cells": 2941208,
+   "correct": 2874924,
+   "wrong": 66284,
+   "accuracy": 0.9774636815893334,
+   "recall": 0.9645946780349061,
+   "precision": 0.7068753881034557,
+   "iou": 0.6889987847849445,
+   "f1": 0.8158665251765386,
+   "fp_within_1_fraction": 0.9998850461457615,
+   "fp_within_2_fraction": 1.0,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.9636363636363636,
+   "fn_within_2_fraction": 0.9894248608534323,
+   "fn_within_3_fraction": 0.9959183673469387
+  },
+  "da3_maybe_seen/laser_reference_noise_2cm/all_pixels_min10": {
+   "tp": 133894,
+   "fp": 39443,
+   "fn": 18343,
+   "tn": 2749528,
+   "fp_within_1": 39442,
+   "fn_within_1": 15018,
+   "fp_within_2": 39443,
+   "fn_within_2": 17063,
+   "fp_within_3": 39443,
+   "fn_within_3": 17842,
+   "cells": 2941208,
+   "correct": 2883422,
+   "wrong": 57786,
+   "accuracy": 0.980352970616155,
+   "recall": 0.8795102373273251,
+   "precision": 0.7724490443471388,
+   "iou": 0.6985287979966611,
+   "f1": 0.8225103970218752,
+   "fp_within_1_fraction": 0.9999746469589027,
+   "fp_within_2_fraction": 1.0,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.8187319413400207,
+   "fn_within_2_fraction": 0.9302186120045794,
+   "fn_within_3_fraction": 0.9726871286049175
+  },
+  "da3_maybe_seen/laser_reference_noise_5cm/all_pixels": {
+   "tp": 150798,
+   "fp": 230312,
+   "fn": 1439,
+   "tn": 2558659,
+   "fp_within_1": 196675,
+   "fn_within_1": 1437,
+   "fp_within_2": 228899,
+   "fn_within_2": 1439,
+   "fp_within_3": 230288,
+   "fn_within_3": 1439,
+   "cells": 2941208,
+   "correct": 2709457,
+   "wrong": 231751,
+   "accuracy": 0.9212055046769899,
+   "recall": 0.9905476329670185,
+   "precision": 0.39568103697095325,
+   "iou": 0.3941926393743024,
+   "f1": 0.5654780096260034,
+   "fp_within_1_fraction": 0.8539502935148842,
+   "fp_within_2_fraction": 0.9938648442113307,
+   "fp_within_3_fraction": 0.9998957935322519,
+   "fn_within_1_fraction": 0.9986101459346769,
+   "fn_within_2_fraction": 1.0,
+   "fn_within_3_fraction": 1.0
+  },
+  "da3_maybe_seen/laser_reference_noise_5cm/all_pixels_min3": {
+   "tp": 146970,
+   "fp": 177544,
+   "fn": 5267,
+   "tn": 2611427,
+   "fp_within_1": 160759,
+   "fn_within_1": 5021,
+   "fp_within_2": 177255,
+   "fn_within_2": 5203,
+   "fp_within_3": 177544,
+   "fn_within_3": 5241,
+   "cells": 2941208,
+   "correct": 2758397,
+   "wrong": 182811,
+   "accuracy": 0.93784492630239,
+   "recall": 0.9654026287958907,
+   "precision": 0.45289263329162993,
+   "iou": 0.4456593921420579,
+   "f1": 0.6165482610419275,
+   "fp_within_1_fraction": 0.9054600549722885,
+   "fp_within_2_fraction": 0.9983722344883522,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.9532940953104234,
+   "fn_within_2_fraction": 0.987848870324663,
+   "fn_within_3_fraction": 0.9950636035693944
+  },
+  "da3_maybe_seen/laser_reference_noise_5cm/all_pixels_min10": {
+   "tp": 134263,
+   "fp": 125984,
+   "fn": 17974,
+   "tn": 2662987,
+   "fp_within_1": 119132,
+   "fn_within_1": 13926,
+   "fp_within_2": 125931,
+   "fn_within_2": 16298,
+   "fp_within_3": 125984,
+   "fn_within_3": 17265,
+   "cells": 2941208,
+   "correct": 2797250,
+   "wrong": 143958,
+   "accuracy": 0.9510548046924937,
+   "recall": 0.8819340896102787,
+   "precision": 0.5159060431052039,
+   "iou": 0.4825768004571905,
+   "f1": 0.6509973720192783,
+   "fp_within_1_fraction": 0.9456121412242825,
+   "fp_within_2_fraction": 0.9995793116586233,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.7747858017135862,
+   "fn_within_2_fraction": 0.9067542005118504,
+   "fn_within_3_fraction": 0.9605541337487482
+  },
+  "da3_held_out/camera_scale/all_pixels": {
+   "tp": 116812,
+   "fp": 174500,
+   "fn": 67043,
+   "tn": 3252246,
+   "fp_within_1": 114373,
+   "fn_within_1": 51263,
+   "fp_within_2": 148355,
+   "fn_within_2": 60367,
+   "fp_within_3": 160742,
+   "fn_within_3": 63469,
+   "cells": 3610601,
+   "correct": 3369058,
+   "wrong": 241543,
+   "accuracy": 0.9331017190766856,
+   "recall": 0.6353485083353729,
+   "precision": 0.40098588454989836,
+   "iou": 0.32596726709547796,
+   "f1": 0.49166714018439833,
+   "fp_within_1_fraction": 0.655432664756447,
+   "fp_within_2_fraction": 0.8501719197707737,
+   "fp_within_3_fraction": 0.9211575931232092,
+   "fn_within_1_fraction": 0.7646286711513506,
+   "fn_within_2_fraction": 0.9004221171486956,
+   "fn_within_3_fraction": 0.9466909297018331
+  },
+  "da3_held_out/camera_scale/all_pixels_min3": {
+   "tp": 111371,
+   "fp": 136414,
+   "fn": 72484,
+   "tn": 3290332,
+   "fp_within_1": 95553,
+   "fn_within_1": 55163,
+   "fp_within_2": 118456,
+   "fn_within_2": 65185,
+   "fp_within_3": 126239,
+   "fn_within_3": 68623,
+   "cells": 3610601,
+   "correct": 3401703,
+   "wrong": 208898,
+   "accuracy": 0.9421431501292998,
+   "recall": 0.6057545348236382,
+   "precision": 0.44946627116249976,
+   "iou": 0.34774205433557415,
+   "f1": 0.5160365119080715,
+   "fp_within_1_fraction": 0.7004632955561746,
+   "fp_within_2_fraction": 0.8683566202882402,
+   "fp_within_3_fraction": 0.9254108815810694,
+   "fn_within_1_fraction": 0.7610369184923569,
+   "fn_within_2_fraction": 0.8993019149053584,
+   "fn_within_3_fraction": 0.9467330721262623
+  },
+  "da3_held_out/camera_scale/all_pixels_min10": {
+   "tp": 100235,
+   "fp": 99297,
+   "fn": 83620,
+   "tn": 3327449,
+   "fp_within_1": 73052,
+   "fn_within_1": 61605,
+   "fp_within_2": 87459,
+   "fn_within_2": 73467,
+   "fp_within_3": 91871,
+   "fn_within_3": 77933,
+   "cells": 3610601,
+   "correct": 3427684,
+   "wrong": 182917,
+   "accuracy": 0.9493389050742522,
+   "recall": 0.5451850643169889,
+   "precision": 0.5023505001703987,
+   "iou": 0.3539971464089959,
+   "f1": 0.522892012509553,
+   "fp_within_1_fraction": 0.7356919141565204,
+   "fp_within_2_fraction": 0.8807818967340403,
+   "fp_within_3_fraction": 0.9252142562212353,
+   "fn_within_1_fraction": 0.7367256637168141,
+   "fn_within_2_fraction": 0.8785816790241568,
+   "fn_within_3_fraction": 0.9319899545563263
+  },
+  "da3_held_out/camera_scale/conf_top60": {
+   "tp": 45939,
+   "fp": 24119,
+   "fn": 137916,
+   "tn": 3402627,
+   "fp_within_1": 22078,
+   "fn_within_1": 29998,
+   "fp_within_2": 23865,
+   "fn_within_2": 41665,
+   "fp_within_3": 24022,
+   "fn_within_3": 50092,
+   "cells": 3610601,
+   "correct": 3448566,
+   "wrong": 162035,
+   "accuracy": 0.9551224297561541,
+   "recall": 0.24986538304642245,
+   "precision": 0.6557281109937481,
+   "iou": 0.22088818794657025,
+   "f1": 0.3618483496315667,
+   "fp_within_1_fraction": 0.915377917824122,
+   "fp_within_2_fraction": 0.9894688834528794,
+   "fp_within_3_fraction": 0.9959782743894855,
+   "fn_within_1_fraction": 0.2175092085037269,
+   "fn_within_2_fraction": 0.30210417935554973,
+   "fn_within_3_fraction": 0.3632065895182575
+  },
+  "da3_held_out/camera_scale/conf_top60_min3": {
+   "tp": 44661,
+   "fp": 22910,
+   "fn": 139194,
+   "tn": 3403836,
+   "fp_within_1": 20969,
+   "fn_within_1": 30179,
+   "fp_within_2": 22666,
+   "fn_within_2": 41715,
+   "fp_within_3": 22816,
+   "fn_within_3": 49970,
+   "cells": 3610601,
+   "correct": 3448497,
+   "wrong": 162104,
+   "accuracy": 0.9551033193642832,
+   "recall": 0.24291425307987272,
+   "precision": 0.660949223779432,
+   "iou": 0.21599883926196406,
+   "f1": 0.35526158790260354,
+   "fp_within_1_fraction": 0.9152771715408119,
+   "fp_within_2_fraction": 0.9893496289829768,
+   "fp_within_3_fraction": 0.9958969882147534,
+   "fn_within_1_fraction": 0.2168125062861905,
+   "fn_within_2_fraction": 0.2996896417949049,
+   "fn_within_3_fraction": 0.358995358995359
+  },
+  "da3_held_out/camera_scale/conf_top60_min10": {
+   "tp": 42203,
+   "fp": 20862,
+   "fn": 141652,
+   "tn": 3405884,
+   "fp_within_1": 19078,
+   "fn_within_1": 30837,
+   "fp_within_2": 20629,
+   "fn_within_2": 42339,
+   "fp_within_3": 20772,
+   "fn_within_3": 50383,
+   "cells": 3610601,
+   "correct": 3448087,
+   "wrong": 162514,
+   "accuracy": 0.9549897648618609,
+   "recall": 0.22954502189225204,
+   "precision": 0.6691984460477285,
+   "iou": 0.20615288422554062,
+   "f1": 0.3418354122792807,
+   "fp_within_1_fraction": 0.9144856677212156,
+   "fp_within_2_fraction": 0.9888313680375803,
+   "fp_within_3_fraction": 0.9956859361518551,
+   "fn_within_1_fraction": 0.21769547906136164,
+   "fn_within_2_fraction": 0.29889447378081496,
+   "fn_within_3_fraction": 0.3556815293818654
+  },
+  "da3_held_out/oracle_scale/all_pixels": {
+   "tp": 132953,
+   "fp": 152001,
+   "fn": 50902,
+   "tn": 3274745,
+   "fp_within_1": 104544,
+   "fn_within_1": 38639,
+   "fp_within_2": 132974,
+   "fn_within_2": 45818,
+   "fp_within_3": 143022,
+   "fn_within_3": 48367,
+   "cells": 3610601,
+   "correct": 3407698,
+   "wrong": 202903,
+   "accuracy": 0.9438035385244727,
+   "recall": 0.7231405183432597,
+   "precision": 0.4665770615608133,
+   "iou": 0.3958631079986661,
+   "f1": 0.5671947424217538,
+   "fp_within_1_fraction": 0.6877849487832317,
+   "fp_within_2_fraction": 0.8748231919526845,
+   "fp_within_3_fraction": 0.9409280202103933,
+   "fn_within_1_fraction": 0.759086086990688,
+   "fn_within_2_fraction": 0.9001218026796589,
+   "fn_within_3_fraction": 0.9501984204942832
+  },
+  "da3_held_out/oracle_scale/all_pixels_min3": {
+   "tp": 128128,
+   "fp": 115503,
+   "fn": 55727,
+   "tn": 3311243,
+   "fp_within_1": 86344,
+   "fn_within_1": 42509,
+   "fp_within_2": 104244,
+   "fn_within_2": 50188,
+   "fp_within_3": 109850,
+   "fn_within_3": 52999,
+   "cells": 3610601,
+   "correct": 3439371,
+   "wrong": 171230,
+   "accuracy": 0.9525757623176861,
+   "recall": 0.6968970112316771,
+   "precision": 0.5259100853339682,
+   "iou": 0.42800927317793414,
+   "f1": 0.5994488708402147,
+   "fp_within_1_fraction": 0.7475476827441712,
+   "fp_within_2_fraction": 0.902522012415262,
+   "fp_within_3_fraction": 0.9510575482887891,
+   "fn_within_1_fraction": 0.7628079745904139,
+   "fn_within_2_fraction": 0.9006047337915194,
+   "fn_within_3_fraction": 0.9510470687458503
+  },
+  "da3_held_out/oracle_scale/all_pixels_min10": {
+   "tp": 117645,
+   "fp": 80003,
+   "fn": 66210,
+   "tn": 3346743,
+   "fp_within_1": 63144,
+   "fn_within_1": 49250,
+   "fp_within_2": 73071,
+   "fn_within_2": 58641,
+   "fp_within_3": 76000,
+   "fn_within_3": 62325,
+   "cells": 3610601,
+   "correct": 3464388,
+   "wrong": 146213,
+   "accuracy": 0.9595045257008459,
+   "recall": 0.6398792526719426,
+   "precision": 0.5952248441674087,
+   "iou": 0.44586482122960075,
+   "f1": 0.616744822452248,
+   "fp_within_1_fraction": 0.7892704023599115,
+   "fp_within_2_fraction": 0.913353249253153,
+   "fp_within_3_fraction": 0.9499643763358874,
+   "fn_within_1_fraction": 0.7438453405829935,
+   "fn_within_2_fraction": 0.8856819211599456,
+   "fn_within_3_fraction": 0.9413230629814228
+  },
+  "da3_held_out/oracle_scale/conf_top60": {
+   "tp": 53590,
+   "fp": 15259,
+   "fn": 130265,
+   "tn": 3411487,
+   "fp_within_1": 14532,
+   "fn_within_1": 23098,
+   "fp_within_2": 15004,
+   "fn_within_2": 33401,
+   "fp_within_3": 15160,
+   "fn_within_3": 41646,
+   "cells": 3610601,
+   "correct": 3465077,
+   "wrong": 145524,
+   "accuracy": 0.9596953526573554,
+   "recall": 0.29147969867558676,
+   "precision": 0.7783700562099667,
+   "iou": 0.26914230039073095,
+   "f1": 0.42413258199316195,
+   "fp_within_1_fraction": 0.9523559866308409,
+   "fp_within_2_fraction": 0.9832885510190708,
+   "fp_within_3_fraction": 0.9935120256897568,
+   "fn_within_1_fraction": 0.17731547230645223,
+   "fn_within_2_fraction": 0.25640809119871033,
+   "fn_within_3_fraction": 0.31970214562622346
+  },
+  "da3_held_out/oracle_scale/conf_top60_min3": {
+   "tp": 52187,
+   "fp": 14103,
+   "fn": 131668,
+   "tn": 3412643,
+   "fp_within_1": 13414,
+   "fn_within_1": 23428,
+   "fp_within_2": 13855,
+   "fn_within_2": 33460,
+   "fp_within_3": 14006,
+   "fn_within_3": 41434,
+   "cells": 3610601,
+   "correct": 3464830,
+   "wrong": 145771,
+   "accuracy": 0.959626942993701,
+   "recall": 0.28384868510511,
+   "precision": 0.7872529793332328,
+   "iou": 0.2636266278705584,
+   "f1": 0.4172539926842431,
+   "fp_within_1_fraction": 0.951145146422747,
+   "fp_within_2_fraction": 0.9824150889881585,
+   "fp_within_3_fraction": 0.9931220307735943,
+   "fn_within_1_fraction": 0.1779323753683507,
+   "fn_within_2_fraction": 0.2541240088707962,
+   "fn_within_3_fraction": 0.31468542090713003
+  },
+  "da3_held_out/oracle_scale/conf_top60_min10": {
+   "tp": 49625,
+   "fp": 12397,
+   "fn": 134230,
+   "tn": 3414349,
+   "fp_within_1": 11757,
+   "fn_within_1": 24200,
+   "fp_within_2": 12160,
+   "fn_within_2": 34198,
+   "fp_within_3": 12303,
+   "fn_within_3": 42067,
+   "cells": 3610601,
+   "correct": 3463974,
+   "wrong": 146627,
+   "accuracy": 0.9593898633496196,
+   "recall": 0.26991379075902205,
+   "precision": 0.8001193125020154,
+   "iou": 0.2528636650836679,
+   "f1": 0.4036571131094002,
+   "fp_within_1_fraction": 0.9483746067597,
+   "fp_within_2_fraction": 0.9808824715657014,
+   "fp_within_3_fraction": 0.9924175203678309,
+   "fn_within_1_fraction": 0.1802875661178574,
+   "fn_within_2_fraction": 0.25477166058258216,
+   "fn_within_3_fraction": 0.31339491916859125
+  },
+  "da3_held_out/laser_reference_exact/all_pixels": {
+   "tp": 181461,
+   "fp": 2408,
+   "fn": 2394,
+   "tn": 3424338,
+   "fp_within_1": 2386,
+   "fn_within_1": 2366,
+   "fp_within_2": 2402,
+   "fn_within_2": 2387,
+   "fp_within_3": 2406,
+   "fn_within_3": 2392,
+   "cells": 3610601,
+   "correct": 3605799,
+   "wrong": 4802,
+   "accuracy": 0.9986700275106555,
+   "recall": 0.9869788692175899,
+   "precision": 0.9869037194959455,
+   "iou": 0.9742192491262355,
+   "f1": 0.9869412929262164,
+   "fp_within_1_fraction": 0.9908637873754153,
+   "fp_within_2_fraction": 0.9975083056478405,
+   "fp_within_3_fraction": 0.9991694352159468,
+   "fn_within_1_fraction": 0.9883040935672515,
+   "fn_within_2_fraction": 0.9970760233918129,
+   "fn_within_3_fraction": 0.9991645781119465
+  },
+  "da3_held_out/laser_reference_exact/all_pixels_min3": {
+   "tp": 173580,
+   "fp": 274,
+   "fn": 10275,
+   "tn": 3426472,
+   "fp_within_1": 273,
+   "fn_within_1": 10003,
+   "fp_within_2": 274,
+   "fn_within_2": 10211,
+   "fp_within_3": 274,
+   "fn_within_3": 10251,
+   "cells": 3610601,
+   "correct": 3600052,
+   "wrong": 10549,
+   "accuracy": 0.9970783257413378,
+   "recall": 0.9441135677572,
+   "precision": 0.9984239649360958,
+   "iou": 0.942708644482944,
+   "f1": 0.9705095482640917,
+   "fp_within_1_fraction": 0.9963503649635036,
+   "fp_within_2_fraction": 1.0,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.9735279805352798,
+   "fn_within_2_fraction": 0.9937712895377129,
+   "fn_within_3_fraction": 0.9976642335766424
+  },
+  "da3_held_out/laser_reference_exact/all_pixels_min10": {
+   "tp": 154772,
+   "fp": 7,
+   "fn": 29083,
+   "tn": 3426739,
+   "fp_within_1": 7,
+   "fn_within_1": 26175,
+   "fp_within_2": 7,
+   "fn_within_2": 27715,
+   "fp_within_3": 7,
+   "fn_within_3": 28335,
+   "cells": 3610601,
+   "correct": 3581511,
+   "wrong": 29090,
+   "accuracy": 0.9919431695720463,
+   "recall": 0.8418155611759267,
+   "precision": 0.9999547742264777,
+   "iou": 0.8417835115467035,
+   "f1": 0.9140960446972247,
+   "fp_within_1_fraction": 1.0,
+   "fp_within_2_fraction": 1.0,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.9000103153044734,
+   "fn_within_2_fraction": 0.9529622116012791,
+   "fn_within_3_fraction": 0.9742805075129801
+  },
+  "da3_held_out/laser_reference_noise_2cm/all_pixels": {
+   "tp": 182124,
+   "fp": 88704,
+   "fn": 1731,
+   "tn": 3338042,
+   "fp_within_1": 88623,
+   "fn_within_1": 1708,
+   "fp_within_2": 88699,
+   "fn_within_2": 1726,
+   "fp_within_3": 88702,
+   "fn_within_3": 1729,
+   "cells": 3610601,
+   "correct": 3520166,
+   "wrong": 90435,
+   "accuracy": 0.9749529233498799,
+   "recall": 0.9905849718528188,
+   "precision": 0.6724710886614382,
+   "iou": 0.6682002795724963,
+   "f1": 0.8011031861758632,
+   "fp_within_1_fraction": 0.9990868506493507,
+   "fp_within_2_fraction": 0.9999436327561327,
+   "fp_within_3_fraction": 0.9999774531024531,
+   "fn_within_1_fraction": 0.9867128827267475,
+   "fn_within_2_fraction": 0.9971114962449451,
+   "fn_within_3_fraction": 0.998844598497978
+  },
+  "da3_held_out/laser_reference_noise_2cm/all_pixels_min3": {
+   "tp": 177223,
+   "fp": 60259,
+   "fn": 6632,
+   "tn": 3366487,
+   "fp_within_1": 60243,
+   "fn_within_1": 6359,
+   "fp_within_2": 60259,
+   "fn_within_2": 6564,
+   "fp_within_3": 60259,
+   "fn_within_3": 6607,
+   "cells": 3610601,
+   "correct": 3543710,
+   "wrong": 66891,
+   "accuracy": 0.981473721410923,
+   "recall": 0.9639280955100487,
+   "precision": 0.7462586638145207,
+   "iou": 0.7259845809744627,
+   "f1": 0.8412410967942526,
+   "fp_within_1_fraction": 0.9997344794968387,
+   "fp_within_2_fraction": 1.0,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.9588359469240049,
+   "fn_within_2_fraction": 0.9897466827503015,
+   "fn_within_3_fraction": 0.9962303980699638
+  },
+  "da3_held_out/laser_reference_noise_2cm/all_pixels_min10": {
+   "tp": 161439,
+   "fp": 35707,
+   "fn": 22416,
+   "tn": 3391039,
+   "fp_within_1": 35703,
+   "fn_within_1": 19280,
+   "fp_within_2": 35707,
+   "fn_within_2": 20963,
+   "fp_within_3": 35707,
+   "fn_within_3": 21637,
+   "cells": 3610601,
+   "correct": 3552478,
+   "wrong": 58123,
+   "accuracy": 0.9839021259895513,
+   "recall": 0.8780778330749776,
+   "precision": 0.8188804236454201,
+   "iou": 0.7352775070367368,
+   "f1": 0.8474465946283606,
+   "fp_within_1_fraction": 0.999887977147338,
+   "fp_within_2_fraction": 1.0,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.8600999286224126,
+   "fn_within_2_fraction": 0.9351802284082797,
+   "fn_within_3_fraction": 0.9652480371163454
+  },
+  "da3_held_out/laser_reference_noise_5cm/all_pixels": {
+   "tp": 182049,
+   "fp": 246114,
+   "fn": 1806,
+   "tn": 3180632,
+   "fp_within_1": 219450,
+   "fn_within_1": 1786,
+   "fp_within_2": 245356,
+   "fn_within_2": 1801,
+   "fp_within_3": 246090,
+   "fn_within_3": 1804,
+   "cells": 3610601,
+   "correct": 3362681,
+   "wrong": 247920,
+   "accuracy": 0.9313355311207192,
+   "recall": 0.9901770416904626,
+   "precision": 0.42518620245093575,
+   "iou": 0.42340029164893284,
+   "f1": 0.5949138750821055,
+   "fp_within_1_fraction": 0.8916599624564227,
+   "fp_within_2_fraction": 0.9969201264454683,
+   "fp_within_3_fraction": 0.9999024842146322,
+   "fn_within_1_fraction": 0.9889258028792912,
+   "fn_within_2_fraction": 0.9972314507198228,
+   "fn_within_3_fraction": 0.9988925802879292
+  },
+  "da3_held_out/laser_reference_noise_5cm/all_pixels_min3": {
+   "tp": 177646,
+   "fp": 182743,
+   "fn": 6209,
+   "tn": 3244003,
+   "fp_within_1": 172153,
+   "fn_within_1": 5907,
+   "fp_within_2": 182571,
+   "fn_within_2": 6129,
+   "fp_within_3": 182736,
+   "fn_within_3": 6182,
+   "cells": 3610601,
+   "correct": 3421649,
+   "wrong": 188952,
+   "accuracy": 0.947667438191038,
+   "recall": 0.9662288216257376,
+   "precision": 0.49292847450948835,
+   "iou": 0.48457983949721495,
+   "f1": 0.6528174862745386,
+   "fp_within_1_fraction": 0.9420497638760446,
+   "fp_within_2_fraction": 0.9990587874774958,
+   "fp_within_3_fraction": 0.9999616948392004,
+   "fn_within_1_fraction": 0.9513609276856176,
+   "fn_within_2_fraction": 0.987115477532614,
+   "fn_within_3_fraction": 0.9956514736672573
+  },
+  "da3_held_out/laser_reference_noise_5cm/all_pixels_min10": {
+   "tp": 162685,
+   "fp": 120940,
+   "fn": 21170,
+   "tn": 3305806,
+   "fp_within_1": 117650,
+   "fn_within_1": 17522,
+   "fp_within_2": 120905,
+   "fn_within_2": 19578,
+   "fp_within_3": 120940,
+   "fn_within_3": 20402,
+   "cells": 3610601,
+   "correct": 3468491,
+   "wrong": 142110,
+   "accuracy": 0.9606409016116707,
+   "recall": 0.8848549128389219,
+   "precision": 0.5735918907007492,
+   "iou": 0.5337521940976722,
+   "f1": 0.696008385385471,
+   "fp_within_1_fraction": 0.9727964279808169,
+   "fp_within_2_fraction": 0.9997106002976682,
+   "fp_within_3_fraction": 1.0,
+   "fn_within_1_fraction": 0.8276806802078412,
+   "fn_within_2_fraction": 0.9247992442135097,
+   "fn_within_3_fraction": 0.9637222484648087
+  }
+ },
+ "probe_grid_occupancy_10cm_p50": {
+  "da3_maybe_seen": {
+   "tp": 81355,
+   "fp": 423305,
+   "fn": 70882,
+   "tn": 2365666,
+   "cells": 2941208,
+   "correct": 2447021,
+   "wrong": 494187,
+   "accuracy": 0.8319782211934688,
+   "recall": 0.5343970256902068,
+   "precision": 0.1612075456743154,
+   "iou": 0.14135371528055293,
+   "f1": 0.2476948440927573
+  },
+  "da3_held_out": {
+   "tp": 85296,
+   "fp": 463836,
+   "fn": 98559,
+   "tn": 2962910,
+   "cells": 3610601,
+   "correct": 3048206,
+   "wrong": 562395,
+   "accuracy": 0.8442378429519074,
+   "recall": 0.4639308150444644,
+   "precision": 0.155328773409672,
+   "iou": 0.13169242740751377,
+   "f1": 0.23273536911295833
+  }
+ },
+ "depth_scene_mean": {
+  "da3_held_out": {
+   "seconds": 0.9403563830070197,
+   "laser_valid_fraction": 0.9119188904762268,
+   "oracle_scale": 0.9970513880252838,
+   "cam_depth_pixels": 2539482.55,
+   "cam_absrel": 0.04625758081674576,
+   "cam_abs_median_cm": 4.667164427042008,
+   "cam_within_5cm": 0.5733623939566315,
+   "cam_within_10cm": 0.8083674281835556,
+   "oracle_absrel": 0.03277703262865543,
+   "oracle_abs_median_cm": 2.485766875743866,
+   "oracle_within_5cm": 0.7562614664435386,
+   "oracle_within_10cm": 0.9026461780071259
+  },
+  "da3_maybe_seen": {
+   "seconds": 0.9539904338307679,
+   "laser_valid_fraction": 0.9423263132572174,
+   "oracle_scale": 0.924923574924469,
+   "cam_depth_pixels": 2624160.1666666665,
+   "cam_absrel": 0.14385390269259613,
+   "cam_abs_median_cm": 14.09497018257777,
+   "cam_within_5cm": 0.42192483869051406,
+   "cam_within_10cm": 0.6289680512719011,
+   "oracle_absrel": 0.04533262768139442,
+   "oracle_abs_median_cm": 2.579659777879715,
+   "oracle_within_5cm": 0.7699718316396077,
+   "oracle_within_10cm": 0.9114277342955271
+  }
+ }
+}
+Completed: EXP/da3_occupancy_10cm/summary.json
+=== DA3 occupancy finished 2026-11-07T15:21:55+08:00; exit=0
+=== demo started 2026-11-07T15:21:55+08:00; GPU=1
+Command: CUDA_VISIBLE_DEVICES=1 python -u scripts/demo_grid_occupancy.py --workspace /mnt/disk/xveyan/workspace_scannetpp/geometrygs_grid_occupancy_10cm --scene fb5a96b1a2 --mask-file /mnt/disk/xveyan/workspace_scannetpp/geometrygs_da3_occupancy_10cm/fb5a96b1a2.npz --mask-key camera_scale__all_pixels --demo-extra /mnt/disk/xveyan/workspace_scannetpp/geometrygs_da3_occupancy_10cm/fb5a96b1a2_demo.npz --output EXP/demo/scene_fb5a96b1a2/da3_occupancy_10cm --title DA3-GIANT-1.1 depth (camera scale)
+{
+  "scene": "fb5a96b1a2",
+  "prediction": "DA3-GIANT-1.1 depth (camera scale)",
+  "mask": "/mnt/disk/xveyan/workspace_scannetpp/geometrygs_da3_occupancy_10cm/fb5a96b1a2.npz",
+  "mask_key": "camera_scale__all_pixels",
+  "probability_threshold": null,
+  "grid_dims": [
+    67,
+    38,
+    49
+  ],
+  "cell_m": 0.1,
+  "cells": 124754,
+  "input_frames": [
+    357,
+    360,
+    363,
+    367,
+    370,
+    374
+  ],
+  "counts": {
+    "prediction": {
+      "tp": 4361,
+      "fp": 6350,
+      "fn": 2434,
+      "tn": 111609,
+      "recall": 0.6417954378219279,
+      "precision": 0.40715152646811686,
+      "iou": 0.3317611259033853,
+      "accuracy": 0.9295894320021802
+    }
+  },
+  "fp_shells": {
+    "fp_within_1_cells": 0.7713385826771654,
+    "fp_within_2_cells": 0.9411023622047244,
+    "fp_within_3_cells": 0.992755905511811
+  },
+  "colours": {
+    "tp": "green",
+    "fp": "purple",
+    "fn": "red",
+    "label": "gold",
+    "prediction": "blue"
+  },
+  "coordinates": "PLY in normalized mean-camera frame (0.3 units per metre); PNG axes in metres"
+}
+=== demo finished 2026-11-07T15:22:01+08:00; exit=0

@@ -1,0 +1,28 @@
+=== run_all_groups started 2026-10-20 11:23:13 on iZwz9foxpfyzf7f1y60xxwZ
+repo: /home/jms/xveyan/4DGS/TokenGS   git HEAD: b16269c   python: /mnt/disk/jinsoo/anaconda3/envs/tokengs/bin/python
+master log: EXP_TokenGS/same_scene_ply_comparison_fp32/run_all_groups.20261020_112313.log
+scenes: 2f3e1c0f688c84cec67f9a1ea219c54c14ffabf31a046e620dacc690cac2f1bd
+PLY folder: EXP_TokenGS/same_scene_ply_comparison_fp32/ply
+--- GPU status
+0, 7215 MiB, 0 %
+1, 4 MiB, 0 %
+2, 3 MiB, 0 %
+3, 3 MiB, 0 %
+4, 3 MiB, 0 %
+5, 4 MiB, 0 %
+6, 3 MiB, 0 %
+7, 3 MiB, 0 %
+idle GPUs picked: 1 2 3 4
+[11:23:14] start no_tuning__2f3e1c0f688c on GPU 1 -> EXP_TokenGS/no_tuning_fp32_140scenes/demo_scene_2f3e1c0f688c.log
+[11:23:14] start scene_latent_tuning__2f3e1c0f688c on GPU 2 -> EXP_TokenGS/scene_latent_tuning_fp32_140scenes/reimplemented_loop/demo_scene_2f3e1c0f688c.log
+[11:23:14] start scene_latent_tuning_with_geo_loss_sw0.1_packing0.001_inter0.01__2f3e1c0f688c on GPU 3 -> EXP_TokenGS/geo_loss_in_scene_latent_tuning_fp32_140scenes/sw0.1_packing0.001_inter0.01/demo_scene_2f3e1c0f688c.log
+[11:23:14] start token_tuning_lr1e-4_steps50__2f3e1c0f688c on GPU 4 -> EXP_TokenGS/token_tuning_fp32_140scenes/lr1e-4_steps50/demo_scene_2f3e1c0f688c.log
+[11:23:29] end no_tuning__2f3e1c0f688c (exit 0)
+[11:23:32] end token_tuning_lr1e-4_steps50__2f3e1c0f688c (exit 0)
+[11:23:34] end scene_latent_tuning__2f3e1c0f688c (exit 0)
+[11:23:35] end scene_latent_tuning_with_geo_loss_sw0.1_packing0.001_inter0.01__2f3e1c0f688c (exit 0)
+[11:23:44] progress
+  no_tuning__2f3e1c0f688c: complete 1/1
+  scene_latent_tuning__2f3e1c0f688c: complete 1/1
+  scene_latent_tuning_with_geo_loss_sw0.1_packing0.001_inter0.01__2f3e1c0f688c: complete 1/1
+  token_tuning_lr1e-4_steps50__2f3e1c0f688c: complete 1/1
